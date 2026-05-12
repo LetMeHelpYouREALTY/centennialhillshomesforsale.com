@@ -1,7 +1,8 @@
 import { MetadataRoute } from "next";
+import { getSiteUrl } from "@/lib/site-url";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://heyberkshire.com";
+  const baseUrl = getSiteUrl();
   const lastModified = new Date();
 
   // Core pages
@@ -16,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/market-insights`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/google-business`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/faq`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/security-policy`, priority: 0.3, changeFrequency: "yearly" as const },
   ];
 
   // Service pages
@@ -50,6 +52,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const fiftyPlusCommunityPages = [
     { url: `${baseUrl}/55-plus-communities/sun-city-summerlin`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/55-plus-communities/sun-city-anthem`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/55-plus-communities/sun-city-aliante`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/55-plus-communities/solera-anthem`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/55-plus-communities/heritage-stonebridge`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/55-plus-communities/trilogy-summerlin`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/55-plus-communities/del-webb-lake-las-vegas`, priority: 0.8, changeFrequency: "monthly" as const },
   ];
 

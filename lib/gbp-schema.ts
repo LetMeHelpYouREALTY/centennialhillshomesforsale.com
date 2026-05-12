@@ -1,6 +1,8 @@
 // Google Business Profile Schema Data
 // Supports GBP ranking factors: Relevance, Distance, Prominence
 
+import { siteConfig } from "@/lib/site-config";
+
 export const businessInfo = {
   // NAP - Must match GBP exactly
   name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
@@ -16,7 +18,7 @@ export const businessInfo = {
     tel: "+17025001942",
   },
   email: "homes@heyberkshire.com",
-  url: "https://heyberkshire.com",
+  url: siteConfig.url,
 
   // Business Details
   license: "S.0197614.LLC",
@@ -213,9 +215,9 @@ export function generateLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
-    "@id": "https://heyberkshire.com/#organization",
+    "@id": `${siteConfig.url}/#organization`,
     name: businessInfo.name,
-    image: "https://heyberkshire.com/images/dr-jan-duffy.jpg",
+    image: `${siteConfig.url}/images/dr-jan-duffy.jpg`,
     url: businessInfo.url,
     telephone: businessInfo.phone.tel,
     email: businessInfo.email,
