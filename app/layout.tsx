@@ -6,6 +6,14 @@ import { getDomainConfig } from "@/lib/domain-config";
 import { getCanonicalUrl, getRequestOrigin } from "@/lib/site-url";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
+import {
+  AGENT_PHOTO_ALT,
+  APPLE_ICON_PATH,
+  FAVICON_32_PATH,
+  FAVICON_PATH,
+  ICON_192_PATH,
+  OG_IMAGE_PATH,
+} from "@/lib/brand-assets";
 
 export async function generateMetadata(): Promise<Metadata> {
   const domain = headers().get("x-domain") || "";
@@ -24,6 +32,15 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       canonical,
     },
+    icons: {
+      icon: [
+        { url: FAVICON_PATH, sizes: "48x48" },
+        { url: FAVICON_32_PATH, sizes: "32x32", type: "image/png" },
+        { url: ICON_192_PATH, sizes: "192x192", type: "image/png" },
+      ],
+      apple: [{ url: APPLE_ICON_PATH, sizes: "180x180" }],
+      shortcut: FAVICON_PATH,
+    },
     openGraph: {
       title: config.heroHeadline,
       description: config.description,
@@ -31,11 +48,20 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: `${config.neighborhood} Homes for Sale`,
       type: "website",
       locale: "en_US",
+      images: [
+        {
+          url: OG_IMAGE_PATH,
+          width: 1200,
+          height: 630,
+          alt: AGENT_PHOTO_ALT,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: config.heroHeadline,
       description: config.description,
+      images: [OG_IMAGE_PATH],
     },
     robots: {
       index: true,

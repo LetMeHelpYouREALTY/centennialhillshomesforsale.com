@@ -7,9 +7,17 @@ import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import FAQSection from "@/components/sections/FAQSection";
 import Footer from "@/components/layouts/Footer";
-import { Phone, Home as HomeIcon, TrendingUp, Shield, Users } from "lucide-react";
+import {
+  Phone,
+  Home as HomeIcon,
+  TrendingUp,
+  Shield,
+  Users,
+} from "lucide-react";
 import { getPageDomainConfig } from "@/lib/get-domain-config";
 import { getCanonicalUrl, getRequestOrigin } from "@/lib/site-url";
+import { AgentPhoto } from "@/components/shared/AgentPhoto";
+import { AGENT_PHOTO_PATH } from "@/lib/brand-assets";
 import { CTA_PHONE, CTA_TEL, OFFICE_NAP } from "@/lib/contact";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -32,7 +40,10 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const communities = [
-  { href: "/neighborhoods/centennial-hills", label: "Centennial Hills (89149)" },
+  {
+    href: "/neighborhoods/centennial-hills",
+    label: "Centennial Hills (89149)",
+  },
   { href: "/neighborhoods/89144", label: "89144 Summerlin homes" },
   { href: "/neighborhoods/inspirada", label: "Inspirada Henderson" },
   { href: "/neighborhoods/groves-at-inspirada", label: "Groves at Inspirada" },
@@ -53,7 +64,7 @@ export default async function Home() {
     name: "Dr. Jan Duffy - Centennial Hills Real Estate",
     url: canonical,
     telephone: "+17022221964",
-    image: `${origin}/images/agent/dr-jan-duffy.webp`,
+    image: `${origin}${AGENT_PHOTO_PATH}`,
     address: {
       "@type": "PostalAddress",
       streetAddress: OFFICE_NAP.street,
@@ -102,8 +113,8 @@ export default async function Home() {
               Centennial Hills Homes for Sale
             </h1>
             <p className="mx-auto mb-10 max-w-3xl text-xl text-white/80 md:text-2xl">
-              Northwest Las Vegas listings in 89149, 89131, and 89143 — written for this site, not
-              copied from another domain.
+              Northwest Las Vegas listings in 89149, 89131, and 89143 — written
+              for this site, not copied from another domain.
             </p>
 
             <div className="mb-8 flex justify-center">
@@ -131,6 +142,42 @@ export default async function Home() {
           </div>
         </section>
 
+        <section className="bg-white py-12 md:py-16">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 md:flex-row md:items-center">
+              <AgentPhoto variant="card" className="shrink-0" />
+              <div className="text-center md:text-left">
+                <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-blue-600">
+                  Your Centennial Hills agent
+                </p>
+                <h2 className="mb-3 text-3xl font-bold text-slate-900 md:text-4xl">
+                  Dr. Jan Duffy
+                </h2>
+                <p className="mb-4 text-lg text-slate-600">
+                  Berkshire Hathaway HomeServices Nevada Properties. License
+                  S.0197614.LLC. Call {CTA_PHONE} for Centennial Hills,
+                  Summerlin, and Henderson listings.
+                </p>
+                <div className="flex flex-col justify-center gap-3 sm:flex-row md:justify-start">
+                  <a
+                    href={CTA_TEL}
+                    className="inline-flex items-center justify-center rounded-md bg-blue-600 px-5 py-3 font-semibold text-white hover:bg-blue-700"
+                  >
+                    <Phone className="mr-2 h-4 w-4" />
+                    Call {CTA_PHONE}
+                  </a>
+                  <Link
+                    href="/about"
+                    className="inline-flex items-center justify-center rounded-md border border-slate-300 px-5 py-3 font-semibold text-slate-900 hover:bg-slate-50"
+                  >
+                    About Dr. Jan
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="bg-white py-16 md:py-20">
           <div className="container mx-auto px-4">
             <div className="mx-auto mb-12 max-w-4xl text-center">
@@ -138,8 +185,9 @@ export default async function Home() {
                 Match the search to the right ZIP
               </h2>
               <p className="text-lg text-slate-600">
-                Google is showing this site for Centennial Hills, Inspirada, Tournament Hills, and
-                89144. Those are different maps. Pick the page that matches the street you want.
+                Google is showing this site for Centennial Hills, Inspirada,
+                Tournament Hills, and 89144. Those are different maps. Pick the
+                page that matches the street you want.
               </p>
             </div>
             <div className="mx-auto grid max-w-5xl gap-4 md:grid-cols-2">
@@ -163,8 +211,8 @@ export default async function Home() {
                 Why work with Dr. Jan Duffy?
               </h2>
               <p className="text-lg text-slate-600">
-                Berkshire Hathaway HomeServices Nevada Properties — local closings with a national
-                brand behind the contract.
+                Berkshire Hathaway HomeServices Nevada Properties — local
+                closings with a national brand behind the contract.
               </p>
             </div>
             <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -205,23 +253,42 @@ export default async function Home() {
         <section className="bg-slate-900 py-16 text-white">
           <div className="container mx-auto px-4">
             <div className="mb-10 text-center">
-              <h2 className="mb-3 text-3xl font-bold">Centennial Hills listing snapshot</h2>
+              <h2 className="mb-3 text-3xl font-bold">
+                Centennial Hills listing snapshot
+              </h2>
               <p className="text-slate-400">
-                Neighborhood listing median about $525,000 as of June 2026 (realtor.com Centennial
-                Hills report). Days on market and count move weekly — ask for a live pull.
+                Neighborhood listing median about $525,000 as of June 2026
+                (realtor.com Centennial Hills report). Days on market and count
+                move weekly — ask for a live pull.
               </p>
             </div>
             <div className="mx-auto grid max-w-4xl grid-cols-2 gap-8 md:grid-cols-4">
               {[
-                { value: "$525K", label: "Listing median", sub: "June 2026 report" },
+                {
+                  value: "$525K",
+                  label: "Listing median",
+                  sub: "June 2026 report",
+                },
                 { value: "48", label: "Median DOM", sub: "Same report" },
-                { value: "89149", label: "Core ZIP", sub: "Also 89131 / 89143" },
-                { value: "Not 89144", label: "That's Summerlin", sub: "See ZIP page" },
+                {
+                  value: "89149",
+                  label: "Core ZIP",
+                  sub: "Also 89131 / 89143",
+                },
+                {
+                  value: "Not 89144",
+                  label: "That's Summerlin",
+                  sub: "See ZIP page",
+                },
               ].map(({ value, label, sub }) => (
                 <div key={label} className="text-center">
-                  <div className="mb-1 text-4xl font-bold text-blue-400">{value}</div>
+                  <div className="mb-1 text-4xl font-bold text-blue-400">
+                    {value}
+                  </div>
                   <div className="text-sm text-slate-300">{label}</div>
-                  {sub && <div className="mt-1 text-xs text-slate-400">{sub}</div>}
+                  {sub && (
+                    <div className="mt-1 text-xs text-slate-400">{sub}</div>
+                  )}
                 </div>
               ))}
             </div>
@@ -243,8 +310,12 @@ export default async function Home() {
 
         <section className="bg-blue-600 py-16 text-white md:py-20">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="mb-4 text-3xl font-bold md:text-4xl">{config.ctaHeadline}</h2>
-            <p className="mx-auto mb-8 max-w-2xl text-xl text-blue-100">{config.ctaSubheadline}</p>
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">
+              {config.ctaHeadline}
+            </h2>
+            <p className="mx-auto mb-8 max-w-2xl text-xl text-blue-100">
+              {config.ctaSubheadline}
+            </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <a
                 href={CTA_TEL}

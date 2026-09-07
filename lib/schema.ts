@@ -7,6 +7,8 @@
  */
 
 import { siteConfig, agentInfo, officeInfo, agentStats } from "./site-config";
+import { AGENT_PHOTO_PATH, FAVICON_32_PATH } from "./brand-assets";
+import { getPublicSiteUrl } from "./site-url";
 
 // ============================================================================
 // Types
@@ -62,6 +64,7 @@ export interface SeniorCommunityData {
 // ============================================================================
 
 const BASE_URL = siteConfig.url;
+const AGENT_IMAGE_URL = `${getPublicSiteUrl()}${AGENT_PHOTO_PATH}`;
 
 // Social media profiles (to be updated with actual URLs)
 export const socialProfiles = {
@@ -92,8 +95,8 @@ export function generateRealEstateAgentSchema() {
       "Berkshire Hathaway HomeServices",
     ],
     url: BASE_URL,
-    logo: `${BASE_URL}/images/dr-jan-duffy.jpg`,
-    image: `${BASE_URL}/images/dr-jan-duffy.jpg`,
+    logo: AGENT_IMAGE_URL,
+    image: AGENT_IMAGE_URL,
     description: siteConfig.description,
     telephone: "+1-702-500-1942",
     email: agentInfo.email,
@@ -209,7 +212,7 @@ export function generateOrganizationSchema() {
     "@id": `${BASE_URL}#parent-organization`,
     name: "Berkshire Hathaway HomeServices Nevada Properties",
     url: "https://www.bfrre.com",
-    logo: `${BASE_URL}/favicon-32x32.png`,
+    logo: `${getPublicSiteUrl()}${FAVICON_32_PATH}`,
     parentOrganization: {
       "@type": "Organization",
       name: "Berkshire Hathaway HomeServices",
