@@ -4,7 +4,9 @@ import { LEGACY_PATHS } from "./gsc-legacy-redirects.js";
 
 describe("indexable paths", () => {
   it("never lists a GSC redirect source as a sitemap URL", () => {
-    const redirectSources = new Set(LEGACY_PATHS.map(([from]: [string, string]) => from));
+    const redirectSources = new Set(
+      LEGACY_PATHS.map(([from]: [string, string]) => from),
+    );
     for (const page of INDEXABLE_PATHS) {
       expect(redirectSources.has(page.path)).toBe(false);
     }

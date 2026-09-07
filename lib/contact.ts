@@ -12,5 +12,6 @@ export const OFFICE_NAP = {
   full: "9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134",
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=9406+W+Lake+Mead+Blvd+Suite+100+Las+Vegas+NV+89134",
-  reviewsUrl: "https://www.google.com/maps/search/?api=1&query=Dr+Jan+Duffy+Berkshire+Hathaway+Las+Vegas",
+  reviewsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Dr+Jan+Duffy+Berkshire+Hathaway+Las+Vegas",
 };

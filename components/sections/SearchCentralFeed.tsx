@@ -39,14 +39,14 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
         >
           site reputation policy update
         </a>{" "}
-        still changes results for people searching in the United States. EEA results are treated
-        differently. This Las Vegas site writes first-party copy. We do not rent the domain to
-        third-party advertorials.
+        still changes results for people searching in the United States. EEA
+        results are treated differently. This Las Vegas site writes first-party
+        copy. We do not rent the domain to third-party advertorials.
       </p>
       <p className="text-slate-700 mb-8">
-        Search Console platform properties (July 2026) track Instagram, TikTok, X, and YouTube
-        inside Google — that is not a page we need to build. Generative AI reports launched June
-        3, 2026. Call{" "}
+        Search Console platform properties (July 2026) track Instagram, TikTok,
+        X, and YouTube inside Google — that is not a page we need to build.
+        Generative AI reports launched June 3, 2026. Call{" "}
         <a href={CTA_TEL} className="font-semibold text-blue-700">
           {CTA_PHONE}
         </a>{" "}
@@ -56,7 +56,10 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
         {items.map((item) => {
           const image = item.image || SEARCH_CENTRAL_FALLBACK_IMAGE;
           return (
-            <li key={item.link} className="bg-white border border-slate-200 rounded-xl overflow-hidden">
+            <li
+              key={item.link}
+              className="bg-white border border-slate-200 rounded-xl overflow-hidden"
+            >
               <a href={item.link} rel="noopener noreferrer" className="block">
                 <img
                   src={image}
@@ -68,13 +71,21 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
                 />
               </a>
               <div className="p-5">
-                <p className="text-xs text-slate-500 mb-2">{formatPubDate(item.pubDate)}</p>
+                <p className="text-xs text-slate-500 mb-2">
+                  {formatPubDate(item.pubDate)}
+                </p>
                 <h3 className="font-bold text-slate-900 mb-2">
-                  <a href={item.link} rel="noopener noreferrer" className="hover:text-blue-700">
+                  <a
+                    href={item.link}
+                    rel="noopener noreferrer"
+                    className="hover:text-blue-700"
+                  >
                     {item.title}
                   </a>
                 </h3>
-                <p className="text-sm text-slate-600 line-clamp-3">{item.description}</p>
+                <p className="text-sm text-slate-600 line-clamp-3">
+                  {item.description}
+                </p>
               </div>
             </li>
           );

@@ -48,7 +48,9 @@ describe("gsc legacy redirects", () => {
   });
 
   it("registers trailing-slash twins so Googlebot does not 404 the slash URL", () => {
-    const sources = gscLegacyRedirects.map((item: { source: string }) => item.source);
+    const sources = gscLegacyRedirects.map(
+      (item: { source: string }) => item.source,
+    );
     expect(sources).toContain("/area-explorer");
     expect(sources).toContain("/area-explorer/");
   });

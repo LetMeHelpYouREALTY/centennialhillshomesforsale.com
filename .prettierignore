@@ -1,0 +1,10 @@
+**/*.md
+package-lock.json
+.next
+out
+coverage
+node_modules
+public
+.vercel
+*.min.js
+*.min.css

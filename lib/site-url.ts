@@ -16,7 +16,9 @@ function stripWww(host: string): string {
   return host.replace(/^www\./i, "").toLowerCase();
 }
 
-export function canonicalHostFromHeader(rawHost: string | null | undefined): string {
+export function canonicalHostFromHeader(
+  rawHost: string | null | undefined,
+): string {
   const host = (rawHost || DEFAULT_SITE_HOST).split(":")[0].toLowerCase();
   const apex = stripWww(host);
   if (FORCE_WWW.has(apex)) {
@@ -29,7 +31,8 @@ export function canonicalHostFromHeader(rawHost: string | null | undefined): str
 }
 
 export function getRequestHost(): string {
-  const headerHost = headers().get("x-domain") || headers().get("host") || DEFAULT_SITE_HOST;
+  const headerHost =
+    headers().get("x-domain") || headers().get("host") || DEFAULT_SITE_HOST;
   return canonicalHostFromHeader(headerHost);
 }
 

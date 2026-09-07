@@ -1,0 +1,5 @@
+# Flask FAQ generator is a template leftover. App Router owns /api.
+/api
+/requirements.txt
+*.py
+__pycache__

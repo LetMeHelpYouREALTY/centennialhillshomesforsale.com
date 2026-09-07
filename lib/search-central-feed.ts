@@ -38,16 +38,23 @@ function stripHtml(value: string): string {
 }
 
 function tagContent(block: string, tag: string): string {
-  const match = block.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, "i"));
+  const match = block.match(
+    new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, "i"),
+  );
   return match ? decodeEntities(match[1]).trim() : "";
 }
 
-function extractImage(block: string, rawDescription: string): string | undefined {
+function extractImage(
+  block: string,
+  rawDescription: string,
+): string | undefined {
   const enclosure = block.match(/<enclosure[^>]+url=["']([^"']+)["']/i);
   if (enclosure?.[1]) {
     return enclosure[1].trim();
   }
-  const media = block.match(/<(?:media:content|media:thumbnail)[^>]+url=["']([^"']+)["']/i);
+  const media = block.match(
+    /<(?:media:content|media:thumbnail)[^>]+url=["']([^"']+)["']/i,
+  );
   if (media?.[1]) {
     return media[1].trim();
   }
@@ -55,7 +62,10 @@ function extractImage(block: string, rawDescription: string): string | undefined
   return imgMatch?.[1]?.trim();
 }
 
-export function parseSearchCentralRss(xml: string, limit = 10): SearchCentralItem[] {
+export function parseSearchCentralRss(
+  xml: string,
+  limit = 10,
+): SearchCentralItem[] {
   const items: SearchCentralItem[] = [];
   const itemBlocks = xml.match(/<item>[\s\S]*?<\/item>/gi) ?? [];
 
@@ -84,7 +94,9 @@ export function parseSearchCentralRss(xml: string, limit = 10): SearchCentralIte
   return items;
 }
 
-export async function getSearchCentralPosts(limit = 6): Promise<SearchCentralItem[]> {
+export async function getSearchCentralPosts(
+  limit = 6,
+): Promise<SearchCentralItem[]> {
   try {
     const response = await fetch(SEARCH_CENTRAL_FEED_URL, {
       next: { revalidate: 3600 },

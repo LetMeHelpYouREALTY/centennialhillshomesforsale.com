@@ -19,7 +19,9 @@ describe("canonicalHostFromHeader", () => {
     expect(canonicalHostFromHeader("centennialhillshomesforsale.com:443")).toBe(
       "www.centennialhillshomesforsale.com",
     );
-    expect(canonicalHostFromHeader("")).toBe("www.centennialhillshomesforsale.com");
+    expect(canonicalHostFromHeader("")).toBe(
+      "www.centennialhillshomesforsale.com",
+    );
   });
 });
 
@@ -34,6 +36,8 @@ describe("normalizePathname", () => {
 
 describe("getPublicSiteUrl", () => {
   it("defaults to the https www origin for this property", () => {
-    expect(getPublicSiteUrl()).toBe("https://www.centennialhillshomesforsale.com");
+    expect(getPublicSiteUrl()).toBe(
+      "https://www.centennialhillshomesforsale.com",
+    );
   });
 });

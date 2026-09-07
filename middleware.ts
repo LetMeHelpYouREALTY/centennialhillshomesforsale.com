@@ -7,7 +7,9 @@ const FORCE_WWW_APEX = new Set([
 ]);
 
 export function middleware(request: NextRequest) {
-  const hostname = (request.headers.get("host") || "").split(":")[0].toLowerCase();
+  const hostname = (request.headers.get("host") || "")
+    .split(":")[0]
+    .toLowerCase();
 
   if (FORCE_WWW_APEX.has(hostname)) {
     const url = request.nextUrl.clone();
@@ -24,5 +26,7 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)"],
+  matcher: [
+    "/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)",
+  ],
 };
