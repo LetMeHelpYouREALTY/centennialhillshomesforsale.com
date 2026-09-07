@@ -1,6 +1,7 @@
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
+import SearchCentralFeed from "@/components/sections/SearchCentralFeed";
 import Link from "next/link";
 import {
   Phone,
@@ -8,13 +9,16 @@ import {
   Building2,
   Cpu,
   Globe,
-  Zap,
   BarChart3,
   Users,
   DollarSign,
   CheckCircle,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
+import { getSearchCentralPosts } from "@/lib/search-central-feed";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Centennial Hills Market Insights 2026 | Northwest Las Vegas",
@@ -43,7 +47,9 @@ const reportSchema = {
   },
 };
 
-export default function MarketInsightsPage() {
+export default async function MarketInsightsPage() {
+  const searchCentralPosts = await getSearchCentralPosts(6);
+
   return (
     <>
       <script
@@ -101,6 +107,8 @@ export default function MarketInsightsPage() {
               this site are not services we sell.
             </p>
           </section>
+
+          <SearchCentralFeed items={searchCentralPosts} />
 
           {/* Key Drivers */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
@@ -349,8 +357,8 @@ export default function MarketInsightsPage() {
                   </span>
                 </div>
                 <p className="text-slate-600 text-sm mb-3">
-                  Family-friendly community with the valley's largest park. New construction
-                  competing with resales. Solid appreciation.
+                  Tract homes near Exploration Peak Park. New construction competes with resales.
+                  Solid appreciation.
                 </p>
                 <div className="text-sm text-slate-500">
                   Hot areas: Exploration Peak, Southern Highlands adjacent
@@ -454,11 +462,11 @@ export default function MarketInsightsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+17025001942"
+                href={CTA_TEL}
                 className="inline-flex items-center justify-center bg-white text-purple-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-purple-50 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
+                Call {CTA_PHONE}
               </a>
               <Link
                 href="/market-report"
@@ -469,7 +477,7 @@ export default function MarketInsightsPage() {
             </div>
           </section>
         </div>
-        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: September 2026</div>
       </main>
       <RealScoutListings />
       <Footer />
