@@ -6,15 +6,16 @@ import { Phone, Mountain, Users, ShoppingBag, Home as HomeIcon } from "lucide-re
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Berkshire Hathaway HomeServices Centennial Hills | Las Vegas Homes",
+  title: "Centennial Hills Homes for Sale | 89149 Las Vegas Real Estate",
   description:
-    "Find Centennial Hills homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in this established northwest community. Median price $495K. Call (702) 500-1942.",
+    "Homes for sale in Centennial Hills, Las Vegas (89149, 89131, 89143). Town Center, park, and current listings with Dr. Jan Duffy. Call 702-222-1964.",
   keywords: [
-    "Berkshire Hathaway HomeServices Centennial Hills",
-    "Centennial Hills homes for sale",
-    "Centennial Hills Las Vegas",
-    "northwest Las Vegas real estate",
-    "family homes Las Vegas",
+    "centennial hills real estate",
+    "homes for sale in centennial hills nv",
+    "centennial hills las vegas real estate",
+    "centennial hills homes for sale",
+    "centennial hills town center nv real estate",
+    "centennial hills town center nv open houses",
   ],
 };
 
@@ -27,15 +28,15 @@ const faqSchema = {
       name: "What is the current median home price in Centennial Hills?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "As of January 2026, Centennial Hills' median home price is $495,000, up 4.8% year-over-year. Prices range from $380,000 for smaller homes to over $900,000 for larger properties with mountain views.",
+        text: "As of the June 2026 realtor.com Centennial Hills neighborhood report, the median listing price was about $525,000 with a median 48 days on market. Ask for a live CMA before you bid.",
       },
     },
     {
       "@type": "Question",
-      name: "Is Centennial Hills a good family neighborhood?",
+      name: "Which ZIP codes are Centennial Hills?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, Centennial Hills is one of Las Vegas's best family neighborhoods with highly-rated schools, safe streets, multiple parks including Centennial Hills Park, and convenient shopping at Centennial Center.",
+        text: "Most Centennial Hills listings sit in 89149, 89131, and 89143. ZIP 89144 is Summerlin, not Centennial Hills.",
       },
     },
     {
@@ -84,35 +85,35 @@ export default function CentennialHillsPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Berkshire Hathaway HomeServices Centennial Hills
+              Centennial Hills Homes for Sale in Las Vegas
             </h1>
             <p className="text-xl text-slate-600">
-              Family-friendly northwest Las Vegas living. Find your Centennial Hills home with{" "}
-              <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
+              Northwest Las Vegas listings near Centennial Hills Park and Town Center. Dr. Jan Duffy
+              at Berkshire Hathaway HomeServices Nevada Properties.
             </p>
           </div>
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
-              Centennial Hills Market | January 2026
+              Centennial Hills Market | June 2026 listing data
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-1">$495,000</div>
-                <div className="text-slate-300 text-sm">Median Home Price</div>
+                <div className="text-3xl font-bold text-blue-400 mb-1">$525,000</div>
+                <div className="text-slate-300 text-sm">Median listing (realtor.com, June 2026)</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-1">25 Days</div>
-                <div className="text-slate-300 text-sm">Avg. Days on Market</div>
+                <div className="text-3xl font-bold text-green-400 mb-1">48 Days</div>
+                <div className="text-slate-300 text-sm">Median days on market</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-1">203</div>
-                <div className="text-slate-300 text-sm">Active Listings</div>
+                <div className="text-3xl font-bold mb-1">89149</div>
+                <div className="text-slate-300 text-sm">Core ZIP (also 89131 / 89143)</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-1">+4.8%</div>
-                <div className="text-slate-300 text-sm">YoY Appreciation</div>
+                <div className="text-3xl font-bold text-green-400 mb-1">Town Center</div>
+                <div className="text-slate-300 text-sm">Retail at Centennial Hills</div>
               </div>
             </div>
           </section>
@@ -121,15 +122,14 @@ export default function CentennialHillsPage() {
           <section className="mb-16 max-w-5xl mx-auto">
             <div className="prose prose-lg max-w-none text-slate-700">
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Centennial Hills: Northwest Las Vegas's Established Family Community
+                Centennial Hills: northwest Las Vegas resale, not 89144 Summerlin
               </h2>
               <p>
-                <strong>Centennial Hills</strong> represents the best of established northwest Las Vegas
-                living. While newer communities like Skye Canyon attract attention, Centennial Hills
-                offers something they can't: mature neighborhoods with proven schools, established
-                landscaping, and a genuine sense of community built over nearly two decades.
-                <strong> Berkshire Hathaway HomeServices</strong> helps families discover why
-                Centennial Hills remains one of the valley's most desirable addresses.
+                <strong>Centennial Hills</strong> is the northwest Las Vegas corridor around Centennial
+                Hills Park, US-95, and Centennial Town Center. Listings cluster in 89149, 89131, and
+                89143. If you searched 89144, that ZIP is Summerlin — use the{" "}
+                <Link href="/neighborhoods/89144">89144 homes for sale</Link> page instead of touring
+                the wrong side of the valley.
               </p>
               <p>
                 The community's appeal starts with location. Positioned at the base of the mountains
@@ -153,13 +153,12 @@ export default function CentennialHillsPage() {
                 <div className="bg-slate-50 p-6 rounded-xl">
                   <div className="flex items-center mb-4">
                     <Users className="h-8 w-8 text-blue-600 mr-3" />
-                    <h4 className="font-bold text-slate-900 text-lg">Established Family Community</h4>
+                    <h4 className="font-bold text-slate-900 text-lg">Established northwest streets</h4>
                   </div>
                   <p className="text-slate-600">
-                    Centennial Hills has matured into a true community where neighbors know each other
-                    and families put down roots. The area features multiple established parks including
-                    the popular Centennial Hills Park, community events throughout the year, and the
-                    kind of neighborhood stability that creates lifelong friendships and strong property values.
+                    Centennial Hills has 15–20 years of landscaping and HOA track records on many
+                    streets. Compare that to newer product in Skye Canyon: different vintage, different
+                    lot premiums. I walk both when the buyer is choosing northwest Las Vegas.
                   </p>
                 </div>
                 <div className="bg-slate-50 p-6 rounded-xl">
@@ -285,11 +284,10 @@ export default function CentennialHillsPage() {
               </div>
 
               <p className="mt-8">
-                The current market shows <strong>203 active listings</strong> with homes averaging
-                <strong> 25 days on market</strong>. The median price of <strong>$495,000</strong>
-                represents solid 4.8% year-over-year appreciation while remaining more accessible
-                than Summerlin's higher-priced neighborhoods. Properties range from $380,000 for
-                smaller homes to over $900,000 for larger properties with premium lots and views.
+                The current <strong>June 2026 realtor.com neighborhood report</strong> showed a
+                Centennial Hills listing median near <strong>$525,000</strong> and about
+                <strong> 48 days</strong> on market. That is a listing snapshot, not your house.
+                I will pull live MLS comps before you write a number.
               </p>
               <p>
                 Working with <strong>Berkshire Hathaway HomeServices</strong> in Centennial Hills means
@@ -306,11 +304,9 @@ export default function CentennialHillsPage() {
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Centennial Hills offers something newer communities are still building: a genuine
-                sense of community. The schools have track records, the neighbors have history, and
-                the landscaping is mature. As a Berkshire Hathaway HomeServices agent, I help families
-                see beyond the shiny new construction to communities that have proven their value
-                over time."
+                "Centennial Hills is production northwest Las Vegas with a park and a Town Center,
+                not Summerlin 89144 and not Tournament Hills. I start every buyer call by locking
+                the ZIP, then we tour."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
@@ -329,19 +325,38 @@ export default function CentennialHillsPage() {
                   What is the current median home price in Centennial Hills?
                 </h3>
                 <p className="text-slate-600">
-                  As of January 2026, Centennial Hills' median home price is $495,000, up 4.8%
-                  year-over-year. Prices range from $380,000 for smaller homes to over $900,000
-                  for larger properties with mountain views.
+                  As of the June 2026 realtor.com Centennial Hills neighborhood report, the median
+                  listing price was about $525,000 with a median 48 days on market. Ask for a live
+                  CMA before you bid.
                 </p>
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">
                 <h3 className="font-bold text-slate-900 mb-2">
-                  Is Centennial Hills a good family neighborhood?
+                  Which ZIP is Centennial Hills vs 89144?
                 </h3>
                 <p className="text-slate-600">
-                  Yes, Centennial Hills is one of Las Vegas's best family neighborhoods with
-                  highly-rated schools, safe streets, multiple parks including Centennial Hills
-                  Park, and convenient shopping at Centennial Center.
+                  Centennial Hills listings are mainly 89149, 89131, and 89143. ZIP 89144 is
+                  Summerlin (The Arbors, Trails, Queensridge). Mixing them wastes a Saturday of
+                  showings.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  Do you offer property management in Centennial Hills?
+                </h3>
+                <p className="text-slate-600">
+                  No. Dr. Jan Duffy represents buyers and sellers. She does not manage rentals.
+                  If you need a licensed manager, she can refer one.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2">
+                  Are there open houses at Centennial Hills Town Center?
+                </h3>
+                <p className="text-slate-600">
+                  Town Center is the retail node (Target, Costco, and surrounding pads), not a
+                  subdivision name. Open houses are listed by street. Call 702-222-1964 for this
+                  weekend’s 89149 / 89131 showings.
                 </p>
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">
@@ -350,8 +365,8 @@ export default function CentennialHillsPage() {
                 </h3>
                 <p className="text-slate-600">
                   Centennial Hills is approximately 20-25 minutes from the Strip via US-95.
-                  The community offers easy freeway access while maintaining a suburban,
-                  family-oriented atmosphere away from tourist areas.
+                  The community offers freeway access via US-95 while sitting away from the resort
+                  corridor. Drive times are in the commute table below.
                 </p>
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">
@@ -373,22 +388,22 @@ export default function CentennialHillsPage() {
               Find Your Centennial Hills Home
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Contact Dr. Jan Duffy, your Berkshire Hathaway HomeServices Centennial Hills expert,
-              for guidance in this established family community.
+              Contact Dr. Jan Duffy for 89149 / 89131 / 89143 listings and Town Center–area
+              showings.
             </p>
             <a
-              href="tel:+17025001942"
+              href="tel:+17022221964"
               className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Call (702) 500-1942
+              Call (702) 222-1964
             </a>
             <p className="mt-4 text-blue-200 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
             </p>
           </section>
         </div>
-        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: September 2026</div>
       </main>
       <RealScoutListings />
       <Footer />

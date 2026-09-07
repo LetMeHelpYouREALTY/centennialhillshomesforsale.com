@@ -6,15 +6,14 @@ import { MapPin, Phone, Home, Users, GraduationCap } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Las Vegas Neighborhoods | Berkshire Hathaway HomeServices",
+  title: "Las Vegas Neighborhoods | Centennial Hills, Inspirada, Summerlin",
   description:
-    "Explore Las Vegas and Henderson neighborhoods with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Summerlin, Henderson, The Ridges, Southern Highlands & more.",
+    "Centennial Hills, Inspirada, Tournament Hills, 89144, and 89138 guides from Dr. Jan Duffy. Call 702-222-1964.",
   keywords: [
-    "Las Vegas neighborhoods",
-    "Henderson communities",
-    "Summerlin real estate",
-    "best neighborhoods Las Vegas",
-    "where to live Las Vegas",
+    "centennial hills real estate",
+    "inspirada henderson",
+    "tournament hills real estate",
+    "89144 homes for sale",
   ],
 };
 
@@ -33,7 +32,7 @@ const neighborhoods = [
     slug: "henderson",
     medianPrice: "$485,000",
     priceChange: "+5.1%",
-    description: "Nevada's second-largest city known for safety, schools, and family-friendly living",
+    description: "Nevada's second-largest city with master-planned communities and lake access",
     highlights: ["Low Crime Rate", "Excellent Schools", "Lake Las Vegas", "Green Valley"],
     bestFor: "Families, retirees, commuters",
   },
@@ -69,7 +68,7 @@ const neighborhoods = [
     slug: "north-las-vegas",
     medianPrice: "$385,000",
     priceChange: "+3.2%",
-    description: "Rapidly growing area with affordable new construction and family-friendly communities",
+    description: "Rapidly growing area with new construction and a lower entry price band",
     highlights: ["New Construction", "Affordable", "Growing Area", "Family-Friendly"],
     bestFor: "First-time buyers, young families, investors",
   },
@@ -87,18 +86,72 @@ const neighborhoods = [
     slug: "centennial-hills",
     medianPrice: "$495,000",
     priceChange: "+4.8%",
-    description: "Northwest Las Vegas community with mountain proximity and family amenities",
-    highlights: ["Mountain Access", "Parks", "Shopping", "Family-Friendly"],
-    bestFor: "Families, outdoor lovers, professionals",
+    description: "Northwest Las Vegas community near Centennial Hills Park and Town Center",
+    highlights: ["89149", "Park", "Town Center", "US-95"],
+    bestFor: "Northwest Las Vegas, park and Town Center access",
+  },
+  {
+    name: "Lone Mountain",
+    slug: "lone-mountain",
+    medianPrice: "Ask CMA",
+    priceChange: "Views/lots",
+    description: "Northwest lots and view streets next to the Centennial Hills corridor",
+    highlights: ["Mountain views", "Larger lots", "US-95 access", "Resale mix"],
+    bestFor: "Buyers comparing northwest Las Vegas lot size",
+  },
+  {
+    name: "Tournament Hills",
+    slug: "tournament-hills",
+    medianPrice: "Ask CMA",
+    priceChange: "Thin inventory",
+    description: "Guard-gated Summerlin custom homes near TPC (89134) — not Centennial Hills",
+    highlights: ["89134", "TPC Summerlin", "Custom lots", "Gated"],
+    bestFor: "Summerlin luxury buyers",
+  },
+  {
+    name: "Summerlin West",
+    slug: "summerlin-west",
+    medianPrice: "Ask CMA",
+    priceChange: "89138",
+    description: "Later Howard Hughes villages including Reverence in ZIP 89138",
+    highlights: ["89138", "Reverence", "Newer plans", "Foothill views"],
+    bestFor: "Summerlin West / 89138 searchers",
+  },
+  {
+    name: "89144 Summerlin",
+    slug: "89144",
+    medianPrice: "Ask CMA",
+    priceChange: "Not CH",
+    description: "The Arbors, Trails, and Queensridge — Summerlin ZIP, not Centennial Hills",
+    highlights: ["89144", "Summerlin", "Arbors/Trails", "Queensridge"],
+    bestFor: "89144 zip code homes for sale",
+  },
+  {
+    name: "Groves at Inspirada",
+    slug: "groves-at-inspirada",
+    medianPrice: "Townhomes",
+    priceChange: "Resale",
+    description: "KB Home townhomes inside Inspirada Henderson — new construction closed",
+    highlights: ["89044", "KB Home", "Townhomes", "Aventura Park nearby"],
+    bestFor: "Groves at Inspirada searchers",
+  },
+  {
+    name: "Red Rock Country Club",
+    slug: "red-rock-country-club",
+    medianPrice: "Ask CMA",
+    priceChange: "Golf",
+    description: "Two-course Summerlin golf community in 89135",
+    highlights: ["89135", "Two courses", "Gated", "Mixed product"],
+    bestFor: "Golf-community buyers",
   },
   {
     name: "Inspirada",
     slug: "inspirada",
-    medianPrice: "$525,000",
-    priceChange: "+5.0%",
-    description: "Henderson master-planned community with resort-style living and modern homes",
-    highlights: ["Resort Pools", "Walking Trails", "New Construction", "Great Schools"],
-    bestFor: "Families, active adults, new home buyers",
+    medianPrice: "~$555K",
+    priceChange: "May 2026 resale",
+    description: "Henderson 89044 master plan — Groves townhomes, Aventura Park, final new-construction pods",
+    highlights: ["89044", "Parks", "Groves townhomes", "Tri Pointe / KB / Toll"],
+    bestFor: "Henderson new construction and resale",
   },
   {
     name: "Mountains Edge",
@@ -106,8 +159,8 @@ const neighborhoods = [
     medianPrice: "$475,000",
     priceChange: "+4.5%",
     description: "Southwest Las Vegas master-planned community with mountain views and parks",
-    highlights: ["Mountain Views", "Parks", "Growing Area", "Affordable Luxury"],
-    bestFor: "Families, commuters, value-seekers",
+    highlights: ["Mountain Views", "Parks", "Growing Area", "Value"],
+    bestFor: "Southwest Las Vegas commuters",
   },
 ];
 
@@ -172,11 +225,9 @@ export default function NeighborhoodsPage() {
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-slate-50 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Every Las Vegas neighborhood has its own personality. Whether you want the
-                family-friendly parks of Summerlin, the established charm of Green Valley, or the
-                luxury of The Ridges, I'll help you find the community that matches your lifestyle.
-                That's the Berkshire Hathaway HomeServices difference—personalized guidance backed
-                by local expertise."
+                "Every Las Vegas ZIP has a different commute and HOA stack. I will not send you to
+                89144 when you asked for Centennial Hills, or to Groves when you asked for a
+                detached Inspirada lot. That is the job.
               </blockquote>
               <cite className="text-slate-900 font-semibold">
                 — Dr. Jan Duffy, BHHS Nevada Properties
@@ -222,11 +273,11 @@ export default function NeighborhoodsPage() {
               neighborhood recommendations.
             </p>
             <a
-              href="tel:+17025001942"
+              href="tel:+17022221964"
               className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Call (702) 500-1942
+              Call (702) 222-1964
             </a>
             <p className="mt-4 text-blue-200 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties

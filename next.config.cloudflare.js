@@ -1,3 +1,5 @@
+const { gscLegacyRedirects } = require("./lib/gsc-legacy-redirects.js");
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Output configuration for Cloudflare Pages
@@ -24,17 +26,18 @@ const nextConfig = {
     CLOUDFLARE_ENV: process.env.CLOUDFLARE_ENV || 'production',
   },
 
-  // Redirect non-www to www (handled by Worker)
   async redirects() {
     return [
+      ...gscLegacyRedirects,
       {
         source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'heyberkshire.com',
-          },
-        ],
+        has: [{ type: 'host', value: 'centennialhillshomesforsale.com' }],
+        destination: 'https://www.centennialhillshomesforsale.com/:path*',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'heyberkshire.com' }],
         destination: 'https://www.heyberkshire.com/:path*',
         permanent: true,
       },

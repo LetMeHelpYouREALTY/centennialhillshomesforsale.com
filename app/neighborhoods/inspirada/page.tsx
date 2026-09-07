@@ -6,15 +6,16 @@ import { Phone, Waves, TreePine, GraduationCap, Home as HomeIcon } from "lucide-
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Berkshire Hathaway HomeServices Inspirada | Henderson Resort Living",
+  title: "Inspirada Homes for Sale | Henderson NV New Construction & Resale",
   description:
-    "Find Inspirada homes with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Henderson's resort-style community. Median price $525K. Call (702) 500-1942.",
+    "Inspirada homes for sale in Henderson 89044 — Groves townhomes, Aventura Park, remaining new construction. Dr. Jan Duffy. Call 702-222-1964.",
   keywords: [
-    "Berkshire Hathaway HomeServices Inspirada",
-    "Inspirada homes for sale",
-    "Inspirada Henderson",
-    "Henderson master planned",
-    "resort style community",
+    "new homes in inspirada",
+    "inspirada henderson",
+    "homes for sale in inspirada henderson nv",
+    "groves at inspirada",
+    "aventura park inspirada",
+    "pardee homes in inspirada",
   ],
 };
 
@@ -27,7 +28,7 @@ const faqSchema = {
       name: "What is the current median home price in Inspirada?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "As of January 2026, Inspirada's median home price is $525,000, up 5.0% year-over-year. New construction ranges from $450,000 to $750,000, while resales offer additional options with established landscaping.",
+        text: "Redfin reported a May 2026 Inspirada resale median near $555,199. Remaining new construction in mid-2026 was a small final-phase count across KB, Toll Brothers, and Tri Pointe — not Groves, which is resale townhomes. Ask for a live pull.",
       },
     },
     {
@@ -43,7 +44,7 @@ const faqSchema = {
       name: "How are the schools in Inspirada?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Inspirada is served by highly-rated Henderson schools including newer facilities built specifically for the growing community. The area attracts families specifically for its educational options and family-friendly environment.",
+        text: "Inspirada is in the Clark County School District. Confirm the elementary, middle, and high school on the specific listing. Pinecrest and other charters also enroll from Henderson — verify seats independently of any marketing claim.",
       },
     },
     {
@@ -84,23 +85,22 @@ export default function InspiradaPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Berkshire Hathaway HomeServices Inspirada
+              Inspirada Homes for Sale in Henderson
             </h1>
             <p className="text-xl text-slate-600">
-              Resort-style living in Henderson. Discover Inspirada with{" "}
-              <strong>Berkshire Hathaway HomeServices</strong> and Dr. Jan Duffy.
+              Master-planned Henderson 89044 — Groves townhomes, Aventura Park, and the last new-construction pods. Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties.
             </p>
           </div>
 
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
-              Inspirada Real Estate Market | January 2026
+              Inspirada Real Estate Market | May 2026 resale snapshot
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-1">$525,000</div>
-                <div className="text-slate-300 text-sm">Median Home Price</div>
+                <div className="text-3xl font-bold text-blue-400 mb-1">~$555K</div>
+                <div className="text-slate-300 text-sm">Resale median (Redfin, May 2026)</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">23 Days</div>
@@ -146,6 +146,26 @@ export default function InspiradaPage() {
                 pitfalls. For resales, BHHS agents identify properties where previous owners made
                 smart upgrade decisions, delivering better value than comparable new construction.
               </p>
+
+              <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Villages people actually search</h3>
+              <div className="not-prose grid md:grid-cols-2 gap-4 mb-8">
+                <Link href="/neighborhoods/groves-at-inspirada" className="rounded-xl border border-slate-200 p-5 hover:border-blue-400">
+                  <h4 className="font-bold text-slate-900">Groves at Inspirada</h4>
+                  <p className="text-sm text-slate-600 mt-1">KB townhomes, ~1,430–1,921 sq ft. Resale only in 2026.</p>
+                </Link>
+                <div className="rounded-xl border border-slate-200 p-5">
+                  <h4 className="font-bold text-slate-900">Aventura Park</h4>
+                  <p className="text-sm text-slate-600 mt-1">20-acre park with resident pool and courts — an amenity, not a subdivision.</p>
+                </div>
+                <div className="rounded-xl border border-slate-200 p-5">
+                  <h4 className="font-bold text-slate-900">Pardee / Tri Pointe product</h4>
+                  <p className="text-sm text-slate-600 mt-1">Linea, Alterra, and related pods are largely resale. Pardee now operates as Tri Pointe.</p>
+                </div>
+                <div className="rounded-xl border border-slate-200 p-5">
+                  <h4 className="font-bold text-slate-900">Landings, Overlook, Gardens</h4>
+                  <p className="text-sm text-slate-600 mt-1">Named villages inside the master plan. I match the MLS subdivision, not the brochure nickname.</p>
+                </div>
+              </div>
 
               {/* Community Highlights */}
               <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Community Highlights</h3>
@@ -325,9 +345,9 @@ export default function InspiradaPage() {
                   What is the current median home price in Inspirada?
                 </h3>
                 <p className="text-slate-600">
-                  As of January 2026, Inspirada's median home price is $525,000, up 5.0% year-over-year.
-                  New construction ranges from $450,000 to $750,000, while resales offer additional
-                  options with established landscaping.
+                  Redfin reported a May 2026 Inspirada resale median near $555,199. Remaining new
+                  construction in mid-2026 was a small final-phase count — Groves townhomes are
+                  resale. Ask for a live pull before you bid.
                 </p>
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">
@@ -345,9 +365,9 @@ export default function InspiradaPage() {
                   How are the schools in Inspirada?
                 </h3>
                 <p className="text-slate-600">
-                  Inspirada is served by highly-rated Henderson schools including newer facilities
-                  built specifically for the growing community. The area attracts families specifically
-                  for its educational options and family-friendly environment.
+                  Inspirada is in the Clark County School District. Confirm the elementary, middle,
+                  and high school on the specific listing. Charter options such as Pinecrest also
+                  enroll from Henderson — verify seats independently.
                 </p>
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">
@@ -373,18 +393,18 @@ export default function InspiradaPage() {
               for expert guidance in Henderson's premier resort-style community.
             </p>
             <a
-              href="tel:+17025001942"
+              href="tel:+17022221964"
               className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Call (702) 500-1942
+              Call (702) 222-1964
             </a>
             <p className="mt-4 text-blue-200 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
             </p>
           </section>
         </div>
-        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
+        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: September 2026</div>
       </main>
       <RealScoutListings />
       <Footer />

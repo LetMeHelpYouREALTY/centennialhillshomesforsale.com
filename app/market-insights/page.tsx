@@ -17,32 +17,29 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Las Vegas Real Estate Market Insights 2026 | Berkshire Hathaway HomeServices",
+  title: "Centennial Hills Market Insights 2026 | Northwest Las Vegas",
   description:
-    "Technology trends, economic forecasts, and market analysis shaping Las Vegas real estate in 2026. AI, data centers, California migration, and what it means for buyers and sellers. Call (702) 500-1942.",
+    "First-party Centennial Hills market insights: 89149 vs 89144, Inspirada new-construction wind-down, and how northwest Las Vegas listings are trading. Dr. Jan Duffy. Call 702-222-1964.",
   keywords: [
-    "Las Vegas real estate trends 2026",
-    "Las Vegas market forecast",
-    "Nevada economic outlook",
-    "California to Las Vegas migration",
-    "Las Vegas tech hub",
-    "Berkshire Hathaway market insights",
+    "centennial hills real estate",
+    "centennial hills las vegas real estate",
+    "las vegas market insights 2026",
   ],
 };
 
 const reportSchema = {
   "@context": "https://schema.org",
   "@type": "Report",
-  name: "Las Vegas Real Estate Market Insights 2026",
+  name: "Centennial Hills Market Insights 2026",
   author: {
     "@type": "RealEstateAgent",
     name: "Dr. Jan Duffy",
     worksFor: "Berkshire Hathaway HomeServices Nevada Properties",
   },
-  datePublished: "2026-01-23",
+  datePublished: "2026-09-07",
   about: {
     "@type": "Place",
-    name: "Las Vegas, Nevada",
+    name: "Centennial Hills, Las Vegas, Nevada",
   },
 };
 
@@ -72,13 +69,38 @@ export default function MarketInsightsPage() {
               2026 Economic & Real Estate Analysis
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Las Vegas Market Insights
+              Centennial Hills Market Insights
             </h1>
             <p className="text-xl text-slate-600">
-              Technology trends, economic forces, and market dynamics shaping Las Vegas
-              real estate in 2026 and beyond.
+              First-party notes for this website — 89149 vs 89144, Inspirada’s remaining new homes,
+              and why a cloned valley-wide report will not rank here. Updated September 2026.
             </p>
           </div>
+
+          <section className="mb-16 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              What this page is (and is not)
+            </h2>
+            <p className="text-slate-700 mb-4">
+              Google Search Console listed this URL as a duplicate without a user-selected
+              canonical. This page is now a Centennial Hills / northwest Las Vegas brief. The{" "}
+              <Link href="/market-report">market report</Link> keeps valley-wide stats. The{" "}
+              <Link href="/market-update">market update</Link> is the weekly cadence. Each URL
+              self-canonicalizes to this domain.
+            </p>
+            <p className="text-slate-700 mb-4">
+              June 2026 listing data for the Centennial Hills neighborhood (realtor.com) showed a
+              median list near $525,000 and about 48 days on market. That is not 89144 Summerlin
+              and it is not Tournament Hills.{" "}
+              <Link href="/neighborhoods/centennial-hills">Centennial Hills homes for sale</Link>{" "}
+              is the listing page.
+            </p>
+            <p className="text-slate-700">
+              Inspirada (Henderson 89044) was in a final new-construction window in mid-2026, with
+              Groves townhomes already on resale. Casino and property-management queries that hit
+              this site are not services we sell.
+            </p>
+          </section>
 
           {/* Key Drivers */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
