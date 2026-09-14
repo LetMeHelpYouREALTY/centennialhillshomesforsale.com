@@ -18,6 +18,7 @@ import type { Metadata } from "next";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import { AGENT_PHOTO_PATH } from "@/lib/brand-assets";
 import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
+import { VisitOffice } from "@/components/shared/VisitOffice";
 import { getPublicSiteUrl } from "@/lib/site-url";
 
 export const metadata: Metadata = {
@@ -130,7 +131,7 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
-      <main className="pt-24 pb-16">
+      <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -498,6 +499,7 @@ export default function AboutPage() {
           </section>
 
           {/* CTA */}
+          <VisitOffice className="mb-16 rounded-2xl" compact />
           <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Get Started?
@@ -530,7 +532,7 @@ export default function AboutPage() {
 
         {/* Last Updated */}
         <div className="text-center text-sm text-slate-500 mt-8">
-          Last Updated: January 2026
+          Last Updated: September 2026
         </div>
       </main>
       <RealScoutListings />

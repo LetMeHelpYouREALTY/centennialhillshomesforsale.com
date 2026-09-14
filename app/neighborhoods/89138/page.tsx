@@ -17,6 +17,7 @@ export default function Zip89138Page() {
   return (
     <NeighborhoodGuide
       name="89138"
+      slug="89138"
       h1="Homes for Sale in 89138 (Summerlin West)"
       intro="89138 is the Summerlin West ZIP. Searchers asking for homes, houses, or real estate in 89138 are not searching Centennial Hills."
       zipCodes={["89138"]}
@@ -42,7 +43,8 @@ export default function Zip89138Page() {
       faqs={[
         {
           question: "Is 89138 in Henderson?",
-          answer: "No. 89138 is Las Vegas / Summerlin West. Henderson Inspirada is 89044.",
+          answer:
+            "No. 89138 is Las Vegas / Summerlin West. Henderson Inspirada is 89044.",
         },
         {
           question: "Do you have 89138 listings right now?",
@@ -51,9 +53,15 @@ export default function Zip89138Page() {
         },
       ]}
       related={[
-        { href: "/neighborhoods/summerlin-west", label: "Summerlin West guide" },
+        {
+          href: "/neighborhoods/summerlin-west",
+          label: "Summerlin West guide",
+        },
         { href: "/neighborhoods/89144", label: "89144 homes for sale" },
-        { href: "/neighborhoods/centennial-hills", label: "Centennial Hills homes" },
+        {
+          href: "/neighborhoods/centennial-hills",
+          label: "Centennial Hills homes",
+        },
       ]}
       lastUpdated="September 2026"
     />

@@ -69,7 +69,7 @@ export default function InspiradaPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <main className="pt-24 pb-16">
+      <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
@@ -283,7 +283,7 @@ export default function InspiradaPage() {
                       Middle & High Schools
                     </h5>
                     <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Coronado High School (8/10)</li>
+                      <li>• Coronado High School</li>
                       <li>• Foothill High School</li>
                       <li>• Del Webb Middle School</li>
                       <li>• Mannion Middle School</li>

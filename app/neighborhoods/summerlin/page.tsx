@@ -84,7 +84,7 @@ export default function SummerlinPage() {
     <>
       {/* Combined JSON-LD Schema: Breadcrumb + Place + FAQ */}
       <SchemaScript schema={pageSchemas} id="summerlin-schema" />
-      <main className="pt-24 pb-16">
+      <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
@@ -210,16 +210,14 @@ export default function SummerlinPage() {
                   <div className="flex items-center mb-4">
                     <GraduationCap className="h-8 w-8 text-blue-600 mr-3" />
                     <h4 className="font-bold text-slate-900 text-lg">
-                      Top-Rated Schools
+                      Named campuses
                     </h4>
                   </div>
                   <p className="text-slate-600">
-                    Summerlin is home to some of Nevada's highest-performing
-                    schools. The community includes multiple Blue Ribbon
-                    schools, advanced STEM programs, and excellent private
-                    school options like The Meadows School and Bishop Gorman
-                    High School. Families consistently choose Summerlin for its
-                    exceptional educational opportunities.
+                    Summerlin streets map to named public campuses plus private
+                    options such as The Meadows School and Bishop Gorman High
+                    School. Ask for the campus and drive-time that match the
+                    listing address—not a district slogan.
                   </p>
                 </div>
               </div>
@@ -240,7 +238,7 @@ export default function SummerlinPage() {
                       Elementary Schools
                     </h5>
                     <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Sig Rogich Middle School (9/10)</li>
+                      <li>• Sig Rogich Middle School</li>
                       <li>• William R. Lummis Elementary</li>
                       <li>• Marion Earl Elementary</li>
                       <li>• Helen Smith Elementary</li>
@@ -252,7 +250,7 @@ export default function SummerlinPage() {
                       Middle & High Schools
                     </h5>
                     <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Palo Verde High School (8/10)</li>
+                      <li>• Palo Verde High School</li>
                       <li>• West Career & Technical Academy</li>
                       <li>• Del E. Webb Middle School</li>
                       <li>• Sig Rogich Middle School</li>

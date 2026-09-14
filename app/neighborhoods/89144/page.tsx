@@ -17,6 +17,7 @@ export default function Zip89144Page() {
   return (
     <NeighborhoodGuide
       name="89144 Summerlin"
+      slug="89144"
       h1="89144 Homes for Sale — Summerlin, Not Centennial Hills"
       intro="ZIP 89144 is central / west-central Summerlin: The Arbors, The Trails, Queensridge, and nearby villages. It is a different market from Centennial Hills. If you searched 89144 homes for sale, this is the correct map."
       zipCodes={["89144"]}
@@ -56,11 +57,15 @@ export default function Zip89144Page() {
         },
         {
           question: "Who should I call for 89144 showings?",
-          answer: "Dr. Jan Duffy at 702-222-1964. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
+          answer:
+            "Dr. Jan Duffy at 702-222-1964. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
         },
       ]}
       related={[
-        { href: "/neighborhoods/centennial-hills", label: "Centennial Hills (89149) homes" },
+        {
+          href: "/neighborhoods/centennial-hills",
+          label: "Centennial Hills (89149) homes",
+        },
         { href: "/neighborhoods/summerlin", label: "Summerlin overview" },
         { href: "/neighborhoods/89138", label: "89138 Summerlin West homes" },
         { href: "/neighborhoods/tournament-hills", label: "Tournament Hills" },

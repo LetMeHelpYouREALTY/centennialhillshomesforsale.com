@@ -1,0 +1,63 @@
+import Link from "next/link";
+import { Phone } from "lucide-react";
+import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
+
+export default function NotFound() {
+  return (
+    <main className="bg-white pb-20 pt-8">
+      <div className="container mx-auto max-w-2xl px-4 text-center">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-blue-600">
+          404
+        </p>
+        <h1 className="mb-4 text-4xl font-bold text-slate-900">
+          That page is not on this site
+        </h1>
+        <p className="mb-8 text-lg text-slate-600">
+          The URL may be mistyped, or the listing moved. Use a neighborhood
+          guide, search live MLS, or call the office line.
+        </p>
+        <div className="mb-10 flex flex-col justify-center gap-3 sm:flex-row">
+          <Link
+            href="/listings"
+            className="inline-flex min-h-11 items-center justify-center rounded-md bg-blue-600 px-6 py-3 font-semibold text-white no-underline hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            Search listings
+          </Link>
+          <Link
+            href="/neighborhoods"
+            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-6 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            Neighborhood guides
+          </Link>
+          <a
+            href={CTA_TEL}
+            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-6 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
+            Call {CTA_PHONE}
+          </a>
+        </div>
+        <ul className="space-y-2 text-left text-slate-700">
+          <li>
+            <Link
+              href="/neighborhoods/centennial-hills"
+              className="text-blue-700"
+            >
+              Centennial Hills homes
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact" className="text-blue-700">
+              Contact Dr. Jan Duffy
+            </Link>
+          </li>
+          <li>
+            <Link href="/home-valuation" className="text-blue-700">
+              Home valuation
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </main>
+  );
+}

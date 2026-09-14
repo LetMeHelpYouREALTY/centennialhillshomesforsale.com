@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import type { Metadata } from "next";
 import { CTA_PHONE, CTA_TEL, REALSCOUT_SEARCH_URL } from "@/lib/contact";
 import { MlsDisclaimer } from "@/components/shared/MlsDisclaimer";
-import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Property Details | Las Vegas & Henderson Real Estate",
@@ -41,17 +40,8 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
 
   return (
     <>
-      <main className="pt-24 pb-16">
+      <main className="pb-16">
         <div className="container mx-auto px-4">
-          <Breadcrumbs
-            className="mb-6"
-            items={[
-              { name: "Home", href: "/" },
-              { name: "Properties", href: "/listings" },
-              { name: property.name, href: "" },
-            ]}
-          />
-
           {/* Property Header */}
           <div className="mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">

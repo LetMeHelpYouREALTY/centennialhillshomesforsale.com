@@ -108,7 +108,7 @@ export default function CaliforniaRelocatorPage() {
           __html: JSON.stringify(realEstateAgentSchema),
         }}
       />
-      <main className="pt-24 pb-16">
+      <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
@@ -254,18 +254,18 @@ export default function CaliforniaRelocatorPage() {
                 </div>
                 <div className="p-6">
                   <p className="text-slate-600 mb-4">
-                    "The Irvine of Las Vegas" - Master-planned perfection with
-                    top schools, Downtown Summerlin shopping, and Red Rock
-                    Canyon views.
+                    "The Irvine of Las Vegas" is marketing copy. What you
+                    actually get: Downtown Summerlin shopping, a trail network,
+                    and Red Rock Canyon views.
                   </p>
                   <div className="text-sm text-slate-500 mb-4">
-                    <strong>Best for:</strong> Families from Orange County,
-                    coastal CA
+                    <strong>Best for:</strong> Orange County and coastal
+                    California relocators comparing Summerlin villages
                   </div>
                   <ul className="text-sm space-y-1 text-slate-700">
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Top-rated schools
+                      Downtown Summerlin retail
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
@@ -292,13 +292,13 @@ export default function CaliforniaRelocatorPage() {
                 </div>
                 <div className="p-6">
                   <p className="text-slate-600 mb-4">
-                    Henderson = San Diego suburbs meets tech corridor. Google's
-                    data center, top schools, and "America's Safest City"
-                    accolades.
+                    Henderson parks, Google's data center corridor, and
+                    Inspirada new construction—ask for a live commute matrix,
+                    not a slogan.
                   </p>
                   <div className="text-sm text-slate-500 mb-4">
-                    <strong>Best for:</strong> Tech workers, young families, San
-                    Diego relocators
+                    <strong>Best for:</strong> Tech workers and San Diego
+                    relocators comparing Henderson master plans
                   </div>
                   <ul className="text-sm space-y-1 text-slate-700">
                     <li className="flex items-center">
@@ -307,7 +307,7 @@ export default function CaliforniaRelocatorPage() {
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Lowest crime rates
+                      Named campuses on request
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />

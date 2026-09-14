@@ -76,7 +76,7 @@ export default function FirstTimeBuyersPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <main className="pt-24 pb-16">
+      <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
@@ -232,8 +232,8 @@ export default function FirstTimeBuyersPage() {
                   $380K - $480K
                 </div>
                 <p className="text-slate-600 text-sm mb-4">
-                  Southwest Las Vegas with the valley's largest park. Great
-                  community feel, mountain views, and easy freeway access.
+                  Southwest Las Vegas next to Exploration Peak Park, with
+                  mountain views and freeway access.
                 </p>
                 <ul className="text-sm space-y-1 text-slate-700">
                   <li className="flex items-center">
@@ -263,20 +263,20 @@ export default function FirstTimeBuyersPage() {
                     Centennial Hills
                   </h3>
                   <span className="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs font-semibold">
-                    Top Schools
+                    89149 / Town Center
                   </span>
                 </div>
                 <div className="text-2xl font-bold text-blue-600 mb-2">
                   $398K Median
                 </div>
                 <p className="text-slate-600 text-sm mb-4">
-                  Northwest Las Vegas near Centennial Hills Hospital. Nearby
-                  public campuses, family parks, and Red Rock Canyon proximity.
+                  Northwest Las Vegas near Centennial Hills Hospital, Town
+                  Center, and Red Rock Canyon.
                 </p>
                 <ul className="text-sm space-y-1 text-slate-700">
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Highly-rated schools
+                    Named CCSD campuses nearby
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />

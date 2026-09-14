@@ -182,7 +182,7 @@ export function NeighborhoodSchema({
     "@context": "https://schema.org",
     "@type": "Place",
     "@id": `${getPublicSiteUrl()}/neighborhoods/${slug}#place`,
-    name: `${name}, Las Vegas`,
+    name: `${name}, ${containedIn}`,
     description,
     address: {
       "@type": "PostalAddress",

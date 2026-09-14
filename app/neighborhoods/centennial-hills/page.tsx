@@ -69,7 +69,7 @@ export default function CentennialHillsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <main className="pt-24 pb-16">
+      <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
@@ -229,7 +229,7 @@ export default function CentennialHillsPage() {
                       Elementary Schools
                     </h5>
                     <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Ober Elementary (8/10)</li>
+                      <li>• Ober Elementary</li>
                       <li>• Cashman Elementary</li>
                       <li>• Scherkenbach Elementary</li>
                       <li>• Hummel Elementary</li>
@@ -241,7 +241,7 @@ export default function CentennialHillsPage() {
                       Middle & High Schools
                     </h5>
                     <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Centennial High School (7/10)</li>
+                      <li>• Centennial High School</li>
                       <li>• Shadow Ridge High School</li>
                       <li>• Arbor View High School</li>
                       <li>• Becker Middle School</li>

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function FairHousingPage() {
   return (
-    <main className="bg-white pb-16 pt-28">
+    <main className="bg-white pb-16">
       <div className="container mx-auto max-w-3xl px-4">
         <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-blue-600">
           Berkshire Hathaway HomeServices Nevada Properties

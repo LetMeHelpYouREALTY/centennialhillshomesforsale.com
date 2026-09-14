@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 export default function DivorceProbatePage() {
   return (
     <>
-      <main className="pt-24 pb-16">
+      <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">

@@ -79,7 +79,7 @@ const priceRanges = [
   },
   {
     range: "$400K - $600K",
-    description: "Family homes, established neighborhoods",
+    description: "Detached resale and townhomes in current MLS bands",
     count: "2,100+",
   },
   {
@@ -103,7 +103,7 @@ const neighborhoods = [
   {
     name: "Summerlin",
     description:
-      "Master-planned community with Red Rock views, top schools, and 150+ parks",
+      "Master-planned community with Red Rock views, 150+ parks, and Downtown Summerlin",
     medianPrice: "$625,000",
     daysOnMarket: 22,
   },
@@ -150,7 +150,7 @@ export default function ListingsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(listingsSchema) }}
       />
-      <main className="pt-24 pb-16">
+      <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
           <div className="max-w-4xl mx-auto text-center mb-12">

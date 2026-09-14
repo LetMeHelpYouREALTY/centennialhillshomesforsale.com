@@ -2,12 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -90,15 +92,27 @@ export default function Navbar() {
           </Link>
 
           <div className="hidden items-center space-x-5 lg:flex">
-            {mainNavLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="rounded-md px-1 py-1 text-sm font-medium text-slate-700 no-underline transition-colors hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {mainNavLinks.map((link) => {
+              const isCurrent =
+                link.href === "/"
+                  ? pathname === "/"
+                  : pathname === link.href ||
+                    pathname.startsWith(`${link.href}/`);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  aria-current={isCurrent ? "page" : undefined}
+                  className={`rounded-md px-1 py-1 text-sm font-medium no-underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 ${
+                    isCurrent
+                      ? "text-blue-700"
+                      : "text-slate-700 hover:text-blue-600"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
 
             <div className="relative" ref={servicesRef}>
               <button
@@ -182,16 +196,26 @@ export default function Navbar() {
             className="mt-4 overscroll-contain border-t border-slate-200 pb-4 lg:hidden"
           >
             <div className="flex flex-col space-y-1 pt-4">
-              {mainNavLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="rounded px-3 py-2 font-medium text-slate-700 no-underline transition-colors hover:bg-blue-50 hover:text-blue-600"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {mainNavLinks.map((link) => {
+                const isCurrent =
+                  link.href === "/"
+                    ? pathname === "/"
+                    : pathname === link.href ||
+                      pathname.startsWith(`${link.href}/`);
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    aria-current={isCurrent ? "page" : undefined}
+                    className={`rounded px-3 py-2 font-medium no-underline transition-colors hover:bg-blue-50 hover:text-blue-600 ${
+                      isCurrent ? "bg-blue-50 text-blue-700" : "text-slate-700"
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
 
               <div className="mt-2 border-t border-slate-200 pt-2">
                 <span className="px-3 text-xs font-semibold uppercase text-slate-500">

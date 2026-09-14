@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 export default function RelocationPage() {
   return (
     <>
-      <main className="pt-24 pb-16">
+      <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
@@ -102,8 +102,9 @@ export default function RelocationPage() {
               </div>
             </div>
             <p className="text-center text-slate-300 mt-8">
-              Moving to Dallas? Phoenix? Chicago? We connect you with top-rated
-              BHHS agents in your new city at no extra cost.
+              Moving to Dallas? Phoenix? Chicago? We connect you with BHHS
+              referral agents in those markets at no extra cost, so you are not
+              interviewing cold.
             </p>
           </section>
 

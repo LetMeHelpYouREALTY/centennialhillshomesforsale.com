@@ -25,11 +25,11 @@ const neighborhoods = [
       "Premier master-planned community with parks, trails, and parks, trails, and recreation centers",
     highlights: [
       "150+ Parks",
-      "Top Schools",
+      "Trail network",
       "Red Rock Views",
       "Downtown Summerlin",
     ],
-    bestFor: "Families, professionals, outdoor enthusiasts",
+    bestFor: "Parks, trails, and Downtown Summerlin access",
   },
   {
     name: "Henderson",
@@ -38,13 +38,8 @@ const neighborhoods = [
     priceChange: "+5.1%",
     description:
       "Nevada's second-largest city with master-planned communities and lake access",
-    highlights: [
-      "Low Crime Rate",
-      "Excellent Schools",
-      "Lake Las Vegas",
-      "Green Valley",
-    ],
-    bestFor: "Families, retirees, commuters",
+    highlights: ["60+ Parks", "Lake Las Vegas", "Green Valley", "Master plans"],
+    bestFor: "Henderson parks, trails, and lake access",
   },
   {
     name: "Green Valley",
@@ -59,7 +54,7 @@ const neighborhoods = [
       "The District",
       "Mature Trees",
     ],
-    bestFor: "Established families, golfers, professionals",
+    bestFor: "Henderson golf, trails, and The District",
   },
   {
     name: "The Ridges",
@@ -89,7 +84,7 @@ const neighborhoods = [
       "Mountain Views",
       "Luxury Amenities",
     ],
-    bestFor: "Golfers, luxury buyers, families",
+    bestFor: "Golf, mountain views, and gated access",
   },
   {
     name: "North Las Vegas",
@@ -100,11 +95,11 @@ const neighborhoods = [
       "Rapidly growing area with new construction and a lower entry price band",
     highlights: [
       "New Construction",
-      "Affordable",
+      "Entry price band",
       "Growing Area",
-      "Family-Friendly",
+      "I-15 access",
     ],
-    bestFor: "First-time buyers, young families, investors",
+    bestFor: "New construction and I-15 commute",
   },
   {
     name: "Skye Canyon",
@@ -113,8 +108,13 @@ const neighborhoods = [
     priceChange: "+5.5%",
     description:
       "Newer master-planned community in northwest Las Vegas with mountain views",
-    highlights: ["New Homes", "Mountain Views", "Skye Center", "Great Schools"],
-    bestFor: "Young families, outdoor enthusiasts, commuters",
+    highlights: [
+      "New Homes",
+      "Mountain Views",
+      "Skye Center",
+      "NW trail access",
+    ],
+    bestFor: "Northwest Las Vegas mountain-view inventory",
   },
   {
     name: "Centennial Hills",
@@ -215,7 +215,7 @@ const neighborhoods = [
 export default function NeighborhoodsPage() {
   return (
     <>
-      <main className="pt-24 pb-16">
+      <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -226,9 +226,9 @@ export default function NeighborhoodsPage() {
               Las Vegas & Henderson Neighborhoods
             </h1>
             <p className="text-xl text-slate-600">
-              Explore the best communities in Southern Nevada with Dr. Jan
-              Duffy, your <strong>Berkshire Hathaway HomeServices</strong>{" "}
-              neighborhood expert
+              Centennial Hills, Inspirada, Tournament Hills, 89144, and 89138
+              are different maps. Pick the guide that matches the street—not a
+              valley-wide slogan.
             </p>
           </div>
 
@@ -284,7 +284,7 @@ export default function NeighborhoodsPage() {
                 "Every Las Vegas ZIP has a different commute and HOA stack. I
                 will not send you to 89144 when you asked for Centennial Hills,
                 or to Groves when you asked for a detached Inspirada lot. That
-                is the job.
+                is the job."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
                 — Dr. Jan Duffy, BHHS Nevada Properties
@@ -308,10 +308,10 @@ export default function NeighborhoodsPage() {
               </div>
               <div className="text-center">
                 <GraduationCap className="h-12 w-12 text-blue-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-2">School Research</h3>
+                <h3 className="font-bold mb-2">Campus maps</h3>
                 <p className="text-slate-400 text-sm">
-                  Detailed school district information, ratings, and enrollment
-                  guidance
+                  Named campuses, enrollment boundaries, and drive-time to the
+                  streets you are touring—not a slogan.
                 </p>
               </div>
               <div className="text-center">
@@ -349,7 +349,7 @@ export default function NeighborhoodsPage() {
 
         {/* Last Updated */}
         <div className="text-center text-sm text-slate-500 mt-8">
-          Last Updated: January 2026
+          Last Updated: September 2026
         </div>
       </main>
       <RealScoutListings />

@@ -47,7 +47,7 @@ const faqSchema = {
       name: "What makes Green Valley different from newer Henderson communities?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Green Valley, established in 1988, offers what newer communities can't: mature trees, established schools with proven track records, larger lots, and a genuine sense of community built over 35+ years.",
+        text: "Green Valley, established in 1988, offers what newer Henderson pods often do not: mature trees, larger lots, and 35+ years of finished streets.",
       },
     },
     {
@@ -55,7 +55,7 @@ const faqSchema = {
       name: "Is Green Valley a good investment?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Green Valley has shown consistent appreciation due to its prime Henderson location, established infrastructure, and ongoing demand from families seeking top schools and safety. BHHS agents can provide detailed market analysis.",
+        text: "Green Valley has shown consistent appreciation due to its Henderson location, mature street trees, and The District retail corridor. BHHS agents can provide a live CMA.",
       },
     },
   ],
@@ -68,7 +68,7 @@ export default function GreenValleyPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <main className="pt-24 pb-16">
+      <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
@@ -228,7 +228,7 @@ export default function GreenValleyPage() {
                       Elementary Schools
                     </h5>
                     <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Elise L. Wolff Elementary (9/10)</li>
+                      <li>• Elise L. Wolff Elementary</li>
                       <li>• C.T. Sewell Elementary</li>
                       <li>• Gordon McCaw Elementary</li>
                       <li>• John C. Vanderburg Elementary</li>
@@ -240,8 +240,8 @@ export default function GreenValleyPage() {
                       Middle & High Schools
                     </h5>
                     <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Green Valley High School (7/10)</li>
-                      <li>• Coronado High School (8/10)</li>
+                      <li>• Green Valley High School</li>
+                      <li>• Coronado High School</li>
                       <li>• Bob Miller Middle School</li>
                       <li>• Burkholder Middle School</li>
                       <li>• Greenspun Junior High</li>
@@ -461,9 +461,8 @@ export default function GreenValleyPage() {
                 </h3>
                 <p className="text-slate-600">
                   Green Valley has shown consistent appreciation due to its
-                  prime Henderson location, established infrastructure, and
-                  ongoing demand from families seeking top schools and safety.
-                  BHHS agents can provide detailed market analysis.
+                  Henderson location, mature street trees, and The District
+                  retail corridor. BHHS agents can provide a live CMA.
                 </p>
               </div>
             </div>

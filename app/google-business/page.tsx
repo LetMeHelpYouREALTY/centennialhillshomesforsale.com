@@ -18,6 +18,7 @@ import {
 import type { Metadata } from "next";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import { OFFICE_NAP } from "@/lib/contact";
+import { VisitOffice } from "@/components/shared/VisitOffice";
 import {
   businessInfo,
   gbpDescription,
@@ -64,7 +65,7 @@ export default function GoogleBusinessPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <main className="pt-24 pb-16">
+      <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero - NAP Prominent */}
           <section className="max-w-5xl mx-auto mb-16">
@@ -358,6 +359,8 @@ export default function GoogleBusinessPage() {
             </div>
           </section>
 
+          <VisitOffice className="mb-16 rounded-2xl" compact />
+
           {/* Review CTA - Prominence factor */}
           <section className="max-w-4xl mx-auto mb-16">
             <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border border-yellow-200 rounded-xl p-8 text-center">
@@ -415,7 +418,7 @@ export default function GoogleBusinessPage() {
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">
-          Last Updated: January 2026
+          Last Updated: September 2026
         </div>
       </main>
     </>

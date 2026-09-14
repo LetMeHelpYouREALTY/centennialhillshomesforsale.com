@@ -18,6 +18,7 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import { SkipLink } from "@/components/shared/SkipLink";
 import { SiteJsonLd } from "@/components/shared/SiteJsonLd";
+import { SiteBreadcrumbs } from "@/components/shared/SiteBreadcrumbs";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -91,6 +92,7 @@ export default function RootLayout({
         <SkipLink />
         <SiteJsonLd />
         <Navbar />
+        <SiteBreadcrumbs />
         <div id="main-content">{children}</div>
         <Footer />
         <Analytics />

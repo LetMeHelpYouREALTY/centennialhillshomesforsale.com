@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Phone, MapPin, Star } from "lucide-react";
 import { CTA_PHONE, CTA_TEL, OFFICE_HOURS, OFFICE_NAP } from "@/lib/contact";
-import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
+import { NeighborhoodSchema } from "@/components/SchemaScript";
 import { getPublicSiteUrl } from "@/lib/site-url";
 
 export type NeighborhoodFaq = {
@@ -27,6 +27,7 @@ export type NeighborhoodSection = {
 
 type NeighborhoodGuideProps = {
   name: string;
+  slug: string;
   h1: string;
   intro: string;
   zipCodes: string[];
@@ -42,6 +43,7 @@ type NeighborhoodGuideProps = {
 
 export default function NeighborhoodGuide({
   name,
+  slug,
   h1,
   intro,
   zipCodes,
@@ -74,17 +76,14 @@ export default function NeighborhoodGuide({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <main className="pb-16 pt-24">
+      <NeighborhoodSchema
+        name={name}
+        description={intro}
+        slug={slug}
+        containedIn={city}
+      />
+      <main className="pb-16">
         <div className="container mx-auto px-4">
-          <Breadcrumbs
-            className="mx-auto mb-6"
-            items={[
-              { name: "Home", href: "/" },
-              { name: "Neighborhoods", href: "/neighborhoods" },
-              { name, href: "#" },
-            ]}
-          />
-
           <article className="mx-auto max-w-5xl">
             <div className="relative mb-10 h-56 overflow-hidden rounded-2xl md:h-80">
               <Image

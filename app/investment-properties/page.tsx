@@ -73,7 +73,7 @@ const investmentAreas = [
 export default function InvestmentPropertiesPage() {
   return (
     <>
-      <main className="pt-24 pb-16">
+      <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">

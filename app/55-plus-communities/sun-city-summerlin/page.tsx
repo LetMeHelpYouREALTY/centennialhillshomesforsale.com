@@ -52,7 +52,7 @@ export default function SunCitySummerlinPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(communitySchema) }}
       />
-      <main className="pt-24 pb-16">
+      <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
@@ -273,7 +273,7 @@ export default function SunCitySummerlinPage() {
                 <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                 <div>
                   <strong className="text-slate-900">
-                    Established community with mature landscaping
+                    Mature landscaping and finished streets
                   </strong>
                   <p className="text-slate-600 text-sm">
                     No construction noise, trees and vegetation fully grown,

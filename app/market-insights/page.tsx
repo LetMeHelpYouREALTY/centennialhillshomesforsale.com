@@ -54,7 +54,7 @@ export default async function MarketInsightsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reportSchema) }}
       />
-      <main className="pt-24 pb-16">
+      <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
@@ -382,9 +382,9 @@ export default async function MarketInsightsPage() {
                   </span>
                 </div>
                 <p className="text-slate-600 text-sm mb-3">
-                  Red Rock views, Downtown Summerlin, and top schools maintain
-                  premium positioning. Limited new inventory keeps values
-                  strong.
+                  Red Rock views, Downtown Summerlin, and a finished trail
+                  network maintain premium positioning. Limited new inventory
+                  keeps values strong.
                 </p>
                 <div className="text-sm text-slate-500">
                   Hot areas: The Ridges, Regency at Summerlin, Paseos

@@ -105,16 +105,15 @@ export default function FAQSection({
                     />
                   )}
                 </button>
-                {isOpen && (
-                  <div
-                    id={panelId}
-                    role="region"
-                    aria-labelledby={buttonId}
-                    className="border-t border-slate-200 bg-slate-50 px-6 py-4"
-                  >
-                    <p className="text-slate-700">{faq.answer}</p>
-                  </div>
-                )}
+                <div
+                  id={panelId}
+                  role="region"
+                  aria-labelledby={buttonId}
+                  hidden={!isOpen}
+                  className="border-t border-slate-200 bg-slate-50 px-6 py-4"
+                >
+                  <p className="text-slate-700">{faq.answer}</p>
+                </div>
               </div>
             );
           })}

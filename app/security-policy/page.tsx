@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function SecurityPolicyPage() {
   return (
-    <main className="min-h-screen bg-white pb-16 pt-28">
+    <main className="min-h-screen bg-white pb-16">
       <div className="container mx-auto max-w-4xl px-4">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">
           Security Policy

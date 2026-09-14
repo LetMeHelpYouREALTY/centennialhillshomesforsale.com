@@ -113,7 +113,7 @@ export default function SunCityAnthemPage() {
     <>
       {/* Combined JSON-LD Schema: Breadcrumb + ResidentialComplex + FAQ */}
       <SchemaScript schema={pageSchemas} id="sun-city-anthem-schema" />
-      <main className="pt-24 pb-16">
+      <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
@@ -216,19 +216,18 @@ export default function SunCityAnthemPage() {
                     Why Henderson Matters
                   </h3>
                   <p className="text-slate-700 mb-4">
-                    Henderson consistently ranks as one of America's cities
-                    frequently cited for civic amenities. For 55+ buyers, this
-                    translates to peace of mind, stable property values, and a
-                    community that attracts similar residents who value safety
-                    and quality of life.
+                    Henderson consistently publishes park and trail inventories
+                    that 55+ buyers actually use: recreation centers, medical
+                    corridors, and I-215 access. Ask for drive-times from the
+                    Solera gate, not a city slogan.
                   </p>
                   <div className="grid md:grid-cols-3 gap-4">
                     <div className="text-center bg-white rounded-lg p-4">
                       <div className="text-2xl font-bold text-green-600">
-                        #2
+                        60+
                       </div>
                       <div className="text-sm text-slate-600">
-                        Safest Large City
+                        Henderson parks
                       </div>
                     </div>
                     <div className="text-center bg-white rounded-lg p-4">

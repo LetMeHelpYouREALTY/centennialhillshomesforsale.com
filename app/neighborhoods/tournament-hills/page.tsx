@@ -16,6 +16,7 @@ export default function TournamentHillsPage() {
   return (
     <NeighborhoodGuide
       name="Tournament Hills"
+      slug="tournament-hills"
       h1="Tournament Hills Real Estate in Summerlin"
       intro="Tournament Hills is a guard-gated custom-home village in Summerlin, not Centennial Hills. Searchers looking for Tournament Hills Summerlin real estate are shopping large lots near TPC Summerlin in ZIP 89134."
       zipCodes={["89134"]}
@@ -61,9 +62,15 @@ export default function TournamentHillsPage() {
       ]}
       related={[
         { href: "/neighborhoods/summerlin", label: "Summerlin homes for sale" },
-        { href: "/neighborhoods/summerlin-west", label: "Summerlin West / 89138 homes" },
+        {
+          href: "/neighborhoods/summerlin-west",
+          label: "Summerlin West / 89138 homes",
+        },
         { href: "/neighborhoods/the-ridges", label: "The Ridges luxury homes" },
-        { href: "/neighborhoods/centennial-hills", label: "Centennial Hills homes for sale" },
+        {
+          href: "/neighborhoods/centennial-hills",
+          label: "Centennial Hills homes for sale",
+        },
       ]}
       lastUpdated="September 2026"
     />

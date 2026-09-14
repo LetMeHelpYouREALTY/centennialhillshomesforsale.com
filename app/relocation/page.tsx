@@ -50,28 +50,28 @@ const relocationSchema = {
 const popularRelocationAreas = [
   {
     name: "Summerlin",
-    best: "Families, professionals",
+    best: "Downtown Summerlin and trail network",
     highlights:
-      "Top-rated schools, 150+ parks, Red Rock Canyon proximity, master-planned living",
+      "150+ parks, Red Rock Canyon proximity, master-planned villages",
     from: "$500K",
   },
   {
     name: "Henderson",
-    best: "Families, retirees",
+    best: "Parks, lake access, and I-215 commute",
     highlights:
-      "Lowest crime rates, nearby public campuses, community feel, diverse neighborhoods",
+      "60+ parks, nearby public campuses, Green Valley and Inspirada inventory",
     from: "$450K",
   },
   {
     name: "Green Valley",
-    best: "Established families",
+    best: "Mature trees and The District",
     highlights:
       "Mature landscaping, championship golf, shopping and dining, Henderson location",
     from: "$480K",
   },
   {
     name: "Skye Canyon",
-    best: "Young families",
+    best: "Newer construction and mountain trails",
     highlights:
       "Newest construction, mountain trail access, modern amenities, growing area",
     from: "$500K",
@@ -85,7 +85,7 @@ const popularRelocationAreas = [
   },
   {
     name: "Inspirada",
-    best: "Families, active adults",
+    best: "Henderson parks, trails, and new construction",
     highlights:
       "Resort-style pools, extensive trails, new homes, Henderson convenience",
     from: "$450K",
@@ -114,7 +114,7 @@ export default function RelocationPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(relocationSchema) }}
       />
-      <main className="pt-24 pb-16">
+      <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -247,8 +247,8 @@ export default function RelocationPage() {
               Choosing the right neighborhood is crucial for a successful
               relocation. Each Las Vegas community offers a unique lifestyle,
               price point, and amenities. Dr. Jan helps you identify which area
-              matches your priorities—whether that's schools, commute times,
-              outdoor access, or community feel.
+              matches your priorities—whether that's commute times, named
+              campuses, outdoor access, or HOA stack.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {popularRelocationAreas.map((area) => (
@@ -288,16 +288,15 @@ export default function RelocationPage() {
               Las Vegas Schools & Education
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              For families with children, school quality is often the top
-              priority when relocating. Las Vegas offers a range of public,
-              charter, and private school options. Dr. Jan provides detailed
-              school research to help you make informed decisions.
+              Ask for named campuses and drive-time from the streets you will
+              tour. Las Vegas has public, charter, and private options; I will
+              not steer with a slogan.
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white border border-slate-200 rounded-xl p-6">
                 <h3 className="font-bold text-lg text-slate-900 mb-4 flex items-center">
                   <School className="h-5 w-5 text-blue-600 mr-2" />
-                  Top-Rated School Areas
+                  Named campuses by area
                 </h3>
                 <ul className="space-y-2 text-slate-700">
                   <li className="flex items-start">

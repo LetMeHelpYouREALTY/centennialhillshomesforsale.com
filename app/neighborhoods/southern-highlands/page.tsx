@@ -63,7 +63,7 @@ export default function SouthernHighlandsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <main className="pt-24 pb-16">
+      <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
@@ -164,8 +164,8 @@ export default function SouthernHighlandsPage() {
                 various sections—from the guard-gated luxury estates surrounding
                 the golf course to the residential neighborhoods with parks and
                 trail access in the community's newer phases. Whether you're
-                seeking a golf course lot with Strip views or a spacious family
-                home with top-rated schools, BHHS has the local expertise to
+                seeking a golf-course lot with Strip views or a larger floor
+                plan near the trail network, BHHS has the local expertise to
                 guide your search.
               </p>
 
@@ -223,7 +223,7 @@ export default function SouthernHighlandsPage() {
                       Elementary Schools
                     </h5>
                     <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Elise Wolff Elementary (9/10)</li>
+                      <li>• Elise Wolff Elementary</li>
                       <li>• Janet Lundahl Elementary</li>
                       <li>• Robert Forbuss Elementary</li>
                       <li>• Floyd Elementary</li>
@@ -234,7 +234,7 @@ export default function SouthernHighlandsPage() {
                       Middle & High Schools
                     </h5>
                     <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Coronado High School (8/10)</li>
+                      <li>• Coronado High School</li>
                       <li>• Liberty High School</li>
                       <li>• Del Webb Middle School</li>
                       <li>• Mannion Middle School</li>

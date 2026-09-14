@@ -17,6 +17,7 @@ export default function GrovesAtInspiradaPage() {
   return (
     <NeighborhoodGuide
       name="Groves at Inspirada"
+      slug="groves-at-inspirada"
       h1="Groves at Inspirada Townhomes in Henderson"
       intro="The Groves at Inspirada is a KB Home townhome neighborhood inside the Inspirada master plan (Henderson 89044). New construction in Groves is done; what you buy today is resale."
       zipCodes={["89044"]}
@@ -64,7 +65,10 @@ export default function GrovesAtInspiradaPage() {
         { href: "/neighborhoods/inspirada", label: "Inspirada homes for sale" },
         { href: "/new-construction", label: "Las Vegas new construction" },
         { href: "/neighborhoods/henderson", label: "Henderson real estate" },
-        { href: "/neighborhoods/centennial-hills", label: "Centennial Hills homes" },
+        {
+          href: "/neighborhoods/centennial-hills",
+          label: "Centennial Hills homes",
+        },
       ]}
       lastUpdated="September 2026"
     />

@@ -272,8 +272,8 @@ const communities = [
     highlights: [
       "Most affordable Summerlin 55+ option",
       "18-hole golf course",
-      "Established community (1990s)",
-      "Strong sense of community",
+      "Opened in the 1990s",
+      "Golf, pools, and club calendar",
     ],
     description:
       "Siena offers the Summerlin lifestyle at more accessible price points.",
@@ -333,7 +333,7 @@ export default function FiftyFiveCommunitiesPage() {
           __html: JSON.stringify(localBusinessSchema),
         }}
       />
-      <main className="pt-24 pb-16">
+      <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="max-w-6xl mx-auto mb-6">
