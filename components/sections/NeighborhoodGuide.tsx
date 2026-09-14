@@ -2,7 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { Phone, MapPin, Star } from "lucide-react";
 import { CTA_PHONE, CTA_TEL, OFFICE_HOURS, OFFICE_NAP } from "@/lib/contact";
-import { NeighborhoodSchema } from "@/components/SchemaScript";
+import {
+  FAQSchema,
+  NeighborhoodSchema,
+  SeniorCommunitySchema,
+} from "@/components/SchemaScript";
+import { FairHousingNotice } from "@/components/shared/FairHousingNotice";
+import RealScoutListings from "@/components/realscout/RealScoutListings";
 import { getPublicSiteUrl } from "@/lib/site-url";
 
 export type NeighborhoodFaq = {
@@ -25,6 +31,15 @@ export type NeighborhoodSection = {
   body: string;
 };
 
+export type SeniorGuideDetails = {
+  numberOfHomes: number;
+  amenities: Array<{ name: string; description?: string }>;
+  priceRange: string;
+  hoaFees?: string;
+  latitude?: number;
+  longitude?: number;
+};
+
 type NeighborhoodGuideProps = {
   name: string;
   slug: string;
@@ -32,14 +47,24 @@ type NeighborhoodGuideProps = {
   intro: string;
   zipCodes: string[];
   city: string;
-  imageSrc: string;
-  imageAlt: string;
+  imageSrc?: string;
+  imageAlt?: string;
   stats: NeighborhoodStat[];
   sections: NeighborhoodSection[];
   faqs: NeighborhoodFaq[];
   related: NeighborhoodRelated[];
   lastUpdated: string;
+  badge?: string;
+  pathPrefix?: "/neighborhoods" | "/55-plus-communities";
+  latitude?: number;
+  longitude?: number;
+  showListings?: boolean;
+  senior?: SeniorGuideDetails;
+  children?: React.ReactNode;
 };
+
+const ctaClass =
+  "inline-flex min-h-11 items-center justify-center rounded-md px-8 py-4 text-lg font-bold no-underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600";
 
 export default function NeighborhoodGuide({
   name,
@@ -55,46 +80,62 @@ export default function NeighborhoodGuide({
   faqs,
   related,
   lastUpdated,
+  badge,
+  pathPrefix = "/neighborhoods",
+  latitude,
+  longitude,
+  showListings = true,
+  senior,
+  children,
 }: NeighborhoodGuideProps) {
   const origin = getPublicSiteUrl();
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <FAQSchema faqs={faqs} />
       <NeighborhoodSchema
         name={name}
         description={intro}
         slug={slug}
         containedIn={city}
+        pathPrefix={pathPrefix}
+        latitude={latitude}
+        longitude={longitude}
       />
+      {senior ? (
+        <SeniorCommunitySchema
+          name={name}
+          description={intro}
+          numberOfHomes={senior.numberOfHomes}
+          amenities={senior.amenities}
+          priceRange={senior.priceRange}
+          hoaFees={senior.hoaFees}
+          latitude={senior.latitude ?? latitude}
+          longitude={senior.longitude ?? longitude}
+          city={city}
+        />
+      ) : null}
       <main className="pb-16">
         <div className="container mx-auto px-4">
           <article className="mx-auto max-w-5xl">
-            <div className="relative mb-10 h-56 overflow-hidden rounded-2xl md:h-80">
-              <Image
-                src={imageSrc}
-                alt={imageAlt}
-                fill
-                sizes="(max-width: 768px) 100vw, 1024px"
-                className="object-cover"
-                priority
-              />
-            </div>
+            {imageSrc ? (
+              <div className="relative mb-10 h-56 overflow-hidden rounded-2xl md:h-80">
+                <Image
+                  src={imageSrc}
+                  alt={imageAlt ?? `${name} homes in ${city}, Nevada`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 1024px"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            ) : null}
+
+            {badge ? (
+              <p className="mb-4 inline-block rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-800">
+                {badge}
+              </p>
+            ) : null}
 
             <h1 className="mb-4 text-4xl font-bold text-slate-900 md:text-5xl">
               {h1}
@@ -136,6 +177,8 @@ export default function NeighborhoodGuide({
               </section>
             ))}
 
+            {children}
+
             <section className="mb-12">
               <h2 className="mb-4 text-2xl font-bold text-slate-900">
                 Nearby pages
@@ -145,7 +188,7 @@ export default function NeighborhoodGuide({
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="block rounded-lg border border-slate-200 px-4 py-3 text-blue-700 no-underline hover:border-blue-300 hover:bg-blue-50"
+                      className="block min-h-11 rounded-lg border border-slate-200 px-4 py-3 text-blue-700 no-underline hover:border-blue-300 hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                     >
                       {item.label}
                     </Link>
@@ -173,8 +216,14 @@ export default function NeighborhoodGuide({
               </div>
             </section>
 
-            <section className="rounded-2xl bg-blue-600 p-8 text-center text-white md:p-12">
-              <h2 className="mb-3 text-3xl font-bold">
+            <section
+              className="rounded-2xl bg-blue-600 p-8 text-center text-white md:p-12"
+              aria-labelledby={`${slug}-cta-heading`}
+            >
+              <h2
+                id={`${slug}-cta-heading`}
+                className="mb-3 text-3xl font-bold"
+              >
                 Tour {name} with Dr. Jan Duffy
               </h2>
               <p className="mx-auto mb-6 max-w-2xl text-blue-100">
@@ -184,7 +233,7 @@ export default function NeighborhoodGuide({
               <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a
                   href={CTA_TEL}
-                  className="inline-flex items-center rounded-md bg-white px-8 py-4 text-lg font-bold text-blue-600 no-underline hover:bg-blue-50"
+                  className={`${ctaClass} bg-white text-blue-600 hover:bg-blue-50`}
                 >
                   <Phone className="mr-2 h-5 w-5" aria-hidden="true" />
                   Call {CTA_PHONE}
@@ -193,7 +242,7 @@ export default function NeighborhoodGuide({
                   href={OFFICE_NAP.directionsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-md border border-white/40 px-6 py-4 font-semibold text-white no-underline hover:bg-blue-700"
+                  className={`${ctaClass} border border-white/40 text-white hover:bg-blue-700`}
                 >
                   Get Directions
                   <span className="sr-only"> (opens in a new tab)</span>
@@ -202,7 +251,7 @@ export default function NeighborhoodGuide({
                   href={OFFICE_NAP.reviewsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-md border border-white/40 px-6 py-4 font-semibold text-white no-underline hover:bg-blue-700"
+                  className={`${ctaClass} border border-white/40 text-white hover:bg-blue-700`}
                 >
                   <Star className="mr-2 h-4 w-4" aria-hidden="true" />
                   Google Reviews
@@ -222,9 +271,11 @@ export default function NeighborhoodGuide({
                 {origin.replace("https://", "")} · Berkshire Hathaway
                 HomeServices Nevada Properties
               </p>
+              <FairHousingNotice className="mt-6 text-blue-100" />
             </section>
           </article>
         </div>
+        {showListings ? <RealScoutListings /> : null}
       </main>
     </>
   );

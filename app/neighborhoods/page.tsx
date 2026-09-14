@@ -1,7 +1,13 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
-import { MapPin, Phone, Home, Users, GraduationCap } from "lucide-react";
+import { MapPin, Home, GraduationCap } from "lucide-react";
 import type { Metadata } from "next";
+import { PageCTA } from "@/components/shared/PageCTA";
+import {
+  formatUsd,
+  LISTING_MEDIANS_USD,
+  MARKET_SNAPSHOT_AS_OF,
+} from "@/lib/market-snapshots";
 
 export const metadata: Metadata = {
   title: "Las Vegas Neighborhoods | Centennial Hills, Inspirada, Summerlin",
@@ -19,14 +25,14 @@ const neighborhoods = [
   {
     name: "Summerlin",
     slug: "summerlin",
-    medianPrice: "$625,000",
-    priceChange: "+6.8%",
+    medianPrice: `${formatUsd(LISTING_MEDIANS_USD.summerlinNorth)} North`,
+    priceNote: "Listing median · realtor.com",
     description:
-      "Premier master-planned community with parks, trails, and parks, trails, and recreation centers",
+      "Howard Hughes master plan — villages and ZIPs are not interchangeable",
     highlights: [
       "150+ Parks",
       "Trail network",
-      "Red Rock Views",
+      "Red Rock access",
       "Downtown Summerlin",
     ],
     bestFor: "Parks, trails, and Downtown Summerlin access",
@@ -34,93 +40,83 @@ const neighborhoods = [
   {
     name: "Henderson",
     slug: "henderson",
-    medianPrice: "$485,000",
-    priceChange: "+5.1%",
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.hendersonListing),
+    priceNote: "City listing median · realtor.com",
     description:
-      "Nevada's second-largest city with master-planned communities and lake access",
+      "Nevada's second-largest city — Green Valley, Inspirada, Anthem, Lake Las Vegas",
     highlights: ["60+ Parks", "Lake Las Vegas", "Green Valley", "Master plans"],
     bestFor: "Henderson parks, trails, and lake access",
   },
   {
     name: "Green Valley",
     slug: "green-valley",
-    medianPrice: "$520,000",
-    priceChange: "+4.8%",
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.greenValleySouth),
+    priceNote: "GV South listing median · realtor.com",
     description:
-      "Established Henderson community with mature landscaping and excellent amenities",
+      "Established Henderson streets, mature trees, The District at Green Valley Ranch",
     highlights: [
-      "Golf Courses",
-      "Walking Trails",
+      "Finished streets",
+      "Walking trails",
       "The District",
-      "Mature Trees",
+      "Mature trees",
     ],
     bestFor: "Henderson golf, trails, and The District",
   },
   {
     name: "The Ridges",
     slug: "the-ridges",
-    medianPrice: "$2,500,000",
-    priceChange: "+8.5%",
+    medianPrice: "Ask CMA",
+    priceNote: "Custom · thin inventory",
     description:
-      "Ultra-luxury guard-gated community with custom estates and celebrity residents",
+      "Guard-gated Summerlin custom villages — price from live comps, not a headline",
     highlights: [
-      "Guard-Gated",
-      "Custom Estates",
-      "Bear's Best Golf",
-      "Strip Views",
+      "Guard-gated",
+      "Custom estates",
+      "Architectural controls",
+      "View lots",
     ],
-    bestFor: "Luxury buyers, celebrities, executives",
+    bestFor: "Summerlin custom and estate buyers",
   },
   {
     name: "Southern Highlands",
     slug: "southern-highlands",
-    medianPrice: "$750,000",
-    priceChange: "+7.2%",
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.southernHighlands),
+    priceNote: "Listing median · realtor.com",
     description:
-      "Master-planned luxury community with championship golf and mountain views",
+      "Southwest Las Vegas golf community with open and guard-gated sections",
     highlights: [
-      "Golf Community",
-      "Guard-Gated",
-      "Mountain Views",
-      "Luxury Amenities",
+      "Golf community",
+      "Guard-gated sections",
+      "Mountain views",
+      "89141",
     ],
     bestFor: "Golf, mountain views, and gated access",
   },
   {
     name: "North Las Vegas",
     slug: "north-las-vegas",
-    medianPrice: "$385,000",
-    priceChange: "+3.2%",
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.northLasVegas),
+    priceNote: "City listing median · realtor.com",
     description:
-      "Rapidly growing area with new construction and a lower entry price band",
-    highlights: [
-      "New Construction",
-      "Entry price band",
-      "Growing Area",
-      "I-15 access",
-    ],
+      "Separate city — Aliante, Tule Springs, Valley Vista, plus in-fill resale",
+    highlights: ["New construction", "Aliante", "Tule Springs", "I-15 access"],
     bestFor: "New construction and I-15 commute",
   },
   {
     name: "Skye Canyon",
     slug: "skye-canyon",
-    medianPrice: "$550,000",
-    priceChange: "+5.5%",
+    medianPrice: "Ask CMA",
+    priceNote: "Newer NW production",
     description:
-      "Newer master-planned community in northwest Las Vegas with mountain views",
-    highlights: [
-      "New Homes",
-      "Mountain Views",
-      "Skye Center",
-      "NW trail access",
-    ],
-    bestFor: "Northwest Las Vegas mountain-view inventory",
+      "Newer northwest master plan around Skye Center, near Floyd Lamb Park",
+    highlights: ["Newer homes", "Skye Center", "89166", "NW trail access"],
+    bestFor: "Northwest Las Vegas newer inventory",
   },
   {
     name: "Centennial Hills",
     slug: "centennial-hills",
-    medianPrice: "$495,000",
-    priceChange: "+4.8%",
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.centennialHills),
+    priceNote: "Listing median · realtor.com",
     description:
       "Northwest Las Vegas community near Centennial Hills Park and Town Center",
     highlights: ["89149", "Park", "Town Center", "US-95"],
@@ -130,7 +126,7 @@ const neighborhoods = [
     name: "Lone Mountain",
     slug: "lone-mountain",
     medianPrice: "Ask CMA",
-    priceChange: "Views/lots",
+    priceNote: "Views/lots",
     description:
       "Northwest lots and view streets next to the Centennial Hills corridor",
     highlights: ["Mountain views", "Larger lots", "US-95 access", "Resale mix"],
@@ -140,7 +136,7 @@ const neighborhoods = [
     name: "Tournament Hills",
     slug: "tournament-hills",
     medianPrice: "Ask CMA",
-    priceChange: "Thin inventory",
+    priceNote: "Thin inventory",
     description:
       "Guard-gated Summerlin custom homes near TPC (89134) — not Centennial Hills",
     highlights: ["89134", "TPC Summerlin", "Custom lots", "Gated"],
@@ -149,8 +145,8 @@ const neighborhoods = [
   {
     name: "Summerlin West",
     slug: "summerlin-west",
-    medianPrice: "Ask CMA",
-    priceChange: "89138",
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.summerlinWest),
+    priceNote: "Listing median · realtor.com",
     description:
       "Later Howard Hughes villages including Reverence in ZIP 89138",
     highlights: ["89138", "Reverence", "Newer plans", "Foothill views"],
@@ -160,7 +156,7 @@ const neighborhoods = [
     name: "89144 Summerlin",
     slug: "89144",
     medianPrice: "Ask CMA",
-    priceChange: "Not CH",
+    priceNote: "Not Centennial Hills",
     description:
       "The Arbors, Trails, and Queensridge — Summerlin ZIP, not Centennial Hills",
     highlights: ["89144", "Summerlin", "Arbors/Trails", "Queensridge"],
@@ -170,7 +166,7 @@ const neighborhoods = [
     name: "Groves at Inspirada",
     slug: "groves-at-inspirada",
     medianPrice: "Townhomes",
-    priceChange: "Resale",
+    priceNote: "Resale only",
     description:
       "KB Home townhomes inside Inspirada Henderson — new construction closed",
     highlights: ["89044", "KB Home", "Townhomes", "Aventura Park nearby"],
@@ -180,7 +176,7 @@ const neighborhoods = [
     name: "Red Rock Country Club",
     slug: "red-rock-country-club",
     medianPrice: "Ask CMA",
-    priceChange: "Golf",
+    priceNote: "Golf community",
     description: "Two-course Summerlin golf community in 89135",
     highlights: ["89135", "Two courses", "Gated", "Mixed product"],
     bestFor: "Golf-community buyers",
@@ -188,8 +184,8 @@ const neighborhoods = [
   {
     name: "Inspirada",
     slug: "inspirada",
-    medianPrice: "~$555K",
-    priceChange: "May 2026 resale",
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.inspirada),
+    priceNote: "Listing median · realtor.com",
     description:
       "Henderson 89044 master plan — Groves townhomes, Aventura Park, final new-construction pods",
     highlights: [
@@ -203,11 +199,10 @@ const neighborhoods = [
   {
     name: "Mountains Edge",
     slug: "mountains-edge",
-    medianPrice: "$475,000",
-    priceChange: "+4.5%",
-    description:
-      "Southwest Las Vegas master-planned community with mountain views and parks",
-    highlights: ["Mountain Views", "Parks", "Growing Area", "Value"],
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.mountainsEdge),
+    priceNote: "Listing median · realtor.com",
+    description: "Southwest Las Vegas master plan around Exploration Peak Park",
+    highlights: ["Exploration Peak", "Parks", "I-215", "89178 / 89179"],
     bestFor: "Southwest Las Vegas commuters",
   },
 ];
@@ -227,8 +222,9 @@ export default function NeighborhoodsPage() {
             </h1>
             <p className="text-xl text-slate-600">
               Centennial Hills, Inspirada, Tournament Hills, 89144, and 89138
-              are different maps. Pick the guide that matches the street—not a
-              valley-wide slogan.
+              are different maps. Listing medians below are from realtor.com as
+              of {MARKET_SNAPSHOT_AS_OF} — not a CMA. Pick the guide that
+              matches the street.
             </p>
           </div>
 
@@ -254,8 +250,8 @@ export default function NeighborhoodsPage() {
                       <div className="font-bold text-slate-900">
                         {neighborhood.medianPrice}
                       </div>
-                      <div className="text-sm text-green-600">
-                        {neighborhood.priceChange} YoY
+                      <div className="text-xs text-slate-500">
+                        {neighborhood.priceNote}
                       </div>
                     </div>
                   </div>
@@ -325,31 +321,11 @@ export default function NeighborhoodsPage() {
             </div>
           </section>
 
-          {/* CTA */}
-          <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Need Help Choosing a Neighborhood?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Dr. Jan Duffy knows every Las Vegas community inside and out. Call
-              for personalized neighborhood recommendations.
-            </p>
-            <a
-              href="tel:+17022221964"
-              className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Call (702) 222-1964
-            </a>
-            <p className="mt-4 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
-          </section>
-        </div>
-
-        {/* Last Updated */}
-        <div className="text-center text-sm text-slate-500 mt-8">
-          Last Updated: September 2026
+          <PageCTA
+            headline="Need help matching a street to a ZIP?"
+            subheadline="Call Dr. Jan Duffy with the village name. She will not send you to 89144 when you asked for Centennial Hills."
+            className="rounded-2xl"
+          />
         </div>
       </main>
       <RealScoutListings />

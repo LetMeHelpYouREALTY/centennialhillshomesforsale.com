@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
+import { formatUsd, LISTING_MEDIANS_USD } from "@/lib/market-snapshots";
 
 export const metadata: Metadata = {
   title: "Summerlin West Homes for Sale | 89138 Real Estate",
@@ -25,9 +26,12 @@ export default function SummerlinWestPage() {
       imageSrc="/images/neighborhoods/summerlin.png"
       imageAlt="West Summerlin desert foothills and newer residential streets in ZIP 89138"
       stats={[
+        {
+          value: formatUsd(LISTING_MEDIANS_USD.summerlinWest),
+          label: "Median listing",
+        },
         { value: "89138", label: "Primary ZIP" },
         { value: "Newer", label: "Housing stock" },
-        { value: "HH", label: "Master plan" },
         { value: "Red Rock", label: "Trail access" },
       ]}
       sections={[

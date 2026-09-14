@@ -52,7 +52,7 @@ const coreServices = [
     title: "Home Buying Services",
     slug: "buyers",
     description:
-      "Expert guidance through every step of the home buying process. Free buyer representation—the seller pays the commission, so you get professional advocacy at no cost to you.",
+      "Expert guidance through every step of the home buying process. Compensation is disclosed in a written buyer agreement and may be paid by the seller, the buyer, or both.",
     highlights: [
       "Full MLS access",
       "Expert negotiation",

@@ -21,6 +21,13 @@ import {
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { PageCTA } from "@/components/shared/PageCTA";
+import { REALSCOUT_SEARCH_URL } from "@/lib/contact";
+import {
+  formatUsd,
+  LISTING_MEDIANS_USD,
+  MARKET_SNAPSHOT_AS_OF,
+} from "@/lib/market-snapshots";
 
 export const metadata: Metadata = {
   title:
@@ -80,7 +87,7 @@ const faqSchema = {
       name: "Are 55+ communities a good investment?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, Las Vegas 55+ communities have shown strong appreciation due to limited supply and growing demand from retiring Baby Boomers. Sun City Summerlin homes have appreciated 40%+ over 5 years. The lifestyle amenities also make properties easier to sell.",
+        text: "Las Vegas 55+ inventory is limited relative to demand from out-of-state buyers, but that is not a return forecast. Sun City Summerlin’s realtor.com listing median as of September 14, 2026 was a snapshot, not a 5-year appreciation claim. Ask for a live CMA and a hold-period plan.",
       },
     },
     {
@@ -96,7 +103,7 @@ const faqSchema = {
       name: "Why do California residents move to Las Vegas 55+ communities?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "California retirees choose Las Vegas for no state income tax, lower property prices (often 50-60% less than California), lower cost of living, warm weather, world-class healthcare, and the ability to get more home and amenities for their money. Many can sell their California home and buy in Las Vegas with cash to spare.",
+        text: "Nevada has no state income tax on wages. Purchase prices are often lower than coastal California on a like-for-like house — confirm with paired comps, not a 50% slogan. Confirm HOA, insurance, and commute before assuming total cost of living is lower.",
       },
     },
   ],
@@ -132,7 +139,7 @@ const communities = [
     location: "Summerlin, Las Vegas",
     ageRequirement: "55+ (at least one resident)",
     hoaFees: "$155-$195/month",
-    priceRange: "$320,000 - $850,000",
+    priceRange: `${formatUsd(LISTING_MEDIANS_USD.sunCitySummerlin)} listing median`,
     homes: "7,700+ homes",
     amenities: ["3 golf courses", "4 rec centers", "100+ clubs", "Pools"],
     highlights: [
@@ -152,17 +159,17 @@ const communities = [
     location: "Henderson",
     ageRequirement: "55+ (at least one resident)",
     hoaFees: "$180-$230/month",
-    priceRange: "$350,000 - $1,200,000",
+    priceRange: `${formatUsd(LISTING_MEDIANS_USD.sunCityAnthem)} listing median`,
     homes: "7,100+ homes",
     amenities: ["2 golf courses", "64K sf clubhouse", "80+ clubs", "Pools"],
     highlights: [
-      "Henderson's premier 55+ community",
+      "Henderson 55+ Del Webb campus",
       "2 championship golf courses",
       "Stunning mountain views",
       "Henderson parks, trails, and recreation centers",
     ],
     description:
-      "Henderson's premier 55+ community with stunning mountain views and championship golf.",
+      "Henderson 55+ Del Webb campus with mountain views and nearby golf clubs.",
     color: "green",
   },
   {
@@ -304,7 +311,7 @@ const lifestyleBenefits = [
     icon: Shield,
     title: "Gated Security",
     description:
-      "Many communities offer guard-gated entries for added peace of mind and privacy.",
+      "Many communities offer guard-gated entries. Confirm access rules and guest policies in the CC&Rs.",
   },
   {
     icon: DollarSign,
@@ -335,21 +342,6 @@ export default function FiftyFiveCommunitiesPage() {
       />
       <main className="pb-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">
-                Home
-              </Link>
-              {" / "}
-              <Link href="/services" className="hover:text-blue-600">
-                Services
-              </Link>
-              {" / "}
-              <span className="text-slate-900">55+ Communities</span>
-            </nav>
-          </div>
-
           {/* Hero Section */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
@@ -373,7 +365,7 @@ export default function FiftyFiveCommunitiesPage() {
                 Call (702) 222-1964
               </a>
               <a
-                href="http://drjanduffy.realscout.com/"
+                href={REALSCOUT_SEARCH_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-slate-100 text-slate-900 px-8 py-4 rounded-md font-bold text-lg hover:bg-slate-200 transition-colors"
@@ -387,7 +379,7 @@ export default function FiftyFiveCommunitiesPage() {
           {/* Quick Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
-              Las Vegas 55+ Market Overview | January 2026
+              Las Vegas 55+ snapshot | {MARKET_SNAPSHOT_AS_OF}
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -767,11 +759,11 @@ export default function FiftyFiveCommunitiesPage() {
                   Why do California residents choose Las Vegas 55+ communities?
                 </h3>
                 <p className="text-slate-600">
-                  California retirees love Las Vegas for no state income tax,
-                  lower property prices (50-60% less), lower cost of living,
-                  warm weather, world-class healthcare, and the ability to get
-                  more home and amenities for their money. Many sell their
-                  California home and buy in Las Vegas with cash to spare.
+                  No Nevada state income tax on wages. Purchase prices are often
+                  lower than coastal California on a like-for-like house — I
+                  pair comps, I do not promise a 50% discount. Confirm HOA,
+                  insurance, and commute before you assume total cost of living
+                  is lower.
                 </p>
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">
@@ -858,44 +850,11 @@ export default function FiftyFiveCommunitiesPage() {
             </div>
           </section>
 
-          {/* Final CTA */}
-          <section className="text-center bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Let's Find Your Ideal Lifestyle Match
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Ready to explore active adult living in Las Vegas? Contact Dr. Jan
-              Duffy for a free consultation and personalized community
-              recommendations.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a
-                href="tel:+17022221964"
-                className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call/Text (702) 222-1964
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors"
-              >
-                Request Information
-              </Link>
-            </div>
-            <p className="text-blue-200 text-lg">
-              Here to make your transition smooth, Dr. Jan{" "}
-              <span role="img" aria-label="sunshine">
-                ☀️
-              </span>
-            </p>
-            <p className="mt-4 text-blue-300 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
-          </section>
-        </div>
-        <div className="text-center text-sm text-slate-500 mt-8">
-          Last Updated: January 2026
+          <PageCTA
+            headline="Match the 55+ campus to the street"
+            subheadline="Sun City Summerlin, Sun City Anthem, Trilogy, Heritage, Solera, and Del Webb Lake Las Vegas are different HOAs. Call with the community name."
+            className="rounded-2xl"
+          />
         </div>
       </main>
       <RealScoutListings />

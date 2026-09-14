@@ -499,10 +499,10 @@ export default function FirstTimeBuyersPage() {
                   Do I pay for Dr. Jan's services as a buyer?
                 </h3>
                 <p className="text-slate-600">
-                  No! Buyer's agent services are typically free to buyers—the
-                  seller pays the commission. You get full professional
-                  representation from Berkshire Hathaway HomeServices at no cost
-                  to you.
+                  Buyer-broker compensation is set in a written buyer agreement.
+                  The seller may contribute, the buyer may pay, or both. Confirm
+                  the number before you tour. You still get full representation
+                  from Berkshire Hathaway HomeServices Nevada Properties.
                 </p>
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">

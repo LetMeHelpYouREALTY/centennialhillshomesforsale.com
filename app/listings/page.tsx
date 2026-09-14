@@ -1,6 +1,5 @@
 import Link from "next/link";
 import {
-  Phone,
   Home,
   MapPin,
   DollarSign,
@@ -16,6 +15,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { PageCTA } from "@/components/shared/PageCTA";
 
 export const metadata: Metadata = {
   title:
@@ -365,18 +365,18 @@ export default function ListingsPage() {
                 </div>
                 <h3 className="font-bold mb-2">Local Expertise</h3>
                 <p className="text-slate-400 text-sm">
-                  Insider knowledge of neighborhoods, schools, and upcoming
-                  developments
+                  Insider knowledge of commute times, named campuses, and HOA
+                  documents
                 </p>
               </div>
               <div className="text-center">
                 <div className="bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
                   <CheckCircle className="h-6 w-6" />
                 </div>
-                <h3 className="font-bold mb-2">Free for Buyers</h3>
+                <h3 className="font-bold mb-2">Written buyer agreement</h3>
                 <p className="text-slate-400 text-sm">
-                  The seller pays the commission—you get full representation at
-                  no cost
+                  Compensation is disclosed in writing. It may be paid by the
+                  seller, the buyer, or both — never assumed.
                 </p>
               </div>
             </div>
@@ -574,42 +574,15 @@ export default function ListingsPage() {
             </div>
           </section>
 
-          {/* CTA */}
-          <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Find Your Las Vegas Home?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Contact Dr. Jan Duffy for personalized guidance, off-market
-              listings, and expert representation backed by Berkshire Hathaway
-              HomeServices. Free buyer consultations available—the seller pays
-              the commission.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17022221964"
-                className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 222-1964
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors"
-              >
-                Schedule Consultation
-              </Link>
-            </div>
-            <p className="mt-4 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
-          </section>
+          <PageCTA
+            headline="Ready to filter live MLS results?"
+            subheadline="Call Dr. Jan Duffy with beds, ZIP, and budget. She will send matching listings — not a scraped dump."
+            className="rounded-2xl"
+          />
         </div>
-
-        {/* Last Updated */}
-        <div className="text-center text-sm text-slate-500 mt-8">
-          Last Updated: January 2026
-        </div>
+        <p className="mt-8 text-center text-sm text-slate-500">
+          Last updated: September 2026
+        </p>
       </main>
     </>
   );

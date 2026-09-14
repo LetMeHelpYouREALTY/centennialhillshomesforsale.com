@@ -170,6 +170,7 @@ export function NeighborhoodSchema({
   latitude,
   longitude,
   containedIn = "Las Vegas",
+  pathPrefix = "/neighborhoods",
 }: {
   name: string;
   description: string;
@@ -177,11 +178,12 @@ export function NeighborhoodSchema({
   latitude?: number;
   longitude?: number;
   containedIn?: string;
+  pathPrefix?: "/neighborhoods" | "/55-plus-communities";
 }) {
   const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Place",
-    "@id": `${getPublicSiteUrl()}/neighborhoods/${slug}#place`,
+    "@id": `${getPublicSiteUrl()}${pathPrefix}/${slug}#place`,
     name: `${name}, ${containedIn}`,
     description,
     address: {

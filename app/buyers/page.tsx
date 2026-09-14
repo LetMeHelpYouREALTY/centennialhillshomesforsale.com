@@ -1,7 +1,6 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
-  Phone,
   Search,
   FileText,
   Home,
@@ -17,6 +16,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { PageCTA } from "@/components/shared/PageCTA";
 
 export const metadata: Metadata = {
   title: "Home Buying Guide Las Vegas | Berkshire Hathaway HomeServices",
@@ -131,15 +131,16 @@ export default function BuyersPage() {
             </h1>
             <p className="text-xl text-slate-600 mb-8">
               When you work with a{" "}
-              <strong>Berkshire Hathaway HomeServices</strong> buyer's agent,
-              you're backed by the most trusted name in real estate—and it costs
-              you nothing. The seller pays the commission, but the
-              representation is yours.
+              <strong>Berkshire Hathaway HomeServices</strong> buyer&apos;s
+              agent, you get written advocacy for your side of the deal.
+              Compensation is negotiated in a buyer agreement — it may be paid
+              by the seller, the buyer, or a combination. I put the number in
+              writing before we tour.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
               <span className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Free
-                Buyer Representation
+                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Written
+                Buyer Agreement
               </span>
               <span className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Full MLS
@@ -160,9 +161,10 @@ export default function BuyersPage() {
                   Why You Need a Buyer's Agent
                 </h2>
                 <p className="text-slate-300 mb-6">
-                  Here's what many buyers don't know: having your own agent
-                  costs you nothing. The seller pays the commission, but the
-                  representation is yours.{" "}
+                  After the 2024 NAR practice changes, buyer-broker compensation
+                  is no longer an automatic MLS offer. We sign a written buyer
+                  agreement that states how I am paid. The seller may still
+                  contribute — that is negotiated, not assumed.{" "}
                   <strong>Berkshire Hathaway HomeServices</strong> agents
                   protect your interests, not the seller's. In a competitive
                   market like Las Vegas, having expert representation can mean
@@ -508,42 +510,15 @@ export default function BuyersPage() {
             </div>
           </section>
 
-          {/* CTA */}
-          <section className="text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Find Your Las Vegas Home?
-            </h2>
-            <p className="text-xl text-slate-300 mb-8">
-              Questions about buying in Las Vegas? Call or text Dr. Jan Duffy
-              for a free buyer consultation. Get expert guidance backed by
-              Berkshire Hathaway HomeServices—the seller pays the commission, so
-              representation is free for you.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17022221964"
-                className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 222-1964
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
-              >
-                Schedule Consultation
-              </Link>
-            </div>
-            <p className="mt-4 text-slate-400 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
-          </section>
+          <PageCTA
+            headline="Ready to tour Las Vegas listings?"
+            subheadline="Call Dr. Jan Duffy for a buyer consult. Representation is typically paid by the seller under a listing agreement — confirm current compensation in writing."
+            className="rounded-2xl"
+          />
         </div>
-
-        {/* Last Updated */}
-        <div className="text-center text-sm text-slate-500 mt-8">
-          Last Updated: January 2026
-        </div>
+        <p className="mt-8 text-center text-sm text-slate-500">
+          Last updated: September 2026
+        </p>
       </main>
       <RealScoutListings />
     </>

@@ -1,7 +1,6 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
-  Phone,
   Camera,
   Globe,
   DollarSign,
@@ -16,6 +15,7 @@ import {
   Award,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { PageCTA } from "@/components/shared/PageCTA";
 
 export const metadata: Metadata = {
   title: "Sell Your Las Vegas Home | Berkshire Hathaway HomeServices",
@@ -471,42 +471,15 @@ export default function SellersPage() {
             </div>
           </section>
 
-          {/* CTA */}
-          <section className="text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Sell Your Las Vegas Home?
-            </h2>
-            <p className="text-xl text-slate-300 mb-8">
-              Schedule a free listing consultation with Dr. Jan Duffy and
-              discover what your home could sell for with Berkshire Hathaway
-              HomeServices. No obligation, no pressure—just honest advice and
-              expert analysis.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17022221964"
-                className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 222-1964
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
-              >
-                Schedule Consultation
-              </Link>
-            </div>
-            <p className="mt-4 text-slate-400 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
-          </section>
+          <PageCTA
+            headline="Ready to price a listing?"
+            subheadline="Call Dr. Jan Duffy for a listing consult and a live CMA. No obligation."
+            className="rounded-2xl"
+          />
         </div>
-
-        {/* Last Updated */}
-        <div className="text-center text-sm text-slate-500 mt-8">
-          Last Updated: January 2026
-        </div>
+        <p className="mt-8 text-center text-sm text-slate-500">
+          Last updated: September 2026
+        </p>
       </main>
       <RealScoutListings />
     </>
