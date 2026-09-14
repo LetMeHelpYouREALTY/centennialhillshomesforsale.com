@@ -1,11 +1,9 @@
 import { FAQSchema } from "@/components/SchemaScript";
-import FAQSection, {
-  defaultFaqs,
-  type FAQ,
-} from "@/components/sections/FAQSection";
+import FAQSection from "@/components/sections/FAQSection";
+import { defaultFaqs, type SiteFaq } from "@/lib/default-faqs";
 
 type FAQWithSchemaProps = {
-  faqs?: FAQ[];
+  faqs?: SiteFaq[];
   title?: string;
   subtitle?: string;
   className?: string;

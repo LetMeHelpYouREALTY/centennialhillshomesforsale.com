@@ -1,12 +1,13 @@
 import { ReviewSchema } from "@/components/SchemaScript";
-import ReviewsSection, {
+import ReviewsSection from "@/components/sections/ReviewsSection";
+import {
   aggregateRating,
   defaultReviews,
-  type Review,
-} from "@/components/sections/ReviewsSection";
+  type SiteReview,
+} from "@/lib/default-reviews";
 
 type ReviewsWithSchemaProps = {
-  reviews?: Review[];
+  reviews?: SiteReview[];
   title?: string;
   subtitle?: string;
   googleReviewsUrl?: string;
