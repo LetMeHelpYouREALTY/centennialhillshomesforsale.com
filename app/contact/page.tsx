@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import {
   Phone,
@@ -63,7 +61,6 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
       />
-      <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
@@ -375,7 +372,6 @@ export default function ContactPage() {
         </div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

@@ -1,9 +1,8 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import Image from "next/image";
 import Link from "next/link";
-import { Phone, MapPin } from "lucide-react";
-import { CTA_PHONE, CTA_TEL, OFFICE_NAP } from "@/lib/contact";
+import { Phone, MapPin, Star } from "lucide-react";
+import { CTA_PHONE, CTA_TEL, OFFICE_HOURS, OFFICE_NAP } from "@/lib/contact";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { getPublicSiteUrl } from "@/lib/site-url";
 
 export type NeighborhoodFaq = {
@@ -75,25 +74,18 @@ export default function NeighborhoodGuide({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main className="pb-16 pt-24">
         <div className="container mx-auto px-4">
-          <nav
-            className="max-w-5xl mx-auto mb-6 text-sm text-slate-500"
-            aria-label="Breadcrumb"
-          >
-            <Link href="/" className="hover:text-blue-600">
-              Home
-            </Link>
-            {" / "}
-            <Link href="/neighborhoods" className="hover:text-blue-600">
-              Neighborhoods
-            </Link>
-            {" / "}
-            <span className="text-slate-900">{name}</span>
-          </nav>
+          <Breadcrumbs
+            className="mx-auto mb-6"
+            items={[
+              { name: "Home", href: "/" },
+              { name: "Neighborhoods", href: "/neighborhoods" },
+              { name, href: "#" },
+            ]}
+          />
 
-          <article className="max-w-5xl mx-auto">
+          <article className="mx-auto max-w-5xl">
             <div className="relative mb-10 h-56 overflow-hidden rounded-2xl md:h-80">
               <Image
                 src={imageSrc}
@@ -111,7 +103,7 @@ export default function NeighborhoodGuide({
             <p className="mb-6 text-lg text-slate-600">{intro}</p>
             <p className="mb-10 text-sm text-slate-500">
               ZIP {zipCodes.join(", ")} · {city}, NV · Dr. Jan Duffy, License
-              S.0197614.LLC
+              S.0197614.LLC · {OFFICE_HOURS.display}
             </p>
 
             <section className="mb-12 rounded-2xl bg-slate-900 p-8 text-white">
@@ -121,7 +113,7 @@ export default function NeighborhoodGuide({
               <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
                 {stats.map((stat) => (
                   <div key={stat.label} className="text-center">
-                    <div className="mb-1 text-2xl font-bold text-blue-400">
+                    <div className="mb-1 text-2xl font-bold tabular-nums text-blue-400">
                       {stat.value}
                     </div>
                     <div className="text-sm text-slate-300">{stat.label}</div>
@@ -154,7 +146,7 @@ export default function NeighborhoodGuide({
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="block rounded-lg border border-slate-200 px-4 py-3 text-blue-700 hover:border-blue-300 hover:bg-blue-50"
+                      className="block rounded-lg border border-slate-200 px-4 py-3 text-blue-700 no-underline hover:border-blue-300 hover:bg-blue-50"
                     >
                       {item.label}
                     </Link>
@@ -190,18 +182,42 @@ export default function NeighborhoodGuide({
                 First-party local guidance — not a syndicated listing dump. Call
                 or text the client line.
               </p>
-              <a
-                href={CTA_TEL}
-                className="inline-flex items-center rounded-md bg-white px-8 py-4 text-lg font-bold text-blue-600 hover:bg-blue-50"
-              >
-                <Phone className="mr-2 h-5 w-5" />
-                Call {CTA_PHONE}
-              </a>
+              <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <a
+                  href={CTA_TEL}
+                  className="inline-flex items-center rounded-md bg-white px-8 py-4 text-lg font-bold text-blue-600 no-underline hover:bg-blue-50"
+                >
+                  <Phone className="mr-2 h-5 w-5" aria-hidden="true" />
+                  Call {CTA_PHONE}
+                </a>
+                <a
+                  href={OFFICE_NAP.directionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center rounded-md border border-white/40 px-6 py-4 font-semibold text-white no-underline hover:bg-blue-700"
+                >
+                  Get Directions
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+                <a
+                  href={OFFICE_NAP.reviewsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center rounded-md border border-white/40 px-6 py-4 font-semibold text-white no-underline hover:bg-blue-700"
+                >
+                  <Star className="mr-2 h-4 w-4" aria-hidden="true" />
+                  Google Reviews
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+              </div>
               <p className="mt-6 flex items-center justify-center gap-2 text-sm text-blue-100">
-                <MapPin className="h-4 w-4" />
+                <MapPin className="h-4 w-4" aria-hidden="true" />
                 <a href={OFFICE_NAP.mapsUrl} className="underline">
                   {OFFICE_NAP.full}
                 </a>
+              </p>
+              <p className="mt-2 text-xs text-blue-200">
+                {OFFICE_HOURS.display}
               </p>
               <p className="mt-2 text-xs text-blue-200">
                 {origin.replace("https://", "")} · Berkshire Hathaway
@@ -211,7 +227,6 @@ export default function NeighborhoodGuide({
           </article>
         </div>
       </main>
-      <Footer />
     </>
   );
 }

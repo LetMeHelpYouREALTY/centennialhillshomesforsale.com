@@ -23,7 +23,11 @@ interface SchemaScriptProps {
  * Server component for injecting JSON-LD structured data
  * Can accept either a single schema or multiple schemas
  */
-export default function SchemaScript({ schema, schemas, id }: SchemaScriptProps) {
+export default function SchemaScript({
+  schema,
+  schemas,
+  id,
+}: SchemaScriptProps) {
   // Determine the final schema to render
   let finalSchema: Record<string, unknown>;
 
@@ -65,7 +69,9 @@ export function BreadcrumbSchema({
       name: item.name,
       item: item.url.startsWith("http")
         ? item.url
-        : `${getPublicSiteUrl()}${item.url}`,
+        : item.url.startsWith("#") || item.url === ""
+          ? undefined
+          : `${getPublicSiteUrl()}${item.url}`,
     })),
   };
 

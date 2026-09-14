@@ -448,7 +448,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "Search Henderson NV homes for sale. Expert Henderson real estate guidance from Dr. Jan Duffy.",
     heroHeadline: "Search Homes in Henderson, NV",
     heroSubheadline:
-      "One of America's safest cities with award-winning master-planned communities.",
+      "One of America's cities frequently cited for civic amenities with award-winning master-planned communities.",
     keywords: [
       "Henderson NV homes for sale",
       "Henderson real estate",

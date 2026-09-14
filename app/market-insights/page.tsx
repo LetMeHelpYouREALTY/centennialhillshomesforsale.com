@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import SearchCentralFeed from "@/components/sections/SearchCentralFeed";
 import Link from "next/link";
@@ -56,7 +54,6 @@ export default async function MarketInsightsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reportSchema) }}
       />
-      <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
@@ -547,7 +544,6 @@ export default async function MarketInsightsPage() {
         </div>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

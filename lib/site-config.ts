@@ -19,9 +19,9 @@ export const agentInfo = {
   name: "Dr. Jan Duffy",
   title: "REALTOR®",
   license: "S.0197614.LLC",
-  phone: "(702) 500-1942",
-  phoneFormatted: "(702) 500-1942",
-  phoneTel: "tel:+17025001942",
+  phone: "(702) 222-1964",
+  phoneFormatted: "(702) 222-1964",
+  phoneTel: "tel:+17022221964",
   email: "homes@heyberkshire.com",
   brokerage: "Berkshire Hathaway HomeServices Nevada Properties",
 };
@@ -39,8 +39,8 @@ export const officeInfo = {
     lat: 36.1893,
     lng: -115.2821,
   },
-  phone: "(702) 500-1942",
-  phoneTel: "tel:+17025001942",
+  phone: "(702) 222-1964",
+  phoneTel: "tel:+17022221964",
 };
 
 // Market Statistics (Updated January 2026)
@@ -103,21 +103,26 @@ export const neighborhoods = [
     name: "Summerlin",
     slug: "summerlin",
     description:
-      "Master-planned community with parks, trails, and top-rated schools",
+      "Master-planned community with parks, trails, and Red Rock Canyon access",
     medianPrice: "$625,000",
-    highlights: ["Red Rock views", "150+ parks", "Top schools", "Golf courses"],
+    highlights: [
+      "Red Rock views",
+      "150+ parks",
+      "Trail network",
+      "Golf courses",
+    ],
   },
   {
     name: "Henderson",
     slug: "henderson",
     description:
-      "Nevada's second-largest city with family-friendly neighborhoods",
+      "Nevada's second-largest city with parks, trails, and master-planned villages",
     medianPrice: "$485,000",
     highlights: [
-      "Low crime rate",
-      "Excellent schools",
+      "Parks and trails",
       "Lake Las Vegas",
       "Green Valley",
+      "Master-planned villages",
     ],
   },
   {
@@ -158,9 +163,9 @@ export const neighborhoods = [
     medianPrice: "$385,000",
     highlights: [
       "New construction",
-      "Affordable",
-      "Growing area",
-      "Family-friendly",
+      "Entry-level pricing",
+      "Growing employment centers",
+      "Parks and recreation",
     ],
   },
   {
@@ -172,7 +177,7 @@ export const neighborhoods = [
       "New homes",
       "Mountain views",
       "Modern amenities",
-      "Great schools",
+      "Skye Center recreation",
     ],
   },
   {
@@ -180,7 +185,7 @@ export const neighborhoods = [
     slug: "centennial-hills",
     description: "Northwest Las Vegas community with mountain proximity",
     medianPrice: "$495,000",
-    highlights: ["Mountain access", "Parks", "Shopping", "Family-friendly"],
+    highlights: ["Mountain access", "Parks", "Shopping", "Town Center"],
   },
   {
     name: "Inspirada",
@@ -191,7 +196,7 @@ export const neighborhoods = [
       "Resort pools",
       "Walking trails",
       "New construction",
-      "Great schools",
+      "Aventura Park",
     ],
   },
   {

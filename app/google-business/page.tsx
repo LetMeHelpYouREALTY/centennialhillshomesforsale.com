@@ -1,5 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import Link from "next/link";
 import {
   Phone,
@@ -19,6 +17,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
+import { OFFICE_NAP } from "@/lib/contact";
 import {
   businessInfo,
   gbpDescription,
@@ -30,7 +29,7 @@ import {
 export const metadata: Metadata = {
   title: "Dr. Jan Duffy, REALTOR® Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Dr. Jan Duffy is a trusted Las Vegas REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. Specializing in Summerlin, Henderson, 55+ communities, California relocation, and luxury homes. Call (702) 500-1942.",
+    "Dr. Jan Duffy is a trusted Las Vegas REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. Specializing in Summerlin, Henderson, 55+ communities, California relocation, and luxury homes. Call (702) 222-1964.",
   keywords: [
     "Dr. Jan Duffy realtor",
     "Las Vegas real estate agent",
@@ -65,7 +64,6 @@ export default function GoogleBusinessPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Hero - NAP Prominent */}
@@ -373,7 +371,7 @@ export default function GoogleBusinessPage() {
                 transaction, and what made the experience valuable.
               </p>
               <a
-                href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK/review"
+                href={OFFICE_NAP.reviewsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
@@ -420,7 +418,6 @@ export default function GoogleBusinessPage() {
           Last Updated: January 2026
         </div>
       </main>
-      <Footer />
     </>
   );
 }

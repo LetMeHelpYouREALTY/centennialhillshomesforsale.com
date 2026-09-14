@@ -3,18 +3,23 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-padding-top: 5.5rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+
   a,
   button {
-    @apply transition;
+    @apply transition-colors;
+    touch-action: manipulation;
   }
 
   a {
-    @apply text-emerald-500 underline hover:bg-emerald-100
-        outline-0 focus:ring-2 focus:ring-offset-1 focus:ring-emerald-500;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2;
   }
 
   ::selection {
-    @apply bg-emerald-200 text-emerald-950;
+    @apply bg-blue-200 text-blue-950;
   }
 
   label,
@@ -35,6 +40,34 @@
   }
 }
 
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100%;
+  z-index: 60;
+  border-radius: 0.375rem;
+  background: #1d4ed8;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* ===== RealScout Widget Styling ===== */
 
 /* RealScout Simple Search - Desktop */
@@ -51,6 +84,7 @@ realscout-simple-search {
 realscout-office-listings {
   --rs-listing-divider-color: #2563eb;
   width: 100%;
+  min-height: 24rem;
 }
 
 /* RealScout container wrapper */

@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { CALENDLY_SHOWING_URL } from "@/lib/contact";
+import "./types";
 
 interface CalendlyWidgetProps {
   url?: string;
@@ -9,58 +11,64 @@ interface CalendlyWidgetProps {
 }
 
 export default function CalendlyWidget({
-  url = "https://calendly.com/drjanduffy/showing",
+  url = CALENDLY_SHOWING_URL,
   minWidth = "320px",
   height = "700px",
 }: CalendlyWidgetProps) {
   const widgetRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Ensure Calendly script is loaded and widget is initialized
+    let cancelled = false;
+    let intervalId: ReturnType<typeof setInterval> | undefined;
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
+
     const initWidget = () => {
-      if (typeof window !== "undefined" && (window as any).Calendly && widgetRef.current) {
-        // Clear any existing content
-        widgetRef.current.innerHTML = "";
-        
-        // Create the widget div
-        const widgetDiv = document.createElement("div");
-        widgetDiv.className = "calendly-inline-widget";
-        widgetDiv.setAttribute("data-url", url);
-        widgetDiv.style.minWidth = minWidth;
-        widgetDiv.style.height = height;
-        widgetDiv.style.width = "100%";
-        
-        widgetRef.current.appendChild(widgetDiv);
-        
-        // Initialize the widget
-        (window as any).Calendly.initInlineWidget({
-          url: url,
-          parentElement: widgetDiv,
-        });
+      if (cancelled || !widgetRef.current || !window.Calendly) {
+        return;
       }
+      widgetRef.current.innerHTML = "";
+
+      const widgetDiv = document.createElement("div");
+      widgetDiv.className = "calendly-inline-widget";
+      widgetDiv.setAttribute("data-url", url);
+      widgetDiv.style.minWidth = minWidth;
+      widgetDiv.style.height = height;
+      widgetDiv.style.width = "100%";
+      widgetRef.current.appendChild(widgetDiv);
+
+      window.Calendly.initInlineWidget({
+        url,
+        parentElement: widgetDiv,
+      });
     };
 
-    // Try to initialize immediately if Calendly is already loaded
-    if ((window as any).Calendly) {
+    if (window.Calendly) {
       initWidget();
     } else {
-      // Wait for the script to load
-      const checkCalendly = setInterval(() => {
-        if ((window as any).Calendly) {
-          clearInterval(checkCalendly);
+      intervalId = setInterval(() => {
+        if (window.Calendly) {
+          if (intervalId) clearInterval(intervalId);
           initWidget();
         }
       }, 100);
-
-      // Clean up interval after 10 seconds
-      setTimeout(() => clearInterval(checkCalendly), 10000);
+      timeoutId = setTimeout(() => {
+        if (intervalId) clearInterval(intervalId);
+      }, 10000);
     }
+
+    return () => {
+      cancelled = true;
+      if (intervalId) clearInterval(intervalId);
+      if (timeoutId) clearTimeout(timeoutId);
+    };
   }, [url, minWidth, height]);
 
   return (
-    <div 
-      ref={widgetRef} 
+    <div
+      ref={widgetRef}
       style={{ minWidth, height, width: "100%" }}
+      aria-busy="true"
+      aria-label="Schedule a showing with Dr. Jan Duffy"
     />
   );
 }

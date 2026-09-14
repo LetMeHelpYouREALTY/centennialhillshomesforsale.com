@@ -8,6 +8,7 @@
 
 import { siteConfig, agentInfo, officeInfo, agentStats } from "./site-config";
 import { AGENT_PHOTO_PATH, FAVICON_32_PATH } from "./brand-assets";
+import { CTA_PHONE_E164, OPENING_HOURS_SPEC } from "./contact";
 import { getPublicSiteUrl } from "./site-url";
 
 // ============================================================================
@@ -98,7 +99,7 @@ export function generateRealEstateAgentSchema() {
     logo: AGENT_IMAGE_URL,
     image: AGENT_IMAGE_URL,
     description: siteConfig.description,
-    telephone: "+1-702-500-1942",
+    telephone: CTA_PHONE_E164,
     email: agentInfo.email,
     priceRange: "$385K - $10M+",
     address: {
@@ -138,22 +139,12 @@ export function generateRealEstateAgentSchema() {
         name: "Green Valley",
       },
     ],
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday",
-        ],
-        opens: "08:00",
-        closes: "20:00",
-      },
-    ],
+    openingHoursSpecification: OPENING_HOURS_SPEC.map((spec) => ({
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [...spec.dayOfWeek],
+      opens: spec.opens,
+      closes: spec.closes,
+    })),
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "Real Estate License",
