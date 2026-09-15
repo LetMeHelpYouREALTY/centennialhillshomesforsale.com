@@ -102,7 +102,6 @@ export default function NorthLasVegasPage() {
         },
         { href: "/buyers/first-time-buyers", label: "First-time buyer guide" },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

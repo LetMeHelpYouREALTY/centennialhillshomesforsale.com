@@ -102,7 +102,6 @@ export default function MarketUpdatePage() {
         { href: "/market-insights", label: "Centennial Hills insights" },
         { href: "/neighborhoods", label: "Neighborhoods" },
       ]}
-      lastUpdated="September 2026"
       showListings={false}
     />
   );

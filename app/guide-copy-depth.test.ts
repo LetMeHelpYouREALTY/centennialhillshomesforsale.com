@@ -33,4 +33,11 @@ describe("NeighborhoodGuide and TopicGuide copy depth", () => {
       expect(headings.length).toBeGreaterThanOrEqual(5);
     },
   );
+
+  it("does not hardcode a month-only lastUpdated prop", () => {
+    for (const file of guidePages) {
+      const src = readFileSync(file, "utf8");
+      expect(src, file).not.toContain('lastUpdated="September 2026"');
+    }
+  });
 });

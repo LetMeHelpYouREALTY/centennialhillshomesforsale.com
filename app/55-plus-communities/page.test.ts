@@ -13,5 +13,6 @@ describe("55+ hub", () => {
     expect(src).toContain("including Sun City, Siena, Trilogy");
     expect(src).toContain("homes@heyberkshire.com");
     expect(src).toContain("Siena, Trilogy, Sun City");
+    expect(src).toContain('source="55-plus-hub-mid"');
   });
 });

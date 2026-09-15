@@ -545,7 +545,7 @@ export default function SellersPage() {
                 <p className="text-blue-200">
                   Las Vegas listing median ({MARKET_SNAPSHOT_AS_OF})
                 </p>
-                <p className="text-blue-300 text-sm mt-2">
+                <p className="text-blue-50 text-sm mt-2">
                   Listing median, not a sold CMA
                 </p>
               </div>
@@ -589,7 +589,7 @@ export default function SellersPage() {
           />
         </div>
         <p className="mt-8 text-center text-sm text-slate-500">
-          Last updated: September 2026
+          Last updated: {MARKET_SNAPSHOT_AS_OF}
         </p>
       </div>
       <RealScoutListings />

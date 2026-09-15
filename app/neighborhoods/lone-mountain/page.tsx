@@ -86,7 +86,6 @@ export default function LoneMountainPage() {
           label: "North Las Vegas homes",
         },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

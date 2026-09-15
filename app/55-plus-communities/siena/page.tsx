@@ -110,7 +110,6 @@ export default function SienaPage() {
         },
         { href: "/neighborhoods/summerlin", label: "Summerlin all-ages homes" },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

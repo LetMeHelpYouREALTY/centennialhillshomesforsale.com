@@ -36,6 +36,7 @@ import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
 import { LeadCaptureForm } from "@/components/forms/LeadCaptureForm";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
+import { MARKET_SNAPSHOT_AS_OF } from "@/lib/market-snapshots";
 
 export const metadata: Metadata = withShareImage(
   {
@@ -464,7 +465,7 @@ export default function ContactPage() {
 
         {/* Last Updated */}
         <div className="text-center text-sm text-slate-500 mt-8">
-          Last updated: September 2026
+          Last updated: {MARKET_SNAPSHOT_AS_OF}
         </div>
       </div>
       <VisitOffice compact />

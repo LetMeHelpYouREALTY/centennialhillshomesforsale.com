@@ -94,7 +94,6 @@ export default function InspiradaPage() {
         { href: "/neighborhoods/green-valley", label: "Green Valley homes" },
         { href: "/new-construction", label: "Las Vegas new construction" },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

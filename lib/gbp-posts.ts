@@ -110,7 +110,7 @@ Schedule a community tour: (702) 222-1964 or email homes@heyberkshire.com`,
 🏠 Nevada Housing Division: Down payment assistance up to 5%
 🏗️ Builder incentives: Many offering closing cost credits
 
-Dr. Jan Duffy guides first-time buyers through pre-approval, loan programs, and a written buyer agreement. Call (702) 222-1964.
+Dr. Jan Duffy guides first-time buyers through pre-approval, loan programs, and a written buyer agreement. Call (702) 222-1964 or email homes@heyberkshire.com.
 
 Popular first-time buyer neighborhoods (realtor.com listing medians as of 2026-09-14, not a CMA):
 - North Las Vegas ($439,990)

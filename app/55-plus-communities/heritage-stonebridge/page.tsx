@@ -107,7 +107,6 @@ export default function HeritageStonebridgePage() {
         },
         { href: "/neighborhoods/summerlin", label: "Summerlin homes" },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

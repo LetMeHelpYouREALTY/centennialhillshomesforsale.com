@@ -104,7 +104,6 @@ export default function LuxuryHomesLasVegasPage() {
           label: "Southern Highlands",
         },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

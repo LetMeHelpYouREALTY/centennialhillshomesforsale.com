@@ -85,7 +85,6 @@ export default function DivorceProbatePage() {
         { href: "/sellers/relocation", label: "Relocation sellers" },
         { href: "/contact", label: "Contact" },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

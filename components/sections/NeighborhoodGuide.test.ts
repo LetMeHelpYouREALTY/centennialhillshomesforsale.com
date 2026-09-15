@@ -18,5 +18,8 @@ describe("NeighborhoodGuide conversion chrome", () => {
     expect(src).not.toContain("<main");
     expect(src).toContain('variant="onBrand"');
     expect(src).toContain("text-blue-50");
+    expect(src).toContain("-guide-mid");
+    expect(src).toContain("MARKET_SNAPSHOT_AS_OF");
+    expect(src).toContain("text-slate-300");
   });
 });

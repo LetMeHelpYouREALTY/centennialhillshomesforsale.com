@@ -90,7 +90,6 @@ export default function GrovesAtInspiradaPage() {
           label: "Centennial Hills homes",
         },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

@@ -97,7 +97,6 @@ export default function FirstTimeBuyersPage() {
         },
         { href: "/new-construction", label: "New construction" },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

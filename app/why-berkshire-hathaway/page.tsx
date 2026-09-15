@@ -86,7 +86,6 @@ export default function WhyBerkshirePage() {
         { href: "/fair-housing", label: "Fair Housing" },
         { href: "/google-business", label: "Google Business Profile" },
       ]}
-      lastUpdated="September 2026"
       showListings={false}
     />
   );

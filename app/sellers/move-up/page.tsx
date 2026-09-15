@@ -85,7 +85,6 @@ export default function MoveUpSellerPage() {
         { href: "/buyers", label: "Buying guide" },
         { href: "/sellers/downsizing", label: "Downsizing" },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

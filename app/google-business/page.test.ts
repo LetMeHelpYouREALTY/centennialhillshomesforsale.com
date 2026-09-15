@@ -15,5 +15,7 @@ describe("google-business hub", () => {
     expect(src).toContain("Call or email Dr. Jan Duffy");
     expect(src).toContain("gbpPostTemplates");
     expect(src).toContain("Google Business Profile posts");
+    expect(src).toContain('source="google-business-mid"');
+    expect(src).toContain("MARKET_SNAPSHOT_AS_OF");
   });
 });

@@ -26,6 +26,7 @@ import {
   mergeGuideFaqs,
   mergeGuideRelated,
 } from "@/lib/guide-related";
+import { MARKET_SNAPSHOT_AS_OF } from "@/lib/market-snapshots";
 
 export type TopicFaq = {
   question: string;
@@ -61,7 +62,7 @@ type TopicGuideProps = {
   sections: TopicSection[];
   faqs: TopicFaq[];
   related: TopicRelated[];
-  lastUpdated: string;
+  lastUpdated?: string;
   showListings?: boolean;
   children?: React.ReactNode;
   leadFormType?:
@@ -86,7 +87,7 @@ export default function TopicGuide({
   sections,
   faqs,
   related,
-  lastUpdated,
+  lastUpdated = MARKET_SNAPSHOT_AS_OF,
   showListings = false,
   children,
   leadFormType = "contact",
@@ -160,6 +161,16 @@ export default function TopicGuide({
               <MlsSearchForm className="mx-0" inputId={`mls-q-${slug}`} />
             </section>
 
+            <GuideLeadForm
+              source={`${slug}-guide-mid`}
+              heading={
+                leadFormType === "home-valuation"
+                  ? "Request a CMA"
+                  : `Ask about ${name}`
+              }
+              formType={leadFormType}
+            />
+
             <section className="mb-12 rounded-2xl bg-slate-900 p-8 text-white">
               <h2 className="mb-6 text-center text-2xl font-bold">
                 {name} snapshot
@@ -174,7 +185,7 @@ export default function TopicGuide({
                   </div>
                 ))}
               </div>
-              <p className="mt-6 text-center text-xs text-slate-400">
+              <p className="mt-6 text-center text-xs text-slate-300">
                 Figures are sourced where noted. Last updated {lastUpdated}.
               </p>
             </section>

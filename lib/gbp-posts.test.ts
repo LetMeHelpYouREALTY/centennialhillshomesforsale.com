@@ -48,6 +48,9 @@ describe("GBP post templates", () => {
   it("puts the client email on every GBP post", () => {
     for (const post of gbpPostTemplates) {
       expect(post.content).toContain("homes@heyberkshire.com");
+      expect(post.content).not.toMatch(
+        /Call \(702\) 222-1964\.(?!\s*or email)/,
+      );
     }
   });
 

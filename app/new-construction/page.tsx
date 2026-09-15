@@ -102,7 +102,6 @@ export default function NewConstructionPage() {
         },
         { href: "/buyers", label: "Buying guide" },
       ]}
-      lastUpdated="September 2026"
       showListings={false}
     />
   );

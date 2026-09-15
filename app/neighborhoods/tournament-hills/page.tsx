@@ -92,7 +92,6 @@ export default function TournamentHillsPage() {
           label: "Centennial Hills homes for sale",
         },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

@@ -17,6 +17,7 @@ import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
 import Image from "next/image";
 import { generateWebPageSchema } from "@/lib/schema";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
+import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
 
 export const metadata: Metadata = withShareImage(
   {
@@ -295,6 +296,13 @@ export default function NeighborhoodsPage() {
             <div className="mt-8">
               <MlsSearchForm inputId="mls-q-neighborhoods" />
             </div>
+            <div className="mx-auto mt-8 max-w-3xl text-left">
+              <GuideLeadForm
+                source="neighborhoods-hub-mid"
+                heading="Ask about a neighborhood"
+                className="mb-0"
+              />
+            </div>
           </div>
 
           {/* Neighborhood Grid */}
@@ -410,7 +418,7 @@ export default function NeighborhoodsPage() {
                   aria-hidden="true"
                 />
                 <h3 className="font-bold mb-2">Village tours</h3>
-                <p className="text-slate-400 text-sm">
+                <p className="text-slate-300 text-sm">
                   I sequence named villages in one loop. Confirm HOA, commute,
                   and lot before you bid.
                 </p>
@@ -421,7 +429,7 @@ export default function NeighborhoodsPage() {
                   aria-hidden="true"
                 />
                 <h3 className="font-bold mb-2">Campus maps</h3>
-                <p className="text-slate-400 text-sm">
+                <p className="text-slate-300 text-sm">
                   Named campuses, enrollment boundaries, and drive-time to the
                   streets you are touring—not a slogan.
                 </p>
@@ -432,7 +440,7 @@ export default function NeighborhoodsPage() {
                   aria-hidden="true"
                 />
                 <h3 className="font-bold mb-2">ZIP matching</h3>
-                <p className="text-slate-400 text-sm">
+                <p className="text-slate-300 text-sm">
                   Match beds, ZIP, commute, and budget in the villages you are
                   actually touring
                 </p>

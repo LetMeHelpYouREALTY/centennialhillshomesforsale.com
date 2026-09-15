@@ -91,7 +91,6 @@ export default function RedRockCountryClubPage() {
         { href: "/neighborhoods/the-ridges", label: "The Ridges Summerlin" },
         { href: "/neighborhoods/summerlin", label: "Summerlin homes" },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

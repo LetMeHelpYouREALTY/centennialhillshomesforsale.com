@@ -110,7 +110,6 @@ export default function HendersonPage() {
           label: "Sun City Anthem",
         },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

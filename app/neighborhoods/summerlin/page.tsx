@@ -101,7 +101,6 @@ export default function SummerlinPage() {
           label: "Sun City Summerlin",
         },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

@@ -31,6 +31,7 @@ import {
   mergeGuideRelated,
 } from "@/lib/guide-related";
 import { resolveNeighborhoodGeo } from "@/lib/neighborhood-geo";
+import { MARKET_SNAPSHOT_AS_OF } from "@/lib/market-snapshots";
 
 export type NeighborhoodFaq = {
   question: string;
@@ -76,7 +77,7 @@ type NeighborhoodGuideProps = {
   sections: NeighborhoodSection[];
   faqs: NeighborhoodFaq[];
   related: NeighborhoodRelated[];
-  lastUpdated: string;
+  lastUpdated?: string;
   badge?: string;
   pathPrefix?: "/neighborhoods" | "/55-plus-communities";
   latitude?: number;
@@ -102,7 +103,7 @@ export default function NeighborhoodGuide({
   sections,
   faqs,
   related,
-  lastUpdated,
+  lastUpdated = MARKET_SNAPSHOT_AS_OF,
   badge,
   pathPrefix = "/neighborhoods",
   latitude,
@@ -212,6 +213,11 @@ export default function NeighborhoodGuide({
               />
             </section>
 
+            <GuideLeadForm
+              source={`${slug}-guide-mid`}
+              heading={`Ask about ${name}`}
+            />
+
             <section className="mb-12 rounded-2xl bg-slate-900 p-8 text-white">
               <h2 className="mb-6 text-center text-2xl font-bold">
                 {name} snapshot
@@ -226,7 +232,7 @@ export default function NeighborhoodGuide({
                   </div>
                 ))}
               </div>
-              <p className="mt-6 text-center text-xs text-slate-400">
+              <p className="mt-6 text-center text-xs text-slate-300">
                 Figures are sourced where noted. Ask for a live CMA before
                 pricing a bid. Last updated {lastUpdated}.
               </p>

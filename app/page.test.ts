@@ -15,5 +15,6 @@ describe("homepage MLS search", () => {
     expect(src).toContain("AGENT_EMAIL_MAILTO");
     expect(src).toContain("Siena");
     expect(src).not.toContain("text-white/80");
+    expect(src).toContain('source="homepage-mid"');
   });
 });

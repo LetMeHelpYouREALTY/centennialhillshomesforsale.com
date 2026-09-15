@@ -18,6 +18,7 @@ import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
+import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
 import {
   AGENT_EMAIL,
   AGENT_EMAIL_MAILTO,
@@ -328,6 +329,14 @@ export default function ListingsPage({
                 defaultQuery={query || undefined}
               />
             </div>
+            <div className="mx-auto mb-8 max-w-3xl text-left">
+              <GuideLeadForm
+                source="listings-hub-mid"
+                heading="Tell me the ZIP and beds"
+                formType="property-search"
+                className="mb-0"
+              />
+            </div>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
               <span className="flex items-center">
                 <CheckCircle
@@ -410,9 +419,9 @@ export default function ListingsPage({
             <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Nevada charges no state income tax on wages. Home-price
               differences versus coastal cities are not a fixed 40–60% on every
-              street — I pair live comps. Here's what you can expect at
-              different price points in the current {MARKET_SNAPSHOT_AS_OF}{" "}
-              market. Search live MLS for current counts.
+              street — I pair live comps. Current MLS bands as of{" "}
+              {MARKET_SNAPSHOT_AS_OF} are below. Search live MLS for current
+              counts.
             </p>
             <div className="space-y-4">
               {priceRanges.map((price) => (
@@ -513,7 +522,7 @@ export default function ListingsPage({
                   <Search className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <h3 className="font-bold mb-2">MLS + referral network</h3>
-                <p className="text-pretty text-slate-400 text-sm">
+                <p className="text-pretty text-slate-300 text-sm">
                   See listings through RealScout MLS search and the BHHS
                   referral network — not a 50,000-agent slogan
                 </p>
@@ -523,7 +532,7 @@ export default function ListingsPage({
                   <TrendingUp className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <h3 className="font-bold mb-2">Written offer strategy</h3>
-                <p className="text-pretty text-slate-400 text-sm">
+                <p className="text-pretty text-slate-300 text-sm">
                   Street-level CMA math and written offer strategy — not a
                   career-volume slogan
                 </p>
@@ -533,7 +542,7 @@ export default function ListingsPage({
                   <MapPin className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <h3 className="font-bold mb-2">Street-level files</h3>
-                <p className="text-pretty text-slate-400 text-sm">
+                <p className="text-pretty text-slate-300 text-sm">
                   Commute times, named campuses, and HOA documents on the
                   worksheet — not an insider slogan
                 </p>
@@ -543,7 +552,7 @@ export default function ListingsPage({
                   <CheckCircle className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <h3 className="font-bold mb-2">Written buyer agreement</h3>
-                <p className="text-pretty text-slate-400 text-sm">
+                <p className="text-pretty text-slate-300 text-sm">
                   Compensation is disclosed in writing. It may be paid by the
                   seller, the buyer, or both — never assumed.
                 </p>
@@ -729,7 +738,7 @@ export default function ListingsPage({
           />
         </div>
         <p className="mt-8 text-center text-sm text-slate-500">
-          Last updated: September 2026
+          Last updated: {MARKET_SNAPSHOT_AS_OF}
         </p>
       </div>
     </>

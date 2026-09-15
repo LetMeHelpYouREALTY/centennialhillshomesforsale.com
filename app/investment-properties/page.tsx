@@ -115,7 +115,6 @@ export default function InvestmentPropertiesPage() {
         { href: "/sellers", label: "Selling a rental" },
         { href: "/contact", label: "Contact" },
       ]}
-      lastUpdated="September 2026"
       showListings={false}
     />
   );

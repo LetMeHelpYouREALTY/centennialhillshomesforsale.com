@@ -98,7 +98,6 @@ export default function HomeValuationPage() {
         { href: "/market-report", label: "Market report" },
         { href: "/sellers/relocation", label: "Selling from out of state" },
       ]}
-      lastUpdated="September 2026"
       showListings={false}
       leadFormType="home-valuation"
     />

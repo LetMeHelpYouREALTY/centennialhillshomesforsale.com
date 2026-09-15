@@ -40,6 +40,7 @@ import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
+import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
 
 export const revalidate = 3600;
 
@@ -140,6 +141,14 @@ export default async function MarketInsightsPage() {
             <div className="mt-8">
               <MlsSearchForm inputId="mls-q-market-insights" />
             </div>
+            <div className="mx-auto mt-8 max-w-3xl text-left">
+              <GuideLeadForm
+                source="market-insights-mid"
+                heading="Ask for a live MLS pull"
+                formType="property-search"
+                className="mb-0"
+              />
+            </div>
           </div>
 
           <section className="mb-16 max-w-5xl mx-auto">
@@ -230,7 +239,7 @@ export default async function MarketInsightsPage() {
                 </div>
               </div>
             </div>
-            <p className="mt-6 text-center text-sm text-slate-400">
+            <p className="mt-6 text-center text-sm text-slate-300">
               {MARKET_SNAPSHOT_SOURCE} as of {MARKET_SNAPSHOT_AS_OF}. Listing
               medians, not a CMA. I will not invent a CA-buyer share,
               data-center investment total, job-growth rate, or visitor count.
@@ -727,7 +736,7 @@ export default async function MarketInsightsPage() {
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">
-          Last Updated: September 2026
+          Last updated: {MARKET_SNAPSHOT_AS_OF}
         </div>
       </div>
       <VisitOffice compact />

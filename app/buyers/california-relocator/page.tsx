@@ -93,7 +93,6 @@ export default function CaliforniaRelocatorPage() {
           label: "Centennial Hills homes",
         },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

@@ -96,7 +96,6 @@ export default function SkyeCanyonPage() {
         },
         { href: "/new-construction", label: "New construction" },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

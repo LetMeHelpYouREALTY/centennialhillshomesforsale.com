@@ -91,7 +91,6 @@ export default function Zip89138Page() {
           label: "Centennial Hills homes",
         },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

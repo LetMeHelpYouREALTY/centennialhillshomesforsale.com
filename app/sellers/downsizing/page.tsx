@@ -87,7 +87,6 @@ export default function DownsizingPage() {
           label: "Sun City Summerlin",
         },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

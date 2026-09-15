@@ -115,7 +115,6 @@ export default function TrilogySummerlinPage() {
           label: "Summerlin West all-ages",
         },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

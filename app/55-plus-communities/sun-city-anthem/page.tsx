@@ -116,7 +116,6 @@ export default function SunCityAnthemPage() {
         },
         { href: "/neighborhoods/henderson", label: "Henderson all-ages homes" },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

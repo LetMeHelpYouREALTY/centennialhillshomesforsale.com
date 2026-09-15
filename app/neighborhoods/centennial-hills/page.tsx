@@ -103,7 +103,6 @@ export default function CentennialHillsPage() {
           label: "Sun City Summerlin (nearby 55+)",
         },
       ]}
-      lastUpdated="September 2026"
     >
       <section className="mb-10">
         <h2 className="mb-4 text-2xl font-bold text-slate-900">

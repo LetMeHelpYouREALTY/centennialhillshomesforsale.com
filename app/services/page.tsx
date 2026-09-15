@@ -104,7 +104,6 @@ export default function ServicesPage() {
         { href: "/relocation", label: "Relocation" },
         { href: "/home-valuation", label: "Home valuation" },
       ]}
-      lastUpdated="September 2026"
       showListings={false}
     />
   );

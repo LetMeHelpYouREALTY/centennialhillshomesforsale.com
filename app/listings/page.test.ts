@@ -17,5 +17,7 @@ describe("listings hub FAQs", () => {
     expect(src).toContain("/55-plus-communities/siena");
     expect(src).toContain("/neighborhoods/centennial-hills");
     expect(src).toContain('name: "Siena 55+"');
+    expect(src).toContain('source="listings-hub-mid"');
+    expect(src).toContain("MARKET_SNAPSHOT_AS_OF");
   });
 });

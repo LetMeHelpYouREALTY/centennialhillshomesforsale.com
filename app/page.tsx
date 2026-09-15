@@ -27,6 +27,7 @@ import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { WidgetBeTracker } from "@/components/shared/WidgetBeTracker";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
+import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
 import SchemaScript from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
 import {
@@ -336,13 +337,24 @@ export default async function Home() {
           </div>
         </section>
 
+        <section className="bg-white py-8">
+          <div className="container mx-auto max-w-3xl px-4">
+            <GuideLeadForm
+              source="homepage-mid"
+              heading="Ask about a Las Vegas address"
+              formType="property-search"
+              className="mb-0"
+            />
+          </div>
+        </section>
+
         <section className="bg-slate-900 py-16 text-white">
           <div className="container mx-auto px-4">
             <div className="mb-10 text-center">
               <h2 className="mb-3 text-3xl font-bold">
                 Centennial Hills listing snapshot
               </h2>
-              <p className="text-slate-400">
+              <p className="text-slate-300">
                 Neighborhood listing median{" "}
                 {formatUsd(LISTING_MEDIANS_USD.centennialHills)} as of{" "}
                 {MARKET_SNAPSHOT_AS_OF} ({MARKET_SNAPSHOT_SOURCE}). Days on
@@ -378,7 +390,7 @@ export default async function Home() {
                   </div>
                   <div className="text-sm text-slate-300">{label}</div>
                   {sub && (
-                    <div className="mt-1 text-xs text-slate-400">{sub}</div>
+                    <div className="mt-1 text-xs text-slate-300">{sub}</div>
                   )}
                 </div>
               ))}

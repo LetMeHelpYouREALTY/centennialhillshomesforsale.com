@@ -315,7 +315,7 @@ export default function BuyersPage() {
                   aria-hidden="true"
                 />
                 <p className="text-2xl font-bold mb-2">One agent of record</p>
-                <p className="text-slate-400 mb-4">
+                <p className="text-slate-300 mb-4">
                   Dr. Jan Duffy works for your side of the deal throughout the
                   transaction—from the first showing to the closing table.
                 </p>
@@ -695,7 +695,7 @@ export default function BuyersPage() {
           />
         </div>
         <p className="mt-8 text-center text-sm text-slate-500">
-          Last updated: September 2026
+          Last updated: {MARKET_SNAPSHOT_AS_OF}
         </p>
       </div>
       <RealScoutListings />

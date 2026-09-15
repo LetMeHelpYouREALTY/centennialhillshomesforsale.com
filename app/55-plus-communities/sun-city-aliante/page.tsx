@@ -113,7 +113,6 @@ export default function SunCityAliantePage() {
           label: "North Las Vegas homes",
         },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

@@ -98,7 +98,6 @@ export default function SouthernHighlandsPage() {
         { href: "/neighborhoods/summerlin", label: "Summerlin homes" },
         { href: "/luxury-homes", label: "Las Vegas luxury homes" },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

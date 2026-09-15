@@ -42,6 +42,7 @@ import {
 } from "@/lib/market-snapshots";
 import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
+import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
 import Image from "next/image";
 
 export const metadata: Metadata = withShareImage(
@@ -451,6 +452,14 @@ export default function FiftyFiveCommunitiesPage() {
             </div>
             <div className="mt-8">
               <MlsSearchForm inputId="mls-q-55-plus" />
+            </div>
+            <div className="mx-auto mt-8 max-w-3xl text-left">
+              <GuideLeadForm
+                source="55-plus-hub-mid"
+                heading="Ask about a 55+ community"
+                formType="property-search"
+                className="mb-0"
+              />
             </div>
           </div>
 

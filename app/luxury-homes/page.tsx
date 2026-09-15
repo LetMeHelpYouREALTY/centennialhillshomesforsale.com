@@ -116,7 +116,6 @@ export default function LuxuryHomesPage() {
         },
         { href: "/sellers", label: "Selling guide" },
       ]}
-      lastUpdated="September 2026"
       showListings={false}
     />
   );

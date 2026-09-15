@@ -97,7 +97,6 @@ export default function SummerlinWestPage() {
           label: "Sun City Summerlin homes",
         },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

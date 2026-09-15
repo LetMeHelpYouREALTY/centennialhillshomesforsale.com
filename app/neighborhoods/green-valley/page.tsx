@@ -100,7 +100,6 @@ export default function GreenValleyPage() {
           label: "Sun City Anthem",
         },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

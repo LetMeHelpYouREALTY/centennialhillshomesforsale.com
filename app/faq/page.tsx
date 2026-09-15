@@ -124,7 +124,6 @@ export default function FaqPage() {
         { href: "/contact", label: "Contact" },
         { href: "/fair-housing", label: "Fair Housing" },
       ]}
-      lastUpdated="September 2026"
       showListings={false}
     />
   );

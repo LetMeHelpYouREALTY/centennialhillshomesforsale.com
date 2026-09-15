@@ -109,7 +109,6 @@ export default function SoleraAnthemPage() {
         },
         { href: "/neighborhoods/henderson", label: "Henderson homes" },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

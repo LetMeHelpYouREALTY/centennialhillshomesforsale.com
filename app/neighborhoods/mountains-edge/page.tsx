@@ -98,7 +98,6 @@ export default function MountainsEdgePage() {
         { href: "/neighborhoods/summerlin", label: "Summerlin homes" },
         { href: "/neighborhoods/henderson", label: "Henderson homes" },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

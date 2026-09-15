@@ -87,7 +87,6 @@ export default function SellersRelocationPage() {
           label: "California buyers (inbound)",
         },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

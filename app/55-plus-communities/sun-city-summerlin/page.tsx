@@ -116,7 +116,6 @@ export default function SunCitySummerlinPage() {
         { href: "/55-plus-communities/siena", label: "Siena Summerlin South" },
         { href: "/neighborhoods/summerlin", label: "Summerlin all-ages homes" },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }

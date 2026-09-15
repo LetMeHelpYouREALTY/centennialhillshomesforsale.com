@@ -31,6 +31,7 @@ import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import SchemaScript from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
+import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
 import { gbpPostTemplates } from "@/lib/gbp-posts";
 import {
   businessInfo,
@@ -39,6 +40,7 @@ import {
   generateLocalBusinessSchema,
   generateFAQSchema,
 } from "@/lib/gbp-schema";
+import { MARKET_SNAPSHOT_AS_OF } from "@/lib/market-snapshots";
 
 export const metadata: Metadata = withShareImage(
   {
@@ -225,7 +227,7 @@ export default function GoogleBusinessPage() {
                     Get Directions
                     <span className="sr-only"> (opens in a new tab)</span>
                   </a>
-                  <p className="text-sm text-blue-300 mt-3">
+                  <p className="text-sm text-blue-50 mt-3">
                     Call for a CMA on the address — no invented rating on this
                     page
                   </p>
@@ -236,6 +238,13 @@ export default function GoogleBusinessPage() {
               <MlsSearchForm inputId="mls-q-google-business" />
             </div>
           </section>
+          <div className="mx-auto mb-16 max-w-3xl">
+            <GuideLeadForm
+              source="google-business-mid"
+              heading="Ask about this office"
+              className="mb-0"
+            />
+          </div>
 
           {/* Business Hours */}
           <section className="max-w-5xl mx-auto mb-16">
@@ -671,7 +680,7 @@ export default function GoogleBusinessPage() {
                   Send a contact form
                 </Link>
               </div>
-              <p className="text-slate-400 text-sm mt-6">
+              <p className="text-slate-300 text-sm mt-6">
                 <a
                   href={OFFICE_NAP.mapsUrl}
                   target="_blank"
@@ -689,7 +698,7 @@ export default function GoogleBusinessPage() {
           </section>
         </div>
         <div className="text-center text-sm text-slate-500 mt-8">
-          Last Updated: September 2026
+          Last updated: {MARKET_SNAPSHOT_AS_OF}
         </div>
       </div>
       <PageCTA

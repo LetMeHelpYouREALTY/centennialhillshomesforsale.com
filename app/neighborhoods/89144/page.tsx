@@ -90,7 +90,6 @@ export default function Zip89144Page() {
         { href: "/neighborhoods/89138", label: "89138 Summerlin West homes" },
         { href: "/neighborhoods/tournament-hills", label: "Tournament Hills" },
       ]}
-      lastUpdated="September 2026"
     />
   );
 }
