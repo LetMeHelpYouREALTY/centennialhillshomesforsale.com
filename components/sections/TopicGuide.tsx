@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { Phone, MapPin, Star } from "lucide-react";
-import { CTA_PHONE, CTA_TEL, OFFICE_HOURS, OFFICE_NAP } from "@/lib/contact";
+import {
+  CTA_PHONE,
+  CTA_TEL,
+  OFFICE_HOURS,
+  OFFICE_NAP,
+  TEXT_LINK_ON_DARK_CLASS,
+} from "@/lib/contact";
 import { FAQSchema } from "@/components/SchemaScript";
 import { FairHousingNotice } from "@/components/shared/FairHousingNotice";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
@@ -228,7 +234,10 @@ export default function TopicGuide({
               </div>
               <p className="mt-6 flex items-center justify-center gap-2 text-sm text-blue-100">
                 <MapPin className="h-4 w-4" aria-hidden="true" />
-                <a href={OFFICE_NAP.mapsUrl} className="underline">
+                <a
+                  href={OFFICE_NAP.mapsUrl}
+                  className={TEXT_LINK_ON_DARK_CLASS}
+                >
                   {OFFICE_NAP.full}
                 </a>
               </p>

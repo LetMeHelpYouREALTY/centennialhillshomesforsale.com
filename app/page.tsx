@@ -14,6 +14,8 @@ import { AGENT_PHOTO_PATH } from "@/lib/brand-assets";
 import { CTA_PHONE, CTA_TEL, OFFICE_NAP } from "@/lib/contact";
 import { withShareImage } from "@/lib/page-seo";
 import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
+import { SectionHeading } from "@/components/shared/SectionPhoto";
+import { WidgetBeTracker } from "@/components/shared/WidgetBeTracker";
 import {
   formatUsd,
   LISTING_MEDIANS_USD,
@@ -116,6 +118,7 @@ export default async function Home() {
 
   return (
     <>
+      <WidgetBeTracker />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -208,9 +211,13 @@ export default async function Home() {
         <section className="bg-white py-16 md:py-20">
           <div className="container mx-auto px-4">
             <div className="mx-auto mb-12 max-w-4xl text-center">
-              <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl">
+              <SectionHeading
+                className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl"
+                fallbackSrc={PAGE_HERO_IMAGES.homepage.src}
+                avoidSrc={PAGE_HERO_IMAGES.homepage.src}
+              >
                 Match the search to the right ZIP
-              </h2>
+              </SectionHeading>
               <p className="text-lg text-slate-600">
                 Google is showing this site for Centennial Hills, Inspirada,
                 Tournament Hills, and 89144. Those are different maps. Pick the

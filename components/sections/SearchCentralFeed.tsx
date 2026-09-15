@@ -1,4 +1,4 @@
-import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
+import { CTA_PHONE, CTA_TEL, TEXT_LINK_CLASS } from "@/lib/contact";
 import {
   SEARCH_CENTRAL_FALLBACK_IMAGE,
   type SearchCentralItem,
@@ -30,7 +30,7 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
         </h2>
         <p className="text-slate-700">
           The Search Central feed is unavailable right now. Call{" "}
-          <a href={CTA_TEL} className="font-semibold text-blue-700">
+          <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
             {CTA_PHONE}
           </a>{" "}
           for a live Centennial Hills listing pull.
@@ -60,7 +60,7 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
         Search Console platform properties (July 2026) track Instagram, TikTok,
         X, and YouTube inside Google — that is not a page we need to build.
         Generative AI reports launched June 3, 2026. Call{" "}
-        <a href={CTA_TEL} className="font-semibold text-blue-700">
+        <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
           {CTA_PHONE}
         </a>{" "}
         for a Centennial Hills listing, not a syndicated dump.
@@ -114,7 +114,7 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
         Headlines and excerpts from the official{" "}
         <a
           href="https://developers.google.com/search/blog/feed.xml"
-          className="underline"
+          className={TEXT_LINK_CLASS}
         >
           Google Search Central Blog RSS
         </a>
