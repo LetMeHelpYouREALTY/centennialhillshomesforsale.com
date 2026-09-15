@@ -69,7 +69,7 @@ export default function CentennialHillsPage() {
         },
         {
           heading: "How I tour this corridor",
-          body: "I sequence Centennial Hills, Lone Mountain, and Skye Canyon in one loop when a buyer is choosing northwest vintage vs new construction. Lot orientation (mountain vs interior), HOA vs no-HOA, and SID/LID on the title report matter more than a lifestyle paragraph. Call (702) 222-1964.",
+          body: "I sequence Centennial Hills, Lone Mountain, and Skye Canyon in one loop when a buyer is choosing northwest vintage vs new construction. Lot orientation (mountain vs interior), HOA vs no-HOA, and SID/LID on the title report matter more than a lifestyle paragraph. Call (702) 222-1964 or email homes@heyberkshire.com.",
         },
       ]}
       faqs={[

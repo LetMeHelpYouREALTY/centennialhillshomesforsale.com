@@ -86,7 +86,8 @@ export default function HeritageStonebridgePage() {
         },
         {
           question: "How do I tour?",
-          answer: "Call (702) 222-1964. Gate access is arranged in advance.",
+          answer:
+            "Call (702) 222-1964 or email homes@heyberkshire.com. Gate access is arranged in advance.",
         },
         {
           question: "Can I email the HOA packet for a review?",

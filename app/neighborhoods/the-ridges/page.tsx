@@ -83,7 +83,7 @@ export default function TheRidgesPage() {
         {
           question: "Can I see homes this week?",
           answer:
-            "Usually yes, with gate access arranged in advance. Call or text Dr. Jan Duffy at (702) 222-1964.",
+            "Usually yes, with gate access arranged in advance. Call or text Dr. Jan Duffy at (702) 222-1964 or email homes@heyberkshire.com.",
         },
         {
           question: "How do I request a Ridges CMA?",

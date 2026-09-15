@@ -52,7 +52,7 @@ export default function SummerlinWestPage() {
         },
         {
           heading: "First-party representation",
-          body: "This page is written for this website’s readers, not copied from another brokerage’s Summerlin guide. Builder incentives on remaining new construction (if any lot is still open) are negotiated with your own agent, not the seller’s kiosk. Call (702) 222-1964.",
+          body: "This page is written for this website’s readers, not copied from another brokerage’s Summerlin guide. Builder incentives on remaining new construction (if any lot is still open) are negotiated with your own agent, not the seller’s kiosk. Call (702) 222-1964 or email homes@heyberkshire.com.",
         },
         {
           heading: "HOA, SID, and the 89138 sample",
@@ -77,7 +77,7 @@ export default function SummerlinWestPage() {
         {
           question: "How do I get current 89138 listings?",
           answer:
-            "Call or text Dr. Jan Duffy at (702) 222-1964. I will send matching MLS results rather than a scraped feed.",
+            "Call or text Dr. Jan Duffy at (702) 222-1964 or email homes@heyberkshire.com. I will send matching MLS results rather than a scraped feed.",
         },
         {
           question: "Can I email a CMA request?",

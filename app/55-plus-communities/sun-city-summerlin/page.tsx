@@ -96,7 +96,8 @@ export default function SunCitySummerlinPage() {
         },
         {
           question: "Can I see homes this week?",
-          answer: "Yes. Call or text Dr. Jan Duffy at (702) 222-1964.",
+          answer:
+            "Yes. Call or text Dr. Jan Duffy at (702) 222-1964 or email homes@heyberkshire.com.",
         },
       ]}
       related={[

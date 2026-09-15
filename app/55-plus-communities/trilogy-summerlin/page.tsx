@@ -90,7 +90,8 @@ export default function TrilogySummerlinPage() {
         },
         {
           question: "How do I tour?",
-          answer: "Call (702) 222-1964. I schedule with the listing desk.",
+          answer:
+            "Call (702) 222-1964 or email homes@heyberkshire.com. I schedule with the listing desk.",
         },
         {
           question: "Can I email for a Trilogy CMA?",

@@ -95,7 +95,7 @@ export default function SienaPage() {
         {
           question: "How do I tour?",
           answer:
-            "Call (702) 222-1964. Gate access is arranged in advance. I will not quote a home count from this page.",
+            "Call (702) 222-1964 or email homes@heyberkshire.com. Gate access is arranged in advance. I will not quote a home count from this page.",
         },
       ]}
       related={[
