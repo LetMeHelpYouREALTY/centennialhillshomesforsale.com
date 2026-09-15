@@ -30,8 +30,12 @@ export default function Error({
           Something went wrong
         </h1>
         <p className="mb-8 text-pretty text-slate-600">
-          Reload this page, or call {CTA_PHONE} and we will pull the listing
-          from MLS while this screen is fixed. Office:{" "}
+          Reload this page, or{" "}
+          <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
+            call {CTA_PHONE}
+          </a>{" "}
+          and we will pull the listing from MLS while this screen is fixed.
+          Office:{" "}
           <a
             href={OFFICE_NAP.mapsUrl}
             target="_blank"

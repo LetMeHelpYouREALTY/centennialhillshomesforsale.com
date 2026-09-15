@@ -399,7 +399,7 @@ export default function ListingsPage({
                     </span>
                   </div>
                   <ArrowRight
-                    className="h-5 w-5 text-slate-400 group-hover:text-blue-600"
+                    className="h-5 w-5 text-slate-500 group-hover:text-blue-600"
                     aria-hidden="true"
                   />
                 </Link>

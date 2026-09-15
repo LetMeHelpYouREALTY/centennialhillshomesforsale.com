@@ -15,5 +15,6 @@ describe("sellers hub", () => {
     expect(src).not.toContain("leave money on the table");
     expect(src).not.toContain("generate competition and sell");
     expect(src).toContain('source="sellers-hub-mid"');
+    expect(src).not.toContain("don't have to navigate");
   });
 });

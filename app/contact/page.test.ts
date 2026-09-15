@@ -15,5 +15,6 @@ describe("contact hub", () => {
     expect(src).toContain("/neighborhoods/89138");
     expect(src).toContain("/55-plus-communities/siena");
     expect(src).toContain("MARKET_SNAPSHOT_AS_OF");
+    expect(src).not.toContain("Whether you're buying");
   });
 });

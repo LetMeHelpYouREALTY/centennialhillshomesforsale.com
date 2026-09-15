@@ -19,5 +19,6 @@ describe("listings hub FAQs", () => {
     expect(src).toContain('name: "Siena 55+"');
     expect(src).toContain('source="listings-hub-mid"');
     expect(src).toContain("MARKET_SNAPSHOT_AS_OF");
+    expect(src).not.toContain("text-slate-400");
   });
 });

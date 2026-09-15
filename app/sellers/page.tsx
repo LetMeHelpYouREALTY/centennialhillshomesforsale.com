@@ -335,10 +335,9 @@ export default function SellersPage() {
               The Home Selling Process
             </SectionHeading>
             <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Selling a home involves many steps, but you don't have to navigate
-              them alone. Dr. Jan Duffy manages every detail from initial
-              valuation to closing day, keeping you informed and in control
-              throughout the process.
+              Selling a home has many steps. You do not have to run them alone.
+              Dr. Jan Duffy manages the file from CMA to closing and keeps you
+              on the written timeline.
             </p>
             <div className="space-y-6">
               {sellingProcess.map((item) => (

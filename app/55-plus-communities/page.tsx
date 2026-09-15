@@ -625,8 +625,8 @@ export default function FiftyFiveCommunitiesPage() {
                     </p>
                     <p className="text-pretty text-blue-800 font-medium">
                       Each community has specific rules. Dr. Jan Duffy provides
-                      detailed guidance on requirements for any community you're
-                      considering.
+                      detailed guidance on occupancy rules for the campus you
+                      are touring.
                     </p>
                   </div>
                 </div>

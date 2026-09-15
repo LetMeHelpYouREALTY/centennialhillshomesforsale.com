@@ -68,7 +68,7 @@ export default function HeroSection() {
           <br />
           <span className="text-blue-400">with Dr. Jan Duffy</span>
         </h1>
-        <p className="mb-8 max-w-2xl text-pretty text-lg text-white/90 md:text-xl">
+        <p className="mb-8 max-w-2xl text-pretty text-lg text-white md:text-xl">
           Berkshire Hathaway HomeServices Nevada Properties. Search 89138,
           Centennial Hills, Henderson, and 55+ campuses such as Siena, then call
           or email the client line for a live pull.
@@ -96,7 +96,7 @@ export default function HeroSection() {
           </a>
         </div>
 
-        <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/90">
+        <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white">
           <div className="flex items-center gap-2">
             <span className="font-semibold">Since 2008</span>
             <span>Las Vegas closings</span>

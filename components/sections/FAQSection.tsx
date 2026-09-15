@@ -96,7 +96,7 @@ export default function FAQSection({
                     />
                   ) : (
                     <ChevronDown
-                      className="h-5 w-5 flex-shrink-0 text-slate-400"
+                      className="h-5 w-5 flex-shrink-0 text-slate-500"
                       aria-hidden="true"
                     />
                   )}

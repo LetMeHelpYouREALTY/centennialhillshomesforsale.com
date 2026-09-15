@@ -157,9 +157,9 @@ export default function ContactPage() {
                 Call, email, or visit the office
               </SectionHeading>
               <p className="text-pretty text-slate-700 mb-8">
-                Whether you're buying your first home, selling a luxury
-                property, or looking at a rental, I will pull live comps and put
-                compensation in writing. Serving Las Vegas since 2008 with{" "}
+                Name the file — first home, luxury listing, or rental. I will
+                pull live comps and put compensation in writing. Serving Las
+                Vegas since 2008 with{" "}
                 <strong>Berkshire Hathaway HomeServices</strong>.
               </p>
 
