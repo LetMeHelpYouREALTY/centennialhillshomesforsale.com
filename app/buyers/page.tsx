@@ -456,20 +456,19 @@ export default function BuyersPage() {
               Why Buy with Berkshire Hathaway HomeServices
             </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Not all real estate agents are created equal. When you choose a
-              Berkshire Hathaway HomeServices agent, you're choosing the only
-              real estate brand backed by Warren Buffett's Berkshire Hathaway
-              Inc.—a name synonymous with trust, ethical standards, and
-              financial strength.
+              Berkshire Hathaway HomeServices Nevada Properties is a franchise
+              brokerage. You get a written buyer agreement, a global referral
+              network, and one agent of record — not a Buffett slogan.
             </p>
             <div className="grid md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Award className="h-7 w-7 text-blue-600" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">Trusted Brand</h3>
+                <h3 className="font-bold text-slate-900 mb-2">Written plan</h3>
                 <p className="text-slate-600 text-sm">
-                  The only real estate brand backed by Berkshire Hathaway Inc.
+                  Compensation, showing rules, and the buyer agreement are in
+                  writing before we tour.
                 </p>
               </div>
               <div className="text-center">
@@ -584,7 +583,7 @@ export default function BuyersPage() {
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Get answers to the most common questions from Las Vegas home
               buyers. If you don't see your question here, call Dr. Jan Duffy at
-              (702) 222-1964 for a free consultation.
+              (702) 222-1964 with the address or ZIP.
             </p>
             <div className="space-y-4">
               {buyerFaqs.map((faq) => (

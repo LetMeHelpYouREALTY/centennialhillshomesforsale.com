@@ -54,6 +54,17 @@ describe("GBP schema NAP and Maps alignment", () => {
     expect(about).not.toMatch(/California family/);
   });
 
+  it("does not sell a free-consult product or a veterans slogan", () => {
+    const copy = `${gbpDescription.whoWeAre}\n${gbpDescription.whatWeDo}\n${gbpDescription.whereWeServe}`;
+    expect(copy).not.toMatch(/free consultation/i);
+    expect(
+      businessInfo.services.map((s) => s.description).join("\n"),
+    ).not.toMatch(/Specialized service for veterans/i);
+    expect(gbpFAQs.map((faq) => faq.answer).join("\n")).not.toMatch(
+      /free buyer consultations/i,
+    );
+  });
+
   it("keeps GBP FAQs free of unverified marketing slogans", () => {
     const answers = gbpFAQs.map((faq) => faq.answer).join("\n");
     expect(answers).not.toMatch(/world-class/i);

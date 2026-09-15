@@ -260,9 +260,11 @@ export default function ContactPage() {
                   <div className="flex items-start">
                     <Shield className="h-5 w-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
                     <p className="text-slate-300 text-sm">
-                      <strong className="text-white">Trusted Brand:</strong> The
-                      only real estate brand backed by Warren Buffett's
-                      Berkshire Hathaway Inc.
+                      <strong className="text-white">
+                        Franchise brokerage:
+                      </strong>{" "}
+                      Written compensation, a global referral network, and
+                      documented ethics standards — not a Buffett slogan.
                     </p>
                   </div>
                   <div className="flex items-start">

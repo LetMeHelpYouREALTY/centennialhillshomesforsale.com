@@ -71,7 +71,7 @@ export default function TopicGuide({
   faqs,
   related,
   lastUpdated,
-  showListings = true,
+  showListings = false,
   children,
 }: TopicGuideProps) {
   const origin = getPublicSiteUrl();

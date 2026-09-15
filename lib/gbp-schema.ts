@@ -122,7 +122,8 @@ export const businessInfo = {
     },
     {
       name: "Military/VA Home Buying",
-      description: "Specialized service for veterans",
+      description:
+        "VA-loan buyer representation and lender referrals. I do not originate loans.",
     },
     {
       name: "Downsizing Consultation",
@@ -181,18 +182,18 @@ export const gbpDescription = {
 I work first-time buyers, luxury tours in The Ridges and MacDonald Highlands, 55+ HOPA communities, and California-to-Nevada relocations against live comps — not a volume slogan or a “family” pitch.`,
 
   // Section 2: What/why - Value proposition (~250 words)
-  whatWeDo: `What sets Dr. Jan apart is a commitment to education and advocacy. Clients receive comprehensive market analysis, expert negotiation, and honest advice—not sales pressure. As a Berkshire Hathaway HomeServices agent, Dr. Jan offers access to a global referral network, marketing for sellers, and live MLS search for buyers.
+  whatWeDo: `Clients receive a CMA on the address, written compensation, and honest advice—not sales pressure. As a Berkshire Hathaway HomeServices agent, Dr. Jan offers a global referral network, marketing for sellers, and live MLS search for buyers.
 
 Specialized services include: buyer and seller representation, luxury home sales, 55+ active adult community expertise (Sun City Summerlin, Sun City Anthem, Del Webb Lake Las Vegas), California relocation assistance, probate and divorce real estate, investment property consulting, new construction representation, and first-time buyer programs including FHA, VA, and down payment assistance guidance.
 
-Dr. Jan's approach is simple: put the client's written goals first, know the market inside and out, and keep working until the file closes.`,
+Dr. Jan's approach is simple: put the client's written goals first, pull live comps, and keep working until the file closes.`,
 
   // Section 3: Where - Areas served (~250 words)
-  whereWeServe: `Dr. Jan serves the entire Las Vegas Valley with specialized knowledge of Las Vegas, Summerlin, Henderson, North Las Vegas, and all of Clark County. Neighborhood expertise includes Summerlin's master-planned communities, Henderson's Green Valley and Inspirada, the luxury enclaves of The Ridges and Southern Highlands, Centennial Hills and Skye Canyon, and options in Mountains Edge and North Las Vegas.
+  whereWeServe: `Dr. Jan serves the entire Las Vegas Valley with specialized knowledge of Las Vegas, Summerlin, Henderson, North Las Vegas, and all of Clark County. Neighborhood files include Summerlin master-planned villages, Henderson's Green Valley and Inspirada, gated custom in The Ridges and Southern Highlands, Centennial Hills and Skye Canyon, and Mountains Edge and North Las Vegas.
 
-55+ active adult community specialization covers Sun City Summerlin (Nevada's largest 55+ community), Sun City Anthem in Henderson, Del Webb Lake Las Vegas, and Solera at Anthem. Investment property expertise spans single-family rentals, multi-family opportunities, and short-term rental analysis across the Las Vegas metro area.
+55+ active adult community specialization covers Sun City Summerlin, Sun City Anthem in Henderson, Del Webb Lake Las Vegas, and Solera at Anthem. Investment files cover single-family rentals and multi-family purchases across the Las Vegas metro. I do not manage rentals.
 
-Office located at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Available Monday through Friday 9am-6pm, Saturday 10am-4pm, and Sunday by appointment. Call (702) 222-1964 for a free consultation or visit heyberkshire.com to start your Las Vegas real estate journey today.`,
+Office located at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Available Monday through Friday 9am-6pm, Saturday 10am-4pm, and Sunday by appointment. Call (702) 222-1964 or visit heyberkshire.com with the address you want on a CMA.`,
 };
 
 // FAQ Schema for GBP Q&A section
@@ -231,12 +232,12 @@ export const gbpFAQs = [
   {
     question: "Does Dr. Jan work with first-time home buyers?",
     answer:
-      "Absolutely! Dr. Jan guides first-time buyers through every step, including pre-approval, loan programs (FHA 3.5% down, VA 0% down, conventional options), Nevada down payment assistance programs, and new construction incentives. Free buyer consultations available.",
+      "Yes. Dr. Jan guides first-time buyers through pre-approval, loan programs (FHA 3.5% down, VA 0% down, conventional options), Nevada down payment assistance, and new construction registration. Call (702) 222-1964.",
   },
   {
     question: "Why choose Berkshire Hathaway HomeServices over other agencies?",
     answer:
-      "Berkshire Hathaway HomeServices is backed by Warren Buffett's Berkshire Hathaway Inc. You get a global referral network, listing marketing in writing, and a brokerage with documented ethics standards.",
+      "Berkshire Hathaway HomeServices Nevada Properties is a franchise brokerage. You get a global referral network, listing marketing in writing, and documented ethics standards. Warren Buffett does not write your CMA.",
   },
   {
     question: "How do I schedule a consultation with Dr. Jan Duffy?",

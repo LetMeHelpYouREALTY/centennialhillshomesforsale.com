@@ -43,17 +43,17 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "luxury",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Consenza Estates Expert",
+    ctaBadge: "Consenza Estates listings",
     ctaHeadline: "Find Your Consenza Estates Home",
     ctaSubheadline:
-      "I know every listing in this community. Let me match you with the right home.",
+      "I will pull live MLS for this community. Call 702-222-1964 with the address.",
   },
   "aliantehomesforsale.com": {
     domain: "aliantehomesforsale.com",
     neighborhood: "Aliante",
     tagline: "Aliante Homes for Sale",
     description:
-      "Search Aliante homes for sale in North Las Vegas. Expert real estate guidance from Dr. Jan Duffy.",
+      "Search Aliante homes for sale in North Las Vegas. Live MLS with Dr. Jan Duffy.",
     heroHeadline: "Aliante Homes for Sale",
     heroSubheadline: "Master-planned living in the heart of North Las Vegas.",
     keywords: [
@@ -63,7 +63,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "community",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Aliante Specialist",
+    ctaBadge: "Aliante listings",
     ctaHeadline: "Search Aliante Homes Today",
     ctaSubheadline:
       "Get current Aliante listings from MLS. Call 702-222-1964 for a live pull.",
@@ -73,7 +73,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     neighborhood: "Las Vegas",
     tagline: "Relocating from California to Las Vegas",
     description:
-      "California to Las Vegas relocation specialist. Compare live Las Vegas comps with Dr. Jan Duffy.",
+      "California to Las Vegas relocation. Compare live Las Vegas comps with Dr. Jan Duffy.",
     heroHeadline: "Leaving California for Las Vegas?",
     heroSubheadline:
       "No state income tax on wages. Confirm purchase price, HOA, and insurance against your California file — not a sunshine slogan.",
@@ -84,8 +84,8 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "lifestyle",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Relocation Expert",
-    ctaHeadline: "Your Nevada Fresh Start Awaits",
+    ctaBadge: "California relocation",
+    ctaHeadline: "Sequence a California sale and a Las Vegas purchase",
     ctaSubheadline:
       "I've helped California buyers sequence a sale and a Las Vegas purchase. Let's talk.",
   },
@@ -131,7 +131,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "Las Vegas REALTOR®",
     ctaHeadline: "Call for a consult",
     ctaSubheadline:
-      "Let's talk about your real estate goals — no pressure, just expertise.",
+      "Call 702-222-1964 with the address. I answer the client line.",
   },
   "drjanetduffy.com": {
     domain: "drjanetduffy.com",
@@ -140,8 +140,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     description:
       "Dr. Jan Duffy, Las Vegas REALTOR® at Berkshire Hathaway HomeServices Nevada Properties.",
     heroHeadline: "Dr. Jan Duffy | Las Vegas Real Estate",
-    heroSubheadline:
-      "Serving Las Vegas since 2008. Your trusted Las Vegas REALTOR®.",
+    heroSubheadline: "Serving Las Vegas since 2008. License S.0197614.LLC.",
     keywords: [
       "Dr Jan Duffy",
       "Dr. Jan Duffy Las Vegas realtor",
@@ -149,7 +148,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "search",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Las Vegas Expert",
+    ctaBadge: "Las Vegas REALTOR®",
     ctaHeadline: "Ready to Buy or Sell?",
     ctaSubheadline: "Call or text Dr. Jan — I answer my own phone.",
   },
@@ -158,9 +157,10 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     neighborhood: "Eagle Hills",
     tagline: "Eagle Hills Homes for Sale",
     description:
-      "Search Eagle Hills homes for sale in Las Vegas. Expert real estate guidance from Dr. Jan Duffy.",
+      "Search Eagle Hills homes for sale in Las Vegas. Live MLS with Dr. Jan Duffy.",
     heroHeadline: "Eagle Hills Homes for Sale",
-    heroSubheadline: "Discover this beautiful Las Vegas neighborhood.",
+    heroSubheadline:
+      "Eagle Hills listings in Las Vegas. Call 702-222-1964 for a live pull.",
     keywords: [
       "Eagle Hills homes",
       "Eagle Hills Las Vegas",
@@ -168,10 +168,10 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "community",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Eagle Hills Specialist",
+    ctaBadge: "Eagle Hills listings",
     ctaHeadline: "Find Your Eagle Hills Home",
     ctaSubheadline:
-      "I know every listing in Eagle Hills. Let me help you find the right one.",
+      "I will pull live Eagle Hills MLS. Call 702-222-1964 with the address.",
   },
   "goodtoknowrealtor.com": {
     domain: "goodtoknowrealtor.com",
@@ -189,8 +189,8 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "search",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Market Expert",
-    ctaHeadline: "Get the Insider Knowledge",
+    ctaBadge: "Market notes",
+    ctaHeadline: "Get sourced listing medians",
     ctaSubheadline:
       "Sourced listing medians, neighborhood snapshots, and live MLS search.",
   },
@@ -199,7 +199,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     neighborhood: "Heritage at Stonebridge",
     tagline: "Heritage at Stonebridge Homes for Sale",
     description:
-      "Heritage at Stonebridge 55+ active adult community homes. Expert guidance from Dr. Jan Duffy.",
+      "Heritage at Stonebridge 55+ active adult community homes. Confirm HOA and occupancy with Dr. Jan Duffy.",
     heroHeadline: "Heritage at Stonebridge Homes",
     heroSubheadline:
       "Heritage at Stonebridge 55+ HOPA campus in Summerlin. Confirm occupancy, HOA, and live MLS with Dr. Jan Duffy.",
@@ -210,10 +210,10 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "55plus",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "55+ Community Expert",
-    ctaHeadline: "Heritage at Stonebridge Awaits",
+    ctaBadge: "55+ communities",
+    ctaHeadline: "Heritage at Stonebridge resales",
     ctaSubheadline:
-      "I specialize in 55+ communities. Let me show you everything Heritage has to offer.",
+      "I tour Heritage by HOPA occupancy and live MLS. Call 702-222-1964.",
   },
   "heritagestonebridge.com": {
     domain: "heritagestonebridge.com",
@@ -231,10 +231,10 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "55plus",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "55+ Specialist",
+    ctaBadge: "Heritage Stonebridge",
     ctaHeadline: "Your Heritage Stonebridge Home",
     ctaSubheadline:
-      "Every floor plan, every amenity — I know Heritage Stonebridge inside and out.",
+      "Floor plans, rec access, and occupancy are on the resale packet. Call 702-222-1964.",
   },
   "justcalldrjan.com": {
     domain: "justcalldrjan.com",
@@ -256,10 +256,10 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
   "lasvegashomeexpert.com": {
     domain: "lasvegashomeexpert.com",
     neighborhood: "Las Vegas",
-    tagline: "Las Vegas Home Expert — Dr. Jan Duffy",
+    tagline: "Las Vegas REALTOR® — Dr. Jan Duffy",
     description:
-      "Las Vegas home buying and selling expert. Dr. Jan Duffy, BHHS Nevada Properties.",
-    heroHeadline: "Las Vegas Home Expert",
+      "Las Vegas home buying and selling. Dr. Jan Duffy, BHHS Nevada Properties.",
+    heroHeadline: "Las Vegas REALTOR®",
     heroSubheadline:
       "Las Vegas REALTOR® since 2008. Call (702) 222-1964 for a live MLS pull — not a ranking slogan.",
     keywords: [
@@ -269,8 +269,8 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "search",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Las Vegas Expert",
-    ctaHeadline: "Work With the Expert",
+    ctaBadge: "Las Vegas REALTOR®",
+    ctaHeadline: "Work with Dr. Jan Duffy",
     ctaSubheadline: "Las Vegas market knowledge from a practice since 2008.",
   },
   "lonemountainheights.com": {
@@ -278,10 +278,10 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     neighborhood: "Lone Mountain Heights",
     tagline: "Lone Mountain Heights Homes",
     description:
-      "Lone Mountain Heights homes for sale in Northwest Las Vegas. Dr. Jan Duffy, expert realtor.",
+      "Lone Mountain Heights homes for sale in Northwest Las Vegas. Dr. Jan Duffy, REALTOR®.",
     heroHeadline: "Lone Mountain Heights Homes for Sale",
     heroSubheadline:
-      "Stunning views and spacious living in Northwest Las Vegas.",
+      "Northwest Las Vegas lots near Lone Mountain. Confirm street and ZIP on a CMA.",
     keywords: [
       "Lone Mountain Heights",
       "Northwest Las Vegas homes",
@@ -289,20 +289,20 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "community",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Lone Mountain Expert",
+    ctaBadge: "Lone Mountain listings",
     ctaHeadline: "Find Your Lone Mountain Home",
     ctaSubheadline:
-      "I know every property in Lone Mountain. Let's find the right one for you.",
+      "I will pull live Lone Mountain MLS. Call 702-222-1964 with the address.",
   },
   "lonemountainvistas.com": {
     domain: "lonemountainvistas.com",
     neighborhood: "Lone Mountain Vistas",
     tagline: "Lone Mountain Vistas Homes",
     description:
-      "Lone Mountain Vistas homes for sale in Las Vegas. Expert real estate guidance.",
+      "Lone Mountain Vistas homes for sale in Las Vegas. Live MLS with Dr. Jan Duffy.",
     heroHeadline: "Lone Mountain Vistas Homes for Sale",
     heroSubheadline:
-      "Panoramic views and premium living in the Lone Mountain corridor.",
+      "Lone Mountain corridor listings. Confirm lot and view on the live MLS sheet.",
     keywords: [
       "Lone Mountain Vistas",
       "Lone Mountain Las Vegas",
@@ -310,7 +310,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "community",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Lone Mountain Specialist",
+    ctaBadge: "Lone Mountain Vistas",
     ctaHeadline: "Lone Mountain Vistas Awaits",
     ctaSubheadline:
       "Lone Mountain views and lot sizes vary by street — I will pull live inventory, not a vista slogan.",
@@ -320,7 +320,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     neighborhood: "MacDonald Highlands",
     tagline: "MacDonald Highlands Luxury Homes",
     description:
-      "MacDonald Highlands luxury homes for sale in Henderson, Nevada. Expert guidance from Dr. Jan Duffy.",
+      "MacDonald Highlands luxury homes for sale in Henderson, Nevada. Live comps with Dr. Jan Duffy.",
     heroHeadline: "MacDonald Highlands Homes for Sale",
     heroSubheadline:
       "Guard-gated Henderson hillside community. Price from live comps, not a prestige slogan.",
@@ -331,7 +331,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "luxury",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Luxury Specialist",
+    ctaBadge: "Luxury listings",
     ctaHeadline: "MacDonald Highlands Living Awaits",
     ctaSubheadline:
       "Private tours available. Confirm hillside vs valley lots on the live MLS sheet.",
@@ -341,7 +341,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     neighborhood: "Midtown Las Vegas",
     tagline: "Midtown Las Vegas Condos for Sale",
     description:
-      "Search midtown Las Vegas condos and high-rise living. Expert guidance from Dr. Jan Duffy.",
+      "Search midtown Las Vegas condos and high-rise living with Dr. Jan Duffy.",
     heroHeadline: "Midtown Las Vegas Condos for Sale",
     heroSubheadline:
       "Urban living, walkable neighborhoods, and Las Vegas Strip views.",
@@ -352,17 +352,17 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "luxury",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Condo Specialist",
+    ctaBadge: "Condo listings",
     ctaHeadline: "Find Your Las Vegas Condo",
     ctaSubheadline:
-      "From high-rises to urban lofts — I know every midtown building and floor plan.",
+      "High-rises and lofts: I pull the building, HOA, and live inventory — not a floor-plan slogan.",
   },
   "mountainedgehomes.com": {
     domain: "mountainedgehomes.com",
     neighborhood: "Mountain's Edge",
     tagline: "Mountain's Edge Homes for Sale",
     description:
-      "Search Mountain's Edge homes for sale in Southwest Las Vegas. Expert guidance from Dr. Jan Duffy.",
+      "Search Mountain's Edge homes for sale in Southwest Las Vegas with Dr. Jan Duffy.",
     heroHeadline: "Mountain's Edge Homes for Sale",
     heroSubheadline:
       "Mountain's Edge is a southwest Las Vegas master plan around Exploration Peak Park. Confirm ZIP 89178 vs 89179 on a CMA.",
@@ -373,10 +373,10 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "community",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Mountain's Edge Expert",
+    ctaBadge: "Mountain's Edge listings",
     ctaHeadline: "Find Your Mountain's Edge Home",
     ctaSubheadline:
-      "One of Las Vegas' most beautiful master-planned communities — let me be your guide.",
+      "Mountain's Edge around Exploration Peak Park. Confirm 89178 vs 89179 on a CMA.",
   },
   "openhouseupdate.com": {
     domain: "openhouseupdate.com",
@@ -394,7 +394,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "search",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Open House Expert",
+    ctaBadge: "Open houses",
     ctaHeadline: "Schedule a Private Showing",
     ctaSubheadline:
       "Can't make the open house? I'll get you a private tour on your schedule.",
@@ -418,7 +418,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "Weekend Open Houses",
     ctaHeadline: "Never Miss an Open House",
     ctaSubheadline:
-      "I'll alert you to new open houses matching your criteria before they're announced.",
+      "I will send this weekend's open houses that match beds, ZIP, and budget.",
   },
   "samaritanpharma.com": {
     domain: "samaritanpharma.com",
@@ -427,8 +427,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     description:
       "Las Vegas real estate services from Dr. Jan Duffy, BHHS Nevada Properties.",
     heroHeadline: "Las Vegas Homes for Sale",
-    heroSubheadline:
-      "Expert Las Vegas real estate guidance from Dr. Jan Duffy.",
+    heroSubheadline: "Live MLS and a written plan from Dr. Jan Duffy.",
     keywords: [
       "Las Vegas homes for sale",
       "Las Vegas real estate",
@@ -436,7 +435,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "search",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Las Vegas Expert",
+    ctaBadge: "Las Vegas REALTOR®",
     ctaHeadline: "Find Your Las Vegas Home",
     ctaSubheadline: "Local MLS work from a Las Vegas practice since 2008.",
   },
@@ -445,7 +444,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     neighborhood: "Henderson",
     tagline: "Search Homes in Henderson NV",
     description:
-      "Search Henderson NV homes for sale. Expert Henderson real estate guidance from Dr. Jan Duffy.",
+      "Search Henderson NV homes for sale. Live MLS with Dr. Jan Duffy.",
     heroHeadline: "Search Homes in Henderson, NV",
     heroSubheadline:
       "Henderson parks, trails, and master-planned villages — Green Valley, Inspirada, Anthem, and Lake Las Vegas.",
@@ -456,10 +455,10 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "search",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Henderson Specialist",
+    ctaBadge: "Henderson listings",
     ctaHeadline: "Find Your Henderson Home",
     ctaSubheadline:
-      "Green Valley, MacDonald Highlands, Anthem — I know every Henderson neighborhood.",
+      "Green Valley, MacDonald Highlands, Anthem — I pull live Henderson MLS by village.",
   },
   "searchforlasvegashomes.com": {
     domain: "searchforlasvegashomes.com",
@@ -477,20 +476,20 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "search",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "MLS Search Expert",
+    ctaBadge: "MLS search",
     ctaHeadline: "Start Your Home Search",
     ctaSubheadline:
-      "Tell me what you're looking for and I'll send you matches before they hit the market.",
+      "Tell me the beds, ZIP, and budget. I will send live MLS matches — not off-market claims.",
   },
   "skyecanyonhomeexpert.com": {
     domain: "skyecanyonhomeexpert.com",
     neighborhood: "Skye Canyon",
-    tagline: "Skye Canyon Home Expert",
+    tagline: "Skye Canyon Homes for Sale",
     description:
-      "Skye Canyon homes for sale in Northwest Las Vegas. Dr. Jan Duffy, Skye Canyon specialist.",
-    heroHeadline: "Skye Canyon Home Expert",
+      "Skye Canyon homes for sale in Northwest Las Vegas with Dr. Jan Duffy.",
+    heroHeadline: "Skye Canyon Homes for Sale",
     heroSubheadline:
-      "Northwest Las Vegas' most exciting master-planned community.",
+      "Northwest Las Vegas master plan. Confirm new construction vs resale on that file.",
     keywords: [
       "Skye Canyon homes",
       "Skye Canyon Las Vegas",
@@ -498,18 +497,18 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "community",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Skye Canyon Expert",
-    ctaHeadline: "Your Skye Canyon Expert",
+    ctaBadge: "Skye Canyon listings",
+    ctaHeadline: "Search Skye Canyon listings",
     ctaSubheadline:
-      "New construction lots, resales, builder incentives — I know Skye Canyon inside and out.",
+      "New construction lots, resales, and builder incentives. Register before the first model visit.",
   },
   "skyecanyonrealestateexpert.com": {
     domain: "skyecanyonrealestateexpert.com",
     neighborhood: "Skye Canyon",
-    tagline: "Skye Canyon Real Estate Expert",
+    tagline: "Skye Canyon Real Estate",
     description:
-      "Expert Skye Canyon real estate guidance. Find new and resale homes in Skye Canyon Las Vegas.",
-    heroHeadline: "Skye Canyon Real Estate Expert",
+      "Skye Canyon new construction and resale in Northwest Las Vegas with Dr. Jan Duffy.",
+    heroHeadline: "Skye Canyon Real Estate",
     heroSubheadline:
       "Skye Canyon new construction and resale. Register before the first model-home visit. Confirm builder incentives on that file.",
     keywords: [
@@ -519,8 +518,8 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "community",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Skye Canyon Specialist",
-    ctaHeadline: "Work With the Skye Canyon Expert",
+    ctaBadge: "Skye Canyon REALTOR®",
+    ctaHeadline: "Work with Dr. Jan Duffy",
     ctaSubheadline:
       "Skye Canyon files from a Las Vegas practice since 2008. Call 702-222-1964 for live inventory.",
   },
@@ -540,7 +539,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "search",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Cash Offer Specialist",
+    ctaBadge: "Cash offers",
     ctaHeadline: "Get Your Cash Offer Today",
     ctaSubheadline:
       "Call 702-222-1964 for a no-obligation cash offer on your Las Vegas home.",
@@ -550,7 +549,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     neighborhood: "Sun City Summerlin",
     tagline: "Sun City Summerlin Homes for Sale",
     description:
-      "Sun City Summerlin 55+ community homes for sale. Expert guidance from Dr. Jan Duffy.",
+      "Sun City Summerlin 55+ community homes for sale. Confirm HOA and occupancy with Dr. Jan Duffy.",
     heroHeadline: "Sun City Summerlin Homes for Sale",
     heroSubheadline:
       "Sun City Summerlin 55+ campus with 3 golf courses and 4 rec centers. Confirm HOA and occupancy on resale docs.",
@@ -561,7 +560,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "55plus",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Sun City Summerlin Expert",
+    ctaBadge: "Sun City Summerlin",
     ctaHeadline: "Find Your Sun City Home",
     ctaSubheadline:
       "I work Sun City Summerlin files every week. Call and I will send live inventory.",
@@ -571,7 +570,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     neighborhood: "Sunstone",
     tagline: "Sunstone Las Vegas Homes for Sale",
     description:
-      "Sunstone community homes for sale in Northwest Las Vegas. Expert real estate guidance.",
+      "Sunstone community homes for sale in Northwest Las Vegas. Live MLS with Dr. Jan Duffy.",
     heroHeadline: "Sunstone Las Vegas Homes for Sale",
     heroSubheadline:
       "Sunstone master-plan listings in Northwest Las Vegas. Confirm village vs nearby ZIPs on a CMA.",
@@ -582,7 +581,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "community",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Sunstone Specialist",
+    ctaBadge: "Sunstone listings",
     ctaHeadline: "Find Your Sunstone Home",
     ctaSubheadline:
       "Everything you need to know about buying in Sunstone — let's talk.",
@@ -603,7 +602,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "luxury",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Luxury Specialist",
+    ctaBadge: "Luxury listings",
     ctaHeadline: "Private Tours of The Ridges",
     ctaSubheadline:
       "The Ridges is guard-gated custom Summerlin. Price from live comps — I will not claim off-market inventory I cannot show.",
@@ -613,7 +612,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     neighborhood: "Trilogy at Sunstone",
     tagline: "Trilogy at Sunstone 55+ Homes",
     description:
-      "Trilogy at Sunstone 55+ active adult community homes in Las Vegas. Dr. Jan Duffy, specialist.",
+      "Trilogy at Sunstone 55+ active adult community homes in Las Vegas with Dr. Jan Duffy.",
     heroHeadline: "Trilogy at Sunstone Homes for Sale",
     heroSubheadline:
       "Del Webb 55+ campus in Northwest Las Vegas. Confirm HOA, rec access, and occupancy on resale docs.",
@@ -624,7 +623,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "55plus",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Trilogy Specialist",
+    ctaBadge: "Trilogy at Sunstone",
     ctaHeadline: "Discover Trilogy at Sunstone",
     ctaSubheadline:
       "Del Webb rec campus, one-story plans, and HOPA occupancy — call 702-222-1964.",
@@ -645,7 +644,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "55plus",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "55+ Community Expert",
+    ctaBadge: "55+ communities",
     ctaHeadline: "Find Your 55+ Community",
     ctaSubheadline:
       "I tour Sun City, Del Webb, Trilogy, and Heritage by ZIP and HOPA rules. Call 702-222-1964.",
@@ -653,12 +652,12 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
   "yourdivorcerealtor.com": {
     domain: "yourdivorcerealtor.com",
     neighborhood: "Las Vegas",
-    tagline: "Divorce Real Estate Specialist Las Vegas",
+    tagline: "Divorce Real Estate Las Vegas",
     description:
-      "Confidential Las Vegas divorce real estate specialist. Dr. Jan Duffy handles court-ordered sales with discretion.",
-    heroHeadline: "Your Divorce Real Estate Specialist",
+      "Confidential Las Vegas divorce real estate. Dr. Jan Duffy handles court-ordered sales with discretion.",
+    heroHeadline: "Divorce real estate in Las Vegas",
     heroSubheadline:
-      "Confidential, compassionate real estate guidance during life's most challenging transitions.",
+      "Court-ordered and dual-agent-sensitive sales. Compensation and showing rules in writing.",
     keywords: [
       "divorce realtor Las Vegas",
       "divorce real estate Las Vegas",
@@ -679,10 +678,10 @@ export const DEFAULT_CONFIG: DomainConfig = {
   neighborhood: "Las Vegas",
   tagline: "Las Vegas Homes for Sale",
   description:
-    "Search Las Vegas homes for sale. Expert real estate guidance from Dr. Jan Duffy, BHHS Nevada Properties.",
+    "Search Las Vegas homes for sale. Live MLS with Dr. Jan Duffy, BHHS Nevada Properties.",
   heroHeadline: "Las Vegas Homes for Sale",
   heroSubheadline:
-    "Expert real estate guidance from Dr. Jan Duffy — serving Las Vegas since 2008.",
+    "Live MLS and a written plan from Dr. Jan Duffy — serving Las Vegas since 2008.",
   keywords: [
     "Las Vegas homes for sale",
     "Las Vegas real estate",
@@ -690,10 +689,10 @@ export const DEFAULT_CONFIG: DomainConfig = {
   ],
   pageType: "search",
   realscoutAgentId: REALSCOUT_AGENT_ID,
-  ctaBadge: "Las Vegas Expert",
+  ctaBadge: "Las Vegas REALTOR®",
   ctaHeadline: "Find Your Las Vegas Home",
   ctaSubheadline:
-    "Call or text Dr. Jan at 702-222-1964 — I answer my own phone.",
+    "Call or text Dr. Jan at 702-222-1964 — I answer the client line.",
 };
 
 export function getDomainConfig(hostname: string): DomainConfig {

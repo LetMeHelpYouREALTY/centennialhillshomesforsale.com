@@ -582,9 +582,8 @@ export default async function MarketInsightsPage() {
               Get Personalized Market Analysis
             </h2>
             <p className="mb-8 text-xl text-blue-100">
-              Wondering what these trends mean for your specific situation? Dr.
-              Jan Duffy provides free consultations with customized market
-              analysis.
+              Wondering what these trends mean for a specific house? Call with
+              the address. Dr. Jan Duffy will run a CMA — not a citywide slogan.
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <a

@@ -33,7 +33,7 @@ export const metadata: Metadata = withShareImage(
     title:
       "Dr. Jan Duffy, REALTOR® Las Vegas | Berkshire Hathaway HomeServices",
     description:
-      "Dr. Jan Duffy is a trusted Las Vegas REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. Specializing in Summerlin, Henderson, 55+ communities, California relocation, and luxury homes. Call (702) 222-1964.",
+      "Dr. Jan Duffy is a Las Vegas REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. Summerlin, Henderson, 55+ communities, California relocation, and luxury listings. Call (702) 222-1964.",
     keywords: [
       "Dr. Jan Duffy realtor",
       "Las Vegas real estate agent",
@@ -47,7 +47,7 @@ export const metadata: Metadata = withShareImage(
       title:
         "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
       description:
-        "Trusted Las Vegas REALTOR® serving since 2008. Summerlin, Henderson, luxury homes, 55+ communities.",
+        "Las Vegas REALTOR® serving since 2008. Summerlin, Henderson, luxury listings, 55+ communities.",
       url: "https://heyberkshire.com/google-business",
       type: "profile",
     },
@@ -140,26 +140,28 @@ export default function GoogleBusinessPage() {
                       className="h-40 w-40 md:h-48 md:w-48"
                     />
                   </div>
-                  <div className="flex justify-center mb-4">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Star
-                        key={star}
-                        className="h-8 w-8 text-yellow-400 fill-yellow-400"
-                      />
-                    ))}
-                  </div>
                   <p className="text-3xl font-bold mb-2">Google reviews</p>
                   <p className="text-blue-200 mb-6">
                     Live on the Business Profile — I will not invent a rating
                   </p>
                   <a
+                    href={OFFICE_NAP.reviewsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-11 w-full items-center justify-center rounded-lg bg-white px-6 py-4 text-lg font-bold text-blue-900 no-underline transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                  >
+                    View Google Reviews
+                    <span className="sr-only"> (opens in a new tab)</span>
+                  </a>
+                  <a
                     href={`tel:${businessInfo.phone.tel}`}
-                    className="inline-flex min-h-11 w-full items-center justify-center rounded-lg bg-blue-600 px-6 py-4 text-lg font-bold text-white no-underline transition-colors hover:bg-blue-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                    className="mt-3 inline-flex min-h-11 w-full items-center justify-center rounded-lg bg-blue-600 px-6 py-4 text-lg font-bold text-white no-underline transition-colors hover:bg-blue-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                   >
                     Call Now: {businessInfo.phone.display}
                   </a>
                   <p className="text-sm text-blue-300 mt-3">
-                    Free Consultation
+                    Call for a CMA on the address — no invented rating on this
+                    page
                   </p>
                 </div>
               </div>
@@ -421,8 +423,8 @@ export default function GoogleBusinessPage() {
             <div className="bg-slate-900 text-white rounded-2xl p-8 md:p-12 text-center">
               <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
               <p className="text-xl text-slate-300 mb-8">
-                Contact Dr. Jan Duffy for a free consultation about buying or
-                selling in Las Vegas.
+                Call Dr. Jan Duffy with the address you want on a CMA — buying
+                or selling in Las Vegas.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

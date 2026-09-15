@@ -50,14 +50,22 @@ export default function LuxuryHomesPage() {
       sections={[
         {
           heading: "Pricing is a CMA, not a round number",
+          imageSrc: "/images/hero/luxury-homes.png",
+          imageAlt:
+            "Luxury custom home with mountain views in The Ridges, Summerlin",
           body: `As of ${MARKET_SNAPSHOT_AS_OF}, Summerlin South listing median is ${formatUsd(LISTING_MEDIANS_USD.summerlinSouth)} and Southern Highlands ${formatUsd(LISTING_MEDIANS_USD.southernHighlands)}. Those samples mix gated and open product. I will not list your Ridges lot at a Southern Highlands median. Bring the address; I pull same-gate sales.`,
         },
         {
           heading: "What luxury marketing actually is here",
+          imageSrc: "/images/hero/sellers-listing.png",
+          imageAlt:
+            "Las Vegas home prepared for listing with professional staging",
           body: "Professional stills, a floor plan, and a showing window the gate can staff. Berkshire Hathaway HomeServices syndication is the distribution layer. I do not promise magazine covers or named buyers. Architectural review can add weeks before you go live — budget that.",
         },
         {
           heading: "Seller privacy",
+          imageSrc: "/images/neighborhoods/the-ridges.png",
+          imageAlt: "Gated custom homes in The Ridges, Summerlin",
           body: "Signage, broker tours, and Coming Soon rules are your call. Occupied luxury listings often use appointment-only and a lockbox that the gate will honor. I write that into the listing agreement.",
         },
       ]}
@@ -91,6 +99,7 @@ export default function LuxuryHomesPage() {
         { href: "/sellers", label: "Selling guide" },
       ]}
       lastUpdated="September 2026"
+      showListings={false}
     />
   );
 }

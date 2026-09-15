@@ -95,7 +95,7 @@ export const agentStats = {
 
 // Value Propositions
 export const valuePropositions = {
-  main: "When you work with a Berkshire Hathaway HomeServices agent, you're backed by a name synonymous with trust, ethical standards, and financial strength—the same principles that built Warren Buffett's empire.",
+  main: "Berkshire Hathaway HomeServices Nevada Properties is a franchise brokerage. You get a written plan, a global referral network, and one agent of record — Dr. Jan Duffy — not a Buffett slogan.",
   trust:
     "Berkshire Hathaway HomeServices is backed by Berkshire Hathaway Inc. You get a global referral network, listing marketing in writing, and documented ethics standards.",
   expertise:

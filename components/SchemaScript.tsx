@@ -129,7 +129,7 @@ export function ReviewSchema({
     name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
   };
 
-  if (aggregateRating) {
+  if (aggregateRating && aggregateRating.reviewCount > 0) {
     schema.aggregateRating = {
       "@type": "AggregateRating",
       ratingValue: aggregateRating.ratingValue.toString(),

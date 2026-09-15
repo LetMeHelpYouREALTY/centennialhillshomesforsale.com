@@ -1,4 +1,4 @@
-import { Star, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import { CTA_PHONE, CTA_TEL, OFFICE_NAP } from "@/lib/contact";
 
 type GoogleReviewsCtaProps = {
@@ -12,14 +12,6 @@ export function GoogleReviewsCta({ className = "" }: GoogleReviewsCtaProps) {
       aria-labelledby="google-reviews-heading"
     >
       <div className="container mx-auto max-w-3xl px-4 text-center">
-        <div className="mb-4 flex justify-center gap-1" aria-hidden="true">
-          {[1, 2, 3, 4, 5].map((star) => (
-            <Star
-              key={star}
-              className="h-6 w-6 fill-amber-400 text-amber-400"
-            />
-          ))}
-        </div>
         <h2
           id="google-reviews-heading"
           className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl"

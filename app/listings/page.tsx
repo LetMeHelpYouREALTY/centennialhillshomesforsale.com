@@ -15,6 +15,7 @@ import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { FAQSchema } from "@/components/SchemaScript";
+import RealScoutListings from "@/components/realscout/RealScoutListings";
 import {
   CTA_PHONE,
   CTA_TEL,
@@ -247,35 +248,19 @@ export default function ListingsPage({
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
               <span className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Live MLS
-                Data
+                via RealScout
               </span>
               <span className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> MLS via
-                RealScout
-              </span>
-              <span className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-1" />{" "}
-                RealScout MLS
+                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Call{" "}
+                {CTA_PHONE}
               </span>
             </div>
           </div>
+        </div>
 
-          {/* RealScout Widget - Live MLS Listings */}
-          <section className="mb-16">
-            <div className="max-w-7xl mx-auto">
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: `<realscout-office-listings 
-                    agent-encoded-id="QWdlbnQtMjI1MDUw" 
-                    sort-order="NEWEST" 
-                    listing-status="For Sale" 
-                    property-types=",SFR,MF,TC"
-                  ></realscout-office-listings>`,
-                }}
-              />
-            </div>
-          </section>
+        <RealScoutListings />
 
+        <div className="container mx-auto px-4">
           {/* Popular Searches Section */}
           <section className="mb-16 max-w-6xl mx-auto">
             <SectionHeading

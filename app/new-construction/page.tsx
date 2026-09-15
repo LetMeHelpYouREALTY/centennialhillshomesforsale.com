@@ -44,18 +44,28 @@ export default function NewConstructionPage() {
       sections={[
         {
           heading: "Registration is the whole game on day one",
+          imageSrc: "/images/hero/new-construction.png",
+          imageAlt: "New construction homes under desert sky in Las Vegas",
           body: "Most Las Vegas and Henderson builders will only recognize the agent who is with you (or registered) on the first visit. If you tour alone, you may forfeit representation on that community. Text 702-222-1964 before you put your name on the kiosk iPad.",
         },
         {
           heading: "Where new construction still exists in 2026",
+          imageSrc: "/images/neighborhoods/skye-canyon.png",
+          imageAlt: "Skye Canyon Northwest Las Vegas new-construction streets",
           body: `Inspirada (89044) was in a final-phase window — Groves townhomes are resale only. Skye Canyon and North Las Vegas pods (Lennar, KB, Richmond, Century, and others) rotate incentives. As of ${MARKET_SNAPSHOT_AS_OF}, North Las Vegas listing median is ${formatUsd(LISTING_MEDIANS_USD.northLasVegas)} and Inspirada ${formatUsd(LISTING_MEDIANS_USD.inspirada)} — those are not the builder’s current base price. I pull the community worksheet the week you tour.`,
         },
         {
           heading: "What I negotiate besides “the price”",
+          imageSrc: "/images/hero/buyers.png",
+          imageAlt:
+            "Las Vegas buyer touring a northwest desert-contemporary home",
           body: "Options, lot premiums, rate buydowns, closing-cost credits, and whether the solar lease is assumable. I also calendar construction draws and a pre-drywall walk when the builder allows it. I do not originate the mortgage.",
         },
         {
           heading: "Compensation",
+          imageSrc: "/images/hero/office-lake-mead.png",
+          imageAlt:
+            "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard",
           body: "Builders often budget a cooperating broker fee. After the 2024 NAR practice changes, that is not something I will call automatic or “100% free.” We write it down. If the builder will not pay, we decide whether you pay or we walk.",
         },
       ]}
@@ -86,6 +96,7 @@ export default function NewConstructionPage() {
         { href: "/buyers", label: "Buying guide" },
       ]}
       lastUpdated="September 2026"
+      showListings={false}
     />
   );
 }

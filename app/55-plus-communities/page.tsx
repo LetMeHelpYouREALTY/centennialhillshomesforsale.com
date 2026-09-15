@@ -904,12 +904,12 @@ export default function FiftyFiveCommunitiesPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">
-                    Trusted Brand
+                    Written plan
                   </h3>
                   <p className="text-slate-600 text-sm">
-                    The Berkshire Hathaway name represents trust and
-                    integrity—values that matter when making one of life's
-                    biggest decisions.
+                    BHHS Nevada Properties is a franchise. Compensation, HOA
+                    occupancy, and the showing plan go in writing — not a brand
+                    slogan.
                   </p>
                 </div>
               </div>

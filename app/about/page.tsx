@@ -17,6 +17,7 @@ import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import { AGENT_PHOTO_PATH } from "@/lib/brand-assets";
 import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
 import { VisitOffice } from "@/components/shared/VisitOffice";
+import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
@@ -187,16 +188,15 @@ export default function AboutPage() {
                     Nevada's wage-tax statute against live Las Vegas comps.
                   </p>
                   <p>
-                    What sets{" "}
+                    What{" "}
                     <strong>
                       Berkshire Hathaway HomeServices Nevada Properties
                     </strong>{" "}
-                    apart? We're backed by Warren Buffett's Berkshire Hathaway
-                    Inc.—a name synonymous with financial strength and ethical
-                    standards. When you're making the biggest financial decision
-                    of your life, that trust matters. You deserve an agent who
-                    puts your interests first, provides honest advice, and walks
-                    the file until it closes.
+                    actually buys you is a franchise brokerage, a global
+                    referral network, and listing marketing in writing. Warren
+                    Buffett does not write your CMA. You still get one agent of
+                    record — me — putting your interests first and walking the
+                    file until it closes.
                   </p>
                   <p>
                     I treat every client as a principal in the file. Whether
@@ -389,11 +389,11 @@ export default function AboutPage() {
                 <div className="bg-blue-600 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <Award className="h-8 w-8" />
                 </div>
-                <h3 className="font-bold text-xl mb-2">Trusted Brand</h3>
+                <h3 className="font-bold text-xl mb-2">Franchise brokerage</h3>
                 <p className="text-slate-300 text-sm">
-                  The only real estate brand backed by Warren Buffett's
-                  Berkshire Hathaway Inc.—a name synonymous with trust and
-                  integrity worldwide.
+                  BHHS Nevada Properties is a franchise. You get written
+                  compensation, a referral network, and documented ethics
+                  standards — not a Buffett slogan.
                 </p>
               </div>
               <div className="text-center">
@@ -470,34 +470,11 @@ export default function AboutPage() {
 
           {/* CTA */}
           <VisitOffice className="mb-16 rounded-2xl" compact />
-          <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Questions about buying or selling in Las Vegas? Call or text Dr.
-              Jan Duffy today for a free consultation. Whether you're ready to
-              start your search or just exploring options, she's here to help.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href={CTA_TEL}
-                className="inline-flex min-h-11 items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call {CTA_PHONE}
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex min-h-11 items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
-              >
-                Schedule Consultation
-              </Link>
-            </div>
-            <p className="mt-4 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
-          </section>
+          <PageCTA
+            headline="Ready to get started?"
+            subheadline="Questions about buying or selling in Las Vegas? Call or text with the address. I will run a CMA — not a free-consult product pitch."
+            className="mb-8 rounded-2xl"
+          />
         </div>
 
         {/* Last Updated */}

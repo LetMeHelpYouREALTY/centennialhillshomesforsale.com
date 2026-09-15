@@ -11,7 +11,7 @@
 
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Turnstile } from "@marsidev/react-turnstile";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -26,6 +26,12 @@ export interface LeadCaptureFormProps {
   onError?: (error: string) => void;
 }
 
+const selectClassName =
+  "min-h-11 w-full rounded-md border border-zinc-200 bg-white px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 disabled:cursor-not-allowed disabled:opacity-50";
+
+const textareaClassName =
+  "min-h-[5.5rem] w-full rounded-md border border-zinc-200 bg-white px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 disabled:cursor-not-allowed disabled:opacity-50";
+
 export function LeadCaptureForm({
   source = "website-form",
   stage = "New Lead",
@@ -38,6 +44,12 @@ export function LeadCaptureForm({
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [turnstileToken, setTurnstileToken] = useState<string>("");
+  const [invalidFields, setInvalidFields] = useState<string[]>([]);
+
+  const errorRef = useRef<HTMLDivElement>(null);
+  const firstNameRef = useRef<HTMLInputElement>(null);
+  const lastNameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -55,6 +67,13 @@ export function LeadCaptureForm({
     preApproved: false,
   });
 
+  useEffect(() => {
+    if (!error) {
+      return;
+    }
+    errorRef.current?.focus();
+  }, [error]);
+
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -68,12 +87,30 @@ export function LeadCaptureForm({
     } else {
       setFormData((prev) => ({ ...prev, [name]: value }));
     }
+
+    setInvalidFields((prev) => prev.filter((field) => field !== name));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
+
+    const missing: string[] = [];
+    if (!formData.firstName.trim()) missing.push("firstName");
+    if (!formData.lastName.trim()) missing.push("lastName");
+    if (!formData.email.trim()) missing.push("email");
+
+    if (missing.length > 0) {
+      setInvalidFields(missing);
+      setError("Please complete the required fields.");
+      setLoading(false);
+      const firstMissing = missing[0];
+      if (firstMissing === "firstName") firstNameRef.current?.focus();
+      else if (firstMissing === "lastName") lastNameRef.current?.focus();
+      else emailRef.current?.focus();
+      return;
+    }
 
     try {
       const response = await fetch("/api/leads/capture", {
@@ -100,6 +137,7 @@ export function LeadCaptureForm({
       }
 
       setSuccess(true);
+      setInvalidFields([]);
       setFormData({
         firstName: "",
         lastName: "",
@@ -125,6 +163,8 @@ export function LeadCaptureForm({
       setLoading(false);
     }
   };
+
+  const fieldInvalid = (name: string) => invalidFields.includes(name);
 
   if (success) {
     return (
@@ -157,12 +197,15 @@ export function LeadCaptureForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4" noValidate>
       {error && (
         <div
-          className="rounded-lg border border-red-200 bg-red-50 p-4 text-red-700"
+          ref={errorRef}
+          id="lead-form-error"
+          tabIndex={-1}
+          className="rounded-lg border border-red-200 bg-red-50 p-4 text-red-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-600"
           role="alert"
-          aria-live="polite"
+          aria-live="assertive"
         >
           {error}
         </div>
@@ -175,12 +218,16 @@ export function LeadCaptureForm({
             First Name <span className="text-red-500">*</span>
           </label>
           <Input
+            ref={firstNameRef}
             id="firstName"
             name="firstName"
             autoComplete="given-name"
             value={formData.firstName}
             onChange={handleChange}
             required
+            aria-required="true"
+            aria-invalid={fieldInvalid("firstName")}
+            aria-describedby={error ? "lead-form-error" : undefined}
             disabled={loading}
           />
         </div>
@@ -190,12 +237,16 @@ export function LeadCaptureForm({
             Last Name <span className="text-red-500">*</span>
           </label>
           <Input
+            ref={lastNameRef}
             id="lastName"
             name="lastName"
             autoComplete="family-name"
             value={formData.lastName}
             onChange={handleChange}
             required
+            aria-required="true"
+            aria-invalid={fieldInvalid("lastName")}
+            aria-describedby={error ? "lead-form-error" : undefined}
             disabled={loading}
           />
         </div>
@@ -206,6 +257,7 @@ export function LeadCaptureForm({
           Email <span className="text-red-500">*</span>
         </label>
         <Input
+          ref={emailRef}
           id="email"
           name="email"
           type="email"
@@ -214,6 +266,9 @@ export function LeadCaptureForm({
           value={formData.email}
           onChange={handleChange}
           required
+          aria-required="true"
+          aria-invalid={fieldInvalid("email")}
+          aria-describedby={error ? "lead-form-error" : undefined}
           disabled={loading}
         />
       </div>
@@ -334,7 +389,7 @@ export function LeadCaptureForm({
               value={formData.timeline}
               onChange={handleChange}
               disabled={loading}
-              className="w-full rounded-md border border-gray-300 px-3 py-2"
+              className={selectClassName}
             >
               <option value="">Select timeline…</option>
               <option value="Immediately">Immediately (ASAP)</option>
@@ -345,7 +400,7 @@ export function LeadCaptureForm({
             </select>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 min-h-11">
             <input
               id="preApproved"
               name="preApproved"
@@ -353,7 +408,7 @@ export function LeadCaptureForm({
               checked={formData.preApproved}
               onChange={handleChange}
               disabled={loading}
-              className="rounded"
+              className="h-5 w-5 rounded"
             />
             <label htmlFor="preApproved" className="text-sm">
               I am pre-approved for financing
@@ -365,7 +420,7 @@ export function LeadCaptureForm({
       {/* Message */}
       <div>
         <label htmlFor="message" className="block text-sm font-medium mb-1">
-          Message
+          {formType === "home-valuation" ? "Address and notes" : "Message"}
         </label>
         <textarea
           id="message"
@@ -374,8 +429,12 @@ export function LeadCaptureForm({
           onChange={handleChange}
           disabled={loading}
           rows={4}
-          className="w-full rounded-md border border-gray-300 px-3 py-2"
-          placeholder="How can Dr. Jan Duffy help you?"
+          className={textareaClassName}
+          placeholder={
+            formType === "home-valuation"
+              ? "Street address, occupancy (owner / vacant / tenant), and anything that would change a CMA."
+              : "How can Dr. Jan Duffy help you?"
+          }
         />
       </div>
 
@@ -407,7 +466,11 @@ export function LeadCaptureForm({
         }
         className="min-h-11 w-full"
       >
-        {loading ? "Submitting…" : "Send message"}
+        {loading
+          ? "Submitting…"
+          : formType === "home-valuation"
+            ? "Request a CMA"
+            : "Send message"}
       </Button>
 
       <p className="text-xs text-gray-500 text-center">

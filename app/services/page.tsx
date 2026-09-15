@@ -85,6 +85,7 @@ export default function ServicesPage() {
         { href: "/home-valuation", label: "Home valuation" },
       ]}
       lastUpdated="September 2026"
+      showListings={false}
     />
   );
 }
