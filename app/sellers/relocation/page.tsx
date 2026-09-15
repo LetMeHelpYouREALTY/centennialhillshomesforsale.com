@@ -48,6 +48,10 @@ export default function SellersRelocationPage() {
           heading: "The other city",
           body: "If you are buying in another state, Berkshire Hathaway HomeServices has a referral network. I still represent this listing. I do not dump you on a stranger without an introduction. Call 702-222-1964.",
         },
+        {
+          heading: "Weekly written updates",
+          body: "You get showing feedback and offer summaries in writing, not a mystery lockbox. Email homes@heyberkshire.com from the new time zone if a call window is awkward — I still walk the Clark County house myself.",
+        },
       ]}
       faqs={[
         {
@@ -63,6 +67,11 @@ export default function SellersRelocationPage() {
         {
           question: "Can you also help me buy in Las Vegas later?",
           answer: "Yes. That is a separate buyer agreement if you return.",
+        },
+        {
+          question: "How do I start a remote listing?",
+          answer:
+            "Email homes@heyberkshire.com or call (702) 222-1964 with the address, occupancy (vacant / occupied / tenant), and photos if you already have them.",
         },
       ]}
       related={[

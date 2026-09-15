@@ -60,6 +60,10 @@ export default function MountainsEdgePage() {
           heading: "Commute",
           body: "I-215 and I-15 connect southwest Las Vegas to the airport and the Strip. Henderson via the 215 is a different direction than a Summerlin commute. Time both if you work opposite sides of the valley.",
         },
+        {
+          heading: "HOA villages inside the master plan",
+          body: "Mountains Edge is not one dues line. Pocket parks and pools sit in villages with their own HOA packets. I walk park access from the listing address and CMA that village, not the regional name. Email homes@heyberkshire.com or call (702) 222-1964 with the street.",
+        },
       ]}
       faqs={[
         {
@@ -75,6 +79,11 @@ export default function MountainsEdgePage() {
           question: "What is Exploration Peak Park?",
           answer:
             "A large public park inside the Mountains Edge area with trails and a peak hike. Confirm park access from the listing address.",
+        },
+        {
+          question: "How do I get a Mountains Edge CMA?",
+          answer:
+            "Email homes@heyberkshire.com or call (702) 222-1964 with the address. I will not price a bid from the ZIP median alone.",
         },
       ]}
       related={[

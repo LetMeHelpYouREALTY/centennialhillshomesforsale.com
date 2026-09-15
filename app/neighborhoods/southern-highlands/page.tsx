@@ -60,6 +60,10 @@ export default function SouthernHighlandsPage() {
           heading: "Commute",
           body: "I-15 and the 215 are the spines. Harry Reid International is closer than from Summerlin. The Strip run is typically shorter than from Centennial Hills, longer than from inner-southwest tracts. Time it at your hour.",
         },
+        {
+          heading: "HOA, club, and the CMA",
+          body: `The ${median} listing median mixes gated estates and open sections. I CMA the enclave you will actually write on, then put HOA and any club dues on separate lines. Email homes@heyberkshire.com or call (702) 222-1964 with the gate name.`,
+        },
       ]}
       faqs={[
         {
@@ -75,6 +79,11 @@ export default function SouthernHighlandsPage() {
           question: "How does Southern Highlands compare to Summerlin?",
           answer:
             "Different geography. Summerlin is the west-side Howard Hughes master plan. Southern Highlands is southwest Las Vegas around 89141 with a golf-club core. Compare commute, dues, and the house.",
+        },
+        {
+          question: "How do I tour a gated Southern Highlands listing?",
+          answer:
+            "Call (702) 222-1964 or email homes@heyberkshire.com. I schedule gate access with the listing desk — I do not publish a public lockbox map.",
         },
       ]}
       related={[

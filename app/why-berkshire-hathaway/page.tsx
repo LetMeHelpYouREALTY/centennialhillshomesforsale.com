@@ -48,6 +48,10 @@ export default function WhyBerkshirePage() {
           heading: "Fair Housing",
           body: "I describe square footage, amenities, named campuses, and commute times. I do not use “safe neighborhood,” “good schools,” or “family-friendly” as sales copy. Read /fair-housing.",
         },
+        {
+          heading: "How to reach this practice",
+          body: "Client line (702) 222-1964. Email homes@heyberkshire.com. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Hours Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday by appointment. (702) 500-1942 is the professional/FUB line, not a consumer CTA.",
+        },
       ]}
       faqs={[
         {
@@ -64,6 +68,11 @@ export default function WhyBerkshirePage() {
           question: "Where is the office?",
           answer:
             "9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday by appointment.",
+        },
+        {
+          question: "What email should clients use?",
+          answer:
+            "homes@heyberkshire.com. Do not use the FUB/professional line (702) 500-1942 as a consumer CTA.",
         },
       ]}
       related={[

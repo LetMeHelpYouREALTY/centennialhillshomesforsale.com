@@ -185,7 +185,10 @@ export default async function Home() {
             </p>
 
             <div className="mb-8 flex justify-center">
-              <MlsSearchForm buttonClassName="bg-white text-blue-700 hover:bg-blue-50" />
+              <MlsSearchForm
+                inputId="mls-q-home"
+                buttonClassName="bg-white text-blue-700 hover:bg-blue-50"
+              />
             </div>
 
             <div className="flex flex-wrap justify-center gap-6 text-sm text-white/80">

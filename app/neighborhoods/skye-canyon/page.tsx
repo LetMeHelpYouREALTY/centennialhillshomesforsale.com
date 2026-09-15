@@ -53,6 +53,10 @@ export default function SkyeCanyonPage() {
           heading: "Floyd Lamb and the northern 215",
           body: "Floyd Lamb Park at Tule Springs is adjacent public parkland — ponds, trails, historic ranch buildings — not an HOA pool. Commute uses the northern 215 and US-95. Time it at your hour; this is farther from the Strip than Centennial Town Center.",
         },
+        {
+          heading: "Builder incentives vs a resale CMA",
+          body: "Remaining new-construction pods can still run rate buydowns and option credits that a 2021 resale does not have. I register as your agent before the model office, then CMA resale against the builder worksheet in the same week. Email homes@heyberkshire.com or call (702) 222-1964 before you sign the kiosk iPad.",
+        },
       ]}
       faqs={[
         {
@@ -69,6 +73,11 @@ export default function SkyeCanyonPage() {
           question: "What is Skye Center?",
           answer:
             "Skye Center is the community amenity campus. Confirm current HOA access rules in the resale package.",
+        },
+        {
+          question: "How do I get current 89166 listings?",
+          answer:
+            "Call (702) 222-1964 or email homes@heyberkshire.com with beds and whether you want new construction or resale. I send live MLS.",
         },
       ]}
       related={[

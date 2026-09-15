@@ -68,6 +68,13 @@ export default function LuxuryHomesPage() {
           imageAlt: "Gated custom homes in The Ridges, Summerlin",
           body: "Signage, broker tours, and Coming Soon rules are your call. Occupied luxury listings often use appointment-only and a lockbox that the gate will honor. I write that into the listing agreement.",
         },
+        {
+          heading: "Architectural review before you go live",
+          imageSrc: "/images/hero/office-lake-mead.png",
+          imageAlt:
+            "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard",
+          body: "HOA architectural packets can add weeks. I calendar that before we pick a list date. Email homes@heyberkshire.com or call (702) 222-1964 with the address — I CMA the gate you actually live in, not a Southern Highlands median on a Ridges lot.",
+        },
       ]}
       faqs={[
         {
@@ -84,6 +91,11 @@ export default function LuxuryHomesPage() {
           question: "How do buyers get through the gate?",
           answer:
             "I schedule with the listing desk and the guard. Call 702-222-1964.",
+        },
+        {
+          question: "How do I start a luxury listing CMA?",
+          answer:
+            "Email homes@heyberkshire.com or call (702) 222-1964 with the address and whether the house is occupied. I pull same-gate sales.",
         },
       ]}
       related={[

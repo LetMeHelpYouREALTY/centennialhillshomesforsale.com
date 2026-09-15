@@ -60,6 +60,10 @@ export default function NorthLasVegasPage() {
           heading: "Investors and first-time buyers",
           body: "Some NLV streets cash-flow on paper and fail inspection. Some first-time buyers want a one-story Aliante resale and get shown a two-story incentive home 20 minutes away. Say occupancy vs rental on the call. Dr. Jan Duffy represents buyers and sellers; she does not manage rentals. She can refer a licensed manager.",
         },
+        {
+          heading: "Commute vs Centennial Hills",
+          body: "I-15 and the northern 215 are the spines. Centennial Hills (89149 / 89131 / 89143) shares a freeway corridor, not a city hall. Time both if you work in Summerlin or at Harry Reid. Email homes@heyberkshire.com or call (702) 222-1964 with the workplace address for a drive-time matrix, not a city slogan.",
+        },
       ]}
       faqs={[
         {
@@ -75,6 +79,11 @@ export default function NorthLasVegasPage() {
           question: "Which builders are active in North Las Vegas?",
           answer:
             "Builder lineups change. Lennar, KB Home, Richmond American, and Century Communities have had pods in recent years. I confirm which community is still selling new on a live pull.",
+        },
+        {
+          question: "How do I get a North Las Vegas CMA?",
+          answer:
+            "Email homes@heyberkshire.com or call (702) 222-1964 with the subdivision and occupancy vs rental. I will not price a bid from the city median alone.",
         },
       ]}
       related={[

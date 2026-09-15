@@ -48,6 +48,10 @@ export default function MoveUpSellerPage() {
           heading: "Where move-up buyers actually go in this valley",
           body: "Centennial Hills resale → Skye Canyon new. Green Valley → Inspirada. Summerlin production → Tournament Hills or The Ridges. Those are maps, not a ranking. Tell me beds, commute, and whether you need a one-story.",
         },
+        {
+          heading: "Two files, two disclosure packets",
+          body: "The sale and the purchase are separate agreements. I will not hide a conflict if one appears. Email homes@heyberkshire.com or call (702) 222-1964 with both addresses so I can CMA the house you have before we write on the next one.",
+        },
       ]}
       faqs={[
         {
@@ -64,6 +68,11 @@ export default function MoveUpSellerPage() {
           question: "Will you handle both sides?",
           answer:
             "Yes, as two files with two disclosure packets. If a conflict appears, we name it in writing.",
+        },
+        {
+          question: "How do I send payoff and HOA docs?",
+          answer:
+            "Email homes@heyberkshire.com or call (702) 222-1964. I need the mortgage balance, HOA, and any SID/LID before I call the equity a round number.",
         },
       ]}
       related={[

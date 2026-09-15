@@ -66,6 +66,10 @@ export default function MarketUpdatePage() {
           heading: "How this page relates to the report and insights",
           body: "Use /market-report for the valley table. Use /market-insights for the Centennial Hills / northwest brief. This page is the short dated snapshot so an old January newsletter URL does not keep ranking. I will not invent a weekly days-on-market average.",
         },
+        {
+          heading: "Ask for the street, not the city median",
+          body: `These listing medians are dated ${MARKET_SNAPSHOT_AS_OF}. They are not sold prices. Email homes@heyberkshire.com or call (702) 222-1964 with the address — or use /home-valuation — for a live CMA.`,
+        },
       ]}
       faqs={[
         {
@@ -82,6 +86,11 @@ export default function MarketUpdatePage() {
           question: "Can I get a CMA from this page?",
           answer:
             "Not from the medians alone. Call (702) 222-1964 or send the address on /home-valuation.",
+        },
+        {
+          question: "Can I email instead?",
+          answer:
+            "Yes. Email homes@heyberkshire.com with the address. City and village medians on this page are not a CMA.",
         },
       ]}
       related={[

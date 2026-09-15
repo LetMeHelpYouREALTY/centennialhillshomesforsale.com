@@ -59,6 +59,10 @@ export default function RelocationPage() {
           heading: "California is a common pair, not the only pair",
           body: "CA inbound has its own page because tax and flight patterns repeat. I also work Arizona, Utah, Washington, and military PCS. Same rule: live comps, written agreements, no invented savings.",
         },
+        {
+          heading: "Two clocks on paper",
+          body: "The Nevada listing close and the destination purchase (or the inbound purchase and the origin sale) are two calendars. I will not stack two unpriced wishes. Email homes@heyberkshire.com or call (702) 222-1964 with both addresses and the commute that actually matters.",
+        },
       ]}
       faqs={[
         {
@@ -75,6 +79,11 @@ export default function RelocationPage() {
           question: "Do you coordinate temporary housing?",
           answer:
             "I can refer corporate housing and hotels near the streets we are touring. I do not operate a hotel.",
+        },
+        {
+          question: "How do I start a relocation file?",
+          answer:
+            "Email homes@heyberkshire.com or call (702) 222-1964 with origin city, destination ZIP, and whether you are selling, buying, or both.",
         },
       ]}
       related={[

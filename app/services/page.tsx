@@ -57,6 +57,13 @@ export default function ServicesPage() {
             "55-plus active adult community in Summerlin with golf course and rec center",
           body: "Luxury (gated custom), 55+ HOPA, new construction (register first), investment (no property management), relocation inbound and outbound. I do not duplicate RealScout or Follow Up Boss features those platforms already provide.",
         },
+        {
+          heading: "How representation starts",
+          imageSrc: "/images/hero/office-lake-mead.png",
+          imageAlt:
+            "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard",
+          body: "Call (702) 222-1964 or email homes@heyberkshire.com. Buyer files need a written buyer agreement. Seller files start with a CMA. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
+        },
       ]}
       faqs={[
         {
@@ -72,6 +79,11 @@ export default function ServicesPage() {
         {
           question: "How do I start?",
           answer: "Call (702) 222-1964 or use /contact.",
+        },
+        {
+          question: "What is the office email?",
+          answer:
+            "homes@heyberkshire.com. The client phone is (702) 222-1964. (702) 500-1942 is the professional/FUB line, not a consumer CTA.",
         },
       ]}
       related={[

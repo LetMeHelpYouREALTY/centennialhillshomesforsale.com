@@ -10,6 +10,7 @@ import {
   OFFICE_NAP,
   TEXT_LINK_CLASS,
 } from "@/lib/contact";
+import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 
 export default function Error({
   error,
@@ -24,7 +25,7 @@ export default function Error({
 
   return (
     <main className="bg-white pb-20 pt-8">
-      <div className="container mx-auto max-w-xl px-4 text-center">
+      <div className="container mx-auto max-w-2xl px-4 text-center">
         <h1 className="mb-4 text-3xl font-bold text-slate-900">
           Something went wrong
         </h1>
@@ -79,6 +80,22 @@ export default function Error({
             {AGENT_EMAIL}
           </a>
         </div>
+        <section
+          className="mt-10 text-left"
+          aria-labelledby="error-mls-heading"
+        >
+          <h2
+            id="error-mls-heading"
+            className="mb-3 text-center text-xl font-bold text-slate-900"
+          >
+            Search live MLS
+          </h2>
+          <p className="mb-4 text-center text-pretty text-slate-600">
+            ZIP, street, or community. Submits to current listings — not a
+            scraped sample.
+          </p>
+          <MlsSearchForm inputId="mls-q-error" />
+        </section>
       </div>
     </main>
   );

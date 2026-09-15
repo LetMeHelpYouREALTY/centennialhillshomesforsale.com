@@ -65,6 +65,13 @@ export default function FaqPage() {
             "Staged Las Vegas listing living room opening to a backyard pool",
           body: "List price comes from a CMA, not an AVM. I will not promise a number of days on market. Fees are negotiated before the listing agreement is signed.",
         },
+        {
+          heading: "55+, new construction, and how to reach the office",
+          imageSrc: "/images/hero/55-plus-hub.png",
+          imageAlt:
+            "55-plus active adult community in Summerlin with golf course and rec center",
+          body: "HOPA occupancy rules differ by campus — confirm CC&Rs. Register me before the first builder visit on new construction. Email homes@heyberkshire.com or call (702) 222-1964. Hours Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday by appointment.",
+        },
       ]}
       faqs={[
         {
@@ -96,6 +103,11 @@ export default function FaqPage() {
           question: "What is the client phone number?",
           answer:
             "(702) 222-1964. Do not use the professional/FUB line as a consumer CTA.",
+        },
+        {
+          question: "What is the office email?",
+          answer:
+            "homes@heyberkshire.com. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
         },
       ]}
       related={[

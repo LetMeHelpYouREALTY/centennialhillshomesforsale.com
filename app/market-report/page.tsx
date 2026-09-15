@@ -60,6 +60,10 @@ export default function MarketReportPage() {
           heading: "Inventory is not a slogan",
           body: "More actives than 2021 does not mean every listing sits. Priced-to-comp houses still move. Overpriced luxury and leftover new construction are different files. Call 702-222-1964 for the street you care about.",
         },
+        {
+          heading: "Use this with a CMA, not instead of one",
+          body: `City and village listing medians on this page are dated ${MARKET_SNAPSHOT_AS_OF}. They are not sold prices and they are not your house. Email homes@heyberkshire.com or call (702) 222-1964 with the address for a live CMA.`,
+        },
       ]}
       faqs={[
         {
@@ -75,6 +79,11 @@ export default function MarketReportPage() {
           question: "How often do you update this report?",
           answer:
             "When I pull a new public source. The date is on the page. I do not auto-scrape MLS averages onto this domain.",
+        },
+        {
+          question: "Can I get a street-level number?",
+          answer:
+            "Yes. Email homes@heyberkshire.com or call (702) 222-1964 with the address. This page is a snapshot, not a CMA.",
         },
       ]}
       related={[

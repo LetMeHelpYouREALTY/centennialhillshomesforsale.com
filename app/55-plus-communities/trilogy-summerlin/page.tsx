@@ -68,6 +68,10 @@ export default function TrilogySummerlinPage() {
           heading: "Geography",
           body: "Farther west than Heritage at Stonebridge and Downtown Summerlin. Red Rock access is closer; errands to Downtown Summerlin take longer. I time both when a buyer is choosing Trilogy vs Heritage vs Sun City.",
         },
+        {
+          heading: "89135 comps, not 89134",
+          body: `Trilogy is Summerlin South / 89135 product. I will not price a bid from Sun City Summerlin’s 89134 listing median. As of ${MARKET_SNAPSHOT_AS_OF}, the Summerlin South listing sample is ${formatUsd(LISTING_MEDIANS_USD.summerlinSouth)} — still not a Trilogy sold price. Email homes@heyberkshire.com or call (702) 222-1964 with the plan name.`,
+        },
       ]}
       faqs={[
         {
@@ -83,6 +87,11 @@ export default function TrilogySummerlinPage() {
         {
           question: "How do I tour?",
           answer: "Call 702-222-1964. I schedule with the listing desk.",
+        },
+        {
+          question: "Can I email for a Trilogy CMA?",
+          answer:
+            "Yes. Email homes@heyberkshire.com with the address or plan. I pull Trilogy-only sales, not a ZIP dump.",
         },
       ]}
       related={[

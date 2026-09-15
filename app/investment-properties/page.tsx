@@ -69,6 +69,13 @@ export default function InvestmentPropertiesPage() {
             "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard",
           body: "A qualified intermediary and your CPA run the exchange. I identify replacement property inside the 45-day window and write the contract with the exchange language they provide. Deadlines are statutory. I do not extend them.",
         },
+        {
+          heading: "Rent comps on the address",
+          imageSrc: "/images/neighborhoods/centennial-hills.png",
+          imageAlt:
+            "Northwest Las Vegas single-family street typical of investor tours",
+          body: "I will not publish a ZIP cap rate. Send the address, current rent (or vacancy), HOA, and whether you need a manager referral. Email homes@heyberkshire.com or call (702) 222-1964. I represent the purchase or sale — I do not place tenants.",
+        },
       ]}
       faqs={[
         {
@@ -85,6 +92,11 @@ export default function InvestmentPropertiesPage() {
           question: "Is North Las Vegas better for cash flow?",
           answer:
             "Sometimes on paper, sometimes not after repairs. I compare specific houses, not city slogans.",
+        },
+        {
+          question: "How do I send a rent roll?",
+          answer:
+            "Email homes@heyberkshire.com or call (702) 222-1964 with the address and expenses. Citywide medians are not a cap rate.",
         },
       ]}
       related={[

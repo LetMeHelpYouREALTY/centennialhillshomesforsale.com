@@ -70,6 +70,10 @@ export default function SoleraAnthemPage() {
           heading: "Occupancy",
           body: "Solera’s recorded rules have required all residents to be 55+ in many periods, which is stricter than “one occupant 55+.” That matters if a spouse or adult child will occupy. I read the current CC&Rs before you write the offer. Guest stay limits are in the same packet.",
         },
+        {
+          heading: "Gate access and the CMA",
+          body: `The Anthem area listing median (${anthem}) is a broader sample, not Solera-only. I CMA this HOA, then schedule the guard with the listing desk. Email homes@heyberkshire.com or call (702) 222-1964 with the address — do not bid from a Sun City Anthem campus number.`,
+        },
       ]}
       faqs={[
         {
@@ -85,6 +89,11 @@ export default function SoleraAnthemPage() {
         {
           question: "How do I tour?",
           answer: "Call 702-222-1964. Gate access is arranged in advance.",
+        },
+        {
+          question: "Can I email the CC&Rs before I tour?",
+          answer:
+            "Yes. Email homes@heyberkshire.com with the listing. Occupancy rules here are often stricter than Sun City Anthem — I read the current packet, not a blog.",
         },
       ]}
       related={[

@@ -54,6 +54,10 @@ export default function SummerlinWestPage() {
           heading: "First-party representation",
           body: "This page is written for this website’s readers, not copied from another brokerage’s Summerlin guide. Builder incentives on remaining new construction (if any lot is still open) are negotiated with your own agent, not the seller’s kiosk. Call 702-222-1964.",
         },
+        {
+          heading: "HOA, SID, and the 89138 sample",
+          body: `The Summerlin West listing median on this site is ${formatUsd(LISTING_MEDIANS_USD.summerlinWest)} — a ZIP sample, not a Reverence sold price. HOA plus any SID/LID belong on the worksheet before you bid. Email homes@heyberkshire.com or call (702) 222-1964 with the village name.`,
+        },
       ]}
       faqs={[
         {
@@ -70,6 +74,11 @@ export default function SummerlinWestPage() {
           question: "How do I get current 89138 listings?",
           answer:
             "Call or text Dr. Jan Duffy at 702-222-1964. I will send matching MLS results rather than a scraped feed.",
+        },
+        {
+          question: "Can I email a CMA request?",
+          answer:
+            "Yes. Email homes@heyberkshire.com with beds, lot, and the village (Reverence or otherwise). I filter by subdivision, not ZIP alone.",
         },
       ]}
       related={[

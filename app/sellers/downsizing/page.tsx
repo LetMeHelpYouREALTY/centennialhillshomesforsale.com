@@ -48,6 +48,10 @@ export default function DownsizingPage() {
           heading: "Money order of operations",
           body: "List the larger house with a real CMA. Do not buy the smaller house on a guess. Move-up sequencing applies in reverse: sale contingency, rent-back, or a short overlap. Call 702-222-1964.",
         },
+        {
+          heading: "HOA dues on the next door",
+          body: "A smaller floor plan can still carry higher monthly HOA than the two-story you are leaving. I put dues, guest-stay rules, and any SID/LID on the worksheet next to the sale proceeds. Email homes@heyberkshire.com or call (702) 222-1964 with both addresses.",
+        },
       ]}
       faqs={[
         {
@@ -63,6 +67,11 @@ export default function DownsizingPage() {
           question: "Can grandchildren stay overnight in 55+?",
           answer:
             "Confirm guest-stay limits and under-age occupancy in the current CC&Rs. I will not treat a typical-HOPA slogan as your HOA.",
+        },
+        {
+          question: "How do I start a downsize CMA?",
+          answer:
+            "Email homes@heyberkshire.com or call (702) 222-1964 with the current address and whether you want all-ages one-story or 55+ HOPA.",
         },
       ]}
       related={[

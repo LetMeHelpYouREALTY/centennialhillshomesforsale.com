@@ -71,6 +71,10 @@ export default function DelWebbLakeLasVegasPage() {
           heading: "Commute",
           body: "This is the far east edge of Henderson. I-215 and Lake Mead Parkway are the spines. Airport and Strip drives are longer than from Green Valley. Time them at your hour if you still work or fly often.",
         },
+        {
+          heading: "Lake amenities vs the Del Webb village",
+          body: "Marina, resort parking, and trail rules are their own documents — not the citywide Lake Las Vegas listing median. I walk those before you waive due diligence. Email homes@heyberkshire.com or call (702) 222-1964 with the village street so I filter MLS by Del Webb, not 89011 alone.",
+        },
       ]}
       faqs={[
         {
@@ -86,6 +90,11 @@ export default function DelWebbLakeLasVegasPage() {
           question: "Is it 55+?",
           answer:
             "Yes. HOPA rules apply. Confirm current occupancy and guest limits in the CC&Rs.",
+        },
+        {
+          question: "How do I get a Del Webb Lake Las Vegas CMA?",
+          answer:
+            "Email homes@heyberkshire.com or call (702) 222-1964. The Lake Las Vegas area listing median is not a village-only sold price.",
         },
       ]}
       related={[

@@ -61,6 +61,10 @@ export default function LuxuryHomesLasVegasPage() {
           heading: "Discretion and representation",
           body: "Berkshire Hathaway HomeServices Nevada Properties is the brokerage. Compensation is in a written buyer agreement. For listings, marketing is negotiated before the board goes up. Call 702-222-1964.",
         },
+        {
+          heading: "Gate desks and architectural packets",
+          body: "I schedule access, then read HOA architectural rules before you bid on a view lot that cannot add a casita. Email homes@heyberkshire.com or call (702) 222-1964 with the gate name — The Ridges, Tournament Hills, Red Rock Country Club, MacDonald Highlands, or Southern Highlands.",
+        },
       ]}
       faqs={[
         {
@@ -77,6 +81,11 @@ export default function LuxuryHomesLasVegasPage() {
           question: "Is MacDonald Highlands in Summerlin?",
           answer:
             "No. MacDonald Highlands is Henderson, against the McCullough Range. The Ridges is Summerlin.",
+        },
+        {
+          question: "How do I request a gated tour?",
+          answer:
+            "Email homes@heyberkshire.com or call (702) 222-1964. I arrange the guard with the listing desk — I do not publish a public lockbox map.",
         },
       ]}
       related={[

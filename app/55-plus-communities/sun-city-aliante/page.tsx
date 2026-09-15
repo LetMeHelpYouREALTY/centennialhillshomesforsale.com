@@ -71,6 +71,10 @@ export default function SunCityAliantePage() {
           heading: "Commute",
           body: "I-15 and the northern 215 are the spines. This is farther from Downtown Summerlin than Sun City Summerlin. Time the drive if you still use Summerlin medical or retail weekly.",
         },
+        {
+          heading: "Golf membership vs HOA",
+          body: "The 18-hole course is a campus amenity question, not a citywide North Las Vegas median. Confirm whether golf is included, optional, or a separate club contract on the current packet. Email homes@heyberkshire.com or call (702) 222-1964 with the lot — I will not copy a Sun City Summerlin dues line onto this HOA.",
+        },
       ]}
       faqs={[
         {
@@ -87,6 +91,11 @@ export default function SunCityAliantePage() {
           question: "Do you manage rentals here?",
           answer:
             "No. Dr. Jan Duffy represents buyers and sellers. She can refer a licensed manager.",
+        },
+        {
+          question: "How do I get current Sun City Aliante listings?",
+          answer:
+            "Email homes@heyberkshire.com or call (702) 222-1964. I filter MLS by the Sun City Aliante subdivision, not 89084 alone.",
         },
       ]}
       related={[

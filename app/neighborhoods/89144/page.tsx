@@ -50,6 +50,10 @@ export default function Zip89144Page() {
           heading: "What I send after you call",
           body: "Active 89144 listings that match your price band, plus a short note on HOA, SID/LID if present, and commute to your workplace. No third-party advertorials hosted on this domain — Google’s site reputation policy (updated August 28, 2026) is why this page is first-party copy from Dr. Jan Duffy, not a syndicated ZIP dump.",
         },
+        {
+          heading: "Commute vs 89138 and 89149",
+          body: "89144 sits closer to Downtown Summerlin and the 215 than Summerlin West 89138. Centennial Hills 89149 is a different freeway corridor. Time the drive at your hour — midday is not rush hour. Email homes@heyberkshire.com or call (702) 222-1964 with the workplace address if you want that matrix on paper.",
+        },
       ]}
       faqs={[
         {
@@ -66,6 +70,11 @@ export default function Zip89144Page() {
           question: "Who should I call for 89144 showings?",
           answer:
             "Dr. Jan Duffy at 702-222-1964. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
+        },
+        {
+          question: "Can I email instead of calling?",
+          answer:
+            "Yes. Email homes@heyberkshire.com with beds, village (Arbors, Trails, Queensridge), and a price band. I send live MLS, not a ZIP dump.",
         },
       ]}
       related={[

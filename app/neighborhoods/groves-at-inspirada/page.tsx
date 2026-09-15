@@ -50,6 +50,10 @@ export default function GrovesAtInspiradaPage() {
           heading: "New construction elsewhere in Inspirada",
           body: "If any Inspirada pod is still selling new, it is not Groves. If you need a brand-new detached home, say so on the call. I will not rehost another site’s builder inventory on this domain.",
         },
+        {
+          heading: "HOA, rental rules, and the CMA",
+          body: "Townhome HOA packets include rental caps, parking, and which parks the dues actually unlock. I will not invent a Groves median from the Inspirada master-plan sample. Email homes@heyberkshire.com or call (702) 222-1964 with the unit address and I will pull resale comps only.",
+        },
       ]}
       faqs={[
         {
@@ -66,6 +70,11 @@ export default function GrovesAtInspiradaPage() {
           question: "Do you manage rentals in Groves?",
           answer:
             "No. Dr. Jan Duffy represents buyers and sellers. She does not offer property management. She can refer a licensed manager if you need one.",
+        },
+        {
+          question: "How do I get current Groves listings?",
+          answer:
+            "Email homes@heyberkshire.com or call (702) 222-1964. I filter MLS by the Groves subdivision, not 89044 alone.",
         },
       ]}
       related={[

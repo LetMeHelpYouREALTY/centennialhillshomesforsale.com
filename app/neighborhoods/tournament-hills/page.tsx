@@ -49,6 +49,10 @@ export default function TournamentHillsPage() {
           heading: "How I work a Tournament Hills showing",
           body: "Access is gated. I schedule with the listing desk, pull HOA and architectural docs, and walk lot orientation (golf, mountain, or interior). Membership at TPC Summerlin is separate from residency. Call 702-222-1964 for current inventory; I do not scrape third-party listing blogs onto this domain.",
         },
+        {
+          heading: "Why there is no published village median",
+          body: "Tournament Hills inventory is thin custom and semi-custom. I will not reuse a Sun City Summerlin listing median from the same 89134 ZIP — that is a different HOA and a different product. Email homes@heyberkshire.com or call (702) 222-1964 with the address for a live CMA.",
+        },
       ]}
       faqs={[
         {
@@ -65,6 +69,11 @@ export default function TournamentHillsPage() {
           question: "Can I see homes this week?",
           answer:
             "Usually yes, with gate access arranged in advance. Call or text Dr. Jan Duffy at 702-222-1964.",
+        },
+        {
+          question: "Is TPC Summerlin membership included with the deed?",
+          answer:
+            "No. Club membership is a separate contract. Confirm current terms with the club. Email homes@heyberkshire.com if you want the HOA packet reviewed before you tour.",
         },
       ]}
       related={[

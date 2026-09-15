@@ -62,6 +62,10 @@ export default function GreenValleyPage() {
           heading: "Daily geography",
           body: "The District and Green Valley Ranch Resort sit on the west-central edge of this map. I-215 and Stephanie / Green Valley Parkway are the usual spines. St. Rose Parkway connects you south toward Inspirada if you are comparing finished Green Valley to newer 89044 product in the same afternoon.",
         },
+        {
+          heading: "HOA packets and the CMA",
+          body: "Green Valley is a stack of sub-associations, not one master-plan dues line. I put HOA plus any SID/LID on the worksheet before you bid, then CMA the subdivision — North, South, or Ranch — not the regional name. Email homes@heyberkshire.com or call (702) 222-1964 with the address.",
+        },
       ]}
       faqs={[
         {
@@ -77,6 +81,11 @@ export default function GreenValleyPage() {
           question: "What is The District?",
           answer:
             "The District at Green Valley Ranch is an outdoor retail and dining center next to Green Valley Ranch Resort. It is not a housing subdivision.",
+        },
+        {
+          question: "How do I get current Green Valley listings?",
+          answer:
+            "Call (702) 222-1964 or email homes@heyberkshire.com with beds, ZIP, and whether you want North, South, or Ranch. I send live MLS, not a blog sample.",
         },
       ]}
       related={[

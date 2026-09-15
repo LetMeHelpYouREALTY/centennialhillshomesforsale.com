@@ -64,6 +64,10 @@ export default function HeritageStonebridgePage() {
           heading: "Red Rock and Downtown Summerlin",
           body: "Downtown Summerlin retail and the 215 are the daily geography. Red Rock Canyon is west — public land, a drive, not a community trail. Gate access is scheduled with the listing desk.",
         },
+        {
+          heading: "HOA packet before the gate",
+          body: "Heritage is a smaller guard-gated HOPA pocket. I pull occupancy, guest-stay, and dues from the current resale package — not a Sun City Summerlin listing median from the same ZIP. Email homes@heyberkshire.com or call (702) 222-1964 so I can schedule the guard with the listing desk.",
+        },
       ]}
       faqs={[
         {
@@ -79,6 +83,11 @@ export default function HeritageStonebridgePage() {
         {
           question: "How do I tour?",
           answer: "Call 702-222-1964. Gate access is arranged in advance.",
+        },
+        {
+          question: "Can I email the HOA packet for a review?",
+          answer:
+            "Yes. Email homes@heyberkshire.com with the listing address. I review occupancy and dues before you write.",
         },
       ]}
       related={[

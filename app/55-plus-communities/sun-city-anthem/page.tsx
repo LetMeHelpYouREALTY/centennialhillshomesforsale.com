@@ -74,6 +74,10 @@ export default function SunCityAnthemPage() {
           heading: "How this differs from Solera",
           body: "Solera at Anthem is a smaller guard-gated 55+ community, also in Henderson 89052, with a different HOA and a rule set that more often requires all occupants 55+. Sun City Anthem is the large campus. I tour both when a buyer wants Henderson 55+ without assuming they want 7,000 neighbors.",
         },
+        {
+          heading: "Commute from 89052",
+          body: "St. Rose Parkway and I-215 are the usual spines. Green Valley retail is closer than Downtown Summerlin. Time the drive if you still use Summerlin medical weekly. Email homes@heyberkshire.com or call (702) 222-1964 with the workplace or hospital address — I will not rank Henderson vs Summerlin as a slogan.",
+        },
       ]}
       faqs={[
         {
@@ -89,6 +93,11 @@ export default function SunCityAnthemPage() {
           question: "Is golf included in the HOA?",
           answer:
             "Usually no. Confirm whether the listing includes any golf privilege. Club membership is a separate contract.",
+        },
+        {
+          question: "How do I get current Sun City Anthem listings?",
+          answer:
+            "Email homes@heyberkshire.com or call (702) 222-1964. I send live MLS filtered to this campus, not the broader Anthem sample.",
         },
       ]}
       related={[

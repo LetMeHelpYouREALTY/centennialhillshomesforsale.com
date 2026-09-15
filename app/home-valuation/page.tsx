@@ -57,6 +57,12 @@ export default function HomeValuationPage() {
             "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard",
           body: "Call or text 702-222-1964 with the address, or use the form on this page. Occupied vs vacant vs tenant matters. Photos help if you are out of state.",
         },
+        {
+          heading: "What belongs on the worksheet",
+          imageSrc: "/images/neighborhoods/centennial-hills.png",
+          imageAlt: "Northwest Las Vegas homes used as live CMA comps",
+          body: "HOA, SID/LID, tenant status, and recent same-street sales. I will not email a list price from an AVM. Email homes@heyberkshire.com if the form is inconvenient — still include the address and occupancy.",
+        },
       ]}
       faqs={[
         {
@@ -72,6 +78,11 @@ export default function HomeValuationPage() {
           question: "Do you value condos and townhomes?",
           answer:
             "Yes. HOA and rental cap rules go on the worksheet. Groves at Inspirada is a common example.",
+        },
+        {
+          question: "Can I email the address instead of the form?",
+          answer:
+            "Yes. Email homes@heyberkshire.com or call (702) 222-1964. Occupied vs vacant vs tenant still matters.",
         },
       ]}
       related={[

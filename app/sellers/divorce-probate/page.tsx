@@ -48,6 +48,10 @@ export default function DivorceProbatePage() {
           heading: "What I will not do",
           body: "I will not give legal advice, hide a party from title, or promise a cash buyer in 48 hours. I will introduce a real estate attorney and a title officer who have closed these files in Clark County. Call 702-222-1964.",
         },
+        {
+          heading: "Documents before photos",
+          body: "Send the decree, letters testamentary, or the order that says who can sign. I will not load MLS photos until title can insure the file. Email homes@heyberkshire.com or call (702) 222-1964 — this is not legal advice.",
+        },
       ]}
       faqs={[
         {
@@ -64,6 +68,11 @@ export default function DivorceProbatePage() {
           question: "Do you work with out-of-state heirs?",
           answer:
             "Yes. Remote signatures, lockbox, and a weekly photo log. I still walk the house myself.",
+        },
+        {
+          question: "Where do I send court papers?",
+          answer:
+            "Email homes@heyberkshire.com or call (702) 222-1964. I start with who can sign, not the listing photos.",
         },
       ]}
       related={[
