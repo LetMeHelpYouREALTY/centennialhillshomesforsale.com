@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 
 export const HUB_CONVERSION_LINKS = [
   { href: "/buyers/first-time-buyers", label: "First-Time Las Vegas Buyers" },
+  { href: "/buyers/california-relocator", label: "California to Las Vegas" },
   { href: "/relocation", label: "Las Vegas Relocation" },
   { href: "/home-valuation", label: "Request a Las Vegas CMA" },
 ] as const;
@@ -17,7 +18,7 @@ type HubConversionLinksProps = {
 export function HubConversionLinks({ className }: HubConversionLinksProps) {
   return (
     <nav
-      aria-label="First-time buyer, relocation, and CMA pages"
+      aria-label="First-time buyer, California relocator, relocation, and CMA pages"
       className={cn(
         "mt-8 flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row",
         className,

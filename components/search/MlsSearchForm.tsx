@@ -36,11 +36,12 @@ export function MlsSearchForm({
         id={resolvedInputId}
         name="q"
         type="search"
+        enterKeyHint="search"
         autoComplete="off"
         defaultValue={defaultQuery}
         placeholder="ZIP, street, or community…"
         className={cn(
-          "min-h-11 flex-1 rounded-md border border-slate-300 bg-white px-4 text-base text-slate-900 placeholder:text-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600",
+          "min-h-11 flex-1 rounded-md border border-slate-300 bg-white px-4 text-base text-slate-900 placeholder:text-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2",
           inputClassName,
         )}
       />

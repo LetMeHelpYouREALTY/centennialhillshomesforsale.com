@@ -266,6 +266,7 @@ export function LeadCaptureForm({
             autoComplete="given-name"
             autoCapitalize="words"
             autoCorrect="off"
+            enterKeyHint="next"
             value={formData.firstName}
             onChange={handleChange}
             required
@@ -290,6 +291,7 @@ export function LeadCaptureForm({
             autoComplete="family-name"
             autoCapitalize="words"
             autoCorrect="off"
+            enterKeyHint="next"
             value={formData.lastName}
             onChange={handleChange}
             required
@@ -312,6 +314,7 @@ export function LeadCaptureForm({
           type="email"
           autoComplete="email"
           spellCheck={false}
+          enterKeyHint="next"
           value={formData.email}
           onChange={handleChange}
           required
@@ -335,6 +338,7 @@ export function LeadCaptureForm({
           type="tel"
           autoComplete="tel"
           inputMode="tel"
+          enterKeyHint="next"
           value={formData.phone}
           onChange={handleChange}
           disabled={loading}
