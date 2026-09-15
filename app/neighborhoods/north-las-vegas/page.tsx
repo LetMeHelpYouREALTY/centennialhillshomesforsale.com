@@ -44,7 +44,7 @@ export default function NorthLasVegasPage() {
       stats={[
         { value: median, label: "City median listing" },
         { value: "I-15 / 215", label: "Freeway access" },
-        { value: "Aliante", label: "Established MPC" },
+        { value: "Aliante", label: "2000s master plan" },
         { value: "New + resale", label: "Inventory mix" },
       ]}
       sections={[

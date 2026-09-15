@@ -75,7 +75,7 @@ const listingFaqs = [
   {
     question: "What's the best time of year to buy a home in Las Vegas?",
     answer:
-      "Las Vegas has a year-round real estate market, but inventory typically peaks in spring (March-May) while competition is lowest in winter (November-January). The best time depends on your priorities: more selection in spring, potentially better deals in winter.",
+      "Las Vegas trades year-round. I will not invent a spring-peak or winter-discount calendar. Ask for a live MLS pull for the week you want to tour.",
   },
   {
     question: "How much do I need for a down payment in Las Vegas?",

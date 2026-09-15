@@ -421,13 +421,10 @@ export default function SellersPage() {
             </SectionHeading>
             <div className="bg-slate-50 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Pricing your home to the comps from day one is the single most
-                important listing decision. Overpriced homes sit on the market,
-                and every extra day costs carrying cost and buyer leverage.
-                That's why I use comprehensive market analysis and my experience
-                serving Las Vegas since 2008 to price homes right the first
-                time. The result? Listings I price this way typically close near
-                asking—confirm the live file, not a slogan."
+                "Pricing your home to the comps from day one is the listing
+                decision that matters. Overpriced homes sit, and every extra day
+                is carrying cost plus buyer leverage. I use a live CMA and files
+                since 2008. Confirm the live file, not a close-to-ask slogan."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
                 — Dr. Jan Duffy, BHHS Nevada Properties | Serving Las Vegas

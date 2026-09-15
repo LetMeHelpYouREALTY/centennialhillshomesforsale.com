@@ -70,7 +70,7 @@ const buyerFaqs = [
   {
     question: "Should I get pre-approved before looking at homes?",
     answer:
-      "Yes. Pre-approval shows sellers you can close and gives you a written budget. In competitive situations, pre-approved buyers have a significant advantage. The process typically takes 1-3 days with proper documentation.",
+      "Yes. Pre-approval shows sellers you can close and gives you a written budget. Timeline is UNKNOWN until the lender has your file — ask them for their current turnaround, not a 1–3 day slogan.",
   },
   {
     question: "Does BHHS help with new construction purchases?",
