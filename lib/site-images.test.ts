@@ -65,9 +65,20 @@ describe("site images catalog", () => {
     expect(commute.src).not.toBe("/images/neighborhoods/centennial-hills.png");
     expect(commute.alt).toContain("Sample drive times from Centennial Hills");
 
+    const siena = resolveSectionImage({
+      heading: "Siena occupancy and the HOA packet",
+      neighborhoodName: "Siena",
+      neighborhoodSlug: "siena",
+    });
+    expect(siena.src).toBe(PAGE_HERO_IMAGES.fiftyFivePlus.src);
+    expect(siena.alt).toContain("Siena occupancy");
+
     const root = path.join(__dirname, "..", "public");
     expect(existsSync(path.join(root, golf.src.replace(/^\//, "")))).toBe(true);
     expect(existsSync(path.join(root, commute.src.replace(/^\//, "")))).toBe(
+      true,
+    );
+    expect(existsSync(path.join(root, siena.src.replace(/^\//, "")))).toBe(
       true,
     );
   });

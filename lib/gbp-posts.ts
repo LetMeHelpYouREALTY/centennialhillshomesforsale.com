@@ -28,9 +28,9 @@ export const gbpPostTemplates: GBPPost[] = [
 📍 Centennial Hills listing median: $514,500
 🧭 North Las Vegas listing median: $439,990
 
-Days on market and inventory move weekly — ask for a live pull before you bid or list.
+Days on market and inventory move weekly — ask for a live pull before you bid or list. 89138 Summerlin West and Siena 55+ do not share those city medians — request a live CMA.
 
-Call Dr. Jan Duffy at (702) 222-1964 for comps on a specific street.`,
+Call Dr. Jan Duffy at (702) 222-1964 or email homes@heyberkshire.com for comps on a specific street.`,
     cta: {
       text: "Request a CMA",
       url: "https://heyberkshire.com/home-valuation",
@@ -55,9 +55,9 @@ Call Dr. Jan Duffy at (702) 222-1964 for comps on a specific street.`,
 ✅ Named campuses and commute times instead of school slogans
 ✅ I-15 drive or a LAS flight — time your own itinerary
 
-I will not invent a buyer-origin percentage or a California-sale-buys-luxury promise. Call with your California sale range and I will pull live Summerlin, Henderson, and Centennial Hills comps.
+I will not invent a buyer-origin percentage or a California-sale-buys-luxury promise. Call or email with your California sale range and I will pull live Summerlin (including 89138), Henderson, Centennial Hills, and 55+ campuses such as Siena.
 
-Call (702) 222-1964 for a California equity comparison.`,
+Call (702) 222-1964 or email homes@heyberkshire.com for a California equity comparison.`,
     cta: {
       text: "California Relocation Guide",
       url: "https://heyberkshire.com/buyers/california-relocator",
@@ -75,16 +75,17 @@ Call (702) 222-1964 for a California equity comparison.`,
     id: "55-plus-spotlight",
     type: "update",
     title: "55+ Active Adult Communities in Las Vegas - Your Options",
-    content: `Looking for 55+ living in the Las Vegas Valley? Here are the top communities:
+    content: `Looking for 55+ living in the Las Vegas Valley? Campuses I tour by HOPA packet:
 
 🏌️ Sun City Summerlin - Del Webb 55+ in ZIP 89134 (7,700+ homes, 3 golf courses)
+🏡 Siena - Guard-gated Summerlin South 89135 (golf club vs HOA on the docs)
 🌄 Sun City Anthem - Henderson location with mountain views
 🌊 Del Webb Lake Las Vegas - Resort-style lakefront living
 ⛳ Solera at Anthem - Smaller Henderson 55+ campus with a guard-gated entry
 
-Each community has different rec campuses, HOA rules, and listing medians. Dr. Jan Duffy works 55+ HOPA files and can tour by ZIP and floor plan.
+Each community has different rec campuses, HOA rules, and listing medians. Dr. Jan Duffy works 55+ HOPA files and can tour by ZIP and floor plan. I will not invent a Siena campus median — ask for a live CMA.
 
-Schedule a community tour: (702) 222-1964`,
+Schedule a community tour: (702) 222-1964 or email homes@heyberkshire.com`,
     cta: {
       text: "Explore 55+ Communities",
       url: "https://heyberkshire.com/55-plus-communities",
@@ -144,7 +145,7 @@ Call (702) 222-1964 or email homes@heyberkshire.com with the ZIP.`,
 
 I will not publish a fake YoY appreciation, average days-on-market, or list-to-sale ratio as if it were your house. Ask for a live CMA.
 
-Get a listing consult from Dr. Jan Duffy: (702) 222-1964`,
+Get a listing consult from Dr. Jan Duffy: (702) 222-1964 or email homes@heyberkshire.com`,
     cta: {
       text: "Request a CMA",
       url: "https://heyberkshire.com/home-valuation",
@@ -176,7 +177,7 @@ What luxury buyers actually compare:
 ✅ Dining, entertainment, and golf access you can drive
 ✅ Live comps — do not assume a 40–60% discount vs CA/NY
 
-Confidential luxury home search: (702) 222-1964`,
+Confidential luxury home search: (702) 222-1964 or email homes@heyberkshire.com. 89138 Summerlin West and Siena 55+ are different files from The Ridges.`,
     cta: {
       text: "Luxury Home Search",
       url: "https://heyberkshire.com/buyers/luxury-homes-las-vegas",
@@ -225,7 +226,7 @@ ${clientName}, thank you for sharing your experience. I take all feedback seriou
 
 ${resolution}
 
-Real estate transactions can be complex, and I'm committed to learning from every experience. If you'd like to discuss this further, please call me directly at (702) 222-1964.
+Real estate transactions can be complex, and I'm committed to learning from every experience. If you'd like to discuss this further, please call me directly at (702) 222-1964 or email homes@heyberkshire.com.
 
 - Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
 `,

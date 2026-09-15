@@ -226,6 +226,10 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
     src: "/images/neighborhoods/del-webb-lake-las-vegas.png",
   },
   {
+    test: /\bsiena\b/i,
+    src: PAGE_HERO_IMAGES.fiftyFivePlus.src,
+  },
+  {
     test: /\b(55\+|sun city|del webb|hopa|active adult|age-restrict)/i,
     src: PAGE_HERO_IMAGES.fiftyFivePlus.src,
   },

@@ -84,6 +84,21 @@ describe("GBP schema NAP and Maps alignment", () => {
     expect(blob).toMatch(/live CMA/i);
   });
 
+  it("puts email, 89138, and Siena on the GBP about copy", () => {
+    expect(gbpDescription.whoWeAre).toContain("homes@heyberkshire.com");
+    expect(gbpDescription.whoWeAre).toContain("89138");
+    expect(gbpDescription.whoWeAre).toContain("Siena");
+    expect(businessInfo.serviceAreas.join("\n")).toContain("Summerlin West");
+  });
+
+  it("puts the client email on every phone CTA FAQ", () => {
+    for (const faq of gbpFAQs) {
+      if (faq.answer.includes("(702) 222-1964")) {
+        expect(faq.answer).toContain("homes@heyberkshire.com");
+      }
+    }
+  });
+
   it("does not invent identity attributes or a Spanish-language claim", () => {
     expect(businessInfo.attributes.highlights).toEqual([]);
     expect(businessInfo.languages).toEqual(["English"]);

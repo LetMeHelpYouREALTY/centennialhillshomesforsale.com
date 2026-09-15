@@ -62,6 +62,7 @@ export const businessInfo = {
     // Primary (immediate city)
     "Las Vegas, NV",
     "Summerlin, NV",
+    "Summerlin West, NV",
     // Secondary (close ZIPs)
     "Henderson, NV",
     "North Las Vegas, NV",
@@ -196,7 +197,7 @@ export const businessInfo = {
 // 750-word GBP Description (3 sections)
 export const gbpDescription = {
   // Section 1: Who you are/mission (~250 words)
-  whoWeAre: `Dr. Jan Duffy is a REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, serving Las Vegas, Henderson, and Summerlin since 2008. License S.0197614.LLC. The office is at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Call (702) 222-1964.
+  whoWeAre: `Dr. Jan Duffy is a REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, serving Las Vegas, Henderson, and Summerlin since 2008 — including 89138 Summerlin West and 55+ campuses such as Siena. License S.0197614.LLC. The office is at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Call (702) 222-1964 or email homes@heyberkshire.com.
 
 I work first-time buyers, luxury tours in The Ridges and MacDonald Highlands, 55+ HOPA communities, and California-to-Nevada relocations against live comps — not a volume slogan or a “family” pitch.`,
 
@@ -225,7 +226,7 @@ export const gbpFAQs = [
   {
     question: "Does Dr. Jan help buyers relocating from California?",
     answer:
-      "Yes. California relocation is a specialty. Nevada charges no state income tax on wages. Home-price differences are not a fixed 40–60% on every street — Dr. Jan pairs a California sale against live Las Vegas comps before anyone bids. Call (702) 222-1964.",
+      "Yes. California relocation is a specialty. Nevada charges no state income tax on wages. Home-price differences are not a fixed 40–60% on every street — Dr. Jan pairs a California sale against live Las Vegas comps before anyone bids. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },
   {
     question: "What 55+ communities does Dr. Jan specialize in?",
@@ -236,22 +237,22 @@ export const gbpFAQs = [
     question:
       "Does Berkshire Hathaway HomeServices help with new construction?",
     answer:
-      "Yes. Dr. Jan represents buyers on new construction from builders such as Toll Brothers, Lennar, and Century Communities. After the 2024 NAR practice changes, compensation is written into the buyer agreement and negotiated — it is not an automatic MLS offer. Call (702) 222-1964.",
+      "Yes. Dr. Jan represents buyers on new construction from builders such as Toll Brothers, Lennar, and Century Communities. After the 2024 NAR practice changes, compensation is written into the buyer agreement and negotiated — it is not an automatic MLS offer. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },
   {
     question:
       "How does Dr. Jan help with probate or divorce real estate sales?",
     answer:
-      "Dr. Jan handles sensitive transactions with discretion and professionalism. For probate sales, she coordinates with estate attorneys and ensures court compliance. For divorce sales, she provides neutral representation and works with both parties' attorneys. Call (702) 222-1964.",
+      "Dr. Jan handles sensitive transactions with discretion and professionalism. For probate sales, she coordinates with estate attorneys and ensures court compliance. For divorce sales, she provides neutral representation and works with both parties' attorneys. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },
   {
     question: "What is the average home price in Las Vegas in 2026?",
-    answer: `As of ${MARKET_SNAPSHOT_AS_OF}, the Las Vegas city median listing price is ${formatUsd(LISTING_MEDIANS_USD.lasVegas)} (${MARKET_SNAPSHOT_SOURCE}). Henderson listing median is ${formatUsd(LISTING_MEDIANS_USD.hendersonListing)}; sold median ${formatUsd(LISTING_MEDIANS_USD.hendersonSold)}. Centennial Hills listing median is ${formatUsd(LISTING_MEDIANS_USD.centennialHills)}. Those are not a CMA for a specific house. Call (702) 222-1964 for live comps.`,
+    answer: `As of ${MARKET_SNAPSHOT_AS_OF}, the Las Vegas city median listing price is ${formatUsd(LISTING_MEDIANS_USD.lasVegas)} (${MARKET_SNAPSHOT_SOURCE}). Henderson listing median is ${formatUsd(LISTING_MEDIANS_USD.hendersonListing)}; sold median ${formatUsd(LISTING_MEDIANS_USD.hendersonSold)}. Centennial Hills listing median is ${formatUsd(LISTING_MEDIANS_USD.centennialHills)}. Those are not a CMA for a specific house. Call (702) 222-1964 or email homes@heyberkshire.com for live comps.`,
   },
   {
     question: "Does Dr. Jan work with first-time home buyers?",
     answer:
-      "Yes. Dr. Jan guides first-time buyers through pre-approval, loan programs (FHA 3.5% down, VA 0% down, conventional options), Nevada down payment assistance, and new construction registration. Call (702) 222-1964.",
+      "Yes. Dr. Jan guides first-time buyers through pre-approval, loan programs (FHA 3.5% down, VA 0% down, conventional options), Nevada down payment assistance, and new construction registration. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },
   {
     question: "Why choose Berkshire Hathaway HomeServices over other agencies?",
@@ -270,7 +271,7 @@ export const gbpFAQs = [
   {
     question: "Does Dr. Jan help with investment properties in Las Vegas?",
     answer:
-      "Yes. Dr. Jan provides investment property consulting including rental analysis, cap-rate math, short-term rental rules, and multi-family purchases. Citywide rents are UNKNOWN without a rent roll. Call (702) 222-1964.",
+      "Yes. Dr. Jan provides investment property consulting including rental analysis, cap-rate math, short-term rental rules, and multi-family purchases. Citywide rents are UNKNOWN without a rent roll. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },
 ];
 

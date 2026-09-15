@@ -45,12 +45,33 @@ describe("GBP post templates", () => {
     );
   });
 
+  it("puts the client email on every GBP post", () => {
+    for (const post of gbpPostTemplates) {
+      expect(post.content).toContain("homes@heyberkshire.com");
+    }
+  });
+
+  it("names Siena on the 55+ spotlight post", () => {
+    const fiftyFive = gbpPostTemplates.find(
+      (post) => post.id === "55-plus-spotlight",
+    );
+    expect(fiftyFive?.content).toContain("Siena");
+    expect(fiftyFive?.content).toContain("89135");
+  });
+
   it("does not use perfect-home slogans in review replies", () => {
     const replies = Object.values(reviewResponseTemplates)
       .map((fn) => fn("Alex", "Summerlin", "details"))
       .join("\n");
     expect(replies).not.toMatch(/perfect home/i);
     expect(replies).not.toMatch(/next chapter/i);
-    expect(replies).toContain("homes@heyberkshire.com");
+  });
+
+  it("puts the client email on every review reply template", () => {
+    for (const template of Object.values(reviewResponseTemplates)) {
+      expect(template("Alex", "Summerlin", "details")).toContain(
+        "homes@heyberkshire.com",
+      );
+    }
   });
 });

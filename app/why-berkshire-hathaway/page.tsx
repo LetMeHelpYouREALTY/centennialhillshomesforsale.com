@@ -43,7 +43,7 @@ export default function WhyBerkshirePage() {
         },
         {
           heading: "What I actually do",
-          body: "Live MLS, gate access, builder registration, 55+ CC&Rs (Siena, Trilogy, Sun City), 89138 Summerlin West, and written buyer or listing agreements. Phone (702) 222-1964 is the client line. (702) 500-1942 is the professional/FUB line, not a consumer CTA.",
+          body: "Live MLS, gate access, builder registration, 55+ CC&Rs (Siena, Trilogy, Sun City), 89138 Summerlin West, and written buyer or listing agreements. Phone (702) 222-1964 is the client line. Email homes@heyberkshire.com. (702) 500-1942 is the professional/FUB line, not a consumer CTA.",
         },
         {
           heading: "Fair Housing",

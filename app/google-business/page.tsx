@@ -20,6 +20,7 @@ import {
   CTA_TEL,
   OFFICE_HOURS,
   OFFICE_NAP,
+  TEXT_LINK_CLASS,
   TEXT_LINK_ON_DARK_CLASS,
 } from "@/lib/contact";
 import { VisitOffice } from "@/components/shared/VisitOffice";
@@ -30,6 +31,7 @@ import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import SchemaScript from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
+import { gbpPostTemplates } from "@/lib/gbp-posts";
 import {
   businessInfo,
   gbpDescription,
@@ -64,6 +66,19 @@ export const metadata: Metadata = withShareImage(
   },
   PAGE_HERO_IMAGES.googleBusiness,
 );
+
+const latestGbpPosts = [...gbpPostTemplates]
+  .sort((a, b) => b.publishDate.localeCompare(a.publishDate))
+  .slice(0, 3);
+
+function gbpPostHref(url: string): string {
+  try {
+    const parsed = new URL(url);
+    return parsed.pathname;
+  } catch {
+    return url;
+  }
+}
 
 export default function GoogleBusinessPage() {
   const localBusinessSchema = generateLocalBusinessSchema();
@@ -364,6 +379,30 @@ export default function GoogleBusinessPage() {
                         Summerlin, NV
                       </Link>
                     </li>
+                    <li>
+                      <Link
+                        href="/neighborhoods/89138"
+                        className="inline-flex min-h-11 items-center gap-2 text-slate-700 no-underline hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+                      >
+                        <MapPin
+                          className="h-4 w-4 text-blue-600"
+                          aria-hidden="true"
+                        />{" "}
+                        89138 Summerlin West
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/55-plus-communities/siena"
+                        className="inline-flex min-h-11 items-center gap-2 text-slate-700 no-underline hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+                      >
+                        <MapPin
+                          className="h-4 w-4 text-blue-600"
+                          aria-hidden="true"
+                        />{" "}
+                        Siena 55+
+                      </Link>
+                    </li>
                   </ul>
                 </div>
                 <div>
@@ -490,6 +529,50 @@ export default function GoogleBusinessPage() {
                   ))}
                 </div>
               </div>
+            </div>
+          </section>
+
+          <section className="max-w-4xl mx-auto mb-16">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-4 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.googleBusiness.src}
+              avoidSrc={PAGE_HERO_IMAGES.contact.src}
+            >
+              Google Business Profile posts
+            </SectionHeading>
+            <p className="mb-8 text-center text-pretty text-slate-600">
+              Draft copy for the live Google Business Profile. Dates are the
+              template publish dates — not a Google ranking claim. Call{" "}
+              {businessInfo.phone.display} or email {AGENT_EMAIL} for the live
+              CMA behind any number.
+            </p>
+            <div className="space-y-6">
+              {latestGbpPosts.map((post) => (
+                <article
+                  key={post.id}
+                  className="rounded-lg border border-slate-200 bg-white p-6"
+                >
+                  <p className="mb-2 text-sm font-semibold text-blue-800">
+                    {post.publishDate}
+                  </p>
+                  <h3 className="mb-3 text-xl font-bold text-slate-900">
+                    {post.title}
+                  </h3>
+                  <p className="whitespace-pre-line text-pretty text-slate-700">
+                    {post.content}
+                  </p>
+                  {post.cta ? (
+                    <p className="mt-4">
+                      <Link
+                        href={gbpPostHref(post.cta.url)}
+                        className={TEXT_LINK_CLASS}
+                      >
+                        {post.cta.text}
+                      </Link>
+                    </p>
+                  ) : null}
+                </article>
+              ))}
             </div>
           </section>
 
