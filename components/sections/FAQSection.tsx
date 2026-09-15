@@ -10,6 +10,8 @@ import {
   TEXT_LINK_CLASS,
 } from "@/lib/contact";
 import { defaultFaqs, type SiteFaq } from "@/lib/default-faqs";
+import { SectionHeading } from "@/components/shared/SectionPhoto";
+import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 
 export type FAQ = SiteFaq;
 export { defaultFaqs };
@@ -59,9 +61,13 @@ export default function FAQSection({
     <section className={`bg-white py-16 md:py-24 ${className}`}>
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl">
+          <SectionHeading
+            className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl"
+            fallbackSrc={PAGE_HERO_IMAGES.contact.src}
+            avoidSrc={PAGE_HERO_IMAGES.homepage.src}
+          >
             {title}
-          </h2>
+          </SectionHeading>
           <p className="mx-auto max-w-3xl text-pretty text-xl text-slate-600">
             {subtitle}
           </p>

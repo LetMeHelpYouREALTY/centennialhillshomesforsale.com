@@ -6,10 +6,14 @@ import {
   CTA_TEL,
   TEXT_LINK_CLASS,
 } from "@/lib/contact";
+import { SectionHeading } from "@/components/shared/SectionPhoto";
+import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import {
   SEARCH_CENTRAL_FALLBACK_IMAGE,
   type SearchCentralItem,
 } from "@/lib/search-central-feed";
+
+const SEARCH_CENTRAL_HEADING = "Google Search Central, applied to this site";
 
 type SearchCentralFeedProps = {
   items: SearchCentralItem[];
@@ -52,9 +56,13 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
   if (items.length === 0) {
     return (
       <section className="mb-16 max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-slate-900 mb-4">
-          Google Search Central, applied to this site
-        </h2>
+        <SectionHeading
+          className="mb-4 text-3xl font-bold text-slate-900"
+          fallbackSrc={PAGE_HERO_IMAGES.googleBusiness.src}
+          avoidSrc={PAGE_HERO_IMAGES.market.src}
+        >
+          {SEARCH_CENTRAL_HEADING}
+        </SectionHeading>
         <p className="text-pretty text-slate-700">
           The Search Central feed is unavailable right now. Call{" "}
           <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
@@ -72,9 +80,13 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
 
   return (
     <section className="mb-16 max-w-5xl mx-auto">
-      <h2 className="text-3xl font-bold text-slate-900 mb-4">
-        Google Search Central, applied to this site
-      </h2>
+      <SectionHeading
+        className="mb-4 text-3xl font-bold text-slate-900"
+        fallbackSrc={PAGE_HERO_IMAGES.googleBusiness.src}
+        avoidSrc={PAGE_HERO_IMAGES.market.src}
+      >
+        {SEARCH_CENTRAL_HEADING}
+      </SectionHeading>
       <p className="text-pretty text-slate-700 mb-4">
         The August 28, 2026{" "}
         <a

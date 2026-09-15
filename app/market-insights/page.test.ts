@@ -19,5 +19,8 @@ describe("market insights report schema", () => {
     expect(src).not.toContain("She will pull MLS");
     expect(src).not.toContain("Dr. Jan Duffy will run a CMA");
     expect(src).not.toContain("text-blue-200");
+    expect(src).not.toContain("text-blue-100");
+    expect(src).toContain("How these villages actually differ");
+    expect(src).toContain("SectionHeading");
   });
 });

@@ -248,13 +248,20 @@ export default function GoogleBusinessPage() {
           </div>
 
           {/* Business Hours */}
-          <section className="max-w-5xl mx-auto mb-16">
-            <div className="bg-slate-50 rounded-xl p-6">
-              <div className="flex items-center gap-2 mb-4">
+          <section className="mx-auto mb-16 max-w-5xl">
+            <SectionHeading
+              className="mb-4 text-3xl font-bold text-slate-900"
+              fallbackSrc={PAGE_HERO_IMAGES.contact.src}
+              avoidSrc={PAGE_HERO_IMAGES.googleBusiness.src}
+            >
+              Business Hours
+            </SectionHeading>
+            <div className="rounded-xl bg-slate-50 p-6">
+              <div className="mb-4 flex items-center gap-2 text-slate-700">
                 <Clock className="h-5 w-5 text-blue-600" aria-hidden="true" />
-                <h2 className="text-xl font-bold text-slate-900">
-                  Business Hours
-                </h2>
+                <p className="font-medium">
+                  Posted hours at the Lake Mead office
+                </p>
               </div>
               <div className="grid gap-2 text-sm md:grid-cols-3">
                 <div>

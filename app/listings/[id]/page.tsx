@@ -18,6 +18,8 @@ import {
 } from "@/lib/contact";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
+import SchemaScript from "@/components/SchemaScript";
+import { generateWebPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = withShareImage(
   {
@@ -41,6 +43,15 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
 
   return (
     <div className="pb-16">
+      <SchemaScript
+        id="webpage-schema"
+        schema={generateWebPageSchema({
+          name: "Live MLS listings — not a sample property page",
+          description:
+            "This site does not host fake listing detail pages. Search live MLS with Dr. Jan Duffy or call (702) 222-1964 or email homes@heyberkshire.com.",
+          url: `/listings/${id}`,
+        })}
+      />
       <div className="container mx-auto max-w-3xl px-4">
         <PageHeroImage
           src={PAGE_HERO_IMAGES.listings.src}

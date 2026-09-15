@@ -13,6 +13,7 @@ describe("FAQ accordion keyboard", () => {
     expect(src).toContain("ArrowUp");
     expect(src).toContain('"Home"');
     expect(src).toContain('"End"');
+    expect(src).toContain("SectionHeading");
     expect(src).toContain("text-slate-500");
     expect(src).not.toContain("text-slate-400");
   });

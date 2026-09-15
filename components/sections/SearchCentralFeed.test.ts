@@ -13,6 +13,8 @@ describe("Search Central feed chrome", () => {
     expect(src).toContain("developers.google.com");
     expect(src).not.toContain("<img");
     expect(src).toContain("text-slate-600");
+    expect(src).toContain("SectionHeading");
+    expect(src).toContain("SEARCH_CENTRAL_HEADING");
     expect(src).not.toContain("text-slate-500");
   });
 });

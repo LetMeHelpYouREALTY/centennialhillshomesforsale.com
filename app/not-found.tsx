@@ -9,6 +9,7 @@ import {
   TEXT_LINK_CLASS,
 } from "@/lib/contact";
 import { VisitOffice } from "@/components/shared/VisitOffice";
+import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 
 export default function NotFound() {
@@ -105,6 +106,7 @@ export default function NotFound() {
           </li>
         </ul>
       </div>
+      <GoogleReviewsCta className="bg-white" />
       <VisitOffice compact />
     </div>
   );

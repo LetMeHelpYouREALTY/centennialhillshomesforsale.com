@@ -13,5 +13,7 @@ describe("404 recovery screen", () => {
     expect(src).toContain("/55-plus-communities/siena");
     expect(src).toContain("AGENT_EMAIL");
     expect(src).toContain("flex-wrap");
+    expect(src).toContain("GoogleReviewsCta");
+    expect(src).toContain("VisitOffice");
   });
 });

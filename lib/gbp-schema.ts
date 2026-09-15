@@ -202,14 +202,14 @@ export const gbpDescription = {
 I work first-time buyers, luxury tours in The Ridges and MacDonald Highlands, 55+ HOPA communities, and California-to-Nevada relocations against live comps — not a volume slogan or a “family” pitch.`,
 
   // Section 2: What/why - Value proposition (~250 words)
-  whatWeDo: `Clients receive a CMA on the address, written compensation, and a written showing plan. As a Berkshire Hathaway HomeServices agent, Dr. Jan offers a global referral network, marketing for sellers, and live MLS search for buyers.
+  whatWeDo: `Clients receive a CMA on the address, written compensation, and a written showing plan. As a Berkshire Hathaway HomeServices agent, I offer a global referral network, marketing for sellers, and live MLS search for buyers.
 
 Files include: buyer and seller representation, luxury home sales, 55+ HOPA communities (Sun City Summerlin, Siena, Trilogy at Summerlin, Sun City Anthem, Del Webb Lake Las Vegas), California relocation, probate and divorce real estate, investment property consulting, new construction representation, and first-time buyer programs including FHA, VA, and down payment assistance guidance.
 
-Dr. Jan's approach is simple: put the client's written goals first, pull live comps, and keep working until the file closes.`,
+My approach is simple: put the client's written goals first, pull live comps, and keep working until the file closes.`,
 
   // Section 3: Where - Areas served (~250 words)
-  whereWeServe: `Dr. Jan serves the Las Vegas Valley: Las Vegas, Summerlin, Henderson, North Las Vegas, and Clark County. Neighborhood files include Summerlin master-planned villages (including 89138 Summerlin West, 89144, and Tournament Hills), Henderson's Green Valley and Inspirada, gated custom in The Ridges and Southern Highlands, Centennial Hills and Skye Canyon, and Mountains Edge and North Las Vegas.
+  whereWeServe: `I serve the Las Vegas Valley: Las Vegas, Summerlin, Henderson, North Las Vegas, and Clark County. Neighborhood files include Summerlin master-planned villages (including 89138 Summerlin West, 89144, and Tournament Hills), Henderson's Green Valley and Inspirada, gated custom in The Ridges and Southern Highlands, Centennial Hills and Skye Canyon, and Mountains Edge and North Las Vegas.
 
 55+ HOPA files cover Sun City Summerlin, Siena, Trilogy at Summerlin, Sun City Anthem in Henderson, Del Webb Lake Las Vegas, and Solera at Anthem. Investment files cover single-family rentals and multi-family purchases across the Las Vegas metro. I do not manage rentals.
 
@@ -221,29 +221,29 @@ export const gbpFAQs = [
   {
     question: "What areas does Dr. Jan Duffy serve in Las Vegas?",
     answer:
-      "Dr. Jan serves all of Las Vegas, Summerlin, Henderson, North Las Vegas, and Clark County. Neighborhood files include Summerlin (89134 / 89135 / 89138 / 89144), Tournament Hills, Green Valley, The Ridges, Southern Highlands, Centennial Hills, Skye Canyon, Inspirada, and Mountains Edge.",
+      "I serve all of Las Vegas, Summerlin, Henderson, North Las Vegas, and Clark County. Neighborhood files include Summerlin (89134 / 89135 / 89138 / 89144), Tournament Hills, Green Valley, The Ridges, Southern Highlands, Centennial Hills, Skye Canyon, Inspirada, and Mountains Edge.",
   },
   {
     question: "Does Dr. Jan help buyers relocating from California?",
     answer:
-      "Yes. California relocation is a specialty. Nevada charges no state income tax on wages. Home-price differences are not a fixed 40–60% on every street — Dr. Jan pairs a California sale against live Las Vegas comps before anyone bids. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      "Yes. California relocation is a specialty. Nevada charges no state income tax on wages. Home-price differences are not a fixed 40–60% on every street — I pair a California sale against live Las Vegas comps before anyone bids. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },
   {
     question: "What 55+ communities does Dr. Jan specialize in?",
     answer:
-      "Dr. Jan specializes in Sun City Summerlin, Siena, Trilogy at Summerlin, Sun City Anthem in Henderson, Del Webb Lake Las Vegas, and Solera at Anthem. Confirm HOA, occupancy, and listing median on the resale packet — campus size is not a price.",
+      "I specialize in Sun City Summerlin, Siena, Trilogy at Summerlin, Sun City Anthem in Henderson, Del Webb Lake Las Vegas, and Solera at Anthem. Confirm HOA, occupancy, and listing median on the resale packet — campus size is not a price.",
   },
   {
     question:
       "Does Berkshire Hathaway HomeServices help with new construction?",
     answer:
-      "Yes. Dr. Jan represents buyers on new construction from builders such as Toll Brothers, Lennar, and Century Communities. After the 2024 NAR practice changes, compensation is written into the buyer agreement and negotiated — it is not an automatic MLS offer. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      "Yes. I represent buyers on new construction from builders such as Toll Brothers, Lennar, and Century Communities. After the 2024 NAR practice changes, compensation is written into the buyer agreement and negotiated — it is not an automatic MLS offer. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },
   {
     question:
       "How does Dr. Jan help with probate or divorce real estate sales?",
     answer:
-      "Dr. Jan handles sensitive transactions with discretion and professionalism. For probate sales, she coordinates with estate attorneys and ensures court compliance. For divorce sales, she provides neutral representation and works with both parties' attorneys. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      "I handle sensitive transactions with discretion and professionalism. For probate sales, I coordinate with estate attorneys and ensure court compliance. For divorce sales, I provide neutral representation and work with both parties' attorneys. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },
   {
     question: "What is the average home price in Las Vegas in 2026?",
@@ -252,7 +252,7 @@ export const gbpFAQs = [
   {
     question: "Does Dr. Jan work with first-time home buyers?",
     answer:
-      "Yes. Dr. Jan guides first-time buyers through pre-approval, loan programs (FHA 3.5% down, VA 0% down, conventional options), Nevada down payment assistance, and new construction registration. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      "Yes. I guide first-time buyers through pre-approval, loan programs (FHA 3.5% down, VA 0% down, conventional options), Nevada down payment assistance, and new construction registration. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },
   {
     question: "Why choose Berkshire Hathaway HomeServices over other agencies?",

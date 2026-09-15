@@ -21,6 +21,9 @@ describe("google-business hub", () => {
     expect(src).not.toContain("text-blue-200");
     expect(src).toContain("GoogleReviewsCta");
     expect(src).toContain("If I helped you buy or sell");
+    expect(src).toContain("SectionHeading");
+    expect(src).toContain("Business Hours");
+    expect(src).not.toContain("If Dr. Jan helped you");
     expect(src).not.toContain("If Dr. Jan helped you");
     expect(src).not.toContain("Call or email Dr. Jan Duffy with the address");
   });

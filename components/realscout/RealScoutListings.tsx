@@ -11,6 +11,8 @@ import {
   TEXT_LINK_CLASS,
 } from "@/lib/contact";
 import { MlsDisclaimer } from "@/components/shared/MlsDisclaimer";
+import { SectionPhoto } from "@/components/shared/SectionPhoto";
+import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 
 const WIDGET_HTML = `<realscout-office-listings 
               agent-encoded-id="QWdlbnQtMjI1MDUw" 
@@ -55,6 +57,12 @@ export default function RealScoutListings() {
             >
               Current Las Vegas Listings
             </h2>
+            <SectionPhoto
+              heading="Current Las Vegas Listings"
+              fallbackSrc={PAGE_HERO_IMAGES.buyers.src}
+              avoidSrc={PAGE_HERO_IMAGES.listings.src}
+              className="mb-4"
+            />
             <p className="text-pretty text-lg text-slate-600">
               Live MLS via RealScout for Las Vegas, Henderson, 89138 Summerlin
               West, and 55+ campuses such as Siena.{" "}

@@ -5,10 +5,7 @@ import {
   Phone,
   Mail,
   TrendingUp,
-  Building2,
-  Cpu,
   Globe,
-  BarChart3,
   Users,
   DollarSign,
   CheckCircle,
@@ -36,7 +33,7 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
-import { SectionHeading, SectionPhoto } from "@/components/shared/SectionPhoto";
+import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
@@ -249,20 +246,13 @@ export default async function MarketInsightsPage() {
 
           {/* Tech Transformation */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <div className="flex items-center mb-6">
-              <Cpu
-                className="h-8 w-8 text-purple-600 mr-3"
-                aria-hidden="true"
-              />
-              <h2 className="text-3xl font-bold text-slate-900">
-                Henderson data-center corridor
-              </h2>
-            </div>
-            <SectionPhoto
-              heading="Henderson data-center corridor"
-              fallbackSrc={PAGE_HERO_IMAGES.market.src}
+            <SectionHeading
+              className="mb-4 text-3xl font-bold text-slate-900"
+              fallbackSrc={PAGE_HERO_IMAGES.relocation.src}
               avoidSrc={PAGE_HERO_IMAGES.market.src}
-            />
+            >
+              Henderson data-center corridor
+            </SectionHeading>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="prose prose-lg max-w-none text-slate-700">
                 <p>
@@ -337,7 +327,7 @@ export default async function MarketInsightsPage() {
             </div>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <p className="text-blue-100 mb-6">
+                <p className="text-blue-50 mb-6">
                   California is a frequent inbound origin for Las Vegas buyers.
                   I pair your California sale against live comps — I will not
                   invent a buyer-origin share or a typical-equity figure.
@@ -367,7 +357,7 @@ export default async function MarketInsightsPage() {
                 <h3 className="font-bold text-lg mb-4">
                   What California buyers compare on paper
                 </h3>
-                <ul className="space-y-2 text-blue-100">
+                <ul className="space-y-2 text-blue-50">
                   <li className="flex items-start">
                     <span className="text-amber-400 mr-2">1.</span>
                     <span>
@@ -420,20 +410,13 @@ export default async function MarketInsightsPage() {
 
           {/* Named employers and venues */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <div className="flex items-center mb-6">
-              <Building2
-                className="h-8 w-8 text-green-600 mr-3"
-                aria-hidden="true"
-              />
-              <h2 className="text-3xl font-bold text-slate-900">
-                Named employers and venues — not a growth slogan
-              </h2>
-            </div>
-            <SectionPhoto
-              heading="Named employers and venues — not a growth slogan"
+            <SectionHeading
+              className="mb-4 text-3xl font-bold text-slate-900"
               fallbackSrc={PAGE_HERO_IMAGES.investment.src}
               avoidSrc={PAGE_HERO_IMAGES.market.src}
-            />
+            >
+              Named employers and venues — not a growth slogan
+            </SectionHeading>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white border border-slate-200 rounded-xl p-6">
                 <h3 className="font-bold text-slate-900 mb-3">
@@ -480,21 +463,13 @@ export default async function MarketInsightsPage() {
 
           {/* Neighborhood Forecasts */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <div className="flex items-center mb-6">
-              <BarChart3
-                className="h-8 w-8 text-blue-600 mr-3"
-                aria-hidden="true"
-              />
-              <h2 className="text-3xl font-bold text-slate-900">
-                How these villages actually differ
-              </h2>
-            </div>
-            <PageHeroImage
-              src={PAGE_HERO_IMAGES.homepage.src}
-              alt="Centennial Hills and northwest Las Vegas homes used for this 2026 outlook"
-              size="section"
-              className="mb-8"
-            />
+            <SectionHeading
+              className="mb-4 text-3xl font-bold text-slate-900"
+              fallbackSrc={PAGE_HERO_IMAGES.homepage.src}
+              avoidSrc={PAGE_HERO_IMAGES.market.src}
+            >
+              How these villages actually differ
+            </SectionHeading>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white rounded-xl p-6 border border-slate-200">
                 <div className="flex items-center justify-between mb-4">
@@ -707,7 +682,7 @@ export default async function MarketInsightsPage() {
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">
               Ask for a CMA on this house
             </h2>
-            <p className="mb-8 text-xl text-blue-100">
+            <p className="mb-8 text-xl text-blue-50">
               Wondering what these trends mean for a specific house? Call or
               email with the address. I will run a CMA — not a citywide slogan.
             </p>

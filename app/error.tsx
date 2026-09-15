@@ -11,6 +11,8 @@ import {
   TEXT_LINK_CLASS,
 } from "@/lib/contact";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
+import { VisitOffice } from "@/components/shared/VisitOffice";
+import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 
 export default function Error({
   error,
@@ -118,6 +120,8 @@ export default function Error({
           </li>
         </ul>
       </div>
+      <GoogleReviewsCta className="bg-white" />
+      <VisitOffice compact />
     </div>
   );
 }

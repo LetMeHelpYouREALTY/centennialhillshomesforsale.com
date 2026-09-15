@@ -83,7 +83,7 @@ Call (702) 222-1964 or email homes@heyberkshire.com for a California equity comp
 🌊 Del Webb Lake Las Vegas - Resort-style lakefront living
 ⛳ Solera at Anthem - Smaller Henderson 55+ campus with a guard-gated entry
 
-Each community has different rec campuses, HOA rules, and listing medians. Dr. Jan Duffy works 55+ HOPA files and can tour by ZIP and floor plan. I will not invent a Siena campus median — ask for a live CMA.
+Each community has different rec campuses, HOA rules, and listing medians. I work 55+ HOPA files and can tour by ZIP and floor plan. I will not invent a Siena campus median — ask for a live CMA.
 
 Schedule a community tour: (702) 222-1964 or email homes@heyberkshire.com`,
     cta: {
@@ -110,7 +110,7 @@ Schedule a community tour: (702) 222-1964 or email homes@heyberkshire.com`,
 🏠 Nevada Housing Division: Down payment assistance up to 5%
 🏗️ Builder incentives: Many offering closing cost credits
 
-Dr. Jan Duffy guides first-time buyers through pre-approval, loan programs, and a written buyer agreement. Call (702) 222-1964 or email homes@heyberkshire.com.
+I guide first-time buyers through pre-approval, loan programs, and a written buyer agreement. Call (702) 222-1964 or email homes@heyberkshire.com.
 
 Popular first-time buyer neighborhoods (realtor.com listing medians as of 2026-09-14, not a CMA):
 - North Las Vegas ($439,990)

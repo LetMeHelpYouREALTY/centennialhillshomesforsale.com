@@ -203,6 +203,20 @@ describe("site images catalog", () => {
     });
     expect(howIWork.src).toBe(PAGE_HERO_IMAGES.about.src);
 
+    const hours = resolveSectionImage({
+      heading: "Business Hours",
+      neighborhoodName: "Las Vegas",
+      avoidSrc: PAGE_HERO_IMAGES.googleBusiness.src,
+    });
+    expect(hours.src).toBe("/images/gbp/visit-office.png");
+
+    const villages = resolveSectionImage({
+      heading: "How these villages actually differ",
+      neighborhoodName: "Las Vegas",
+      avoidSrc: PAGE_HERO_IMAGES.market.src,
+    });
+    expect(villages.src).toBe(PAGE_HERO_IMAGES.homepage.src);
+
     const root = path.join(__dirname, "..", "public");
     expect(existsSync(path.join(root, golf.src.replace(/^\//, "")))).toBe(true);
     expect(existsSync(path.join(root, commute.src.replace(/^\//, "")))).toBe(

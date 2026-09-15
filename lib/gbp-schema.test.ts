@@ -58,6 +58,10 @@ describe("GBP schema NAP and Maps alignment", () => {
     const copy = `${gbpDescription.whoWeAre}\n${gbpDescription.whatWeDo}\n${gbpDescription.whereWeServe}`;
     expect(copy).not.toMatch(/free consultation/i);
     expect(copy).not.toMatch(/honest advice/i);
+    expect(copy).toContain("I offer a global referral network");
+    expect(copy).toContain("I serve the Las Vegas Valley");
+    expect(copy).not.toContain("Dr. Jan offers");
+    expect(copy).not.toContain("Dr. Jan serves the Las Vegas Valley");
     expect(
       businessInfo.services.map((s) => s.description).join("\n"),
     ).not.toMatch(/Specialized service for veterans/i);
@@ -71,6 +75,11 @@ describe("GBP schema NAP and Maps alignment", () => {
     expect(answers).not.toMatch(/world-class/i);
     expect(answers).not.toMatch(/50,000/);
     expect(answers).not.toMatch(/7,700/);
+    expect(answers).toContain("I serve all of Las Vegas");
+    expect(answers).toContain("I pair a California sale");
+    expect(answers).toContain("I handle sensitive transactions");
+    expect(answers).not.toContain("she coordinates");
+    expect(answers).not.toContain("Dr. Jan serves all of Las Vegas");
   });
 
   it("names Siena, Trilogy, and the office email on a live CMA FAQ", () => {

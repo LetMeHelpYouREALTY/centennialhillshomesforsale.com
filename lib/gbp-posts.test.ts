@@ -60,6 +60,8 @@ describe("GBP post templates", () => {
     );
     expect(fiftyFive?.content).toContain("Siena");
     expect(fiftyFive?.content).toContain("89135");
+    expect(fiftyFive?.content).toContain("I work 55+ HOPA files");
+    expect(fiftyFive?.content).not.toContain("Dr. Jan Duffy works 55+");
   });
 
   it("does not use perfect-home slogans in review replies", () => {

@@ -12,12 +12,12 @@ export const defaultFaqs: SiteFaq[] = [
   {
     question: "How long does the home buying process take?",
     answer:
-      "Escrow length is set in the purchase contract, often 30–45 days for financed purchases. Cash and new construction can close on a different timeline. We walk the contract dates with you so nothing is a surprise.",
+      "Escrow length is set in the purchase contract, often 30–45 days for financed purchases. Cash and new construction can close on a different timeline. I walk the contract dates with you so nothing is a surprise.",
   },
   {
     question: "Do you help with home valuations?",
     answer:
-      "Yes. We provide a CMA from current MLS comps — whether you are listing or checking equity. The consult is separate from a listing agreement.",
+      "Yes. I provide a CMA from current MLS comps — whether you are listing or checking equity. The consult is separate from a listing agreement.",
   },
   {
     question: "Who is the agent of record?",
@@ -27,7 +27,7 @@ export const defaultFaqs: SiteFaq[] = [
   {
     question: "Can you help with investment properties?",
     answer:
-      "Yes. We cover rental properties and investment analysis across the Las Vegas Valley, including cap-rate math and neighborhood inventory—not a generic yield pitch.",
+      "Yes. I cover rental properties and investment analysis across the Las Vegas Valley, including cap-rate math and neighborhood inventory—not a generic yield pitch.",
   },
   {
     question: "What are your fees?",

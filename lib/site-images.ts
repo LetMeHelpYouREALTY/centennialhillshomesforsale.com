@@ -274,7 +274,7 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
     src: PAGE_HERO_IMAGES.googleBusiness.src,
   },
   {
-    test: /\b(office hours|visit the office|lake mead)\b/i,
+    test: /\b(business hours|office hours|visit the office|lake mead)\b/i,
     src: VISIT_OFFICE_PHOTO_PATH,
   },
   {
@@ -328,6 +328,10 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
   {
     test: /\b(who built it|how this differs from)\b/i,
     src: PAGE_HERO_IMAGES.fiftyFivePlus.src,
+  },
+  {
+    test: /\bhow these villages actually differ\b/i,
+    src: PAGE_HERO_IMAGES.homepage.src,
   },
   {
     test: /\b(villages?, not a|villages? are not interchangeable)\b/i,
