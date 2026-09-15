@@ -18,6 +18,7 @@ import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { VisitOffice } from "@/components/shared/VisitOffice";
+import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
 import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
@@ -115,7 +116,7 @@ const buyingSteps = [
     icon: Search,
     title: "Define Your Priorities & Search",
     description:
-      "Dr. Jan provides access to live MLS listings, new construction after you register her, and private showings when the listing agent allows. She'll help you match ZIP, commute, square footage, and amenities, then set up MLS alerts for listings that match your written criteria.",
+      "Dr. Jan provides access to live MLS listings, new construction after you register her, and private showings when the listing agent allows. I match ZIP, commute, square footage, and amenities, then set MLS alerts to the written criteria.",
   },
   {
     icon: FileText,
@@ -127,7 +128,7 @@ const buyingSteps = [
     icon: Home,
     title: "Due Diligence & Inspections",
     description:
-      "Coordinate home inspections, review disclosures, and ensure you understand exactly what you're buying. Dr. Jan helps negotiate repairs or credits if issues arise during the inspection period.",
+      "I coordinate inspections and review the report against the purchase agreement. Repair credits are negotiated from that file, not a hallway conversation.",
   },
   {
     icon: Key,
@@ -626,7 +627,7 @@ export default function BuyersPage() {
                 <div className="text-3xl font-bold mb-1">
                   {formatUsd(LISTING_MEDIANS_USD.lasVegas)}
                 </div>
-                <div className="text-blue-200 text-sm">
+                <div className="text-blue-50 text-sm">
                   Las Vegas listing median
                 </div>
               </div>
@@ -634,7 +635,7 @@ export default function BuyersPage() {
                 <div className="text-3xl font-bold mb-1">
                   {formatUsd(LISTING_MEDIANS_USD.hendersonListing)}
                 </div>
-                <div className="text-blue-200 text-sm">
+                <div className="text-blue-50 text-sm">
                   Henderson listing median
                 </div>
               </div>
@@ -642,7 +643,7 @@ export default function BuyersPage() {
                 <div className="text-3xl font-bold mb-1">
                   {formatUsd(LISTING_MEDIANS_USD.centennialHills)}
                 </div>
-                <div className="text-blue-200 text-sm">
+                <div className="text-blue-50 text-sm">
                   Centennial Hills listing median
                 </div>
               </div>
@@ -650,7 +651,7 @@ export default function BuyersPage() {
                 <div className="text-3xl font-bold mb-1">
                   {formatUsd(LISTING_MEDIANS_USD.northLasVegas)}
                 </div>
-                <div className="text-blue-200 text-sm">
+                <div className="text-blue-50 text-sm">
                   North Las Vegas listing median
                 </div>
               </div>
@@ -684,6 +685,7 @@ export default function BuyersPage() {
             </div>
           </section>
 
+          <GoogleReviewsCta className="mb-16 rounded-2xl bg-white" />
           <VisitOffice compact />
           <PageCTA
             headline="Ready to tour Las Vegas listings?"

@@ -213,8 +213,8 @@ export function LeadCaptureForm({
           Request received
         </h3>
         <p className="text-green-700">
-          Dr. Jan Duffy will call or email during posted office hours. For a
-          faster reply, call{" "}
+          I will call or email during posted office hours. For a faster reply,
+          call{" "}
           <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
             {CTA_PHONE}
           </a>{" "}
@@ -537,10 +537,12 @@ export function LeadCaptureForm({
           ? "Submitting…"
           : formType === "home-valuation"
             ? "Request a CMA"
-            : "Send message"}
+            : formType === "property-search"
+              ? "Ask about listings"
+              : "Send to Dr. Jan Duffy"}
       </Button>
 
-      <p className="text-xs text-gray-500 text-center">
+      <p className="text-xs text-slate-600 text-center">
         By submitting this form, you consent to be contacted by Dr. Jan Duffy.
       </p>
     </form>

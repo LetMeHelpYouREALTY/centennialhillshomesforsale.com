@@ -12,6 +12,7 @@ import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { VisitOffice } from "@/components/shared/VisitOffice";
+import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
 import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
@@ -96,7 +97,7 @@ const sellerFaqs = [
   {
     question: "What do I need to do to prepare my home for sale?",
     answer:
-      "Dr. Jan walks the house and writes a preparation checklist. Decluttering, minor repairs, fresh paint, and professional staging are the usual first items — not a guaranteed return. She'll mark what actually shows in photos and on the first tour.",
+      "Dr. Jan walks the house and writes a preparation checklist. Decluttering, minor repairs, fresh paint, and professional staging are the usual first items — not a guaranteed return. I mark what actually shows in photos and on the first tour.",
   },
   {
     question: "How does Berkshire Hathaway market my home?",
@@ -116,7 +117,7 @@ const sellerFaqs = [
   {
     question: "Do I need to be moved out before listing?",
     answer:
-      "Not necessarily. Many homes sell while occupied. However, vacant homes are easier to show and stage. Dr. Jan will help you develop a strategy based on your specific situation and timeline.",
+      "Not necessarily. Many homes sell while occupied. Occupied vs vacant vs tenant changes the showing plan. I write that on the listing consult.",
   },
   {
     question: "How do I request a listing CMA?",
@@ -130,13 +131,13 @@ const sellingProcess = [
     step: 1,
     title: "CMA / home valuation",
     description:
-      "Dr. Jan analyzes comparable sales, market conditions, and your home's unique features to determine optimal pricing. You'll understand exactly what your home could sell for before making any decisions.",
+      "Sold comps, current actives, and the condition of this house. I send a list-price range before you sign a listing agreement.",
   },
   {
     step: 2,
     title: "Preparation & Staging",
     description:
-      "Receive a customized preparation checklist to maximize your home's appeal. Dr. Jan provides staging consultations and can recommend contractors for any needed repairs or updates.",
+      "I walk the house and write a checklist. Staging, paint, and repairs that show in photos come first — not a guaranteed return.",
   },
   {
     step: 3,
@@ -148,19 +149,19 @@ const sellingProcess = [
     step: 4,
     title: "Showings & Open Houses",
     description:
-      "Dr. Jan coordinates all showings and open houses, gathering feedback from every visit. You'll receive regular updates on activity and market response.",
+      "I coordinate showings and send the feedback. Occupied vs vacant changes the calendar.",
   },
   {
     step: 5,
     title: "Offer Review & Negotiation",
     description:
-      "When offers come in, Dr. Jan analyzes each one for price, terms, contingencies, and buyer qualification. She negotiates on your behalf to get the best possible outcome.",
+      "I score price, dates, contingencies, and proof of funds. Then we write a counter or we accept.",
   },
   {
     step: 6,
     title: "Contract to Close",
     description:
-      "Dr. Jan manages every detail from accepted offer to closing—inspections, appraisals, repairs, and coordination with title, escrow, and the buyer's agent. You'll close with confidence.",
+      "Inspections, appraisal, repairs, title, and escrow stay on the written timeline. Close date is on the contract.",
   },
 ];
 
@@ -535,13 +536,13 @@ export default function SellersPage() {
               </div>
               <div className="text-center">
                 <TrendingUp
-                  className="h-24 w-24 text-blue-200 mx-auto mb-4"
+                  className="h-24 w-24 text-blue-100 mx-auto mb-4"
                   aria-hidden="true"
                 />
                 <p className="text-2xl font-bold">
                   {formatUsd(LISTING_MEDIANS_USD.lasVegas)}
                 </p>
-                <p className="text-blue-200">
+                <p className="text-blue-50">
                   Las Vegas listing median ({MARKET_SNAPSHOT_AS_OF})
                 </p>
                 <p className="text-blue-50 text-sm mt-2">
@@ -577,6 +578,7 @@ export default function SellersPage() {
             </div>
           </section>
 
+          <GoogleReviewsCta className="mb-16 rounded-2xl bg-white" />
           <VisitOffice compact />
           <PageCTA
             headline="Ready to price a listing?"

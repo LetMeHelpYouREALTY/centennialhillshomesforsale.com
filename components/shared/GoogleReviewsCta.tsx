@@ -8,6 +8,7 @@ import {
   OFFICE_NAP,
   TEXT_LINK_CLASS,
 } from "@/lib/contact";
+import { cn } from "@/lib/utils";
 
 type GoogleReviewsCtaProps = {
   className?: string;
@@ -18,7 +19,7 @@ export function GoogleReviewsCta({ className = "" }: GoogleReviewsCtaProps) {
 
   return (
     <section
-      className={`bg-slate-50 py-16 md:py-20 ${className}`.trim()}
+      className={cn("bg-slate-50 py-16 md:py-20", className)}
       aria-labelledby={headingId}
     >
       <div className="container mx-auto max-w-3xl px-4 text-center">

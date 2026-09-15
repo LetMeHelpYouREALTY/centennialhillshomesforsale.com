@@ -15,8 +15,11 @@ describe("lead capture form chrome", () => {
     expect(src).toContain('inputMode="numeric"');
     expect(src).toContain('inputMode="decimal"');
     expect(src).toContain('inputMode="tel"');
-    expect(src).toContain(
-      "focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2",
-    );
+    expect(src).toContain("focus-visible:ring-offset-2");
+    expect(src).toContain("Ask about listings");
+    expect(src).toContain("Send to Dr. Jan Duffy");
+    expect(src).toContain("text-slate-600");
+    expect(src).not.toContain("text-gray-500");
+    expect(src).toContain("I will call or email during posted office hours");
   });
 });

@@ -11,6 +11,7 @@ import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { VisitOffice } from "@/components/shared/VisitOffice";
+import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
@@ -679,10 +680,9 @@ export default function ListingsPage({
                     Due Diligence & Inspections
                   </h3>
                   <p className="text-pretty text-slate-600 text-sm">
-                    Once under contract, you'll have time for home inspections,
-                    appraisals, and final financing approval. Dr. Jan
-                    coordinates with all parties and helps you negotiate repairs
-                    or credits if issues arise.
+                    Once under contract, the purchase agreement sets inspection,
+                    appraisal, and financing dates. I coordinate those parties
+                    and negotiate repairs or credits from the reports.
                   </p>
                 </div>
               </div>
@@ -727,10 +727,11 @@ export default function ListingsPage({
             </div>
           </section>
 
+          <GoogleReviewsCta className="mb-16 rounded-2xl bg-white" />
           <VisitOffice compact />
           <PageCTA
             headline="Ready to filter live MLS results?"
-            subheadline="Call or email Dr. Jan Duffy with beds, ZIP, and budget. She will send matching listings — not a scraped dump."
+            subheadline="Call or email with beds, ZIP, and budget. I send matching listings — not a scraped dump."
             className="rounded-2xl"
             formSource="listings-hub"
             formHeading="Tell me the ZIP and beds"

@@ -13,5 +13,7 @@ describe("neighborhoods hub", () => {
     expect(src).toContain("/55-plus-communities");
     expect(src).toContain("Siena");
     expect(src).toContain('source="neighborhoods-hub-mid"');
+    expect(src).toContain("GoogleReviewsCta");
+    expect(src).not.toContain("She will not send you");
   });
 });

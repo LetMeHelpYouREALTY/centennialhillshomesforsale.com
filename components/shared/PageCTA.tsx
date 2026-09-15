@@ -102,7 +102,7 @@ export function PageCTA({
               <span className="sr-only"> (opens in a new tab)</span>
             </a>
           </div>
-          <p className="mt-6 text-sm text-blue-200">
+          <p className="mt-6 text-sm text-blue-50">
             <a
               href={OFFICE_NAP.mapsUrl}
               target="_blank"

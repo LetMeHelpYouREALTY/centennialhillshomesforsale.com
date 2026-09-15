@@ -120,17 +120,17 @@ export default function GoogleBusinessPage() {
                 <div>
                   <div className="flex items-center gap-2 mb-4">
                     <Award
-                      className="h-6 w-6 text-blue-300"
+                      className="h-6 w-6 text-blue-100"
                       aria-hidden="true"
                     />
-                    <span className="font-semibold text-blue-200">
+                    <span className="font-semibold text-blue-100">
                       Berkshire Hathaway HomeServices
                     </span>
                   </div>
                   <h1 className="text-4xl md:text-5xl font-bold mb-4">
                     Dr. Jan Duffy
                   </h1>
-                  <p className="text-xl text-blue-200 mb-2">
+                  <p className="text-xl text-blue-100 mb-2">
                     REALTOR® | License {businessInfo.license}
                   </p>
                   <p className="text-slate-300 mb-6">Nevada Properties</p>
@@ -194,7 +194,7 @@ export default function GoogleBusinessPage() {
                     />
                   </div>
                   <p className="text-3xl font-bold mb-2">Google reviews</p>
-                  <p className="text-blue-200 mb-6">
+                  <p className="text-blue-100 mb-6">
                     Live on the Business Profile — I will not invent a rating
                   </p>
                   <a

@@ -14,5 +14,9 @@ describe("buyers hub", () => {
     expect(src).toContain('href="/55-plus-communities"');
     expect(src).toContain("homes@heyberkshire.com");
     expect(src).toContain('source="buyers-hub-mid"');
+    expect(src).toContain("GoogleReviewsCta");
+    expect(src).not.toContain("She'll help you match");
+    expect(src).not.toContain("exactly what you're buying");
+    expect(src).not.toContain("text-blue-200");
   });
 });

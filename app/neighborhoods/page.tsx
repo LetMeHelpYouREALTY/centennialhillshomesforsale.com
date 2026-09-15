@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { VisitOffice } from "@/components/shared/VisitOffice";
+import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import {
   formatUsd,
@@ -468,10 +469,11 @@ export default function NeighborhoodsPage() {
             </div>
           </section>
 
+          <GoogleReviewsCta className="mb-16 rounded-2xl bg-white" />
           <VisitOffice compact />
           <PageCTA
             headline="Need help matching a street to a ZIP?"
-            subheadline="Call or email Dr. Jan Duffy with the village name. She will not send you to 89144 when you asked for Centennial Hills."
+            subheadline="Call or email with the village name. I will not send you to 89144 when you asked for Centennial Hills."
             className="rounded-2xl"
             formSource="neighborhoods-hub"
             formHeading="Ask about a neighborhood"

@@ -28,6 +28,7 @@ import {
 import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { OfficeMap } from "@/components/shared/OfficeMap";
 import { VisitOffice } from "@/components/shared/VisitOffice";
+import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
@@ -468,10 +469,11 @@ export default function ContactPage() {
           Last updated: {MARKET_SNAPSHOT_AS_OF}
         </div>
       </div>
+      <GoogleReviewsCta className="bg-white" />
       <VisitOffice compact />
       <PageCTA
         headline="Call before you tour"
-        subheadline="Dr. Jan Duffy will pull the live MLS file and meet at 9406 W Lake Mead Blvd, Suite 100. Call (702) 222-1964 or email homes@heyberkshire.com."
+        subheadline="I will pull the live MLS file and meet at 9406 W Lake Mead Blvd, Suite 100. Call (702) 222-1964 or email homes@heyberkshire.com."
       />
     </>
   );

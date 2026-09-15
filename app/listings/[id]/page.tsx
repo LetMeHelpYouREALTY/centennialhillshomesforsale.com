@@ -5,6 +5,7 @@ import { Phone } from "lucide-react";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { VisitOffice } from "@/components/shared/VisitOffice";
+import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import { MlsDisclaimer } from "@/components/shared/MlsDisclaimer";
 import {
   AGENT_EMAIL,
@@ -119,10 +120,11 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
         </ul>
         <MlsDisclaimer />
       </div>
+      <GoogleReviewsCta className="bg-white" />
       <VisitOffice compact />
       <PageCTA
         headline="Want a specific address walked?"
-        subheadline="Call or email Dr. Jan Duffy. She will pull the live MLS file, not a placeholder."
+        subheadline="Call or email with the MLS number or street. I pull the live file, not a placeholder."
         formSource="listing-placeholder"
         formHeading="Ask about a live listing"
         formType="property-search"

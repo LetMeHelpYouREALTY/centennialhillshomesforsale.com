@@ -73,7 +73,7 @@ export default function GrovesAtInspiradaPage() {
         {
           question: "Do you manage rentals in Groves?",
           answer:
-            "No. Dr. Jan Duffy represents buyers and sellers. She does not offer property management. She can refer a licensed manager if you need one.",
+            "No. I represent buyers and sellers. I do not offer property management. I can refer a licensed manager if you need one.",
         },
         {
           question: "How do I get current Groves listings?",

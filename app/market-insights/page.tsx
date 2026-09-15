@@ -26,6 +26,7 @@ import {
 } from "@/lib/contact";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { VisitOffice } from "@/components/shared/VisitOffice";
+import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import { getSearchCentralPosts } from "@/lib/search-central-feed";
 import {
   formatUsd,
@@ -344,19 +345,19 @@ export default async function MarketInsightsPage() {
                 <div className="space-y-4">
                   <div className="bg-white/10 rounded-lg p-4">
                     <div className="text-2xl font-bold">CA inbound</div>
-                    <div className="text-blue-200 text-sm">
+                    <div className="text-blue-50 text-sm">
                       Frequent origin — confirm the latest GLVAR report
                     </div>
                   </div>
                   <div className="bg-white/10 rounded-lg p-4">
                     <div className="text-2xl font-bold">Your equity</div>
-                    <div className="text-blue-200 text-sm">
+                    <div className="text-blue-50 text-sm">
                       Depends on your California sale, not a slogan
                     </div>
                   </div>
                   <div className="bg-white/10 rounded-lg p-4">
                     <div className="text-2xl font-bold">Bay Area & LA</div>
-                    <div className="text-blue-200 text-sm">
+                    <div className="text-blue-50 text-sm">
                       Common source markets I tour against
                     </div>
                   </div>
@@ -708,8 +709,7 @@ export default async function MarketInsightsPage() {
             </h2>
             <p className="mb-8 text-xl text-blue-100">
               Wondering what these trends mean for a specific house? Call or
-              email with the address. Dr. Jan Duffy will run a CMA — not a
-              citywide slogan.
+              email with the address. I will run a CMA — not a citywide slogan.
             </p>
             <div className="flex flex-col flex-wrap justify-center gap-4 sm:flex-row">
               <a
@@ -739,10 +739,11 @@ export default async function MarketInsightsPage() {
           Last updated: {MARKET_SNAPSHOT_AS_OF}
         </div>
       </div>
+      <GoogleReviewsCta className="bg-white" />
       <VisitOffice compact />
       <PageCTA
         headline="Need the live comps, not a valley average?"
-        subheadline="Call or email Dr. Jan Duffy. She will pull MLS for your ZIP, not a recycled headline."
+        subheadline="Call or email with the ZIP. I pull MLS for that ZIP, not a recycled headline."
         formSource="market-insights"
         formHeading="Ask for a live MLS pull"
       />

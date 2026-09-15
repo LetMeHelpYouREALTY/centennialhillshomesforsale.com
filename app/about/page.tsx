@@ -215,9 +215,9 @@ export default function AboutPage() {
             />
             <p className="text-pretty text-xl text-slate-600">
               Dr. Jan Duffy has been serving Las Vegas since 2008 with Berkshire
-              Hathaway HomeServices Nevada Properties. Whether you're buying,
-              selling, investing, or relocating, you'll get a written plan and
-              live comps — not a ranking slogan.
+              Hathaway HomeServices Nevada Properties. Buyers, sellers,
+              investors, and relocators get a written plan and live comps — not
+              a ranking slogan.
             </p>
             <div className="mt-8">
               <MlsSearchForm inputId="mls-q-about" />

@@ -302,7 +302,23 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
     src: PAGE_HERO_IMAGES.contact.src,
   },
   {
-    test: /\b(buyer|tour|showing|offer)\b/i,
+    test: /\b(inspections?|due diligence)\b/i,
+    src: PAGE_HERO_IMAGES.homeValuation.src,
+  },
+  {
+    test: /\b(closing|escrow|title company)\b/i,
+    src: PAGE_HERO_IMAGES.office.src,
+  },
+  {
+    test: /\b(showing|open house)\b/i,
+    src: PAGE_HERO_IMAGES.buyers.src,
+  },
+  {
+    test: /\b(kitchen)\b/i,
+    src: PAGE_HERO_IMAGES.sellers.src,
+  },
+  {
+    test: /\b(buyer|tour|offer)\b/i,
     src: PAGE_HERO_IMAGES.buyers.src,
   },
   {

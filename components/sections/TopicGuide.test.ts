@@ -19,5 +19,7 @@ describe("TopicGuide conversion chrome", () => {
     expect(src).toContain("-guide-mid");
     expect(src).toContain("MARKET_SNAPSHOT_AS_OF");
     expect(src).toContain("text-slate-300");
+    expect(src).toContain("GoogleReviewsCta");
+    expect(src).not.toContain("text-blue-200");
   });
 });

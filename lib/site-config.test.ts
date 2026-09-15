@@ -34,5 +34,7 @@ describe("site copy does not sell ranking slogans", () => {
     expect(JSON.stringify(defaultFaqs)).toContain("homes@heyberkshire.com");
     expect(JSON.stringify(commonFAQs)).toContain("89138");
     expect(JSON.stringify(commonFAQs)).toContain("Siena");
+    expect(JSON.stringify(commonFAQs)).toContain("how I am paid");
+    expect(JSON.stringify(commonFAQs)).not.toMatch(/how she is paid/);
   });
 });

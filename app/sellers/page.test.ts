@@ -16,5 +16,9 @@ describe("sellers hub", () => {
     expect(src).not.toContain("generate competition and sell");
     expect(src).toContain('source="sellers-hub-mid"');
     expect(src).not.toContain("don't have to navigate");
+    expect(src).toContain("GoogleReviewsCta");
+    expect(src).not.toContain("You'll close with confidence");
+    expect(src).not.toContain("She'll mark");
+    expect(src).not.toContain("text-blue-200");
   });
 });

@@ -314,7 +314,7 @@ export const commonFAQs = {
     {
       question: "How do Berkshire Hathaway HomeServices agents get paid?",
       answer:
-        "Commission structures are negotiable and written before work starts. After the 2024 NAR practice changes, buyer-broker compensation is no longer an automatic MLS offer. Dr. Jan Duffy will walk through how she is paid before you sign a buyer agreement.",
+        "Commission structures are negotiable and written before work starts. After the 2024 NAR practice changes, buyer-broker compensation is no longer an automatic MLS offer. I walk through how I am paid before you sign a buyer agreement.",
     },
     {
       question: "What is Dr. Jan Duffy's experience in Las Vegas real estate?",

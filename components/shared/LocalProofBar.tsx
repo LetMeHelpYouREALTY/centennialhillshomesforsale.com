@@ -40,7 +40,7 @@ export function LocalProofBar({
         >
           <p className="flex min-w-0 items-start gap-2">
             <MapPin
-              className={`mt-0.5 h-4 w-4 shrink-0 ${isDark ? "text-blue-300" : "text-blue-600"}`}
+              className={`mt-0.5 h-4 w-4 shrink-0 ${isDark ? "text-blue-100" : "text-blue-600"}`}
               aria-hidden="true"
             />
             <span>
@@ -54,7 +54,7 @@ export function LocalProofBar({
           </p>
           <p className="flex items-center gap-2">
             <Clock
-              className={`h-4 w-4 shrink-0 ${isDark ? "text-blue-300" : "text-blue-600"}`}
+              className={`h-4 w-4 shrink-0 ${isDark ? "text-blue-100" : "text-blue-600"}`}
               aria-hidden="true"
             />
             <span>{OFFICE_HOURS.display}</span>

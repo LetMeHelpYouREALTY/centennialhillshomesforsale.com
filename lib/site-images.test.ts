@@ -86,6 +86,30 @@ describe("site images catalog", () => {
     });
     expect(pool.src).toBe(PAGE_HERO_IMAGES.sellers.src);
 
+    const inspection = resolveSectionImage({
+      heading: "Due diligence and inspections",
+      neighborhoodName: "Las Vegas",
+    });
+    expect(inspection.src).toBe(PAGE_HERO_IMAGES.homeValuation.src);
+
+    const closing = resolveSectionImage({
+      heading: "Closing and escrow at the title company",
+      neighborhoodName: "Las Vegas",
+    });
+    expect(closing.src).toBe(PAGE_HERO_IMAGES.office.src);
+
+    const showing = resolveSectionImage({
+      heading: "Showing and open house calendar",
+      neighborhoodName: "Summerlin",
+    });
+    expect(showing.src).toBe(PAGE_HERO_IMAGES.buyers.src);
+
+    const kitchen = resolveSectionImage({
+      heading: "Kitchen updates that show on the CMA",
+      neighborhoodName: "Henderson",
+    });
+    expect(kitchen.src).toBe(PAGE_HERO_IMAGES.sellers.src);
+
     const root = path.join(__dirname, "..", "public");
     expect(existsSync(path.join(root, golf.src.replace(/^\//, "")))).toBe(true);
     expect(existsSync(path.join(root, commute.src.replace(/^\//, "")))).toBe(

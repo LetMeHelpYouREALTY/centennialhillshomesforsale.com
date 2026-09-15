@@ -94,7 +94,7 @@ export default function SunCityAliantePage() {
         {
           question: "Do you manage rentals here?",
           answer:
-            "No. Dr. Jan Duffy represents buyers and sellers. She can refer a licensed manager.",
+            "No. I represent buyers and sellers. I can refer a licensed manager.",
         },
         {
           question: "How do I get current Sun City Aliante listings?",

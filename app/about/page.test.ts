@@ -18,5 +18,6 @@ describe("about page service-area coverage", () => {
     expect(src).toContain("Trilogy");
     expect(src).toContain("homes@heyberkshire.com");
     expect(src).toContain('source="about-page-mid"');
+    expect(src).not.toContain("Whether you're buying");
   });
 });

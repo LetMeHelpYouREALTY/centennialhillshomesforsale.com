@@ -19,6 +19,7 @@ import { FairHousingNotice } from "@/components/shared/FairHousingNotice";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionPhoto } from "@/components/shared/SectionPhoto";
 import { VisitOffice } from "@/components/shared/VisitOffice";
+import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
@@ -386,10 +387,10 @@ export default function NeighborhoodGuide({
                   <span className="sr-only"> (opens in a new tab)</span>
                 </a>
               </p>
-              <p className="mt-2 text-xs text-blue-200">
+              <p className="mt-2 text-xs text-blue-50">
                 {OFFICE_HOURS.display}
               </p>
-              <p className="mt-2 text-xs text-blue-200">
+              <p className="mt-2 text-xs text-blue-50">
                 {origin.replace("https://", "")} · Berkshire Hathaway
                 HomeServices Nevada Properties
               </p>
@@ -397,6 +398,7 @@ export default function NeighborhoodGuide({
             </section>
           </article>
         </div>
+        <GoogleReviewsCta className="bg-white" />
         <VisitOffice compact />
         {showListings ? <RealScoutListings /> : null}
       </div>

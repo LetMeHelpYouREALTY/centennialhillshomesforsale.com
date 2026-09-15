@@ -20,5 +20,8 @@ describe("listings hub FAQs", () => {
     expect(src).toContain('source="listings-hub-mid"');
     expect(src).toContain("MARKET_SNAPSHOT_AS_OF");
     expect(src).not.toContain("text-slate-400");
+    expect(src).toContain("GoogleReviewsCta");
+    expect(src).not.toContain("you'll have time for home inspections");
+    expect(src).not.toContain("She will send matching listings");
   });
 });

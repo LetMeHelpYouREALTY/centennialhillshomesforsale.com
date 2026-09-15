@@ -21,6 +21,7 @@ import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { VisitOffice } from "@/components/shared/VisitOffice";
+import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
 import SchemaScript from "@/components/SchemaScript";
@@ -1055,6 +1056,7 @@ export default function FiftyFiveCommunitiesPage() {
             </div>
           </section>
 
+          <GoogleReviewsCta className="mb-16 rounded-2xl bg-white" />
           <VisitOffice compact />
           <PageCTA
             headline="Match the 55+ campus to the street"

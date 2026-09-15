@@ -17,5 +17,7 @@ describe("google-business hub", () => {
     expect(src).toContain("Google Business Profile posts");
     expect(src).toContain('source="google-business-mid"');
     expect(src).toContain("MARKET_SNAPSHOT_AS_OF");
+    expect(src).not.toContain("text-blue-300");
+    expect(src).not.toContain("text-blue-200");
   });
 });

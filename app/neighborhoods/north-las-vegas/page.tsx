@@ -58,7 +58,7 @@ export default function NorthLasVegasPage() {
         },
         {
           heading: "Investors and first-time buyers",
-          body: "Some NLV streets cash-flow on paper and fail inspection. Some first-time buyers want a one-story Aliante resale and get shown a two-story incentive home 20 minutes away. Say occupancy vs rental on the call. Dr. Jan Duffy represents buyers and sellers; she does not manage rentals. She can refer a licensed manager.",
+          body: "Some NLV streets cash-flow on paper and fail inspection. Some first-time buyers want a one-story Aliante resale and get shown a two-story incentive home 20 minutes away. Say occupancy vs rental on the call. I represent buyers and sellers. I do not manage rentals. I can refer a licensed manager.",
         },
         {
           heading: "Commute vs Centennial Hills",
