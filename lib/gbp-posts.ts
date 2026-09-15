@@ -48,16 +48,16 @@ Call Dr. Jan Duffy at (702) 222-1964 for comps on a specific street.`,
     id: "california-relocation",
     type: "update",
     title: "California Buyers: Your Home Equity Goes Further in Las Vegas",
-    content: `Thinking about relocating from California to Las Vegas? Here's why 37% of Las Vegas home buyers come from CA:
+    content: `Thinking about relocating from California to Las Vegas?
 
 ✅ 0% state income tax on wages (Nevada statute)
 ✅ Pair your California sale against live Las Vegas comps — not a 40–60% slogan
 ✅ Named campuses and commute times instead of school slogans
 ✅ About a 4-hour drive to LA, plus direct flights
 
-A $1.2M California home could buy you a luxury property in Summerlin or The Ridges. Dr. Jan Duffy specializes in California-to-Nevada relocations and can help you maximize your equity.
+I will not invent a buyer-origin percentage or a California-sale-buys-luxury promise. Call with your California sale range and I will pull live Summerlin, Henderson, and Centennial Hills comps.
 
-Call (702) 222-1964 for a free California equity comparison.`,
+Call (702) 222-1964 for a California equity comparison.`,
     cta: {
       text: "California Relocation Guide",
       url: "https://heyberkshire.com/buyers/california-relocator",
@@ -111,10 +111,10 @@ Schedule a community tour: (702) 222-1964`,
 
 Dr. Jan Duffy guides first-time buyers through every step—from pre-approval to keys. Free consultation, no pressure.
 
-Popular first-time buyer neighborhoods:
-- North Las Vegas (median $385K)
-- Mountains Edge (median $475K)
-- Centennial Hills (median $495K)
+Popular first-time buyer neighborhoods (realtor.com listing medians as of 2026-09-14, not a CMA):
+- North Las Vegas ($439,990)
+- Mountains Edge ($499,900)
+- Centennial Hills ($514,500)
 
 Call (702) 222-1964 to start your homeownership journey.`,
     cta: {
@@ -133,21 +133,18 @@ Call (702) 222-1964 to start your homeownership journey.`,
   {
     id: "seller-tips",
     type: "update",
-    title: "Selling Your Las Vegas Home? 5 Tips for Top Dollar",
-    content: `Thinking about selling? Here's how to maximize your sale price:
+    title: "Selling Your Las Vegas Home? Five Listing Prep Tips",
+    content: `Thinking about selling? Prep that actually moves a listing:
 
-1️⃣ Price right from day one (overpriced homes sit)
+1️⃣ Price from live comps on your street (overpriced homes sit)
 2️⃣ Professional photography is non-negotiable
 3️⃣ Declutter and depersonalize
 4️⃣ Address minor repairs before listing
-5️⃣ Work with an agent who knows your neighborhood
+5️⃣ Work with an agent who walks that ZIP every week
 
-Current seller stats:
-📈 +4.2% appreciation YoY
-⏱️ 28 days average time to sell
-💰 98.5% list-to-sale ratio
+I will not publish a fake YoY appreciation, average days-on-market, or list-to-sale ratio as if it were your house. Ask for a live CMA.
 
-Get a free home valuation from Dr. Jan Duffy: (702) 222-1964`,
+Get a listing consult from Dr. Jan Duffy: (702) 222-1964`,
     cta: {
       text: "Get Free Home Valuation",
       url: "https://heyberkshire.com/home-valuation",
@@ -167,10 +164,10 @@ Get a free home valuation from Dr. Jan Duffy: (702) 222-1964`,
     title: "Luxury Living in Las Vegas: The Ridges, MacDonald Highlands & More",
     content: `Las Vegas luxury real estate offers world-class living at Nevada prices:
 
-🏔️ The Ridges, Summerlin - Guard-gated, custom estates from $2M+
-⛰️ MacDonald Highlands - Henderson hillside luxury with Strip views
-🌆 Strip High-Rises - Waldorf, Veer, Panorama condos
-🌳 Southern Highlands - Golf course living from $800K+
+🏔️ The Ridges, Summerlin — guard-gated custom estates (live CMA, not a $2M slogan)
+⛰️ MacDonald Highlands — Henderson hillside luxury with Strip views
+🌆 Strip high-rises — confirm the tower, HOA, and current inventory
+🌳 Southern Highlands — golf-course listings; realtor.com area median $1,024,950 as of 2026-09-14 (not a CMA)
 
 Why luxury buyers choose Las Vegas:
 ✅ No state income tax

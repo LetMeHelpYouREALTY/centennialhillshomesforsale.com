@@ -21,6 +21,7 @@ import { getSearchCentralPosts } from "@/lib/search-central-feed";
 import {
   formatUsd,
   LISTING_MEDIANS_USD,
+  MARKET_SNAPSHOT_AS_OF,
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
@@ -134,40 +135,53 @@ export default async function MarketInsightsPage() {
           {/* Key Drivers */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">
-              5 Forces Driving Las Vegas Real Estate in 2026
+              What we can actually cite in 2026
             </h2>
             <div className="grid md:grid-cols-5 gap-4">
               <div className="text-center">
-                <div className="text-3xl font-bold text-amber-400 mb-2">
-                  37%
+                <div className="text-2xl font-bold text-amber-400 mb-2">
+                  {formatUsd(LISTING_MEDIANS_USD.centennialHills)}
                 </div>
                 <div className="text-slate-300 text-sm">
-                  California Migration
+                  Centennial Hills listing median
                 </div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-400 mb-2">0%</div>
-                <div className="text-slate-300 text-sm">State Income Tax</div>
+                <div className="text-slate-300 text-sm">
+                  Nevada wage income tax
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">
-                  $1B+
+                <div className="text-2xl font-bold text-green-400 mb-2">
+                  {formatUsd(LISTING_MEDIANS_USD.hendersonListing)}
                 </div>
                 <div className="text-slate-300 text-sm">
-                  Data Center Investment
+                  Henderson listing median
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">
-                  2.8%
+                <div className="text-2xl font-bold text-purple-400 mb-2">
+                  CMA
                 </div>
-                <div className="text-slate-300 text-sm">Job Growth Rate</div>
+                <div className="text-slate-300 text-sm">
+                  Days-on-market is a live pull
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-400 mb-2">45M</div>
-                <div className="text-slate-300 text-sm">Annual Visitors</div>
+                <div className="text-2xl font-bold text-red-400 mb-2">
+                  {formatUsd(LISTING_MEDIANS_USD.lasVegas)}
+                </div>
+                <div className="text-slate-300 text-sm">
+                  Las Vegas city listing median
+                </div>
               </div>
             </div>
+            <p className="mt-6 text-center text-sm text-slate-400">
+              {MARKET_SNAPSHOT_SOURCE} as of {MARKET_SNAPSHOT_AS_OF}. Listing
+              medians, not a CMA. I will not invent a CA-buyer share,
+              data-center investment total, job-growth rate, or visitor count.
+            </p>
           </section>
 
           {/* Tech Transformation */}
@@ -204,8 +218,11 @@ export default async function MarketInsightsPage() {
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-slate-700">
-                      <strong>Henderson appreciation:</strong> Tech jobs driving
-                      Henderson home values up 5.1% YoY—outpacing valley average
+                      <strong>Henderson demand:</strong> Data-center and
+                      medical-corridor jobs keep Henderson on relocation
+                      shortlists. I will not invent a year-over-year
+                      appreciation figure — ask for a live CMA on the village
+                      you want.
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -238,27 +255,27 @@ export default async function MarketInsightsPage() {
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <p className="text-blue-100 mb-6">
-                  California remains the #1 source of Las Vegas home buyers.
-                  Understanding this migration pattern is essential for both
-                  buyers and sellers.
+                  California is a frequent inbound origin for Las Vegas buyers.
+                  I pair your California sale against live comps — I will not
+                  invent a buyer-origin share or a typical-equity figure.
                 </p>
                 <div className="space-y-4">
                   <div className="bg-white/10 rounded-lg p-4">
-                    <div className="text-2xl font-bold">37%</div>
+                    <div className="text-2xl font-bold">CA inbound</div>
                     <div className="text-blue-200 text-sm">
-                      of all Las Vegas buyers from CA
+                      Frequent origin — confirm the latest GLVAR report
                     </div>
                   </div>
                   <div className="bg-white/10 rounded-lg p-4">
-                    <div className="text-2xl font-bold">$250K+</div>
+                    <div className="text-2xl font-bold">Your equity</div>
                     <div className="text-blue-200 text-sm">
-                      Avg. equity CA buyers bring
+                      Depends on your California sale, not a slogan
                     </div>
                   </div>
                   <div className="bg-white/10 rounded-lg p-4">
                     <div className="text-2xl font-bold">Bay Area & LA</div>
                     <div className="text-blue-200 text-sm">
-                      Primary source markets
+                      Common source markets I tour against
                     </div>
                   </div>
                 </div>
@@ -307,7 +324,7 @@ export default async function MarketInsightsPage() {
                 <div className="mt-6">
                   <Link
                     href="/buyers/california-relocator"
-                    className="inline-flex items-center bg-white text-blue-600 px-4 py-2 rounded-md font-semibold hover:bg-blue-50 transition-colors"
+                    className="inline-flex min-h-11 items-center bg-white text-blue-600 px-4 py-2 rounded-md font-semibold hover:bg-blue-50 transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                   >
                     California Relocation Guide →
                   </Link>
@@ -335,7 +352,7 @@ export default async function MarketInsightsPage() {
                   diversify the economy.
                 </p>
                 <div className="text-green-600 font-semibold text-sm">
-                  Impact: West Las Vegas appreciation, job creation
+                  Impact: West Las Vegas jobs and event-calendar demand
                 </div>
               </div>
               <div className="bg-white border border-slate-200 rounded-xl p-6">
@@ -374,51 +391,63 @@ export default async function MarketInsightsPage() {
                 2026 Neighborhood Outlook
               </h2>
             </div>
+            <PageHeroImage
+              src={PAGE_HERO_IMAGES.homepage.src}
+              alt="Centennial Hills and northwest Las Vegas homes used for this 2026 outlook"
+              size="section"
+              className="mb-8"
+            />
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white rounded-xl p-6 border border-slate-200">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="font-bold text-slate-900">Henderson</h3>
-                  <span className="bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-semibold">
-                    Strong Buy
+                  <span className="bg-slate-100 text-slate-700 px-2 py-1 rounded text-xs font-semibold">
+                    {formatUsd(LISTING_MEDIANS_USD.hendersonListing)} listing
+                    median
                   </span>
                 </div>
                 <p className="text-slate-600 text-sm mb-3">
-                  Tech corridor growth, safety rankings, and quality of life
-                  driving consistent demand. Expect continued 4-6% appreciation.
+                  Tech corridor, parks, trails, and rec campuses keep inbound
+                  demand. I will not use a “safety ranking” slogan or an
+                  appreciation forecast. Ask for a live CMA on Inspirada, Green
+                  Valley Ranch, or MacDonald Highlands.
                 </p>
                 <div className="text-sm text-slate-500">
-                  Hot areas: Inspirada, MacDonald Highlands, Green Valley Ranch
+                  Tour: Inspirada, MacDonald Highlands, Green Valley Ranch
                 </div>
               </div>
               <div className="bg-white rounded-xl p-6 border border-slate-200">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="font-bold text-slate-900">Summerlin</h3>
-                  <span className="bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-semibold">
-                    Strong Buy
+                  <span className="bg-slate-100 text-slate-700 px-2 py-1 rounded text-xs font-semibold">
+                    {formatUsd(LISTING_MEDIANS_USD.summerlinNorth)} north
+                    listing median
                   </span>
                 </div>
                 <p className="text-slate-600 text-sm mb-3">
                   Red Rock views, Downtown Summerlin, and a finished trail
-                  network maintain premium positioning. Limited new inventory
-                  keeps values strong.
+                  network. 89144, 89138, and The Ridges are different maps —
+                  confirm village comps, not a “strong buy” label.
                 </p>
                 <div className="text-sm text-slate-500">
-                  Hot areas: The Ridges, Regency at Summerlin, Paseos
+                  Tour: The Ridges, 89138, Paseos
                 </div>
               </div>
               <div className="bg-white rounded-xl p-6 border border-slate-200">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="font-bold text-slate-900">North Las Vegas</h3>
-                  <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-semibold">
-                    Value Play
+                  <span className="bg-slate-100 text-slate-700 px-2 py-1 rounded text-xs font-semibold">
+                    {formatUsd(LISTING_MEDIANS_USD.northLasVegas)} listing
+                    median
                   </span>
                 </div>
                 <p className="text-slate-600 text-sm mb-3">
-                  Best affordability in the valley. Infrastructure investment
-                  and new retail improving area. First-time buyer sweet spot.
+                  City listing median is not Aliante or Skye Canyon. New retail
+                  and freeway access matter for commute math — not a “value
+                  play” slogan.
                 </p>
                 <div className="text-sm text-slate-500">
-                  Hot areas: Aliante, Elkhorn, Valley Vista
+                  Tour: Aliante, Elkhorn, Skye Canyon
                 </div>
               </div>
               <div className="bg-white rounded-xl p-6 border border-slate-200">
@@ -426,16 +455,17 @@ export default async function MarketInsightsPage() {
                   <h3 className="font-bold text-slate-900">
                     Southwest (Mountains Edge)
                   </h3>
-                  <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-semibold">
-                    Steady Growth
+                  <span className="bg-slate-100 text-slate-700 px-2 py-1 rounded text-xs font-semibold">
+                    {formatUsd(LISTING_MEDIANS_USD.mountainsEdge)} listing
+                    median
                   </span>
                 </div>
                 <p className="text-slate-600 text-sm mb-3">
                   Tract homes near Exploration Peak Park. New construction
-                  competes with resales. Solid appreciation.
+                  competes with resales. I will not invent “solid appreciation.”
                 </p>
                 <div className="text-sm text-slate-500">
-                  Hot areas: Exploration Peak, Southern Highlands adjacent
+                  Tour: Exploration Peak, Southern Highlands adjacent
                 </div>
               </div>
             </div>

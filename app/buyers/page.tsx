@@ -18,7 +18,8 @@ import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
-import { PAGE_HERO_IMAGES } from "@/lib/site-images";
+import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
+import Image from "next/image";
 import {
   formatUsd,
   LISTING_MEDIANS_USD,
@@ -93,33 +94,45 @@ const buyingSteps = [
 const neighborhoods = [
   {
     name: "Summerlin",
-    price: "$625K",
-    description: "Master-planned community with Red Rock views",
+    slug: "summerlin",
+    price: `${formatUsd(LISTING_MEDIANS_USD.summerlinNorth)} listing median`,
+    description:
+      "Master-planned streets, trail network, Downtown Summerlin, Red Rock views",
   },
   {
     name: "Henderson",
-    price: "$485K",
-    description: "Community-oriented with parks, trails, and civic amenities",
+    slug: "henderson",
+    price: `${formatUsd(LISTING_MEDIANS_USD.hendersonListing)} listing median`,
+    description:
+      "Parks, trails, civic rec centers, and the McCullough Range backdrop",
   },
   {
     name: "Green Valley",
-    price: "$520K",
-    description: "Established with mature landscaping",
+    slug: "green-valley",
+    price: `${formatUsd(LISTING_MEDIANS_USD.greenValleySouth)} listing median`,
+    description:
+      "Henderson villages with mature landscaping near Green Valley Ranch",
   },
   {
     name: "The Ridges",
-    price: "$2.5M",
-    description: "Ultra-luxury guard-gated estates",
+    slug: "the-ridges",
+    price: "Live CMA — custom estates",
+    description:
+      "Guard-gated custom homes in Summerlin with golf and mountain views",
   },
   {
     name: "North Las Vegas",
-    price: "$385K",
-    description: "Affordable new construction",
+    slug: "north-las-vegas",
+    price: `${formatUsd(LISTING_MEDIANS_USD.northLasVegas)} listing median`,
+    description:
+      "City listing median — Aliante and Skye Canyon are different maps",
   },
   {
     name: "Southern Highlands",
-    price: "$750K",
-    description: "Golf course community",
+    slug: "southern-highlands",
+    price: `${formatUsd(LISTING_MEDIANS_USD.southernHighlands)} listing median`,
+    description:
+      "Golf-course luxury south of the Strip — confirm village vs city comps",
   },
 ];
 
@@ -267,32 +280,44 @@ export default function BuyersPage() {
               Las Vegas Neighborhoods for Home Buyers
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Las Vegas offers diverse neighborhoods for every lifestyle and
-              budget. Whether you're seeking luxury estates in guard-gated
-              communities, homes near parks, trails, and recreation centers, or
-              new construction, Dr. Jan helps you match ZIP, commute, and square
-              footage. Here's a quick guide to listing medians and what each
-              area offers.
+              Las Vegas ZIPs are different maps. Listing medians below are from{" "}
+              {MARKET_SNAPSHOT_SOURCE} as of {MARKET_SNAPSHOT_AS_OF} — not a
+              CMA. Match commute, square footage, and HOA docs, not a slogan.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {neighborhoods.map((neighborhood) => (
-                <div
-                  key={neighborhood.name}
-                  className="bg-white rounded-lg p-4 border border-slate-200"
-                >
-                  <div className="flex justify-between items-center mb-2">
-                    <h3 className="font-bold text-slate-900">
-                      {neighborhood.name}
-                    </h3>
-                    <span className="text-blue-600 font-semibold">
-                      {neighborhood.price}
-                    </span>
-                  </div>
-                  <p className="text-slate-600 text-sm">
-                    {neighborhood.description}
-                  </p>
-                </div>
-              ))}
+              {neighborhoods.map((neighborhood) => {
+                const photo = getNeighborhoodImage(neighborhood.slug);
+                return (
+                  <Link
+                    key={neighborhood.slug}
+                    href={`/neighborhoods/${neighborhood.slug}`}
+                    className="overflow-hidden rounded-lg border border-slate-200 bg-white no-underline transition-shadow hover:border-blue-300 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+                  >
+                    <div className="relative h-32">
+                      <Image
+                        src={photo.src}
+                        alt={photo.alt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <div className="mb-2 flex items-center justify-between gap-2">
+                        <h3 className="font-bold text-slate-900">
+                          {neighborhood.name}
+                        </h3>
+                        <span className="text-right text-sm font-semibold text-blue-600">
+                          {neighborhood.price}
+                        </span>
+                      </div>
+                      <p className="text-sm text-slate-600">
+                        {neighborhood.description}
+                      </p>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
             <div className="text-center mt-6">
               <Link

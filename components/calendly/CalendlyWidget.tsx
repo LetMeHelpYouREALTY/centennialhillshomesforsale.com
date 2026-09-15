@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Script from "next/script";
 import { CALENDLY_SHOWING_URL } from "@/lib/contact";
+import { CALENDLY_WIDGET_JS, ensureCalendlyStylesheet } from "./load-calendly";
 import "./types";
 
 interface CalendlyWidgetProps {
@@ -18,6 +20,7 @@ export default function CalendlyWidget({
   const widgetRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    ensureCalendlyStylesheet();
     let cancelled = false;
     let intervalId: ReturnType<typeof setInterval> | undefined;
     let timeoutId: ReturnType<typeof setTimeout> | undefined;
@@ -64,11 +67,18 @@ export default function CalendlyWidget({
   }, [url, minWidth, height]);
 
   return (
-    <div
-      ref={widgetRef}
-      style={{ minWidth, height, width: "100%" }}
-      aria-busy="true"
-      aria-label="Schedule a showing with Dr. Jan Duffy"
-    />
+    <>
+      <Script
+        id="calendly-widget-js"
+        src={CALENDLY_WIDGET_JS}
+        strategy="lazyOnload"
+      />
+      <div
+        ref={widgetRef}
+        style={{ minWidth, height, width: "100%" }}
+        aria-busy="true"
+        aria-label="Schedule a showing with Dr. Jan Duffy"
+      />
+    </>
   );
 }

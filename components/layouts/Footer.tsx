@@ -185,25 +185,25 @@ export default function Footer() {
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <Link
                 href="/fair-housing"
-                className="text-slate-400 no-underline transition-colors hover:text-white"
+                className="inline-flex min-h-11 items-center text-slate-400 no-underline transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 Fair Housing
               </Link>
               <Link
                 href="/faq"
-                className="text-slate-400 no-underline transition-colors hover:text-white"
+                className="inline-flex min-h-11 items-center text-slate-400 no-underline transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 FAQ
               </Link>
               <Link
                 href="/security-policy"
-                className="text-slate-400 no-underline transition-colors hover:text-white"
+                className="inline-flex min-h-11 items-center text-slate-400 no-underline transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 Security
               </Link>
               <Link
                 href="/sitemap.xml"
-                className="text-slate-400 no-underline transition-colors hover:text-white"
+                className="inline-flex min-h-11 items-center text-slate-400 no-underline transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 Sitemap
               </Link>

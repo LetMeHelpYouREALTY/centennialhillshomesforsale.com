@@ -468,11 +468,11 @@ export default function SellersPage() {
                 },
                 {
                   q: "What are your commission rates?",
-                  a: "Commission structures are negotiable and competitive with other full-service brokerages. Dr. Jan offers transparent pricing and will walk you through all costs during your listing consultation. The value of BHHS marketing and negotiation typically results in higher sale prices that more than offset commission.",
+                  a: "Commission is negotiable. Dr. Jan walks through listing-side compensation, buyer-broker agreements, and net-sheet math on the consult. I will not claim marketing “typically more than offsets” the fee — your net is the CMA plus the offer, not a slogan.",
                 },
                 {
                   q: "Should I wait for prices to go higher?",
-                  a: "Current appreciation of 4.2% year-over-year suggests prices are stable with gradual increases. Timing the market is difficult—most sellers do better by listing when ready rather than waiting. Dr. Jan can provide a personalized market analysis to help you decide.",
+                  a: "UNKNOWN without a CMA on your street. I will not publish an unsourced year-over-year appreciation figure as if it were your house. Timing the market is a guess; listing when you are ready, priced to the live comps, is the plan I can actually run.",
                 },
                 {
                   q: "Do I need to be moved out before listing?",

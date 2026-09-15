@@ -100,7 +100,7 @@ export function generateRealEstateAgentSchema() {
     description: siteConfig.description,
     telephone: CTA_PHONE_E164,
     email: agentInfo.email,
-    priceRange: "$385K - $10M+",
+    priceRange: "$$",
     address: {
       "@type": "PostalAddress",
       streetAddress: officeInfo.address.street,

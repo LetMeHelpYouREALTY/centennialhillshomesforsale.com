@@ -59,7 +59,7 @@ export default function HeritageStonebridgePage() {
         },
         {
           heading: `Pricing as of ${MARKET_SNAPSHOT_AS_OF}`,
-          body: "Public range headlines of $400K–$750K are marketing bands, not a CMA. Sun City Summerlin’s realtor.com listing median is a nearby sample, not this HOA. I pull Heritage comps only. Confirm HOA (older $175–$220/month figures) on the resale package.",
+          body: "Public range headlines are marketing bands, not a CMA. Sun City Summerlin’s realtor.com listing median is a nearby sample, not this HOA. I pull Heritage comps only. Confirm HOA on the resale package.",
         },
         {
           heading: "Red Rock and Downtown Summerlin",

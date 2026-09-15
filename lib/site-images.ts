@@ -116,7 +116,7 @@ const NEIGHBORHOOD_IMAGE_MAP: Record<string, SiteImage> = {
   },
   "89144": {
     src: "/images/neighborhoods/89144.png",
-    alt: "Established Summerlin streetscape in ZIP 89144 Las Vegas",
+    alt: "Summerlin streetscape in ZIP 89144 Las Vegas",
   },
   henderson: {
     src: "/images/neighborhoods/henderson.png",

@@ -2,6 +2,8 @@
 
 import { useEffect } from "react";
 import Script from "next/script";
+import { CALENDLY_SHOWING_URL } from "@/lib/contact";
+import { CALENDLY_WIDGET_JS, ensureCalendlyStylesheet } from "./load-calendly";
 import "./types";
 
 interface CalendlyBadgeProps {
@@ -13,14 +15,14 @@ interface CalendlyBadgeProps {
 }
 
 export default function CalendlyBadge({
-  url = "https://calendly.com/drjanduffy/showing",
+  url = CALENDLY_SHOWING_URL,
   text = "Schedule time with me",
   color = "#0069ff",
   textColor = "#ffffff",
   branding = true,
 }: CalendlyBadgeProps) {
   useEffect(() => {
-    // Initialize badge widget when Calendly script is loaded
+    ensureCalendlyStylesheet();
     const initBadge = () => {
       if (window.Calendly) {
         window.Calendly.initBadgeWidget({
@@ -48,12 +50,9 @@ export default function CalendlyBadge({
 
   return (
     <>
-      <link
-        href="https://assets.calendly.com/assets/external/widget.css"
-        rel="stylesheet"
-      />
       <Script
-        src="https://assets.calendly.com/assets/external/widget.js"
+        id="calendly-widget-js"
+        src={CALENDLY_WIDGET_JS}
         strategy="lazyOnload"
         onLoad={() => {
           if (window.Calendly) {

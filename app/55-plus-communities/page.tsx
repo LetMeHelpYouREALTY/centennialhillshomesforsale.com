@@ -11,11 +11,8 @@ import {
   MapPin,
   HelpCircle,
   Sun,
-  Trophy,
   Palmtree,
   CheckCircle,
-  Waves,
-  Mountain,
   Star,
   ArrowRight,
 } from "lucide-react";
@@ -86,7 +83,7 @@ const faqSchema = {
       name: "What do HOA fees cover in 55+ communities?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "HOA fees in Las Vegas 55+ communities typically cover access to clubhouses, pools, fitness centers, golf courses, organized activities, landscaping, and exterior maintenance. Fees range from $150-$500/month depending on amenities. Some communities have separate golf memberships.",
+        text: "HOA fees in Las Vegas 55+ communities typically cover clubhouse access, pools, fitness, landscaping, and exterior maintenance. Golf memberships are often separate. I will not publish a $150–$500/month band as if it were your HOA — request the current budget, reserve study, and resale package.",
       },
     },
     {
@@ -139,13 +136,16 @@ const localBusinessSchema = {
   ],
 };
 
+const HOA_CONFIRM = "Confirm on resale docs";
+const LIVE_CMA = "Live CMA — call for comps";
+
 const communities = [
   {
     name: "Sun City Summerlin",
     slug: "sun-city-summerlin",
     location: "Summerlin, Las Vegas",
     ageRequirement: "55+ (at least one resident)",
-    hoaFees: "$155-$195/month",
+    hoaFees: HOA_CONFIRM,
     priceRange: `${formatUsd(LISTING_MEDIANS_USD.sunCitySummerlin)} listing median`,
     homes: "7,700+ homes",
     amenities: ["3 golf courses", "4 rec centers", "100+ clubs", "Pools"],
@@ -165,7 +165,7 @@ const communities = [
     slug: "sun-city-anthem",
     location: "Henderson",
     ageRequirement: "55+ (at least one resident)",
-    hoaFees: "$180-$230/month",
+    hoaFees: HOA_CONFIRM,
     priceRange: `${formatUsd(LISTING_MEDIANS_USD.sunCityAnthem)} listing median`,
     homes: "7,100+ homes",
     amenities: ["2 golf courses", "64K sf clubhouse", "80+ clubs", "Pools"],
@@ -184,18 +184,18 @@ const communities = [
     slug: "sun-city-aliante",
     location: "North Las Vegas",
     ageRequirement: "55+ (at least one resident)",
-    hoaFees: "$140-$175/month",
-    priceRange: "$280,000 - $550,000",
+    hoaFees: HOA_CONFIRM,
+    priceRange: `NLV city ${formatUsd(LISTING_MEDIANS_USD.northLasVegas)} is not this HOA`,
     homes: "2,800+ homes",
     amenities: ["Golf course", "Fitness center", "Pools", "Tennis"],
     highlights: [
-      "Most affordable Sun City option",
+      "North Las Vegas Sun City campus",
       "18-hole championship golf course",
-      "Brand new Aliante Casino nearby",
-      "Easy freeway access",
+      "Aliante Casino nearby",
+      "I-215 and US-95 access",
     ],
     description:
-      "The most affordable Sun City in Las Vegas with full amenities and great value.",
+      "Sun City Aliante is a North Las Vegas 55+ campus. Confirm live MLS vs the city listing median.",
     color: "blue",
   },
   {
@@ -203,8 +203,8 @@ const communities = [
     slug: "del-webb-lake-las-vegas",
     location: "Henderson (Lake Las Vegas)",
     ageRequirement: "55+ (at least one resident)",
-    hoaFees: "$200-$280/month",
-    priceRange: "$400,000 - $900,000",
+    hoaFees: HOA_CONFIRM,
+    priceRange: `${formatUsd(LISTING_MEDIANS_USD.lakeLasVegas)} area listing median (not the village alone)`,
     homes: "1,800+ homes",
     amenities: ["Lake access", "Resort pools", "Fitness", "Pickleball"],
     highlights: [
@@ -222,8 +222,8 @@ const communities = [
     slug: "heritage-stonebridge",
     location: "Summerlin",
     ageRequirement: "55+ (at least one resident)",
-    hoaFees: "$175-$220/month",
-    priceRange: "$400,000 - $750,000",
+    hoaFees: HOA_CONFIRM,
+    priceRange: LIVE_CMA,
     homes: "1,100+ homes",
     amenities: ["Clubhouse", "Pool & spa", "Fitness", "Social clubs"],
     highlights: [
@@ -241,14 +241,14 @@ const communities = [
     slug: "solera-anthem",
     location: "Henderson",
     ageRequirement: "55+ (all residents)",
-    hoaFees: "$170-$210/month",
-    priceRange: "$380,000 - $650,000",
+    hoaFees: HOA_CONFIRM,
+    priceRange: LIVE_CMA,
     homes: "1,200+ homes",
     amenities: ["Guard-gated", "Clubhouse", "Fitness", "Tennis"],
     highlights: [
-      "Guard-gated security",
-      "More intimate community size",
-      "Lower HOA than larger communities",
+      "Guard-gated entry",
+      "Smaller campus than Sun City Anthem",
+      "Confirm HOA vs larger Del Webb campuses",
       "Henderson location",
     ],
     description:
@@ -260,8 +260,8 @@ const communities = [
     slug: "trilogy-summerlin",
     location: "Summerlin",
     ageRequirement: "55+ (at least one resident)",
-    hoaFees: "$250-$350/month",
-    priceRange: "$500,000 - $1,100,000",
+    hoaFees: HOA_CONFIRM,
+    priceRange: LIVE_CMA,
     homes: "800+ homes",
     amenities: ["Farm-to-table dining", "Spa", "Fitness", "Resort pool"],
     highlights: [
@@ -279,18 +279,18 @@ const communities = [
     slug: null, // No dedicated page yet
     location: "Summerlin",
     ageRequirement: "55+ (at least one resident)",
-    hoaFees: "$140-$180/month",
-    priceRange: "$280,000 - $550,000",
+    hoaFees: HOA_CONFIRM,
+    priceRange: LIVE_CMA,
     homes: "2,300+ homes",
     amenities: ["Golf course", "Pools", "Fitness", "Social clubs"],
     highlights: [
-      "Most affordable Summerlin 55+ option",
+      "Summerlin 55+ campus west of the 215",
       "18-hole golf course",
       "Opened in the 1990s",
       "Golf, pools, and club calendar",
     ],
     description:
-      "Siena offers the Summerlin lifestyle at more accessible price points.",
+      "Siena is a Summerlin 55+ campus. Ask for a live CMA — I will not invent a price band.",
     color: "slate",
   },
 ];
@@ -324,7 +324,7 @@ const lifestyleBenefits = [
     icon: DollarSign,
     title: "Nevada Tax Advantages",
     description:
-      "No state income tax means more money in your pocket. Social Security, pensions, and investments tax-free.",
+      "Nevada has no state income tax on wages. Federal tax still applies. Confirm property tax, HOA, and insurance on the APN — not a “tax-free retirement” slogan.",
   },
   {
     icon: Sun,
@@ -467,13 +467,14 @@ export default function FiftyFiveCommunitiesPage() {
                         45 min
                       </div>
                       <div className="text-sm text-slate-600">
-                        Flight to See Family
+                        Direct flights to California
                       </div>
                     </div>
                   </div>
                   <p className="text-slate-600 italic">
-                    Sell your California home, buy a larger home in Las Vegas
-                    with cash to spare, and enjoy your retirement tax-free.
+                    Sell a California house and pair live Las Vegas 55+ comps
+                    before you assume cash left over. Nevada has no state income
+                    tax on wages; federal tax still applies.
                   </p>
                 </div>
               </div>
@@ -547,6 +548,12 @@ export default function FiftyFiveCommunitiesPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
               Las Vegas 55+ Communities
             </h2>
+            <PageHeroImage
+              src={PAGE_HERO_IMAGES.fiftyFivePlus.src}
+              alt={PAGE_HERO_IMAGES.fiftyFivePlus.alt}
+              size="section"
+              className="mx-auto mb-8 max-w-4xl"
+            />
             <p className="text-lg text-slate-600 text-center mb-8">
               Click "View Homes" to explore each community in detail
             </p>
@@ -604,10 +611,10 @@ export default function FiftyFiveCommunitiesPage() {
                     <div className="grid grid-cols-2 gap-4 mb-4">
                       <div>
                         <div className="text-xs text-slate-500 uppercase tracking-wide mb-1">
-                          Starting Price
+                          Listing snapshot
                         </div>
-                        <div className="font-bold text-slate-900">
-                          {community.priceRange.split(" - ")[0]}+
+                        <div className="font-bold text-slate-900 text-sm">
+                          {community.priceRange}
                         </div>
                       </div>
                       <div>
@@ -656,14 +663,14 @@ export default function FiftyFiveCommunitiesPage() {
                     {community.slug ? (
                       <Link
                         href={`/55-plus-communities/${community.slug}`}
-                        className="block text-center bg-blue-600 text-white py-3 px-4 rounded-md font-semibold hover:bg-blue-700 transition-colors"
+                        className="block min-h-11 text-center bg-blue-600 text-white py-3 px-4 rounded-md font-semibold hover:bg-blue-700 transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
                       >
                         View Homes in {community.name.split(" at ")[0]} →
                       </Link>
                     ) : (
                       <a
                         href="tel:+17022221964"
-                        className="block text-center bg-slate-600 text-white py-3 px-4 rounded-md font-semibold hover:bg-slate-700 transition-colors"
+                        className="block min-h-11 text-center bg-slate-600 text-white py-3 px-4 rounded-md font-semibold hover:bg-slate-700 transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
                       >
                         Call for {community.name} Info
                       </a>
