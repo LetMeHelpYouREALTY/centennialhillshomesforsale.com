@@ -8,6 +8,8 @@
 
 import { siteConfig, agentInfo, officeInfo, agentStats } from "./site-config";
 import { AGENT_PHOTO_PATH, FAVICON_32_PATH } from "./brand-assets";
+import { CTA_PHONE_E164, OFFICE_NAP, OPENING_HOURS_SPEC } from "./contact";
+import { OFFICE_PHOTO_PATH } from "./site-images";
 import { getPublicSiteUrl } from "./site-url";
 
 // ============================================================================
@@ -96,9 +98,9 @@ export function generateRealEstateAgentSchema() {
     ],
     url: BASE_URL,
     logo: AGENT_IMAGE_URL,
-    image: AGENT_IMAGE_URL,
+    image: [AGENT_IMAGE_URL, `${getPublicSiteUrl()}${OFFICE_PHOTO_PATH}`],
     description: siteConfig.description,
-    telephone: "+1-702-500-1942",
+    telephone: CTA_PHONE_E164,
     email: agentInfo.email,
     priceRange: "$385K - $10M+",
     address: {
@@ -114,6 +116,7 @@ export function generateRealEstateAgentSchema() {
       latitude: officeInfo.coordinates.lat,
       longitude: officeInfo.coordinates.lng,
     },
+    hasMap: OFFICE_NAP.mapsUrl,
     areaServed: [
       {
         "@type": "City",
@@ -138,22 +141,12 @@ export function generateRealEstateAgentSchema() {
         name: "Green Valley",
       },
     ],
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday",
-        ],
-        opens: "08:00",
-        closes: "20:00",
-      },
-    ],
+    openingHoursSpecification: OPENING_HOURS_SPEC.map((spec) => ({
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [...spec.dayOfWeek],
+      opens: spec.opens,
+      closes: spec.closes,
+    })),
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "Real Estate License",
@@ -167,7 +160,11 @@ export function generateRealEstateAgentSchema() {
       },
       identifier: agentInfo.license,
     },
-    sameAs: Object.values(socialProfiles),
+    sameAs: [
+      ...Object.values(socialProfiles),
+      OFFICE_NAP.mapsUrl,
+      OFFICE_NAP.reviewsUrl,
+    ],
     parentOrganization: {
       "@type": "Organization",
       "@id": `${BASE_URL}#parent-organization`,

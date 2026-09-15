@@ -18,6 +18,8 @@ export const INDEXABLE_PATHS: Array<{
   { path: "/market-insights", priority: 0.8, changeFrequency: "monthly" },
   { path: "/google-business", priority: 0.6, changeFrequency: "monthly" },
   { path: "/faq", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/fair-housing", priority: 0.4, changeFrequency: "monthly" },
+  { path: "/security-policy", priority: 0.3, changeFrequency: "monthly" },
   { path: "/buyers", priority: 0.8, changeFrequency: "monthly" },
   { path: "/sellers", priority: 0.8, changeFrequency: "monthly" },
   { path: "/luxury-homes", priority: 0.8, changeFrequency: "weekly" },

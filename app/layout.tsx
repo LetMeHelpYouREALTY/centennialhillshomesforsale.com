@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import { headers } from "next/headers";
@@ -14,6 +14,17 @@ import {
   ICON_192_PATH,
   OG_IMAGE_PATH,
 } from "@/lib/brand-assets";
+import Navbar from "@/components/layouts/Navbar";
+import Footer from "@/components/layouts/Footer";
+import { SkipLink } from "@/components/shared/SkipLink";
+import { SiteJsonLd } from "@/components/shared/SiteJsonLd";
+import { SiteBreadcrumbs } from "@/components/shared/SiteBreadcrumbs";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#1e3a8a",
+};
 
 export async function generateMetadata(): Promise<Metadata> {
   const domain = headers().get("x-domain") || "";
@@ -77,12 +88,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={GeistSans.className}>
-      <body>
-        {children}
+      <body className="overflow-x-hidden bg-white text-slate-900 antialiased">
+        <SkipLink />
+        <SiteJsonLd />
+        <Navbar />
+        <SiteBreadcrumbs />
+        <div id="main-content">{children}</div>
+        <Footer />
         <Analytics />
         <Script
           src="https://em.realscout.com/widgets/realscout-web-components.js"
           strategy="afterInteractive"
+        />
+        <link
+          rel="stylesheet"
+          href="https://assets.calendly.com/assets/external/widget.css"
+        />
+        <Script
+          src="https://assets.calendly.com/assets/external/widget.js"
+          strategy="lazyOnload"
         />
         <Script id="widget-tracker" strategy="lazyOnload">{`
           (function(w,i,d,g,e,t){w["WidgetTrackerObject"]=g;(w[g]=w[g]||function()

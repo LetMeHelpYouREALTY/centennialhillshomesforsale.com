@@ -23,7 +23,11 @@ interface SchemaScriptProps {
  * Server component for injecting JSON-LD structured data
  * Can accept either a single schema or multiple schemas
  */
-export default function SchemaScript({ schema, schemas, id }: SchemaScriptProps) {
+export default function SchemaScript({
+  schema,
+  schemas,
+  id,
+}: SchemaScriptProps) {
   // Determine the final schema to render
   let finalSchema: Record<string, unknown>;
 
@@ -65,7 +69,9 @@ export function BreadcrumbSchema({
       name: item.name,
       item: item.url.startsWith("http")
         ? item.url
-        : `${getPublicSiteUrl()}${item.url}`,
+        : item.url.startsWith("#") || item.url === ""
+          ? undefined
+          : `${getPublicSiteUrl()}${item.url}`,
     })),
   };
 
@@ -164,6 +170,7 @@ export function NeighborhoodSchema({
   latitude,
   longitude,
   containedIn = "Las Vegas",
+  pathPrefix = "/neighborhoods",
 }: {
   name: string;
   description: string;
@@ -171,12 +178,13 @@ export function NeighborhoodSchema({
   latitude?: number;
   longitude?: number;
   containedIn?: string;
+  pathPrefix?: "/neighborhoods" | "/55-plus-communities";
 }) {
   const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Place",
-    "@id": `${getPublicSiteUrl()}/neighborhoods/${slug}#place`,
-    name: `${name}, Las Vegas`,
+    "@id": `${getPublicSiteUrl()}${pathPrefix}/${slug}#place`,
+    name: `${name}, ${containedIn}`,
     description,
     address: {
       "@type": "PostalAddress",

@@ -1,9 +1,6 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
-  Phone,
   Search,
   FileText,
   Home,
@@ -19,11 +16,20 @@ import {
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { PageCTA } from "@/components/shared/PageCTA";
+import { PageHeroImage } from "@/components/shared/PageHeroImage";
+import { PAGE_HERO_IMAGES } from "@/lib/site-images";
+import {
+  formatUsd,
+  LISTING_MEDIANS_USD,
+  MARKET_SNAPSHOT_AS_OF,
+  MARKET_SNAPSHOT_SOURCE,
+} from "@/lib/market-snapshots";
 
 export const metadata: Metadata = {
   title: "Home Buying Guide Las Vegas | Berkshire Hathaway HomeServices",
   description:
-    "Looking to buy a home in Las Vegas? Dr. Jan Duffy with Berkshire Hathaway HomeServices Nevada Properties guides you through every step. Free buyer consultation. Call (702) 500-1942.",
+    "Looking to buy a home in Las Vegas? Dr. Jan Duffy with Berkshire Hathaway HomeServices Nevada Properties guides you through every step. Free buyer consultation. Call (702) 222-1964.",
   keywords: [
     "buy home Las Vegas",
     "Las Vegas home buyer",
@@ -42,7 +48,7 @@ const buyerSchema = {
   provider: {
     "@type": "RealEstateAgent",
     name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-    telephone: "+17025001942",
+    telephone: "+17022221964",
   },
   areaServed: "Las Vegas, Henderson, Summerlin, Clark County NV",
   serviceType: "Buyer Representation",
@@ -82,12 +88,36 @@ const buyingSteps = [
 ];
 
 const neighborhoods = [
-  { name: "Summerlin", price: "$625K", description: "Master-planned community with Red Rock views" },
-  { name: "Henderson", price: "$485K", description: "Family-friendly with low crime rates" },
-  { name: "Green Valley", price: "$520K", description: "Established with mature landscaping" },
-  { name: "The Ridges", price: "$2.5M", description: "Ultra-luxury guard-gated estates" },
-  { name: "North Las Vegas", price: "$385K", description: "Affordable new construction" },
-  { name: "Southern Highlands", price: "$750K", description: "Golf course community" },
+  {
+    name: "Summerlin",
+    price: "$625K",
+    description: "Master-planned community with Red Rock views",
+  },
+  {
+    name: "Henderson",
+    price: "$485K",
+    description: "Community-oriented with parks, trails, and civic amenities",
+  },
+  {
+    name: "Green Valley",
+    price: "$520K",
+    description: "Established with mature landscaping",
+  },
+  {
+    name: "The Ridges",
+    price: "$2.5M",
+    description: "Ultra-luxury guard-gated estates",
+  },
+  {
+    name: "North Las Vegas",
+    price: "$385K",
+    description: "Affordable new construction",
+  },
+  {
+    name: "Southern Highlands",
+    price: "$750K",
+    description: "Golf course community",
+  },
 ];
 
 export default function BuyersPage() {
@@ -97,8 +127,7 @@ export default function BuyersPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buyerSchema) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
+      <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -108,15 +137,31 @@ export default function BuyersPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Buy Your Las Vegas Home with Confidence
             </h1>
+            <PageHeroImage
+              src={PAGE_HERO_IMAGES.buyers.src}
+              alt={PAGE_HERO_IMAGES.buyers.alt}
+            />
             <p className="text-xl text-slate-600 mb-8">
-              When you work with a <strong>Berkshire Hathaway HomeServices</strong> buyer's agent,
-              you're backed by the most trusted name in real estate—and it costs you nothing.
-              The seller pays the commission, but the representation is yours.
+              When you work with a{" "}
+              <strong>Berkshire Hathaway HomeServices</strong> buyer&apos;s
+              agent, you get written advocacy for your side of the deal.
+              Compensation is negotiated in a buyer agreement — it may be paid
+              by the seller, the buyer, or a combination. I put the number in
+              writing before we tour.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
-              <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Free Buyer Representation</span>
-              <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Full MLS Access</span>
-              <span className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Expert Negotiation</span>
+              <span className="flex items-center">
+                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Written
+                Buyer Agreement
+              </span>
+              <span className="flex items-center">
+                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Full MLS
+                Access
+              </span>
+              <span className="flex items-center">
+                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Expert
+                Negotiation
+              </span>
             </div>
           </div>
 
@@ -124,13 +169,18 @@ export default function BuyersPage() {
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-3xl font-bold mb-4">Why You Need a Buyer's Agent</h2>
+                <h2 className="text-3xl font-bold mb-4">
+                  Why You Need a Buyer's Agent
+                </h2>
                 <p className="text-slate-300 mb-6">
-                  Here's what many buyers don't know: having your own agent costs you nothing. The
-                  seller pays the commission, but the representation is yours.{" "}
-                  <strong>Berkshire Hathaway HomeServices</strong> agents protect your interests,
-                  not the seller's. In a competitive market like Las Vegas, having expert 
-                  representation can mean the difference between winning your dream home and losing out.
+                  After the 2024 NAR practice changes, buyer-broker compensation
+                  is no longer an automatic MLS offer. We sign a written buyer
+                  agreement that states how I am paid. The seller may still
+                  contribute — that is negotiated, not assumed.{" "}
+                  <strong>Berkshire Hathaway HomeServices</strong> agents
+                  protect your interests, not the seller's. In a competitive
+                  market like Las Vegas, having expert representation can mean
+                  the difference between winning your dream home and losing out.
                 </p>
                 <ul className="space-y-2">
                   {[
@@ -150,10 +200,13 @@ export default function BuyersPage() {
               </div>
               <div className="bg-slate-800 rounded-lg p-8 text-center">
                 <Shield className="h-16 w-16 text-blue-400 mx-auto mb-4" />
-                <p className="text-2xl font-bold mb-2">Your Agent, Your Advocate</p>
+                <p className="text-2xl font-bold mb-2">
+                  Your Agent, Your Advocate
+                </p>
                 <p className="text-slate-400 mb-4">
-                  Dr. Jan Duffy works exclusively for your interests throughout the entire
-                  transaction—from the first showing to the closing table and beyond.
+                  Dr. Jan Duffy works exclusively for your interests throughout
+                  the entire transaction—from the first showing to the closing
+                  table and beyond.
                 </p>
                 <div className="text-sm text-slate-500">
                   Serving Las Vegas since 2008 | $127M+ in transactions
@@ -168,10 +221,11 @@ export default function BuyersPage() {
               The Home Buying Process in Las Vegas
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Buying a home is one of the most significant financial decisions you'll make. 
-              Understanding the process helps reduce stress and ensures you're prepared at each 
-              step. Here's what to expect when purchasing a home in Las Vegas with Dr. Jan Duffy 
-              and Berkshire Hathaway HomeServices.
+              Buying a home is one of the most significant financial decisions
+              you'll make. Understanding the process helps reduce stress and
+              ensures you're prepared at each step. Here's what to expect when
+              purchasing a home in Las Vegas with Dr. Jan Duffy and Berkshire
+              Hathaway HomeServices.
             </p>
             <div className="space-y-6">
               {buyingSteps.map((step, index) => {
@@ -191,7 +245,9 @@ export default function BuyersPage() {
                         <span className="bg-blue-600 text-white text-sm font-bold px-3 py-1 rounded-full">
                           Step {index + 1}
                         </span>
-                        <h3 className="text-xl font-bold text-slate-900">{step.title}</h3>
+                        <h3 className="text-xl font-bold text-slate-900">
+                          {step.title}
+                        </h3>
                       </div>
                       <p className="text-slate-600">{step.description}</p>
                     </div>
@@ -207,10 +263,12 @@ export default function BuyersPage() {
               Las Vegas Neighborhoods for Home Buyers
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Las Vegas offers diverse neighborhoods for every lifestyle and budget. Whether you're 
-              seeking luxury estates in guard-gated communities, family homes near top-rated schools, 
-              or affordable new construction, Dr. Jan helps you find the perfect neighborhood. Here's 
-              a quick guide to median prices and what each area offers.
+              Las Vegas offers diverse neighborhoods for every lifestyle and
+              budget. Whether you're seeking luxury estates in guard-gated
+              communities, family homes near parks, trails, and recreation
+              centers, or affordable new construction, Dr. Jan helps you find
+              the perfect neighborhood. Here's a quick guide to median prices
+              and what each area offers.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {neighborhoods.map((neighborhood) => (
@@ -219,10 +277,16 @@ export default function BuyersPage() {
                   className="bg-white rounded-lg p-4 border border-slate-200"
                 >
                   <div className="flex justify-between items-center mb-2">
-                    <h3 className="font-bold text-slate-900">{neighborhood.name}</h3>
-                    <span className="text-blue-600 font-semibold">{neighborhood.price}</span>
+                    <h3 className="font-bold text-slate-900">
+                      {neighborhood.name}
+                    </h3>
+                    <span className="text-blue-600 font-semibold">
+                      {neighborhood.price}
+                    </span>
                   </div>
-                  <p className="text-slate-600 text-sm">{neighborhood.description}</p>
+                  <p className="text-slate-600 text-sm">
+                    {neighborhood.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -231,7 +295,8 @@ export default function BuyersPage() {
                 href="/neighborhoods"
                 className="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center"
               >
-                Explore All Neighborhoods <ArrowRight className="h-4 w-4 ml-2" />
+                Explore All Neighborhoods{" "}
+                <ArrowRight className="h-4 w-4 ml-2" />
               </Link>
             </div>
           </section>
@@ -242,10 +307,11 @@ export default function BuyersPage() {
               Specialized Guidance for Every Buyer
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Different buyers have different needs. A first-time buyer needs education and 
-              hand-holding through the process. A California relocator needs tax guidance and 
-              neighborhood matching. A luxury buyer needs discretion and access. Dr. Jan Duffy 
-              tailors her approach to match your specific situation and goals.
+              Different buyers have different needs. A first-time buyer needs
+              education and hand-holding through the process. A California
+              relocator needs tax guidance and neighborhood matching. A luxury
+              buyer needs discretion and access. Dr. Jan Duffy tailors her
+              approach to match your specific situation and goals.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               <Link
@@ -257,10 +323,13 @@ export default function BuyersPage() {
                   California Relocators
                 </h3>
                 <p className="text-slate-600 text-sm mb-3">
-                  0% state income tax, 40-60% lower home prices. See what your CA equity buys in 
-                  Las Vegas. Dr. Jan specializes in helping California families transition to Nevada.
+                  0% state income tax, 40-60% lower home prices. See what your
+                  CA equity buys in Las Vegas. Dr. Jan specializes in helping
+                  California families transition to Nevada.
                 </p>
-                <span className="text-blue-600 font-semibold text-sm">Learn More →</span>
+                <span className="text-blue-600 font-semibold text-sm">
+                  Learn More →
+                </span>
               </Link>
               <Link
                 href="/buyers/first-time-buyers"
@@ -271,10 +340,13 @@ export default function BuyersPage() {
                   First-Time Buyers
                 </h3>
                 <p className="text-slate-600 text-sm mb-3">
-                  Down payment assistance programs, FHA/VA loans, and builder incentives explained. 
-                  Step-by-step guidance through your first home purchase.
+                  Down payment assistance programs, FHA/VA loans, and builder
+                  incentives explained. Step-by-step guidance through your first
+                  home purchase.
                 </p>
-                <span className="text-blue-600 font-semibold text-sm">Learn More →</span>
+                <span className="text-blue-600 font-semibold text-sm">
+                  Learn More →
+                </span>
               </Link>
               <Link
                 href="/buyers/luxury-homes-las-vegas"
@@ -285,10 +357,13 @@ export default function BuyersPage() {
                   Luxury Home Buyers
                 </h3>
                 <p className="text-slate-600 text-sm mb-3">
-                  $1M+ properties with discrete service. The Ridges, MacDonald Highlands, Southern 
-                  Highlands, and Las Vegas Strip views. Off-market opportunities available.
+                  $1M+ properties with discrete service. The Ridges, MacDonald
+                  Highlands, Southern Highlands, and Las Vegas Strip views.
+                  Off-market opportunities available.
                 </p>
-                <span className="text-blue-600 font-semibold text-sm">Learn More →</span>
+                <span className="text-blue-600 font-semibold text-sm">
+                  Learn More →
+                </span>
               </Link>
             </div>
           </section>
@@ -299,10 +374,11 @@ export default function BuyersPage() {
               Why Buy with Berkshire Hathaway HomeServices
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Not all real estate agents are created equal. When you choose a Berkshire Hathaway 
-              HomeServices agent, you're choosing the only real estate brand backed by Warren 
-              Buffett's Berkshire Hathaway Inc.—a name synonymous with trust, ethical standards, 
-              and financial strength.
+              Not all real estate agents are created equal. When you choose a
+              Berkshire Hathaway HomeServices agent, you're choosing the only
+              real estate brand backed by Warren Buffett's Berkshire Hathaway
+              Inc.—a name synonymous with trust, ethical standards, and
+              financial strength.
             </p>
             <div className="grid md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -318,25 +394,33 @@ export default function BuyersPage() {
                 <div className="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Users className="h-7 w-7 text-blue-600" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">Global Network</h3>
+                <h3 className="font-bold text-slate-900 mb-2">
+                  Global Network
+                </h3>
                 <p className="text-slate-600 text-sm">
-                  50,000+ agents worldwide for seamless relocations and referrals
+                  50,000+ agents worldwide for seamless relocations and
+                  referrals
                 </p>
               </div>
               <div className="text-center">
                 <div className="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3">
                   <MapPin className="h-7 w-7 text-blue-600" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">Local Expertise</h3>
+                <h3 className="font-bold text-slate-900 mb-2">
+                  Local Expertise
+                </h3>
                 <p className="text-slate-600 text-sm">
-                  Dr. Jan has served Las Vegas since 2008 with $127M+ in transactions
+                  Dr. Jan has served Las Vegas since 2008 with $127M+ in
+                  transactions
                 </p>
               </div>
               <div className="text-center">
                 <div className="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3">
                   <TrendingUp className="h-7 w-7 text-blue-600" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">Expert Negotiation</h3>
+                <h3 className="font-bold text-slate-900 mb-2">
+                  Expert Negotiation
+                </h3>
                 <p className="text-slate-600 text-sm">
                   500+ successful transactions mean proven negotiation skills
                 </p>
@@ -348,13 +432,16 @@ export default function BuyersPage() {
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-slate-50 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "My job isn't just to show you houses—it's to make sure you don't overpay, that you
-                understand what you're buying, and that you're protected through every step of the
-                transaction. That's what Berkshire Hathaway HomeServices representation means. I treat 
-                every client like family and won't stop until we find the right home for your needs."
+                "My job isn't just to show you houses—it's to make sure you
+                don't overpay, that you understand what you're buying, and that
+                you're protected through every step of the transaction. That's
+                what Berkshire Hathaway HomeServices representation means. I
+                treat every client like family and won't stop until we find the
+                right home for your needs."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, BHHS Nevada Properties | Serving Las Vegas Since 2008
+                — Dr. Jan Duffy, BHHS Nevada Properties | Serving Las Vegas
+                Since 2008
               </cite>
             </div>
           </section>
@@ -362,29 +449,44 @@ export default function BuyersPage() {
           {/* Market Stats */}
           <section className="mb-16 bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-4 text-center">
-              Las Vegas Buyer Market Statistics | January 2026
+              Las Vegas Buyer Listing Snapshot | {MARKET_SNAPSHOT_AS_OF}
             </h2>
             <p className="text-blue-100 text-center max-w-3xl mx-auto mb-8">
-              Understanding the current market helps you make informed decisions about timing, 
-              pricing, and negotiation strategies. Here's a snapshot of what buyers are facing 
-              in the Las Vegas market right now.
+              {MARKET_SNAPSHOT_SOURCE}. Listing medians are not a CMA and are
+              not days-on-market. Ask for a live pull before you bid.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold mb-1">$450K</div>
-                <div className="text-blue-200 text-sm">Median Home Price</div>
+                <div className="text-3xl font-bold mb-1">
+                  {formatUsd(LISTING_MEDIANS_USD.lasVegas)}
+                </div>
+                <div className="text-blue-200 text-sm">
+                  Las Vegas listing median
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-1">4,850</div>
-                <div className="text-blue-200 text-sm">Active Listings</div>
+                <div className="text-3xl font-bold mb-1">
+                  {formatUsd(LISTING_MEDIANS_USD.hendersonListing)}
+                </div>
+                <div className="text-blue-200 text-sm">
+                  Henderson listing median
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-1">28 Days</div>
-                <div className="text-blue-200 text-sm">Avg. Days on Market</div>
+                <div className="text-3xl font-bold mb-1">
+                  {formatUsd(LISTING_MEDIANS_USD.centennialHills)}
+                </div>
+                <div className="text-blue-200 text-sm">
+                  Centennial Hills listing median
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-1">+4.2%</div>
-                <div className="text-blue-200 text-sm">Year-Over-Year</div>
+                <div className="text-3xl font-bold mb-1">
+                  {formatUsd(LISTING_MEDIANS_USD.northLasVegas)}
+                </div>
+                <div className="text-blue-200 text-sm">
+                  North Las Vegas listing median
+                </div>
               </div>
             </div>
           </section>
@@ -395,8 +497,9 @@ export default function BuyersPage() {
               Frequently Asked Questions About Buying in Las Vegas
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Get answers to the most common questions from Las Vegas home buyers. If you don't 
-              see your question here, call Dr. Jan Duffy at (702) 500-1942 for a free consultation.
+              Get answers to the most common questions from Las Vegas home
+              buyers. If you don't see your question here, call Dr. Jan Duffy at
+              (702) 222-1964 for a free consultation.
             </p>
             <div className="space-y-4">
               {[
@@ -421,8 +524,8 @@ export default function BuyersPage() {
                   a: "The Las Vegas market is moderately competitive with 2.1 months of inventory—a slight seller's market. Well-priced homes in desirable areas like Summerlin and Henderson often receive multiple offers within the first week. Having a pre-approval and experienced agent gives you a significant advantage.",
                 },
                 {
-                  q: "What are the best neighborhoods for families in Las Vegas?",
-                  a: "Summerlin, Henderson (Green Valley, Inspirada), and Centennial Hills are top choices for families, offering excellent schools, parks, and community amenities. Dr. Jan can match you with the right neighborhood based on your priorities—schools, commute, budget, and lifestyle.",
+                  q: "Which neighborhoods have parks, trails, and nearby campuses?",
+                  a: "Summerlin, Henderson (Green Valley, Inspirada), and Centennial Hills are compared on parks, trail miles, commute times, and named campuses. Dr. Jan matches the street to those priorities.",
                 },
               ].map((faq, index) => (
                 <div key={index} className="bg-slate-50 rounded-lg p-6">
@@ -433,40 +536,17 @@ export default function BuyersPage() {
             </div>
           </section>
 
-          {/* CTA */}
-          <section className="text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Find Your Las Vegas Home?</h2>
-            <p className="text-xl text-slate-300 mb-8">
-              Questions about buying in Las Vegas? Call or text Dr. Jan Duffy for a free buyer
-              consultation. Get expert guidance backed by Berkshire Hathaway HomeServices—the 
-              seller pays the commission, so representation is free for you.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-slate-700 hover:bg-slate-600 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
-              >
-                Schedule Consultation
-              </Link>
-            </div>
-            <p className="mt-4 text-slate-400 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
-          </section>
+          <PageCTA
+            headline="Ready to tour Las Vegas listings?"
+            subheadline="Call Dr. Jan Duffy for a buyer consult. Representation is typically paid by the seller under a listing agreement — confirm current compensation in writing."
+            className="rounded-2xl"
+          />
         </div>
-
-        {/* Last Updated */}
-        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
+        <p className="mt-8 text-center text-sm text-slate-500">
+          Last updated: September 2026
+        </p>
       </main>
       <RealScoutListings />
-      <Footer />
     </>
   );
 }

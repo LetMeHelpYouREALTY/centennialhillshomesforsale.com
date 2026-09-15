@@ -30,6 +30,7 @@
     "cloudflare:deploy": "wrangler deploy",
     "cloudflare:pages": "npx @cloudflare/next-on-pages",
     "cloudflare:build": "npm run cloudflare:pages",
+    "cloudflare:images": "node scripts/upload-cloudflare-images.mjs",
     "build:cloudflare": "npx @cloudflare/next-on-pages"
   },
   "dependencies": {

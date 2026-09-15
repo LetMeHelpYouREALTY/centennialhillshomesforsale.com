@@ -1,24 +1,23 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "@/components/layouts/Navbar";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
-import ReviewsSection from "@/components/sections/ReviewsSection";
-import FAQSection from "@/components/sections/FAQSection";
-import Footer from "@/components/layouts/Footer";
-import {
-  Phone,
-  Home as HomeIcon,
-  TrendingUp,
-  Shield,
-  Users,
-} from "lucide-react";
+import ReviewsWithSchema from "@/components/sections/ReviewsWithSchema";
+import FAQWithSchema from "@/components/sections/FAQWithSchema";
+import { PageCTA } from "@/components/shared/PageCTA";
+import { Phone } from "lucide-react";
 import { getPageDomainConfig } from "@/lib/get-domain-config";
 import { getCanonicalUrl, getRequestOrigin } from "@/lib/site-url";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import { AGENT_PHOTO_PATH } from "@/lib/brand-assets";
 import { CTA_PHONE, CTA_TEL, OFFICE_NAP } from "@/lib/contact";
+import {
+  formatUsd,
+  LISTING_MEDIANS_USD,
+  MARKET_SNAPSHOT_AS_OF,
+  MARKET_SNAPSHOT_SOURCE,
+} from "@/lib/market-snapshots";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -92,7 +91,6 @@ export default async function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
-      <Navbar />
       <main>
         <section className="relative overflow-hidden bg-slate-900 py-24 text-white md:py-32">
           <Image
@@ -163,7 +161,7 @@ export default async function Home() {
                     href={CTA_TEL}
                     className="inline-flex items-center justify-center rounded-md bg-blue-600 px-5 py-3 font-semibold text-white hover:bg-blue-700"
                   >
-                    <Phone className="mr-2 h-4 w-4" />
+                    <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                     Call {CTA_PHONE}
                   </a>
                   <Link
@@ -204,52 +202,6 @@ export default async function Home() {
           </div>
         </section>
 
-        <section className="bg-white py-8 md:py-12">
-          <div className="container mx-auto px-4">
-            <div className="mx-auto mb-12 max-w-4xl text-center">
-              <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl">
-                Why work with Dr. Jan Duffy?
-              </h2>
-              <p className="text-lg text-slate-600">
-                Berkshire Hathaway HomeServices Nevada Properties — local
-                closings with a national brand behind the contract.
-              </p>
-            </div>
-            <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2 lg:grid-cols-4">
-              {[
-                {
-                  icon: Shield,
-                  title: "Trusted brand",
-                  desc: "Berkshire Hathaway HomeServices Nevada Properties — documented process, not a kiosk script.",
-                },
-                {
-                  icon: Users,
-                  title: "50K+ network",
-                  desc: "Referral coverage when the other side of the move is out of state.",
-                },
-                {
-                  icon: TrendingUp,
-                  title: "$127M+ sold",
-                  desc: "Closed volume across Las Vegas neighborhoods since 2008.",
-                },
-                {
-                  icon: HomeIcon,
-                  title: "Full service",
-                  desc: "Buying, selling, 55+, luxury, and new construction — one agent of record.",
-                },
-              ].map(({ icon: Icon, title, desc }) => (
-                <div key={title} className="p-6 text-center">
-                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 p-4">
-                    <Icon className="h-8 w-8 text-blue-600" />
-                  </div>
-                  <h3 className="mb-2 text-lg font-bold">{title}</h3>
-                  <p className="text-sm text-slate-600">{desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="bg-slate-900 py-16 text-white">
           <div className="container mx-auto px-4">
             <div className="mb-10 text-center">
@@ -257,19 +209,24 @@ export default async function Home() {
                 Centennial Hills listing snapshot
               </h2>
               <p className="text-slate-400">
-                Neighborhood listing median about $525,000 as of June 2026
-                (realtor.com Centennial Hills report). Days on market and count
-                move weekly — ask for a live pull.
+                Neighborhood listing median{" "}
+                {formatUsd(LISTING_MEDIANS_USD.centennialHills)} as of{" "}
+                {MARKET_SNAPSHOT_AS_OF} ({MARKET_SNAPSHOT_SOURCE}). Days on
+                market and inventory move weekly — ask for a live pull.
               </p>
             </div>
             <div className="mx-auto grid max-w-4xl grid-cols-2 gap-8 md:grid-cols-4">
               {[
                 {
-                  value: "$525K",
+                  value: formatUsd(LISTING_MEDIANS_USD.centennialHills),
                   label: "Listing median",
-                  sub: "June 2026 report",
+                  sub: MARKET_SNAPSHOT_AS_OF,
                 },
-                { value: "48", label: "Median DOM", sub: "Same report" },
+                {
+                  value: formatUsd(LISTING_MEDIANS_USD.lasVegas),
+                  label: "LV city listing median",
+                  sub: "Same source",
+                },
                 {
                   value: "89149",
                   label: "Core ZIP",
@@ -305,39 +262,13 @@ export default async function Home() {
 
         <RealScoutListings />
         <WhyChooseUs />
-        <ReviewsSection />
-        <FAQSection />
-
-        <section className="bg-blue-600 py-16 text-white md:py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-              {config.ctaHeadline}
-            </h2>
-            <p className="mx-auto mb-8 max-w-2xl text-xl text-blue-100">
-              {config.ctaSubheadline}
-            </p>
-            <div className="flex flex-col justify-center gap-4 sm:flex-row">
-              <a
-                href={CTA_TEL}
-                className="inline-flex items-center justify-center rounded-md bg-white px-8 py-4 text-lg font-bold text-blue-600 transition-colors hover:bg-blue-50"
-              >
-                <Phone className="mr-2 h-5 w-5" />
-                Call {CTA_PHONE}
-              </a>
-              <Link
-                href="/contact"
-                className="inline-block rounded-md bg-blue-700 px-8 py-4 text-lg font-bold text-white transition-colors hover:bg-blue-800"
-              >
-                Send a message
-              </Link>
-            </div>
-            <p className="mt-6 text-sm text-blue-200">
-              {OFFICE_NAP.full} · License S.0197614.LLC
-            </p>
-          </div>
-        </section>
+        <ReviewsWithSchema />
+        <FAQWithSchema />
+        <PageCTA
+          headline={config.ctaHeadline}
+          subheadline={config.ctaSubheadline}
+        />
       </main>
-      <Footer />
     </>
   );
 }

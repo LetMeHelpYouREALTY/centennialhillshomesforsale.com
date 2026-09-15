@@ -18,24 +18,24 @@ export interface GBPPost {
 // Template posts - Rotate these weekly
 export const gbpPostTemplates: GBPPost[] = [
   {
-    id: "market-update-jan-2026",
+    id: "market-update-sep-2026",
     type: "update",
-    title: "Las Vegas Real Estate Market Update - January 2026",
-    content: `The Las Vegas housing market remains strong heading into 2026! Here's what buyers and sellers need to know:
+    title: "Las Vegas Real Estate Market Update - September 2026",
+    content: `Las Vegas listing snapshot from realtor.com local market pages retrieved 2026-09-14 (listing medians, not a CMA):
 
-📊 Median home price: $450,000 (+4.2% YoY)
-🏠 Active listings: 4,850 homes
-⏱️ Average days on market: 28 days
-📈 Inventory: 2.1 months (seller's market)
+📊 Las Vegas city median listing: $479,000
+🏠 Henderson listing median: $534,950 (sold median $485,000)
+📍 Centennial Hills listing median: $514,500
+🧭 North Las Vegas listing median: $439,990
 
-Whether you're buying your first home in Henderson, selling in Summerlin, or looking at 55+ communities like Sun City, now is a great time to make your move.
+Days on market and inventory move weekly — ask for a live pull before you bid or list.
 
-Call Dr. Jan Duffy at (702) 500-1942 for a free market analysis of your home or neighborhood.`,
+Call Dr. Jan Duffy at (702) 222-1964 for comps on a specific street.`,
     cta: {
       text: "Get Free Market Analysis",
       url: "https://heyberkshire.com/home-valuation",
     },
-    publishDate: "2026-01-20",
+    publishDate: "2026-09-14",
     keywords: [
       "Las Vegas real estate",
       "Henderson homes",
@@ -57,7 +57,7 @@ Call Dr. Jan Duffy at (702) 500-1942 for a free market analysis of your home or 
 
 A $1.2M California home could buy you a luxury property in Summerlin or The Ridges. Dr. Jan Duffy specializes in California-to-Nevada relocations and can help you maximize your equity.
 
-Call (702) 500-1942 for a free California equity comparison.`,
+Call (702) 222-1964 for a free California equity comparison.`,
     cta: {
       text: "California Relocation Guide",
       url: "https://heyberkshire.com/buyers/california-relocator",
@@ -84,7 +84,7 @@ Call (702) 500-1942 for a free California equity comparison.`,
 
 Each offers different amenities, price points, and lifestyles. Dr. Jan Duffy specializes in 55+ communities and can help you find the perfect fit.
 
-Schedule a community tour: (702) 500-1942`,
+Schedule a community tour: (702) 222-1964`,
     cta: {
       text: "Explore 55+ Communities",
       url: "https://heyberkshire.com/55-plus-communities",
@@ -116,7 +116,7 @@ Popular first-time buyer neighborhoods:
 - Mountains Edge (median $475K)
 - Centennial Hills (median $495K)
 
-Call (702) 500-1942 to start your homeownership journey.`,
+Call (702) 222-1964 to start your homeownership journey.`,
     cta: {
       text: "First-Time Buyer Guide",
       url: "https://heyberkshire.com/buyers/first-time-buyers",
@@ -147,7 +147,7 @@ Current seller stats:
 ⏱️ 28 days average time to sell
 💰 98.5% list-to-sale ratio
 
-Get a free home valuation from Dr. Jan Duffy: (702) 500-1942`,
+Get a free home valuation from Dr. Jan Duffy: (702) 222-1964`,
     cta: {
       text: "Get Free Home Valuation",
       url: "https://heyberkshire.com/home-valuation",
@@ -178,7 +178,7 @@ Why luxury buyers choose Las Vegas:
 ✅ World-class dining, entertainment, golf
 ✅ 40-60% lower than comparable CA/NY properties
 
-Confidential luxury home search: (702) 500-1942`,
+Confidential luxury home search: (702) 222-1964`,
     cta: {
       text: "Luxury Home Search",
       url: "https://heyberkshire.com/buyers/luxury-homes-las-vegas",
@@ -235,7 +235,7 @@ ${clientName}, thank you for sharing your experience. I take all feedback seriou
 
 ${resolution}
 
-Real estate transactions can be complex, and I'm committed to learning from every experience. If you'd like to discuss this further, please call me directly at (702) 500-1942.
+Real estate transactions can be complex, and I'm committed to learning from every experience. If you'd like to discuss this further, please call me directly at (702) 222-1964.
 
 - Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
 `,

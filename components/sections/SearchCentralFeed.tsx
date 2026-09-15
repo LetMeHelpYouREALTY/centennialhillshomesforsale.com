@@ -23,7 +23,20 @@ function formatPubDate(value: string): string {
 
 export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
   if (items.length === 0) {
-    return null;
+    return (
+      <section className="mb-16 max-w-5xl mx-auto">
+        <h2 className="text-3xl font-bold text-slate-900 mb-4">
+          Google Search Central, applied to this site
+        </h2>
+        <p className="text-slate-700">
+          The Search Central feed is unavailable right now. Call{" "}
+          <a href={CTA_TEL} className="font-semibold text-blue-700">
+            {CTA_PHONE}
+          </a>{" "}
+          for a live Centennial Hills listing pull.
+        </p>
+      </section>
+    );
   }
 
   return (
@@ -60,7 +73,12 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
               key={item.link}
               className="bg-white border border-slate-200 rounded-xl overflow-hidden"
             >
-              <a href={item.link} rel="noopener noreferrer" className="block">
+              <a
+                href={item.link}
+                rel="noopener noreferrer"
+                target="_blank"
+                className="block"
+              >
                 <img
                   src={image}
                   alt={item.title}
@@ -78,6 +96,7 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
                   <a
                     href={item.link}
                     rel="noopener noreferrer"
+                    target="_blank"
                     className="hover:text-blue-700"
                   >
                     {item.title}

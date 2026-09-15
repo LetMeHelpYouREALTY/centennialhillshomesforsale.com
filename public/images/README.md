@@ -1,13 +1,22 @@
 # Image Assets Guide
 
+Git under `public/images/` is the backup source of truth. Cloudflare Images is
+the optional CDN: set `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_API_TOKEN`,
+`NEXT_PUBLIC_CLOUDFLARE_IMAGES_ENABLED=true`, and
+`NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH`, then run `npm run cloudflare:images`.
+
+Custom Cloudflare ids match the git path with slashes turned into hyphens
+(`images/hero/buyers.png` → `images-hero-buyers`).
+
 ## Folder Structure
 
 ```
 images/
-├── hero/           # Homepage hero backgrounds
+├── hero/           # Topic and hub H1 heroes
+├── gbp/            # Office photos that support Google Business / Maps
 ├── agent/          # Dr. Jan Duffy photos
 ├── properties/     # Listing photos
-├── neighborhoods/  # Area/community photos
+├── neighborhoods/  # Area/community photos (H1/H2 cards)
 ├── testimonials/   # Client headshots
 └── logos/          # Brand assets
 ```
@@ -16,43 +25,30 @@ images/
 
 | Folder | Size | Format | Notes |
 |--------|------|--------|-------|
-| hero/ | 1920x1080+ | WebP, JPG | 16:9 ratio, compress <200KB |
+| hero/ | 1920x1080+ | PNG, WebP | 16:9, heading-matched |
+| gbp/ | 1600x900+ | PNG, WebP | Office / Maps support |
 | agent/ | 400x400+ | WebP, JPG | Square, professional headshot |
 | properties/ | 1200x800+ | WebP, JPG | Landscape, MLS-quality |
-| neighborhoods/ | 1200x800+ | WebP, JPG | Scenic community shots |
+| neighborhoods/ | 1200x800+ | PNG, WebP | Unique to the H1 community |
 | testimonials/ | 200x200 | WebP, JPG | Square, optional |
 | logos/ | Various | PNG, SVG | Transparent background |
 
 ## Naming Conventions
 
-- Use lowercase with hyphens: `summerlin-aerial.webp`
-- Be descriptive: `dr-jan-duffy-headshot.jpg`
-- Include size if multiple: `hero-desktop.webp`, `hero-mobile.webp`
-
-## Image Optimization
-
-Before uploading, optimize images:
-
-1. **Online tools**: [Squoosh](https://squoosh.app), [TinyPNG](https://tinypng.com)
-2. **CLI**: `npx @squoosh/cli --webp '{"quality":80}' image.jpg`
-3. **Target**: <200KB for hero, <100KB for thumbnails
+- Use lowercase with hyphens: `summerlin.png`
+- Match the page H1 (community, service, or office)
+- Do not reuse one neighborhood photo for a different city
 
 ## Usage in Code
 
 ```tsx
-import Image from 'next/image'
+import { PageHeroImage } from "@/components/shared/PageHeroImage";
+import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
 
-<Image 
-  src="/images/hero/las-vegas-skyline.webp"
-  alt="Las Vegas skyline at sunset"
-  width={1920}
-  height={1080}
-  priority // for above-fold images
+<PageHeroImage
+  src={PAGE_HERO_IMAGES.buyers.src}
+  alt={PAGE_HERO_IMAGES.buyers.alt}
 />
 ```
 
-## Notes
-
-- Next.js auto-optimizes images via `next/image`
-- WebP preferred for web (30% smaller than JPEG)
-- Always include descriptive alt text for SEO/accessibility
+Alt text must name the place or service in the H1 (location + property type).

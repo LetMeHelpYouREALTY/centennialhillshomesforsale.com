@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
+import { formatUsd, LISTING_MEDIANS_USD } from "@/lib/market-snapshots";
 
 export const metadata: Metadata = {
   title: "Summerlin West Homes for Sale | 89138 Real Estate",
@@ -17,6 +18,7 @@ export default function SummerlinWestPage() {
   return (
     <NeighborhoodGuide
       name="Summerlin West"
+      slug="summerlin-west"
       h1="Summerlin West Homes for Sale (89138)"
       intro="Summerlin West is the later Howard Hughes build-out on the far west side of the master plan, primarily ZIP 89138. It is not Centennial Hills and it is not Tournament Hills."
       zipCodes={["89138"]}
@@ -24,9 +26,12 @@ export default function SummerlinWestPage() {
       imageSrc="/images/neighborhoods/summerlin.png"
       imageAlt="West Summerlin desert foothills and newer residential streets in ZIP 89138"
       stats={[
+        {
+          value: formatUsd(LISTING_MEDIANS_USD.summerlinWest),
+          label: "Median listing",
+        },
         { value: "89138", label: "Primary ZIP" },
         { value: "Newer", label: "Housing stock" },
-        { value: "HH", label: "Master plan" },
         { value: "Red Rock", label: "Trail access" },
       ]}
       sections={[
@@ -62,9 +67,15 @@ export default function SummerlinWestPage() {
       ]}
       related={[
         { href: "/neighborhoods/89138", label: "89138 ZIP homes for sale" },
-        { href: "/neighborhoods/tournament-hills", label: "Tournament Hills Summerlin" },
+        {
+          href: "/neighborhoods/tournament-hills",
+          label: "Tournament Hills Summerlin",
+        },
         { href: "/neighborhoods/89144", label: "89144 Summerlin homes" },
-        { href: "/55-plus-communities/sun-city-summerlin", label: "Sun City Summerlin homes" },
+        {
+          href: "/55-plus-communities/sun-city-summerlin",
+          label: "Sun City Summerlin homes",
+        },
       ]}
       lastUpdated="September 2026"
     />

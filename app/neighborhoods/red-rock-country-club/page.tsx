@@ -5,13 +5,18 @@ export const metadata: Metadata = {
   title: "Red Rock Country Club Homes | Summerlin Golf Community",
   description:
     "Red Rock Country Club homes for sale in Summerlin — two-course golf community. Private tours with Dr. Jan Duffy. Call 702-222-1964.",
-  keywords: ["red rock country club homes", "red rock country club summerlin", "summerlin golf homes"],
+  keywords: [
+    "red rock country club homes",
+    "red rock country club summerlin",
+    "summerlin golf homes",
+  ],
 };
 
 export default function RedRockCountryClubPage() {
   return (
     <NeighborhoodGuide
       name="Red Rock Country Club"
+      slug="red-rock-country-club"
       h1="Red Rock Country Club Homes in Summerlin"
       intro="Red Rock Country Club is a golf community in Summerlin (89135), with two courses and a mix of attached and detached product. It is not Centennial Hills and it is not Red Rock Canyon itself."
       zipCodes={["89135"]}
@@ -47,7 +52,10 @@ export default function RedRockCountryClubPage() {
         },
       ]}
       related={[
-        { href: "/neighborhoods/tournament-hills", label: "Tournament Hills real estate" },
+        {
+          href: "/neighborhoods/tournament-hills",
+          label: "Tournament Hills real estate",
+        },
         { href: "/neighborhoods/the-ridges", label: "The Ridges Summerlin" },
         { href: "/neighborhoods/summerlin", label: "Summerlin homes" },
       ]}

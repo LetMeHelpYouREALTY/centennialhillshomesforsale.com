@@ -1,34 +1,36 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, Home } from "lucide-react";
+import { CTA_PHONE, CTA_TEL, REALSCOUT_SEARCH_URL } from "@/lib/contact";
 
 export default function CTASection() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+    <section className="bg-gradient-to-r from-blue-600 to-blue-700 py-16 text-white md:py-24">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Ready to Find Your Dream Home?
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="mb-6 text-3xl font-bold md:text-4xl lg:text-5xl">
+            Ready to Tour Las Vegas Homes?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let's start your real estate journey today. Get expert guidance,
-            personalized service, and results that exceed your expectations.
+          <p className="mx-auto mb-8 max-w-2xl text-xl text-blue-100">
+            Call Dr. Jan Duffy for current MLS matches, a listing strategy, or a
+            private showing.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+          <div className="mb-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button
               asChild
               size="lg"
               className="bg-white text-blue-600 hover:bg-blue-50"
             >
               <a
-                href="http://drjanduffy.realscout.com/"
+                href={REALSCOUT_SEARCH_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 no-underline"
               >
-                <Home className="h-5 w-5" />
+                <Home className="h-5 w-5" aria-hidden="true" />
                 Browse Properties
+                <span className="sr-only"> (opens in a new tab)</span>
               </a>
             </Button>
             <Button
@@ -37,9 +39,12 @@ export default function CTASection() {
               variant="outline"
               className="border-white text-white hover:bg-white/10"
             >
-              <Link href="/contact" className="flex items-center gap-2">
-                <Mail className="h-5 w-5" />
-                Get In Touch
+              <Link
+                href="/contact"
+                className="flex items-center gap-2 no-underline"
+              >
+                <Mail className="h-5 w-5" aria-hidden="true" />
+                Send a Message
               </Link>
             </Button>
             <Button
@@ -48,25 +53,22 @@ export default function CTASection() {
               variant="outline"
               className="border-white text-white hover:bg-white/10"
             >
-              <Link href="tel:+17025001942" className="flex items-center gap-2">
-                <Phone className="h-5 w-5" />
-                Call Now
-              </Link>
+              <a
+                href={CTA_TEL}
+                className="flex items-center gap-2 no-underline"
+              >
+                <Phone className="h-5 w-5" aria-hidden="true" />
+                Call {CTA_PHONE}
+              </a>
             </Button>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6 text-blue-100 text-sm">
-            <div className="flex items-center gap-2">
-              <span className="font-semibold text-white">
-                Free Consultation
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="font-semibold text-white">No Obligation</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="font-semibold text-white">Expert Guidance</span>
-            </div>
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-blue-100">
+            <span className="font-semibold text-white">Free consultation</span>
+            <span className="font-semibold text-white">No obligation</span>
+            <span className="font-semibold text-white">
+              License S.0197614.LLC
+            </span>
           </div>
         </div>
       </div>

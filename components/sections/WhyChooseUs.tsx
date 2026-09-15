@@ -1,73 +1,92 @@
 import { Shield, TrendingUp, Users, Award, Clock, Home } from "lucide-react";
+import Link from "next/link";
+import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
 
 const features = [
   {
     icon: Shield,
-    title: "Trusted Expertise",
+    title: "Trusted brand",
     description:
-      "Serving Las Vegas and Henderson since 2008 with proven results.",
+      "Berkshire Hathaway HomeServices Nevada Properties — a documented process, not a kiosk script.",
   },
   {
     icon: TrendingUp,
-    title: "Market Knowledge",
+    title: "Local numbers",
     description:
-      "Deep understanding of local market trends and neighborhood insights.",
+      "Las Vegas and Henderson inventory, ZIP-level pricing, and live CMA math since 2008.",
   },
   {
     icon: Users,
-    title: "Personalized Service",
+    title: "One agent of record",
     description:
-      "Dedicated attention to every client with customized solutions.",
+      "Dr. Jan Duffy answers the client line. No callback queue, no assistant filter.",
   },
   {
     icon: Award,
-    title: "Proven Results",
-    description: "500+ successful transactions and satisfied clients.",
+    title: "Proven volume",
+    description: "500+ closings and $127M+ sold across Southern Nevada.",
   },
   {
     icon: Clock,
-    title: "Responsive",
-    description: "Quick response times and seamless communication throughout.",
+    title: "Same-day response",
+    description:
+      "Call or text and get a human reply during posted office hours.",
   },
   {
     icon: Home,
-    title: "Full Service",
-    description: "Complete support from search to closing and beyond.",
+    title: "Full service",
+    description:
+      "Buying, selling, 55+, luxury, and new construction on one contract.",
   },
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="bg-white py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-            Why Choose Us
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl">
+            Why Work With Dr. Jan Duffy
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Experience the difference of working with a trusted real estate
-            professional
+          <p className="mx-auto max-w-3xl text-xl text-slate-600">
+            Berkshire Hathaway HomeServices Nevada Properties — local closings
+            with a national brand behind the contract.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <ul className="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => {
             const Icon = feature.icon;
             return (
-              <div
+              <li
                 key={feature.title}
-                className="flex flex-col items-center text-center p-6 rounded-lg hover:bg-slate-50 transition-colors"
+                className="flex flex-col items-center rounded-lg p-6 text-center transition-colors hover:bg-slate-50"
               >
-                <div className="bg-blue-100 rounded-full p-4 mb-4">
-                  <Icon className="h-8 w-8 text-blue-600" />
+                <div className="mb-4 rounded-full bg-blue-100 p-4">
+                  <Icon className="h-8 w-8 text-blue-600" aria-hidden="true" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
+                <h3 className="mb-2 text-xl font-bold text-slate-900">
                   {feature.title}
                 </h3>
                 <p className="text-slate-600">{feature.description}</p>
-              </div>
+              </li>
             );
           })}
+        </ul>
+
+        <div className="mt-10 text-center">
+          <Link
+            href="/about"
+            className="mr-4 inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-5 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50"
+          >
+            About Dr. Jan
+          </Link>
+          <a
+            href={CTA_TEL}
+            className="inline-flex min-h-11 items-center justify-center rounded-md bg-blue-600 px-5 py-3 font-semibold text-white no-underline hover:bg-blue-700"
+          >
+            Call {CTA_PHONE}
+          </a>
         </div>
       </div>
     </section>

@@ -1,497 +1,88 @@
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
-import RealScoutListings from "@/components/realscout/RealScoutListings";
-import Link from "next/link";
-import {
-  Phone,
-  DollarSign,
-  Sun,
-  Home as HomeIcon,
-  Briefcase,
-  Plane,
-  GraduationCap,
-  Heart,
-  Calculator,
-  MapPin,
-  CheckCircle,
-  TrendingUp,
-} from "lucide-react";
 import type { Metadata } from "next";
+import TopicGuide from "@/components/sections/TopicGuide";
+import {
+  formatUsd,
+  LISTING_MEDIANS_USD,
+  MARKET_SNAPSHOT_AS_OF,
+  MARKET_SNAPSHOT_SOURCE,
+} from "@/lib/market-snapshots";
 
 export const metadata: Metadata = {
-  title: "Relocating from California to Las Vegas | Berkshire Hathaway HomeServices",
+  title: "Relocating from California to Las Vegas | Dr. Jan Duffy",
   description:
-    "Moving from California to Las Vegas? Zero state income tax, 40-60% lower home prices, same sunshine. Dr. Jan Duffy helps CA relocators find their perfect Las Vegas home. Call (702) 500-1942.",
+    "Moving from California to Las Vegas? Nevada has no wage income tax. Pair your sale against live Las Vegas comps with Dr. Jan Duffy. Call (702) 222-1964.",
   keywords: [
     "California to Las Vegas relocation",
     "moving from California to Nevada",
     "California relocator Las Vegas",
     "no state income tax Nevada",
-    "Las Vegas homes California buyers",
-    "Berkshire Hathaway HomeServices relocation",
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much can I save moving from California to Nevada?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Nevada has zero state income tax, saving Californians 9.3%-13.3% depending on income bracket. Combined with 40-60% lower home prices, a family earning $200K buying a $600K home could save $150K+ over 5 years compared to staying in California.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What neighborhoods do California relocators prefer in Las Vegas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "California buyers typically gravitate toward Summerlin (similar to Irvine/coastal communities), Henderson (family-friendly like San Diego suburbs), and The Ridges (comparable to Newport Coast luxury). These areas offer the quality and amenities California buyers expect.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to establish Nevada residency?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Nevada residency can be established immediately upon moving. To benefit from no state income tax, you should update your driver's license, register your vehicles, and register to vote in Nevada. Most people complete this within 30 days of their move.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What does my California home equity buy in Las Vegas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A typical $1.2M California home translates to $500K-$700K in Las Vegas with similar or better features. Many California sellers can buy a larger Las Vegas home AND pocket significant equity for retirement or investment.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are there direct flights from Las Vegas to California?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, Las Vegas has extensive flight options to California. Southwest, United, and other carriers offer dozens of daily flights to LAX, SFO, SAN, and other California airports. Flight times are typically 1-1.5 hours.",
-      },
-    },
-  ],
-};
-
-const realEstateAgentSchema = {
-  "@context": "https://schema.org",
-  "@type": "RealEstateAgent",
-  name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-  telephone: "+17025001942",
-  url: "https://heyberkshire.com/buyers/california-relocator",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "9406 W Lake Mead Blvd, Suite 100",
-    addressLocality: "Las Vegas",
-    addressRegion: "NV",
-    postalCode: "89134",
-  },
-  areaServed: ["Las Vegas", "Henderson", "Summerlin", "North Las Vegas"],
-  priceRange: "$350,000 - $10,000,000+",
-};
+const lv = formatUsd(LISTING_MEDIANS_USD.lasVegas);
+const hen = formatUsd(LISTING_MEDIANS_USD.hendersonListing);
 
 export default function CaliforniaRelocatorPage() {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(realEstateAgentSchema) }}
-      />
-      <Navbar />
-      <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="max-w-6xl mx-auto mb-6">
-            <nav className="text-sm text-slate-500">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-              {" / "}
-              <Link href="/buyers" className="hover:text-blue-600">Buyers</Link>
-              {" / "}
-              <span className="text-slate-900">California Relocator</span>
-            </nav>
-          </div>
-
-          {/* Hero */}
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-flex items-center bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              <Sun className="h-4 w-4 mr-2" />
-              37% of Las Vegas Buyers Are From California
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Relocating from California?<br />
-              <span className="text-blue-600">Welcome Home to Las Vegas</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-slate-600 mb-8">
-              Zero state income tax. 40-60% lower home prices. Same sunshine.
-            </p>
-            <a
-              href="tel:+17025001942"
-              className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Start Your Tax-Free Life → (702) 500-1942
-            </a>
-          </div>
-
-          {/* Tax Savings Comparison */}
-          <section className="mb-16 bg-gradient-to-br from-green-600 to-green-700 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <div className="flex items-center justify-center mb-6">
-              <Calculator className="h-10 w-10 mr-3" />
-              <h2 className="text-3xl font-bold">California vs. Nevada: The Numbers</h2>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              <div className="text-center bg-white/10 rounded-xl p-6">
-                <div className="text-4xl font-bold mb-2">0%</div>
-                <div className="text-green-100">Nevada State Income Tax</div>
-                <div className="text-sm text-green-200 mt-2">vs. CA 9.3%-13.3%</div>
-              </div>
-              <div className="text-center bg-white/10 rounded-xl p-6">
-                <div className="text-4xl font-bold mb-2">40-60%</div>
-                <div className="text-green-100">Lower Home Prices</div>
-                <div className="text-sm text-green-200 mt-2">Similar quality homes</div>
-              </div>
-              <div className="text-center bg-white/10 rounded-xl p-6">
-                <div className="text-4xl font-bold mb-2">$150K+</div>
-                <div className="text-green-100">5-Year Savings</div>
-                <div className="text-sm text-green-200 mt-2">$200K income example</div>
-              </div>
-            </div>
-            <div className="text-center">
-              <p className="text-green-100 text-lg">
-                A California family earning $250,000/year saves <strong>$25,000+ annually</strong> in state income tax alone by moving to Nevada.
-              </p>
-            </div>
-          </section>
-
-          {/* What Your CA Equity Buys */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              What Your California Equity Buys in Las Vegas
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-red-50 border border-red-200 rounded-xl p-6">
-                <div className="flex items-center mb-4">
-                  <MapPin className="h-6 w-6 text-red-600 mr-2" />
-                  <h3 className="font-bold text-lg text-red-900">In California</h3>
-                </div>
-                <ul className="space-y-3 text-red-800">
-                  <li className="flex items-start">
-                    <span className="font-bold mr-2">$1.2M:</span>
-                    <span>3BR/2BA 1,800 sq ft in decent suburb</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-bold mr-2">$800K:</span>
-                    <span>2BR condo or older townhome</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-bold mr-2">$600K:</span>
-                    <span>Fixer-upper or long commute</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                <div className="flex items-center mb-4">
-                  <MapPin className="h-6 w-6 text-green-600 mr-2" />
-                  <h3 className="font-bold text-lg text-green-900">In Las Vegas</h3>
-                </div>
-                <ul className="space-y-3 text-green-800">
-                  <li className="flex items-start">
-                    <span className="font-bold mr-2">$700K:</span>
-                    <span>4BR/3BA 3,000 sq ft in Summerlin + $500K pocket</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-bold mr-2">$550K:</span>
-                    <span>Beautiful 4BR in Henderson + cash left over</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-bold mr-2">$450K:</span>
-                    <span>Brand new construction, turnkey ready</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* Top Neighborhoods for CA Relocators */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              Top 3 Neighborhoods for California Relocators
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
-                <div className="bg-blue-600 text-white p-4">
-                  <h3 className="font-bold text-xl">Summerlin</h3>
-                  <p className="text-blue-100 text-sm">Median: $726K</p>
-                </div>
-                <div className="p-6">
-                  <p className="text-slate-600 mb-4">
-                    "The Irvine of Las Vegas" - Master-planned perfection with top schools,
-                    Downtown Summerlin shopping, and Red Rock Canyon views.
-                  </p>
-                  <div className="text-sm text-slate-500 mb-4">
-                    <strong>Best for:</strong> Families from Orange County, coastal CA
-                  </div>
-                  <ul className="text-sm space-y-1 text-slate-700">
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Top-rated schools
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      150+ parks & trails
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Upscale dining & shopping
-                    </li>
-                  </ul>
-                  <Link
-                    href="/neighborhoods/summerlin"
-                    className="block mt-4 text-blue-600 font-semibold hover:text-blue-700"
-                  >
-                    Explore Summerlin →
-                  </Link>
-                </div>
-              </div>
-
-              <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
-                <div className="bg-green-600 text-white p-4">
-                  <h3 className="font-bold text-xl">Henderson / Inspirada</h3>
-                  <p className="text-green-100 text-sm">Median: $530K</p>
-                </div>
-                <div className="p-6">
-                  <p className="text-slate-600 mb-4">
-                    Henderson = San Diego suburbs meets tech corridor. Google's data center,
-                    top schools, and "America's Safest City" accolades.
-                  </p>
-                  <div className="text-sm text-slate-500 mb-4">
-                    <strong>Best for:</strong> Tech workers, young families, San Diego relocators
-                  </div>
-                  <ul className="text-sm space-y-1 text-slate-700">
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Tech job growth
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Lowest crime rates
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      New construction options
-                    </li>
-                  </ul>
-                  <Link
-                    href="/neighborhoods/henderson"
-                    className="block mt-4 text-blue-600 font-semibold hover:text-blue-700"
-                  >
-                    Explore Henderson →
-                  </Link>
-                </div>
-              </div>
-
-              <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
-                <div className="bg-purple-600 text-white p-4">
-                  <h3 className="font-bold text-xl">The Ridges</h3>
-                  <p className="text-purple-100 text-sm">$1.5M - $10M+</p>
-                </div>
-                <div className="p-6">
-                  <p className="text-slate-600 mb-4">
-                    Newport Coast quality, Vegas prices. Guard-gated luxury with Strip views,
-                    celebrity neighbors, and custom estates.
-                  </p>
-                  <div className="text-sm text-slate-500 mb-4">
-                    <strong>Best for:</strong> Beverly Hills/Newport Beach luxury buyers
-                  </div>
-                  <ul className="text-sm space-y-1 text-slate-700">
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Guard-gated privacy
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Custom home sites
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      Red Rock Canyon access
-                    </li>
-                  </ul>
-                  <Link
-                    href="/neighborhoods/the-ridges"
-                    className="block mt-4 text-blue-600 font-semibold hover:text-blue-700"
-                  >
-                    Explore The Ridges →
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Remote Work Lifestyle */}
-          <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <div className="flex items-center mb-6">
-              <Briefcase className="h-8 w-8 text-blue-600 mr-3" />
-              <h2 className="text-3xl font-bold text-slate-900">Remote Work, Vegas Lifestyle</h2>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <p className="text-slate-700 mb-4">
-                  Keep your California salary, lose the California taxes. Thousands of tech workers,
-                  executives, and entrepreneurs have discovered that Las Vegas offers the perfect
-                  remote work base:
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <TrendingUp className="h-5 w-5 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span><strong>Same income, lower costs:</strong> Keep your Bay Area salary while paying Nevada prices</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Plane className="h-5 w-5 text-blue-600 mr-2 mt-1 flex-shrink-0" />
-                    <span><strong>Easy travel:</strong> Direct flights to SFO, LAX, SJC for when you need to be in-office</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Sun className="h-5 w-5 text-amber-500 mr-2 mt-1 flex-shrink-0" />
-                    <span><strong>Work-life balance:</strong> Golf at 2pm, hike Red Rock after work, world-class dining</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
-                <h3 className="font-bold text-slate-900 mb-4">Henderson Tech Corridor</h3>
-                <p className="text-slate-600 mb-4">
-                  Google's $600M data center. Amazon Web Services. Switch Supernap. Henderson is
-                  becoming a legitimate tech hub, with companies attracted by zero corporate
-                  income tax and quality of life.
-                </p>
-                <p className="text-sm text-slate-500">
-                  Many California tech workers find themselves with <em>more</em> local job options
-                  after moving to Vegas than they expected.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* FAQ Section */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-              California Relocator FAQs
-            </h2>
-            <div className="space-y-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  How much can I save moving from California to Nevada?
-                </h3>
-                <p className="text-slate-600">
-                  Nevada has zero state income tax, saving Californians 9.3%-13.3% depending on
-                  income bracket. Combined with 40-60% lower home prices, a family earning $200K
-                  buying a $600K home could save $150K+ over 5 years compared to staying in California.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What neighborhoods do California relocators prefer?
-                </h3>
-                <p className="text-slate-600">
-                  California buyers typically gravitate toward Summerlin (similar to Irvine/coastal
-                  communities), Henderson (family-friendly like San Diego suburbs), and The Ridges
-                  (comparable to Newport Coast luxury). These areas offer the quality and amenities
-                  California buyers expect.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  How long does it take to establish Nevada residency?
-                </h3>
-                <p className="text-slate-600">
-                  Nevada residency can be established immediately upon moving. To benefit from no
-                  state income tax, update your driver's license, register your vehicles, and
-                  register to vote in Nevada. Most people complete this within 30 days.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  Are there direct flights from Las Vegas to California?
-                </h3>
-                <p className="text-slate-600">
-                  Yes! Las Vegas has extensive flight options to California. Southwest, United, and
-                  other carriers offer dozens of daily flights to LAX, SFO, SAN, and other California
-                  airports. Flight times are typically 1-1.5 hours.
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What about schools compared to California?
-                </h3>
-                <p className="text-slate-600">
-                  Nevada public schools overall rank lower than California's, but individual schools
-                  in Summerlin and Henderson rate highly. Many California families choose areas with
-                  top-rated schools or consider private options. Dr. Jan provides school-specific
-                  guidance for every neighborhood.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Expert Quote */}
-          <section className="mb-16 max-w-4xl mx-auto">
-            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
-              <blockquote className="text-lg text-slate-700 italic mb-4">
-                "I've helped hundreds of California families make the move to Las Vegas. The most
-                common reaction? 'Why didn't we do this sooner?' Between the tax savings, the space,
-                and the lifestyle, most clients can't believe what their California equity buys here.
-                As a <strong>Berkshire Hathaway HomeServices</strong> agent, I coordinate with our
-                California offices to make the transition seamless—you don't have to figure this
-                out alone."
-              </blockquote>
-              <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
-              </cite>
-            </div>
-          </section>
-
-          {/* CTA */}
-          <section className="text-center bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Start Your Tax-Free Life?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Get a personalized relocation consultation with Dr. Jan Duffy. She'll show you exactly
-              what your California equity buys in Las Vegas and help you find the perfect neighborhood.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+17025001942"
-                className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call/Text (702) 500-1942
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors"
-              >
-                Schedule Consultation
-              </Link>
-            </div>
-            <p className="mt-6 text-blue-200 text-sm">
-              Berkshire Hathaway HomeServices Nevada Properties
-            </p>
-          </section>
-        </div>
-        <div className="text-center text-sm text-slate-500 mt-8">Last Updated: January 2026</div>
-      </main>
-      <RealScoutListings />
-      <Footer />
-    </>
+    <TopicGuide
+      name="California relocation"
+      slug="california-relocator"
+      badge="Out-of-state buyers"
+      h1="Relocating from California to Las Vegas"
+      imageSrc="/images/hero/california-relocator.png"
+      imageAlt="California relocators arriving at a Las Vegas desert-contemporary house"
+      intro="Nevada charges no state income tax on wages. That is a statute, not a slogan. Home-price “savings” are not 40–60% on every street — I pair your California sale against live Las Vegas comps before you bid."
+      stats={[
+        { value: "0%", label: "NV wage income tax" },
+        { value: lv, label: "LV listing median" },
+        { value: hen, label: "Henderson listing median" },
+        { value: "~1–1.5 hr", label: "Typical CA flight" },
+      ]}
+      sections={[
+        {
+          heading: "Tax is not a CMA, and I am not your CPA",
+          body: "No Nevada wage income tax is real. Whether you owe California on a partial-year move, stock, or a home sale is a CPA question. I will not invent a $150K five-year savings figure. Bring last year’s return to your tax pro; bring your target beds and commute to me.",
+        },
+        {
+          heading: `What the valley actually lists as of ${MARKET_SNAPSHOT_AS_OF}`,
+          body: `${MARKET_SNAPSHOT_SOURCE}: Las Vegas city median listing ${lv}; Henderson ${hen}; Summerlin West ${formatUsd(LISTING_MEDIANS_USD.summerlinWest)}; Centennial Hills ${formatUsd(LISTING_MEDIANS_USD.centennialHills)}. A $1.2M California sale does not automatically buy a “similar” $600K Las Vegas house — lot, HOA, and vintage differ. I run both sides.`,
+        },
+        {
+          heading: "Which map, not which California suburb nickname",
+          body: "Summerlin is the Howard Hughes west-side master plan (parks, trails, Downtown Summerlin). Henderson is a separate city (Green Valley, Inspirada, Anthem). Centennial Hills is northwest Las Vegas around Town Center and US-95. I will not steer you with “like Irvine” or “like San Diego.” Tell me commute, one-story vs two, and HOA budget.",
+        },
+        {
+          heading: "Flights and residency paperwork",
+          body: "Harry Reid International has frequent flights to LAX, SAN, SFO, and other California airports; block 1–1.5 hours in the air plus ground time. Nevada residency for a driver’s license, vehicle, and voter registration is a DMV process. Timing for tax residency is not something I certify.",
+        },
+      ]}
+      faqs={[
+        {
+          question: "How much will I save moving from California?",
+          answer:
+            "UNKNOWN as a single number. Nevada has no wage income tax. House-price gaps depend on the two addresses. Ask for paired comps and a CPA.",
+        },
+        {
+          question: "Can I buy in Las Vegas before I sell in California?",
+          answer:
+            "Sometimes, with a bridge, a HELOC, or a contingent offer. I sequence the two contracts. Call 702-222-1964.",
+        },
+        {
+          question: "Do you tour remotely?",
+          answer:
+            "Yes. Video walkthroughs, then an in-person week when you fly in. I will not write an offer on a listing I have not seen or had a licensed colleague walk.",
+        },
+      ]}
+      related={[
+        { href: "/relocation", label: "Las Vegas relocation hub" },
+        { href: "/neighborhoods/summerlin", label: "Summerlin homes" },
+        { href: "/neighborhoods/henderson", label: "Henderson homes" },
+        {
+          href: "/neighborhoods/centennial-hills",
+          label: "Centennial Hills homes",
+        },
+      ]}
+      lastUpdated="September 2026"
+    />
   );
 }
