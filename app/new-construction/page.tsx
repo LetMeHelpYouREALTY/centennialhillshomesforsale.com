@@ -68,6 +68,13 @@ export default function NewConstructionPage() {
             "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard",
           body: "Builders often budget a cooperating broker fee. After the 2024 NAR practice changes, that is not something I will call automatic or “100% free.” We write it down. If the builder will not pay, we decide whether you pay or we walk.",
         },
+        {
+          heading: "Register before the kiosk iPad",
+          imageSrc: "/images/neighborhoods/inspirada.png",
+          imageAlt:
+            "Inspirada Henderson streets typical of remaining new-construction pods",
+          body: "Text or email homes@heyberkshire.com the community name before you walk in. I will not recover representation after you have already signed the builder’s first-visit card.",
+        },
       ]}
       faqs={[
         {

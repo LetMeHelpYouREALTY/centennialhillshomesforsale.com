@@ -96,6 +96,11 @@ const buyerFaqs = [
     answer:
       "Summerlin, Henderson (Green Valley, Inspirada), and Centennial Hills are compared on parks, trail miles, commute times, and named campuses. Dr. Jan matches the street to those priorities.",
   },
+  {
+    question: "How do I get a buyer CMA or current listings?",
+    answer:
+      "Email homes@heyberkshire.com or call (702) 222-1964 with beds, ZIP, and a price band. I send live MLS, not a blog sample.",
+  },
 ];
 
 const buyingSteps = [

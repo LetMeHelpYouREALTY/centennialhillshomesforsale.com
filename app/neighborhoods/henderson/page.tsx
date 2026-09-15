@@ -77,6 +77,10 @@ export default function HendersonPage() {
           heading: "Campuses",
           body: "Henderson addresses are Clark County School District. Confirm elementary, middle, and high school on the specific listing. Pinecrest and other charters enroll from Henderson independently of the zoned campus. I name the campus. I do not publish ratings.",
         },
+        {
+          heading: "How I send Henderson matches",
+          body: "Green Valley, Inspirada, Anthem, and Lake Las Vegas are different freeways. Email homes@heyberkshire.com or call (702) 222-1964 with the village name and commute. I will not treat “Henderson” as one product.",
+        },
       ]}
       faqs={[
         {

@@ -113,6 +113,11 @@ const aboutFaqs = [
     answer:
       "Yes. BHHS Nevada Properties is a franchise brokerage. You get a written plan and a global referral network. Warren Buffett does not write your CMA.",
   },
+  {
+    question: "What email should clients use?",
+    answer:
+      "homes@heyberkshire.com. The client phone is (702) 222-1964. (702) 500-1942 is the professional/FUB line, not a consumer CTA.",
+  },
 ];
 
 const specializations = [

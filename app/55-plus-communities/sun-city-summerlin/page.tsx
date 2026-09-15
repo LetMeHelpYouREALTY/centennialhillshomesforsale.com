@@ -79,6 +79,10 @@ export default function SunCitySummerlinPage() {
           heading: "How this differs from Trilogy and Heritage",
           body: "Trilogy at Summerlin is smaller, newer Shea product in 89135. Heritage at Stonebridge is a smaller guard-gated 55+ pocket. Sun City Summerlin is the large, 1990s Del Webb campus in 89134. I tour two in one morning when a buyer is choosing scale vs newer finishes.",
         },
+        {
+          heading: "How I send Sun City Summerlin matches",
+          body: "Tell me one-story vs two, golf-course vs interior, and whether you need a casita. Email homes@heyberkshire.com or call (702) 222-1964. I CMA the floor plan — I will not reuse a Trilogy 89135 number on this campus.",
+        },
       ]}
       faqs={[
         {

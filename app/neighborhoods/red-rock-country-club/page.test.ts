@@ -11,5 +11,6 @@ describe("Red Rock Country Club guide", () => {
     expect(src).toContain("LISTING_MEDIANS_USD.summerlinSouth");
     expect(src).not.toContain("summerlinWest");
     expect(src).toContain("Commute and daily errands");
+    expect(src).toContain("How I tour the gate");
   });
 });

@@ -21,7 +21,7 @@ import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import { getCanonicalUrl, getPublicSiteUrl } from "@/lib/site-url";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { generateWebPageSchema } from "@/lib/schema";
-import { mergeGuideRelated } from "@/lib/guide-related";
+import { mergeGuideFaqs, mergeGuideRelated } from "@/lib/guide-related";
 
 export type TopicFaq = {
   question: string;
@@ -93,6 +93,7 @@ export default function TopicGuide({
     { href: "/listings", label: "Search live MLS listings" },
     { href: "/contact", label: "Call or email the office" },
   ]);
+  const guideFaqs = mergeGuideFaqs(faqs, name);
 
   return (
     <>
@@ -104,7 +105,7 @@ export default function TopicGuide({
           url: getCanonicalUrl(),
         })}
       />
-      <FAQSchema faqs={faqs} />
+      <FAQSchema faqs={guideFaqs} />
       <main className="pb-16">
         <div className="container mx-auto px-4">
           <article className="mx-auto max-w-5xl">
@@ -236,7 +237,7 @@ export default function TopicGuide({
                 className="mb-6"
               />
               <div className="space-y-4">
-                {faqs.map((faq) => (
+                {guideFaqs.map((faq) => (
                   <div
                     key={faq.question}
                     className="rounded-lg border border-slate-200 p-5"
@@ -271,7 +272,8 @@ export default function TopicGuide({
                 Talk {name} with Dr. Jan Duffy
               </h2>
               <p className="mx-auto mb-6 max-w-2xl text-blue-100">
-                First-party local guidance. Call or text the client line.
+                First-party local guidance. Call, email, or text the client
+                line.
               </p>
               <div className="flex flex-col flex-wrap items-center justify-center gap-3 sm:flex-row">
                 <a

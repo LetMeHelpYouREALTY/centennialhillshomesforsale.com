@@ -116,6 +116,11 @@ const sellerFaqs = [
     answer:
       "Not necessarily. Many homes sell while occupied. However, vacant homes are easier to show and stage. Dr. Jan will help you develop a strategy based on your specific situation and timeline.",
   },
+  {
+    question: "How do I request a listing CMA?",
+    answer:
+      "Email homes@heyberkshire.com or call (702) 222-1964 with the address and occupancy (occupied, vacant, or tenant). I will not email a list price from an AVM.",
+  },
 ];
 
 const sellingProcess = [

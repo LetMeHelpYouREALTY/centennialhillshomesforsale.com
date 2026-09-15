@@ -53,6 +53,10 @@ export default function LoneMountainPage() {
           heading: "Pricing is a CMA, not a peak slogan",
           body: "I will not publish a Lone Mountain-only median I cannot source. Lot size, elevation, and whether the house is on septic change the number. Ask for a live CMA on the address. Centennial Hills listing medians on this site are a different corridor sample.",
         },
+        {
+          heading: "How I sequence a northwest loop",
+          body: "Lone Mountain, Centennial Hills, and Skye Canyon can be one afternoon if we group by US-95. Email homes@heyberkshire.com or call (702) 222-1964 with the workplace address so I time the loop at your hour, not midday.",
+        },
       ]}
       faqs={[
         {

@@ -62,6 +62,10 @@ export default function CaliforniaRelocatorPage() {
           heading: "Flights and residency paperwork",
           body: "Harry Reid International has frequent flights to LAX, SAN, SFO, and other California airports; block 1–1.5 hours in the air plus ground time. Nevada residency for a driver’s license, vehicle, and voter registration is a DMV process. Timing for tax residency is not something I certify.",
         },
+        {
+          heading: "What to send before you fly",
+          body: "Email homes@heyberkshire.com or call (702) 222-1964 with origin city, destination ZIP, and whether you are selling in California first. I build a drive-time matrix to the workplace or hospital — not a suburb nickname.",
+        },
       ]}
       faqs={[
         {

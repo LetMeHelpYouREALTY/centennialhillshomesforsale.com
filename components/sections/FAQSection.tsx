@@ -1,8 +1,14 @@
 "use client";
 
 import { useId, useState } from "react";
-import { ChevronDown, ChevronUp, Phone } from "lucide-react";
-import { CTA_PHONE, CTA_TEL, TEXT_LINK_CLASS } from "@/lib/contact";
+import { ChevronDown, ChevronUp, Mail, Phone } from "lucide-react";
+import {
+  AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
+  CTA_PHONE,
+  CTA_TEL,
+  TEXT_LINK_CLASS,
+} from "@/lib/contact";
 import { defaultFaqs, type SiteFaq } from "@/lib/default-faqs";
 
 export type FAQ = SiteFaq;
@@ -90,6 +96,11 @@ export default function FAQSection({
           <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
             <Phone className="mr-1 h-4 w-4" aria-hidden="true" />
             Call {CTA_PHONE}
+          </a>{" "}
+          or{" "}
+          <a href={AGENT_EMAIL_MAILTO} className={TEXT_LINK_CLASS}>
+            <Mail className="mr-1 h-4 w-4" aria-hidden="true" />
+            {AGENT_EMAIL}
           </a>
         </p>
       </div>

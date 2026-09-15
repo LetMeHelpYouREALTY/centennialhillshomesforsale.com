@@ -101,6 +101,11 @@ const listingFaqs = [
     answer:
       "HOA dues are on the resale packet, not a sitewide band. I will not publish a valley-wide monthly range as if it were your community. Ask for the current budget, reserves, and any special assessment before you write the offer.",
   },
+  {
+    question: "Can I email a listing search instead of using the form?",
+    answer:
+      "Yes. Email homes@heyberkshire.com or call (702) 222-1964 with ZIP, beds, and a price band. The search box on this page submits to live MLS.",
+  },
 ];
 
 const popularSearches = [
@@ -125,6 +130,16 @@ const popularSearches = [
     note: "Open The Ridges guide",
   },
   { name: "55+ Communities", href: "/55-plus-communities", note: "55+ hub" },
+  {
+    name: "89138 Summerlin West",
+    href: "/neighborhoods/89138",
+    note: "Open the 89138 ZIP guide",
+  },
+  {
+    name: "89144 Summerlin",
+    href: "/neighborhoods/89144",
+    note: "Open the 89144 ZIP guide",
+  },
   {
     name: "New Construction",
     href: "/new-construction",

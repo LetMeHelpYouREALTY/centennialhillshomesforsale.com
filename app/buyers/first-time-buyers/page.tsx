@@ -63,6 +63,10 @@ export default function FirstTimeBuyersPage() {
           heading: "Inspection is not optional because the house is “cute”",
           body: "Las Vegas sun, stucco, HVAC tonnage, and tile roofs show up on first-time inspections. I keep the inspection period on the calendar and help you decide repair vs credit vs walk. New construction still needs a walkthrough punch list.",
         },
+        {
+          heading: "How to start without a starter-ZIP slogan",
+          body: "Get a lender pre-approval, then email homes@heyberkshire.com or call (702) 222-1964 with commute and bed count. I will not send you to “the affordable side of town.” We match HOA, square footage, and the actual drive.",
+        },
       ]}
       faqs={[
         {

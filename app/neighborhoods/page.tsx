@@ -22,7 +22,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Las Vegas Neighborhoods | Centennial Hills, Inspirada, Summerlin",
     description:
-      "Centennial Hills, Inspirada, Tournament Hills, 89144, and 89138 guides from Dr. Jan Duffy. Call 702-222-1964.",
+      "Centennial Hills, Inspirada, Tournament Hills, 89144, and 89138 guides from Dr. Jan Duffy. Call (702) 222-1964.",
     keywords: [
       "centennial hills real estate",
       "inspirada henderson",
@@ -170,6 +170,16 @@ const neighborhoods = [
     bestFor: "Summerlin West / 89138 searchers",
   },
   {
+    name: "89138 Summerlin West",
+    slug: "89138",
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.summerlinWest),
+    priceNote: "Summerlin West listing median · realtor.com",
+    description:
+      "ZIP page for Summerlin West and Reverence — not Centennial Hills 89149",
+    highlights: ["89138", "Reverence", "Summerlin West", "Newer vintage"],
+    bestFor: "Homes for sale in 89138",
+  },
+  {
     name: "89144 Summerlin",
     slug: "89144",
     medianPrice: "Ask CMA",
@@ -238,7 +248,12 @@ const neighborhoodFaqs = [
   {
     question: "Do these pages include live MLS?",
     answer:
-      "Each neighborhood guide can load live RealScout inventory. You can also search from /listings or call (702) 222-1964 with the village name.",
+      "Each neighborhood guide can load live RealScout inventory. You can also search from /listings, email homes@heyberkshire.com, or call (702) 222-1964 with the village name.",
+  },
+  {
+    question: "How do I get a CMA for a specific street?",
+    answer:
+      "Email homes@heyberkshire.com or call (702) 222-1964 with the address. City and village listing medians on these pages are not a CMA.",
   },
 ];
 
@@ -346,6 +361,24 @@ export default function NeighborhoodsPage() {
                 </Link>
               ))}
             </div>
+          </section>
+
+          <section className="mb-16 max-w-4xl mx-auto text-center">
+            <h2 className="mb-4 text-2xl font-bold text-slate-900">
+              55+ HOPA campuses are a different map
+            </h2>
+            <p className="mb-6 text-pretty text-slate-600">
+              Sun City, Trilogy, Heritage, Solera, Siena, and Del Webb Lake Las
+              Vegas have occupancy rules that all-ages neighborhood guides do
+              not. Open the 55+ hub, or email homes@heyberkshire.com with the
+              campus name.
+            </p>
+            <Link
+              href="/55-plus-communities"
+              className="inline-flex min-h-11 items-center justify-center rounded-md bg-blue-600 px-6 py-3 font-semibold text-white no-underline hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+            >
+              Las Vegas 55+ communities
+            </Link>
           </section>
 
           {/* Neighborhood quote */}

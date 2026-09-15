@@ -34,4 +34,9 @@ export const defaultFaqs: SiteFaq[] = [
     answer:
       "Buyer-broker compensation is disclosed in a written buyer agreement. It may be paid by the seller, the buyer, or both. Seller fees are negotiated in writing before you list. Call for a numbers-first consult.",
   },
+  {
+    question: "How do I request a CMA or current listings?",
+    answer:
+      "Call (702) 222-1964 or email homes@heyberkshire.com with the address. I send live MLS — not an AVM. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
+  },
 ];

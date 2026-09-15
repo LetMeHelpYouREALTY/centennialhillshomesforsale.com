@@ -12,5 +12,7 @@ describe("listings hub FAQs", () => {
     expect(src).not.toMatch(/HOA fees expensive/i);
     expect(src).toContain("Does Las Vegas have a seasonal buying calendar?");
     expect(src).toContain("How do I confirm HOA dues on a Las Vegas listing?");
+    expect(src).toContain("homes@heyberkshire.com");
+    expect(src).toContain("/neighborhoods/89138");
   });
 });

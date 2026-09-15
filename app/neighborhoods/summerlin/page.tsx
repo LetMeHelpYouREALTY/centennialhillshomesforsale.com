@@ -66,6 +66,10 @@ export default function SummerlinPage() {
           heading: "First-party representation",
           body: "This page is written for heyberkshire.com readers. I do not rehost another brokerage’s Summerlin guide. Builder incentives, if any lot is still selling new, are negotiated with your own agent. Client line: 702-222-1964.",
         },
+        {
+          heading: "How I send Summerlin matches",
+          body: "89134, 89135, 89138, and 89144 are different villages. Email homes@heyberkshire.com or call (702) 222-1964 with ZIP and whether you want gated custom, production, or 55+. I will not mix Tournament Hills with Reverence.",
+        },
       ]}
       faqs={[
         {

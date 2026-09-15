@@ -95,6 +95,11 @@ const communities: HomeCommunityCard[] = [
     label: "Summerlin West / 89138",
   },
   {
+    href: "/neighborhoods/89138",
+    slug: "89138",
+    label: "89138 Summerlin West ZIP",
+  },
+  {
     href: "/neighborhoods/lone-mountain",
     slug: "lone-mountain",
     label: "Lone Mountain",

@@ -61,6 +61,10 @@ export default function RedRockCountryClubPage() {
           heading: "Commute and daily errands",
           body: "Most buyers use the 215 and Downtown Summerlin for groceries, medical, and retail. Time the drive at your actual hour. Red Rock Canyon National Conservation Area is west of this map — public land, a separate drive, not the golf community.",
         },
+        {
+          heading: "How I tour the gate",
+          body: "Access is scheduled with the listing desk. Email homes@heyberkshire.com or call (702) 222-1964 with attached vs custom and whether golf membership is on the worksheet. I will not treat every 89135 pin as Red Rock Country Club.",
+        },
       ]}
       faqs={[
         {

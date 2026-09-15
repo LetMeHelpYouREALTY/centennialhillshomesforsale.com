@@ -6,6 +6,7 @@ import {
   CTA_TEL,
   OFFICE_NAP,
   AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
   TEXT_LINK_CLASS,
 } from "@/lib/contact";
 import { PageCTA } from "@/components/shared/PageCTA";
@@ -86,7 +87,7 @@ export default function FairHousingPage() {
                 {CTA_PHONE}
               </a>{" "}
               or email{" "}
-              <a href={`mailto:${AGENT_EMAIL}`} className={TEXT_LINK_CLASS}>
+              <a href={AGENT_EMAIL_MAILTO} className={TEXT_LINK_CLASS}>
                 {AGENT_EMAIL}
               </a>
               . Office: {OFFICE_NAP.full}.

@@ -89,6 +89,10 @@ const contactFaqs = [
     answer:
       "No separate consult fee. The first call is a written-plan conversation: timeline, budget, ZIP, and whether you need a buyer-broker or listing agreement. Representation is a separate written agreement.",
   },
+  {
+    question: "What is the office email?",
+    answer: `Email ${AGENT_EMAIL}. The client phone is ${CTA_PHONE}. Hours: ${OFFICE_HOURS.display}. Office: ${OFFICE_NAP.full}.`,
+  },
 ];
 
 export default function ContactPage() {

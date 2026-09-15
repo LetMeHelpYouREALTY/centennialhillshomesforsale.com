@@ -25,7 +25,7 @@ import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import { getCanonicalUrl, getPublicSiteUrl } from "@/lib/site-url";
 import { getNeighborhoodImage } from "@/lib/site-images";
 import { generateWebPageSchema } from "@/lib/schema";
-import { mergeGuideRelated } from "@/lib/guide-related";
+import { mergeGuideFaqs, mergeGuideRelated } from "@/lib/guide-related";
 import { resolveNeighborhoodGeo } from "@/lib/neighborhood-geo";
 
 export type NeighborhoodFaq = {
@@ -117,6 +117,7 @@ export default function NeighborhoodGuide({
     { href: "/listings", label: `Search live MLS for ${name}` },
     { href: "/contact", label: "Call or email the office" },
   ]);
+  const guideFaqs = mergeGuideFaqs(faqs, name);
 
   return (
     <>
@@ -128,7 +129,7 @@ export default function NeighborhoodGuide({
           url: getCanonicalUrl(),
         })}
       />
-      <FAQSchema faqs={faqs} />
+      <FAQSchema faqs={guideFaqs} />
       <NeighborhoodSchema
         name={name}
         description={intro}
@@ -289,7 +290,7 @@ export default function NeighborhoodGuide({
                 className="mb-6"
               />
               <div className="space-y-4">
-                {faqs.map((faq) => (
+                {guideFaqs.map((faq) => (
                   <div
                     key={faq.question}
                     className="rounded-lg border border-slate-200 p-5"
@@ -319,8 +320,8 @@ export default function NeighborhoodGuide({
                 Tour {name} with Dr. Jan Duffy
               </h2>
               <p className="mx-auto mb-6 max-w-2xl text-blue-100">
-                First-party local guidance — not a syndicated listing dump. Call
-                or text the client line.
+                First-party local guidance — not a syndicated listing dump.
+                Call, email, or text the client line.
               </p>
               <div className="flex flex-col flex-wrap items-center justify-center gap-3 sm:flex-row">
                 <a

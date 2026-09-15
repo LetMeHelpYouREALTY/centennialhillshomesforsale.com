@@ -76,6 +76,10 @@ export default function SienaPage() {
           heading: "Occupancy",
           body: "Marketing says 55+. Some older write-ups say 50+. I read the current CC&Rs. Guest stays and under-age occupants are in the same packet. HOPA is a federal floor, not a substitute for the recorded rules.",
         },
+        {
+          heading: "How I tour Siena vs Trilogy vs Sun City",
+          body: "Siena is 89135 Sunrise product. Trilogy is a smaller Shea 55+ campus in the same ZIP. Sun City Summerlin is the large 89134 Del Webb map. Email homes@heyberkshire.com or call (702) 222-1964 with occupancy rules that matter so I sequence the right gate, not three random 55+ pins.",
+        },
       ]}
       faqs={[
         {

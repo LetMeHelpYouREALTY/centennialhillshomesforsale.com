@@ -64,6 +64,10 @@ export default function InspiradaPage() {
           heading: "Commute",
           body: "St. Rose Parkway to I-15 is the usual spine toward the airport. Green Valley and The District are a short hop north. Time the drive at your hour; midday is not 5 p.m.",
         },
+        {
+          heading: "How I send Inspirada matches",
+          body: "Say townhome vs detached, and whether Groves is on the table. Email homes@heyberkshire.com or call (702) 222-1964. I filter MLS by subdivision — I will not send Linea when you asked for Groves.",
+        },
       ]}
       faqs={[
         {

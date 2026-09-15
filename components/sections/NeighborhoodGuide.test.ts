@@ -11,6 +11,7 @@ describe("NeighborhoodGuide conversion chrome", () => {
     expect(src).toContain("MlsSearchForm");
     expect(src).toContain("resolveNeighborhoodGeo");
     expect(src).toContain("mergeGuideRelated");
+    expect(src).toContain("mergeGuideFaqs");
     expect(src).toContain("defaultQuery={zipCodes[0]}");
   });
 });

@@ -58,6 +58,10 @@ export default function Zip89138Page() {
           heading: "HOA, SID, and the CMA",
           body: `The Summerlin West listing median on this site is ${formatUsd(LISTING_MEDIANS_USD.summerlinWest)} — a ZIP sample, not a Reverence sold price and not your lot. HOA plus any SID/LID belong on the worksheet before you bid. I will not invent a days-on-market average for the ZIP.`,
         },
+        {
+          heading: "How I send 89138 matches",
+          body: "Tell me beds, a price band, and whether you want Reverence or another 89138 village. I filter MLS by subdivision, then email the set. Call (702) 222-1964 or email homes@heyberkshire.com — I will not dump the whole ZIP.",
+        },
       ]}
       faqs={[
         {

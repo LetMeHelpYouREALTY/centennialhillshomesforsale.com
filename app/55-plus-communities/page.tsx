@@ -1,6 +1,7 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
+  Mail,
   Phone,
   Users,
   Home as HomeIcon,
@@ -26,6 +27,7 @@ import SchemaScript from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
 import {
   AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
   CTA_PHONE,
   CTA_PHONE_E164,
   CTA_TEL,
@@ -122,6 +124,14 @@ const faqSchema = {
         text: "Nevada has no state income tax on wages. Purchase prices are often lower than coastal California on a like-for-like house — confirm with paired comps, not a 50% slogan. Confirm HOA, insurance, and commute before assuming total cost of living is lower.",
       },
     },
+    {
+      "@type": "Question",
+      name: "How do I get current 55+ listings or a CMA?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Call (702) 222-1964 or email homes@heyberkshire.com with the campus name (Sun City Summerlin, Siena, Trilogy, and so on). I send live MLS — not a campus slogan.",
+      },
+    },
   ],
 };
 
@@ -154,6 +164,9 @@ const localBusinessSchema = {
     "Sun City Aliante",
     "Del Webb",
     "Heritage at Stonebridge",
+    "Siena",
+    "Trilogy at Summerlin",
+    "Solera at Anthem",
   ],
 };
 
@@ -409,13 +422,20 @@ export default function FiftyFiveCommunitiesPage() {
                 HOPA occupancy, HOA, and live MLS — not a campus slogan
               </strong>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
               <a
                 href={CTA_TEL}
                 className="inline-flex min-h-11 items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
               >
                 <Phone className="h-5 w-5 mr-2" aria-hidden="true" />
                 Call {CTA_PHONE}
+              </a>
+              <a
+                href={AGENT_EMAIL_MAILTO}
+                className="inline-flex min-h-11 items-center justify-center bg-slate-100 text-slate-900 px-8 py-4 rounded-md font-bold text-lg hover:bg-slate-200 transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+              >
+                <Mail className="h-5 w-5 mr-2" aria-hidden="true" />
+                {AGENT_EMAIL}
               </a>
               <a
                 href={REALSCOUT_SEARCH_URL}
@@ -923,6 +943,19 @@ export default function FiftyFiveCommunitiesPage() {
                   Guest-stay limits and under-age occupancy vary by HOA. Confirm
                   days per year in the current CC&Rs. Dr. Jan Duffy reads the
                   packet with you before you bid.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-6">
+                <h3 className="font-bold text-slate-900 mb-2 flex items-center">
+                  <HelpCircle
+                    className="h-5 w-5 text-blue-600 mr-2"
+                    aria-hidden="true"
+                  />
+                  How do I get current 55+ listings or a CMA?
+                </h3>
+                <p className="text-slate-600">
+                  Call (702) 222-1964 or email homes@heyberkshire.com with the
+                  campus name. I send live MLS — not a campus slogan.
                 </p>
               </div>
             </div>
