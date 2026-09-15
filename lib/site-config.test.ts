@@ -36,5 +36,10 @@ describe("site copy does not sell ranking slogans", () => {
     expect(JSON.stringify(commonFAQs)).toContain("Siena");
     expect(JSON.stringify(commonFAQs)).toContain("how I am paid");
     expect(JSON.stringify(commonFAQs)).not.toMatch(/how she is paid/);
+    expect(JSON.stringify(commonFAQs)).toContain(
+      "I can introduce Clark County lenders",
+    );
+    expect(JSON.stringify(commonFAQs)).toContain("My practice spans");
+    expect(JSON.stringify(commonFAQs)).not.toMatch(/Her practice spans/);
   });
 });

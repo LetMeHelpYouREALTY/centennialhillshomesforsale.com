@@ -18,5 +18,6 @@ describe("contact hub", () => {
     expect(src).not.toContain("Whether you're buying");
     expect(src).toContain("GoogleReviewsCta");
     expect(src).not.toContain("Dr. Jan Duffy will pull");
+    expect(src).not.toContain("Dr. Jan can introduce");
   });
 });

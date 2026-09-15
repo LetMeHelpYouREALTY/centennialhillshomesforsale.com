@@ -21,5 +21,6 @@ describe("lead capture form chrome", () => {
     expect(src).toContain("text-slate-600");
     expect(src).not.toContain("text-gray-500");
     expect(src).toContain("I will call or email during posted office hours");
+    expect(src).not.toContain("text-slate-500");
   });
 });

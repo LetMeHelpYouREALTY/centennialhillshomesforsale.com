@@ -99,7 +99,7 @@ const listingFaqs = [
   {
     question: "How much do I need for a down payment in Las Vegas?",
     answer:
-      "Down payment requirements vary by loan type: FHA loans require 3.5%, conventional loans typically 3-20%, VA loans 0% for eligible veterans. Nevada also offers down payment assistance programs. Dr. Jan can introduce Clark County lenders. Rates are UNKNOWN until the lender quotes them.",
+      "Down payment requirements vary by loan type: FHA loans require 3.5%, conventional loans typically 3-20%, VA loans 0% for eligible veterans. Nevada also offers down payment assistance programs. I can introduce Clark County lenders. Rates are UNKNOWN until the lender quotes them.",
   },
   {
     question: "How do I confirm HOA dues on a Las Vegas listing?",
@@ -632,9 +632,9 @@ export default function ListingsPage({
                   </h3>
                   <p className="text-pretty text-slate-600 text-sm">
                     A pre-approval letter shows sellers you can close and gives
-                    you a clear budget. Dr. Jan can introduce Clark County
-                    lenders. Rates and fees are UNKNOWN until that lender quotes
-                    your file. Timeline is UNKNOWN until the lender has your
+                    you a clear budget. I can introduce Clark County lenders.
+                    Rates and fees are UNKNOWN until that lender quotes your
+                    file. Timeline is UNKNOWN until the lender has your
                     documents.
                   </p>
                 </div>

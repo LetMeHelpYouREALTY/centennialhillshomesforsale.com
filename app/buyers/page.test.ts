@@ -18,5 +18,7 @@ describe("buyers hub", () => {
     expect(src).not.toContain("She'll help you match");
     expect(src).not.toContain("exactly what you're buying");
     expect(src).not.toContain("text-blue-200");
+    expect(src).not.toContain("Dr. Jan can introduce");
+    expect(src).not.toContain("register her");
   });
 });

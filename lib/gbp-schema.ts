@@ -271,7 +271,7 @@ export const gbpFAQs = [
   {
     question: "Does Dr. Jan help with investment properties in Las Vegas?",
     answer:
-      "Yes. Dr. Jan provides investment property consulting including rental analysis, cap-rate math, short-term rental rules, and multi-family purchases. Citywide rents are UNKNOWN without a rent roll. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      "Yes. I provide investment property consulting including rental analysis, cap-rate math, short-term rental rules, and multi-family purchases. Citywide rents are UNKNOWN without a rent roll. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },
 ];
 

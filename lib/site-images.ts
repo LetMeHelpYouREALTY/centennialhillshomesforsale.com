@@ -230,7 +230,7 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
     src: PAGE_HERO_IMAGES.fiftyFivePlus.src,
   },
   {
-    test: /\b(55\+|sun city|del webb|hopa|active adult|age-restrict)/i,
+    test: /\b(55\+|sun city|del webb|hopa|active adult|age-restrict|occupancy)/i,
     src: PAGE_HERO_IMAGES.fiftyFivePlus.src,
   },
   {
@@ -238,15 +238,15 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
     src: PAGE_HERO_IMAGES.luxuryRidges.src,
   },
   {
-    test: /\b(luxury|guard-gated)\b/i,
+    test: /\b(luxury|guard-gated|discretion and representation|architectural packet|architectural review)\b/i,
     src: PAGE_HERO_IMAGES.luxury.src,
   },
   {
-    test: /\b(new construction|builder|production home)\b/i,
+    test: /\b(new construction|builder|production home|registration|register before)\b/i,
     src: PAGE_HERO_IMAGES.newConstruction.src,
   },
   {
-    test: /\b(first[- ]time|first home)\b/i,
+    test: /\b(first[- ]time|first home|loan types)\b/i,
     src: PAGE_HERO_IMAGES.firstTimeBuyers.src,
   },
   {
@@ -254,11 +254,11 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
     src: PAGE_HERO_IMAGES.californiaRelocator.src,
   },
   {
-    test: /\b(relocation|moving truck|inbound move)\b/i,
+    test: /\b(relocation|moving truck|inbound move|inbound:|outbound:|inbound vs outbound)\b/i,
     src: PAGE_HERO_IMAGES.relocation.src,
   },
   {
-    test: /\b(invest|rental|cash flow)\b/i,
+    test: /\b(invest|investor|rental|cash flow|1031|cap rate)\b/i,
     src: PAGE_HERO_IMAGES.investment.src,
   },
   {
@@ -266,7 +266,7 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
     src: PAGE_HERO_IMAGES.homeValuation.src,
   },
   {
-    test: /\b(staging|list your|selling process|seller)\b/i,
+    test: /\b(staging|list your|selling process|seller|documents before photos|weekly written updates|divorce|probate)\b/i,
     src: PAGE_HERO_IMAGES.sellersListing.src,
   },
   {
@@ -294,12 +294,40 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
     src: PAGE_HERO_IMAGES.luxury.src,
   },
   {
-    test: /\b(about dr\.? jan|dr\. jan duffy)\b/i,
+    test: /\b(about dr\.? jan|dr\. jan duffy|who i am|what i actually do|what the name actually buys you)\b/i,
     src: PAGE_HERO_IMAGES.about.src,
   },
   {
-    test: /\b(contact|get in touch|reach out)\b/i,
+    test: /\b(contact|get in touch|reach out|how to start|how to reach|how to use this page)\b/i,
     src: PAGE_HERO_IMAGES.contact.src,
+  },
+  {
+    test: /\b(what i will not do|what i send you|what i send after|how i answer a live file|how representation starts|specialized files|how i walk the house|what belongs on the worksheet)\b/i,
+    src: PAGE_HERO_IMAGES.office.src,
+  },
+  {
+    test: /\b(fair housing|compensation)\b/i,
+    src: VISIT_OFFICE_PHOTO_PATH,
+  },
+  {
+    test: /\b(flights and residency|what to send before you fly)\b/i,
+    src: PAGE_HERO_IMAGES.californiaRelocator.src,
+  },
+  {
+    test: /\b(geography|city vs village|campuses|how .+ sits on the map)\b/i,
+    src: PAGE_HERO_IMAGES.relocation.src,
+  },
+  {
+    test: /\bhow i send\b/i,
+    src: PAGE_HERO_IMAGES.listings.src,
+  },
+  {
+    test: /^buying$/i,
+    src: PAGE_HERO_IMAGES.buyers.src,
+  },
+  {
+    test: /^selling$/i,
+    src: PAGE_HERO_IMAGES.sellersListing.src,
   },
   {
     test: /\b(inspections?|due diligence)\b/i,
@@ -322,7 +350,7 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
     src: PAGE_HERO_IMAGES.buyers.src,
   },
   {
-    test: /\b(market|inventory|median|statistics|outlook)\b/i,
+    test: /\b(market|inventory|median|statistics|outlook|pricing as of|price bands|valley snapshot|what the valley actually lists)\b/i,
     src: PAGE_HERO_IMAGES.market.src,
   },
   {
@@ -354,7 +382,7 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
     src: "/images/neighborhoods/henderson.png",
   },
   {
-    test: /\b(skye canyon)\b/i,
+    test: /\b(skye canyon|skye center|floyd lamb)\b/i,
     src: "/images/neighborhoods/skye-canyon.png",
   },
   {

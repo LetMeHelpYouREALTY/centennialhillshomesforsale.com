@@ -71,7 +71,7 @@ const buyerFaqs = [
   {
     question: "How much do I need for a down payment in Las Vegas?",
     answer:
-      "Down payments vary by loan type: FHA 3.5%, conventional typically 3–20%, VA 0% when eligible. Nevada down-payment assistance exists for some first-time buyers. Dr. Jan can introduce Clark County lenders. Rates and USDA eligibility are UNKNOWN until the lender quotes them.",
+      "Down payments vary by loan type: FHA 3.5%, conventional typically 3–20%, VA 0% when eligible. Nevada down-payment assistance exists for some first-time buyers. I can introduce Clark County lenders. Rates and USDA eligibility are UNKNOWN until the lender quotes them.",
   },
   {
     question: "Should I get pre-approved before looking at homes?",
@@ -110,19 +110,19 @@ const buyingSteps = [
     icon: DollarSign,
     title: "Get Pre-Approved for Financing",
     description:
-      "Know your budget before you start looking. Dr. Jan can introduce Clark County lenders for FHA, VA, conventional, and down-payment assistance. Rates are UNKNOWN until the lender quotes them.",
+      "Know your budget before you start looking. I can introduce Clark County lenders for FHA, VA, conventional, and down-payment assistance. Rates are UNKNOWN until the lender quotes them.",
   },
   {
     icon: Search,
     title: "Define Your Priorities & Search",
     description:
-      "Dr. Jan provides access to live MLS listings, new construction after you register her, and private showings when the listing agent allows. I match ZIP, commute, square footage, and amenities, then set MLS alerts to the written criteria.",
+      "I provide access to live MLS listings, new construction after you register me, and private showings when the listing agent allows. I match ZIP, commute, square footage, and amenities, then set MLS alerts to the written criteria.",
   },
   {
     icon: FileText,
     title: "Tour Properties & Make an Offer",
     description:
-      "Dr. Jan prices the offer from live comps so it is competitive and still protects your side of the deal. Contingencies are written, not assumed.",
+      "I price the offer from live comps so it is competitive and still protects your side of the deal. Contingencies are written, not assumed.",
   },
   {
     icon: Home,
@@ -134,7 +134,7 @@ const buyingSteps = [
     icon: Key,
     title: "Close on the contract dates",
     description:
-      "Dr. Jan Duffy coordinates with lenders, title, and escrow. Close date is on the purchase agreement — often 30-ish days with a conventional loan, longer with FHA, VA, or new construction. I will not promise a 7-day close.",
+      "I coordinate with lenders, title, and escrow. Close date is on the purchase agreement — often 30-ish days with a conventional loan, longer with FHA, VA, or new construction. I will not promise a 7-day close.",
   },
 ];
 

@@ -80,7 +80,7 @@ const contactFaqs = [
   {
     question: "Do I need to be pre-approved before scheduling a showing?",
     answer:
-      "A pre-approval letter strengthens an offer, but it is not required for an initial consult. Dr. Jan can introduce Clark County lenders. Rates are UNKNOWN until that lender quotes your file.",
+      "A pre-approval letter strengthens an offer, but it is not required for an initial consult. I can introduce Clark County lenders. Rates are UNKNOWN until that lender quotes your file.",
   },
   {
     question: "How quickly can you respond to inquiries?",

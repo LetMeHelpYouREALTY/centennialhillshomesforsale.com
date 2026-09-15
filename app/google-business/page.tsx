@@ -24,6 +24,7 @@ import {
   TEXT_LINK_ON_DARK_CLASS,
 } from "@/lib/contact";
 import { VisitOffice } from "@/components/shared/VisitOffice";
+import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
@@ -615,6 +616,7 @@ export default function GoogleBusinessPage() {
             </div>
           </section>
 
+          <GoogleReviewsCta className="mb-16 rounded-2xl bg-white" />
           <VisitOffice className="mb-16 rounded-2xl" compact />
 
           {/* Review CTA - Prominence factor */}
@@ -632,9 +634,9 @@ export default function GoogleBusinessPage() {
                 Leave a Google Review for This Office
               </SectionHeading>
               <p className="text-pretty text-slate-600 mb-6 max-w-2xl mx-auto">
-                If Dr. Jan helped you buy or sell a home, please consider
-                sharing your experience. Mention your neighborhood, type of
-                transaction, and what made the experience valuable.
+                If I helped you buy or sell a home, please consider sharing your
+                experience. Mention your neighborhood, type of transaction, and
+                what made the experience useful.
               </p>
               <a
                 href={OFFICE_NAP.reviewsUrl}
@@ -655,8 +657,9 @@ export default function GoogleBusinessPage() {
                 Call or email with the address you want on a CMA
               </h2>
               <p className="text-pretty text-xl text-slate-300 mb-8">
-                Call or email Dr. Jan Duffy with the address you want on a CMA —
-                buying or selling in Las Vegas.
+                Call or email with the address you want on a CMA — buying or
+                selling in Las Vegas. I will pull live MLS, not a recycled
+                headline.
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
                 <a

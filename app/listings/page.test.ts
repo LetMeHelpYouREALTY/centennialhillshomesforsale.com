@@ -23,5 +23,6 @@ describe("listings hub FAQs", () => {
     expect(src).toContain("GoogleReviewsCta");
     expect(src).not.toContain("you'll have time for home inspections");
     expect(src).not.toContain("She will send matching listings");
+    expect(src).not.toContain("Dr. Jan can introduce");
   });
 });

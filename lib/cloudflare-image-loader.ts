@@ -25,6 +25,10 @@ export default function cloudflareImageLoader({
     process.env.NEXT_PUBLIC_CLOUDFLARE_IMAGES_ENABLED === "true";
   const accountHash = process.env.NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH;
 
+  if (/^https?:\/\//i.test(src)) {
+    return src;
+  }
+
   if (useCloudflareImages && accountHash) {
     const imageId = cloudflareImageId(src);
     const q = quality ?? 85;

@@ -319,7 +319,7 @@ export const commonFAQs = {
     {
       question: "What is Dr. Jan Duffy's experience in Las Vegas real estate?",
       answer:
-        "Dr. Jan Duffy has been serving Las Vegas since 2008. Her practice spans residential, luxury, investment, and new construction properties throughout Southern Nevada.",
+        "I have served Las Vegas since 2008. My practice spans residential, luxury, investment, and new construction properties throughout Southern Nevada.",
     },
   ],
   buying: [
@@ -331,19 +331,19 @@ export const commonFAQs = {
     {
       question: "Do I need a pre-approval before looking at homes?",
       answer:
-        "Yes. A pre-approval letter shows sellers a budget range. Dr. Jan can introduce Clark County lenders. Rates and programs are UNKNOWN until the lender quotes them.",
+        "Yes. A pre-approval letter shows sellers a budget range. I can introduce Clark County lenders. Rates and programs are UNKNOWN until the lender quotes them.",
     },
     {
       question: "How much do I need for a down payment?",
       answer:
-        "Down payments vary by loan type: FHA 3.5%, conventional typically 3–20%, VA 0% when eligible. Nevada down-payment assistance exists for some first-time buyers. Dr. Jan can introduce Clark County lenders. Rates and USDA eligibility are UNKNOWN until the lender quotes them.",
+        "Down payments vary by loan type: FHA 3.5%, conventional typically 3–20%, VA 0% when eligible. Nevada down-payment assistance exists for some first-time buyers. I can introduce Clark County lenders. Rates and USDA eligibility are UNKNOWN until the lender quotes them.",
     },
   ],
   selling: [
     {
       question: "What is my home worth in today's Las Vegas market?",
       answer:
-        "Home values depend on location, condition, size, and recent comparable sales. Dr. Jan provides a CMA from current MLS comps. Listing is a separate agreement. Serving Las Vegas since 2008.",
+        "Home values depend on location, condition, size, and recent comparable sales. I provide a CMA from current MLS comps. Listing is a separate agreement. Serving Las Vegas since 2008.",
     },
     {
       question: "How long will it take to sell my home?",

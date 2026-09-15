@@ -93,7 +93,7 @@ export default function InvestmentPropertiesPage() {
         {
           question: "Do you manage rentals?",
           answer:
-            "No. Dr. Jan Duffy represents buyers and sellers. She refers licensed managers.",
+            "No. I represent buyers and sellers. I refer licensed managers.",
         },
         {
           question: "Is North Las Vegas better for cash flow?",

@@ -110,6 +110,54 @@ describe("site images catalog", () => {
     });
     expect(kitchen.src).toBe(PAGE_HERO_IMAGES.sellers.src);
 
+    const pricing = resolveSectionImage({
+      heading: "Pricing as of September 14, 2026",
+      neighborhoodName: "Henderson",
+    });
+    expect(pricing.src).toBe(PAGE_HERO_IMAGES.market.src);
+
+    const matches = resolveSectionImage({
+      heading: "How I send 89138 matches",
+      neighborhoodName: "Summerlin West",
+    });
+    expect(matches.src).toBe(PAGE_HERO_IMAGES.listings.src);
+
+    const occupancy = resolveSectionImage({
+      heading: "Occupancy",
+      neighborhoodName: "Solera at Anthem",
+    });
+    expect(occupancy.src).toBe(PAGE_HERO_IMAGES.fiftyFivePlus.src);
+
+    const who = resolveSectionImage({
+      heading: "Who I am",
+      neighborhoodName: "Las Vegas",
+    });
+    expect(who.src).toBe(PAGE_HERO_IMAGES.about.src);
+
+    const capRate = resolveSectionImage({
+      heading: "1031 exchanges",
+      neighborhoodName: "Las Vegas",
+    });
+    expect(capRate.src).toBe(PAGE_HERO_IMAGES.investment.src);
+
+    const fairHousing = resolveSectionImage({
+      heading: "Fair Housing",
+      neighborhoodName: "Las Vegas",
+    });
+    expect(fairHousing.src).toBe("/images/gbp/visit-office.png");
+
+    const skyeCenter = resolveSectionImage({
+      heading: "Skye Center vs the house",
+      neighborhoodName: "Skye Canyon",
+    });
+    expect(skyeCenter.src).toBe("/images/neighborhoods/skye-canyon.png");
+
+    const loans = resolveSectionImage({
+      heading: "Loan types I coordinate — I do not originate",
+      neighborhoodName: "Las Vegas",
+    });
+    expect(loans.src).toBe(PAGE_HERO_IMAGES.firstTimeBuyers.src);
+
     const root = path.join(__dirname, "..", "public");
     expect(existsSync(path.join(root, golf.src.replace(/^\//, "")))).toBe(true);
     expect(existsSync(path.join(root, commute.src.replace(/^\//, "")))).toBe(

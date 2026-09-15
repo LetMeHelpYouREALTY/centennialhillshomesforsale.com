@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   AGENT_EMAIL,
   AGENT_EMAIL_MAILTO,
@@ -13,6 +14,26 @@ import {
 type SearchCentralFeedProps = {
   items: SearchCentralItem[];
 };
+
+const ALLOWED_FEED_IMAGE_HOSTS = new Set([
+  "developers.google.com",
+  "www.google.com",
+  "files.keepingcurrentmatters.com",
+]);
+
+function feedImageSrc(src: string | undefined): string {
+  if (!src) {
+    return SEARCH_CENTRAL_FALLBACK_IMAGE;
+  }
+  try {
+    const host = new URL(src).hostname;
+    return ALLOWED_FEED_IMAGE_HOSTS.has(host)
+      ? src
+      : SEARCH_CENTRAL_FALLBACK_IMAGE;
+  } catch {
+    return SEARCH_CENTRAL_FALLBACK_IMAGE;
+  }
+}
 
 function formatPubDate(value: string): string {
   const parsed = new Date(value);
@@ -84,7 +105,7 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
       </p>
       <ul className="grid md:grid-cols-2 gap-6">
         {items.map((item) => {
-          const image = item.image || SEARCH_CENTRAL_FALLBACK_IMAGE;
+          const image = feedImageSrc(item.image);
           return (
             <li
               key={item.link}
@@ -96,18 +117,19 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
                 target="_blank"
                 className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-600"
               >
-                <img
-                  src={image}
-                  alt={item.title}
-                  loading="lazy"
-                  width={1200}
-                  height={675}
-                  className="w-full h-40 object-cover bg-slate-100"
-                />
+                <span className="relative block h-40 w-full bg-slate-100">
+                  <Image
+                    src={image}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </span>
                 <span className="sr-only"> (opens in a new tab)</span>
               </a>
               <div className="p-5">
-                <p className="text-xs text-slate-500 mb-2">
+                <p className="text-xs text-slate-600 mb-2">
                   {formatPubDate(item.pubDate)}
                 </p>
                 <h3 className="font-bold text-slate-900 mb-2">
@@ -129,7 +151,7 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
           );
         })}
       </ul>
-      <p className="text-xs text-slate-500 mt-4">
+      <p className="text-xs text-slate-600 mt-4">
         Headlines and excerpts from the official{" "}
         <a
           href="https://developers.google.com/search/blog/feed.xml"
