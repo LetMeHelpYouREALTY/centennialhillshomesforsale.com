@@ -14,5 +14,6 @@ describe("MlsSearchForm", () => {
     expect(src).toContain("defaultQuery");
     expect(src).toContain("min-h-11");
     expect(src).toContain("ring-blue-600");
+    expect(src).toContain("AGENT_EMAIL");
   });
 });

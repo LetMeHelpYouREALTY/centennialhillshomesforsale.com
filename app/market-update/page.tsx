@@ -60,7 +60,7 @@ export default function MarketUpdatePage() {
         },
         {
           heading: "What I watch on live files",
-          body: "List-to-sale ratio, seller credits, and whether new construction is still buying down rates. Those show up on the CMA, not on a blog chart. Call (702) 222-1964 with the address.",
+          body: "List-to-sale ratio, seller credits, and whether new construction is still buying down rates. Those show up on the CMA, not on a blog chart. Call (702) 222-1964 or email homes@heyberkshire.com with the address.",
         },
         {
           heading: "How this page relates to the report and insights",

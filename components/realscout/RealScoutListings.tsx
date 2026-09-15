@@ -2,7 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { AGENT_EMAIL, CTA_PHONE, REALSCOUT_SEARCH_URL } from "@/lib/contact";
+import {
+  AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
+  CTA_PHONE,
+  CTA_TEL,
+  REALSCOUT_SEARCH_URL,
+  TEXT_LINK_CLASS,
+} from "@/lib/contact";
 import { MlsDisclaimer } from "@/components/shared/MlsDisclaimer";
 
 const WIDGET_HTML = `<realscout-office-listings 
@@ -46,8 +53,15 @@ export default function RealScoutListings() {
             </h2>
             <p className="text-pretty text-lg text-slate-600">
               Live MLS via RealScout for Las Vegas, Henderson, 89138 Summerlin
-              West, and 55+ campuses such as Siena. Call {CTA_PHONE} or email{" "}
-              {AGENT_EMAIL} for a showing.
+              West, and 55+ campuses such as Siena.{" "}
+              <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
+                Call {CTA_PHONE}
+              </a>{" "}
+              or{" "}
+              <a href={AGENT_EMAIL_MAILTO} className={TEXT_LINK_CLASS}>
+                email {AGENT_EMAIL}
+              </a>{" "}
+              for a showing.
             </p>
           </div>
           <Button asChild variant="outline" className="mt-4 md:mt-0">

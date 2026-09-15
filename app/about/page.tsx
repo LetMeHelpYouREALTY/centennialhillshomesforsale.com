@@ -103,7 +103,7 @@ const aboutFaqs = [
   {
     question: "Who is Dr. Jan Duffy?",
     answer:
-      "Dr. Jan Duffy is a REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, license S.0197614.LLC. She has served Las Vegas, Henderson, and Summerlin since 2008. Call (702) 222-1964.",
+      "Dr. Jan Duffy is a REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, license S.0197614.LLC. She has served Las Vegas, Henderson, and Summerlin since 2008. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },
   {
     question: "Where is the office?",

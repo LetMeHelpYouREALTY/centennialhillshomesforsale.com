@@ -14,5 +14,7 @@ describe("RealScout office listings widget", () => {
     expect(src).toContain("89138");
     expect(src).toContain("Siena");
     expect(src).toContain("text-pretty");
+    expect(src).toContain("CTA_TEL");
+    expect(src).toContain("AGENT_EMAIL_MAILTO");
   });
 });

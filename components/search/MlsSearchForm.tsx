@@ -1,4 +1,4 @@
-import { CTA_PHONE } from "@/lib/contact";
+import { CTA_PHONE, AGENT_EMAIL } from "@/lib/contact";
 import { cn } from "lib/utils";
 
 type MlsSearchFormProps = {
@@ -51,8 +51,8 @@ export function MlsSearchForm({
         Search MLS
       </button>
       <p className="sr-only">
-        Submits to live listings. Call {CTA_PHONE} if the phrase does not match
-        a street or ZIP.
+        Submits to live listings. Call {CTA_PHONE} or email {AGENT_EMAIL} if the
+        phrase does not match a street or ZIP.
       </p>
     </form>
   );

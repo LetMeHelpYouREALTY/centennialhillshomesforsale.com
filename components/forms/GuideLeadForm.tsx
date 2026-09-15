@@ -1,5 +1,11 @@
 import { LeadCaptureForm } from "@/components/forms/LeadCaptureForm";
-import { CTA_PHONE, AGENT_EMAIL } from "@/lib/contact";
+import {
+  AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
+  CTA_PHONE,
+  CTA_TEL,
+  TEXT_LINK_CLASS,
+} from "@/lib/contact";
 import { cn } from "@/lib/utils";
 
 type GuideLeadFormProps = {
@@ -30,8 +36,15 @@ export function GuideLeadForm({
         {heading}
       </h2>
       <p className="mb-6 text-pretty text-slate-600">
-        Send the address or ZIP. Call {CTA_PHONE} or email {AGENT_EMAIL} if you
-        want a faster live pull.
+        Send the address or ZIP.{" "}
+        <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
+          Call {CTA_PHONE}
+        </a>{" "}
+        or{" "}
+        <a href={AGENT_EMAIL_MAILTO} className={TEXT_LINK_CLASS}>
+          email {AGENT_EMAIL}
+        </a>{" "}
+        if you want a faster live pull.
       </p>
       <LeadCaptureForm source={source} formType={formType} />
     </section>

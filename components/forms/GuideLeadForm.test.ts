@@ -10,6 +10,9 @@ describe("guide lead form", () => {
     const src = readFileSync(resolve(here, "GuideLeadForm.tsx"), "utf8");
     expect(src).toContain("CTA_PHONE");
     expect(src).toContain("AGENT_EMAIL");
-    expect(src).toContain("or email");
+    expect(src).toContain("email {AGENT_EMAIL}");
+    expect(src).toContain("CTA_TEL");
+    expect(src).toContain("AGENT_EMAIL_MAILTO");
+    expect(src).toContain("TEXT_LINK_CLASS");
   });
 });

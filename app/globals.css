@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    scroll-padding-top: 5.5rem;
+    scroll-padding-top: calc(5.5rem + env(safe-area-inset-top, 0px));
     -webkit-tap-highlight-color: transparent;
   }
 
@@ -29,7 +29,7 @@
   h3,
   h4 {
     @apply text-balance;
-    scroll-margin-top: 5.5rem;
+    scroll-margin-top: calc(5.5rem + env(safe-area-inset-top, 0px));
   }
 
   p {
@@ -55,7 +55,7 @@
 
 .skip-link:focus,
 .skip-link:focus-visible {
-  top: 1rem;
+  top: calc(1rem + env(safe-area-inset-top, 0px));
 }
 
 @media (prefers-reduced-motion: reduce) {

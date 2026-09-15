@@ -46,7 +46,7 @@ export default function DownsizingPage() {
         },
         {
           heading: "Money order of operations",
-          body: "List the larger house with a real CMA. Do not buy the smaller house on a guess. Move-up sequencing applies in reverse: sale contingency, rent-back, or a short overlap. Call (702) 222-1964.",
+          body: "List the larger house with a real CMA. Do not buy the smaller house on a guess. Move-up sequencing applies in reverse: sale contingency, rent-back, or a short overlap. Call (702) 222-1964 or email homes@heyberkshire.com.",
         },
         {
           heading: "HOA dues on the next door",

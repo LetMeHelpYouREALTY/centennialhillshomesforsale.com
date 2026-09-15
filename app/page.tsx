@@ -20,6 +20,7 @@ import {
   AGENT_EMAIL_MAILTO,
   OFFICE_NAP,
   OFFICE_POSTAL_ADDRESS,
+  TEXT_LINK_CLASS,
 } from "@/lib/contact";
 import { withShareImage } from "@/lib/page-seo";
 import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
@@ -241,8 +242,15 @@ export default async function Home() {
                 </h2>
                 <p className="mb-4 text-pretty text-lg text-slate-600">
                   Berkshire Hathaway HomeServices Nevada Properties. License
-                  S.0197614.LLC. Call {CTA_PHONE} or email {AGENT_EMAIL} for
-                  Centennial Hills, Summerlin (89138), Henderson, and 55+
+                  S.0197614.LLC.{" "}
+                  <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
+                    Call {CTA_PHONE}
+                  </a>{" "}
+                  or{" "}
+                  <a href={AGENT_EMAIL_MAILTO} className={TEXT_LINK_CLASS}>
+                    email {AGENT_EMAIL}
+                  </a>{" "}
+                  for Centennial Hills, Summerlin (89138), Henderson, and 55+
                   campuses such as Siena.
                 </p>
                 <div className="flex flex-col flex-wrap justify-center gap-3 sm:flex-row md:justify-start">

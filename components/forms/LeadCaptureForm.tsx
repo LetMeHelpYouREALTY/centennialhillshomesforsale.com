@@ -245,6 +245,8 @@ export function LeadCaptureForm({
             id="firstName"
             name="firstName"
             autoComplete="given-name"
+            autoCapitalize="words"
+            autoCorrect="off"
             value={formData.firstName}
             onChange={handleChange}
             required
@@ -264,6 +266,8 @@ export function LeadCaptureForm({
             id="lastName"
             name="lastName"
             autoComplete="family-name"
+            autoCapitalize="words"
+            autoCorrect="off"
             value={formData.lastName}
             onChange={handleChange}
             required
@@ -335,10 +339,12 @@ export function LeadCaptureForm({
                 id="priceMin"
                 name="priceMin"
                 type="number"
+                inputMode="numeric"
+                autoComplete="off"
                 value={formData.priceMin}
                 onChange={handleChange}
                 disabled={loading}
-                placeholder="300000"
+                placeholder="300000…"
               />
             </div>
 
@@ -353,10 +359,12 @@ export function LeadCaptureForm({
                 id="priceMax"
                 name="priceMax"
                 type="number"
+                inputMode="numeric"
+                autoComplete="off"
                 value={formData.priceMax}
                 onChange={handleChange}
                 disabled={loading}
-                placeholder="600000"
+                placeholder="600000…"
               />
             </div>
           </div>

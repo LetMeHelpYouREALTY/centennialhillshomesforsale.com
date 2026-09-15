@@ -91,7 +91,9 @@ export default function Navbar() {
     <nav
       aria-label="Primary"
       className={`fixed top-0 left-0 right-0 z-50 bg-white shadow-md transition-[padding,box-shadow] duration-300 ${
-        isScrolled ? "py-2 shadow-lg" : "py-3"
+        isScrolled
+          ? "pb-2 pt-[max(0.5rem,env(safe-area-inset-top,0px))] shadow-lg"
+          : "pb-3 pt-[max(0.75rem,env(safe-area-inset-top,0px))]"
       }`}
     >
       <div className="container mx-auto px-4">

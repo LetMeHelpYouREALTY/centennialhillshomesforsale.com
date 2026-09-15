@@ -130,9 +130,15 @@ export default function ContactPage() {
               <AgentPhoto variant="card" priority />
             </div>
             <p className="text-pretty text-xl text-slate-600 max-w-2xl mx-auto">
-              Questions about Las Vegas real estate? Call {CTA_PHONE} or email{" "}
-              {AGENT_EMAIL} with the address. Schedule an appointment or reach
-              out directly.
+              Questions about Las Vegas real estate?{" "}
+              <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
+                Call {CTA_PHONE}
+              </a>{" "}
+              or{" "}
+              <a href={AGENT_EMAIL_MAILTO} className={TEXT_LINK_CLASS}>
+                email {AGENT_EMAIL}
+              </a>{" "}
+              with the address. Schedule an appointment or reach out directly.
             </p>
             <div className="mt-8">
               <MlsSearchForm inputId="mls-q-contact" />
