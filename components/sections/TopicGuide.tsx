@@ -17,9 +17,11 @@ import { SectionPhoto } from "@/components/shared/SectionPhoto";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
+import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import { getCanonicalUrl, getPublicSiteUrl } from "@/lib/site-url";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { generateWebPageSchema } from "@/lib/schema";
+import { mergeGuideRelated } from "@/lib/guide-related";
 
 export type TopicFaq = {
   question: string;
@@ -87,6 +89,10 @@ export default function TopicGuide({
 }: TopicGuideProps) {
   const origin = getPublicSiteUrl();
   const heroSrc = imageSrc ?? PAGE_HERO_IMAGES.listings.src;
+  const relatedLinks = mergeGuideRelated(related, [
+    { href: "/listings", label: "Search live MLS listings" },
+    { href: "/contact", label: "Call or email the office" },
+  ]);
 
   return (
     <>
@@ -137,6 +143,20 @@ export default function TopicGuide({
                 <span className="sr-only"> (opens in a new tab)</span>
               </a>
             </p>
+
+            <section className="mb-10" aria-labelledby={`${slug}-mls-heading`}>
+              <h2
+                id={`${slug}-mls-heading`}
+                className="mb-3 text-2xl font-bold text-slate-900"
+              >
+                Search live MLS
+              </h2>
+              <p className="mb-4 text-pretty text-slate-600">
+                ZIP, street, or community. Submits to current listings — not a
+                scraped sample.
+              </p>
+              <MlsSearchForm className="mx-0" inputId={`mls-q-${slug}`} />
+            </section>
 
             <section className="mb-12 rounded-2xl bg-slate-900 p-8 text-white">
               <h2 className="mb-6 text-center text-2xl font-bold">
@@ -191,7 +211,7 @@ export default function TopicGuide({
                 className="mb-6"
               />
               <ul className="grid gap-3 md:grid-cols-2">
-                {related.map((item) => (
+                {relatedLinks.map((item) => (
                   <li key={item.href}>
                     <Link
                       href={item.href}

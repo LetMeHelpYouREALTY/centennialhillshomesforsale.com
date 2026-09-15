@@ -5,12 +5,16 @@ type MlsSearchFormProps = {
   className?: string;
   inputClassName?: string;
   buttonClassName?: string;
+  inputId?: string;
+  defaultQuery?: string;
 };
 
 export function MlsSearchForm({
   className = "",
   inputClassName = "",
   buttonClassName = "",
+  inputId = "mls-q",
+  defaultQuery,
 }: MlsSearchFormProps) {
   return (
     <form
@@ -22,14 +26,15 @@ export function MlsSearchForm({
       )}
       role="search"
     >
-      <label htmlFor="mls-q" className="sr-only">
+      <label htmlFor={inputId} className="sr-only">
         Search Las Vegas MLS by ZIP, street, or community
       </label>
       <input
-        id="mls-q"
+        id={inputId}
         name="q"
         type="search"
         autoComplete="off"
+        defaultValue={defaultQuery}
         placeholder="ZIP, street, or community…"
         className={cn(
           "min-h-11 flex-1 rounded-md border border-slate-300 bg-white px-4 text-base text-slate-900 placeholder:text-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600",

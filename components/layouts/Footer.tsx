@@ -108,7 +108,10 @@ export default function Footer() {
                 { href: "/luxury-homes", label: "Luxury Homes" },
                 { href: "/55-plus-communities", label: "55+ Communities" },
                 { href: "/new-construction", label: "New Construction" },
-                { href: "/faq", label: "FAQ" },
+                {
+                  href: "/investment-properties",
+                  label: "Investment Properties",
+                },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

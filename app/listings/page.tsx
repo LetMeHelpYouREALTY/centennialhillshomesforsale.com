@@ -17,7 +17,9 @@ import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
+import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import {
+  AGENT_EMAIL,
   CTA_PHONE,
   CTA_PHONE_E164,
   CTA_TEL,
@@ -68,6 +70,7 @@ const listingsSchema = {
     "@type": "RealEstateAgent",
     name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
     telephone: CTA_PHONE_E164,
+    email: AGENT_EMAIL,
     address: OFFICE_POSTAL_ADDRESS,
   },
   areaServed: [
@@ -263,6 +266,12 @@ export default function ListingsPage({
                 .
               </p>
             ) : null}
+            <div className="mb-8">
+              <MlsSearchForm
+                inputId="mls-q-listings"
+                defaultQuery={query || undefined}
+              />
+            </div>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
               <span className="flex items-center">
                 <CheckCircle

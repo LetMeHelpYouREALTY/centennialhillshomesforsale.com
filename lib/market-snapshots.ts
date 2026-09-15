@@ -1,6 +1,8 @@
 /** Public listing medians from realtor.com local market pages. */
 
 export const MARKET_SNAPSHOT_AS_OF = "September 14, 2026";
+/** ISO date for JSON-LD dateModified. Keep in lockstep with MARKET_SNAPSHOT_AS_OF. */
+export const MARKET_SNAPSHOT_ISO = "2026-09-14";
 export const MARKET_SNAPSHOT_SOURCE =
   "realtor.com local market pages retrieved 2026-09-14";
 

@@ -17,6 +17,7 @@ import {
 } from "./contact";
 import { OFFICE_PHOTO_PATH } from "./site-images";
 import { getPublicSiteUrl } from "./site-url";
+import { MARKET_SNAPSHOT_ISO } from "./market-snapshots";
 
 // ============================================================================
 // Types
@@ -565,7 +566,7 @@ export function generateWebPageSchema(page: {
       "@id": `${BASE_URL}#organization`,
     },
     ...(page.datePublished && { datePublished: page.datePublished }),
-    ...(page.dateModified && { dateModified: page.dateModified }),
+    dateModified: page.dateModified ?? MARKET_SNAPSHOT_ISO,
   };
 }
 

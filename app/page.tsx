@@ -16,6 +16,7 @@ import {
   CTA_PHONE,
   CTA_PHONE_E164,
   CTA_TEL,
+  AGENT_EMAIL,
   OFFICE_NAP,
   OFFICE_POSTAL_ADDRESS,
 } from "@/lib/contact";
@@ -131,6 +132,7 @@ export default async function Home() {
     name: "Dr. Jan Duffy - Centennial Hills Real Estate",
     url: canonical,
     telephone: CTA_PHONE_E164,
+    email: AGENT_EMAIL,
     image: `${origin}${AGENT_PHOTO_PATH}`,
     address: OFFICE_POSTAL_ADDRESS,
     areaServed: [

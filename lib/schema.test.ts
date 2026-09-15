@@ -9,6 +9,7 @@ import {
   generateWebSiteSchema,
 } from "./schema";
 import { SOCIAL_PROFILES } from "./contact";
+import { MARKET_SNAPSHOT_ISO } from "./market-snapshots";
 
 describe("RealEstateAgent JSON-LD", () => {
   const schema = generateRealEstateAgentSchema();
@@ -68,6 +69,7 @@ describe("RealEstateAgent JSON-LD", () => {
       "@id": expect.stringContaining("#organization"),
     });
     expect(String(page.url)).toContain("/faq");
+    expect(page.dateModified).toBe(MARKET_SNAPSHOT_ISO);
   });
 
   it("does not attach an invented AggregateRating to review JSON-LD", () => {

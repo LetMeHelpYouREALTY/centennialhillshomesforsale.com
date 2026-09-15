@@ -25,6 +25,7 @@ import { SectionHeading } from "@/components/shared/SectionPhoto";
 import SchemaScript from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
 import {
+  AGENT_EMAIL,
   CTA_PHONE,
   CTA_PHONE_E164,
   CTA_TEL,
@@ -38,6 +39,7 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
+import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import Image from "next/image";
 
 export const metadata: Metadata = withShareImage(
@@ -130,6 +132,7 @@ const localBusinessSchema = {
   description:
     "55+ HOPA communities including Sun City, Del Webb, and Henderson 55+ campuses",
   telephone: CTA_PHONE_E164,
+  email: AGENT_EMAIL,
   url: "https://heyberkshire.com/55-plus-communities",
   address: {
     "@type": "PostalAddress",
@@ -425,6 +428,9 @@ export default function FiftyFiveCommunitiesPage() {
                 <span className="sr-only"> (opens in a new tab)</span>
               </a>
             </div>
+            <div className="mt-8">
+              <MlsSearchForm inputId="mls-q-55-plus" />
+            </div>
           </div>
 
           {/* Quick Stats */}
@@ -523,7 +529,7 @@ export default function FiftyFiveCommunitiesPage() {
             </div>
           </section>
 
-          {/* Lifestyle Benefits */}
+          {/* Rec campus amenities */}
           <section className="mb-16 max-w-6xl mx-auto">
             <SectionHeading
               className="text-3xl font-bold text-slate-900 mb-4 text-center"

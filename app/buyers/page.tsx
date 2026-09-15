@@ -23,6 +23,7 @@ import { SectionHeading } from "@/components/shared/SectionPhoto";
 import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
 import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
 import { generateServiceSchema, generateWebPageSchema } from "@/lib/schema";
+import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import Image from "next/image";
 import {
   formatUsd,
@@ -202,6 +203,9 @@ export default function BuyersPage() {
               by the seller, the buyer, or a combination. I put the number in
               writing before we tour.
             </p>
+            <div className="mb-8">
+              <MlsSearchForm inputId="mls-q-buyers" />
+            </div>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
               <span className="flex items-center">
                 <CheckCircle

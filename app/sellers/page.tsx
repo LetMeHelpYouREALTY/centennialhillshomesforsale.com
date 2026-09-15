@@ -17,6 +17,7 @@ import { SectionHeading } from "@/components/shared/SectionPhoto";
 import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { generateServiceSchema, generateWebPageSchema } from "@/lib/schema";
+import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import {
   formatUsd,
   LISTING_MEDIANS_USD,
@@ -198,6 +199,9 @@ export default function SellersPage() {
               2008—helping sellers price to the comps and negotiate the net
               sheet.
             </p>
+            <div className="mb-8">
+              <MlsSearchForm inputId="mls-q-sellers" />
+            </div>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
               <span className="flex items-center">
                 <CheckCircle

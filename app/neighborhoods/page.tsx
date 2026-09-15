@@ -16,6 +16,7 @@ import { SectionHeading } from "@/components/shared/SectionPhoto";
 import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
 import Image from "next/image";
 import { generateWebPageSchema } from "@/lib/schema";
+import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 
 export const metadata: Metadata = withShareImage(
   {
@@ -274,6 +275,9 @@ export default function NeighborhoodsPage() {
               of {MARKET_SNAPSHOT_AS_OF} — not a CMA. Pick the guide that
               matches the street.
             </p>
+            <div className="mt-8">
+              <MlsSearchForm inputId="mls-q-neighborhoods" />
+            </div>
           </div>
 
           {/* Neighborhood Grid */}
