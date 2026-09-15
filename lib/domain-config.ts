@@ -117,7 +117,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     neighborhood: "Las Vegas",
     tagline: "Dr. Jan Duffy — Client Reviews",
     description:
-      "Read what clients say about Dr. Jan Duffy, Las Vegas top real estate agent at BHHS Nevada Properties.",
+      "Read Google reviews for Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Call 702-222-1964.",
     heroHeadline: "What Clients Say About Dr. Jan",
     heroSubheadline:
       "Serving Las Vegas since 2008. Real results, real Google reviews.",
@@ -626,7 +626,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "Trilogy Specialist",
     ctaHeadline: "Discover Trilogy at Sunstone",
     ctaSubheadline:
-      "Del Webb quality, resort amenities, active lifestyle — let me show you everything.",
+      "Del Webb rec campus, one-story plans, and HOPA occupancy — call 702-222-1964.",
   },
   "vegas55plushomes.com": {
     domain: "vegas55plushomes.com",
@@ -647,7 +647,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "55+ Community Expert",
     ctaHeadline: "Find Your 55+ Community",
     ctaSubheadline:
-      "I know every 55+ community in Las Vegas. Let me match you with your perfect lifestyle.",
+      "I tour Sun City, Del Webb, Trilogy, and Heritage by ZIP and HOPA rules. Call 702-222-1964.",
   },
   "yourdivorcerealtor.com": {
     domain: "yourdivorcerealtor.com",

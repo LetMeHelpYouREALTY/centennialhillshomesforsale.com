@@ -182,9 +182,9 @@ export const businessInfo = {
 // 750-word GBP Description (3 sections)
 export const gbpDescription = {
   // Section 1: Who you are/mission (~250 words)
-  whoWeAre: `Dr. Jan Duffy is a trusted REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, serving the Las Vegas real estate market since 2008. Backed by Warren Buffett's Berkshire Hathaway—the most recognized name in real estate—Dr. Jan combines local expertise with world-class resources to deliver exceptional results for buyers and sellers alike.
+  whoWeAre: `Dr. Jan Duffy is a REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, serving Las Vegas, Henderson, and Summerlin since 2008. License S.0197614.LLC. The office is at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Call (702) 222-1964.
 
-With $127 million in closed transactions and hundreds of satisfied clients, Dr. Jan has earned a reputation for integrity, market knowledge, and personalized service. Whether you're a first-time buyer navigating the process, a luxury home seeker exploring The Ridges or MacDonald Highlands, or a California family relocating for Nevada's tax advantages, Dr. Jan provides the guidance you need to make confident real estate decisions.`,
+I work first-time buyers, luxury tours in The Ridges and MacDonald Highlands, 55+ HOPA communities, and California-to-Nevada relocations against live comps — not a volume slogan or a “family” pitch.`,
 
   // Section 2: What/why - Value proposition (~250 words)
   whatWeDo: `What sets Dr. Jan apart is a commitment to education and advocacy. Clients receive comprehensive market analysis, expert negotiation, and honest advice—not sales pressure. As a Berkshire Hathaway HomeServices agent, Dr. Jan offers access to a global referral network, marketing for sellers, and live MLS search for buyers.

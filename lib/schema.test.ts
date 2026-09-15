@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { generateRealEstateAgentSchema } from "./schema";
+import { generateRealEstateAgentSchema, generateReviewSchema } from "./schema";
 import { SOCIAL_PROFILES } from "./contact";
 
 describe("RealEstateAgent JSON-LD", () => {
@@ -22,5 +22,10 @@ describe("RealEstateAgent JSON-LD", () => {
       ]),
     );
     expect(JSON.stringify(schema.sameAs)).not.toContain("tiktok");
+  });
+
+  it("does not attach an invented AggregateRating to review JSON-LD", () => {
+    const reviewSchema = generateReviewSchema([]);
+    expect(reviewSchema).not.toHaveProperty("aggregateRating");
   });
 });

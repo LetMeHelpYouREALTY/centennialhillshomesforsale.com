@@ -33,6 +33,7 @@
   h3,
   h4 {
     @apply text-balance;
+    scroll-margin-top: 5.5rem;
   }
 
   p {

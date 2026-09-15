@@ -6,7 +6,7 @@
  * @see https://developers.google.com/search/docs/appearance/structured-data
  */
 
-import { siteConfig, agentInfo, officeInfo, agentStats } from "./site-config";
+import { siteConfig, agentInfo, officeInfo } from "./site-config";
 import { AGENT_PHOTO_PATH, FAVICON_32_PATH } from "./brand-assets";
 import {
   CTA_PHONE_E164,
@@ -307,10 +307,6 @@ export function generateReviewSchema(reviews: ReviewItem[]) {
     "@type": "RealEstateAgent",
     "@id": `${BASE_URL}#organization`,
     name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-    aggregateRating: generateAggregateRatingSchema(
-      agentStats.averageRating,
-      agentStats.reviewCount,
-    ),
     review: reviews.map((review) => ({
       "@type": "Review",
       author: {

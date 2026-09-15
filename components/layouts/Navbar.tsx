@@ -154,7 +154,7 @@ export default function Navbar() {
               )}
             </div>
 
-            <Button asChild className="bg-blue-600 hover:bg-blue-700">
+            <Button asChild className="min-h-11 bg-blue-600 hover:bg-blue-700">
               <a
                 href={CTA_TEL}
                 className="flex items-center gap-2 no-underline"

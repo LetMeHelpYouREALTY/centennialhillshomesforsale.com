@@ -87,13 +87,10 @@ export const marketStats = {
   },
 };
 
-// Agent Stats
+// Public years of practice only. Do not publish volume, rating, or review
+// counts without a live GBP or brokerage pull.
 export const agentStats = {
   servingSince: 2008,
-  transactionsClosed: 500,
-  volumeClosed: "$127M+",
-  averageRating: 4.9,
-  reviewCount: 200,
 };
 
 // Value Propositions

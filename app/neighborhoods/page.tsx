@@ -246,7 +246,7 @@ export default function NeighborhoodsPage() {
                 <Link
                   key={neighborhood.slug}
                   href={`/neighborhoods/${neighborhood.slug}`}
-                  className="group overflow-hidden rounded-lg border border-slate-200 bg-white no-underline transition-shadow hover:border-blue-300 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+                  className="group overflow-hidden rounded-lg border border-slate-200 bg-white no-underline transition-shadow hover:border-blue-300 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 min-h-11"
                 >
                   {(() => {
                     const photo = getNeighborhoodImage(neighborhood.slug);

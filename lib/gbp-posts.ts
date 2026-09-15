@@ -82,7 +82,7 @@ Call (702) 222-1964 for a California equity comparison.`,
 🌊 Del Webb Lake Las Vegas - Resort-style lakefront living
 ⛳ Solera at Anthem - Boutique community feel
 
-Each offers different amenities, price points, and lifestyles. Dr. Jan Duffy specializes in 55+ communities and can help you find the perfect fit.
+Each community has different rec campuses, HOA rules, and listing medians. Dr. Jan Duffy works 55+ HOPA files and can tour by ZIP and floor plan.
 
 Schedule a community tour: (702) 222-1964`,
     cta: {

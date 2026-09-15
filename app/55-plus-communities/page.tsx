@@ -736,7 +736,7 @@ export default function FiftyFiveCommunitiesPage() {
                   <Shield className="h-6 w-6 text-purple-600" />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">
-                  Convenience & Security
+                  Guard-gated entries & HOA maintenance
                 </h3>
                 <ul className="text-slate-600 text-sm space-y-1">
                   <li>• Guard-gated entries (many)</li>
