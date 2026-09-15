@@ -13,6 +13,7 @@ describe("404 recovery screen", () => {
     expect(src).toContain("/55-plus-communities/siena");
     expect(src).toContain("/home-valuation");
     expect(src).toContain("/relocation");
+    expect(src).toContain("/buyers/first-time-buyers");
     expect(src).toContain("AGENT_EMAIL");
     expect(src).toContain("flex-wrap");
     expect(src).toContain("GoogleReviewsCta");

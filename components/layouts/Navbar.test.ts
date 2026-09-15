@@ -20,6 +20,8 @@ describe("navbar keyboard", () => {
     expect(src).toContain('event.key !== "Tab"');
     expect(src).toContain("listServiceLinks");
     expect(src).toContain("focusServiceLink");
+    expect(src).toContain("isCurrentHref");
+    expect(src).toContain("isServicesSectionCurrent");
     expect(src).toContain("ArrowDown");
     expect(src).not.toContain("priority className");
   });

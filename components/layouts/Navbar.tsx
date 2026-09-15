@@ -63,6 +63,13 @@ function focusServiceLink(
   links[next].focus();
 }
 
+function isCurrentHref(pathname: string, href: string): boolean {
+  if (href === "/") {
+    return pathname === "/";
+  }
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 export default function Navbar() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -205,6 +212,10 @@ export default function Navbar() {
     { href: "/market-insights", label: "Market Insights" },
   ];
 
+  const isServicesSectionCurrent = serviceLinks.some((link) =>
+    isCurrentHref(pathname, link.href),
+  );
+
   return (
     <nav
       ref={navRef}
@@ -236,11 +247,7 @@ export default function Navbar() {
 
           <div className="hidden items-center space-x-5 lg:flex">
             {mainNavLinks.map((link) => {
-              const isCurrent =
-                link.href === "/"
-                  ? pathname === "/"
-                  : pathname === link.href ||
-                    pathname.startsWith(`${link.href}/`);
+              const isCurrent = isCurrentHref(pathname, link.href);
               return (
                 <Link
                   key={link.href}
@@ -260,7 +267,11 @@ export default function Navbar() {
             <div className="relative" ref={servicesRef}>
               <button
                 type="button"
-                className="flex min-h-11 items-center rounded-md px-2 py-1 text-sm font-medium text-slate-700 transition-colors hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+                className={`flex min-h-11 items-center rounded-md px-2 py-1 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 ${
+                  isServicesSectionCurrent
+                    ? "text-blue-700"
+                    : "text-slate-700 hover:text-blue-600"
+                }`}
                 onClick={() => setIsServicesOpen((open) => !open)}
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onKeyDown={(event) => {
@@ -309,17 +320,25 @@ export default function Navbar() {
                     }
                   }}
                 >
-                  {serviceLinks.map((link) => (
-                    <li key={link.href}>
-                      <Link
-                        href={link.href}
-                        className="block min-h-11 px-4 py-2 text-sm text-slate-700 no-underline hover:bg-blue-50 hover:text-blue-600 focus-visible:bg-blue-50 focus-visible:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-600"
-                        onClick={() => setIsServicesOpen(false)}
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
+                  {serviceLinks.map((link) => {
+                    const isCurrent = isCurrentHref(pathname, link.href);
+                    return (
+                      <li key={link.href}>
+                        <Link
+                          href={link.href}
+                          aria-current={isCurrent ? "page" : undefined}
+                          className={`block min-h-11 px-4 py-2 text-sm no-underline hover:bg-blue-50 hover:text-blue-600 focus-visible:bg-blue-50 focus-visible:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-600 ${
+                            isCurrent
+                              ? "bg-blue-50 text-blue-700"
+                              : "text-slate-700"
+                          }`}
+                          onClick={() => setIsServicesOpen(false)}
+                        >
+                          {link.label}
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               )}
             </div>
@@ -405,11 +424,7 @@ export default function Navbar() {
           >
             <div className="flex flex-col space-y-1 pt-4">
               {mainNavLinks.map((link) => {
-                const isCurrent =
-                  link.href === "/"
-                    ? pathname === "/"
-                    : pathname === link.href ||
-                      pathname.startsWith(`${link.href}/`);
+                const isCurrent = isCurrentHref(pathname, link.href);
                 return (
                   <Link
                     key={link.href}
@@ -429,16 +444,24 @@ export default function Navbar() {
                 <span className="px-3 text-xs font-semibold uppercase text-slate-600">
                   Services
                 </span>
-                {serviceLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="flex min-h-11 items-center rounded px-3 py-2 font-medium text-slate-700 no-underline transition-colors hover:bg-blue-50 hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+                {serviceLinks.map((link) => {
+                  const isCurrent = isCurrentHref(pathname, link.href);
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      aria-current={isCurrent ? "page" : undefined}
+                      className={`flex min-h-11 items-center rounded px-3 py-2 font-medium no-underline transition-colors hover:bg-blue-50 hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 ${
+                        isCurrent
+                          ? "bg-blue-50 text-blue-700"
+                          : "text-slate-700"
+                      }`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  );
+                })}
               </div>
 
               <div className="flex flex-col gap-2 pt-4">

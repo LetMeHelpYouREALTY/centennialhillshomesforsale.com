@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
-import { SectionPhoto } from "@/components/shared/SectionPhoto";
+import { SectionHeading } from "@/components/shared/SectionPhoto";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
 import {
   formatUsd,
@@ -107,16 +107,15 @@ export default function CentennialHillsPage() {
       ]}
     >
       <section className="mb-10">
-        <h2 className="mb-4 text-2xl font-bold text-slate-900">
-          Sample drive times from Centennial Hills
-        </h2>
-        <SectionPhoto
-          heading="Sample drive times from Centennial Hills"
+        <SectionHeading
+          className="mb-4 text-2xl font-bold text-slate-900"
           neighborhoodName="Centennial Hills"
           neighborhoodSlug="centennial-hills"
           avoidSrc="/images/neighborhoods/centennial-hills.png"
-          className="mb-6"
-        />
+          photoClassName="mb-6"
+        >
+          Sample drive times from Centennial Hills
+        </SectionHeading>
         <div className="overflow-x-auto">
           <table className="w-full border border-slate-200 bg-white text-sm">
             <caption className="mb-2 text-left text-slate-600">
@@ -125,35 +124,64 @@ export default function CentennialHillsPage() {
             </caption>
             <thead className="bg-slate-50">
               <tr>
-                <th className="px-4 py-3 text-left font-semibold text-slate-900">
+                <th
+                  scope="col"
+                  className="px-4 py-3 text-left font-semibold text-slate-900"
+                >
                   Destination
                 </th>
-                <th className="px-4 py-3 text-left font-semibold text-slate-900">
+                <th
+                  scope="col"
+                  className="px-4 py-3 text-left font-semibold text-slate-900"
+                >
                   About
                 </th>
-                <th className="px-4 py-3 text-left font-semibold text-slate-900">
+                <th
+                  scope="col"
+                  className="px-4 py-3 text-left font-semibold text-slate-900"
+                >
                   Midday
                 </th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-200 text-slate-700">
               <tr>
-                <td className="px-4 py-3">Downtown Summerlin</td>
+                <th
+                  scope="row"
+                  className="px-4 py-3 text-left font-normal text-slate-700"
+                >
+                  Downtown Summerlin
+                </th>
                 <td className="px-4 py-3">6 miles</td>
                 <td className="px-4 py-3">12 min</td>
               </tr>
               <tr className="bg-slate-50">
-                <td className="px-4 py-3">Las Vegas Strip</td>
+                <th
+                  scope="row"
+                  className="px-4 py-3 text-left font-normal text-slate-700"
+                >
+                  Las Vegas Strip
+                </th>
                 <td className="px-4 py-3">15 miles</td>
                 <td className="px-4 py-3">22 min</td>
               </tr>
               <tr>
-                <td className="px-4 py-3">Harry Reid International (LAS)</td>
+                <th
+                  scope="row"
+                  className="px-4 py-3 text-left font-normal text-slate-700"
+                >
+                  Harry Reid International (LAS)
+                </th>
                 <td className="px-4 py-3">18 miles</td>
                 <td className="px-4 py-3">25 min</td>
               </tr>
               <tr className="bg-slate-50">
-                <td className="px-4 py-3">Downtown Las Vegas</td>
+                <th
+                  scope="row"
+                  className="px-4 py-3 text-left font-normal text-slate-700"
+                >
+                  Downtown Las Vegas
+                </th>
                 <td className="px-4 py-3">12 miles</td>
                 <td className="px-4 py-3">18 min</td>
               </tr>

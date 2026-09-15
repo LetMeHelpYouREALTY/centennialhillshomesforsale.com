@@ -125,6 +125,11 @@ export default function Error({
             </Link>
           </li>
           <li>
+            <Link href="/buyers/first-time-buyers" className={TEXT_LINK_CLASS}>
+              First-Time Las Vegas Buyers
+            </Link>
+          </li>
+          <li>
             <Link href="/contact" className={TEXT_LINK_CLASS}>
               Contact Dr. Jan Duffy
             </Link>

@@ -135,6 +135,11 @@ export default function GlobalError({
                 </a>
               </li>
               <li>
+                <a href="/buyers/first-time-buyers" className={TEXT_LINK_CLASS}>
+                  First-Time Las Vegas Buyers
+                </a>
+              </li>
+              <li>
                 <a href="/contact" className={TEXT_LINK_CLASS}>
                   Contact Dr. Jan Duffy
                 </a>
