@@ -365,7 +365,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "Search Mountain's Edge homes for sale in Southwest Las Vegas. Expert guidance from Dr. Jan Duffy.",
     heroHeadline: "Mountain's Edge Homes for Sale",
     heroSubheadline:
-      "Master-planned community living at its finest in Southwest Las Vegas.",
+      "Mountain's Edge is a southwest Las Vegas master plan around Exploration Peak Park. Confirm ZIP 89178 vs 89179 on a CMA.",
     keywords: [
       "Mountain's Edge homes",
       "Mountain Edge Las Vegas",

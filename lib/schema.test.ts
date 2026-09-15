@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  generateAggregateRatingSchema,
   generateRealEstateAgentSchema,
   generateReviewSchema,
   generateWebSiteSchema,
@@ -46,6 +47,12 @@ describe("WebSite SearchAction", () => {
     };
     expect(action.target.urlTemplate).toContain(
       "/listings?q={search_term_string}",
+    );
+  });
+
+  it("refuses AggregateRating without a live review count", () => {
+    expect(() => generateAggregateRatingSchema(4.9, 0)).toThrow(
+      /live GBP pull/,
     );
   });
 });

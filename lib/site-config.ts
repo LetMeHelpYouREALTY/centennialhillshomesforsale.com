@@ -97,7 +97,7 @@ export const agentStats = {
 export const valuePropositions = {
   main: "When you work with a Berkshire Hathaway HomeServices agent, you're backed by a name synonymous with trust, ethical standards, and financial strength—the same principles that built Warren Buffett's empire.",
   trust:
-    "Berkshire Hathaway HomeServices is the only real estate brand backed by Warren Buffett's Berkshire Hathaway Inc. This means unmatched financial stability, ethical standards, and a global referral network.",
+    "Berkshire Hathaway HomeServices is backed by Berkshire Hathaway Inc. You get a global referral network, listing marketing in writing, and documented ethics standards.",
   expertise:
     "Serving Las Vegas since 2008, Dr. Jan Duffy combines deep local market knowledge with the resources of a global brand.",
 };
@@ -269,13 +269,13 @@ export const services = [
 
 // Expert quotes from Dr. Jan Duffy
 export const expertQuotes = {
-  market: `"The Las Vegas market remains strong heading into 2026. We're seeing continued demand from California relocators and remote workers, but the days of 20 offers on every listing are behind us. Buyers finally have some negotiating power."`,
+  market: `"The Las Vegas market moves by village and by week. I will not invent a 20-offer headline. Buyers get a live CMA and a written offer plan."`,
   buyers: `"My job isn't just to show you houses—it's to make sure you don't overpay, that you understand what you're buying, and that you're protected through every step of the transaction."`,
   sellers: `"Pricing your home to the comps from day one is the single most important listing decision. Overpriced homes sit, and every extra day on market costs carrying cost and buyer leverage."`,
   luxury: `"Luxury buyers expect discretion, market expertise, and flawless execution. In this price range, one wrong move can cost hundreds of thousands of dollars."`,
-  investment: `"Las Vegas rental yields are among the best in the country right now. But you need to know which neighborhoods are appreciating and which have peaked."`,
+  investment: `"Cap rate, HOA, and insurance are on the worksheet. I will not rank Las Vegas rental yields against the country from this page."`,
   relocation: `"Moving to a new city is stressful enough. I handle neighborhood tours, commute timing, contractor referrals, and a written buy-sell calendar so you can focus on the move."`,
-  newConstruction: `"Builders have sales agents who work for them, not you. Having your own representation costs you nothing but can save you tens of thousands in upgrades and negotiations."`,
+  newConstruction: `"Builders have sales agents who work for them, not you. Register me before the first model-home visit. Compensation is in the written buyer agreement — it is not 'free' as a slogan."`,
   valueProposition: `"When clients ask why they should choose a Berkshire Hathaway HomeServices agent, I tell them: you're not just getting me—you're getting the BHHS referral network, listing marketing in writing, and a brand with documented ethics standards."`,
 };
 
@@ -285,7 +285,7 @@ export const commonFAQs = {
     {
       question: "Why should I choose a Berkshire Hathaway HomeServices agent?",
       answer:
-        "Berkshire Hathaway HomeServices is the only real estate brand backed by Warren Buffett's Berkshire Hathaway Inc. This means unmatched financial stability, ethical standards, and a global referral network. When you're making the biggest purchase of your life, that trust matters.",
+        "Berkshire Hathaway HomeServices is backed by Berkshire Hathaway Inc. You get a global referral network, listing marketing in writing, and documented ethics standards. Compensation is disclosed before you sign.",
     },
     {
       question:

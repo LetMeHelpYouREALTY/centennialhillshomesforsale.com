@@ -31,9 +31,9 @@ const features = [
   },
   {
     icon: Clock,
-    title: "Same-day response",
+    title: "Replies during office hours",
     description:
-      "Call or text and get a human reply during posted office hours.",
+      "Call or text the client line. I reply during posted hours — I will not promise a two-hour SLA.",
   },
   {
     icon: Home,

@@ -380,10 +380,9 @@ export default function AboutPage() {
               Why Berkshire Hathaway HomeServices?
             </h2>
             <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
-              Berkshire Hathaway HomeServices is the only real estate brand
-              backed by Warren Buffett's Berkshire Hathaway Inc. This means
-              unmatched financial stability, ethical standards, and a commitment
-              to client service that defines every transaction.
+              Berkshire Hathaway HomeServices is backed by Berkshire Hathaway
+              Inc. You get written compensation, a global referral network, and
+              a listing plan — not a stability slogan.
             </p>
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">

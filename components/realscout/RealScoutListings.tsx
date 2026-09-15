@@ -1,10 +1,41 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { REALSCOUT_SEARCH_URL } from "@/lib/contact";
 import { MlsDisclaimer } from "@/components/shared/MlsDisclaimer";
 
+const WIDGET_HTML = `<realscout-office-listings 
+              agent-encoded-id="QWdlbnQtMjI1MDUw" 
+              sort-order="NEWEST" 
+              listing-status="For Sale" 
+              property-types=",SFR,MF,TC"
+            ></realscout-office-listings>`;
+
 export default function RealScoutListings() {
+  const mountRef = useRef<HTMLDivElement>(null);
+  const [showWidget, setShowWidget] = useState(false);
+
+  useEffect(() => {
+    const node = mountRef.current;
+    if (!node || showWidget) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          setShowWidget(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [showWidget]);
+
   return (
     <section className="bg-slate-50 py-16 md:py-24">
       <div className="container mx-auto px-4">
@@ -31,19 +62,20 @@ export default function RealScoutListings() {
         </div>
 
         <div
+          ref={mountRef}
           className="min-h-[24rem]"
           aria-label="Live office listings from RealScout"
         >
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `<realscout-office-listings 
-              agent-encoded-id="QWdlbnQtMjI1MDUw" 
-              sort-order="NEWEST" 
-              listing-status="For Sale" 
-              property-types=",SFR,MF,TC"
-            ></realscout-office-listings>`,
-            }}
-          />
+          {showWidget ? (
+            <div dangerouslySetInnerHTML={{ __html: WIDGET_HTML }} />
+          ) : (
+            <div
+              className="flex min-h-[24rem] items-center justify-center rounded-xl bg-slate-100 text-slate-600"
+              aria-busy="true"
+            >
+              Loading live MLS listings…
+            </div>
+          )}
         </div>
         <MlsDisclaimer className="mt-8" />
       </div>

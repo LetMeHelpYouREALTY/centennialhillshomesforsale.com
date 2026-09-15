@@ -290,6 +290,10 @@ export function generateAggregateRatingSchema(
   bestRating = 5,
   worstRating = 1,
 ) {
+  if (reviewCount <= 0) {
+    throw new Error("Do not emit AggregateRating without a live GBP pull");
+  }
+
   return {
     "@type": "AggregateRating",
     ratingValue: ratingValue.toString(),
