@@ -11,7 +11,7 @@ describe("GBP post templates", () => {
     expect(joined).not.toMatch(/28 days average/);
     expect(joined).not.toMatch(/37%/);
     expect(joined).not.toMatch(/perfect fit/);
-    expect(joined.toLowerCase()).not.toMatch(/lifestyles/);
+    expect(joined).not.toMatch(/world-class/i);
   });
 
   it("uses sourced listing medians for first-time buyer ZIPs", () => {

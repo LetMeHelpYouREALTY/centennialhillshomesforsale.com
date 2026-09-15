@@ -15,7 +15,7 @@ import { useState } from "react";
 import { Turnstile } from "@marsidev/react-turnstile";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
+import { CTA_PHONE, CTA_TEL, TEXT_LINK_CLASS } from "@/lib/contact";
 
 export interface LeadCaptureFormProps {
   source?: string;
@@ -138,7 +138,7 @@ export function LeadCaptureForm({
         <p className="text-green-700">
           Your information has been received. Dr. Jan Duffy will call or email
           shortly. For a faster reply, call{" "}
-          <a href={CTA_TEL} className="font-semibold underline">
+          <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
             {CTA_PHONE}
           </a>
           .

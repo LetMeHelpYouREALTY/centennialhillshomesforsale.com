@@ -4,6 +4,7 @@ import { MapPin, Home, Clock } from "lucide-react";
 import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { PageCTA } from "@/components/shared/PageCTA";
+import { VisitOffice } from "@/components/shared/VisitOffice";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import {
   formatUsd,
@@ -11,6 +12,7 @@ import {
   MARKET_SNAPSHOT_AS_OF,
 } from "@/lib/market-snapshots";
 import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
+import { SectionHeading } from "@/components/shared/SectionPhoto";
 import Image from "next/image";
 
 export const metadata: Metadata = withShareImage(
@@ -241,6 +243,13 @@ export default function NeighborhoodsPage() {
 
           {/* Neighborhood Grid */}
           <section className="mb-16 max-w-6xl mx-auto">
+            <SectionHeading
+              className="mb-8 text-center text-3xl font-bold text-slate-900"
+              fallbackSrc={PAGE_HERO_IMAGES.homepage.src}
+              avoidSrc={PAGE_HERO_IMAGES.homepage.src}
+            >
+              Las Vegas and Henderson neighborhood guides
+            </SectionHeading>
             <div className="grid md:grid-cols-2 gap-6">
               {neighborhoods.map((neighborhood) => (
                 <Link
@@ -348,6 +357,7 @@ export default function NeighborhoodsPage() {
             </div>
           </section>
 
+          <VisitOffice compact />
           <PageCTA
             headline="Need help matching a street to a ZIP?"
             subheadline="Call Dr. Jan Duffy with the village name. She will not send you to 89144 when you asked for Centennial Hills."

@@ -162,18 +162,18 @@ Get a listing consult from Dr. Jan Duffy: (702) 222-1964`,
     id: "luxury-homes",
     type: "update",
     title: "Luxury Living in Las Vegas: The Ridges, MacDonald Highlands & More",
-    content: `Las Vegas luxury real estate offers world-class living at Nevada prices:
+    content: `Las Vegas luxury real estate is priced on live comps, not a slogan:
 
 🏔️ The Ridges, Summerlin — guard-gated custom estates (live CMA, not a $2M slogan)
 ⛰️ MacDonald Highlands — Henderson hillside luxury with Strip views
 🌆 Strip high-rises — confirm the tower, HOA, and current inventory
 🌳 Southern Highlands — golf-course listings; realtor.com area median $1,024,950 as of 2026-09-14 (not a CMA)
 
-Why luxury buyers choose Las Vegas:
-✅ No state income tax
-✅ Privacy and discretion
-✅ World-class dining, entertainment, golf
-✅ Compare live comps — do not assume a 40–60% discount vs CA/NY
+What luxury buyers actually compare:
+✅ No state income tax on wages
+✅ Guard-gated entries and HOA rules on the docs
+✅ Dining, entertainment, and golf access you can drive
+✅ Live comps — do not assume a 40–60% discount vs CA/NY
 
 Confidential luxury home search: (702) 222-1964`,
     cta: {

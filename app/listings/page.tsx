@@ -10,6 +10,7 @@ import {
 import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { PageCTA } from "@/components/shared/PageCTA";
+import { VisitOffice } from "@/components/shared/VisitOffice";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
@@ -160,8 +161,7 @@ const neighborhoods = [
   {
     name: "Southern Highlands",
     href: "/neighborhoods/southern-highlands",
-    description:
-      "Guard-gated luxury community with championship golf and mountain views",
+    description: "Guard-gated luxury community with golf and mountain views",
     medianPrice: formatUsd(LISTING_MEDIANS_USD.southernHighlands),
     medianNote: "Listing median",
   },
@@ -597,6 +597,7 @@ export default function ListingsPage() {
             </div>
           </section>
 
+          <VisitOffice compact />
           <PageCTA
             headline="Ready to filter live MLS results?"
             subheadline="Call Dr. Jan Duffy with beds, ZIP, and budget. She will send matching listings — not a scraped dump."

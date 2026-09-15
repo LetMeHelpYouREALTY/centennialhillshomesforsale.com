@@ -4,6 +4,7 @@ import { withShareImage } from "@/lib/page-seo";
 import { Phone } from "lucide-react";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { PageCTA } from "@/components/shared/PageCTA";
+import { VisitOffice } from "@/components/shared/VisitOffice";
 import { MlsDisclaimer } from "@/components/shared/MlsDisclaimer";
 import { CTA_PHONE, CTA_TEL, REALSCOUT_SEARCH_URL } from "@/lib/contact";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
@@ -71,6 +72,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
         </div>
         <MlsDisclaimer />
       </div>
+      <VisitOffice compact />
       <PageCTA
         headline="Want a specific address walked?"
         subheadline="Call Dr. Jan Duffy. She will pull the live MLS file, not a placeholder."

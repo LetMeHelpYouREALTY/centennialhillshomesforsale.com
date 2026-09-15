@@ -1,6 +1,8 @@
 import { Shield, TrendingUp, Users, Award, Clock, Home } from "lucide-react";
 import Link from "next/link";
 import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
+import { SectionHeading } from "@/components/shared/SectionPhoto";
+import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 
 const features = [
   {
@@ -46,9 +48,13 @@ export default function WhyChooseUs() {
     <section className="bg-white py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl">
+          <SectionHeading
+            className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl"
+            fallbackSrc={PAGE_HERO_IMAGES.about.src}
+            avoidSrc={PAGE_HERO_IMAGES.homepage.src}
+          >
             Why Work With Dr. Jan Duffy
-          </h2>
+          </SectionHeading>
           <p className="mx-auto max-w-3xl text-xl text-slate-600">
             Berkshire Hathaway HomeServices Nevada Properties — local closings
             with a national brand behind the contract.

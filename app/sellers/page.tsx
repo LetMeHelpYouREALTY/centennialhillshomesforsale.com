@@ -11,8 +11,10 @@ import {
 import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { PageCTA } from "@/components/shared/PageCTA";
+import { VisitOffice } from "@/components/shared/VisitOffice";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
+import { FAQSchema } from "@/components/SchemaScript";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import {
   formatUsd,
@@ -55,9 +57,9 @@ const sellerSchema = {
 const sellingBenefits = [
   {
     icon: Globe,
-    title: "World-Class Marketing",
+    title: "Listing marketing in writing",
     description:
-      "Your home gets exposure through the most recognized real estate brand in the world. Professional photography, virtual tours, drone video, and syndication to 100+ websites ensures maximum visibility to qualified buyers.",
+      "Professional photography, virtual tours, drone when the lot warrants it, MLS syndication, and BHHS network exposure. The marketing plan is on the listing consult — not a slogan.",
   },
   {
     icon: Users,
@@ -79,6 +81,39 @@ const sellingBenefits = [
   },
 ];
 
+const sellerFaqs = [
+  {
+    question: "How long will it take to sell my Las Vegas home?",
+    answer:
+      "UNKNOWN without a CMA and a live MLS pull. Well-priced houses can go fast; overpriced houses sit. I will not publish a 28-day average as if it were your street.",
+  },
+  {
+    question: "What do I need to do to prepare my home for sale?",
+    answer:
+      "Dr. Jan provides a personalized preparation checklist for every listing. Generally, decluttering, minor repairs, fresh paint, and professional staging consultation yield the highest ROI. She'll walk through your home and identify exactly what improvements will generate the best return.",
+  },
+  {
+    question: "How does Berkshire Hathaway market my home?",
+    answer:
+      "Your home gets professional photography, virtual tours, drone video when the lot warrants it, MLS syndication, BHHS network exposure, and paid digital we agree on in writing. Ask for that plan on the listing consult.",
+  },
+  {
+    question: "What are your commission rates?",
+    answer:
+      "Commission is negotiable. Dr. Jan walks through listing-side compensation, buyer-broker agreements, and net-sheet math on the consult. I will not claim marketing “typically more than offsets” the fee — your net is the CMA plus the offer, not a slogan.",
+  },
+  {
+    question: "Should I wait for prices to go higher?",
+    answer:
+      "UNKNOWN without a CMA on your street. I will not publish an unsourced year-over-year appreciation figure as if it were your house. Timing the market is a guess; listing when you are ready, priced to the live comps, is the plan I can actually run.",
+  },
+  {
+    question: "Do I need to be moved out before listing?",
+    answer:
+      "Not necessarily. Many homes sell while occupied. However, vacant homes are easier to show and stage. Dr. Jan will help you develop a strategy based on your specific situation and timeline.",
+  },
+];
+
 const sellingProcess = [
   {
     step: 1,
@@ -96,7 +131,7 @@ const sellingProcess = [
     step: 3,
     title: "Professional Marketing",
     description:
-      "Your home is photographed professionally, with virtual tours and drone video. It's listed on the MLS and syndicated to 100+ websites, plus promoted through BHHS's global network and targeted digital advertising.",
+      "Your home is photographed professionally, with virtual tours and drone video when the lot warrants it. It is listed on the MLS, shared through the BHHS network, and promoted with digital we agree on in writing.",
   },
   {
     step: 4,
@@ -122,7 +157,7 @@ const includedServices = [
   "Professional photography & virtual tour",
   "Drone video for properties with views or large lots",
   "Comprehensive market analysis & pricing strategy",
-  "MLS listing syndicated to 100+ websites",
+  "MLS listing plus BHHS network exposure",
   "Berkshire Hathaway global network exposure",
   "Social media marketing campaign",
   "Targeted digital advertising",
@@ -140,6 +175,7 @@ export default function SellersPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(sellerSchema) }}
       />
+      <FAQSchema faqs={sellerFaqs} />
       <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
@@ -157,10 +193,10 @@ export default function SellersPage() {
             <p className="text-xl text-slate-600 mb-8">
               When you list with{" "}
               <strong>Berkshire Hathaway HomeServices</strong>, you get
-              world-class marketing, expert pricing, and a name that buyers
-              trust. Dr. Jan Duffy has been serving Las Vegas since 2008—helping
-              sellers price to the comps with professional marketing and skilled
-              negotiation.
+              professional photography, comps-based pricing, and a listing plan
+              in writing. Dr. Jan Duffy has been serving Las Vegas since
+              2008—helping sellers price to the comps and negotiate the net
+              sheet.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
               <span className="flex items-center">
@@ -168,8 +204,8 @@ export default function SellersPage() {
                 Home Valuation
               </span>
               <span className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-1" />{" "}
-                World-Class Marketing
+                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> MLS
+                listing marketing
               </span>
               <span className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Expert
@@ -231,10 +267,9 @@ export default function SellersPage() {
               The Berkshire Hathaway HomeServices Selling Advantage
             </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Not all real estate agents can deliver the same results. When you
-              choose a Berkshire Hathaway HomeServices agent, you're choosing
-              world-class marketing, a global network of buyers, and the most
-              trusted name in real estate.
+              Not all listing plans are the same. When you choose a Berkshire
+              Hathaway HomeServices agent, you get MLS marketing, a global
+              referral network, and a net-sheet conversation before you sign.
             </p>
             <div className="grid md:grid-cols-2 gap-8">
               {sellingBenefits.map((benefit) => {
@@ -478,40 +513,18 @@ export default function SellersPage() {
               most common concerns from Las Vegas home sellers.
             </p>
             <div className="space-y-4">
-              {[
-                {
-                  q: "How long will it take to sell my Las Vegas home?",
-                  a: "UNKNOWN without a CMA and a live MLS pull. Well-priced houses can go fast; overpriced houses sit. I will not publish a 28-day average as if it were your street.",
-                },
-                {
-                  q: "What do I need to do to prepare my home for sale?",
-                  a: "Dr. Jan provides a personalized preparation checklist for every listing. Generally, decluttering, minor repairs, fresh paint, and professional staging consultation yield the highest ROI. She'll walk through your home and identify exactly what improvements will generate the best return.",
-                },
-                {
-                  q: "How does Berkshire Hathaway market my home?",
-                  a: "Your home gets professional photography, virtual tours, drone video (when appropriate), MLS syndication to 100+ websites, BHHS global network exposure, social media promotion, and targeted digital advertising. It's the most comprehensive marketing available in Las Vegas real estate.",
-                },
-                {
-                  q: "What are your commission rates?",
-                  a: "Commission is negotiable. Dr. Jan walks through listing-side compensation, buyer-broker agreements, and net-sheet math on the consult. I will not claim marketing “typically more than offsets” the fee — your net is the CMA plus the offer, not a slogan.",
-                },
-                {
-                  q: "Should I wait for prices to go higher?",
-                  a: "UNKNOWN without a CMA on your street. I will not publish an unsourced year-over-year appreciation figure as if it were your house. Timing the market is a guess; listing when you are ready, priced to the live comps, is the plan I can actually run.",
-                },
-                {
-                  q: "Do I need to be moved out before listing?",
-                  a: "Not necessarily. Many homes sell while occupied. However, vacant homes are easier to show and stage. Dr. Jan will help you develop a strategy based on your specific situation and timeline.",
-                },
-              ].map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
+              {sellerFaqs.map((faq) => (
+                <div key={faq.question} className="bg-slate-50 rounded-lg p-6">
+                  <h3 className="font-bold text-slate-900 mb-2">
+                    {faq.question}
+                  </h3>
+                  <p className="text-slate-600">{faq.answer}</p>
                 </div>
               ))}
             </div>
           </section>
 
+          <VisitOffice compact />
           <PageCTA
             headline="Ready to price a listing?"
             subheadline="Call Dr. Jan Duffy for a listing consult and a live CMA. No obligation."

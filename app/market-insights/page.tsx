@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
-import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
+import { CTA_PHONE, CTA_TEL, TEXT_LINK_CLASS } from "@/lib/contact";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import { getSearchCentralPosts } from "@/lib/search-central-feed";
@@ -103,15 +103,23 @@ export default async function MarketInsightsPage() {
               Google Search Console listed this URL as a duplicate without a
               user-selected canonical. This page is now a Centennial Hills /
               northwest Las Vegas brief. The{" "}
-              <Link href="/market-report">market report</Link> keeps valley-wide
-              stats. The <Link href="/market-update">market update</Link> is the
-              weekly cadence. Each URL self-canonicalizes to this domain.
+              <Link href="/market-report" className={TEXT_LINK_CLASS}>
+                market report
+              </Link>{" "}
+              keeps valley-wide stats. The{" "}
+              <Link href="/market-update" className={TEXT_LINK_CLASS}>
+                market update
+              </Link>{" "}
+              is the weekly cadence. Each URL self-canonicalizes to this domain.
             </p>
             <p className="text-slate-700 mb-4">
               {MARKET_SNAPSHOT_SOURCE} listed a Centennial Hills neighborhood
               median of {formatUsd(LISTING_MEDIANS_USD.centennialHills)}. That
               is not 89144 Summerlin and it is not Tournament Hills.{" "}
-              <Link href="/neighborhoods/centennial-hills">
+              <Link
+                href="/neighborhoods/centennial-hills"
+                className={TEXT_LINK_CLASS}
+              >
                 Centennial Hills homes for sale
               </Link>{" "}
               is the listing page.

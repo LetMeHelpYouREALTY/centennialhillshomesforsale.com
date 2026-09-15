@@ -17,8 +17,10 @@ import {
 import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { PageCTA } from "@/components/shared/PageCTA";
+import { VisitOffice } from "@/components/shared/VisitOffice";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
+import { FAQSchema } from "@/components/SchemaScript";
 import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
 import Image from "next/image";
 import {
@@ -58,6 +60,39 @@ const buyerSchema = {
   areaServed: "Las Vegas, Henderson, Summerlin, Clark County NV",
   serviceType: "Buyer Representation",
 };
+
+const buyerFaqs = [
+  {
+    question: "How much do I need for a down payment in Las Vegas?",
+    answer:
+      "Down payments vary by loan type: FHA requires 3.5%, conventional loans typically 3-20%, VA loans 0% for eligible veterans, and USDA loans 0% for rural areas. Nevada also offers down payment assistance programs for first-time buyers. Dr. Jan can connect you with lenders who specialize in low down payment programs.",
+  },
+  {
+    question: "Should I get pre-approved before looking at homes?",
+    answer:
+      "Yes. Pre-approval shows sellers you can close and gives you a written budget. In competitive situations, pre-approved buyers have a significant advantage. The process typically takes 1-3 days with proper documentation.",
+  },
+  {
+    question: "Does BHHS help with new construction purchases?",
+    answer:
+      "Yes. Register Dr. Jan before the first model-home visit. Compensation is disclosed in a written buyer agreement and may be paid by the seller, the buyer, or both — including builder contributions when they exist on that file.",
+  },
+  {
+    question: "What if I'm relocating from another state?",
+    answer:
+      "Berkshire Hathaway HomeServices has a global referral network. Dr. Jan coordinates virtual tours and a drive-time matrix for inbound buyers — I will not invent a 50,000-agent headcount.",
+  },
+  {
+    question: "How competitive is the Las Vegas housing market?",
+    answer:
+      "The Las Vegas market moves by village and by week. I will not invent a months-of-inventory figure. Well-priced houses in Summerlin and Henderson can still draw multiple offers. Get a pre-approval and a live MLS pull before you tour.",
+  },
+  {
+    question: "Which neighborhoods have parks, trails, and nearby campuses?",
+    answer:
+      "Summerlin, Henderson (Green Valley, Inspirada), and Centennial Hills are compared on parks, trail miles, commute times, and named campuses. Dr. Jan matches the street to those priorities.",
+  },
+];
 
 const buyingSteps = [
   {
@@ -144,6 +179,7 @@ export default function BuyersPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buyerSchema) }}
       />
+      <FAQSchema faqs={buyerFaqs} />
       <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
@@ -300,7 +336,7 @@ export default function BuyersPage() {
                   <Link
                     key={neighborhood.slug}
                     href={`/neighborhoods/${neighborhood.slug}`}
-                    className="overflow-hidden rounded-lg border border-slate-200 bg-white no-underline transition-shadow hover:border-blue-300 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+                    className="min-h-11 overflow-hidden rounded-lg border border-slate-200 bg-white no-underline transition-shadow hover:border-blue-300 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                   >
                     <div className="relative h-32">
                       <Image
@@ -482,8 +518,8 @@ export default function BuyersPage() {
                 don't overpay, that you understand what you're buying, and that
                 you're protected through every step of the transaction. That's
                 what Berkshire Hathaway HomeServices representation means. I
-                treat every client like family and won't stop until we find the
-                right home for your needs."
+                stay on the file until we close the house that matches the
+                written criteria."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
                 — Dr. Jan Duffy, BHHS Nevada Properties | Serving Las Vegas
@@ -552,40 +588,18 @@ export default function BuyersPage() {
               (702) 222-1964 for a free consultation.
             </p>
             <div className="space-y-4">
-              {[
-                {
-                  q: "How much do I need for a down payment in Las Vegas?",
-                  a: "Down payments vary by loan type: FHA requires 3.5%, conventional loans typically 3-20%, VA loans 0% for eligible veterans, and USDA loans 0% for rural areas. Nevada also offers down payment assistance programs for first-time buyers. Dr. Jan can connect you with lenders who specialize in low down payment programs.",
-                },
-                {
-                  q: "Should I get pre-approved before looking at homes?",
-                  a: "Yes! Pre-approval shows sellers you're serious and gives you a clear budget. In competitive situations, pre-approved buyers have a significant advantage. The process typically takes 1-3 days with proper documentation.",
-                },
-                {
-                  q: "Does BHHS help with new construction purchases?",
-                  a: "Yes! Dr. Jan provides free representation for new construction purchases from builders like Toll Brothers, Lennar, and Century Communities. The builder pays her commission, but she works for you—reviewing contracts, negotiating upgrades, and protecting your interests during the build process.",
-                },
-                {
-                  q: "What if I'm relocating from another state?",
-                  a: "Berkshire Hathaway HomeServices has a global referral network. Dr. Jan coordinates virtual tours and a drive-time matrix for inbound buyers — I will not invent a 50,000-agent headcount.",
-                },
-                {
-                  q: "How competitive is the Las Vegas housing market?",
-                  a: "The Las Vegas market moves by village and by week. I will not invent a months-of-inventory figure. Well-priced houses in Summerlin and Henderson can still draw multiple offers. Get a pre-approval and a live MLS pull before you tour.",
-                },
-                {
-                  q: "Which neighborhoods have parks, trails, and nearby campuses?",
-                  a: "Summerlin, Henderson (Green Valley, Inspirada), and Centennial Hills are compared on parks, trail miles, commute times, and named campuses. Dr. Jan matches the street to those priorities.",
-                },
-              ].map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
+              {buyerFaqs.map((faq) => (
+                <div key={faq.question} className="bg-slate-50 rounded-lg p-6">
+                  <h3 className="font-bold text-slate-900 mb-2">
+                    {faq.question}
+                  </h3>
+                  <p className="text-slate-600">{faq.answer}</p>
                 </div>
               ))}
             </div>
           </section>
 
+          <VisitOffice compact />
           <PageCTA
             headline="Ready to tour Las Vegas listings?"
             subheadline="Call Dr. Jan Duffy for a buyer consult. Representation is typically paid by the seller under a listing agreement — confirm current compensation in writing."

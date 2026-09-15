@@ -19,6 +19,7 @@ import {
 import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { PageCTA } from "@/components/shared/PageCTA";
+import { VisitOffice } from "@/components/shared/VisitOffice";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { CTA_PHONE, CTA_TEL, REALSCOUT_SEARCH_URL } from "@/lib/contact";
@@ -149,16 +150,21 @@ const communities = [
     hoaFees: HOA_CONFIRM,
     priceRange: `${formatUsd(LISTING_MEDIANS_USD.sunCitySummerlin)} listing median`,
     homes: "7,700+ homes",
-    amenities: ["3 golf courses", "4 rec centers", "100+ clubs", "Pools"],
+    amenities: [
+      "3 golf courses",
+      "4 rec centers",
+      "HOA club calendar",
+      "Pools",
+    ],
     highlights: [
       "Nevada's largest 55+ community",
-      "3 championship golf courses",
+      "3 golf courses",
       "4 recreation centers with pools",
-      "100+ clubs and activities",
+      "Confirm clubs in the HOA packet",
       "Mountain View Hospital nearby",
     ],
     description:
-      "Nevada's largest 55+ community with unparalleled amenities against the backdrop of the Spring Mountains.",
+      "Nevada's largest 55+ community, set against the Spring Mountains with golf and rec campuses on site.",
     color: "amber",
   },
   {
@@ -169,11 +175,16 @@ const communities = [
     hoaFees: HOA_CONFIRM,
     priceRange: `${formatUsd(LISTING_MEDIANS_USD.sunCityAnthem)} listing median`,
     homes: "7,100+ homes",
-    amenities: ["2 golf courses", "64K sf clubhouse", "80+ clubs", "Pools"],
+    amenities: [
+      "2 golf courses",
+      "64K sf clubhouse",
+      "HOA club calendar",
+      "Pools",
+    ],
     highlights: [
       "Henderson 55+ Del Webb campus",
-      "2 championship golf courses",
-      "Stunning mountain views",
+      "2 golf courses",
+      "Mountain views",
       "Henderson parks, trails, and recreation centers",
     ],
     description:
@@ -191,7 +202,7 @@ const communities = [
     amenities: ["Golf course", "Fitness center", "Pools", "Tennis"],
     highlights: [
       "North Las Vegas Sun City campus",
-      "18-hole championship golf course",
+      "18-hole golf course",
       "Aliante Casino nearby",
       "I-215 and US-95 access",
     ],
@@ -210,12 +221,12 @@ const communities = [
     amenities: ["Lake access", "Resort pools", "Fitness", "Pickleball"],
     highlights: [
       "Lakefront and mountain views",
-      "Resort-style amenities",
-      "Newest construction (2016+)",
+      "Rec campus, pools, pickleball",
+      "Confirm vintage on the MLS sheet",
       "Del Webb rec programming",
     ],
     description:
-      "The newest Del Webb community combines modern construction with stunning Lake Las Vegas setting.",
+      "Del Webb campus at Lake Las Vegas — confirm year built, HOA, and lake-access rules on the listing.",
     color: "blue",
   },
   {
@@ -228,13 +239,13 @@ const communities = [
     homes: "1,100+ homes",
     amenities: ["Clubhouse", "Pool & spa", "Fitness", "Social clubs"],
     highlights: [
-      "Premium Summerlin location",
-      "Guard-gated security",
-      "Intimate community feel",
+      "Summerlin 55+ campus",
+      "Guard-gated entry",
+      "Smaller campus than Sun City",
       "Near Downtown Summerlin",
     ],
     description:
-      "A boutique 55+ community offering guard-gated privacy in the heart of Summerlin.",
+      "Heritage at Stonebridge is a smaller Summerlin 55+ campus with a guard-gated entry. Confirm HOA and occupancy on resale docs.",
     color: "purple",
   },
   {
@@ -253,7 +264,7 @@ const communities = [
       "Henderson location",
     ],
     description:
-      "A more intimate alternative to larger 55+ communities with guard-gated security.",
+      "Smaller Henderson 55+ campus with a guard-gated entry. Confirm HOA vs Sun City Anthem before you bid.",
     color: "teal",
   },
   {
@@ -266,13 +277,13 @@ const communities = [
     homes: "800+ homes",
     amenities: ["Farm-to-table dining", "Spa", "Fitness", "Resort pool"],
     highlights: [
-      "Luxury resort-style living",
-      "On-site farm-to-table restaurant",
-      "Spa and wellness center",
-      "Contemporary home designs",
+      "On-site dining (confirm hours)",
+      "Spa and fitness campus",
+      "One-story and two-story plans",
+      "Summerlin 55+ occupancy rules",
     ],
     description:
-      "Luxury resort-style 55+ living with upscale amenities and contemporary designs.",
+      "Trilogy at Summerlin is a 55+ campus with on-site dining and a rec building. Confirm HOA, dining, and occupancy in the resale packet.",
     color: "rose",
   },
   {
@@ -296,28 +307,28 @@ const communities = [
   },
 ];
 
-const lifestyleBenefits = [
+const communityBenefits = [
   {
     icon: HomeIcon,
     title: "Low-Maintenance Living",
     description:
-      "Exterior maintenance handled by HOA. Spend time enjoying life, not maintaining your home.",
+      "Exterior maintenance handled by HOA. Spend time on the rec campus, not the roof.",
   },
   {
     icon: Star,
     title: "Resort-Style Amenities",
     description:
-      "Golf courses, pools, fitness centers, spas, and clubhouses rivaling luxury resorts.",
+      "Golf courses, pools, fitness centers, spas, and clubhouses. Confirm which are on the HOA budget.",
   },
   {
     icon: Calendar,
-    title: "Active Social Calendar",
+    title: "Rec calendar",
     description:
-      "100+ clubs, organized travel, classes, events, and built-in community of like-minded neighbors.",
+      "Clubs and events vary by campus. Confirm the current calendar in the HOA packet before you bid.",
   },
   {
     icon: Shield,
-    title: "Gated Security",
+    title: "Guard-gated entries",
     description:
       "Many communities offer guard-gated entries. Confirm access rules and guest policies in the CC&Rs.",
   },
@@ -329,9 +340,9 @@ const lifestyleBenefits = [
   },
   {
     icon: Sun,
-    title: "300+ Days of Sunshine",
+    title: "Outdoor rec most months",
     description:
-      "Perfect weather for golf, hiking, and outdoor activities year-round.",
+      "Golf, pickleball, and pool calendars run most of the year. Confirm seasonal HOA hours on the rec campus.",
   },
 ];
 
@@ -497,7 +508,7 @@ export default function FiftyFiveCommunitiesPage() {
               before you bid.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {lifestyleBenefits.map((benefit) => (
+              {communityBenefits.map((benefit) => (
                 <div
                   key={benefit.title}
                   className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
@@ -709,7 +720,7 @@ export default function FiftyFiveCommunitiesPage() {
                   Fitness & Recreation
                 </h3>
                 <ul className="text-slate-600 text-sm space-y-1">
-                  <li>• State-of-the-art fitness centers</li>
+                  <li>• Fitness centers (confirm equipment list)</li>
                   <li>• Indoor & outdoor pools</li>
                   <li>• Tennis & pickleball courts</li>
                   <li>• Golf courses (many communities)</li>
@@ -724,7 +735,7 @@ export default function FiftyFiveCommunitiesPage() {
                   Social & Activities
                 </h3>
                 <ul className="text-slate-600 text-sm space-y-1">
-                  <li>• 100+ clubs in larger communities</li>
+                  <li>• Club calendars — confirm in the HOA packet</li>
                   <li>• Organized travel groups</li>
                   <li>• Classes (art, dance, computers)</li>
                   <li>• Card rooms & game nights</li>
@@ -920,6 +931,7 @@ export default function FiftyFiveCommunitiesPage() {
             </div>
           </section>
 
+          <VisitOffice compact />
           <PageCTA
             headline="Match the 55+ campus to the street"
             subheadline="Sun City Summerlin, Sun City Anthem, Trilogy, Heritage, Solera, and Del Webb Lake Las Vegas are different HOAs. Call with the community name."

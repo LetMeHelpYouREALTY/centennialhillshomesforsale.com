@@ -220,10 +220,10 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     neighborhood: "Heritage at Stonebridge",
     tagline: "Heritage Stonebridge Las Vegas",
     description:
-      "Heritage Stonebridge 55+ community in Summerlin Las Vegas. Find your perfect active adult home.",
+      "Heritage Stonebridge 55+ community in Summerlin Las Vegas. Confirm HOPA occupancy and live MLS with Dr. Jan Duffy.",
     heroHeadline: "Heritage Stonebridge Homes for Sale",
     heroSubheadline:
-      "Summerlin's premier 55+ active adult community with world-class amenities.",
+      "Summerlin 55+ HOPA campus — rec building, floor plans, and occupancy rules on the resale docs.",
     keywords: [
       "Heritage Stonebridge",
       "Summerlin 55 plus",
@@ -323,7 +323,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "MacDonald Highlands luxury homes for sale in Henderson, Nevada. Expert guidance from Dr. Jan Duffy.",
     heroHeadline: "MacDonald Highlands Homes for Sale",
     heroSubheadline:
-      "Henderson's most prestigious guard-gated luxury community.",
+      "Guard-gated Henderson hillside community. Price from live comps, not a prestige slogan.",
     keywords: [
       "MacDonald Highlands homes",
       "Henderson luxury real estate",
@@ -448,7 +448,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "Search Henderson NV homes for sale. Expert Henderson real estate guidance from Dr. Jan Duffy.",
     heroHeadline: "Search Homes in Henderson, NV",
     heroSubheadline:
-      "One of America's cities frequently cited for civic amenities with award-winning master-planned communities.",
+      "Henderson parks, trails, and master-planned villages — Green Valley, Inspirada, Anthem, and Lake Las Vegas.",
     keywords: [
       "Henderson NV homes for sale",
       "Henderson real estate",
@@ -553,7 +553,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "Sun City Summerlin 55+ community homes for sale. Expert guidance from Dr. Jan Duffy.",
     heroHeadline: "Sun City Summerlin Homes for Sale",
     heroSubheadline:
-      "Las Vegas' premier 55+ active adult community with 3 golf courses and resort amenities.",
+      "Sun City Summerlin 55+ campus with 3 golf courses and 4 rec centers. Confirm HOA and occupancy on resale docs.",
     keywords: [
       "Sun City Summerlin homes",
       "Sun City Summerlin 55 plus",
@@ -615,7 +615,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "Trilogy at Sunstone 55+ active adult community homes in Las Vegas. Dr. Jan Duffy, specialist.",
     heroHeadline: "Trilogy at Sunstone Homes for Sale",
     heroSubheadline:
-      "Del Webb's premier 55+ active adult community in Northwest Las Vegas.",
+      "Del Webb 55+ campus in Northwest Las Vegas. Confirm HOA, rec access, and occupancy on resale docs.",
     keywords: [
       "Trilogy Sunstone homes",
       "Trilogy at Sunstone Las Vegas",
@@ -636,7 +636,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "Search all Las Vegas 55+ active adult community homes. Sun City, Del Webb, Trilogy and more.",
     heroHeadline: "Las Vegas 55+ Homes for Sale",
     heroSubheadline:
-      "Find the perfect active adult community — Sun City, Del Webb, Trilogy, Heritage and more.",
+      "Compare Sun City, Del Webb, Trilogy, and Heritage 55+ campuses by HOA, rec buildings, and occupancy rules.",
     keywords: [
       "Las Vegas 55 plus homes",
       "active adult Las Vegas",

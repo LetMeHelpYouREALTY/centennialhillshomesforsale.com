@@ -175,8 +175,8 @@ export default function AboutPage() {
                     <strong>Berkshire Hathaway HomeServices</strong>, you're
                     choosing a legacy of trust, integrity, and excellence. I'm
                     proud to represent this iconic brand in the Las Vegas real
-                    estate market, bringing world-class resources and local
-                    expertise to every client I serve.
+                    estate market, bringing BHHS listing tools and local
+                    expertise to every file I work.
                   </p>
                   <p>
                     Since 2008, I've represented buyers and sellers in Las
@@ -249,8 +249,8 @@ export default function AboutPage() {
                   "My job isn't just to show you houses—it's to make sure you
                   don't overpay, that you understand what you're buying, and
                   that you're protected through every step of the transaction. I
-                  treat every client like family and won't stop until we achieve
-                  your real estate goals."
+                  stay on the file until we close the house that matches the
+                  written criteria."
                   <cite className="block mt-2 text-slate-900 font-semibold not-italic">
                     — Dr. Jan Duffy, BHHS Nevada Properties
                   </cite>

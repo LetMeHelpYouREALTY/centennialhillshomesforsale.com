@@ -13,6 +13,10 @@ describe("RealEstateAgent JSON-LD", () => {
     expect(schema.priceRange).toBe("$$");
   });
 
+  it("uses 2008 as the public practice year", () => {
+    expect(schema.foundingDate).toBe("2008");
+  });
+
   it("lists verified social profiles only", () => {
     expect(schema.sameAs).toEqual(
       expect.arrayContaining([

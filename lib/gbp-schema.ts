@@ -165,8 +165,6 @@ export const businessInfo = {
     "https://www.facebook.com/drjanduffy",
     "https://www.instagram.com/drjanduffy",
     "https://www.linkedin.com/in/drjanduffy",
-    "https://www.youtube.com/@drjanduffy",
-    "https://twitter.com/drjanduffy",
   ],
 
   // Languages spoken
@@ -176,7 +174,7 @@ export const businessInfo = {
   paymentAccepted: ["Credit Card", "Check", "Wire Transfer"],
 
   // Year established
-  foundingDate: "2010",
+  foundingDate: "2008",
 };
 
 // 750-word GBP Description (3 sections)
@@ -242,7 +240,7 @@ export const gbpFAQs = [
   {
     question: "Why choose Berkshire Hathaway HomeServices over other agencies?",
     answer:
-      "Berkshire Hathaway HomeServices is backed by Warren Buffett's Berkshire Hathaway Inc.—the only real estate brand with this level of financial stability and trust. You get a global referral network, world-class marketing, and a name synonymous with integrity.",
+      "Berkshire Hathaway HomeServices is backed by Warren Buffett's Berkshire Hathaway Inc. You get a global referral network, listing marketing in writing, and a brokerage with documented ethics standards.",
   },
   {
     question: "How do I schedule a consultation with Dr. Jan Duffy?",
@@ -281,6 +279,7 @@ export function generateLocalBusinessSchema() {
       longitude: businessInfo.geo.longitude,
     },
     hasMap: OFFICE_NAP.mapsUrl,
+    foundingDate: businessInfo.foundingDate,
     openingHoursSpecification: OPENING_HOURS_SPEC.map((spec) => ({
       "@type": "OpeningHoursSpecification",
       dayOfWeek: [...spec.dayOfWeek],

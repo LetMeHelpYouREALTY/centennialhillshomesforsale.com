@@ -6,6 +6,7 @@ import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import ReviewsWithSchema from "@/components/sections/ReviewsWithSchema";
 import FAQWithSchema from "@/components/sections/FAQWithSchema";
 import { PageCTA } from "@/components/shared/PageCTA";
+import { VisitOffice } from "@/components/shared/VisitOffice";
 import { Phone } from "lucide-react";
 import { getPageDomainConfig } from "@/lib/get-domain-config";
 import { getCanonicalUrl, getRequestOrigin } from "@/lib/site-url";
@@ -314,6 +315,7 @@ export default async function Home() {
         <WhyChooseUs />
         <ReviewsWithSchema />
         <FAQWithSchema />
+        <VisitOffice compact />
         <PageCTA
           headline={config.ctaHeadline}
           subheadline={config.ctaSubheadline}

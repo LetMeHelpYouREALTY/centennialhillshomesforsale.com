@@ -152,7 +152,7 @@ export const neighborhoods = [
   {
     name: "Southern Highlands",
     slug: "southern-highlands",
-    description: "Master-planned luxury community with championship golf",
+    description: "Master-planned luxury community with golf-course lots",
     medianPrice: formatUsd(LISTING_MEDIANS_USD.southernHighlands),
     highlights: [
       "Golf community",
@@ -276,7 +276,7 @@ export const expertQuotes = {
   investment: `"Las Vegas rental yields are among the best in the country right now. But you need to know which neighborhoods are appreciating and which have peaked."`,
   relocation: `"Moving to a new city is stressful enough. I handle neighborhood tours, commute timing, contractor referrals, and a written buy-sell calendar so you can focus on the move."`,
   newConstruction: `"Builders have sales agents who work for them, not you. Having your own representation costs you nothing but can save you tens of thousands in upgrades and negotiations."`,
-  valueProposition: `"When clients ask why they should choose a Berkshire Hathaway HomeServices agent, I tell them: you're not just getting me—you're getting a global network of 50,000 agents, world-class marketing, and a brand that's synonymous with trust."`,
+  valueProposition: `"When clients ask why they should choose a Berkshire Hathaway HomeServices agent, I tell them: you're not just getting me—you're getting the BHHS referral network, listing marketing in writing, and a brand with documented ethics standards."`,
 };
 
 // Common FAQs

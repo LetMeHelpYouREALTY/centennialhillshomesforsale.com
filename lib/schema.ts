@@ -6,7 +6,7 @@
  * @see https://developers.google.com/search/docs/appearance/structured-data
  */
 
-import { siteConfig, agentInfo, officeInfo } from "./site-config";
+import { siteConfig, agentInfo, officeInfo, agentStats } from "./site-config";
 import { AGENT_PHOTO_PATH, FAVICON_32_PATH } from "./brand-assets";
 import {
   CTA_PHONE_E164,
@@ -115,6 +115,7 @@ export function generateRealEstateAgentSchema() {
       longitude: officeInfo.coordinates.lng,
     },
     hasMap: OFFICE_NAP.mapsUrl,
+    foundingDate: String(agentStats.servingSince),
     areaServed: [
       {
         "@type": "City",
