@@ -1,7 +1,7 @@
 export function MlsDisclaimer({ className = "" }: { className?: string }) {
   return (
     <p
-      className={`text-xs leading-relaxed text-slate-500 ${className}`}
+      className={`text-xs leading-relaxed text-slate-600 ${className}`}
       role="note"
     >
       Listing information is provided exclusively for consumers&apos; personal,

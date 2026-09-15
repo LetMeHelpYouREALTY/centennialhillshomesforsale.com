@@ -228,7 +228,7 @@ export default function Navbar() {
                 Berkshire Hathaway
                 <span className="text-blue-600"> HomeServices</span>
               </span>
-              <span className="hidden text-xs text-slate-500 sm:block">
+              <span className="hidden text-xs text-slate-600 sm:block">
                 Dr. Jan Duffy · Nevada Properties
               </span>
             </span>
@@ -426,7 +426,7 @@ export default function Navbar() {
               })}
 
               <div className="mt-2 border-t border-slate-200 pt-2">
-                <span className="px-3 text-xs font-semibold uppercase text-slate-500">
+                <span className="px-3 text-xs font-semibold uppercase text-slate-600">
                   Services
                 </span>
                 {serviceLinks.map((link) => (

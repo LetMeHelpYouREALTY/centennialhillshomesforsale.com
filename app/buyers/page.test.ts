@@ -20,5 +20,6 @@ describe("buyers hub", () => {
     expect(src).not.toContain("text-blue-200");
     expect(src).not.toContain("Dr. Jan can introduce");
     expect(src).not.toContain("register her");
+    expect(src).not.toContain("Dr. Jan has served");
   });
 });

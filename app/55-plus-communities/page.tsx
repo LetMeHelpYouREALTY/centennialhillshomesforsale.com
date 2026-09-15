@@ -708,7 +708,7 @@ export default function FiftyFiveCommunitiesPage() {
 
                     <div className="grid grid-cols-2 gap-4 mb-4">
                       <div>
-                        <div className="text-xs text-slate-500 uppercase tracking-wide mb-1">
+                        <div className="text-xs text-slate-600 uppercase tracking-wide mb-1">
                           Listing snapshot
                         </div>
                         <div className="font-bold text-slate-900 text-sm">
@@ -716,7 +716,7 @@ export default function FiftyFiveCommunitiesPage() {
                         </div>
                       </div>
                       <div>
-                        <div className="text-xs text-slate-500 uppercase tracking-wide mb-1">
+                        <div className="text-xs text-slate-600 uppercase tracking-wide mb-1">
                           HOA Fees
                         </div>
                         <div className="font-bold text-slate-900">
@@ -724,7 +724,7 @@ export default function FiftyFiveCommunitiesPage() {
                         </div>
                       </div>
                       <div>
-                        <div className="text-xs text-slate-500 uppercase tracking-wide mb-1">
+                        <div className="text-xs text-slate-600 uppercase tracking-wide mb-1">
                           Age Requirement
                         </div>
                         <div className="font-bold text-slate-900 text-sm">
@@ -732,7 +732,7 @@ export default function FiftyFiveCommunitiesPage() {
                         </div>
                       </div>
                       <div>
-                        <div className="text-xs text-slate-500 uppercase tracking-wide mb-1">
+                        <div className="text-xs text-slate-600 uppercase tracking-wide mb-1">
                           Community Size
                         </div>
                         <div className="font-bold text-slate-900">
@@ -742,7 +742,7 @@ export default function FiftyFiveCommunitiesPage() {
                     </div>
 
                     <div className="border-t border-slate-100 pt-4">
-                      <div className="text-xs text-slate-500 uppercase tracking-wide mb-2">
+                      <div className="text-xs text-slate-600 uppercase tracking-wide mb-2">
                         Highlights
                       </div>
                       <ul className="space-y-1 mb-4">

@@ -254,7 +254,7 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
     src: PAGE_HERO_IMAGES.californiaRelocator.src,
   },
   {
-    test: /\b(relocation|moving truck|inbound move|inbound:|outbound:|inbound vs outbound)\b/i,
+    test: /\b(relocation|moving truck|inbound move|inbound vs outbound)\b|\binbound:|\boutbound:/i,
     src: PAGE_HERO_IMAGES.relocation.src,
   },
   {
@@ -286,7 +286,7 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
     src: PAGE_HERO_IMAGES.sellers.src,
   },
   {
-    test: /\b(park|greenbelt|playground)\b/i,
+    test: /\b(parks?|greenbelt|playground)\b/i,
     src: "/images/neighborhoods/summerlin.png",
   },
   {
@@ -302,7 +302,7 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
     src: PAGE_HERO_IMAGES.contact.src,
   },
   {
-    test: /\b(what i will not do|what i send you|what i send after|how i answer a live file|how representation starts|specialized files|how i walk the house|what belongs on the worksheet)\b/i,
+    test: /\b(what i will not do|what i will and will not do|what i send you|what i send after|how i answer a live file|how representation starts|specialized files|how i walk the house|what belongs on the worksheet|what i negotiate besides)\b/i,
     src: PAGE_HERO_IMAGES.office.src,
   },
   {
@@ -320,6 +320,50 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
   {
     test: /\bhow i send\b/i,
     src: PAGE_HERO_IMAGES.listings.src,
+  },
+  {
+    test: /\b(who built it|how this differs from)\b/i,
+    src: PAGE_HERO_IMAGES.fiftyFivePlus.src,
+  },
+  {
+    test: /\b(villages?, not a|villages? are not interchangeable)\b/i,
+    src: PAGE_HERO_IMAGES.luxury.src,
+  },
+  {
+    test: /\b(first-party representation|what you are (actually )?buying)\b/i,
+    src: PAGE_HERO_IMAGES.buyers.src,
+  },
+  {
+    test: /\b(two clocks on paper|what remote actually looks like|vacant vs occupied|the other city)\b/i,
+    src: PAGE_HERO_IMAGES.relocation.src,
+  },
+  {
+    test: /\b(money order of operations|how i match the next floor plan|what people actually give up|sequence: sell first|two files, two disclosure|move-up buyers actually go|equity as a round number)\b/i,
+    src: PAGE_HERO_IMAGES.sellersListing.src,
+  },
+  {
+    test: /\b(what i watch on live files|how this page relates to the report|what changed vs the old january)\b/i,
+    src: PAGE_HERO_IMAGES.market.src,
+  },
+  {
+    test: /\b(what groves actually is|groves vs detached)\b/i,
+    src: "/images/neighborhoods/groves-at-inspirada.png",
+  },
+  {
+    test: /\b(zips on this map|northwest loop)\b/i,
+    src: "/images/neighborhoods/lone-mountain.png",
+  },
+  {
+    test: /\btournament hills\b/i,
+    src: "/images/neighborhoods/tournament-hills.png",
+  },
+  {
+    test: /\b(how i schedule ridges tours)\b/i,
+    src: PAGE_HERO_IMAGES.luxuryRidges.src,
+  },
+  {
+    test: /\b(what you actually use day to day)\b/i,
+    src: PAGE_HERO_IMAGES.relocation.src,
   },
   {
     test: /^buying$/i,

@@ -89,7 +89,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
         <div className="mb-10">
           <MlsSearchForm className="mx-0" inputId="mls-q-listing-placeholder" />
         </div>
-        <p className="mb-8 text-pretty text-sm text-slate-500">
+        <p className="mb-8 text-pretty text-sm text-slate-600">
           Office:{" "}
           <a
             href={OFFICE_NAP.mapsUrl}

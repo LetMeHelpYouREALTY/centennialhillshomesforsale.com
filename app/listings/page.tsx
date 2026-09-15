@@ -338,7 +338,7 @@ export default function ListingsPage({
                 className="mb-0"
               />
             </div>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-600">
               <span className="flex items-center">
                 <CheckCircle
                   className="h-4 w-4 text-green-500 mr-1"
@@ -395,12 +395,12 @@ export default function ListingsPage({
                     <h3 className="font-bold text-slate-900 group-hover:text-blue-600">
                       {search.name}
                     </h3>
-                    <span className="text-sm text-slate-500">
+                    <span className="text-sm text-slate-600">
                       {search.note}
                     </span>
                   </div>
                   <ArrowRight
-                    className="h-5 w-5 text-slate-500 group-hover:text-blue-600"
+                    className="h-5 w-5 text-slate-600 group-hover:text-blue-600"
                     aria-hidden="true"
                   />
                 </Link>
@@ -483,7 +483,7 @@ export default function ListingsPage({
                     {neighborhood.description}
                   </p>
                   <div className="flex justify-between text-sm">
-                    <span className="text-slate-500">
+                    <span className="text-slate-600">
                       {neighborhood.medianNote}:{" "}
                       <strong className="tabular-nums text-slate-900">
                         {neighborhood.medianPrice}
@@ -738,7 +738,7 @@ export default function ListingsPage({
             formType="property-search"
           />
         </div>
-        <p className="mt-8 text-center text-sm text-slate-500">
+        <p className="mt-8 text-center text-sm text-slate-600">
           Last updated: {MARKET_SNAPSHOT_AS_OF}
         </p>
       </div>

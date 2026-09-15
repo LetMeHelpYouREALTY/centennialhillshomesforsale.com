@@ -342,7 +342,7 @@ export default function NeighborhoodsPage() {
                         <h3 className="text-xl font-bold text-slate-900 transition-colors group-hover:text-blue-600">
                           {neighborhood.name}
                         </h3>
-                        <p className="text-sm text-slate-500">
+                        <p className="text-sm text-slate-600">
                           {neighborhood.bestFor}
                         </p>
                       </div>
@@ -350,7 +350,7 @@ export default function NeighborhoodsPage() {
                         <div className="font-bold text-slate-900">
                           {neighborhood.medianPrice}
                         </div>
-                        <div className="text-xs text-slate-500">
+                        <div className="text-xs text-slate-600">
                           {neighborhood.priceNote}
                         </div>
                       </div>
@@ -375,9 +375,12 @@ export default function NeighborhoodsPage() {
           </section>
 
           <section className="mb-16 max-w-4xl mx-auto text-center">
-            <h2 className="mb-4 text-2xl font-bold text-slate-900">
+            <SectionHeading
+              className="mb-4 text-2xl font-bold text-slate-900"
+              fallbackSrc={PAGE_HERO_IMAGES.fiftyFivePlus.src}
+            >
               55+ HOPA campuses are a different map
-            </h2>
+            </SectionHeading>
             <p className="mb-6 text-pretty text-slate-600">
               Sun City, Trilogy, Heritage, Solera, Siena, and Del Webb Lake Las
               Vegas have occupancy rules that all-ages neighborhood guides do

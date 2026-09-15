@@ -23,5 +23,6 @@ describe("NeighborhoodGuide conversion chrome", () => {
     expect(src).toContain("text-slate-300");
     expect(src).toContain("GoogleReviewsCta");
     expect(src).not.toContain("text-blue-200");
+    expect(src).not.toContain("text-slate-500");
   });
 });

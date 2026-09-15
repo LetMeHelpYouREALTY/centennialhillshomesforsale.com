@@ -126,7 +126,7 @@ export default function TopicGuide({
               {h1}
             </h1>
             <p className="mb-6 text-pretty text-lg text-slate-600">{intro}</p>
-            <p className="mb-10 text-sm text-slate-500">
+            <p className="mb-10 text-sm text-slate-600">
               Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties ·
               License S.0197614.LLC · {OFFICE_HOURS.display} ·{" "}
               <a href={CTA_TEL} className={TEXT_LINK_CLASS}>

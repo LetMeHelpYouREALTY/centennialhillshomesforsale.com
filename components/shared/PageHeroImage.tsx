@@ -38,7 +38,7 @@ export function PageHeroImage({
         />
       </div>
       {caption ? (
-        <figcaption className="mt-2 text-center text-sm text-slate-500">
+        <figcaption className="mt-2 text-center text-sm text-slate-600">
           {caption}
         </figcaption>
       ) : null}

@@ -22,7 +22,7 @@ export function Breadcrumbs({ items, className = "" }: BreadcrumbsProps) {
         items={items.map((item) => ({ name: item.name, url: item.href }))}
       />
       <nav
-        className={`max-w-5xl text-sm text-slate-500 ${className}`}
+        className={`max-w-5xl text-sm text-slate-600 ${className}`}
         aria-label="Breadcrumb"
       >
         <ol className="flex flex-wrap items-center gap-1">

@@ -309,10 +309,10 @@ export default function SecurityPolicyPage() {
 
             {/* Last Updated */}
             <footer className="border-t pt-6 mt-12">
-              <p className="text-sm text-slate-500">
+              <p className="text-sm text-slate-600">
                 Last updated: September 15, 2026
               </p>
-              <p className="text-sm text-slate-500">
+              <p className="text-sm text-slate-600">
                 This policy is reviewed and updated regularly.
               </p>
             </footer>

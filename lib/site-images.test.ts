@@ -158,6 +158,30 @@ describe("site images catalog", () => {
     });
     expect(loans.src).toBe(PAGE_HERO_IMAGES.firstTimeBuyers.src);
 
+    const parks = resolveSectionImage({
+      heading: "Parks, not one giant clubhouse",
+      neighborhoodName: "Inspirada",
+    });
+    expect(parks.src).toBe("/images/neighborhoods/summerlin.png");
+
+    const inbound = resolveSectionImage({
+      heading: "Inbound: pick a map, not a nickname",
+      neighborhoodName: "Las Vegas",
+    });
+    expect(inbound.src).toBe(PAGE_HERO_IMAGES.relocation.src);
+
+    const tournament = resolveSectionImage({
+      heading: "What buyers actually get in Tournament Hills",
+      neighborhoodName: "Tournament Hills",
+    });
+    expect(tournament.src).toBe("/images/neighborhoods/tournament-hills.png");
+
+    const willAndWillNot = resolveSectionImage({
+      heading: "What I will and will not do",
+      neighborhoodName: "Las Vegas",
+    });
+    expect(willAndWillNot.src).toBe(PAGE_HERO_IMAGES.office.src);
+
     const root = path.join(__dirname, "..", "public");
     expect(existsSync(path.join(root, golf.src.replace(/^\//, "")))).toBe(true);
     expect(existsSync(path.join(root, commute.src.replace(/^\//, "")))).toBe(

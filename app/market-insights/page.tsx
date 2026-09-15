@@ -510,7 +510,7 @@ export default async function MarketInsightsPage() {
                   appreciation forecast. Ask for a live CMA on Inspirada, Green
                   Valley Ranch, or MacDonald Highlands.
                 </p>
-                <div className="text-sm text-slate-500">
+                <div className="text-sm text-slate-600">
                   Tour: Inspirada, MacDonald Highlands, Green Valley Ranch
                 </div>
               </div>
@@ -528,7 +528,7 @@ export default async function MarketInsightsPage() {
                   maps — confirm village or campus comps, not a “strong buy”
                   label.
                 </p>
-                <div className="text-sm text-slate-500">
+                <div className="text-sm text-slate-600">
                   Tour: The Ridges, 89138, Paseos
                 </div>
               </div>
@@ -545,7 +545,7 @@ export default async function MarketInsightsPage() {
                   and freeway access matter for commute math — not a “value
                   play” slogan.
                 </p>
-                <div className="text-sm text-slate-500">
+                <div className="text-sm text-slate-600">
                   Tour: Aliante, Elkhorn, Skye Canyon
                 </div>
               </div>
@@ -563,7 +563,7 @@ export default async function MarketInsightsPage() {
                   Tract homes near Exploration Peak Park. New construction
                   competes with resales. I will not invent “solid appreciation.”
                 </p>
-                <div className="text-sm text-slate-500">
+                <div className="text-sm text-slate-600">
                   Tour: Exploration Peak, Southern Highlands adjacent
                 </div>
               </div>
@@ -735,7 +735,7 @@ export default async function MarketInsightsPage() {
             </div>
           </section>
         </div>
-        <div className="text-center text-sm text-slate-500 mt-8">
+        <div className="text-center text-sm text-slate-600 mt-8">
           Last updated: {MARKET_SNAPSHOT_AS_OF}
         </div>
       </div>

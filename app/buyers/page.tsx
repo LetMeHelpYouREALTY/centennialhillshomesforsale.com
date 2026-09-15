@@ -86,7 +86,7 @@ const buyerFaqs = [
   {
     question: "What if I'm relocating from another state?",
     answer:
-      "Berkshire Hathaway HomeServices has a global referral network. Dr. Jan coordinates virtual tours and a drive-time matrix for inbound buyers — I will not invent a 50,000-agent headcount.",
+      "Berkshire Hathaway HomeServices has a global referral network. I coordinate virtual tours and a drive-time matrix for inbound buyers — I will not invent a 50,000-agent headcount.",
   },
   {
     question: "How competitive is the Las Vegas housing market?",
@@ -249,7 +249,7 @@ export default function BuyersPage() {
                 className="mb-0"
               />
             </div>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-600">
               <span className="flex items-center">
                 <CheckCircle
                   className="h-4 w-4 text-green-500 mr-1"
@@ -317,10 +317,10 @@ export default function BuyersPage() {
                 />
                 <p className="text-2xl font-bold mb-2">One agent of record</p>
                 <p className="text-slate-300 mb-4">
-                  Dr. Jan Duffy works for your side of the deal throughout the
-                  transaction—from the first showing to the closing table.
+                  I work your side of the deal throughout the transaction—from
+                  the first showing to the closing table.
                 </p>
-                <div className="text-sm text-slate-500">
+                <div className="text-sm text-slate-600">
                   Serving Las Vegas since 2008 | BHHS Nevada Properties
                 </div>
               </div>
@@ -574,8 +574,7 @@ export default function BuyersPage() {
                   Local practice
                 </h3>
                 <p className="text-pretty text-slate-600 text-sm">
-                  Dr. Jan has served Las Vegas since 2008 with BHHS Nevada
-                  Properties
+                  I have served Las Vegas since 2008 with BHHS Nevada Properties
                 </p>
               </div>
               <div className="text-center">
@@ -696,7 +695,7 @@ export default function BuyersPage() {
             formType="property-search"
           />
         </div>
-        <p className="mt-8 text-center text-sm text-slate-500">
+        <p className="mt-8 text-center text-sm text-slate-600">
           Last updated: {MARKET_SNAPSHOT_AS_OF}
         </p>
       </div>

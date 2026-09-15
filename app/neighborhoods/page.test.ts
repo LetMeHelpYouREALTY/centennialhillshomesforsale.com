@@ -15,5 +15,7 @@ describe("neighborhoods hub", () => {
     expect(src).toContain('source="neighborhoods-hub-mid"');
     expect(src).toContain("GoogleReviewsCta");
     expect(src).not.toContain("She will not send you");
+    expect(src).toContain("55+ HOPA campuses are a different map");
+    expect(src).toContain("SectionHeading");
   });
 });

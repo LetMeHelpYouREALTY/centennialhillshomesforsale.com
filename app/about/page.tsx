@@ -615,7 +615,7 @@ export default function AboutPage() {
         </div>
 
         {/* Last Updated */}
-        <div className="text-center text-sm text-slate-500 mt-8">
+        <div className="text-center text-sm text-slate-600 mt-8">
           Last updated: {MARKET_SNAPSHOT_AS_OF}
         </div>
       </div>

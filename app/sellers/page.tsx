@@ -78,13 +78,13 @@ const sellingBenefits = [
     icon: BarChart,
     title: "Comps-based pricing",
     description:
-      "Dr. Jan has served Las Vegas since 2008. List price comes from a CMA — sold comps and current actives — not an AVM or a sit-then-cut slogan.",
+      "I have served Las Vegas since 2008. List price comes from a CMA — sold comps and current actives — not an AVM or a sit-then-cut slogan.",
   },
   {
     icon: DollarSign,
     title: "Offer-to-close negotiation",
     description:
-      "From offer review to closing negotiations, Dr. Jan protects your interests and the net sheet. Street-level CMA math beats a career-volume slogan.",
+      "From offer review to closing negotiations, I protect the net sheet. Street-level CMA math beats a career-volume slogan.",
   },
 ];
 
@@ -218,7 +218,7 @@ export default function SellersPage() {
                 className="mb-0"
               />
             </div>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-600">
               <span className="flex items-center">
                 <CheckCircle
                   className="h-4 w-4 text-green-500 mr-1"
@@ -522,8 +522,8 @@ export default function SellersPage() {
                   Request a CMA for this house
                 </h2>
                 <p className="text-blue-100 mb-6">
-                  Request a CMA from current MLS comps. Dr. Jan has served Las
-                  Vegas since 2008. A city median is not your sold price — the
+                  Request a CMA from current MLS comps. I have served Las Vegas
+                  since 2008. A city median is not your sold price — the
                   worksheet uses sold comps, actives, and the condition of this
                   house.
                 </p>
@@ -589,7 +589,7 @@ export default function SellersPage() {
             formType="home-valuation"
           />
         </div>
-        <p className="mt-8 text-center text-sm text-slate-500">
+        <p className="mt-8 text-center text-sm text-slate-600">
           Last updated: {MARKET_SNAPSHOT_AS_OF}
         </p>
       </div>
