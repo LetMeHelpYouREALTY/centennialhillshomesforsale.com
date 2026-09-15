@@ -73,11 +73,11 @@ export default function SunCitySummerlinPage() {
         },
         {
           heading: "Golf and rec centers by name",
-          body: "Courses: Highland Falls (executive), Palm Valley, and Eagle Crest. Recreation centers: Mountain Shadows, Sun Shadows, Pinnacle, and Desert Vista. Club lists run past 100 (golf, pickleball, crafts, travel). MountainView Hospital is nearby — drive time depends on the exact street, not “adjacent” marketing.",
+          body: "Courses: Highland Falls (executive), Palm Valley, and Eagle Crest. Recreation centers: Mountain Shadows, Sun Shadows, Pinnacle, and Desert Vista. Confirm the current club list in the rec packet. MountainView Hospital is nearby — drive time depends on the exact street, not “adjacent” marketing.",
         },
         {
           heading: "How this differs from Trilogy and Heritage",
-          body: "Trilogy at Summerlin is smaller, newer, higher-amenity Shea product in 89135. Heritage at Stonebridge is a boutique guard-gated 55+ pocket. Sun City Summerlin is the large, 1990s Del Webb campus in 89134. I tour two in one morning when a buyer is choosing scale vs newer finishes.",
+          body: "Trilogy at Summerlin is smaller, newer Shea product in 89135. Heritage at Stonebridge is a smaller guard-gated 55+ pocket. Sun City Summerlin is the large, 1990s Del Webb campus in 89134. I tour two in one morning when a buyer is choosing scale vs newer finishes.",
         },
       ]}
       faqs={[

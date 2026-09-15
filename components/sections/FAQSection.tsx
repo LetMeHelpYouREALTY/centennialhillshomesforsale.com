@@ -54,7 +54,7 @@ export default function FAQSection({
                   aria-expanded={isOpen}
                   aria-controls={panelId}
                   onClick={() => toggleFAQ(index)}
-                  className="flex w-full items-center justify-between px-6 py-4 text-left transition-colors hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-inset"
+                  className="flex min-h-11 w-full items-center justify-between px-6 py-4 text-left transition-colors hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-inset"
                 >
                   <span className="pr-4 font-semibold text-slate-900">
                     {faq.question}

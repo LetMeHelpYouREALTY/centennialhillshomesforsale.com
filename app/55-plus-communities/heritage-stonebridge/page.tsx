@@ -28,7 +28,7 @@ export default function HeritageStonebridgePage() {
       pathPrefix="/55-plus-communities"
       badge="55+ HOPA community"
       h1="Heritage at Stonebridge Homes in Summerlin"
-      intro="Heritage at Stonebridge is a boutique guard-gated 55+ community in Summerlin ZIP 89134 — smaller than Sun City Summerlin, closer to Downtown Summerlin retail than Trilogy’s west-edge setting."
+      intro="Heritage at Stonebridge is a smaller guard-gated 55+ community in Summerlin ZIP 89134 — smaller than Sun City Summerlin, closer to Downtown Summerlin retail than Trilogy’s west-edge setting."
       zipCodes={["89134"]}
       city="Las Vegas"
       imageSrc="/images/neighborhoods/heritage-stonebridge.png"
@@ -54,7 +54,7 @@ export default function HeritageStonebridgePage() {
       }}
       sections={[
         {
-          heading: "Boutique vs the 7,700-home campus",
+          heading: "Smaller gated campus vs Sun City Summerlin",
           body: "Sun City Summerlin is the large Del Webb map in the same ZIP. Heritage is a smaller, guard-gated pocket with its own HOA. Buyers who want a gate and a shorter hop to Downtown Summerlin often land here. Buyers who want three golf courses stay at Sun City. I will not call either “better.”",
         },
         {

@@ -66,7 +66,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "Aliante Specialist",
     ctaHeadline: "Search Aliante Homes Today",
     ctaSubheadline:
-      "Get instant access to all Aliante listings with expert guidance.",
+      "Get current Aliante listings from MLS. Call 702-222-1964 for a live pull.",
   },
   "californiaforeverbroker.com": {
     domain: "californiaforeverbroker.com",
@@ -76,7 +76,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "California to Las Vegas relocation specialist. Compare live Las Vegas comps with Dr. Jan Duffy.",
     heroHeadline: "Leaving California for Las Vegas?",
     heroSubheadline:
-      "No state income tax, lower cost of living, and year-round sunshine. Let me help you make the move.",
+      "No state income tax on wages. Confirm purchase price, HOA, and insurance against your California file — not a sunshine slogan.",
     keywords: [
       "California to Las Vegas move",
       "relocation Las Vegas",
@@ -313,7 +313,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "Lone Mountain Specialist",
     ctaHeadline: "Lone Mountain Vistas Awaits",
     ctaSubheadline:
-      "Breathtaking views and spacious homes — let me show you what's available.",
+      "Lone Mountain views and lot sizes vary by street — I will pull live inventory, not a vista slogan.",
   },
   "macdonaldhighlandshomes.com": {
     domain: "macdonaldhighlandshomes.com",
@@ -334,7 +334,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "Luxury Specialist",
     ctaHeadline: "MacDonald Highlands Living Awaits",
     ctaSubheadline:
-      "Private tours available. Let me show you what makes MacDonald Highlands extraordinary.",
+      "Private tours available. Confirm hillside vs valley lots on the live MLS sheet.",
   },
   "midtownlasvegascondos.com": {
     domain: "midtownlasvegascondos.com",
@@ -574,7 +574,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "Sunstone community homes for sale in Northwest Las Vegas. Expert real estate guidance.",
     heroHeadline: "Sunstone Las Vegas Homes for Sale",
     heroSubheadline:
-      "Beautiful homes in the Sunstone master-planned community.",
+      "Sunstone master-plan listings in Northwest Las Vegas. Confirm village vs nearby ZIPs on a CMA.",
     keywords: [
       "Sunstone Las Vegas",
       "Sunstone homes for sale",
@@ -605,7 +605,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "Luxury Specialist",
     ctaHeadline: "Private Tours of The Ridges",
     ctaSubheadline:
-      "Exclusive access to The Ridges listings — some never publicly listed. Call for details.",
+      "The Ridges is guard-gated custom Summerlin. Price from live comps — I will not claim off-market inventory I cannot show.",
   },
   "trilogysunstonehomes.com": {
     domain: "trilogysunstonehomes.com",
