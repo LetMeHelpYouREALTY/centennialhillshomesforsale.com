@@ -46,7 +46,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "Consenza Estates listings",
     ctaHeadline: "Find Your Consenza Estates Home",
     ctaSubheadline:
-      "I will pull live MLS for this community. Call (702) 222-1964 with the address.",
+      "I will pull live MLS for this community. Call (702) 222-1964 or email homes@heyberkshire.com with the address.",
   },
   "aliantehomesforsale.com": {
     domain: "aliantehomesforsale.com",
@@ -56,7 +56,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "Search Aliante homes for sale in North Las Vegas. Live MLS with Dr. Jan Duffy.",
     heroHeadline: "Aliante Homes for Sale",
     heroSubheadline:
-      "Confirm the Aliante village on live MLS, then tour. Call (702) 222-1964.",
+      "Confirm the Aliante village on live MLS, then tour. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Aliante homes for sale",
       "Aliante North Las Vegas",
@@ -67,7 +67,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "Aliante listings",
     ctaHeadline: "Search Aliante Homes Today",
     ctaSubheadline:
-      "Get current Aliante listings from MLS. Call (702) 222-1964 for a live pull.",
+      "Get current Aliante listings from MLS. Call (702) 222-1964 or email homes@heyberkshire.com for a live pull.",
   },
   "californiaforeverbroker.com": {
     domain: "californiaforeverbroker.com",
@@ -88,14 +88,14 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "California relocation",
     ctaHeadline: "Sequence a California sale and a Las Vegas purchase",
     ctaSubheadline:
-      "I've helped California buyers sequence a sale and a Las Vegas purchase. Call (702) 222-1964.",
+      "I've helped California buyers sequence a sale and a Las Vegas purchase. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },
   "centennialhillshomesforsale.com": {
     domain: "centennialhillshomesforsale.com",
     neighborhood: "Centennial Hills",
     tagline: "Centennial Hills Homes for Sale",
     description:
-      "Centennial Hills homes for sale in northwest Las Vegas (89149, 89131, 89143). Current listings with Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964.",
+      "Centennial Hills homes for sale in northwest Las Vegas (89149, 89131, 89143). Current listings with Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
     heroHeadline: "Centennial Hills Homes for Sale",
     heroSubheadline:
       "Northwest Las Vegas listings near Centennial Hills Park and Town Center — 89149, not 89144.",
@@ -118,7 +118,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     neighborhood: "Las Vegas",
     tagline: "Dr. Jan Duffy — Client Reviews",
     description:
-      "Read Google reviews for Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964.",
+      "Read Google reviews for Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
     heroHeadline: "What Clients Say About Dr. Jan",
     heroSubheadline:
       "Read Google reviews on the profile. License S.0197614.LLC. Serving Las Vegas since 2008.",
@@ -132,7 +132,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "Las Vegas REALTOR®",
     ctaHeadline: "Call for a consult",
     ctaSubheadline:
-      "Call (702) 222-1964 with the address. I answer the client line.",
+      "Call (702) 222-1964 or email homes@heyberkshire.com with the address. I answer the client line.",
   },
   "drjanetduffy.com": {
     domain: "drjanetduffy.com",
@@ -151,7 +151,8 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Las Vegas REALTOR®",
     ctaHeadline: "Ready to Buy or Sell?",
-    ctaSubheadline: "Call or text Dr. Jan — I answer my own phone.",
+    ctaSubheadline:
+      "Call, text, or email homes@heyberkshire.com — I answer the client line.",
   },
   "eaglehillshomes.com": {
     domain: "eaglehillshomes.com",
@@ -161,7 +162,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "Search Eagle Hills homes for sale in Las Vegas. Live MLS with Dr. Jan Duffy.",
     heroHeadline: "Eagle Hills Homes for Sale",
     heroSubheadline:
-      "Eagle Hills listings in Las Vegas. Call (702) 222-1964 for a live pull.",
+      "Eagle Hills listings in Las Vegas. Call (702) 222-1964 or email homes@heyberkshire.com for a live pull.",
     keywords: [
       "Eagle Hills homes",
       "Eagle Hills Las Vegas",
@@ -172,7 +173,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "Eagle Hills listings",
     ctaHeadline: "Find Your Eagle Hills Home",
     ctaSubheadline:
-      "I will pull live Eagle Hills MLS. Call (702) 222-1964 with the address.",
+      "I will pull live Eagle Hills MLS. Call (702) 222-1964 or email homes@heyberkshire.com with the address.",
   },
   "goodtoknowrealtor.com": {
     domain: "goodtoknowrealtor.com",
@@ -214,7 +215,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "55+ communities",
     ctaHeadline: "Heritage at Stonebridge resales",
     ctaSubheadline:
-      "I tour Heritage by HOPA occupancy and live MLS. Call (702) 222-1964.",
+      "I tour Heritage by HOPA occupancy and live MLS. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },
   "heritagestonebridge.com": {
     domain: "heritagestonebridge.com",
@@ -235,14 +236,14 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "Heritage Stonebridge",
     ctaHeadline: "Your Heritage Stonebridge Home",
     ctaSubheadline:
-      "Floor plans, rec access, and occupancy are on the resale packet. Call (702) 222-1964.",
+      "Floor plans, rec access, and occupancy are on the resale packet. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },
   "justcalldrjan.com": {
     domain: "justcalldrjan.com",
     neighborhood: "Las Vegas",
     tagline: "Just Call Dr. Jan — Las Vegas Real Estate",
     description:
-      "Ready to buy or sell in Las Vegas? Just call Dr. Jan Duffy at (702) 222-1964.",
+      "Ready to buy or sell in Las Vegas? Call Dr. Jan Duffy at (702) 222-1964 or email homes@heyberkshire.com.",
     heroHeadline: "Just Call Dr. Jan",
     heroSubheadline:
       "Serving Las Vegas since 2008. No runaround — just local MLS work.",
@@ -252,7 +253,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "Direct Access",
     ctaHeadline: "I Answer My Own Phone",
     ctaSubheadline:
-      "No assistant, no callback queue. Call or text (702) 222-1964 and reach me directly.",
+      "No assistant, no callback queue. Call or text (702) 222-1964 or email homes@heyberkshire.com — I answer the client line.",
   },
   "lasvegashomeexpert.com": {
     domain: "lasvegashomeexpert.com",
@@ -262,7 +263,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "Las Vegas home buying and selling. Dr. Jan Duffy, BHHS Nevada Properties.",
     heroHeadline: "Las Vegas REALTOR®",
     heroSubheadline:
-      "Las Vegas REALTOR® since 2008. Call (702) 222-1964 for a live MLS pull — not a ranking slogan.",
+      "Las Vegas REALTOR® since 2008. Call (702) 222-1964 or email homes@heyberkshire.com for a live MLS pull — not a ranking slogan.",
     keywords: [
       "Las Vegas home expert",
       "Las Vegas real estate expert",
@@ -293,7 +294,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "Lone Mountain listings",
     ctaHeadline: "Find Your Lone Mountain Home",
     ctaSubheadline:
-      "I will pull live Lone Mountain MLS. Call (702) 222-1964 with the address.",
+      "I will pull live Lone Mountain MLS. Call (702) 222-1964 or email homes@heyberkshire.com with the address.",
   },
   "lonemountainvistas.com": {
     domain: "lonemountainvistas.com",
@@ -521,7 +522,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "Skye Canyon REALTOR®",
     ctaHeadline: "Work with Dr. Jan Duffy",
     ctaSubheadline:
-      "Skye Canyon files from a Las Vegas practice since 2008. Call (702) 222-1964 for live inventory.",
+      "Skye Canyon files from a Las Vegas practice since 2008. Call (702) 222-1964 or email homes@heyberkshire.com for live inventory.",
   },
   "speedycashhomeoffers.com": {
     domain: "speedycashhomeoffers.com",
@@ -542,7 +543,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "Cash offers",
     ctaHeadline: "Request a cash-offer worksheet",
     ctaSubheadline:
-      "Call (702) 222-1964 for a cash-offer worksheet on your Las Vegas home.",
+      "Call (702) 222-1964 or email homes@heyberkshire.com for a cash-offer worksheet on your Las Vegas home.",
   },
   "suncitysummerlinhomesforsale.com": {
     domain: "suncitysummerlinhomesforsale.com",
@@ -563,7 +564,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "Sun City Summerlin",
     ctaHeadline: "Find Your Sun City Home",
     ctaSubheadline:
-      "I work Sun City Summerlin files every week. Call and I will send live inventory.",
+      "I work Sun City Summerlin files every week. Call (702) 222-1964 or email homes@heyberkshire.com and I will send live inventory.",
   },
   "sunstonelasvegashomes.com": {
     domain: "sunstonelasvegashomes.com",
@@ -583,7 +584,8 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Sunstone listings",
     ctaHeadline: "Find Your Sunstone Home",
-    ctaSubheadline: "Call (702) 222-1964 for a live MLS pull on Sunstone.",
+    ctaSubheadline:
+      "Call (702) 222-1964 or email homes@heyberkshire.com for a live MLS pull on Sunstone.",
   },
   "theridgessummerlinhomes.com": {
     domain: "theridgessummerlinhomes.com",
@@ -625,7 +627,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "Trilogy at Sunstone",
     ctaHeadline: "Trilogy at Sunstone 55+ resales",
     ctaSubheadline:
-      "Del Webb rec campus, one-story plans, and HOPA occupancy — call (702) 222-1964.",
+      "Del Webb rec campus, one-story plans, and HOPA occupancy — call (702) 222-1964 or email homes@heyberkshire.com.",
   },
   "vegas55plushomes.com": {
     domain: "vegas55plushomes.com",
@@ -667,7 +669,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "Confidential Support",
     ctaHeadline: "Confidential divorce-sale consult",
     ctaSubheadline:
-      "I handle divorce sales with complete discretion. Call (702) 222-1964.",
+      "I handle divorce sales with complete discretion. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },
 };
 

@@ -7,7 +7,7 @@ export const defaultFaqs: SiteFaq[] = [
   {
     question: "What areas do you serve?",
     answer:
-      "Las Vegas, Henderson, Summerlin, Green Valley, Centennial Hills, and North Las Vegas. Coverage includes residential, luxury, and investment properties throughout Clark County.",
+      "Las Vegas, Henderson, Summerlin (including 89138 and 89144), Centennial Hills, Green Valley, North Las Vegas, and 55+ campuses such as Siena and Trilogy. Coverage includes residential, luxury, and investment properties throughout Clark County.",
   },
   {
     question: "How long does the home buying process take?",
@@ -32,7 +32,7 @@ export const defaultFaqs: SiteFaq[] = [
   {
     question: "What are your fees?",
     answer:
-      "Buyer-broker compensation is disclosed in a written buyer agreement. It may be paid by the seller, the buyer, or both. Seller fees are negotiated in writing before you list. Call for a numbers-first consult.",
+      "Buyer-broker compensation is disclosed in a written buyer agreement. It may be paid by the seller, the buyer, or both. Seller fees are negotiated in writing before you list. Call (702) 222-1964 or email homes@heyberkshire.com for a numbers-first consult.",
   },
   {
     question: "How do I request a CMA or current listings?",

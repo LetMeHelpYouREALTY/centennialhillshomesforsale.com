@@ -211,7 +211,7 @@ export default function AboutPage() {
               src={PAGE_HERO_IMAGES.about.src}
               alt={PAGE_HERO_IMAGES.about.alt}
             />
-            <p className="text-xl text-slate-600">
+            <p className="text-pretty text-xl text-slate-600">
               Dr. Jan Duffy has been serving Las Vegas since 2008 with Berkshire
               Hathaway HomeServices Nevada Properties. Whether you're buying,
               selling, investing, or relocating, you'll get a written plan and
@@ -233,7 +233,7 @@ export default function AboutPage() {
                   REALTOR® | License S.0197614.LLC
                 </p>
 
-                <div className="prose prose-lg text-slate-700 mb-8 space-y-4">
+                <div className="prose prose-lg text-pretty text-slate-700 mb-8 space-y-4">
                   <p>
                     When you choose to work with{" "}
                     <strong>Berkshire Hathaway HomeServices</strong>, you are
@@ -243,9 +243,10 @@ export default function AboutPage() {
                   </p>
                   <p>
                     Since 2008, I've represented buyers and sellers in Las
-                    Vegas, Henderson, Summerlin, and throughout Southern Nevada.
-                    My files include luxury properties, new construction,
-                    investment real estate, 55+ HOPA communities, and
+                    Vegas, Henderson, Summerlin (including 89138), Centennial
+                    Hills, and throughout Southern Nevada. My files include
+                    luxury properties, new construction, investment real estate,
+                    55+ HOPA campuses such as Siena and Trilogy, and
                     relocations—particularly for California buyers comparing
                     Nevada's wage-tax statute against live Las Vegas comps.
                   </p>
@@ -444,7 +445,7 @@ export default function AboutPage() {
             >
               Files I actually work
             </SectionHeading>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Dr. Jan Duffy works residential files across Las Vegas, Henderson,
               and Summerlin. First-time buyers, luxury tours, investors, and 55+
               HOPA occupancy rules each get a written plan — not a lifestyle

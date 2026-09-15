@@ -29,5 +29,8 @@ describe("site copy does not sell ranking slogans", () => {
     expect(blob).not.toMatch(/highest-ROI/i);
     expect(JSON.stringify(neighborhoods)).not.toMatch(/150\+ parks/i);
     expect(JSON.stringify(neighborhoods)).not.toMatch(/Established Henderson/i);
+    expect(JSON.stringify(defaultFaqs)).toContain("89138");
+    expect(JSON.stringify(defaultFaqs)).toContain("Siena");
+    expect(JSON.stringify(defaultFaqs)).toContain("homes@heyberkshire.com");
   });
 });

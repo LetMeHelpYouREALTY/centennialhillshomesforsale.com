@@ -13,6 +13,8 @@ describe("about page service-area coverage", () => {
     expect(src).toContain('href: "/neighborhoods/tournament-hills"');
     expect(src).toContain('href: "/55-plus-communities"');
     expect(src).toContain("Siena");
+    expect(src).toContain("89138");
+    expect(src).toContain("text-pretty");
     expect(src).toContain("Trilogy");
     expect(src).toContain("homes@heyberkshire.com");
   });
