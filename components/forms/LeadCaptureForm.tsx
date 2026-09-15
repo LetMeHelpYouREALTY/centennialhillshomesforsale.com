@@ -288,7 +288,10 @@ export function LeadCaptureForm({
 
       <div>
         <label htmlFor="phone" className="block text-sm font-medium mb-1">
-          Phone
+          Phone{" "}
+          <span className="font-normal text-slate-500">
+            (recommended for a faster callback)
+          </span>
         </label>
         <Input
           id="phone"

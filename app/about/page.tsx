@@ -15,7 +15,7 @@ import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import { AGENT_PHOTO_PATH } from "@/lib/brand-assets";
-import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
+import { CTA_PHONE, CTA_TEL, OFFICE_NAP } from "@/lib/contact";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
@@ -61,10 +61,11 @@ const personSchema = {
     name: "Berkshire Hathaway HomeServices Nevada Properties",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "9406 W Lake Mead Blvd, Suite 100",
-      addressLocality: "Las Vegas",
-      addressRegion: "NV",
-      postalCode: "89134",
+      streetAddress: OFFICE_NAP.street,
+      addressLocality: OFFICE_NAP.city,
+      addressRegion: OFFICE_NAP.state,
+      postalCode: OFFICE_NAP.zip,
+      addressCountry: "US",
     },
   },
   hasCredential: {
@@ -120,7 +121,7 @@ const specializations = [
   {
     title: "Investment Properties",
     description:
-      "Rental properties, fix-and-flip opportunities, and portfolio building",
+      "Rental houses in Clark County. I represent buyers and sellers; I do not manage rentals.",
   },
   {
     title: "55+ Active Adult Communities",
@@ -135,18 +136,18 @@ const specializations = [
 ];
 
 const areasServed = [
-  "Las Vegas",
-  "Henderson",
-  "Summerlin",
-  "Green Valley",
-  "North Las Vegas",
-  "Southern Highlands",
-  "Skye Canyon",
-  "Centennial Hills",
-  "The Ridges",
-  "Inspirada",
-  "Mountains Edge",
-  "Spring Valley",
+  { name: "Las Vegas", href: "/listings" },
+  { name: "Henderson", href: "/neighborhoods/henderson" },
+  { name: "Summerlin", href: "/neighborhoods/summerlin" },
+  { name: "Green Valley", href: "/neighborhoods/green-valley" },
+  { name: "North Las Vegas", href: "/neighborhoods/north-las-vegas" },
+  { name: "Southern Highlands", href: "/neighborhoods/southern-highlands" },
+  { name: "Skye Canyon", href: "/neighborhoods/skye-canyon" },
+  { name: "Centennial Hills", href: "/neighborhoods/centennial-hills" },
+  { name: "The Ridges", href: "/neighborhoods/the-ridges" },
+  { name: "Inspirada", href: "/neighborhoods/inspirada" },
+  { name: "Mountains Edge", href: "/neighborhoods/mountains-edge" },
+  { name: "Spring Valley", href: "/listings?q=Spring+Valley" },
 ];
 
 export default function AboutPage() {
@@ -165,7 +166,7 @@ export default function AboutPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Meet Your Berkshire Hathaway HomeServices Agent
+              Dr. Jan Duffy, Las Vegas REALTOR® at BHHS Nevada Properties
             </h1>
             <PageHeroImage
               src={PAGE_HERO_IMAGES.about.src}
@@ -442,7 +443,7 @@ export default function AboutPage() {
                 href="/why-berkshire-hathaway"
                 className="inline-flex min-h-11 items-center justify-center bg-white text-slate-900 px-8 py-3 rounded-md font-semibold hover:bg-slate-100 transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
-                Learn More About BHHS
+                Why Berkshire Hathaway HomeServices
               </Link>
             </div>
           </section>
@@ -464,13 +465,19 @@ export default function AboutPage() {
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {areasServed.map((area) => (
-                <div
-                  key={area}
-                  className="bg-slate-50 rounded-lg p-4 text-center hover:bg-blue-50 transition-colors"
+                <Link
+                  key={area.href}
+                  href={area.href}
+                  className="flex min-h-11 flex-col items-center justify-center rounded-lg bg-slate-50 p-4 text-center no-underline hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                 >
-                  <Home className="h-5 w-5 mx-auto mb-2 text-blue-600" />
-                  <span className="text-slate-700 font-medium">{area}</span>
-                </div>
+                  <Home
+                    className="mb-2 h-5 w-5 text-blue-600"
+                    aria-hidden="true"
+                  />
+                  <span className="font-medium text-slate-700">
+                    {area.name}
+                  </span>
+                </Link>
               ))}
             </div>
             <div className="text-center mt-6">

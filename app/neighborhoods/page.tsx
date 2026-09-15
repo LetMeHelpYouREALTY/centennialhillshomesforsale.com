@@ -75,7 +75,7 @@ const neighborhoods = [
       "The District",
       "Mature trees",
     ],
-    bestFor: "Henderson golf, trails, and The District",
+    bestFor: "The District, trails, and 1980s–90s Henderson streets",
   },
   {
     name: "The Ridges",

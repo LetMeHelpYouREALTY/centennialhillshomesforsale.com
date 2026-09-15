@@ -200,8 +200,8 @@ export default function SellersPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
               <span className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-1" />{" "}
-                No-obligation CMA
+                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> CMA
+                first — list if you choose
               </span>
               <span className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> MLS
@@ -520,7 +520,7 @@ export default function SellersPage() {
           <VisitOffice compact />
           <PageCTA
             headline="Ready to price a listing?"
-            subheadline="Call Dr. Jan Duffy for a listing consult and a live CMA. No obligation."
+            subheadline="Call Dr. Jan Duffy for a listing consult and a live CMA. Listing is a separate agreement."
             className="rounded-2xl"
             formSource="sellers-hub"
             formHeading="Request a listing CMA"

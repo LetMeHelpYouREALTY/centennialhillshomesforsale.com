@@ -22,7 +22,12 @@ import { PageCTA } from "@/components/shared/PageCTA";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
-import { CTA_PHONE, CTA_TEL, REALSCOUT_SEARCH_URL } from "@/lib/contact";
+import {
+  CTA_PHONE,
+  CTA_TEL,
+  OFFICE_NAP,
+  REALSCOUT_SEARCH_URL,
+} from "@/lib/contact";
 import {
   formatUsd,
   LISTING_MEDIANS_USD,
@@ -69,7 +74,7 @@ const faqSchema = {
       name: "What are the age requirements for 55+ communities in Las Vegas?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Per the Housing for Older Persons Act (HOPA), at least 80% of occupied units must have one resident 55 or older. The remaining 20% can be younger, but some communities require all residents to be 55+. Spouses can be younger in most communities.",
+        text: "Per the Housing for Older Persons Act (HOPA), at least 80% of occupied units must have one resident 55 or older. Some campuses require every occupant to be 55+. Whether a younger spouse may occupy is in the current CC&Rs — I will not treat “most communities” as your HOA.",
       },
     },
     {
@@ -77,7 +82,7 @@ const faqSchema = {
       name: "Can I buy in a 55+ community if I'm under 55?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Generally no, but there are exceptions. You may purchase if you'll be 55 by close of escrow, or as an investor who will rent to 55+ tenants. Some communities allow residents 45-54 in limited circumstances. A BHHS agent can explain each community's specific rules.",
+        text: "Generally no. Some files allow a purchase if you will be 55 by close of escrow, or as an investor who will rent to 55+ occupants. Confirm the CC&Rs. Dr. Jan Duffy reads the packet with you.",
       },
     },
     {
@@ -121,8 +126,16 @@ const localBusinessSchema = {
   name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
   description:
     "55+ HOPA communities including Sun City, Del Webb, and Henderson 55+ campuses",
-  telephone: "(702) 222-1964",
+  telephone: "+17022221964",
   url: "https://heyberkshire.com/55-plus-communities",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: OFFICE_NAP.street,
+    addressLocality: OFFICE_NAP.city,
+    addressRegion: OFFICE_NAP.state,
+    postalCode: OFFICE_NAP.zip,
+    addressCountry: "US",
+  },
   areaServed: {
     "@type": "City",
     name: "Las Vegas",
@@ -803,10 +816,10 @@ export default function FiftyFiveCommunitiesPage() {
                 </h3>
                 <p className="text-slate-600">
                   Per the Housing for Older Persons Act (HOPA), at least 80% of
-                  occupied units must have one resident 55 or older. The
-                  remaining 20% can be younger, but some communities require all
-                  residents to be 55+. Spouses can be younger in most
-                  communities.
+                  occupied units must have one resident 55 or older. Some
+                  campuses require every occupant to be 55+. Whether a younger
+                  spouse may occupy is in the current CC&Rs — I will not treat
+                  “most communities” as your HOA.
                 </p>
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">
@@ -815,11 +828,10 @@ export default function FiftyFiveCommunitiesPage() {
                   Can I buy in a 55+ community if I'm under 55?
                 </h3>
                 <p className="text-slate-600">
-                  Generally no, but there are exceptions. You may purchase if
-                  you'll be 55 by close of escrow, or as an investor who will
-                  rent to 55+ tenants. Some communities allow residents 45-54 in
-                  limited circumstances. Dr. Jan can explain each community's
-                  specific rules.
+                  Generally no. Some files allow a purchase if you will be 55 by
+                  close of escrow, or as an investor who will rent to 55+
+                  occupants. Confirm the CC&Rs. Dr. Jan Duffy reads the packet
+                  with you.
                 </p>
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">

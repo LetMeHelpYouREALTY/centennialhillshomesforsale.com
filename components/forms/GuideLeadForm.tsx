@@ -21,10 +21,10 @@ export function GuideLeadForm({
         "mb-12 rounded-xl border border-slate-200 bg-slate-50 p-6 md:p-8",
         className,
       )}
-      aria-labelledby="guide-lead-heading"
+      aria-labelledby={`guide-lead-heading-${source}`}
     >
       <h2
-        id="guide-lead-heading"
+        id={`guide-lead-heading-${source}`}
         className="mb-2 text-2xl font-bold text-slate-900"
       >
         {heading}

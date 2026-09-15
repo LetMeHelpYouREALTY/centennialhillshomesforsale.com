@@ -14,9 +14,9 @@ import { VisitOffice } from "@/components/shared/VisitOffice";
 
 export const metadata: Metadata = withShareImage(
   {
-    title: "Security Policy",
+    title: "Security Policy | Dr. Jan Duffy, Las Vegas REALTOR®",
     description:
-      "Security policy and responsible disclosure information for heyberkshire.com",
+      "Security policy and responsible disclosure for heyberkshire.com — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964.",
     robots: {
       index: true,
       follow: true,

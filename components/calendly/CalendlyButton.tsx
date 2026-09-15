@@ -37,7 +37,13 @@ export default function CalendlyButton({
         src={CALENDLY_WIDGET_JS}
         strategy="lazyOnload"
       />
-      <a href={url} onClick={handleClick} className={className}>
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={handleClick}
+        className={className}
+      >
         {children || text}
         <span className="sr-only"> Opens a scheduling popup</span>
       </a>
