@@ -187,7 +187,7 @@ export function generateRealEstateAgentSchema() {
       "55+ communities",
       "First-time homebuyers",
     ],
-    slogan: "Your Berkshire Hathaway HomeServices expert in Las Vegas",
+    slogan: "Berkshire Hathaway HomeServices Nevada Properties — Las Vegas",
   };
 }
 

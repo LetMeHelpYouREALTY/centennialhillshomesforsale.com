@@ -67,14 +67,12 @@ export default function HeroSection() {
           Berkshire Hathaway HomeServices Nevada Properties. Search current
           listings, then call the client line for a live pull.
         </p>
-
-        <div className="realscout-wrapper mb-4">
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `<realscout-simple-search agent-encoded-id="QWdlbnQtMjI1MDUw"></realscout-simple-search>`,
-            }}
-          />
-        </div>
+        <a
+          href="/listings"
+          className="mb-4 inline-flex min-h-11 items-center justify-center rounded-md bg-white px-8 py-4 text-lg font-bold text-blue-700 no-underline hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+        >
+          Search live MLS
+        </a>
 
         <a
           href={CTA_TEL}

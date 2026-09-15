@@ -13,6 +13,7 @@ import {
 } from "@/lib/market-snapshots";
 import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
+import { FAQSchema } from "@/components/SchemaScript";
 import Image from "next/image";
 
 export const metadata: Metadata = withShareImage(
@@ -216,9 +217,28 @@ const neighborhoods = [
   },
 ];
 
+const neighborhoodFaqs = [
+  {
+    question: "Is 89144 the same as Centennial Hills?",
+    answer:
+      "No. 89144 is Summerlin (The Arbors, Trails, Queensridge). Centennial Hills is 89149, 89131, and 89143. Call (702) 222-1964 before you tour the wrong ZIP.",
+  },
+  {
+    question: "Where should I start if I am relocating?",
+    answer:
+      "Start with commute, HOA, and a live CMA on the address — not a city slogan. The neighborhood guides list square footage, amenities, and drive times.",
+  },
+  {
+    question: "Do these pages include live MLS?",
+    answer:
+      "Each neighborhood guide can load live RealScout inventory. You can also search from /listings or call (702) 222-1964 with the village name.",
+  },
+];
+
 export default function NeighborhoodsPage() {
   return (
     <>
+      <FAQSchema faqs={neighborhoodFaqs} />
       <main className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
@@ -309,7 +329,7 @@ export default function NeighborhoodsPage() {
             </div>
           </section>
 
-          {/* Expert Quote */}
+          {/* Neighborhood quote */}
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-slate-50 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
@@ -350,10 +370,30 @@ export default function NeighborhoodsPage() {
                 <Home className="h-12 w-12 text-blue-400 mx-auto mb-3" />
                 <h3 className="font-bold mb-2">Home Matching</h3>
                 <p className="text-slate-400 text-sm">
-                  Find homes that match your criteria in the neighborhoods you
-                  love
+                  Find homes that match beds, ZIP, commute, and budget in the
+                  villages you are actually touring
                 </p>
               </div>
+            </div>
+          </section>
+
+          <section className="mb-16 max-w-4xl mx-auto">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-8 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.homepage.src}
+              avoidSrc={PAGE_HERO_IMAGES.homepage.src}
+            >
+              Frequently asked questions
+            </SectionHeading>
+            <div className="space-y-4">
+              {neighborhoodFaqs.map((faq) => (
+                <div key={faq.question} className="rounded-lg bg-slate-50 p-6">
+                  <h3 className="mb-2 font-bold text-slate-900">
+                    {faq.question}
+                  </h3>
+                  <p className="text-slate-600">{faq.answer}</p>
+                </div>
+              ))}
             </div>
           </section>
 

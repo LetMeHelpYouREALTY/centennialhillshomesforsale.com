@@ -148,7 +148,7 @@ export const businessInfo = {
     // Identity attributes belong on the live GBP profile, not invented here.
     highlights: [] as string[],
     // Offerings
-    offerings: ["Free consultation", "Free estimates"],
+    offerings: ["CMA consult", "Written buyer and listing agreements"],
     // Amenities
     amenities: ["Free Wi-Fi", "Free parking"],
     // Planning

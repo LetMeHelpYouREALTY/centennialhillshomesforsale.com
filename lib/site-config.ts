@@ -18,7 +18,7 @@ export const siteConfig = {
   shortName: "BHHS",
   url: "https://heyberkshire.com",
   description:
-    "Expert real estate services in Las Vegas and Henderson, NV. Buy, sell, or invest with Dr. Jan Duffy, your trusted Berkshire Hathaway HomeServices Nevada Properties agent.",
+    "Las Vegas and Henderson real estate with Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Buy, sell, or request a CMA. Call (702) 222-1964.",
 };
 
 export const agentInfo = {

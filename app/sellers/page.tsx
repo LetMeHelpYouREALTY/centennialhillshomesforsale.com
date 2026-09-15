@@ -27,7 +27,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Sell Your Las Vegas Home | Berkshire Hathaway HomeServices",
     description:
-      "Sell your Las Vegas or Henderson home with comps-based pricing and Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Free home valuation. Call (702) 222-1964.",
+      "Sell your Las Vegas or Henderson home with comps-based pricing and Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Request a CMA. Call (702) 222-1964.",
     keywords: [
       "sell home Las Vegas",
       "Las Vegas listing agent",
@@ -69,7 +69,7 @@ const sellingBenefits = [
   },
   {
     icon: BarChart,
-    title: "Expert Pricing Strategy",
+    title: "Comps-based pricing",
     description:
       "Dr. Jan has been serving Las Vegas since 2008, which means accurate pricing that attracts buyers without leaving money on the table. Overpriced homes sit and lose value; well-priced homes generate competition and sell for more.",
   },
@@ -117,7 +117,7 @@ const sellerFaqs = [
 const sellingProcess = [
   {
     step: 1,
-    title: "Free Home Valuation",
+    title: "CMA / home valuation",
     description:
       "Dr. Jan analyzes comparable sales, market conditions, and your home's unique features to determine optimal pricing. You'll understand exactly what your home could sell for before making any decisions.",
   },
@@ -163,7 +163,7 @@ const includedServices = [
   "Targeted digital advertising",
   "Open house coordination",
   "Showing feedback & regular updates",
-  "Expert negotiation on all offers",
+  "Written offer negotiation",
   "Transaction coordination through closing",
   "Staging consultation with recommendations",
 ];
@@ -200,16 +200,16 @@ export default function SellersPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
               <span className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Free
-                Home Valuation
+                <CheckCircle className="h-4 w-4 text-green-500 mr-1" />{" "}
+                No-obligation CMA
               </span>
               <span className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> MLS
                 listing marketing
               </span>
               <span className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Expert
-                Negotiation
+                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Written
+                offer strategy
               </span>
             </div>
           </div>
@@ -410,14 +410,14 @@ export default function SellersPage() {
             </div>
           </section>
 
-          {/* Expert Quote */}
+          {/* Listing quote */}
           <section className="mb-16 max-w-4xl mx-auto">
             <SectionHeading
               className="text-3xl font-bold text-slate-900 mb-6 text-center"
               fallbackSrc={PAGE_HERO_IMAGES.sellersListing.src}
               avoidSrc={PAGE_HERO_IMAGES.sellers.src}
             >
-              Expert Selling Advice
+              Pricing from live comps
             </SectionHeading>
             <div className="bg-slate-50 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">

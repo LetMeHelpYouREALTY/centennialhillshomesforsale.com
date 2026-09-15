@@ -111,7 +111,7 @@ const buyingSteps = [
     icon: FileText,
     title: "Tour Properties & Make an Offer",
     description:
-      "Dr. Jan's market expertise ensures your offer is competitive yet protects your interests. She negotiates on your behalf to get the best price and terms possible, with contingencies that protect you.",
+      "Dr. Jan prices the offer from live comps so it is competitive and still protects your side of the deal. Contingencies are written, not assumed.",
   },
   {
     icon: Home,
@@ -212,8 +212,8 @@ export default function BuyersPage() {
                 Access
               </span>
               <span className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Expert
-                Negotiation
+                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Written
+                offer strategy
               </span>
             </div>
           </div>
@@ -231,19 +231,18 @@ export default function BuyersPage() {
                   agreement that states how I am paid. The seller may still
                   contribute — that is negotiated, not assumed.{" "}
                   <strong>Berkshire Hathaway HomeServices</strong> agents
-                  protect your interests, not the seller's. In a competitive
-                  market like Las Vegas, having expert representation can mean
-                  the difference between winning the house you want and losing
-                  out.
+                  protect your side of the deal, not the seller's. In a
+                  competitive Las Vegas file, a written buyer agreement and live
+                  comps beat a ranking slogan.
                 </p>
                 <ul className="space-y-2">
                   {[
                     "Full MLS access + private showings when listing agents allow",
-                    "Expert negotiation on your behalf",
+                    "Written offer strategy on your behalf",
                     "Contract and disclosure review",
                     "Inspection coordination and repair negotiation",
                     "Lender and service provider referrals",
-                    "Local market expertise since 2008",
+                    "Local market files since 2008",
                   ].map((item) => (
                     <li key={item} className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-green-400 mr-2 flex-shrink-0" />
@@ -258,9 +257,8 @@ export default function BuyersPage() {
                   Your Agent, Your Advocate
                 </p>
                 <p className="text-slate-400 mb-4">
-                  Dr. Jan Duffy works exclusively for your interests throughout
-                  the entire transaction—from the first showing to the closing
-                  table and beyond.
+                  Dr. Jan Duffy works for your side of the deal throughout the
+                  transaction—from the first showing to the closing table.
                 </p>
                 <div className="text-sm text-slate-500">
                   Serving Las Vegas since 2008 | BHHS Nevada Properties
@@ -487,7 +485,7 @@ export default function BuyersPage() {
                   <MapPin className="h-7 w-7 text-blue-600" />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">
-                  Local Expertise
+                  Local practice
                 </h3>
                 <p className="text-slate-600 text-sm">
                   Dr. Jan has served Las Vegas since 2008 with BHHS Nevada
@@ -499,7 +497,7 @@ export default function BuyersPage() {
                   <TrendingUp className="h-7 w-7 text-blue-600" />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">
-                  Expert Negotiation
+                  Written offer strategy
                 </h3>
                 <p className="text-slate-600 text-sm">
                   Street-level CMA math and written offer strategy

@@ -18,6 +18,7 @@ import {
   CTA_PHONE,
   CTA_TEL,
   OFFICE_HOURS,
+  TEXT_LINK_ON_DARK_CLASS,
   OFFICE_NAP,
   SOCIAL_PROFILES,
 } from "@/lib/contact";
@@ -140,10 +141,7 @@ export default function Footer() {
                   className="mr-3 h-5 w-5 flex-shrink-0 text-blue-400"
                   aria-hidden="true"
                 />
-                <a
-                  href={CTA_TEL}
-                  className="text-sm text-slate-300 no-underline transition-colors hover:text-white"
-                >
+                <a href={CTA_TEL} className={TEXT_LINK_ON_DARK_CLASS}>
                   {CTA_PHONE}
                 </a>
               </li>
@@ -154,7 +152,7 @@ export default function Footer() {
                 />
                 <a
                   href={AGENT_EMAIL_MAILTO}
-                  className="text-sm text-slate-300 no-underline transition-colors hover:text-white"
+                  className={TEXT_LINK_ON_DARK_CLASS}
                 >
                   {AGENT_EMAIL}
                 </a>

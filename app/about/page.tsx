@@ -22,6 +22,7 @@ import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
+import { FAQSchema } from "@/components/SchemaScript";
 import { getPublicSiteUrl } from "@/lib/site-url";
 
 export const metadata: Metadata = withShareImage(
@@ -82,6 +83,24 @@ const personSchema = {
   ],
 };
 
+const aboutFaqs = [
+  {
+    question: "Who is Dr. Jan Duffy?",
+    answer:
+      "Dr. Jan Duffy is a REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, license S.0197614.LLC. She has served Las Vegas, Henderson, and Summerlin since 2008. Call (702) 222-1964.",
+  },
+  {
+    question: "Where is the office?",
+    answer:
+      "9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Monday–Friday 9am–6pm, Saturday 10am–4pm, Sunday by appointment.",
+  },
+  {
+    question: "Is Berkshire Hathaway HomeServices a franchise?",
+    answer:
+      "Yes. BHHS Nevada Properties is a franchise brokerage. You get a written plan and a global referral network. Warren Buffett does not write your CMA.",
+  },
+];
+
 const specializations = [
   {
     title: "Residential Home Sales",
@@ -133,6 +152,7 @@ const areasServed = [
 export default function AboutPage() {
   return (
     <>
+      <FAQSchema faqs={aboutFaqs} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
@@ -326,7 +346,7 @@ export default function AboutPage() {
                       className="inline-flex min-h-11 items-center text-slate-700 no-underline hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                     >
                       <ArrowRight className="h-4 w-4 mr-2 text-blue-600" />
-                      Free Home Valuation
+                      Request a CMA
                     </Link>
                     <a
                       href="https://drjanduffy.realscout.com/"
@@ -463,6 +483,26 @@ export default function AboutPage() {
                 Explore All Neighborhoods{" "}
                 <ArrowRight className="h-4 w-4 ml-2" />
               </Link>
+            </div>
+          </section>
+
+          <section className="mb-16 max-w-4xl mx-auto">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-8 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.contact.src}
+              avoidSrc={PAGE_HERO_IMAGES.about.src}
+            >
+              Frequently asked questions
+            </SectionHeading>
+            <div className="space-y-4">
+              {aboutFaqs.map((faq) => (
+                <div key={faq.question} className="rounded-lg bg-slate-50 p-6">
+                  <h3 className="mb-2 font-bold text-slate-900">
+                    {faq.question}
+                  </h3>
+                  <p className="text-slate-600">{faq.answer}</p>
+                </div>
+              ))}
             </div>
           </section>
 

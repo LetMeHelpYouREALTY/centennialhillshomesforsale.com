@@ -7,7 +7,7 @@ import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 const features = [
   {
     icon: Shield,
-    title: "Trusted brand",
+    title: "Franchise brokerage",
     description:
       "Berkshire Hathaway HomeServices Nevada Properties — a documented process, not a kiosk script.",
   },

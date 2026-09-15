@@ -109,7 +109,7 @@ Schedule a community tour: (702) 222-1964`,
 🏠 Nevada Housing Division: Down payment assistance up to 5%
 🏗️ Builder incentives: Many offering closing cost credits
 
-Dr. Jan Duffy guides first-time buyers through every step—from pre-approval to keys. Free consultation, no pressure.
+Dr. Jan Duffy guides first-time buyers through pre-approval, loan programs, and a written buyer agreement. Call (702) 222-1964.
 
 Popular first-time buyer neighborhoods (realtor.com listing medians as of 2026-09-14, not a CMA):
 - North Las Vegas ($439,990)
@@ -146,7 +146,7 @@ I will not publish a fake YoY appreciation, average days-on-market, or list-to-s
 
 Get a listing consult from Dr. Jan Duffy: (702) 222-1964`,
     cta: {
-      text: "Get Free Home Valuation",
+      text: "Request a CMA",
       url: "https://heyberkshire.com/home-valuation",
     },
     publishDate: "2025-12-23",

@@ -161,7 +161,7 @@ const neighborhoods = [
     name: "Green Valley South",
     href: "/neighborhoods/green-valley",
     description:
-      "Established Henderson community with mature landscaping and golf courses",
+      "Henderson landscaping, golf-course streets, and master-plan villages",
     medianPrice: formatUsd(LISTING_MEDIANS_USD.greenValleySouth),
     medianNote: "Listing median",
   },
@@ -419,7 +419,7 @@ export default function ListingsPage({
                 <div className="bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
                   <TrendingUp className="h-6 w-6" />
                 </div>
-                <h3 className="font-bold mb-2">Expert Negotiation</h3>
+                <h3 className="font-bold mb-2">Written offer strategy</h3>
                 <p className="text-slate-400 text-sm">
                   Street-level CMA math and written offer strategy — not a
                   career-volume slogan

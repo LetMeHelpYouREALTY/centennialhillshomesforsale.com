@@ -53,7 +53,7 @@ export const metadata: Metadata = withShareImage(
     openGraph: {
       title: "55+ Communities in Las Vegas | Dr. Jan Duffy",
       description:
-        "Sun City, Del Webb, Heritage at Stonebridge & more—Dr. Duffy specializes in 55+ and HOPA communities. Berkshire Hathaway HomeServices Nevada Properties.",
+        "Sun City, Del Webb, Heritage at Stonebridge, and other 55+ HOPA campuses with Dr. Jan Duffy. Berkshire Hathaway HomeServices Nevada Properties.",
       type: "website",
     },
   },
@@ -120,7 +120,7 @@ const localBusinessSchema = {
   "@type": "RealEstateAgent",
   name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
   description:
-    "55+ community specialist for Sun City, Del Webb, and Henderson 55+ campuses",
+    "55+ HOPA communities including Sun City, Del Webb, and Henderson 55+ campuses",
   telephone: "(702) 222-1964",
   url: "https://heyberkshire.com/55-plus-communities",
   areaServed: {
@@ -365,10 +365,10 @@ export default function FiftyFiveCommunitiesPage() {
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <Sun className="h-4 w-4 mr-2" />
-              Active Adult Living Specialist
+              55+ HOPA communities
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Find Your Perfect 55+ Community in Las Vegas
+              Las Vegas 55+ Communities
             </h1>
             <PageHeroImage
               src={PAGE_HERO_IMAGES.fiftyFivePlus.src}
@@ -377,7 +377,9 @@ export default function FiftyFiveCommunitiesPage() {
             <p className="text-xl md:text-2xl text-slate-600 mb-8">
               Sun City, Del Webb, Heritage at Stonebridge & more—
               <br className="hidden md:block" />
-              <strong>Dr. Duffy specializes in active adult living</strong>
+              <strong>
+                HOPA occupancy, HOA, and live MLS — not a campus slogan
+              </strong>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

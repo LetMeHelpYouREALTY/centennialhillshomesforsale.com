@@ -14,6 +14,12 @@ describe("RealEstateAgent JSON-LD", () => {
     expect(schema).not.toHaveProperty("aggregateRating");
   });
 
+  it("does not sell Expert ranking in sitewide JSON-LD copy", () => {
+    expect(String(schema.description)).not.toMatch(/Expert real estate/i);
+    expect(String(schema.description)).not.toMatch(/your trusted/i);
+    expect(String(schema.slogan)).not.toMatch(/expert/i);
+  });
+
   it("uses Google LocalBusiness $$ priceRange instead of an invented listing band", () => {
     expect(schema.priceRange).toBe("$$");
   });

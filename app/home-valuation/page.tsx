@@ -68,7 +68,7 @@ export default function HomeValuationPage() {
         {
           question: "How fast can I get a number?",
           answer:
-            "Often same day for a preliminary range; after I see the house for a number I will list at.",
+            "A preliminary range during posted office hours when the file is straightforward. A number I will list at comes after I see the house.",
         },
         {
           question: "Do you value condos and townhomes?",

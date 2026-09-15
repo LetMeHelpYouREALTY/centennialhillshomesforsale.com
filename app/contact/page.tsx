@@ -28,7 +28,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Contact Dr. Jan Duffy | Berkshire Hathaway HomeServices Las Vegas",
     description:
-      "Contact Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Schedule an appointment, get directions, or call (702) 222-1964. Las Vegas, Henderson, Summerlin real estate expert.",
+      "Contact Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Schedule an appointment, get directions, or call (702) 222-1964. Las Vegas, Henderson, Summerlin.",
     keywords: [
       "contact real estate agent Las Vegas",
       "Berkshire Hathaway contact",
@@ -72,7 +72,7 @@ const contactFaqs = [
   {
     question: "Do I need to be pre-approved before scheduling a showing?",
     answer:
-      "For buyers, having a pre-approval letter strengthens your position, but it's not required for an initial consultation. I can connect you with trusted local lenders during our first meeting if you haven't started the financing process yet.",
+      "A pre-approval letter strengthens an offer, but it is not required for an initial consult. I can connect you with local lenders during our first meeting if you have not started financing yet.",
   },
   {
     question: "How quickly can you respond to inquiries?",
@@ -111,9 +111,8 @@ export default function ContactPage() {
               <AgentPhoto variant="card" priority />
             </div>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Questions about Las Vegas real estate? Your{" "}
-              <strong>Berkshire Hathaway HomeServices</strong> expert is here to
-              help. Schedule an appointment or reach out directly.
+              Questions about Las Vegas real estate? Call or send the address.
+              Schedule an appointment or reach out directly.
             </p>
           </div>
 
@@ -129,10 +128,9 @@ export default function ContactPage() {
               </SectionHeading>
               <p className="text-slate-700 mb-8">
                 Whether you're buying your first home, selling a luxury
-                property, or exploring investment opportunities, I'm here to
-                provide expert guidance backed by the trusted{" "}
-                <strong>Berkshire Hathaway HomeServices</strong> brand. Serving
-                Las Vegas since 2008.
+                property, or looking at a rental, I will pull live comps and put
+                compensation in writing. Serving Las Vegas since 2008 with{" "}
+                <strong>Berkshire Hathaway HomeServices</strong>.
               </p>
 
               {/* NAP Information */}
@@ -150,7 +148,7 @@ export default function ContactPage() {
                       {CTA_PHONE}
                     </a>
                     <p className="text-sm text-slate-500 mt-1">
-                      Available 7 days a week, 9am-6pm
+                      {OFFICE_HOURS.display}
                     </p>
                   </div>
                 </div>
@@ -166,8 +164,8 @@ export default function ContactPage() {
                       Homes@HeyBerkshire.com
                     </a>
                     <p className="text-sm text-slate-500 mt-1">
-                      Replies during posted office hours — call or text for
-                      same-day files
+                      Replies during posted office hours — call or text the
+                      client line
                     </p>
                   </div>
                 </div>
@@ -298,10 +296,8 @@ export default function ContactPage() {
               Areas We Serve
             </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Dr. Jan Duffy provides expert real estate services throughout the
-              Las Vegas Valley. Whether you're buying, selling, or investing in
-              any of these communities, contact us for personalized guidance
-              backed by Berkshire Hathaway HomeServices.
+              Dr. Jan Duffy represents buyers and sellers throughout the Las
+              Vegas Valley. Call with the ZIP or address.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[

@@ -95,6 +95,7 @@ export default function NeighborhoodGuide({
   pathPrefix = "/neighborhoods",
   latitude,
   longitude,
+  // Neighborhood pages are search hubs. The widget itself lazy-loads.
   showListings = true,
   senior,
   children,

@@ -64,7 +64,7 @@ export default function CTASection() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-6 text-sm text-blue-100">
-            <span className="font-semibold text-white">Free consultation</span>
+            <span className="font-semibold text-white">No-obligation CMA</span>
             <span className="font-semibold text-white">No obligation</span>
             <span className="font-semibold text-white">
               License S.0197614.LLC

@@ -60,8 +60,8 @@ describe("GBP schema NAP and Maps alignment", () => {
     expect(
       businessInfo.services.map((s) => s.description).join("\n"),
     ).not.toMatch(/Specialized service for veterans/i);
-    expect(gbpFAQs.map((faq) => faq.answer).join("\n")).not.toMatch(
-      /free buyer consultations/i,
+    expect(businessInfo.attributes.offerings.join("\n")).not.toMatch(
+      /Free consultation/i,
     );
   });
 

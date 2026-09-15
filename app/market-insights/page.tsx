@@ -27,6 +27,7 @@ import {
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading, SectionPhoto } from "@/components/shared/SectionPhoto";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
+import { FAQSchema } from "@/components/SchemaScript";
 
 export const revalidate = 3600;
 
@@ -60,11 +61,29 @@ const reportSchema = {
   },
 };
 
+const marketFaqs = [
+  {
+    question: "Are these numbers a CMA for my house?",
+    answer:
+      "No. Listing medians are city or ZIP samples. A CMA uses sold comps, active competition, and the specific address. Call (702) 222-1964.",
+  },
+  {
+    question: "How current is this page?",
+    answer: `Figures are sourced from ${MARKET_SNAPSHOT_SOURCE} as of ${MARKET_SNAPSHOT_AS_OF} unless a section says otherwise.`,
+  },
+  {
+    question: "Will you forecast which neighborhoods will outperform?",
+    answer:
+      "No. I will not pick winners. Bring the address and I will run live comps.",
+  },
+];
+
 export default async function MarketInsightsPage() {
   const searchCentralPosts = await getSearchCentralPosts(6);
 
   return (
     <>
+      <FAQSchema faqs={marketFaqs} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reportSchema) }}
@@ -577,6 +596,26 @@ export default async function MarketInsightsPage() {
           </section>
 
           {/* CTA */}
+          <section className="mb-16 max-w-4xl mx-auto">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-8 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.market.src}
+              avoidSrc={PAGE_HERO_IMAGES.homepage.src}
+            >
+              Frequently asked questions
+            </SectionHeading>
+            <div className="space-y-4">
+              {marketFaqs.map((faq) => (
+                <div key={faq.question} className="rounded-lg bg-slate-50 p-6">
+                  <h3 className="mb-2 font-bold text-slate-900">
+                    {faq.question}
+                  </h3>
+                  <p className="text-slate-600">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
           <section className="mx-auto max-w-4xl rounded-2xl bg-blue-600 p-8 text-center text-white md:p-12">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">
               Get Personalized Market Analysis

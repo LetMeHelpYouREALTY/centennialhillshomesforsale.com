@@ -17,6 +17,7 @@ import { withShareImage } from "@/lib/page-seo";
 import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { WidgetBeTracker } from "@/components/shared/WidgetBeTracker";
+import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import {
   formatUsd,
   LISTING_MEDIANS_USD,
@@ -149,11 +150,7 @@ export default async function Home() {
             </p>
 
             <div className="mb-8 flex justify-center">
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: `<realscout-simple-search agent-encoded-id="${config.realscoutAgentId}"></realscout-simple-search>`,
-                }}
-              />
+              <MlsSearchForm buttonClassName="bg-white text-blue-700 hover:bg-blue-50" />
             </div>
 
             <div className="flex flex-wrap justify-center gap-6 text-sm text-white/80">

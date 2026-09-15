@@ -12,6 +12,7 @@ describe("GBP post templates", () => {
     expect(joined).not.toMatch(/37%/);
     expect(joined).not.toMatch(/perfect fit/);
     expect(joined).not.toMatch(/world-class/i);
+    expect(joined).not.toMatch(/Free consultation/i);
   });
 
   it("uses sourced listing medians for first-time buyer ZIPs", () => {
