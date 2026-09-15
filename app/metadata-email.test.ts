@@ -30,4 +30,14 @@ describe("page metadata source copy", () => {
       }
     }
   });
+
+  it("routes branded string titles through withShareImage so the layout template cannot duplicate", () => {
+    const files = pageFiles(appDir);
+    for (const file of files) {
+      const src = readFileSync(file, "utf8");
+      if (/title:\s*(?:\n\s*)?"[^"]*Dr\. Jan Duffy/.test(src)) {
+        expect(src, file).toContain("withShareImage");
+      }
+    }
+  });
 });

@@ -28,6 +28,20 @@ function resolveTitle(title: Metadata["title"]): string | undefined {
 }
 
 /**
+ * Root layout uses `title.template = "%s | Dr. Jan Duffy"`. Child titles that
+ * already name Dr. Jan Duffy must be absolute so SERP titles do not read
+ * "… | Dr. Jan Duffy | Dr. Jan Duffy".
+ */
+export function titleWithoutLayoutSuffix(
+  title: Metadata["title"],
+): Metadata["title"] {
+  if (typeof title === "string" && title.includes("Dr. Jan Duffy")) {
+    return { absolute: title };
+  }
+  return title;
+}
+
+/**
  * Attach a page-specific share image so Google, Maps, and social
  * previews do not fall back to the generic agent headshot.
  */
@@ -40,6 +54,7 @@ export function withShareImage(metadata: Metadata, image: SiteImage): Metadata {
 
   return {
     ...metadata,
+    title: titleWithoutLayoutSuffix(metadata.title),
     description,
     openGraph: {
       type: "website",

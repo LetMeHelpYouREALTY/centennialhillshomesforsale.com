@@ -11,6 +11,7 @@ describe("root layout landmark", () => {
     expect(src).toContain('<main id="main-content"');
     expect(src).toContain("SkipLink");
     expect(src).not.toContain('<div id="main-content"');
+    expect(src).toContain('template: "%s | Dr. Jan Duffy"');
   });
 
   it("keeps the skip-link href on the main landmark", () => {
