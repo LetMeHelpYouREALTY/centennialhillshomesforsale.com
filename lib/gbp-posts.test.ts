@@ -15,6 +15,14 @@ describe("GBP post templates", () => {
     expect(joined).not.toMatch(/Free consultation/i);
   });
 
+  it("uses Request a CMA instead of a free-analysis CTA", () => {
+    const ctas = gbpPostTemplates
+      .map((post) => post.cta?.text ?? "")
+      .join("\n");
+    expect(ctas).not.toMatch(/Get Free/i);
+    expect(ctas).not.toMatch(/Free consultation/i);
+  });
+
   it("uses sourced listing medians for first-time buyer ZIPs", () => {
     const firstTime = gbpPostTemplates.find(
       (post) => post.id === "first-time-buyer",

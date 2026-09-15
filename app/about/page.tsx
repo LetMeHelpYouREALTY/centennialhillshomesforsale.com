@@ -125,7 +125,7 @@ const specializations = [
   {
     title: "55+ Active Adult Communities",
     description:
-      "Sun City Summerlin, Sun City Anthem, Del Webb Lake Las Vegas expertise",
+      "Sun City Summerlin, Sun City Anthem, and Del Webb Lake Las Vegas files",
   },
   {
     title: "California Relocation",
@@ -193,11 +193,10 @@ export default function AboutPage() {
                 <div className="prose prose-lg text-slate-700 mb-8 space-y-4">
                   <p>
                     When you choose to work with{" "}
-                    <strong>Berkshire Hathaway HomeServices</strong>, you're
-                    choosing a legacy of trust, integrity, and excellence. I'm
-                    proud to represent this iconic brand in the Las Vegas real
-                    estate market, bringing BHHS listing tools and local
-                    expertise to every file I work.
+                    <strong>Berkshire Hathaway HomeServices</strong>, you are
+                    choosing a franchise brokerage with written listing tools. I
+                    represent this brand in Las Vegas with MLS comps and gate
+                    access on every file I work.
                   </p>
                   <p>
                     Since 2008, I've represented buyers and sellers in Las
@@ -219,13 +218,12 @@ export default function AboutPage() {
                     file until it closes.
                   </p>
                   <p>
-                    I treat every client as a principal in the file. Whether
-                    you're a first-time buyer navigating the process for the
-                    first time, a luxury buyer who needs discretion, or an
-                    investor building a rental portfolio, I provide the same
-                    level of dedication, expertise, and personalized attention.
-                    Real estate is more than a transaction—it's about matching
-                    square footage, commute, and budget to the right ZIP.
+                    I treat every client as a principal in the file. Whether you
+                    are a first-time buyer, a luxury buyer who needs discretion,
+                    or an investor building a rental portfolio, you get the same
+                    written process and the same MLS worksheet. Real estate is
+                    matching square footage, commute, and budget to the right
+                    ZIP.
                   </p>
                 </div>
 
@@ -356,6 +354,7 @@ export default function AboutPage() {
                     >
                       <ArrowRight className="h-4 w-4 mr-2 text-blue-600" />
                       Browse Listings
+                      <span className="sr-only"> (opens in a new tab)</span>
                     </a>
                   </div>
                 </div>
@@ -433,9 +432,8 @@ export default function AboutPage() {
                 </div>
                 <h3 className="font-bold text-xl mb-2">Ethical Standards</h3>
                 <p className="text-slate-300 text-sm">
-                  Rigorous ethical guidelines ensure your interests always come
-                  first. No pressure, no games—just honest advice and expert
-                  representation.
+                  Buyer or listing agreements in writing. Compensation is
+                  disclosed before we tour or list.
                 </p>
               </div>
             </div>
@@ -511,7 +509,7 @@ export default function AboutPage() {
           {/* CTA */}
           <VisitOffice className="mb-16 rounded-2xl" compact />
           <PageCTA
-            headline="Ready to get started?"
+            headline="Ask about a Las Vegas buy or sale"
             subheadline="Questions about buying or selling in Las Vegas? Call or text with the address. I will run a CMA — not a free-consult product pitch."
             className="mb-8 rounded-2xl"
             formSource="about-page"

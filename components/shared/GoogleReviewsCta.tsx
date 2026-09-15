@@ -31,6 +31,7 @@ export function GoogleReviewsCta({ className = "" }: GoogleReviewsCtaProps) {
             className="inline-flex min-h-11 items-center justify-center rounded-md bg-blue-600 px-6 py-3 font-semibold text-white no-underline hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
           >
             View Google Reviews
+            <span className="sr-only"> (opens in a new tab)</span>
           </a>
           <a
             href={CTA_TEL}

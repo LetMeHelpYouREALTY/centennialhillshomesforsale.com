@@ -32,7 +32,7 @@ Days on market and inventory move weekly — ask for a live pull before you bid 
 
 Call Dr. Jan Duffy at (702) 222-1964 for comps on a specific street.`,
     cta: {
-      text: "Get Free Market Analysis",
+      text: "Request a CMA",
       url: "https://heyberkshire.com/home-valuation",
     },
     publishDate: "2026-09-14",

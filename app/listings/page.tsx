@@ -520,10 +520,11 @@ export default function ListingsPage({
                     Get Pre-Approved for Financing
                   </h3>
                   <p className="text-slate-600 text-sm">
-                    A pre-approval letter shows sellers you're serious and gives
-                    you a clear budget. Dr. Jan can connect you with trusted
-                    local lenders offering competitive rates. This typically
-                    takes 1-3 days with proper documentation.
+                    A pre-approval letter shows sellers you can close and gives
+                    you a clear budget. Dr. Jan can introduce Clark County
+                    lenders. Rates and fees are UNKNOWN until that lender quotes
+                    your file. Timeline is UNKNOWN until the lender has your
+                    documents.
                   </p>
                 </div>
               </div>
@@ -538,8 +539,8 @@ export default function ListingsPage({
                   <p className="text-slate-600 text-sm">
                     Location, size, features, and budget all factor into your
                     search. Dr. Jan helps you match ZIP, commute, square
-                    footage, and amenities, then sets up automated MLS alerts so
-                    you never miss a new listing.
+                    footage, and amenities, then sets up MLS alerts so new
+                    matches land in your inbox.
                   </p>
                 </div>
               </div>
@@ -552,10 +553,10 @@ export default function ListingsPage({
                     Tour Properties & Make an Offer
                   </h3>
                   <p className="text-slate-600 text-sm">
-                    Visit homes that meet your criteria, either in person or
-                    virtually. When you find "the one," Dr. Jan helps you craft
-                    a competitive offer with the right price, contingencies, and
-                    terms to win in today's market.
+                    Visit homes that meet the worksheet, in person or virtually.
+                    When a house matches, Dr. Jan writes an offer with price,
+                    contingencies, and dates from the comps — not a ranking
+                    slogan.
                   </p>
                 </div>
               </div>

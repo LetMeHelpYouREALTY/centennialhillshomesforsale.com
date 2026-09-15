@@ -100,6 +100,7 @@ export default function FairHousingPage() {
                 rel="noopener noreferrer"
               >
                 hud.gov/fairhousing
+                <span className="sr-only"> (opens in a new tab)</span>
               </a>
             </li>
             <li>

@@ -54,17 +54,20 @@ export default function HendersonPage() {
       stats={[
         { value: listing, label: "Median listing" },
         { value: sold, label: "Median sold" },
-        { value: "55 days", label: "Median DOM (city)" },
+        {
+          value: formatUsd(LISTING_MEDIANS_USD.inspirada),
+          label: "Inspirada listing",
+        },
         { value: "60+", label: "City parks" },
       ]}
       sections={[
         {
           heading: "City vs village",
-          body: "Henderson is a city with its own police, parks department, and recreation centers. Green Valley is the 1980s–90s established grid. Inspirada (89044) is a newer park-based master plan. Anthem and MacDonald Highlands sit against the McCullough Range. Lake Las Vegas is a separate waterfront setting. I tour by village, commute, and HOA — not by a city-wide ranking.",
+          body: "Henderson is a city with its own police, parks department, and recreation centers. Green Valley is the 1980s–90s grid. Inspirada (89044) is a newer park-based master plan. Anthem and MacDonald Highlands sit against the McCullough Range. Lake Las Vegas is a separate waterfront setting. I tour by village, commute, and HOA — not by a city-wide ranking.",
         },
         {
           heading: `Pricing as of ${MARKET_SNAPSHOT_AS_OF}`,
-          body: `${MARKET_SNAPSHOT_SOURCE}: Henderson median listing ${listing}, median sold ${sold}, about 3,066 active listings and 55 median days on market. Neighborhood listing medians on the same pull include Inspirada ${formatUsd(LISTING_MEDIANS_USD.inspirada)}, Anthem ${formatUsd(LISTING_MEDIANS_USD.anthem)}, Green Valley Ranch ${formatUsd(LISTING_MEDIANS_USD.greenValleyRanch)}, and Lake Las Vegas ${formatUsd(LISTING_MEDIANS_USD.lakeLasVegas)}. MacDonald Highlands trades on a different order of magnitude. Ask for a CMA on the street.`,
+          body: `${MARKET_SNAPSHOT_SOURCE}: Henderson median listing ${listing}, median sold ${sold}. Days on market and active count are UNKNOWN on this page until a new sourced pull. Neighborhood listing medians on the same pull include Inspirada ${formatUsd(LISTING_MEDIANS_USD.inspirada)}, Anthem ${formatUsd(LISTING_MEDIANS_USD.anthem)}, Green Valley Ranch ${formatUsd(LISTING_MEDIANS_USD.greenValleyRanch)}, and Lake Las Vegas ${formatUsd(LISTING_MEDIANS_USD.lakeLasVegas)}. MacDonald Highlands trades on a different order of magnitude. Ask for a CMA on the street.`,
         },
         {
           heading: "Commute and daily geography",

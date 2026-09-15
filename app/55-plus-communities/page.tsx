@@ -397,6 +397,7 @@ export default function FiftyFiveCommunitiesPage() {
               >
                 Explore Communities
                 <ArrowRight className="h-5 w-5 ml-2" />
+                <span className="sr-only"> (opens in a new tab)</span>
               </a>
             </div>
           </div>
@@ -923,12 +924,11 @@ export default function FiftyFiveCommunitiesPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">
-                    No-Pressure Approach
+                    Written occupancy and HOA facts
                   </h3>
                   <p className="text-slate-600 text-sm">
-                    55+ buyers often take time to decide. Dr. Jan provides
-                    information and guidance without pressure, letting you move
-                    at your own pace.
+                    HOPA occupancy rules and HOA dues go in writing before you
+                    tour. Take the time the file needs; the facts stay on paper.
                   </p>
                 </div>
               </div>

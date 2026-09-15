@@ -320,7 +320,7 @@ export const commonFAQs = {
     {
       question: "How much do I need for a down payment?",
       answer:
-        "Down payment requirements vary: FHA loans require 3.5%, conventional loans typically 3-20%, and VA/USDA loans may require 0% down. Dr. Jan can connect you with lenders who specialize in various loan programs.",
+        "Down payments vary by loan type: FHA 3.5%, conventional typically 3–20%, VA 0% when eligible. Nevada down-payment assistance exists for some first-time buyers. Dr. Jan can introduce Clark County lenders. Rates and USDA eligibility are UNKNOWN until the lender quotes them.",
     },
   ],
   selling: [

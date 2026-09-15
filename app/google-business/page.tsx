@@ -400,7 +400,7 @@ export default function GoogleBusinessPage() {
                 fallbackSrc={PAGE_HERO_IMAGES.googleBusiness.src}
                 avoidSrc={PAGE_HERO_IMAGES.googleBusiness.src}
               >
-                Your Review Helps Others Find Quality Service
+                Leave a Google Review for This Office
               </SectionHeading>
               <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
                 If Dr. Jan helped you buy or sell a home, please consider
@@ -414,6 +414,7 @@ export default function GoogleBusinessPage() {
                 className="inline-flex min-h-11 items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
               >
                 Leave a Google Review
+                <span className="sr-only"> (opens in a new tab)</span>
               </a>
             </div>
           </section>
@@ -421,7 +422,9 @@ export default function GoogleBusinessPage() {
           {/* Contact CTA */}
           <section className="max-w-4xl mx-auto">
             <div className="bg-slate-900 text-white rounded-2xl p-8 md:p-12 text-center">
-              <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+              <h2 className="text-3xl font-bold mb-4">
+                Call with the address you want on a CMA
+              </h2>
               <p className="text-xl text-slate-300 mb-8">
                 Call Dr. Jan Duffy with the address you want on a CMA — buying
                 or selling in Las Vegas.

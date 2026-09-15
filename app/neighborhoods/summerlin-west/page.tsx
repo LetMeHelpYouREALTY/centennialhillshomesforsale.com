@@ -44,7 +44,7 @@ export default function SummerlinWestPage() {
       sections={[
         {
           heading: "What 89138 buyers are shopping",
-          body: "Queries for Summerlin West homes, west Summerlin, and homes for sale in 89138 point at villages such as Reverence and other Village 26-era product: newer floor plans, foothill views, and a different commute than 89149 Centennial Hills. July 2026 luxury-village roundups put Reverence’s median sold near the low $800,000s with shorter days on market than Tournament Hills. Treat that as a village sample, not a ZIP-wide promise — I send live 89138 listings after a call.",
+          body: "Queries for Summerlin West homes, west Summerlin, and homes for sale in 89138 point at villages such as Reverence and other Village 26-era product: newer floor plans, foothill views, and a different commute than 89149 Centennial Hills. The sourced ZIP listing median on this page is not a Reverence sold price. Days on market vs Tournament Hills are UNKNOWN until I pull live MLS. Call for current 89138 listings.",
         },
         {
           heading: "Commute and daily errands",

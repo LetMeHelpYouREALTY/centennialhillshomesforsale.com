@@ -57,6 +57,7 @@ describe("GBP schema NAP and Maps alignment", () => {
   it("does not sell a free-consult product or a veterans slogan", () => {
     const copy = `${gbpDescription.whoWeAre}\n${gbpDescription.whatWeDo}\n${gbpDescription.whereWeServe}`;
     expect(copy).not.toMatch(/free consultation/i);
+    expect(copy).not.toMatch(/honest advice/i);
     expect(
       businessInfo.services.map((s) => s.description).join("\n"),
     ).not.toMatch(/Specialized service for veterans/i);

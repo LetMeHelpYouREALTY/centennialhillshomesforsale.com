@@ -12,7 +12,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Green Valley Homes for Sale | Henderson Nevada Real Estate",
     description:
-      "Green Valley Henderson homes for sale — established streets, The District, and current listings with Dr. Jan Duffy. Call (702) 222-1964.",
+      "Green Valley Henderson homes for sale — 1980s–90s streets, The District, and current listings with Dr. Jan Duffy. Call (702) 222-1964.",
     keywords: [
       "Green Valley homes for sale",
       "Green Valley Henderson",
@@ -22,7 +22,7 @@ export const metadata: Metadata = withShareImage(
   },
   {
     src: "/images/neighborhoods/green-valley.png",
-    alt: "Established Henderson residential streets near Green Valley",
+    alt: "Henderson residential streets near Green Valley with mature tree canopy",
   },
 );
 
@@ -36,11 +36,11 @@ export default function GreenValleyPage() {
       name="Green Valley"
       slug="green-valley"
       h1="Green Valley Homes for Sale in Henderson"
-      intro="Green Valley is Henderson’s established 1980s–90s master plan: mature trees, finished streets, and The District at Green Valley Ranch. It is not Inspirada and it is not brand-new production in 89044."
+      intro="Green Valley is Henderson’s 1980s–90s master plan: mature trees, finished streets, and The District at Green Valley Ranch. It is not Inspirada and it is not brand-new production in 89044."
       zipCodes={["89012", "89014", "89074"]}
       city="Henderson"
       imageSrc="/images/neighborhoods/green-valley.png"
-      imageAlt="Established Henderson residential streets near Green Valley"
+      imageAlt="Henderson residential streets near Green Valley with mature tree canopy"
       latitude={36.055}
       longitude={-115.081}
       stats={[
@@ -51,7 +51,7 @@ export default function GreenValleyPage() {
       ]}
       sections={[
         {
-          heading: "What “established” actually means here",
+          heading: "What 1980s–90s vintage means for inspections",
           body: "Green Valley started selling in the late 1980s. Lots and tree canopy are often larger than later Henderson pods. That also means original HVAC, roofs, and plumbing need a real inspection — mature landscaping is not a substitute for a home inspection. HOA rules vary by sub-association; I pull the resale package before you waive due diligence.",
         },
         {

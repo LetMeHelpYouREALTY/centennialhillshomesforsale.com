@@ -471,17 +471,16 @@ export default function SellersPage() {
                   What's Your Home Worth?
                 </h2>
                 <p className="text-blue-100 mb-6">
-                  Get a free, no-obligation home valuation from Dr. Jan Duffy.
-                  Using current MLS data and expertise serving Las Vegas since
-                  2008, you'll know exactly what your home could sell for in
-                  today's market. No algorithms—just real analysis from a local
-                  expert.
+                  Request a CMA from current MLS comps. Dr. Jan has served Las
+                  Vegas since 2008. A city median is not your sold price — the
+                  worksheet uses sold comps, actives, and the condition of this
+                  house.
                 </p>
                 <Link
                   href="/home-valuation"
                   className="inline-flex min-h-11 items-center justify-center rounded-md bg-white px-8 py-3 font-bold text-blue-600 no-underline hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
                 >
-                  Get Free Valuation
+                  Request a CMA
                 </Link>
               </div>
               <div className="text-center">

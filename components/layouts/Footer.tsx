@@ -182,6 +182,12 @@ export default function Footer() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <Link
+                href="/google-business"
+                className="inline-flex min-h-11 items-center text-slate-400 no-underline transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              >
+                Google Business
+              </Link>
+              <Link
                 href="/fair-housing"
                 className="inline-flex min-h-11 items-center text-slate-400 no-underline transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >

@@ -182,7 +182,7 @@ export const gbpDescription = {
 I work first-time buyers, luxury tours in The Ridges and MacDonald Highlands, 55+ HOPA communities, and California-to-Nevada relocations against live comps — not a volume slogan or a “family” pitch.`,
 
   // Section 2: What/why - Value proposition (~250 words)
-  whatWeDo: `Clients receive a CMA on the address, written compensation, and honest advice—not sales pressure. As a Berkshire Hathaway HomeServices agent, Dr. Jan offers a global referral network, marketing for sellers, and live MLS search for buyers.
+  whatWeDo: `Clients receive a CMA on the address, written compensation, and a written showing plan. As a Berkshire Hathaway HomeServices agent, Dr. Jan offers a global referral network, marketing for sellers, and live MLS search for buyers.
 
 Files include: buyer and seller representation, luxury home sales, 55+ HOPA communities (Sun City Summerlin, Sun City Anthem, Del Webb Lake Las Vegas), California relocation, probate and divorce real estate, investment property consulting, new construction representation, and first-time buyer programs including FHA, VA, and down payment assistance guidance.
 

@@ -17,7 +17,7 @@ export const defaultFaqs: SiteFaq[] = [
   {
     question: "Do you help with home valuations?",
     answer:
-      "Yes. We provide no-obligation home valuations using current market data and comparable sales—whether you are listing or checking equity.",
+      "Yes. We provide a CMA from current MLS comps — whether you are listing or checking equity. The consult is separate from a listing agreement.",
   },
   {
     question: "What makes you different from other real estate agents?",

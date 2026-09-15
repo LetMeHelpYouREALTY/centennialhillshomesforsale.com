@@ -50,7 +50,7 @@ export default function MarketReportPage() {
       sections={[
         {
           heading: `Valley snapshot as of ${MARKET_SNAPSHOT_AS_OF}`,
-          body: `Las Vegas city median listing ${lv}. Henderson listing ${henList}, sold ${henSold}, about 55 median days on market and roughly 3,000 active listings on that pull. North Las Vegas listing ${nlv}. Centennial Hills listing ${ch}. Summerlin is not one number: North ${formatUsd(LISTING_MEDIANS_USD.summerlinNorth)}, West ${formatUsd(LISTING_MEDIANS_USD.summerlinWest)}, South ${formatUsd(LISTING_MEDIANS_USD.summerlinSouth)}.`,
+          body: `Las Vegas city median listing ${lv}. Henderson listing ${henList}, sold ${henSold}. Days on market and active count are UNKNOWN on this page until a new sourced pull. North Las Vegas listing ${nlv}. Centennial Hills listing ${ch}. Summerlin is not one number: North ${formatUsd(LISTING_MEDIANS_USD.summerlinNorth)}, West ${formatUsd(LISTING_MEDIANS_USD.summerlinWest)}, South ${formatUsd(LISTING_MEDIANS_USD.summerlinSouth)}.`,
         },
         {
           heading: "How to use this page",

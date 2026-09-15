@@ -87,6 +87,7 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
                   height={675}
                   className="w-full h-40 object-cover bg-slate-100"
                 />
+                <span className="sr-only"> (opens in a new tab)</span>
               </a>
               <div className="p-5">
                 <p className="text-xs text-slate-500 mb-2">
@@ -100,6 +101,7 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
                     className="hover:text-blue-700"
                   >
                     {item.title}
+                    <span className="sr-only"> (opens in a new tab)</span>
                   </a>
                 </h3>
                 <p className="text-sm text-slate-600 line-clamp-3">

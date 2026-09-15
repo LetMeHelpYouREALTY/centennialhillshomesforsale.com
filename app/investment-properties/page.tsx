@@ -53,7 +53,7 @@ export default function InvestmentPropertiesPage() {
           imageSrc: "/images/hero/investment.png",
           imageAlt:
             "Single-family Las Vegas rental house with desert xeriscape",
-          body: `${MARKET_SNAPSHOT_SOURCE} as of ${MARKET_SNAPSHOT_AS_OF}: Las Vegas median listing ${formatUsd(LISTING_MEDIANS_USD.lasVegas)}, North Las Vegas ${formatUsd(LISTING_MEDIANS_USD.northLasVegas)}, Henderson ${formatUsd(LISTING_MEDIANS_USD.hendersonListing)}. Median rents on the same pages are citywide samples (Las Vegas about $2,035/mo, Henderson about $2,240/mo, North Las Vegas about $2,075/mo). Subtract vacancy, HOA, tax, insurance, and management before you chant “5% cap.” I will not invent +3.2% appreciation.`,
+          body: `${MARKET_SNAPSHOT_SOURCE} as of ${MARKET_SNAPSHOT_AS_OF}: Las Vegas median listing ${formatUsd(LISTING_MEDIANS_USD.lasVegas)}, North Las Vegas ${formatUsd(LISTING_MEDIANS_USD.northLasVegas)}, Henderson ${formatUsd(LISTING_MEDIANS_USD.hendersonListing)}. Citywide rents are UNKNOWN without a rent roll on the address. Subtract vacancy, HOA, tax, insurance, and management before you chant “5% cap.” I will not invent +3.2% appreciation.`,
         },
         {
           heading: "What I will and will not do",

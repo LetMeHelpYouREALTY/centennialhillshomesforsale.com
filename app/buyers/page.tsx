@@ -65,7 +65,7 @@ const buyerFaqs = [
   {
     question: "How much do I need for a down payment in Las Vegas?",
     answer:
-      "Down payments vary by loan type: FHA requires 3.5%, conventional loans typically 3-20%, VA loans 0% for eligible veterans, and USDA loans 0% for rural areas. Nevada also offers down payment assistance programs for first-time buyers. Dr. Jan can connect you with lenders who specialize in low down payment programs.",
+      "Down payments vary by loan type: FHA 3.5%, conventional typically 3–20%, VA 0% when eligible. Nevada down-payment assistance exists for some first-time buyers. Dr. Jan can introduce Clark County lenders. Rates and USDA eligibility are UNKNOWN until the lender quotes them.",
   },
   {
     question: "Should I get pre-approved before looking at homes?",
