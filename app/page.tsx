@@ -12,12 +12,20 @@ import { getPageDomainConfig } from "@/lib/get-domain-config";
 import { getCanonicalUrl, getRequestOrigin } from "@/lib/site-url";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import { AGENT_PHOTO_PATH } from "@/lib/brand-assets";
-import { CTA_PHONE, CTA_TEL, OFFICE_NAP } from "@/lib/contact";
+import {
+  CTA_PHONE,
+  CTA_PHONE_E164,
+  CTA_TEL,
+  OFFICE_NAP,
+  OFFICE_POSTAL_ADDRESS,
+} from "@/lib/contact";
 import { withShareImage } from "@/lib/page-seo";
 import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { WidgetBeTracker } from "@/components/shared/WidgetBeTracker";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
+import SchemaScript from "@/components/SchemaScript";
+import { generateWebPageSchema } from "@/lib/schema";
 import {
   formatUsd,
   LISTING_MEDIANS_USD,
@@ -100,16 +108,9 @@ export default async function Home() {
     "@type": "RealEstateAgent",
     name: "Dr. Jan Duffy - Centennial Hills Real Estate",
     url: canonical,
-    telephone: "+17022221964",
+    telephone: CTA_PHONE_E164,
     image: `${origin}${AGENT_PHOTO_PATH}`,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: OFFICE_NAP.street,
-      addressLocality: OFFICE_NAP.city,
-      addressRegion: OFFICE_NAP.state,
-      postalCode: OFFICE_NAP.zip,
-      addressCountry: "US",
-    },
+    address: OFFICE_POSTAL_ADDRESS,
     areaServed: [
       "Centennial Hills",
       "Las Vegas",
@@ -122,6 +123,15 @@ export default async function Home() {
   return (
     <>
       <WidgetBeTracker />
+      <SchemaScript
+        id="webpage-schema"
+        schema={generateWebPageSchema({
+          name: "Centennial Hills Homes for Sale",
+          description:
+            "Centennial Hills homes for sale in northwest Las Vegas (89149, 89131, 89143). Search current listings with Dr. Jan Duffy.",
+          url: canonical,
+        })}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -163,10 +173,16 @@ export default async function Home() {
                 <span className="font-semibold text-white">BHHS</span>
                 <span>Nevada Properties</span>
               </div>
-              <div className="flex items-center gap-2">
+              <a
+                href={OFFICE_NAP.reviewsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-11 items-center gap-2 text-white/80 no-underline hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              >
                 <span className="font-semibold text-white">Google</span>
                 <span>reviews on the profile</span>
-              </div>
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
             </div>
           </div>
         </section>

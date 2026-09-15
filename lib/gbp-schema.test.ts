@@ -88,4 +88,13 @@ describe("GBP schema NAP and Maps alignment", () => {
     expect(names).not.toMatch(/Specialist/i);
     expect(names).not.toMatch(/Expert/i);
   });
+
+  it("does not sell maintenance-free or full-service ranking copy", () => {
+    const blob = JSON.stringify(businessInfo.services);
+    expect(blob).not.toMatch(/maintenance-free/i);
+    expect(blob).not.toMatch(/Full-service home buying/i);
+    expect(
+      businessInfo.services.every((service) => service.href.startsWith("/")),
+    ).toBe(true);
+  });
 });

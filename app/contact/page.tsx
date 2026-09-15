@@ -16,11 +16,14 @@ import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import { AGENT_PHOTO_PATH } from "@/lib/brand-assets";
 import {
   AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
   CTA_PHONE,
   CTA_PHONE_E164,
   CTA_TEL,
   OFFICE_HOURS,
+  OFFICE_NAP,
   OFFICE_POSTAL_ADDRESS,
+  TEXT_LINK_CLASS,
 } from "@/lib/contact";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { OfficeMap } from "@/components/shared/OfficeMap";
@@ -29,7 +32,8 @@ import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { getPublicSiteUrl } from "@/lib/site-url";
-import { FAQSchema } from "@/components/SchemaScript";
+import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
+import { generateWebPageSchema } from "@/lib/schema";
 import { LeadCaptureForm } from "@/components/forms/LeadCaptureForm";
 
 export const metadata: Metadata = withShareImage(
@@ -89,6 +93,15 @@ const contactFaqs = [
 export default function ContactPage() {
   return (
     <>
+      <SchemaScript
+        id="webpage-schema"
+        schema={generateWebPageSchema({
+          name: "Contact Dr. Jan Duffy",
+          description:
+            "Contact Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964.",
+          url: "/contact",
+        })}
+      />
       <FAQSchema faqs={contactFaqs} />
       <script
         type="application/ld+json"
@@ -125,7 +138,7 @@ export default function ContactPage() {
                 fallbackSrc={PAGE_HERO_IMAGES.contact.src}
                 avoidSrc={PAGE_HERO_IMAGES.contact.src}
               >
-                Get In Touch
+                Call, email, or visit the office
               </SectionHeading>
               <p className="text-slate-700 mb-8">
                 Whether you're buying your first home, selling a luxury
@@ -137,7 +150,10 @@ export default function ContactPage() {
               {/* NAP Information */}
               <div className="space-y-4 mb-8">
                 <div className="flex items-start bg-slate-50 rounded-lg p-4">
-                  <Phone className="h-6 w-6 text-blue-600 mr-4 flex-shrink-0 mt-1" />
+                  <Phone
+                    className="h-6 w-6 text-blue-600 mr-4 flex-shrink-0 mt-1"
+                    aria-hidden="true"
+                  />
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">
                       Phone (Call or Text)
@@ -155,14 +171,17 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start bg-slate-50 rounded-lg p-4">
-                  <Mail className="h-6 w-6 text-blue-600 mr-4 flex-shrink-0 mt-1" />
+                  <Mail
+                    className="h-6 w-6 text-blue-600 mr-4 flex-shrink-0 mt-1"
+                    aria-hidden="true"
+                  />
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Email</h3>
                     <a
-                      href="mailto:homes@heyberkshire.com"
+                      href={AGENT_EMAIL_MAILTO}
                       className="inline-flex min-h-11 items-center font-medium text-blue-600 no-underline hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                     >
-                      Homes@HeyBerkshire.com
+                      {AGENT_EMAIL}
                     </a>
                     <p className="text-sm text-slate-500 mt-1">
                       Replies during posted office hours — call or text the
@@ -172,7 +191,10 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start bg-slate-50 rounded-lg p-4">
-                  <MapPin className="h-6 w-6 text-blue-600 mr-4 flex-shrink-0 mt-1" />
+                  <MapPin
+                    className="h-6 w-6 text-blue-600 mr-4 flex-shrink-0 mt-1"
+                    aria-hidden="true"
+                  />
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">
                       Office Address
@@ -182,15 +204,24 @@ export default function ContactPage() {
                       <br />
                       Nevada Properties
                       <br />
-                      9406 W Lake Mead Blvd, Suite 100
-                      <br />
-                      Las Vegas, NV 89134
+                      <a
+                        href={OFFICE_NAP.mapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={TEXT_LINK_CLASS}
+                      >
+                        {OFFICE_NAP.full}
+                        <span className="sr-only"> (opens in a new tab)</span>
+                      </a>
                     </address>
                   </div>
                 </div>
 
                 <div className="flex items-start bg-slate-50 rounded-lg p-4">
-                  <Clock className="h-6 w-6 text-blue-600 mr-4 flex-shrink-0 mt-1" />
+                  <Clock
+                    className="h-6 w-6 text-blue-600 mr-4 flex-shrink-0 mt-1"
+                    aria-hidden="true"
+                  />
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">
                       Office Hours
@@ -238,7 +269,10 @@ export default function ContactPage() {
             <div>
               <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
                 <div className="bg-blue-600 text-white p-6 text-center">
-                  <Calendar className="h-10 w-10 mx-auto mb-3" />
+                  <Calendar
+                    className="h-10 w-10 mx-auto mb-3"
+                    aria-hidden="true"
+                  />
                   <h2 className="text-2xl font-bold mb-2">
                     Schedule an Appointment
                   </h2>
@@ -257,7 +291,10 @@ export default function ContactPage() {
                 </h3>
                 <div className="space-y-3">
                   <div className="flex items-start">
-                    <Shield className="h-5 w-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
+                    <Shield
+                      className="h-5 w-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0"
+                      aria-hidden="true"
+                    />
                     <p className="text-slate-300 text-sm">
                       <strong className="text-white">
                         Franchise brokerage:
@@ -267,7 +304,10 @@ export default function ContactPage() {
                     </p>
                   </div>
                   <div className="flex items-start">
-                    <Star className="h-5 w-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
+                    <Star
+                      className="h-5 w-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0"
+                      aria-hidden="true"
+                    />
                     <p className="text-slate-300 text-sm">
                       <strong className="text-white">Proven local work:</strong>{" "}
                       Serving Las Vegas since 2008 with Berkshire Hathaway
@@ -275,7 +315,10 @@ export default function ContactPage() {
                     </p>
                   </div>
                   <div className="flex items-start">
-                    <Users className="h-5 w-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
+                    <Users
+                      className="h-5 w-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0"
+                      aria-hidden="true"
+                    />
                     <p className="text-slate-300 text-sm">
                       <strong className="text-white">Global Network:</strong>{" "}
                       BHHS referral network for inbound and outbound
@@ -325,7 +368,7 @@ export default function ContactPage() {
                   name: "Mountains Edge",
                   href: "/neighborhoods/mountains-edge",
                 },
-                { name: "Spring Valley", href: "/listings" },
+                { name: "Spring Valley", href: "/listings?q=Spring+Valley" },
               ].map((area) => (
                 <Link
                   key={area.name}
@@ -345,27 +388,27 @@ export default function ContactPage() {
               fallbackSrc={PAGE_HERO_IMAGES.contact.src}
               avoidSrc={PAGE_HERO_IMAGES.contact.src}
             >
-              Prefer to Reach Out Directly?
+              Prefer a call or email?
             </SectionHeading>
             <div className="grid md:grid-cols-2 gap-6">
               <a
                 href={CTA_TEL}
                 className="flex min-h-11 items-center justify-center rounded-xl bg-blue-600 p-6 text-white no-underline transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
               >
-                <Phone className="h-8 w-8 mr-4" />
+                <Phone className="h-8 w-8 mr-4" aria-hidden="true" />
                 <div className="text-left">
-                  <div className="font-bold text-lg">Call Now</div>
-                  <div className="text-blue-100">{CTA_PHONE}</div>
+                  <div className="font-bold text-lg">Call {CTA_PHONE}</div>
+                  <div className="text-blue-100">Client line</div>
                 </div>
               </a>
               <a
-                href="mailto:homes@heyberkshire.com"
+                href={AGENT_EMAIL_MAILTO}
                 className="flex min-h-11 items-center justify-center rounded-xl bg-slate-700 p-6 text-white no-underline transition-colors hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
               >
-                <Mail className="h-8 w-8 mr-4" />
+                <Mail className="h-8 w-8 mr-4" aria-hidden="true" />
                 <div className="text-left">
-                  <div className="font-bold text-lg">Send Email</div>
-                  <div className="text-slate-300">Homes@HeyBerkshire.com</div>
+                  <div className="font-bold text-lg">Email</div>
+                  <div className="text-slate-300">{AGENT_EMAIL}</div>
                 </div>
               </a>
             </div>

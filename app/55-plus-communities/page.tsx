@@ -22,6 +22,8 @@ import { PageCTA } from "@/components/shared/PageCTA";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
+import SchemaScript from "@/components/SchemaScript";
+import { generateWebPageSchema } from "@/lib/schema";
 import {
   CTA_PHONE,
   CTA_TEL,
@@ -323,7 +325,7 @@ const communities = [
 const communityBenefits = [
   {
     icon: HomeIcon,
-    title: "Low-Maintenance Living",
+    title: "HOA exterior maintenance",
     description:
       "Exterior maintenance handled by HOA. Spend time on the rec campus, not the roof.",
   },
@@ -347,7 +349,7 @@ const communityBenefits = [
   },
   {
     icon: DollarSign,
-    title: "Nevada Tax Advantages",
+    title: "Nevada wage income tax",
     description:
       "Nevada has no state income tax on wages. Federal tax still applies. Confirm property tax, HOA, and insurance on the APN — not a “tax-free retirement” slogan.",
   },
@@ -362,6 +364,15 @@ const communityBenefits = [
 export default function FiftyFiveCommunitiesPage() {
   return (
     <>
+      <SchemaScript
+        id="webpage-schema"
+        schema={generateWebPageSchema({
+          name: "Las Vegas 55+ Communities",
+          description:
+            "55+ HOPA communities in Las Vegas and Henderson including Sun City, Del Webb, and Henderson campuses. Dr. Jan Duffy. Call (702) 222-1964.",
+          url: "/55-plus-communities",
+        })}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -377,7 +388,7 @@ export default function FiftyFiveCommunitiesPage() {
           {/* Hero Section */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              <Sun className="h-4 w-4 mr-2" />
+              <Sun className="h-4 w-4 mr-2" aria-hidden="true" />
               55+ HOPA communities
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">

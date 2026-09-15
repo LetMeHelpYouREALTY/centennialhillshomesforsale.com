@@ -14,12 +14,19 @@ import {
 import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
-import { OFFICE_NAP, TEXT_LINK_ON_DARK_CLASS } from "@/lib/contact";
+import {
+  CTA_TEL,
+  OFFICE_HOURS,
+  OFFICE_NAP,
+  TEXT_LINK_ON_DARK_CLASS,
+} from "@/lib/contact";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
+import SchemaScript from "@/components/SchemaScript";
+import { generateWebPageSchema } from "@/lib/schema";
 import {
   businessInfo,
   gbpDescription,
@@ -61,6 +68,15 @@ export default function GoogleBusinessPage() {
 
   return (
     <>
+      <SchemaScript
+        id="webpage-schema"
+        schema={generateWebPageSchema({
+          name: "Dr. Jan Duffy, REALTOR® Las Vegas",
+          description:
+            "Dr. Jan Duffy is a Las Vegas REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964.",
+          url: "/google-business",
+        })}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -83,8 +99,11 @@ export default function GoogleBusinessPage() {
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <div className="flex items-center gap-2 mb-4">
-                    <Award className="h-6 w-6 text-yellow-400" />
-                    <span className="text-yellow-400 font-semibold">
+                    <Award
+                      className="h-6 w-6 text-blue-300"
+                      aria-hidden="true"
+                    />
+                    <span className="font-semibold text-blue-200">
                       Berkshire Hathaway HomeServices
                     </span>
                   </div>
@@ -99,29 +118,43 @@ export default function GoogleBusinessPage() {
                   {/* NAP - Exact match to GBP */}
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
-                      <MapPin className="h-5 w-5 text-blue-400 mt-1 flex-shrink-0" />
+                      <MapPin
+                        className="h-5 w-5 text-blue-400 mt-1 flex-shrink-0"
+                        aria-hidden="true"
+                      />
                       <div>
-                        <p className="font-medium">
-                          {businessInfo.address.streetAddress}
-                        </p>
-                        <p>
-                          {businessInfo.address.addressLocality},{" "}
-                          {businessInfo.address.addressRegion}{" "}
-                          {businessInfo.address.postalCode}
-                        </p>
+                        <a
+                          href={OFFICE_NAP.mapsUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={TEXT_LINK_ON_DARK_CLASS}
+                        >
+                          <p className="font-medium">
+                            {businessInfo.address.streetAddress}
+                          </p>
+                          <p>
+                            {businessInfo.address.addressLocality},{" "}
+                            {businessInfo.address.addressRegion}{" "}
+                            {businessInfo.address.postalCode}
+                          </p>
+                          <span className="sr-only"> (opens in a new tab)</span>
+                        </a>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Phone className="h-5 w-5 text-blue-400 flex-shrink-0" />
-                      <a
-                        href={`tel:${businessInfo.phone.tel}`}
-                        className={TEXT_LINK_ON_DARK_CLASS}
-                      >
+                      <Phone
+                        className="h-5 w-5 text-blue-400 flex-shrink-0"
+                        aria-hidden="true"
+                      />
+                      <a href={CTA_TEL} className={TEXT_LINK_ON_DARK_CLASS}>
                         {businessInfo.phone.display}
                       </a>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Mail className="h-5 w-5 text-blue-400 flex-shrink-0" />
+                      <Mail
+                        className="h-5 w-5 text-blue-400 flex-shrink-0"
+                        aria-hidden="true"
+                      />
                       <a
                         href={`mailto:${businessInfo.email}`}
                         className={TEXT_LINK_ON_DARK_CLASS}
@@ -154,10 +187,19 @@ export default function GoogleBusinessPage() {
                     <span className="sr-only"> (opens in a new tab)</span>
                   </a>
                   <a
-                    href={`tel:${businessInfo.phone.tel}`}
+                    href={CTA_TEL}
                     className="mt-3 inline-flex min-h-11 w-full items-center justify-center rounded-lg bg-blue-600 px-6 py-4 text-lg font-bold text-white no-underline transition-colors hover:bg-blue-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                   >
-                    Call Now: {businessInfo.phone.display}
+                    Call {businessInfo.phone.display}
+                  </a>
+                  <a
+                    href={OFFICE_NAP.directionsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex min-h-11 w-full items-center justify-center rounded-lg border border-white/40 px-6 py-4 text-lg font-bold text-white no-underline transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                  >
+                    Get Directions
+                    <span className="sr-only"> (opens in a new tab)</span>
                   </a>
                   <p className="text-sm text-blue-300 mt-3">
                     Call for a CMA on the address — no invented rating on this
@@ -172,32 +214,20 @@ export default function GoogleBusinessPage() {
           <section className="max-w-5xl mx-auto mb-16">
             <div className="bg-slate-50 rounded-xl p-6">
               <div className="flex items-center gap-2 mb-4">
-                <Clock className="h-5 w-5 text-blue-600" />
+                <Clock className="h-5 w-5 text-blue-600" aria-hidden="true" />
                 <h2 className="text-xl font-bold text-slate-900">
                   Business Hours
                 </h2>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+              <div className="grid gap-2 text-sm md:grid-cols-3">
                 <div>
-                  <span className="font-medium">Monday:</span> 9am - 6pm
+                  <span className="font-medium">{OFFICE_HOURS.weekday}</span>
                 </div>
                 <div>
-                  <span className="font-medium">Tuesday:</span> 9am - 6pm
+                  <span className="font-medium">{OFFICE_HOURS.saturday}</span>
                 </div>
                 <div>
-                  <span className="font-medium">Wednesday:</span> 9am - 6pm
-                </div>
-                <div>
-                  <span className="font-medium">Thursday:</span> 9am - 6pm
-                </div>
-                <div>
-                  <span className="font-medium">Friday:</span> 9am - 6pm
-                </div>
-                <div>
-                  <span className="font-medium">Saturday:</span> 10am - 4pm
-                </div>
-                <div>
-                  <span className="font-medium">Sunday:</span> By Appointment
+                  <span className="font-medium">{OFFICE_HOURS.sunday}</span>
                 </div>
               </div>
             </div>
@@ -216,7 +246,7 @@ export default function GoogleBusinessPage() {
             {/* Section 1: Who We Are */}
             <div className="mb-8">
               <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-                <Users className="h-5 w-5 text-blue-600" />
+                <Users className="h-5 w-5 text-blue-600" aria-hidden="true" />
                 Experience & Background
               </h3>
               <p className="text-slate-700 leading-relaxed">
@@ -227,7 +257,7 @@ export default function GoogleBusinessPage() {
             {/* Section 2: What We Do */}
             <div className="mb-8">
               <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-                <Home className="h-5 w-5 text-blue-600" />
+                <Home className="h-5 w-5 text-blue-600" aria-hidden="true" />
                 Services & Value
               </h3>
               <p className="text-slate-700 leading-relaxed">
@@ -238,7 +268,7 @@ export default function GoogleBusinessPage() {
             {/* Section 3: Where We Serve */}
             <div className="mb-8">
               <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-                <MapPin className="h-5 w-5 text-blue-600" />
+                <MapPin className="h-5 w-5 text-blue-600" aria-hidden="true" />
                 Areas Served
               </h3>
               <p className="text-slate-700 leading-relaxed">
@@ -258,12 +288,16 @@ export default function GoogleBusinessPage() {
             </SectionHeading>
             <div className="grid md:grid-cols-3 gap-4">
               {businessInfo.services.map((service) => (
-                <div
+                <Link
                   key={service.name}
-                  className="bg-white border border-slate-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                  href={service.href}
+                  className="block min-h-11 rounded-lg border border-slate-200 bg-white p-4 no-underline transition-shadow hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                 >
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle
+                      className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500"
+                      aria-hidden="true"
+                    />
                     <div>
                       <h3 className="font-semibold text-slate-900">
                         {service.name}
@@ -273,7 +307,7 @@ export default function GoogleBusinessPage() {
                       </p>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </section>
@@ -294,11 +328,29 @@ export default function GoogleBusinessPage() {
                     Primary Markets
                   </h3>
                   <ul className="space-y-2">
-                    <li className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4 text-blue-600" /> Las Vegas, NV
+                    <li>
+                      <Link
+                        href="/listings"
+                        className="inline-flex min-h-11 items-center gap-2 text-slate-700 no-underline hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+                      >
+                        <MapPin
+                          className="h-4 w-4 text-blue-600"
+                          aria-hidden="true"
+                        />{" "}
+                        Las Vegas, NV
+                      </Link>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4 text-blue-600" /> Summerlin, NV
+                    <li>
+                      <Link
+                        href="/neighborhoods/summerlin"
+                        className="inline-flex min-h-11 items-center gap-2 text-slate-700 no-underline hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+                      >
+                        <MapPin
+                          className="h-4 w-4 text-blue-600"
+                          aria-hidden="true"
+                        />{" "}
+                        Summerlin, NV
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -307,12 +359,29 @@ export default function GoogleBusinessPage() {
                     Secondary Markets
                   </h3>
                   <ul className="space-y-2">
-                    <li className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4 text-blue-600" /> Henderson, NV
+                    <li>
+                      <Link
+                        href="/neighborhoods/henderson"
+                        className="inline-flex min-h-11 items-center gap-2 text-slate-700 no-underline hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+                      >
+                        <MapPin
+                          className="h-4 w-4 text-blue-600"
+                          aria-hidden="true"
+                        />{" "}
+                        Henderson, NV
+                      </Link>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4 text-blue-600" /> North Las
-                      Vegas, NV
+                    <li>
+                      <Link
+                        href="/neighborhoods/north-las-vegas"
+                        className="inline-flex min-h-11 items-center gap-2 text-slate-700 no-underline hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+                      >
+                        <MapPin
+                          className="h-4 w-4 text-blue-600"
+                          aria-hidden="true"
+                        />{" "}
+                        North Las Vegas, NV
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -321,13 +390,29 @@ export default function GoogleBusinessPage() {
                     Full Coverage
                   </h3>
                   <ul className="space-y-2">
-                    <li className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4 text-blue-600" /> Clark County,
-                      NV
+                    <li>
+                      <Link
+                        href="/neighborhoods"
+                        className="inline-flex min-h-11 items-center gap-2 text-slate-700 no-underline hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+                      >
+                        <MapPin
+                          className="h-4 w-4 text-blue-600"
+                          aria-hidden="true"
+                        />{" "}
+                        Clark County, NV
+                      </Link>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4 text-blue-600" /> All Las Vegas
-                      Valley
+                    <li>
+                      <Link
+                        href="/listings"
+                        className="inline-flex min-h-11 items-center gap-2 text-slate-700 no-underline hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+                      >
+                        <MapPin
+                          className="h-4 w-4 text-blue-600"
+                          aria-hidden="true"
+                        />{" "}
+                        Las Vegas Valley listings
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -380,7 +465,10 @@ export default function GoogleBusinessPage() {
                   className="bg-white border border-slate-200 rounded-lg p-6"
                 >
                   <h3 className="font-bold text-slate-900 mb-3 flex items-start gap-2">
-                    <MessageSquare className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                    <MessageSquare
+                      className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0"
+                      aria-hidden="true"
+                    />
                     {faq.question}
                   </h3>
                   <p className="text-slate-600 ml-7">{faq.answer}</p>
@@ -394,7 +482,10 @@ export default function GoogleBusinessPage() {
           {/* Review CTA - Prominence factor */}
           <section className="max-w-4xl mx-auto mb-16">
             <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border border-yellow-200 rounded-xl p-8 text-center">
-              <Star className="h-12 w-12 text-yellow-500 mx-auto mb-4" />
+              <Star
+                className="h-12 w-12 text-yellow-500 mx-auto mb-4"
+                aria-hidden="true"
+              />
               <SectionHeading
                 className="text-2xl font-bold text-slate-900 mb-4"
                 fallbackSrc={PAGE_HERO_IMAGES.googleBusiness.src}
@@ -434,22 +525,30 @@ export default function GoogleBusinessPage() {
                   href={`tel:${businessInfo.phone.tel}`}
                   className="inline-flex min-h-11 items-center justify-center bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                 >
-                  <Phone className="h-5 w-5 mr-2" />
+                  <Phone className="h-5 w-5 mr-2" aria-hidden="true" />
                   {businessInfo.phone.display}
                 </a>
                 <Link
                   href="/contact"
                   className="inline-flex min-h-11 items-center justify-center bg-white text-slate-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-slate-100 transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                 >
-                  <Mail className="h-5 w-5 mr-2" />
+                  <Mail className="h-5 w-5 mr-2" aria-hidden="true" />
                   Send Message
                 </Link>
               </div>
               <p className="text-slate-400 text-sm mt-6">
-                {businessInfo.address.streetAddress},{" "}
-                {businessInfo.address.addressLocality},{" "}
-                {businessInfo.address.addressRegion}{" "}
-                {businessInfo.address.postalCode}
+                <a
+                  href={OFFICE_NAP.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={TEXT_LINK_ON_DARK_CLASS}
+                >
+                  {businessInfo.address.streetAddress},{" "}
+                  {businessInfo.address.addressLocality},{" "}
+                  {businessInfo.address.addressRegion}{" "}
+                  {businessInfo.address.postalCode}
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
               </p>
             </div>
           </section>

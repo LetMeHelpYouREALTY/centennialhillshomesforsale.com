@@ -80,58 +80,76 @@ export const businessInfo = {
     // Core Services
     {
       name: "Buyer Representation",
-      description: "Full-service home buying assistance",
+      description: "Written buyer agreement and live MLS search",
+      href: "/buyers",
     },
     {
       name: "Seller Representation",
       description: "List and sell with comps-based pricing and marketing",
+      href: "/sellers",
     },
-    { name: "Luxury Home Sales", description: "High-end properties $1M+" },
-    // Niche Services (trigger intent phrases)
+    {
+      name: "Luxury Home Sales",
+      description: "Gated custom, view, and estate product from live comps",
+      href: "/luxury-homes",
+    },
     {
       name: "California Relocation Services",
-      description: "Helping CA buyers transition to Las Vegas",
+      description:
+        "Paired California-sale comps against live Las Vegas listings",
+      href: "/buyers/california-relocator",
     },
     {
       name: "55+ HOPA Communities",
-      description: "Sun City, Anthem, Del Webb communities",
+      description: "Sun City, Anthem, Del Webb, and Henderson 55+ campuses",
+      href: "/55-plus-communities",
     },
     {
       name: "First-Time Home Buyer Guidance",
-      description: "FHA, VA, down payment assistance",
+      description: "FHA, VA, down payment assistance — lender quotes the rate",
+      href: "/buyers/first-time-buyers",
     },
     {
       name: "Probate Real Estate Sales",
       description: "Estate and probate property transactions",
+      href: "/sellers/divorce-probate",
     },
     {
       name: "Divorce Real Estate Sales",
       description: "Neutral representation for marital asset division",
+      href: "/sellers/divorce-probate",
     },
     {
       name: "Relocation Services",
-      description: "Corporate and individual relocation assistance",
+      description: "Inbound and outbound moves on two calendars",
+      href: "/relocation",
     },
     {
       name: "Investment Property Consulting",
-      description: "Rental properties and investment analysis",
+      description:
+        "Rental houses and investment analysis — not property management",
+      href: "/investment-properties",
     },
     {
       name: "New Construction Representation",
-      description: "Builder negotiations and buyer protection",
+      description: "Register before the model. Builder contracts in writing.",
+      href: "/new-construction",
     },
     {
       name: "Military/VA Home Buying",
       description:
         "VA-loan buyer representation and lender referrals. I do not originate loans.",
+      href: "/buyers",
     },
     {
       name: "Downsizing Consultation",
-      description: "Transition to smaller, maintenance-free living",
+      description: "Sequence the sale and the next smaller floor plan",
+      href: "/sellers/downsizing",
     },
     {
       name: "Luxury Condo Sales",
-      description: "High-rise and resort-style condominiums",
+      description: "High-rise and resort-style condominiums from live MLS",
+      href: "/listings?q=condo",
     },
   ],
 
@@ -223,7 +241,7 @@ export const gbpFAQs = [
     question:
       "How does Dr. Jan help with probate or divorce real estate sales?",
     answer:
-      "Dr. Jan handles sensitive transactions with discretion and professionalism. For probate sales, she coordinates with estate attorneys and ensures court compliance. For divorce sales, she provides neutral representation and works with both parties' attorneys. Call (702) 222-1964 for a confidential consultation.",
+      "Dr. Jan handles sensitive transactions with discretion and professionalism. For probate sales, she coordinates with estate attorneys and ensures court compliance. For divorce sales, she provides neutral representation and works with both parties' attorneys. Call (702) 222-1964.",
   },
   {
     question: "What is the average home price in Las Vegas in 2026?",
@@ -247,7 +265,7 @@ export const gbpFAQs = [
   {
     question: "Does Dr. Jan help with investment properties in Las Vegas?",
     answer:
-      "Yes! Dr. Jan provides investment property consulting including rental property analysis, cap rate calculations, short-term rental regulations, and multi-family opportunities across the Las Vegas Valley. Contact (702) 222-1964 for investment property guidance.",
+      "Yes. Dr. Jan provides investment property consulting including rental analysis, cap-rate math, short-term rental rules, and multi-family purchases. Citywide rents are UNKNOWN without a rent roll. Call (702) 222-1964.",
   },
 ];
 
