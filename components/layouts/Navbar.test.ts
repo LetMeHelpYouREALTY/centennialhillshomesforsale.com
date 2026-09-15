@@ -13,5 +13,10 @@ describe("navbar keyboard", () => {
     expect(src).toContain("firstLink.focus()");
     expect(src).toContain('aria-haspopup="true"');
     expect(src).toContain('aria-controls="mobile-nav"');
+    expect(src).toContain("setChromeInert");
+    expect(src).toContain('"site-breadcrumbs"');
+    expect(src).toContain("document.getElementById(id)");
+    expect(src).toContain('position = "fixed"');
+    expect(src).toContain('event.key !== "Tab"');
   });
 });

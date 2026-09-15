@@ -381,6 +381,8 @@ export function LeadCaptureForm({
                 id="bedrooms"
                 name="bedrooms"
                 type="number"
+                inputMode="numeric"
+                autoComplete="off"
                 value={formData.bedrooms}
                 onChange={handleChange}
                 disabled={loading}
@@ -400,6 +402,8 @@ export function LeadCaptureForm({
                 id="bathrooms"
                 name="bathrooms"
                 type="number"
+                inputMode="decimal"
+                autoComplete="off"
                 step="0.5"
                 value={formData.bathrooms}
                 onChange={handleChange}
@@ -459,6 +463,9 @@ export function LeadCaptureForm({
         <textarea
           id="message"
           name="message"
+          autoComplete={
+            formType === "home-valuation" ? "street-address" : "off"
+          }
           value={formData.message}
           onChange={handleChange}
           disabled={loading}

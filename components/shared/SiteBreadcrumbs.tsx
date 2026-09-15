@@ -10,7 +10,10 @@ export function SiteBreadcrumbs() {
   }
 
   return (
-    <div className="border-b border-slate-100 bg-white pt-24">
+    <div
+      id="site-breadcrumbs"
+      className="border-b border-slate-100 bg-white pt-24"
+    >
       <div className="container mx-auto px-4 py-3">
         <Breadcrumbs items={items} />
       </div>

@@ -13,12 +13,36 @@ import {
   CTA_TEL,
 } from "@/lib/contact";
 
+function isDisplayed(el: HTMLElement): boolean {
+  return el.getClientRects().length > 0;
+}
+
+function focusableIn(root: HTMLElement): HTMLElement[] {
+  return Array.from(
+    root.querySelectorAll<HTMLElement>("a[href], button:not([disabled])"),
+  ).filter(isDisplayed);
+}
+
+function setChromeInert(inert: boolean) {
+  for (const id of ["main-content", "site-breadcrumbs"]) {
+    const node = document.getElementById(id);
+    if (node instanceof HTMLElement) {
+      node.inert = inert;
+    }
+  }
+  const footer = document.querySelector("footer");
+  if (footer instanceof HTMLElement) {
+    footer.inert = inert;
+  }
+}
+
 export default function Navbar() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const servicesRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLElement>(null);
   const mobileNavRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -65,14 +89,54 @@ export default function Navbar() {
 
   useEffect(() => {
     if (!isMobileMenuOpen) return;
-    const previousOverflow = document.body.style.overflow;
+    const { overflow, position, top, width } = document.body.style;
+    const scrollY = window.scrollY;
     document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = "100%";
+    setChromeInert(true);
+
     const firstLink = mobileNavRef.current?.querySelector("a");
     if (firstLink instanceof HTMLElement) {
       firstLink.focus();
     }
+
+    const onTab = (event: KeyboardEvent) => {
+      if (event.key !== "Tab") {
+        return;
+      }
+      const root = navRef.current;
+      if (!root) {
+        return;
+      }
+      const focusable = focusableIn(root);
+      if (focusable.length === 0) {
+        return;
+      }
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      const active = document.activeElement;
+      if (event.shiftKey && active === first) {
+        event.preventDefault();
+        last.focus();
+        return;
+      }
+      if (!event.shiftKey && active === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener("keydown", onTab);
+
     return () => {
-      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", onTab);
+      document.body.style.overflow = overflow;
+      document.body.style.position = position;
+      document.body.style.top = top;
+      document.body.style.width = width;
+      setChromeInert(false);
+      window.scrollTo(0, scrollY);
     };
   }, [isMobileMenuOpen]);
 
@@ -99,6 +163,7 @@ export default function Navbar() {
 
   return (
     <nav
+      ref={navRef}
       aria-label="Primary"
       className={`fixed top-0 left-0 right-0 z-50 bg-white shadow-md transition-[padding,box-shadow] duration-300 ${
         isScrolled
@@ -260,6 +325,7 @@ export default function Navbar() {
           <div
             ref={mobileNavRef}
             id="mobile-nav"
+            aria-label="Site menu"
             className="mt-4 overscroll-contain border-t border-slate-200 pb-4 lg:hidden"
           >
             <div className="flex flex-col space-y-1 pt-4">
