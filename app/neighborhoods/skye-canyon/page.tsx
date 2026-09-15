@@ -57,12 +57,16 @@ export default function SkyeCanyonPage() {
           heading: "Builder incentives vs a resale CMA",
           body: "Remaining new-construction pods can still run rate buydowns and option credits that a 2021 resale does not have. I register as your agent before the model office, then CMA resale against the builder worksheet in the same week. Email homes@heyberkshire.com or call (702) 222-1964 before you sign the kiosk iPad.",
         },
+        {
+          heading: "How I send Skye Canyon matches",
+          body: "Say new construction vs resale, beds, and whether Skye Center access from the lot matters. I filter 89166 by builder pod, then email the set. Email homes@heyberkshire.com or call (702) 222-1964 before the model office iPad.",
+        },
       ]}
       faqs={[
         {
           question: "What is the median home price in Skye Canyon?",
           answer:
-            "UNKNOWN as a single current median I will stand behind without a live pull. Older $550K headlines are not a 2026 CMA. Call 702-222-1964 for current listings.",
+            "UNKNOWN as a single current median I will stand behind without a live pull. Older $550K headlines are not a 2026 CMA. Call (702) 222-1964 for current listings.",
         },
         {
           question: "Is Skye Canyon part of Centennial Hills?",

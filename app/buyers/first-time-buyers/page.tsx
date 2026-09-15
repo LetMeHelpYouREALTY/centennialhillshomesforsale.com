@@ -82,7 +82,7 @@ export default function FirstTimeBuyersPage() {
         {
           question: "Which ZIP should a first-time buyer start in?",
           answer:
-            "Match commute and HOA, not a “starter neighborhood” label. Centennial Hills, North Las Vegas, and Mountains Edge are common first tours. Call 702-222-1964.",
+            "Match commute and HOA, not a “starter neighborhood” label. Centennial Hills, North Las Vegas, and Mountains Edge are common first tours. Call (702) 222-1964.",
         },
       ]}
       related={[

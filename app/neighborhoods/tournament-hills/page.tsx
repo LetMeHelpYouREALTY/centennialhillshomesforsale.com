@@ -6,7 +6,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Tournament Hills Real Estate | Summerlin Luxury Homes",
     description:
-      "Tournament Hills real estate in Summerlin (89134): custom estates near TPC Summerlin. Current listings and private tours with Dr. Jan Duffy. Call 702-222-1964.",
+      "Tournament Hills real estate in Summerlin (89134): custom estates near TPC Summerlin. Current listings and private tours with Dr. Jan Duffy. Call (702) 222-1964.",
     keywords: [
       "tournament hills real estate",
       "tournament hills summerlin real estate",
@@ -47,11 +47,15 @@ export default function TournamentHillsPage() {
         },
         {
           heading: "How I work a Tournament Hills showing",
-          body: "Access is gated. I schedule with the listing desk, pull HOA and architectural docs, and walk lot orientation (golf, mountain, or interior). Membership at TPC Summerlin is separate from residency. Call 702-222-1964 for current inventory; I do not scrape third-party listing blogs onto this domain.",
+          body: "Access is gated. I schedule with the listing desk, pull HOA and architectural docs, and walk lot orientation (golf, mountain, or interior). Membership at TPC Summerlin is separate from residency. Call (702) 222-1964 for current inventory; I do not scrape third-party listing blogs onto this domain.",
         },
         {
           heading: "Why there is no published village median",
           body: "Tournament Hills inventory is thin custom and semi-custom. I will not reuse a Sun City Summerlin listing median from the same 89134 ZIP — that is a different HOA and a different product. Email homes@heyberkshire.com or call (702) 222-1964 with the address for a live CMA.",
+        },
+        {
+          heading: "How I send Tournament Hills matches",
+          body: "Tell me lot orientation (golf, mountain, interior) and a price band. I schedule the gate with the listing desk and send live MLS — not a 89134 ZIP dump that includes Sun City Summerlin. Email homes@heyberkshire.com or call (702) 222-1964.",
         },
       ]}
       faqs={[
@@ -68,7 +72,7 @@ export default function TournamentHillsPage() {
         {
           question: "Can I see homes this week?",
           answer:
-            "Usually yes, with gate access arranged in advance. Call or text Dr. Jan Duffy at 702-222-1964.",
+            "Usually yes, with gate access arranged in advance. Call or text Dr. Jan Duffy at (702) 222-1964.",
         },
         {
           question: "Is TPC Summerlin membership included with the deed?",

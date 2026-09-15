@@ -6,7 +6,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "89144 Homes for Sale | Summerlin ZIP Code Real Estate",
     description:
-      "89144 zip code homes for sale are in Summerlin (The Arbors, Trails, Queensridge) — not Centennial Hills. Dr. Jan Duffy, BHHS Nevada Properties. Call 702-222-1964.",
+      "89144 zip code homes for sale are in Summerlin (The Arbors, Trails, Queensridge) — not Centennial Hills. Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964.",
     keywords: [
       "89144 zip code homes for sale",
       "homes for sale in 89144",
@@ -54,6 +54,10 @@ export default function Zip89144Page() {
           heading: "Commute vs 89138 and 89149",
           body: "89144 sits closer to Downtown Summerlin and the 215 than Summerlin West 89138. Centennial Hills 89149 is a different freeway corridor. Time the drive at your hour — midday is not rush hour. Email homes@heyberkshire.com or call (702) 222-1964 with the workplace address if you want that matrix on paper.",
         },
+        {
+          heading: "How I send 89144 matches",
+          body: "Name Arbors, Trails, or Queensridge — or say you do not know the village. I filter MLS by subdivision, then email the set. I will not mix a 89144 Summerlin street with a 89149 Centennial Hills pin. Email homes@heyberkshire.com or call (702) 222-1964.",
+        },
       ]}
       faqs={[
         {
@@ -69,7 +73,7 @@ export default function Zip89144Page() {
         {
           question: "Who should I call for 89144 showings?",
           answer:
-            "Dr. Jan Duffy at 702-222-1964. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
+            "Dr. Jan Duffy at (702) 222-1964. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
         },
         {
           question: "Can I email instead of calling?",

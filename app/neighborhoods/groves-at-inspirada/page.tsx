@@ -6,7 +6,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Groves at Inspirada Homes | Henderson Townhomes",
     description:
-      "Groves at Inspirada Henderson townhomes by KB Home (resale). Square footage, parks, and current listings with Dr. Jan Duffy. Call 702-222-1964.",
+      "Groves at Inspirada Henderson townhomes by KB Home (resale). Square footage, parks, and current listings with Dr. Jan Duffy. Call (702) 222-1964.",
     keywords: [
       "groves at inspirada",
       "groves at inspirada henderson",
@@ -53,6 +53,10 @@ export default function GrovesAtInspiradaPage() {
         {
           heading: "HOA, rental rules, and the CMA",
           body: "Townhome HOA packets include rental caps, parking, and which parks the dues actually unlock. I will not invent a Groves median from the Inspirada master-plan sample. Email homes@heyberkshire.com or call (702) 222-1964 with the unit address and I will pull resale comps only.",
+        },
+        {
+          heading: "How I send Groves matches",
+          body: "This is resale townhome product. Send beds, a price band, and whether rental-cap rules matter. I filter MLS by the Groves subdivision, not 89044. Email homes@heyberkshire.com or call (702) 222-1964.",
         },
       ]}
       faqs={[

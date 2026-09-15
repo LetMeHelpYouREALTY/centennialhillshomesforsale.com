@@ -7,7 +7,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Summerlin West Homes for Sale | 89138 Real Estate",
     description:
-      "Summerlin West homes for sale in ZIP 89138 — Reverence and later Howard Hughes villages. Search listings with Dr. Jan Duffy. Call 702-222-1964.",
+      "Summerlin West homes for sale in ZIP 89138 — Reverence and later Howard Hughes villages. Search listings with Dr. Jan Duffy. Call (702) 222-1964.",
     keywords: [
       "summerlin west homes for sale",
       "summerlin west real estate",
@@ -52,11 +52,15 @@ export default function SummerlinWestPage() {
         },
         {
           heading: "First-party representation",
-          body: "This page is written for this website’s readers, not copied from another brokerage’s Summerlin guide. Builder incentives on remaining new construction (if any lot is still open) are negotiated with your own agent, not the seller’s kiosk. Call 702-222-1964.",
+          body: "This page is written for this website’s readers, not copied from another brokerage’s Summerlin guide. Builder incentives on remaining new construction (if any lot is still open) are negotiated with your own agent, not the seller’s kiosk. Call (702) 222-1964.",
         },
         {
           heading: "HOA, SID, and the 89138 sample",
           body: `The Summerlin West listing median on this site is ${formatUsd(LISTING_MEDIANS_USD.summerlinWest)} — a ZIP sample, not a Reverence sold price. HOA plus any SID/LID belong on the worksheet before you bid. Email homes@heyberkshire.com or call (702) 222-1964 with the village name.`,
+        },
+        {
+          heading: "How I send Summerlin West matches",
+          body: "Name Reverence or another 89138 village, beds, and a price band. I filter by subdivision, then email the set. I will not mix Tournament Hills 89134 custom lots into this pull. Email homes@heyberkshire.com or call (702) 222-1964.",
         },
       ]}
       faqs={[
@@ -73,7 +77,7 @@ export default function SummerlinWestPage() {
         {
           question: "How do I get current 89138 listings?",
           answer:
-            "Call or text Dr. Jan Duffy at 702-222-1964. I will send matching MLS results rather than a scraped feed.",
+            "Call or text Dr. Jan Duffy at (702) 222-1964. I will send matching MLS results rather than a scraped feed.",
         },
         {
           question: "Can I email a CMA request?",

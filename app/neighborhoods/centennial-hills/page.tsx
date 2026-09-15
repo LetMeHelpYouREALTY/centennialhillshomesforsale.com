@@ -13,7 +13,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Centennial Hills Homes for Sale | 89149 Las Vegas Real Estate",
     description:
-      "Homes for sale in Centennial Hills, Las Vegas (89149, 89131, 89143). Town Center, park, and current listings with Dr. Jan Duffy. Call 702-222-1964.",
+      "Homes for sale in Centennial Hills, Las Vegas (89149, 89131, 89143). Town Center, park, and current listings with Dr. Jan Duffy. Call (702) 222-1964.",
     keywords: [
       "centennial hills real estate",
       "homes for sale in centennial hills nv",
@@ -69,7 +69,7 @@ export default function CentennialHillsPage() {
         },
         {
           heading: "How I tour this corridor",
-          body: "I sequence Centennial Hills, Lone Mountain, and Skye Canyon in one loop when a buyer is choosing northwest vintage vs new construction. Lot orientation (mountain vs interior), HOA vs no-HOA, and SID/LID on the title report matter more than a lifestyle paragraph. Call 702-222-1964.",
+          body: "I sequence Centennial Hills, Lone Mountain, and Skye Canyon in one loop when a buyer is choosing northwest vintage vs new construction. Lot orientation (mountain vs interior), HOA vs no-HOA, and SID/LID on the title report matter more than a lifestyle paragraph. Call (702) 222-1964.",
         },
       ]}
       faqs={[

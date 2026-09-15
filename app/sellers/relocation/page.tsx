@@ -46,7 +46,7 @@ export default function SellersRelocationPage() {
         },
         {
           heading: "The other city",
-          body: "If you are buying in another state, Berkshire Hathaway HomeServices has a referral network. I still represent this listing. I do not dump you on a stranger without an introduction. Call 702-222-1964.",
+          body: "If you are buying in another state, Berkshire Hathaway HomeServices has a referral network. I still represent this listing. I do not dump you on a stranger without an introduction. Call (702) 222-1964.",
         },
         {
           heading: "Weekly written updates",

@@ -12,7 +12,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Inspirada Homes for Sale | Henderson 89044 Real Estate",
     description:
-      "Inspirada homes for sale in Henderson 89044 — Groves townhomes, Aventura Park, remaining new construction. Dr. Jan Duffy. Call 702-222-1964.",
+      "Inspirada homes for sale in Henderson 89044 — Groves townhomes, Aventura Park, remaining new construction. Dr. Jan Duffy. Call (702) 222-1964.",
     keywords: [
       "inspirada henderson",
       "homes for sale in inspirada henderson nv",

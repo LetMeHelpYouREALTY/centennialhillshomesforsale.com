@@ -64,6 +64,10 @@ export default function SouthernHighlandsPage() {
           heading: "HOA, club, and the CMA",
           body: `The ${median} listing median mixes gated estates and open sections. I CMA the enclave you will actually write on, then put HOA and any club dues on separate lines. Email homes@heyberkshire.com or call (702) 222-1964 with the gate name.`,
         },
+        {
+          heading: "How I send Southern Highlands matches",
+          body: "Tell me gated vs open, beds, and whether golf membership is on the table. I schedule gate access with the listing desk and send live MLS — not a 89141 ZIP dump. Email homes@heyberkshire.com or call (702) 222-1964.",
+        },
       ]}
       faqs={[
         {

@@ -78,6 +78,10 @@ export default function SunCityAnthemPage() {
           heading: "Commute from 89052",
           body: "St. Rose Parkway and I-215 are the usual spines. Green Valley retail is closer than Downtown Summerlin. Time the drive if you still use Summerlin medical weekly. Email homes@heyberkshire.com or call (702) 222-1964 with the workplace or hospital address — I will not rank Henderson vs Summerlin as a slogan.",
         },
+        {
+          heading: "How I send Sun City Anthem matches",
+          body: "Tell me one-story vs two-story, golf-course vs interior, and occupancy. I filter MLS to this campus, not Solera and not the broader Anthem sample. Email homes@heyberkshire.com or call (702) 222-1964.",
+        },
       ]}
       faqs={[
         {

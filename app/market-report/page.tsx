@@ -58,7 +58,7 @@ export default function MarketReportPage() {
         },
         {
           heading: "Inventory is not a slogan",
-          body: "More actives than 2021 does not mean every listing sits. Priced-to-comp houses still move. Overpriced luxury and leftover new construction are different files. Call 702-222-1964 for the street you care about.",
+          body: "More actives than 2021 does not mean every listing sits. Priced-to-comp houses still move. Overpriced luxury and leftover new construction are different files. Call (702) 222-1964 for the street you care about.",
         },
         {
           heading: "Use this with a CMA, not instead of one",

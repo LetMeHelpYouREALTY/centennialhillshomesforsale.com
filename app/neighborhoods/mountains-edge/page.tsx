@@ -64,6 +64,10 @@ export default function MountainsEdgePage() {
           heading: "HOA villages inside the master plan",
           body: "Mountains Edge is not one dues line. Pocket parks and pools sit in villages with their own HOA packets. I walk park access from the listing address and CMA that village, not the regional name. Email homes@heyberkshire.com or call (702) 222-1964 with the street.",
         },
+        {
+          heading: "How I send Mountains Edge matches",
+          body: "Give me 89178 vs 89179, beds, and whether Exploration Peak access from the lot matters. I filter MLS by village inside the master plan, then email the set. Email homes@heyberkshire.com or call (702) 222-1964.",
+        },
       ]}
       faqs={[
         {

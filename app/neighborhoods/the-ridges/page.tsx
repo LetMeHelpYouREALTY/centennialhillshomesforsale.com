@@ -58,11 +58,15 @@ export default function TheRidgesPage() {
         },
         {
           heading: `Privacy and pricing as of ${MARKET_SNAPSHOT_AS_OF}`,
-          body: `I do not publish resident names. Access is gated; I schedule with the listing desk. HOA and architectural packages are part of due diligence, not an afterthought. The Summerlin South listing median on this site is ${formatUsd(LISTING_MEDIANS_USD.summerlinSouth)} — a 89135 ZIP sample, not a Ridges-only CMA. Call 702-222-1964 for current inventory. I do not scrape off-market gossip onto this domain.`,
+          body: `I do not publish resident names. Access is gated; I schedule with the listing desk. HOA and architectural packages are part of due diligence, not an afterthought. The Summerlin South listing median on this site is ${formatUsd(LISTING_MEDIANS_USD.summerlinSouth)} — a 89135 ZIP sample, not a Ridges-only CMA. Call (702) 222-1964 for current inventory. I do not scrape off-market gossip onto this domain.`,
         },
         {
           heading: "Architectural packet before you bid",
           body: "View lots and casita plans live or die in the HOA architectural guidelines. I pull that packet with the listing, then CMA same-gate sales — not a ZIP median. Email homes@heyberkshire.com or call (702) 222-1964 with the enclave name so I can schedule the guard.",
+        },
+        {
+          heading: "How I schedule Ridges tours",
+          body: "Name the enclave if you know it. I schedule the guard with the listing desk and send same-gate comps — not a 89135 ZIP dump that includes Siena and Trilogy. Email homes@heyberkshire.com or call (702) 222-1964.",
         },
       ]}
       faqs={[
@@ -79,7 +83,7 @@ export default function TheRidgesPage() {
         {
           question: "Can I see homes this week?",
           answer:
-            "Usually yes, with gate access arranged in advance. Call or text Dr. Jan Duffy at 702-222-1964.",
+            "Usually yes, with gate access arranged in advance. Call or text Dr. Jan Duffy at (702) 222-1964.",
         },
         {
           question: "How do I request a Ridges CMA?",

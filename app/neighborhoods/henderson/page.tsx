@@ -95,7 +95,7 @@ export default function HendersonPage() {
         {
           question: "Which Henderson communities do you cover?",
           answer:
-            "Green Valley, Inspirada (including Groves townhomes), Anthem, Lake Las Vegas / Del Webb, Solera, and Sun City Anthem. Call 702-222-1964 with the village name.",
+            "Green Valley, Inspirada (including Groves townhomes), Anthem, Lake Las Vegas / Del Webb, Solera, and Sun City Anthem. Call (702) 222-1964 with the village name.",
         },
       ]}
       related={[

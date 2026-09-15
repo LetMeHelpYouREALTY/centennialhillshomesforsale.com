@@ -68,6 +68,10 @@ export default function HeritageStonebridgePage() {
           heading: "HOA packet before the gate",
           body: "Heritage is a smaller guard-gated HOPA pocket. I pull occupancy, guest-stay, and dues from the current resale package — not a Sun City Summerlin listing median from the same ZIP. Email homes@heyberkshire.com or call (702) 222-1964 so I can schedule the guard with the listing desk.",
         },
+        {
+          heading: "How I send Heritage matches",
+          body: "This is a small gated pocket, not the Del Webb campus. Send beds and a price band. I filter MLS to Heritage, then schedule the guard. Email homes@heyberkshire.com or call (702) 222-1964.",
+        },
       ]}
       faqs={[
         {
@@ -82,7 +86,7 @@ export default function HeritageStonebridgePage() {
         },
         {
           question: "How do I tour?",
-          answer: "Call 702-222-1964. Gate access is arranged in advance.",
+          answer: "Call (702) 222-1964. Gate access is arranged in advance.",
         },
         {
           question: "Can I email the HOA packet for a review?",

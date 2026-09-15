@@ -76,7 +76,7 @@ export default function CaliforniaRelocatorPage() {
         {
           question: "Can I buy in Las Vegas before I sell in California?",
           answer:
-            "Sometimes, with a bridge, a HELOC, or a contingent offer. I sequence the two contracts. Call 702-222-1964.",
+            "Sometimes, with a bridge, a HELOC, or a contingent offer. I sequence the two contracts. Call (702) 222-1964.",
         },
         {
           question: "Do you tour remotely?",

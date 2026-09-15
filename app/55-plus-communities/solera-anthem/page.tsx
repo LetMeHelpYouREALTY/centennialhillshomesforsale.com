@@ -74,6 +74,10 @@ export default function SoleraAnthemPage() {
           heading: "Gate access and the CMA",
           body: `The Anthem area listing median (${anthem}) is a broader sample, not Solera-only. I CMA this HOA, then schedule the guard with the listing desk. Email homes@heyberkshire.com or call (702) 222-1964 with the address — do not bid from a Sun City Anthem campus number.`,
         },
+        {
+          heading: "How I send Solera matches",
+          body: "Say beds, a price band, and whether every occupant must be 55+. I filter MLS to this HOA, then schedule the gate. Email homes@heyberkshire.com or call (702) 222-1964 — I will not mix Sun City Anthem campus listings into this set.",
+        },
       ]}
       faqs={[
         {
@@ -88,7 +92,7 @@ export default function SoleraAnthemPage() {
         },
         {
           question: "How do I tour?",
-          answer: "Call 702-222-1964. Gate access is arranged in advance.",
+          answer: "Call (702) 222-1964. Gate access is arranged in advance.",
         },
         {
           question: "Can I email the CC&Rs before I tour?",

@@ -90,7 +90,7 @@ export default function LuxuryHomesPage() {
         {
           question: "How do buyers get through the gate?",
           answer:
-            "I schedule with the listing desk and the guard. Call 702-222-1964.",
+            "I schedule with the listing desk and the guard. Call (702) 222-1964.",
         },
         {
           question: "How do I start a luxury listing CMA?",

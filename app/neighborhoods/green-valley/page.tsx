@@ -66,6 +66,10 @@ export default function GreenValleyPage() {
           heading: "HOA packets and the CMA",
           body: "Green Valley is a stack of sub-associations, not one master-plan dues line. I put HOA plus any SID/LID on the worksheet before you bid, then CMA the subdivision — North, South, or Ranch — not the regional name. Email homes@heyberkshire.com or call (702) 222-1964 with the address.",
         },
+        {
+          heading: "How I send Green Valley matches",
+          body: "Tell me North vs South vs Ranch, beds, and a price band. I filter MLS by subdivision, then email the set. The District is retail next to Green Valley Ranch Resort — it is not a housing village. Email homes@heyberkshire.com or call (702) 222-1964.",
+        },
       ]}
       faqs={[
         {

@@ -57,7 +57,7 @@ export default function MoveUpSellerPage() {
         {
           question: "How much equity do I have?",
           answer:
-            "UNKNOWN until a CMA and a payoff. Call 702-222-1964 with the address.",
+            "UNKNOWN until a CMA and a payoff. Call (702) 222-1964 with the address.",
         },
         {
           question: "Can I buy before I sell?",

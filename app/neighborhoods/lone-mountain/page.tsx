@@ -6,7 +6,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Lone Mountain Homes for Sale | Northwest Las Vegas",
     description:
-      "Lone Mountain homes for sale in northwest Las Vegas near Centennial Hills. Views, lots, and current listings with Dr. Jan Duffy. Call 702-222-1964.",
+      "Lone Mountain homes for sale in northwest Las Vegas near Centennial Hills. Views, lots, and current listings with Dr. Jan Duffy. Call (702) 222-1964.",
     keywords: [
       "lone mountain las vegas homes",
       "lone mountain real estate",
@@ -72,7 +72,7 @@ export default function LoneMountainPage() {
         {
           question: "Can I see Lone Mountain and Centennial Hills in one day?",
           answer:
-            "Yes. Call 702-222-1964 and I will sequence showings by drive time.",
+            "Yes. Call (702) 222-1964 and I will sequence showings by drive time.",
         },
       ]}
       related={[

@@ -46,7 +46,7 @@ export default function DivorceProbatePage() {
         },
         {
           heading: "What I will not do",
-          body: "I will not give legal advice, hide a party from title, or promise a cash buyer in 48 hours. I will introduce a real estate attorney and a title officer who have closed these files in Clark County. Call 702-222-1964.",
+          body: "I will not give legal advice, hide a party from title, or promise a cash buyer in 48 hours. I will introduce a real estate attorney and a title officer who have closed these files in Clark County. Call (702) 222-1964.",
         },
         {
           heading: "Documents before photos",

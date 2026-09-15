@@ -55,7 +55,7 @@ export default function HomeValuationPage() {
           imageSrc: "/images/gbp/office-lake-mead.png",
           imageAlt:
             "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard",
-          body: "Call or text 702-222-1964 with the address, or use the form on this page. Occupied vs vacant vs tenant matters. Photos help if you are out of state.",
+          body: "Call or text (702) 222-1964 with the address, or use the form on this page. Occupied vs vacant vs tenant matters. Photos help if you are out of state.",
         },
         {
           heading: "What belongs on the worksheet",

@@ -360,7 +360,7 @@ export default function SellersPage() {
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Move-up, downsizing, divorce/probate, and out-of-state listings
               are different files. Compensation, showing rules, and close dates
-              go in writing. Call 702-222-1964 with the address.
+              go in writing. Call (702) 222-1964 with the address.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Link

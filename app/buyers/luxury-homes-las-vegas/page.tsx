@@ -59,7 +59,7 @@ export default function LuxuryHomesLasVegasPage() {
         },
         {
           heading: "Discretion and representation",
-          body: "Berkshire Hathaway HomeServices Nevada Properties is the brokerage. Compensation is in a written buyer agreement. For listings, marketing is negotiated before the board goes up. Call 702-222-1964.",
+          body: "Berkshire Hathaway HomeServices Nevada Properties is the brokerage. Compensation is in a written buyer agreement. For listings, marketing is negotiated before the board goes up. Call (702) 222-1964.",
         },
         {
           heading: "Gate desks and architectural packets",
@@ -75,7 +75,7 @@ export default function LuxuryHomesLasVegasPage() {
         {
           question: "Can I see The Ridges this week?",
           answer:
-            "Usually yes, with gate access arranged. Call or text 702-222-1964.",
+            "Usually yes, with gate access arranged. Call or text (702) 222-1964.",
         },
         {
           question: "Is MacDonald Highlands in Summerlin?",

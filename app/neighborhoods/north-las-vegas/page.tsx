@@ -64,6 +64,10 @@ export default function NorthLasVegasPage() {
           heading: "Commute vs Centennial Hills",
           body: "I-15 and the northern 215 are the spines. Centennial Hills (89149 / 89131 / 89143) shares a freeway corridor, not a city hall. Time both if you work in Summerlin or at Harry Reid. Email homes@heyberkshire.com or call (702) 222-1964 with the workplace address for a drive-time matrix, not a city slogan.",
         },
+        {
+          heading: "How I send North Las Vegas matches",
+          body: "Name Aliante, Tule Springs, Valley Vista, or in-fill — plus occupancy vs rental. I filter MLS by subdivision, not the city median. Email homes@heyberkshire.com or call (702) 222-1964. I do not manage rentals.",
+        },
       ]}
       faqs={[
         {

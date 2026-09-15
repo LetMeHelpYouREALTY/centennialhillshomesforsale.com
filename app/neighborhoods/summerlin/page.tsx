@@ -64,7 +64,7 @@ export default function SummerlinPage() {
         },
         {
           heading: "First-party representation",
-          body: "This page is written for heyberkshire.com readers. I do not rehost another brokerage’s Summerlin guide. Builder incentives, if any lot is still selling new, are negotiated with your own agent. Client line: 702-222-1964.",
+          body: "This page is written for heyberkshire.com readers. I do not rehost another brokerage’s Summerlin guide. Builder incentives, if any lot is still selling new, are negotiated with your own agent. Client line: (702) 222-1964.",
         },
         {
           heading: "How I send Summerlin matches",

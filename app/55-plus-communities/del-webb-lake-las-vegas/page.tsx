@@ -75,6 +75,10 @@ export default function DelWebbLakeLasVegasPage() {
           heading: "Lake amenities vs the Del Webb village",
           body: "Marina, resort parking, and trail rules are their own documents — not the citywide Lake Las Vegas listing median. I walk those before you waive due diligence. Email homes@heyberkshire.com or call (702) 222-1964 with the village street so I filter MLS by Del Webb, not 89011 alone.",
         },
+        {
+          heading: "How I send Del Webb Lake Las Vegas matches",
+          body: "Name the Del Webb village street if you have it. I filter MLS by subdivision, not the Lake Las Vegas area sample. Email homes@heyberkshire.com or call (702) 222-1964 — marina and resort rules stay on the packet, not on this page.",
+        },
       ]}
       faqs={[
         {

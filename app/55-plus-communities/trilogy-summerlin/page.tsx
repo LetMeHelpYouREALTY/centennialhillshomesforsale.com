@@ -72,6 +72,10 @@ export default function TrilogySummerlinPage() {
           heading: "89135 comps, not 89134",
           body: `Trilogy is Summerlin South / 89135 product. I will not price a bid from Sun City Summerlin’s 89134 listing median. As of ${MARKET_SNAPSHOT_AS_OF}, the Summerlin South listing sample is ${formatUsd(LISTING_MEDIANS_USD.summerlinSouth)} — still not a Trilogy sold price. Email homes@heyberkshire.com or call (702) 222-1964 with the plan name.`,
         },
+        {
+          heading: "How I send Trilogy matches",
+          body: "Name the Shea plan if you know it, plus occupancy rules that matter. I pull Trilogy-only sales in 89135 — not Siena, not Sun City Summerlin. Email homes@heyberkshire.com or call (702) 222-1964 so I can schedule the listing desk.",
+        },
       ]}
       faqs={[
         {
@@ -86,7 +90,7 @@ export default function TrilogySummerlinPage() {
         },
         {
           question: "How do I tour?",
-          answer: "Call 702-222-1964. I schedule with the listing desk.",
+          answer: "Call (702) 222-1964. I schedule with the listing desk.",
         },
         {
           question: "Can I email for a Trilogy CMA?",
