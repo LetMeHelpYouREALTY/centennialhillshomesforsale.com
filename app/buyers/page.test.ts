@@ -28,5 +28,8 @@ describe("buyers hub", () => {
     expect(src).not.toContain("Dr. Jan Duffy matches the file");
     expect(src).not.toContain("Dr. Jan matches the street");
     expect(src).not.toContain("Dr. Jan helps California");
+    expect(src).not.toContain("text-3xl mb-4");
+    expect(src).not.toContain("🌴");
+    expect(src).not.toContain("🔑");
   });
 });

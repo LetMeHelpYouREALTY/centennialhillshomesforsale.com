@@ -205,6 +205,10 @@ export default function Navbar() {
       href: "/buyers/first-time-buyers",
       label: "First-Time Buyers",
     },
+    {
+      href: "/buyers/california-relocator",
+      label: "California Relocators",
+    },
     { href: "/sellers", label: "Home Selling" },
     { href: "/luxury-homes", label: "Luxury Homes" },
     { href: "/55-plus-communities", label: "55+ Communities" },

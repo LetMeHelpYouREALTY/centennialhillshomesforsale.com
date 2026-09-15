@@ -41,8 +41,7 @@ import {
 export function generateMetadata(): Metadata {
   return withShareImage(
     {
-      title:
-        "Las Vegas Homes for Sale | MLS Property Search | Berkshire Hathaway HomeServices",
+      title: "Las Vegas Homes for Sale | Live MLS Search",
       description:
         "Browse Las Vegas and Henderson live MLS with Dr. Jan Duffy. Search by ZIP, village, and price. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [

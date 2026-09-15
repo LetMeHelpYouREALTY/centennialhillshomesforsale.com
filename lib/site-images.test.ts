@@ -274,6 +274,43 @@ describe("site images catalog", () => {
     });
     expect(areasServed.src).toBe(PAGE_HERO_IMAGES.homepage.src);
 
+    const areasIServe = resolveSectionImage({
+      heading: "Areas I serve",
+      neighborhoodName: "Las Vegas",
+      avoidSrc: PAGE_HERO_IMAGES.contact.src,
+    });
+    expect(areasIServe.src).toBe(PAGE_HERO_IMAGES.homepage.src);
+
+    const serviceAreas = resolveSectionImage({
+      heading: "Service Areas",
+      neighborhoodName: "Las Vegas",
+      avoidSrc: PAGE_HERO_IMAGES.googleBusiness.src,
+    });
+    expect(serviceAreas.src).toBe(PAGE_HERO_IMAGES.homepage.src);
+
+    const realEstateServices = resolveSectionImage({
+      heading: "Real Estate Services",
+      neighborhoodName: "Las Vegas",
+      avoidSrc: PAGE_HERO_IMAGES.googleBusiness.src,
+    });
+    expect(realEstateServices.src).toBe(PAGE_HERO_IMAGES.buyers.src);
+
+    const neighborhoodsCommunities = resolveSectionImage({
+      heading: "Las Vegas Neighborhoods & Communities",
+      neighborhoodName: "Las Vegas",
+      avoidSrc: PAGE_HERO_IMAGES.listings.src,
+    });
+    expect(neighborhoodsCommunities.src).toBe(
+      "/images/neighborhoods/summerlin.png",
+    );
+
+    const namedEmployers = resolveSectionImage({
+      heading: "Named employers and venues — not a growth slogan",
+      neighborhoodName: "Las Vegas",
+      avoidSrc: PAGE_HERO_IMAGES.market.src,
+    });
+    expect(namedEmployers.src).toBe(PAGE_HERO_IMAGES.relocation.src);
+
     const filesWorked = resolveSectionImage({
       heading: "Files I actually work",
       neighborhoodName: "Las Vegas",

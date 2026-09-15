@@ -38,7 +38,7 @@ import {
 export function generateMetadata(): Metadata {
   return withShareImage(
     {
-      title: "Home Buying Guide Las Vegas | Berkshire Hathaway HomeServices",
+      title: "Las Vegas Home Buying Guide | Live MLS",
       description:
         "Buy a Las Vegas or Henderson home with Dr. Jan Duffy, BHHS Nevada Properties. Written buyer-broker agreement and live MLS. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [
@@ -464,7 +464,6 @@ export default function BuyersPage() {
                 href="/buyers/california-relocator"
                 className="block min-h-11 bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
-                <div className="text-3xl mb-4">🌴</div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
                   California Relocators
                 </h3>
@@ -482,7 +481,6 @@ export default function BuyersPage() {
                 href="/buyers/first-time-buyers"
                 className="block min-h-11 bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
-                <div className="text-3xl mb-4">🔑</div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
                   First-Time Buyers
                 </h3>
@@ -499,7 +497,6 @@ export default function BuyersPage() {
                 href="/buyers/luxury-homes-las-vegas"
                 className="block min-h-11 bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
-                <div className="text-3xl mb-4">🏡</div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
                   Luxury Home Buyers
                 </h3>
@@ -516,7 +513,6 @@ export default function BuyersPage() {
                 href="/55-plus-communities"
                 className="block min-h-11 bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
-                <div className="text-3xl mb-4">☀️</div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
                   55+ HOPA Buyers
                 </h3>

@@ -50,8 +50,7 @@ import Image from "next/image";
 export function generateMetadata(): Metadata {
   return withShareImage(
     {
-      title:
-        "55+ Active Adult Communities Las Vegas | Sun City, Del Webb, Heritage | Dr. Jan Duffy",
+      title: "55+ Communities Las Vegas | Sun City, Siena, Del Webb",
       description:
         "Find 55+ homes in Las Vegas. Sun City Summerlin, Siena, Sun City Aliante, Del Webb Lake Las Vegas, Heritage at Stonebridge, Solera, Trilogy. Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [

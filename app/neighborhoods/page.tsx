@@ -24,7 +24,7 @@ import { HubConversionLinks } from "@/components/shared/HubConversionLinks";
 export function generateMetadata(): Metadata {
   return withShareImage(
     {
-      title: "Las Vegas Neighborhoods | Centennial Hills, Inspirada, Summerlin",
+      title: "Las Vegas Neighborhoods | Centennial Hills, Summerlin",
       description:
         "Centennial Hills, Inspirada, Tournament Hills, 89144, 89138, and Siena 55+ guides from Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [

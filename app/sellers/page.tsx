@@ -385,7 +385,6 @@ export default function SellersPage() {
                 href="/sellers/move-up"
                 className="block min-h-11 bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
-                <div className="text-3xl mb-4">🏡</div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
                   Move-Up Sellers
                 </h3>
@@ -400,7 +399,6 @@ export default function SellersPage() {
                 href="/sellers/downsizing"
                 className="block min-h-11 bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
-                <div className="text-3xl mb-4">🌴</div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
                   Downsizing
                 </h3>
@@ -416,7 +414,6 @@ export default function SellersPage() {
                 href="/sellers/divorce-probate"
                 className="block min-h-11 bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
-                <div className="text-3xl mb-4">⚖️</div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
                   Divorce & Probate
                 </h3>
@@ -431,7 +428,6 @@ export default function SellersPage() {
                 href="/sellers/relocation"
                 className="block min-h-11 bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
-                <div className="text-3xl mb-4">✈️</div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
                   Relocation
                 </h3>

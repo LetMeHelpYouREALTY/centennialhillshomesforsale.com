@@ -29,5 +29,8 @@ describe("sellers hub", () => {
     expect(src).not.toContain("Dr. Jan Duffy has been serving");
     expect(src).not.toContain("Dr. Jan Duffy manages");
     expect(src).not.toContain("Dr. Jan walks");
+    expect(src).not.toContain("text-3xl mb-4");
+    expect(src).not.toContain("🌴");
+    expect(src).not.toContain("⚖️");
   });
 });

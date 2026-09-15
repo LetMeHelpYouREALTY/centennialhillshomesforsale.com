@@ -398,12 +398,24 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
     src: PAGE_HERO_IMAGES.homeValuation.src,
   },
   {
-    test: /\b(areas served|bhhs nevada properties)\b/i,
+    test: /\b(areas served|areas i serve|service areas|bhhs nevada properties)\b/i,
     src: PAGE_HERO_IMAGES.homepage.src,
   },
   {
     test: /\bfiles i actually work\b/i,
     src: PAGE_HERO_IMAGES.office.src,
+  },
+  {
+    test: /\breal estate services\b/i,
+    src: PAGE_HERO_IMAGES.buyers.src,
+  },
+  {
+    test: /\bneighborhoods\s*(?:&|and)\s*communities\b/i,
+    src: "/images/neighborhoods/summerlin.png",
+  },
+  {
+    test: /\bnamed employers\b/i,
+    src: PAGE_HERO_IMAGES.relocation.src,
   },
   {
     test: /\bprefer a call\b/i,

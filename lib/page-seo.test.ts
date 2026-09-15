@@ -3,6 +3,7 @@ import {
   clipSerpDescription,
   SERP_DESCRIPTION_MAX,
   titleWithoutLayoutSuffix,
+  withClientEmail,
   withShareImage,
 } from "./page-seo";
 
@@ -170,6 +171,16 @@ describe("clipSerpDescription", () => {
     expect(listings.length).toBeLessThanOrEqual(SERP_DESCRIPTION_MAX);
     expect(listings).not.toMatch(/price\.\s*Call/);
     expect(listings).toContain("neighborhood");
+
+    const security = clipSerpDescription(
+      withClientEmail(
+        "Report vulnerabilities to security@heyberkshire.com. Responsible disclosure for heyberkshire.com — Dr. Jan Duffy, BHHS Nevada Properties.",
+      ),
+    );
+    expect(security.length).toBeLessThanOrEqual(SERP_DESCRIPTION_MAX);
+    expect(security).toContain("security@heyberkshire.com");
+    expect(security).toContain("(702) 222-1964");
+    expect(security).toContain("homes@heyberkshire.com");
   });
 });
 
