@@ -15,5 +15,6 @@ describe("NeighborhoodGuide conversion chrome", () => {
     expect(src).toContain("defaultQuery={zipCodes[0]}");
     expect(src).toContain("DEFAULT_GUIDE_RELATED");
     expect(src).toContain("text-pretty");
+    expect(src).not.toContain("<main");
   });
 });

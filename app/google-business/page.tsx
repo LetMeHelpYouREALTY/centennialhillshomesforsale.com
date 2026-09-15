@@ -105,7 +105,7 @@ export default function GoogleBusinessPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <main className="pb-16">
+      <div className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero - NAP Prominent */}
           <section className="max-w-5xl mx-auto mb-16">
@@ -691,7 +691,7 @@ export default function GoogleBusinessPage() {
         <div className="text-center text-sm text-slate-500 mt-8">
           Last Updated: September 2026
         </div>
-      </main>
+      </div>
       <PageCTA
         headline="Match the Google listing to this office"
         subheadline="9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Call (702) 222-1964 or email homes@heyberkshire.com."

@@ -12,5 +12,7 @@ describe("sellers hub", () => {
     expect(src).toContain("/neighborhoods/89138");
     expect(src).toContain("/55-plus-communities/siena");
     expect(src).toContain("Call or email Dr. Jan Duffy");
+    expect(src).not.toContain("leave money on the table");
+    expect(src).not.toContain("generate competition and sell");
   });
 });

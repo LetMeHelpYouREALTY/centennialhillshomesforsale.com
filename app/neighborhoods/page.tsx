@@ -272,7 +272,7 @@ export default function NeighborhoodsPage() {
         })}
       />
       <FAQSchema faqs={neighborhoodFaqs} />
-      <main className="pb-16">
+      <div className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -469,7 +469,7 @@ export default function NeighborhoodsPage() {
             formHeading="Ask about a neighborhood"
           />
         </div>
-      </main>
+      </div>
       <RealScoutListings />
     </>
   );

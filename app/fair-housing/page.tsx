@@ -36,7 +36,7 @@ export default function FairHousingPage() {
           url: "/fair-housing",
         })}
       />
-      <main className="bg-white pb-16">
+      <div className="bg-white pb-16">
         <div className="container mx-auto max-w-3xl px-4">
           <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-blue-600">
             Berkshire Hathaway HomeServices Nevada Properties
@@ -128,7 +128,7 @@ export default function FairHousingPage() {
           headline="Ask for a showing without a lifestyle slogan"
           subheadline="I describe square footage, amenities, named campuses, and commute times. Call (702) 222-1964 or email homes@heyberkshire.com."
         />
-      </main>
+      </div>
     </>
   );
 }

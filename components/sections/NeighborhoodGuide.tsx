@@ -156,7 +156,7 @@ export default function NeighborhoodGuide({
           city={city}
         />
       ) : null}
-      <main className="pb-16">
+      <div className="pb-16">
         <div className="container mx-auto px-4">
           <article className="mx-auto max-w-5xl">
             {hero.src ? <PageHeroImage src={hero.src} alt={hero.alt} /> : null}
@@ -393,7 +393,7 @@ export default function NeighborhoodGuide({
         </div>
         <VisitOffice compact />
         {showListings ? <RealScoutListings /> : null}
-      </main>
+      </div>
     </>
   );
 }

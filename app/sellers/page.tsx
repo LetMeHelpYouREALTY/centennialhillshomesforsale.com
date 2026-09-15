@@ -76,7 +76,7 @@ const sellingBenefits = [
     icon: BarChart,
     title: "Comps-based pricing",
     description:
-      "Dr. Jan has been serving Las Vegas since 2008, which means accurate pricing that attracts buyers without leaving money on the table. Overpriced homes sit and lose value; well-priced homes generate competition and sell for more.",
+      "Dr. Jan has served Las Vegas since 2008. List price comes from a CMA — sold comps and current actives — not an AVM or a sit-then-cut slogan.",
   },
   {
     icon: DollarSign,
@@ -183,7 +183,7 @@ export default function SellersPage() {
     <>
       <SchemaScript schemas={[sellerSchema, sellersPageSchema]} />
       <FAQSchema faqs={sellerFaqs} />
-      <main className="pb-16">
+      <div className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -582,7 +582,7 @@ export default function SellersPage() {
         <p className="mt-8 text-center text-sm text-slate-500">
           Last updated: September 2026
         </p>
-      </main>
+      </div>
       <RealScoutListings />
     </>
   );

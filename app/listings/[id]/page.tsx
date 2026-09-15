@@ -39,7 +39,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
   const { id } = await params;
 
   return (
-    <main className="pb-16">
+    <div className="pb-16">
       <div className="container mx-auto max-w-3xl px-4">
         <PageHeroImage
           src={PAGE_HERO_IMAGES.listings.src}
@@ -127,6 +127,6 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
         formHeading="Ask about a live listing"
         formType="property-search"
       />
-    </main>
+    </div>
   );
 }

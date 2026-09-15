@@ -107,7 +107,7 @@ export default function TopicGuide({
         })}
       />
       <FAQSchema faqs={guideFaqs} />
-      <main className="pb-16">
+      <div className="pb-16">
         <div className="container mx-auto px-4">
           <article className="mx-auto max-w-5xl">
             {imageSrc ? (
@@ -342,7 +342,7 @@ export default function TopicGuide({
         </div>
         <VisitOffice compact />
         {showListings ? <RealScoutListings /> : null}
-      </main>
+      </div>
     </>
   );
 }

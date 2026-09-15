@@ -13,7 +13,7 @@ import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 
 export default function NotFound() {
   return (
-    <main className="bg-white pb-20 pt-8">
+    <div className="bg-white pb-20 pt-8">
       <div className="container mx-auto max-w-2xl px-4 text-center">
         <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-blue-600">
           404
@@ -106,6 +106,6 @@ export default function NotFound() {
         </ul>
       </div>
       <VisitOffice compact />
-    </main>
+    </div>
   );
 }

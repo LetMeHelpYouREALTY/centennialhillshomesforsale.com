@@ -214,7 +214,7 @@ export default function BuyersPage() {
     <>
       <SchemaScript schemas={[buyerSchema, buyersPageSchema]} />
       <FAQSchema faqs={buyerFaqs} />
-      <main className="pb-16">
+      <div className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -688,7 +688,7 @@ export default function BuyersPage() {
         <p className="mt-8 text-center text-sm text-slate-500">
           Last updated: September 2026
         </p>
-      </main>
+      </div>
       <RealScoutListings />
     </>
   );

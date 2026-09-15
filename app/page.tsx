@@ -175,7 +175,7 @@ export default async function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
-      <main>
+      <div>
         <section className="relative overflow-hidden bg-slate-900 py-24 text-white md:py-32">
           <Image
             src="/images/neighborhoods/centennial-hills.png"
@@ -405,7 +405,7 @@ export default async function Home() {
           formSource="homepage"
           formHeading="Ask about a Las Vegas address"
         />
-      </main>
+      </div>
     </>
   );
 }

@@ -19,6 +19,8 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const servicesRef = useRef<HTMLDivElement>(null);
+  const mobileNavRef = useRef<HTMLDivElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,14 +32,18 @@ export default function Navbar() {
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setIsMobileMenuOpen(false);
-        setIsServicesOpen(false);
+      if (event.key !== "Escape") {
+        return;
       }
+      if (isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+      setIsServicesOpen(false);
     };
     document.addEventListener("keydown", onKeyDown);
     return () => document.removeEventListener("keydown", onKeyDown);
-  }, []);
+  }, [isMobileMenuOpen]);
 
   useEffect(() => {
     const onPointerDown = (event: MouseEvent) => {
@@ -61,6 +67,10 @@ export default function Navbar() {
     if (!isMobileMenuOpen) return;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    const firstLink = mobileNavRef.current?.querySelector("a");
+    if (firstLink instanceof HTMLElement) {
+      firstLink.focus();
+    }
     return () => {
       document.body.style.overflow = previousOverflow;
     };
@@ -145,6 +155,7 @@ export default function Navbar() {
                 onClick={() => setIsServicesOpen((open) => !open)}
                 onMouseEnter={() => setIsServicesOpen(true)}
                 aria-expanded={isServicesOpen}
+                aria-haspopup="true"
                 aria-controls="services-menu"
                 aria-label="Services"
               >
@@ -228,6 +239,7 @@ export default function Navbar() {
               </a>
             </Button>
             <button
+              ref={menuButtonRef}
               type="button"
               className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md p-1 text-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
               onClick={() => setIsMobileMenuOpen((open) => !open)}
@@ -246,6 +258,7 @@ export default function Navbar() {
 
         {isMobileMenuOpen && (
           <div
+            ref={mobileNavRef}
             id="mobile-nav"
             className="mt-4 overscroll-contain border-t border-slate-200 pb-4 lg:hidden"
           >

@@ -401,7 +401,7 @@ export default function FiftyFiveCommunitiesPage() {
           __html: JSON.stringify(localBusinessSchema),
         }}
       />
-      <main className="pb-16">
+      <div className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -1055,7 +1055,7 @@ export default function FiftyFiveCommunitiesPage() {
             formHeading="Ask about a 55+ community"
           />
         </div>
-      </main>
+      </div>
       <RealScoutListings />
     </>
   );

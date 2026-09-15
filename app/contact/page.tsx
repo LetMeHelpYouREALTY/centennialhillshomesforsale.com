@@ -112,7 +112,7 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
       />
-      <main className="pb-16">
+      <div className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
           <div className="text-center mb-12">
@@ -466,7 +466,7 @@ export default function ContactPage() {
         <div className="text-center text-sm text-slate-500 mt-8">
           Last updated: September 2026
         </div>
-      </main>
+      </div>
       <VisitOffice compact />
       <PageCTA
         headline="Call before you tour"

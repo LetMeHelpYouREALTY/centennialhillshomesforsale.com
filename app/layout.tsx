@@ -94,9 +94,9 @@ export default function RootLayout({
         <SiteJsonLd />
         <Navbar />
         <SiteBreadcrumbs />
-        <div id="main-content" tabIndex={-1}>
+        <main id="main-content" tabIndex={-1}>
           {children}
-        </div>
+        </main>
         <Footer />
         <Analytics />
         <Script

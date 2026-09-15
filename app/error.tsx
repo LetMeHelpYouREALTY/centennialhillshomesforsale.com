@@ -24,7 +24,7 @@ export default function Error({
   }, [error]);
 
   return (
-    <main className="bg-white pb-20 pt-8">
+    <div className="bg-white pb-20 pt-8">
       <div className="container mx-auto max-w-2xl px-4 text-center">
         <h1 className="mb-4 text-3xl font-bold text-slate-900">
           Something went wrong
@@ -114,6 +114,6 @@ export default function Error({
           </li>
         </ul>
       </div>
-    </main>
+    </div>
   );
 }

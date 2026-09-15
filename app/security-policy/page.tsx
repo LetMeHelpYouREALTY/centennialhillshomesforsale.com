@@ -40,7 +40,7 @@ export default function SecurityPolicyPage() {
           url: "/security-policy",
         })}
       />
-      <main className="min-h-screen bg-white pb-16">
+      <div className="min-h-screen bg-white pb-16">
         <div className="container mx-auto max-w-4xl px-4">
           <PageHeroImage src={OFFICE_PHOTO_PATH} alt={OFFICE_PHOTO_ALT} />
           <h1 className="text-4xl font-bold text-slate-900 mb-8">
@@ -323,7 +323,7 @@ export default function SecurityPolicyPage() {
           headline="Questions about this policy?"
           subheadline={`${OFFICE_NAP.full}. Call ${CTA_PHONE} or email ${AGENT_EMAIL}.`}
         />
-      </main>
+      </div>
     </>
   );
 }

@@ -117,7 +117,7 @@ export default async function MarketInsightsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reportSchema) }}
       />
-      <main className="pb-16">
+      <div className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -729,7 +729,7 @@ export default async function MarketInsightsPage() {
         <div className="text-center text-sm text-slate-500 mt-8">
           Last Updated: September 2026
         </div>
-      </main>
+      </div>
       <VisitOffice compact />
       <PageCTA
         headline="Need the live comps, not a valley average?"

@@ -278,7 +278,7 @@ export default function ListingsPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(listingsSchema) }}
       />
-      <main className="pb-16">
+      <div className="pb-16">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
           <div className="max-w-4xl mx-auto text-center mb-12">
@@ -731,7 +731,7 @@ export default function ListingsPage({
         <p className="mt-8 text-center text-sm text-slate-500">
           Last updated: September 2026
         </p>
-      </main>
+      </div>
     </>
   );
 }
