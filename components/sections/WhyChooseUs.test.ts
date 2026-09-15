@@ -1,0 +1,15 @@
+import { readFileSync } from "node:fs";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+import { describe, expect, it } from "vitest";
+
+const here = dirname(fileURLToPath(import.meta.url));
+
+describe("WhyChooseUs homepage section", () => {
+  it("names Siena on the 55+ file type and keeps the office email", () => {
+    const src = readFileSync(resolve(here, "WhyChooseUs.tsx"), "utf8");
+    expect(src).toContain("Siena");
+    expect(src).toContain("homes@heyberkshire.com");
+    expect(src).toContain("AGENT_EMAIL_MAILTO");
+  });
+});

@@ -70,7 +70,7 @@ export default function HeroSection() {
         </h1>
         <p className="mb-8 max-w-2xl text-lg text-white/90 md:text-xl">
           Berkshire Hathaway HomeServices Nevada Properties. Search current
-          listings, then call the client line for a live pull.
+          listings, then call or email the client line for a live pull.
         </p>
         <div className="mb-4 flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row">
           <a

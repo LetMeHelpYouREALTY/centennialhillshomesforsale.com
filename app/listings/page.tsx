@@ -40,12 +40,14 @@ export const metadata: Metadata = withShareImage(
     title:
       "Las Vegas Homes for Sale | MLS Property Search | Berkshire Hathaway HomeServices",
     description:
-      "Browse all Las Vegas and Henderson homes for sale with live MLS listings. Search by neighborhood, price, and features. Dr. Jan Duffy, Berkshire Hathaway HomeServices. Call (702) 222-1964.",
+      "Browse all Las Vegas and Henderson homes for sale with live MLS listings. Search by neighborhood, price, and features. Dr. Jan Duffy, Berkshire Hathaway HomeServices. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Las Vegas homes for sale",
       "Henderson real estate",
       "MLS listings Las Vegas",
       "Summerlin homes",
+      "89138 homes for sale",
+      "Siena Las Vegas",
       "houses for sale Las Vegas",
       "Berkshire Hathaway listings",
     ],
@@ -56,7 +58,7 @@ export const metadata: Metadata = withShareImage(
 const listingsPageSchema = generateWebPageSchema({
   name: "Las Vegas Homes for Sale",
   description:
-    "Browse Las Vegas and Henderson homes for sale with live MLS listings. Dr. Jan Duffy, Berkshire Hathaway HomeServices.",
+    "Browse Las Vegas and Henderson homes for sale with live MLS listings. Dr. Jan Duffy, Berkshire Hathaway HomeServices. Call (702) 222-1964 or email homes@heyberkshire.com.",
   url: "/listings",
 });
 
@@ -65,7 +67,7 @@ const listingsSchema = {
   "@type": "CollectionPage",
   name: "Las Vegas MLS Property Listings",
   description:
-    "Live MLS property search for Las Vegas, Henderson, and Summerlin homes for sale",
+    "Live MLS property search for Las Vegas, Henderson, Summerlin, 89138, and 55+ campuses such as Siena",
   url: "https://heyberkshire.com/listings",
   about: {
     "@type": "RealEstateAgent",

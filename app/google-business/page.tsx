@@ -76,7 +76,7 @@ export default function GoogleBusinessPage() {
         schema={generateWebPageSchema({
           name: "Dr. Jan Duffy, REALTOR® Las Vegas",
           description:
-            "Dr. Jan Duffy is a Las Vegas REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964.",
+            "Dr. Jan Duffy is a Las Vegas REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
           url: "/google-business",
         })}
       />
@@ -261,7 +261,7 @@ export default function GoogleBusinessPage() {
                 <Users className="h-5 w-5 text-blue-600" aria-hidden="true" />
                 Experience & Background
               </h3>
-              <p className="text-slate-700 leading-relaxed">
+              <p className="text-pretty text-slate-700 leading-relaxed">
                 {gbpDescription.whoWeAre}
               </p>
             </div>
@@ -272,7 +272,7 @@ export default function GoogleBusinessPage() {
                 <Home className="h-5 w-5 text-blue-600" aria-hidden="true" />
                 Services & Value
               </h3>
-              <p className="text-slate-700 leading-relaxed">
+              <p className="text-pretty text-slate-700 leading-relaxed">
                 {gbpDescription.whatWeDo}
               </p>
             </div>
@@ -283,7 +283,7 @@ export default function GoogleBusinessPage() {
                 <MapPin className="h-5 w-5 text-blue-600" aria-hidden="true" />
                 Areas Served
               </h3>
-              <p className="text-slate-700 leading-relaxed">
+              <p className="text-pretty text-slate-700 leading-relaxed">
                 {gbpDescription.whereWeServe}
               </p>
             </div>

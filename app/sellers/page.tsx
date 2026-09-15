@@ -55,7 +55,7 @@ const sellerSchema = generateServiceSchema({
 const sellersPageSchema = generateWebPageSchema({
   name: "Sell Your Las Vegas Home",
   description:
-    "Sell a Las Vegas or Henderson home with comps-based pricing and Dr. Jan Duffy. Request a CMA.",
+    "Sell a Las Vegas or Henderson home with comps-based pricing and Dr. Jan Duffy. Request a CMA. Call (702) 222-1964 or email homes@heyberkshire.com.",
   url: "/sellers",
 });
 

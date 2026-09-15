@@ -28,6 +28,8 @@ export const metadata: Metadata = withShareImage(
       "inspirada henderson",
       "tournament hills real estate",
       "89144 homes for sale",
+      "89138 homes for sale",
+      "Siena Summerlin",
     ],
   },
   PAGE_HERO_IMAGES.homepage,
@@ -238,7 +240,7 @@ const neighborhoodFaqs = [
   {
     question: "Is 89144 the same as Centennial Hills?",
     answer:
-      "No. 89144 is Summerlin (The Arbors, Trails, Queensridge). Centennial Hills is 89149, 89131, and 89143. Call (702) 222-1964 before you tour the wrong ZIP.",
+      "No. 89144 is Summerlin (The Arbors, Trails, Queensridge). Centennial Hills is 89149, 89131, and 89143. Call (702) 222-1964 or email homes@heyberkshire.com before you tour the wrong ZIP.",
   },
   {
     question: "Where should I start if I am relocating?",
@@ -265,7 +267,7 @@ export default function NeighborhoodsPage() {
         schema={generateWebPageSchema({
           name: "Las Vegas Neighborhoods",
           description:
-            "Centennial Hills, Inspirada, Tournament Hills, Summerlin, and Henderson guides from Dr. Jan Duffy.",
+            "Centennial Hills, Inspirada, Tournament Hills, 89138, Siena 55+, Summerlin, and Henderson guides from Dr. Jan Duffy.",
           url: "/neighborhoods",
         })}
       />
@@ -284,11 +286,11 @@ export default function NeighborhoodsPage() {
               src={PAGE_HERO_IMAGES.homepage.src}
               alt="Las Vegas and Henderson neighborhood street with desert mountain views"
             />
-            <p className="text-xl text-slate-600">
-              Centennial Hills, Inspirada, Tournament Hills, 89144, and 89138
-              are different maps. Listing medians below are from realtor.com as
-              of {MARKET_SNAPSHOT_AS_OF} — not a CMA. Pick the guide that
-              matches the street.
+            <p className="text-pretty text-xl text-slate-600">
+              Centennial Hills, Inspirada, Tournament Hills, 89144, 89138, and
+              Siena 55+ are different maps. Listing medians below are from
+              realtor.com as of {MARKET_SNAPSHOT_AS_OF} — not a CMA. Pick the
+              guide that matches the street.
             </p>
             <div className="mt-8">
               <MlsSearchForm inputId="mls-q-neighborhoods" />
@@ -452,7 +454,7 @@ export default function NeighborhoodsPage() {
                   <h3 className="mb-2 font-bold text-slate-900">
                     {faq.question}
                   </h3>
-                  <p className="text-slate-600">{faq.answer}</p>
+                  <p className="text-pretty text-slate-600">{faq.answer}</p>
                 </div>
               ))}
             </div>

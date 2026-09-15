@@ -165,7 +165,7 @@ export default async function Home() {
         schema={generateWebPageSchema({
           name: "Centennial Hills Homes for Sale",
           description:
-            "Centennial Hills homes for sale in northwest Las Vegas (89149, 89131, 89143). Search current listings with Dr. Jan Duffy.",
+            "Centennial Hills homes for sale in northwest Las Vegas (89149, 89131, 89143). Search current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
           url: canonical,
         })}
       />

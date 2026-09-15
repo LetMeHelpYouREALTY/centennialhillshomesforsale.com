@@ -41,7 +41,9 @@ export default function FAQSection({
           <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl">
             {title}
           </h2>
-          <p className="mx-auto max-w-3xl text-xl text-slate-600">{subtitle}</p>
+          <p className="mx-auto max-w-3xl text-pretty text-xl text-slate-600">
+            {subtitle}
+          </p>
         </div>
 
         <div className="mx-auto max-w-3xl">
@@ -84,7 +86,7 @@ export default function FAQSection({
                   hidden={!isOpen}
                   className="border-t border-slate-200 bg-slate-50 px-6 py-4"
                 >
-                  <p className="text-slate-700">{faq.answer}</p>
+                  <p className="text-pretty text-slate-700">{faq.answer}</p>
                 </div>
               </div>
             );

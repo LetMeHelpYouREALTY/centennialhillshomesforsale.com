@@ -82,7 +82,7 @@ const contactFaqs = [
   },
   {
     question: "How quickly can you respond to inquiries?",
-    answer: `I reply during posted office hours. For urgent files, call or text ${CTA_PHONE}. I will not promise a two-hour SLA on this page.`,
+    answer: `I reply during posted office hours. For urgent files, call or text ${CTA_PHONE} or email ${AGENT_EMAIL}. I will not promise a two-hour SLA on this page.`,
   },
   {
     question: "Do you charge for consultations?",
@@ -103,7 +103,7 @@ export default function ContactPage() {
         schema={generateWebPageSchema({
           name: "Contact Dr. Jan Duffy",
           description:
-            "Contact Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964.",
+            "Contact Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
           url: "/contact",
         })}
       />
@@ -129,9 +129,10 @@ export default function ContactPage() {
             <div className="mb-8 flex justify-center">
               <AgentPhoto variant="card" priority />
             </div>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Questions about Las Vegas real estate? Call or send the address.
-              Schedule an appointment or reach out directly.
+            <p className="text-pretty text-xl text-slate-600 max-w-2xl mx-auto">
+              Questions about Las Vegas real estate? Call {CTA_PHONE} or email{" "}
+              {AGENT_EMAIL} with the address. Schedule an appointment or reach
+              out directly.
             </p>
             <div className="mt-8">
               <MlsSearchForm inputId="mls-q-contact" />
@@ -148,7 +149,7 @@ export default function ContactPage() {
               >
                 Call, email, or visit the office
               </SectionHeading>
-              <p className="text-slate-700 mb-8">
+              <p className="text-pretty text-slate-700 mb-8">
                 Whether you're buying your first home, selling a luxury
                 property, or looking at a rental, I will pull live comps and put
                 compensation in writing. Serving Las Vegas since 2008 with{" "}

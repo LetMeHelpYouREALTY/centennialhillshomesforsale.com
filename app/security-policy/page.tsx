@@ -53,7 +53,7 @@ export default function SecurityPolicyPage() {
               <h2 className="text-2xl font-semibold text-slate-900 mb-4">
                 Our Commitment to Security
               </h2>
-              <p className="text-slate-700 leading-relaxed">
+              <p className="text-pretty text-slate-700 leading-relaxed">
                 At Berkshire Hathaway HomeServices Nevada Properties, we take
                 the security of our systems and the privacy of our clients
                 seriously. This page outlines our security practices and
@@ -66,7 +66,7 @@ export default function SecurityPolicyPage() {
               <h2 className="text-2xl font-semibold text-slate-900 mb-4">
                 Reporting Security Vulnerabilities
               </h2>
-              <p className="text-slate-700 leading-relaxed mb-4">
+              <p className="text-pretty text-slate-700 leading-relaxed mb-4">
                 If you have discovered a security vulnerability, we appreciate
                 your help in disclosing it to us responsibly.
               </p>
@@ -173,7 +173,7 @@ export default function SecurityPolicyPage() {
               <h2 className="text-2xl font-semibold text-slate-900 mb-4">
                 Third-Party Services
               </h2>
-              <p className="text-slate-700 mb-4">
+              <p className="text-pretty text-slate-700 mb-4">
                 We use third-party services for hosting, CRM, MLS search, and
                 scheduling:
               </p>
@@ -203,7 +203,7 @@ export default function SecurityPolicyPage() {
                   <strong>Anthropic:</strong> AI assistance (Claude)
                 </li>
               </ul>
-              <p className="text-slate-700 mt-4">
+              <p className="text-pretty text-slate-700 mt-4">
                 Each service maintains its own security practices and compliance
                 certifications.
               </p>
@@ -237,7 +237,7 @@ export default function SecurityPolicyPage() {
               <h2 className="text-2xl font-semibold text-slate-900 mb-4">
                 Out of Scope
               </h2>
-              <p className="text-slate-700 mb-4">
+              <p className="text-pretty text-slate-700 mb-4">
                 Please do not report the following (not considered
                 vulnerabilities):
               </p>
@@ -260,7 +260,7 @@ export default function SecurityPolicyPage() {
               <h2 className="text-2xl font-semibold text-slate-900 mb-4">
                 Your Security
               </h2>
-              <p className="text-slate-700 mb-4">
+              <p className="text-pretty text-slate-700 mb-4">
                 To protect your information when using our site:
               </p>
               <ul className="list-disc pl-6 text-slate-700 space-y-2">
@@ -281,7 +281,7 @@ export default function SecurityPolicyPage() {
               <h2 className="text-2xl font-semibold text-slate-900 mb-4">
                 Questions?
               </h2>
-              <p className="text-slate-700 mb-4">
+              <p className="text-pretty text-slate-700 mb-4">
                 For general questions about our security practices:
               </p>
               <div className="bg-slate-100 p-6 rounded-lg">

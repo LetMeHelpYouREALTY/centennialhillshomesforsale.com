@@ -52,7 +52,7 @@ const features = [
     icon: Home,
     title: "Written files by type",
     description:
-      "Buying, selling, 55+, luxury, and new construction — each on its own written agreement.",
+      "Buying, selling, 55+ (Siena, Trilogy, Sun City), luxury, and new construction — each on its own written agreement.",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function WhyChooseUs() {
           >
             How Dr. Jan Duffy actually works a file
           </SectionHeading>
-          <p className="mx-auto max-w-3xl text-xl text-slate-600">
+          <p className="mx-auto max-w-3xl text-pretty text-xl text-slate-600">
             Berkshire Hathaway HomeServices Nevada Properties — local closings
             with a national brand behind the contract.
           </p>
@@ -88,7 +88,9 @@ export default function WhyChooseUs() {
                 <h3 className="mb-2 text-xl font-bold text-slate-900">
                   {feature.title}
                 </h3>
-                <p className="text-slate-600">{feature.description}</p>
+                <p className="text-pretty text-slate-600">
+                  {feature.description}
+                </p>
               </li>
             );
           })}

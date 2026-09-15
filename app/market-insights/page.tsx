@@ -60,7 +60,7 @@ export const metadata: Metadata = withShareImage(
 const marketPageSchema = generateWebPageSchema({
   name: "Centennial Hills Market Insights 2026",
   description:
-    "First-party Centennial Hills market insights: 89149 vs 89144, Inspirada new-construction wind-down, and northwest Las Vegas listing medians.",
+    "First-party Centennial Hills market insights: 89149 vs 89144, Inspirada new-construction wind-down, and northwest Las Vegas listing medians. Call (702) 222-1964 or email homes@heyberkshire.com.",
   url: "/market-insights",
 });
 
@@ -132,7 +132,7 @@ export default async function MarketInsightsPage() {
               src={PAGE_HERO_IMAGES.market.src}
               alt={PAGE_HERO_IMAGES.market.alt}
             />
-            <p className="text-xl text-slate-600">
+            <p className="text-pretty text-xl text-slate-600">
               First-party notes for this website — 89149 vs 89144, Inspirada’s
               remaining new homes, and why a cloned valley-wide report will not
               rank here. Updated {MARKET_SNAPSHOT_AS_OF}.
@@ -686,7 +686,7 @@ export default async function MarketInsightsPage() {
                   <h3 className="mb-2 font-bold text-slate-900">
                     {faq.question}
                   </h3>
-                  <p className="text-slate-600">{faq.answer}</p>
+                  <p className="text-pretty text-slate-600">{faq.answer}</p>
                 </div>
               ))}
             </div>

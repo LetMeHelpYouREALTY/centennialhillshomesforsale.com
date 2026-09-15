@@ -28,6 +28,26 @@ describe("RealEstateAgent JSON-LD", () => {
     expect(schema.priceRange).toBe("$$");
   });
 
+  it("names Centennial Hills, Summerlin West, and Siena in areaServed", () => {
+    const names = schema.areaServed.map(
+      (place: { name: string }) => place.name,
+    );
+    expect(names).toEqual(
+      expect.arrayContaining([
+        "Las Vegas",
+        "Henderson",
+        "Summerlin",
+        "Centennial Hills",
+        "Summerlin West",
+        "Siena",
+      ]),
+    );
+  });
+
+  it("puts the client email in the organization description", () => {
+    expect(String(schema.description)).toContain("homes@heyberkshire.com");
+  });
+
   it("uses 2008 as the public practice year", () => {
     expect(schema.foundingDate).toBe("2008");
   });

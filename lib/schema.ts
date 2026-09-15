@@ -141,6 +141,18 @@ export function generateRealEstateAgentSchema() {
         "@type": "Place",
         name: "Green Valley",
       },
+      {
+        "@type": "Place",
+        name: "Centennial Hills",
+      },
+      {
+        "@type": "Place",
+        name: "Summerlin West",
+      },
+      {
+        "@type": "Place",
+        name: "Siena",
+      },
     ],
     openingHoursSpecification: OPENING_HOURS_SPEC.map((spec) => ({
       "@type": "OpeningHoursSpecification",

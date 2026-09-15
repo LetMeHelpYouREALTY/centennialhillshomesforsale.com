@@ -18,7 +18,7 @@ export const siteConfig = {
   shortName: "BHHS",
   url: "https://heyberkshire.com",
   description:
-    "Las Vegas and Henderson real estate with Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Buy, sell, or request a CMA. Call (702) 222-1964.",
+    "Las Vegas and Henderson real estate with Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Buy, sell, or request a CMA. Call (702) 222-1964 or email homes@heyberkshire.com.",
 };
 
 export const agentInfo = {
@@ -193,6 +193,22 @@ export const neighborhoods = [
     highlights: ["Mountain access", "Parks", "Shopping", "Town Center"],
   },
   {
+    name: "89138 Summerlin West",
+    slug: "89138",
+    description:
+      "Summerlin West ZIP — Reverence and later Howard Hughes villages",
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.summerlinWest),
+    highlights: ["89138", "Reverence", "Newer vintage", "Red Rock access"],
+  },
+  {
+    name: "Siena",
+    slug: "siena",
+    description:
+      "Guard-gated 55+ HOPA campus in Summerlin South. Confirm HOA and occupancy on resale docs",
+    medianPrice: "Ask CMA",
+    highlights: ["55+ HOPA", "Summerlin South", "Guard-gated", "Live CMA"],
+  },
+  {
     name: "Inspirada",
     slug: "inspirada",
     description: "Henderson master-planned community with resort-style living",
@@ -274,7 +290,7 @@ export const expertQuotes = {
   market: `"The Las Vegas market moves by village and by week. I will not invent a 20-offer headline. Buyers get a live CMA and a written offer plan."`,
   buyers: `"My job isn't just to show you houses—it's to make sure you don't overpay, that you understand what you're buying, and that you're protected through every step of the transaction."`,
   sellers: `"Pricing your home to the comps from day one is the single most important listing decision. Overpriced homes sit, and every extra day on market costs carrying cost and buyer leverage."`,
-  luxury: `"Luxury here means listed homes from $1.5M+ in Summerlin, The Ridges, and MacDonald Highlands. I write a buyer-broker or listing agreement and pull recent GLVAR comps. Call (702) 222-1964."`,
+  luxury: `"Luxury here means listed homes from $1.5M+ in Summerlin, The Ridges, and MacDonald Highlands. I write a buyer-broker or listing agreement and pull recent GLVAR comps. Call (702) 222-1964 or email homes@heyberkshire.com."`,
   investment: `"Cap rate, HOA, and insurance are on the worksheet. I will not rank Las Vegas rental yields against the country from this page."`,
   relocation: `"Moving to a new city is stressful enough. I handle neighborhood tours, commute timing, contractor referrals, and a written buy-sell calendar so you can focus on the move."`,
   newConstruction: `"Builders have sales agents who work for them, not you. Register me before the first model-home visit. Compensation is in the written buyer agreement — it is not 'free' as a slogan."`,
@@ -293,7 +309,7 @@ export const commonFAQs = {
       question:
         "What areas does Berkshire Hathaway HomeServices Nevada Properties cover?",
       answer:
-        "BHHS Nevada Properties serves Las Vegas, Henderson, North Las Vegas, and Clark County, including Summerlin, The Ridges, Skye Canyon, Southern Highlands, Green Valley, and Henderson master-planned communities.",
+        "BHHS Nevada Properties serves Las Vegas, Henderson, North Las Vegas, and Clark County, including Centennial Hills, Summerlin (89138 and 89144), The Ridges, Skye Canyon, Southern Highlands, Green Valley, and 55+ campuses such as Siena and Trilogy.",
     },
     {
       question: "How do Berkshire Hathaway HomeServices agents get paid?",

@@ -61,7 +61,7 @@ const buyerSchema = generateServiceSchema({
 const buyersPageSchema = generateWebPageSchema({
   name: "Las Vegas Home Buyer Representation",
   description:
-    "Buy a Las Vegas or Henderson home with Dr. Jan Duffy. Written buyer-broker agreement and live MLS.",
+    "Buy a Las Vegas or Henderson home with Dr. Jan Duffy. Written buyer-broker agreement and live MLS. Call (702) 222-1964 or email homes@heyberkshire.com.",
   url: "/buyers",
 });
 
