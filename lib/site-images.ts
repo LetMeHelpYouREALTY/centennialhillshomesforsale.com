@@ -382,6 +382,42 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
     src: PAGE_HERO_IMAGES.sellersListing.src,
   },
   {
+    test: /\bhome buying process\b/i,
+    src: PAGE_HERO_IMAGES.firstTimeBuyers.src,
+  },
+  {
+    test: /\bneighborhoods for home buyers\b/i,
+    src: "/images/neighborhoods/summerlin.png",
+  },
+  {
+    test: /\bproperty searches\b/i,
+    src: PAGE_HERO_IMAGES.homepage.src,
+  },
+  {
+    test: /\bprice guide\b/i,
+    src: PAGE_HERO_IMAGES.homeValuation.src,
+  },
+  {
+    test: /\b(areas served|bhhs nevada properties)\b/i,
+    src: PAGE_HERO_IMAGES.homepage.src,
+  },
+  {
+    test: /\bfiles i actually work\b/i,
+    src: PAGE_HERO_IMAGES.office.src,
+  },
+  {
+    test: /\bprefer a call\b/i,
+    src: VISIT_OFFICE_PHOTO_PATH,
+  },
+  {
+    test: /\bwhat this page is\b/i,
+    src: PAGE_HERO_IMAGES.listings.src,
+  },
+  {
+    test: /\bwhat this means\b/i,
+    src: PAGE_HERO_IMAGES.buyers.src,
+  },
+  {
     test: /\b(inspections?|due diligence)\b/i,
     src: PAGE_HERO_IMAGES.homeValuation.src,
   },
@@ -444,6 +480,10 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
   {
     test: /\b(faqs?|questions?)\b/i,
     src: VISIT_OFFICE_PHOTO_PATH,
+  },
+  {
+    test: /\b(related pages|nearby pages)\b/i,
+    src: PAGE_HERO_IMAGES.listings.src,
   },
 ];
 

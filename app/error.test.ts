@@ -19,6 +19,7 @@ describe("error recovery screen", () => {
     expect(src).toContain("/home-valuation");
     expect(src).toContain("/relocation");
     expect(src).toContain("/buyers/first-time-buyers");
+    expect(src).toContain("/buyers/california-relocator");
     expect(src).toContain("call {CTA_PHONE}");
     expect(src).toContain("TEXT_LINK_CLASS");
     expect(src).toContain("GoogleReviewsCta");

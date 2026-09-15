@@ -128,6 +128,14 @@ export default function NotFound() {
               First-Time Las Vegas Buyers
             </Link>
           </li>
+          <li>
+            <Link
+              href="/buyers/california-relocator"
+              className={TEXT_LINK_CLASS}
+            >
+              California to Las Vegas
+            </Link>
+          </li>
         </ul>
       </div>
       <GoogleReviewsCta className="bg-white" />

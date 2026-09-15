@@ -140,6 +140,14 @@ export default function GlobalError({
                 </a>
               </li>
               <li>
+                <a
+                  href="/buyers/california-relocator"
+                  className={TEXT_LINK_CLASS}
+                >
+                  California to Las Vegas
+                </a>
+              </li>
+              <li>
                 <a href="/contact" className={TEXT_LINK_CLASS}>
                   Contact Dr. Jan Duffy
                 </a>

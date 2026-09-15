@@ -312,6 +312,7 @@ export function LeadCaptureForm({
           id={ids.email}
           name="email"
           type="email"
+          inputMode="email"
           autoComplete="email"
           spellCheck={false}
           enterKeyHint="next"
@@ -366,6 +367,7 @@ export function LeadCaptureForm({
                 name="priceMin"
                 type="number"
                 inputMode="numeric"
+                enterKeyHint="next"
                 autoComplete="off"
                 value={formData.priceMin}
                 onChange={handleChange}
@@ -386,6 +388,7 @@ export function LeadCaptureForm({
                 name="priceMax"
                 type="number"
                 inputMode="numeric"
+                enterKeyHint="next"
                 autoComplete="off"
                 value={formData.priceMax}
                 onChange={handleChange}
@@ -408,6 +411,7 @@ export function LeadCaptureForm({
                 name="bedrooms"
                 type="number"
                 inputMode="numeric"
+                enterKeyHint="next"
                 autoComplete="off"
                 value={formData.bedrooms}
                 onChange={handleChange}
@@ -429,6 +433,7 @@ export function LeadCaptureForm({
                 name="bathrooms"
                 type="number"
                 inputMode="decimal"
+                enterKeyHint="next"
                 autoComplete="off"
                 step="0.5"
                 value={formData.bathrooms}

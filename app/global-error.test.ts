@@ -18,6 +18,7 @@ describe("global error recovery screen", () => {
     expect(src).toContain("/home-valuation");
     expect(src).toContain("/relocation");
     expect(src).toContain("/buyers/first-time-buyers");
+    expect(src).toContain("/buyers/california-relocator");
     expect(src).toContain("<main");
     expect(src).toContain('id="main-content"');
     expect(src).toContain("SkipLink");

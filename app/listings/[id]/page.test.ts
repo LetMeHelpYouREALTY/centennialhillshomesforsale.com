@@ -16,6 +16,7 @@ describe("listing placeholder page", () => {
     expect(src).toContain("/home-valuation");
     expect(src).toContain("/relocation");
     expect(src).toContain("/buyers/first-time-buyers");
+    expect(src).toContain("/buyers/california-relocator");
     expect(src).not.toContain("She will pull");
   });
 });

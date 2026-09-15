@@ -157,6 +157,14 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
             </Link>
           </li>
           <li>
+            <Link
+              href="/buyers/california-relocator"
+              className={TEXT_LINK_CLASS}
+            >
+              California to Las Vegas
+            </Link>
+          </li>
+          <li>
             <Link href="/contact" className={TEXT_LINK_CLASS}>
               Contact Dr. Jan Duffy
             </Link>

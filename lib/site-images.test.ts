@@ -6,6 +6,7 @@ import {
   cloudflareImageId,
   getNeighborhoodImage,
   OFFICE_PHOTO_PATH,
+  VISIT_OFFICE_PHOTO_PATH,
   resolveSectionImage,
 } from "./site-images";
 
@@ -236,6 +237,84 @@ describe("site images catalog", () => {
       avoidSrc: PAGE_HERO_IMAGES.market.src,
     });
     expect(villages.src).toBe(PAGE_HERO_IMAGES.homepage.src);
+
+    const buyingProcess = resolveSectionImage({
+      heading: "The Home Buying Process in Las Vegas",
+      neighborhoodName: "Las Vegas",
+      avoidSrc: PAGE_HERO_IMAGES.buyers.src,
+    });
+    expect(buyingProcess.src).toBe(PAGE_HERO_IMAGES.firstTimeBuyers.src);
+    expect(buyingProcess.src).not.toBe(PAGE_HERO_IMAGES.buyers.src);
+
+    const buyerNeighborhoods = resolveSectionImage({
+      heading: "Las Vegas Neighborhoods for Home Buyers",
+      neighborhoodName: "Las Vegas",
+      avoidSrc: PAGE_HERO_IMAGES.buyers.src,
+    });
+    expect(buyerNeighborhoods.src).toBe("/images/neighborhoods/summerlin.png");
+
+    const propertySearches = resolveSectionImage({
+      heading: "Popular Property Searches in Las Vegas",
+      neighborhoodName: "Las Vegas",
+      avoidSrc: PAGE_HERO_IMAGES.listings.src,
+    });
+    expect(propertySearches.src).toBe(PAGE_HERO_IMAGES.homepage.src);
+
+    const priceGuide = resolveSectionImage({
+      heading: "Las Vegas Home Price Guide",
+      neighborhoodName: "Las Vegas",
+      avoidSrc: PAGE_HERO_IMAGES.listings.src,
+    });
+    expect(priceGuide.src).toBe(PAGE_HERO_IMAGES.homeValuation.src);
+
+    const areasServed = resolveSectionImage({
+      heading: "Areas Served by BHHS Nevada Properties",
+      neighborhoodName: "Las Vegas",
+      avoidSrc: PAGE_HERO_IMAGES.about.src,
+    });
+    expect(areasServed.src).toBe(PAGE_HERO_IMAGES.homepage.src);
+
+    const filesWorked = resolveSectionImage({
+      heading: "Files I actually work",
+      neighborhoodName: "Las Vegas",
+      avoidSrc: PAGE_HERO_IMAGES.about.src,
+    });
+    expect(filesWorked.src).toBe(PAGE_HERO_IMAGES.office.src);
+
+    const preferCall = resolveSectionImage({
+      heading: "Prefer a call or email?",
+      neighborhoodName: "Las Vegas",
+      avoidSrc: PAGE_HERO_IMAGES.contact.src,
+    });
+    expect(preferCall.src).toBe(VISIT_OFFICE_PHOTO_PATH);
+
+    const whatThisPage = resolveSectionImage({
+      heading: "What this page is (and is not)",
+      neighborhoodName: "Las Vegas",
+      avoidSrc: PAGE_HERO_IMAGES.market.src,
+    });
+    expect(whatThisPage.src).toBe(PAGE_HERO_IMAGES.listings.src);
+
+    const whatThisMeans = resolveSectionImage({
+      heading: "What This Means for You",
+      neighborhoodName: "Las Vegas",
+      avoidSrc: PAGE_HERO_IMAGES.market.src,
+    });
+    expect(whatThisMeans.src).toBe(PAGE_HERO_IMAGES.buyers.src);
+
+    const relatedPages = resolveSectionImage({
+      heading: "Related pages for services",
+      neighborhoodName: "Las Vegas",
+    });
+    expect(relatedPages.src).toBe(PAGE_HERO_IMAGES.listings.src);
+
+    const nearbyCentennial = resolveSectionImage({
+      heading: "Nearby pages from Centennial Hills",
+      neighborhoodName: "Centennial Hills",
+    });
+    expect(nearbyCentennial.src).toBe(
+      "/images/neighborhoods/centennial-hills.png",
+    );
 
     const root = path.join(__dirname, "..", "public");
     expect(existsSync(path.join(root, golf.src.replace(/^\//, "")))).toBe(true);
