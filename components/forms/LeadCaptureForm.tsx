@@ -11,7 +11,7 @@
 
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { Turnstile } from "@marsidev/react-turnstile";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -56,6 +56,22 @@ export function LeadCaptureForm({
   const firstNameRef = useRef<HTMLInputElement>(null);
   const lastNameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
+  const formId = useId();
+  const ids = {
+    error: `${formId}-error`,
+    firstName: `${formId}-firstName`,
+    lastName: `${formId}-lastName`,
+    email: `${formId}-email`,
+    phone: `${formId}-phone`,
+    priceMin: `${formId}-priceMin`,
+    priceMax: `${formId}-priceMax`,
+    bedrooms: `${formId}-bedrooms`,
+    bathrooms: `${formId}-bathrooms`,
+    timeline: `${formId}-timeline`,
+    preApproved: `${formId}-preApproved`,
+    message: `${formId}-message`,
+    turnstile: `${formId}-turnstile-pending`,
+  };
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -224,7 +240,7 @@ export function LeadCaptureForm({
       {error && (
         <div
           ref={errorRef}
-          id="lead-form-error"
+          id={ids.error}
           tabIndex={-1}
           className="rounded-lg border border-red-200 bg-red-50 p-4 text-red-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-600"
           role="alert"
@@ -237,12 +253,15 @@ export function LeadCaptureForm({
       {/* Basic Info */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="firstName" className="block text-sm font-medium mb-1">
+          <label
+            htmlFor={ids.firstName}
+            className="block text-sm font-medium mb-1"
+          >
             First Name <span className="text-red-500">*</span>
           </label>
           <Input
             ref={firstNameRef}
-            id="firstName"
+            id={ids.firstName}
             name="firstName"
             autoComplete="given-name"
             autoCapitalize="words"
@@ -252,18 +271,21 @@ export function LeadCaptureForm({
             required
             aria-required="true"
             aria-invalid={fieldInvalid("firstName")}
-            aria-describedby={error ? "lead-form-error" : undefined}
+            aria-describedby={error ? ids.error : undefined}
             disabled={loading}
           />
         </div>
 
         <div>
-          <label htmlFor="lastName" className="block text-sm font-medium mb-1">
+          <label
+            htmlFor={ids.lastName}
+            className="block text-sm font-medium mb-1"
+          >
             Last Name <span className="text-red-500">*</span>
           </label>
           <Input
             ref={lastNameRef}
-            id="lastName"
+            id={ids.lastName}
             name="lastName"
             autoComplete="family-name"
             autoCapitalize="words"
@@ -273,19 +295,19 @@ export function LeadCaptureForm({
             required
             aria-required="true"
             aria-invalid={fieldInvalid("lastName")}
-            aria-describedby={error ? "lead-form-error" : undefined}
+            aria-describedby={error ? ids.error : undefined}
             disabled={loading}
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium mb-1">
+        <label htmlFor={ids.email} className="block text-sm font-medium mb-1">
           Email <span className="text-red-500">*</span>
         </label>
         <Input
           ref={emailRef}
-          id="email"
+          id={ids.email}
           name="email"
           type="email"
           autoComplete="email"
@@ -295,20 +317,20 @@ export function LeadCaptureForm({
           required
           aria-required="true"
           aria-invalid={fieldInvalid("email")}
-          aria-describedby={error ? "lead-form-error" : undefined}
+          aria-describedby={error ? ids.error : undefined}
           disabled={loading}
         />
       </div>
 
       <div>
-        <label htmlFor="phone" className="block text-sm font-medium mb-1">
+        <label htmlFor={ids.phone} className="block text-sm font-medium mb-1">
           Phone{" "}
           <span className="font-normal text-slate-500">
             (recommended for a faster callback)
           </span>
         </label>
         <Input
-          id="phone"
+          id={ids.phone}
           name="phone"
           type="tel"
           autoComplete="tel"
@@ -330,13 +352,13 @@ export function LeadCaptureForm({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label
-                htmlFor="priceMin"
+                htmlFor={ids.priceMin}
                 className="block text-sm font-medium mb-1"
               >
                 Min Price
               </label>
               <Input
-                id="priceMin"
+                id={ids.priceMin}
                 name="priceMin"
                 type="number"
                 inputMode="numeric"
@@ -350,13 +372,13 @@ export function LeadCaptureForm({
 
             <div>
               <label
-                htmlFor="priceMax"
+                htmlFor={ids.priceMax}
                 className="block text-sm font-medium mb-1"
               >
                 Max Price
               </label>
               <Input
-                id="priceMax"
+                id={ids.priceMax}
                 name="priceMax"
                 type="number"
                 inputMode="numeric"
@@ -372,13 +394,13 @@ export function LeadCaptureForm({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label
-                htmlFor="bedrooms"
+                htmlFor={ids.bedrooms}
                 className="block text-sm font-medium mb-1"
               >
                 Bedrooms
               </label>
               <Input
-                id="bedrooms"
+                id={ids.bedrooms}
                 name="bedrooms"
                 type="number"
                 inputMode="numeric"
@@ -393,13 +415,13 @@ export function LeadCaptureForm({
 
             <div>
               <label
-                htmlFor="bathrooms"
+                htmlFor={ids.bathrooms}
                 className="block text-sm font-medium mb-1"
               >
                 Bathrooms
               </label>
               <Input
-                id="bathrooms"
+                id={ids.bathrooms}
                 name="bathrooms"
                 type="number"
                 inputMode="decimal"
@@ -416,13 +438,13 @@ export function LeadCaptureForm({
 
           <div>
             <label
-              htmlFor="timeline"
+              htmlFor={ids.timeline}
               className="block text-sm font-medium mb-1"
             >
               Timeline
             </label>
             <select
-              id="timeline"
+              id={ids.timeline}
               name="timeline"
               value={formData.timeline}
               onChange={handleChange}
@@ -440,7 +462,7 @@ export function LeadCaptureForm({
 
           <div className="flex items-center gap-2 min-h-11">
             <input
-              id="preApproved"
+              id={ids.preApproved}
               name="preApproved"
               type="checkbox"
               checked={formData.preApproved}
@@ -448,7 +470,7 @@ export function LeadCaptureForm({
               disabled={loading}
               className="h-5 w-5 rounded"
             />
-            <label htmlFor="preApproved" className="text-sm">
+            <label htmlFor={ids.preApproved} className="text-sm">
               I am pre-approved for financing
             </label>
           </div>
@@ -457,11 +479,11 @@ export function LeadCaptureForm({
 
       {/* Message */}
       <div>
-        <label htmlFor="message" className="block text-sm font-medium mb-1">
+        <label htmlFor={ids.message} className="block text-sm font-medium mb-1">
           {formType === "home-valuation" ? "Address and notes" : "Message"}
         </label>
         <textarea
-          id="message"
+          id={ids.message}
           name="message"
           autoComplete={
             formType === "home-valuation" ? "street-address" : "off"
@@ -500,10 +522,7 @@ export function LeadCaptureForm({
       )}
 
       {turnstilePending && (
-        <p
-          id="turnstile-pending-help"
-          className="text-center text-sm text-slate-600"
-        >
+        <p id={ids.turnstile} className="text-center text-sm text-slate-600">
           Complete the CAPTCHA to send.
         </p>
       )}
@@ -511,9 +530,7 @@ export function LeadCaptureForm({
       <Button
         type="submit"
         disabled={loading || turnstilePending}
-        aria-describedby={
-          turnstilePending ? "turnstile-pending-help" : undefined
-        }
+        aria-describedby={turnstilePending ? ids.turnstile : undefined}
         className="min-h-11 w-full"
       >
         {loading

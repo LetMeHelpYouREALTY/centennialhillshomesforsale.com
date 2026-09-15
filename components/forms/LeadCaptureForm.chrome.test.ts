@@ -9,6 +9,9 @@ describe("lead capture form chrome", () => {
   it("uses street-address autocomplete on CMA notes and numeric price inputs", () => {
     const src = readFileSync(resolve(here, "LeadCaptureForm.tsx"), "utf8");
     expect(src).toContain('formType === "home-valuation" ? "street-address"');
+    expect(src).toContain("useId");
+    expect(src).toContain("ids.firstName");
+    expect(src).not.toContain('id="firstName"');
     expect(src).toContain('inputMode="numeric"');
     expect(src).toContain('inputMode="decimal"');
     expect(src).toContain('inputMode="tel"');
