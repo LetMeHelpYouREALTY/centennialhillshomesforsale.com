@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Phone, MapPin, Star } from "lucide-react";
 import { CTA_PHONE, CTA_TEL, OFFICE_HOURS, OFFICE_NAP } from "@/lib/contact";
@@ -8,8 +7,11 @@ import {
   SeniorCommunitySchema,
 } from "@/components/SchemaScript";
 import { FairHousingNotice } from "@/components/shared/FairHousingNotice";
+import { PageHeroImage } from "@/components/shared/PageHeroImage";
+import { VisitOffice } from "@/components/shared/VisitOffice";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import { getPublicSiteUrl } from "@/lib/site-url";
+import { getNeighborhoodImage } from "@/lib/site-images";
 
 export type NeighborhoodFaq = {
   question: string;
@@ -29,6 +31,8 @@ export type NeighborhoodRelated = {
 export type NeighborhoodSection = {
   heading: string;
   body: string;
+  imageSrc?: string;
+  imageAlt?: string;
 };
 
 export type SeniorGuideDetails = {
@@ -89,6 +93,9 @@ export default function NeighborhoodGuide({
   children,
 }: NeighborhoodGuideProps) {
   const origin = getPublicSiteUrl();
+  const hero = imageSrc
+    ? { src: imageSrc, alt: imageAlt ?? `${name} homes in ${city}, Nevada` }
+    : getNeighborhoodImage(slug);
 
   return (
     <>
@@ -118,18 +125,7 @@ export default function NeighborhoodGuide({
       <main className="pb-16">
         <div className="container mx-auto px-4">
           <article className="mx-auto max-w-5xl">
-            {imageSrc ? (
-              <div className="relative mb-10 h-56 overflow-hidden rounded-2xl md:h-80">
-                <Image
-                  src={imageSrc}
-                  alt={imageAlt ?? `${name} homes in ${city}, Nevada`}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 1024px"
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            ) : null}
+            {hero.src ? <PageHeroImage src={hero.src} alt={hero.alt} /> : null}
 
             {badge ? (
               <p className="mb-4 inline-block rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-800">
@@ -171,6 +167,14 @@ export default function NeighborhoodGuide({
                 <h2 className="mb-4 text-2xl font-bold text-slate-900">
                   {section.heading}
                 </h2>
+                {section.imageSrc ? (
+                  <PageHeroImage
+                    src={section.imageSrc}
+                    alt={section.imageAlt ?? section.heading}
+                    priority={false}
+                    className="mb-6"
+                  />
+                ) : null}
                 <p className="whitespace-pre-line text-slate-700">
                   {section.body}
                 </p>
@@ -275,6 +279,7 @@ export default function NeighborhoodGuide({
             </section>
           </article>
         </div>
+        <VisitOffice compact />
         {showListings ? <RealScoutListings /> : null}
       </main>
     </>

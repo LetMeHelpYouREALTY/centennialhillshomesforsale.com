@@ -1,9 +1,16 @@
 /**
- * Cloudflare Image Loader for Next.js
+ * Cloudflare Images loader for Next.js.
  *
- * Custom image loader that optimizes images using Cloudflare Images
- * or falls back to standard optimization.
+ * Git files in /public/images are the backup source of truth.
+ * When NEXT_PUBLIC_CLOUDFLARE_IMAGES_ENABLED=true and
+ * NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH is set, delivery uses
+ * imagedelivery.net with custom ids matching the git path
+ * (slashes → hyphens, no extension).
+ *
+ * @see https://developers.cloudflare.com/images/transform-images/transform-via-url/
  */
+
+import { cloudflareImageId } from "./site-images";
 
 export default function cloudflareImageLoader({
   src,
@@ -14,31 +21,15 @@ export default function cloudflareImageLoader({
   width: number;
   quality?: number;
 }): string {
-  // If using Cloudflare Images (requires configuration)
   const useCloudflareImages =
     process.env.NEXT_PUBLIC_CLOUDFLARE_IMAGES_ENABLED === "true";
+  const accountHash = process.env.NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH;
 
-  if (useCloudflareImages && process.env.NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH) {
-    const accountHash = process.env.NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_HASH;
-    // Remove leading slash if present
-    const imagePath = src.startsWith("/") ? src.slice(1) : src;
-
-    // Build Cloudflare Images URL
-    const params = new URLSearchParams({
-      width: width.toString(),
-      quality: (quality || 85).toString(),
-      format: "auto", // Automatically serves WebP/AVIF when supported
-    });
-
-    return `https://imagedelivery.net/${accountHash}/${imagePath}?${params.toString()}`;
+  if (useCloudflareImages && accountHash) {
+    const imageId = cloudflareImageId(src);
+    const q = quality ?? 85;
+    return `https://imagedelivery.net/${accountHash}/${imageId}/w=${width},q=${q},fit=cover,format=auto`;
   }
 
-  // Fallback: Use query parameters for Worker-based optimization
-  const params = new URLSearchParams({
-    w: width.toString(),
-    q: (quality || 85).toString(),
-    f: "auto",
-  });
-
-  return `${src}?${params.toString()}`;
+  return src;
 }

@@ -19,6 +19,8 @@ import type { Metadata } from "next";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import { OFFICE_NAP } from "@/lib/contact";
 import { VisitOffice } from "@/components/shared/VisitOffice";
+import { PageHeroImage } from "@/components/shared/PageHeroImage";
+import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import {
   businessInfo,
   gbpDescription,
@@ -69,6 +71,10 @@ export default function GoogleBusinessPage() {
         <div className="container mx-auto px-4">
           {/* Hero - NAP Prominent */}
           <section className="max-w-5xl mx-auto mb-16">
+            <PageHeroImage
+              src={PAGE_HERO_IMAGES.googleBusiness.src}
+              alt={PAGE_HERO_IMAGES.googleBusiness.alt}
+            />
             <div className="bg-gradient-to-br from-slate-900 to-blue-900 text-white rounded-2xl p-8 md:p-12">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>

@@ -18,24 +18,24 @@ export interface GBPPost {
 // Template posts - Rotate these weekly
 export const gbpPostTemplates: GBPPost[] = [
   {
-    id: "market-update-jan-2026",
+    id: "market-update-sep-2026",
     type: "update",
-    title: "Las Vegas Real Estate Market Update - January 2026",
-    content: `The Las Vegas housing market remains strong heading into 2026! Here's what buyers and sellers need to know:
+    title: "Las Vegas Real Estate Market Update - September 2026",
+    content: `Las Vegas listing snapshot from realtor.com local market pages retrieved 2026-09-14 (listing medians, not a CMA):
 
-📊 Median home price: $450,000 (+4.2% YoY)
-🏠 Active listings: 4,850 homes
-⏱️ Average days on market: 28 days
-📈 Inventory: 2.1 months (seller's market)
+📊 Las Vegas city median listing: $479,000
+🏠 Henderson listing median: $534,950 (sold median $485,000)
+📍 Centennial Hills listing median: $514,500
+🧭 North Las Vegas listing median: $439,990
 
-Whether you're buying your first home in Henderson, selling in Summerlin, or looking at 55+ communities like Sun City, now is a great time to make your move.
+Days on market and inventory move weekly — ask for a live pull before you bid or list.
 
-Call Dr. Jan Duffy at (702) 222-1964 for a free market analysis of your home or neighborhood.`,
+Call Dr. Jan Duffy at (702) 222-1964 for comps on a specific street.`,
     cta: {
       text: "Get Free Market Analysis",
       url: "https://heyberkshire.com/home-valuation",
     },
-    publishDate: "2026-01-20",
+    publishDate: "2026-09-14",
     keywords: [
       "Las Vegas real estate",
       "Henderson homes",

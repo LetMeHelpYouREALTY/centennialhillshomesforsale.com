@@ -30,7 +30,7 @@ export default function SouthernHighlandsPage() {
       intro="Southern Highlands is a southwest Las Vegas golf community with both open and guard-gated sections around a Robert Trent Jones Jr. course. It is not Summerlin and it is not Henderson."
       zipCodes={["89141"]}
       city="Las Vegas"
-      imageSrc="/images/neighborhoods/the-ridges.png"
+      imageSrc="/images/neighborhoods/southern-highlands.png"
       imageAlt="Southwest Las Vegas golf community setting near Southern Highlands"
       latitude={35.995}
       longitude={-115.206}

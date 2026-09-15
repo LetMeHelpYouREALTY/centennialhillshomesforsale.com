@@ -21,7 +21,7 @@ export default function LoneMountainPage() {
       intro="Lone Mountain sits on the northwest side of the valley, next to the Centennial Hills corridor. Buyers come for larger lots and mountain views, not a single gated amenity campus."
       zipCodes={["89129", "89130", "89131"]}
       city="Las Vegas"
-      imageSrc="/images/neighborhoods/centennial-hills.png"
+      imageSrc="/images/neighborhoods/north-las-vegas.png"
       imageAlt="Northwest Las Vegas desert mountain backdrop near Lone Mountain"
       stats={[
         { value: "NW", label: "Valley side" },

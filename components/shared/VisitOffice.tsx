@@ -1,6 +1,13 @@
+import Image from "next/image";
 import { Clock, Star } from "lucide-react";
 import { OfficeMap } from "@/components/shared/OfficeMap";
 import { OFFICE_HOURS, OFFICE_NAP } from "@/lib/contact";
+import {
+  OFFICE_PHOTO_ALT,
+  OFFICE_PHOTO_PATH,
+  VISIT_OFFICE_PHOTO_ALT,
+  VISIT_OFFICE_PHOTO_PATH,
+} from "@/lib/site-images";
 
 type VisitOfficeProps = {
   className?: string;
@@ -28,6 +35,15 @@ export function VisitOffice({
           <Clock className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
           <span>{OFFICE_HOURS.display}</span>
         </p>
+        <div className="relative mb-6 h-48 overflow-hidden rounded-xl md:h-64">
+          <Image
+            src={compact ? VISIT_OFFICE_PHOTO_PATH : OFFICE_PHOTO_PATH}
+            alt={compact ? VISIT_OFFICE_PHOTO_ALT : OFFICE_PHOTO_ALT}
+            fill
+            sizes="(max-width: 768px) 100vw, 768px"
+            className="object-cover"
+          />
+        </div>
         <OfficeMap height={compact ? 240 : 300} />
         <p className="mt-4 text-center">
           <a

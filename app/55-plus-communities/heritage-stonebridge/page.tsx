@@ -24,7 +24,7 @@ export default function HeritageStonebridgePage() {
       intro="Heritage at Stonebridge is a boutique guard-gated 55+ community in Summerlin ZIP 89134 — smaller than Sun City Summerlin, closer to Downtown Summerlin retail than Trilogy’s west-edge setting."
       zipCodes={["89134"]}
       city="Las Vegas"
-      imageSrc="/images/neighborhoods/summerlin.png"
+      imageSrc="/images/neighborhoods/sun-city-summerlin.png"
       imageAlt="Summerlin residential setting near Heritage at Stonebridge"
       latitude={36.195}
       longitude={-115.292}

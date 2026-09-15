@@ -24,7 +24,7 @@ export default function TrilogySummerlinPage() {
       intro="Trilogy at Summerlin is a smaller Shea Homes 55+ community in ZIP 89135 with newer contemporary plans, an on-site restaurant, and a spa — not the 7,700-home Del Webb campus in 89134."
       zipCodes={["89135"]}
       city="Las Vegas"
-      imageSrc="/images/neighborhoods/summerlin.png"
+      imageSrc="/images/neighborhoods/sun-city-summerlin.png"
       imageAlt="West Summerlin setting near Trilogy at Summerlin"
       latitude={36.1523}
       longitude={-115.3456}

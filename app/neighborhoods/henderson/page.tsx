@@ -40,7 +40,7 @@ export default function HendersonPage() {
         "89074",
       ]}
       city="Henderson"
-      imageSrc="/images/neighborhoods/inspirada.png"
+      imageSrc="/images/neighborhoods/henderson.png"
       imageAlt="Henderson Nevada parks and residential streets in a master-planned community"
       latitude={36.0395}
       longitude={-114.9817}

@@ -16,6 +16,14 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { PageCTA } from "@/components/shared/PageCTA";
+import { PageHeroImage } from "@/components/shared/PageHeroImage";
+import { PAGE_HERO_IMAGES } from "@/lib/site-images";
+import {
+  formatUsd,
+  LISTING_MEDIANS_USD,
+  MARKET_SNAPSHOT_AS_OF,
+  MARKET_SNAPSHOT_SOURCE,
+} from "@/lib/market-snapshots";
 
 export const metadata: Metadata = {
   title: "Sell Your Las Vegas Home | Berkshire Hathaway HomeServices",
@@ -143,6 +151,10 @@ export default function SellersPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Sell Your Las Vegas Home for Top Dollar
             </h1>
+            <PageHeroImage
+              src={PAGE_HERO_IMAGES.sellers.src}
+              alt={PAGE_HERO_IMAGES.sellers.alt}
+            />
             <p className="text-xl text-slate-600 mb-8">
               When you list with{" "}
               <strong>Berkshire Hathaway HomeServices</strong>, you get
@@ -170,39 +182,41 @@ export default function SellersPage() {
           {/* Market Stats */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-4 text-center">
-              Las Vegas Seller Market Statistics | January 2026
+              Las Vegas Seller Listing Snapshot | {MARKET_SNAPSHOT_AS_OF}
             </h2>
             <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
-              The Las Vegas housing market remains favorable for sellers with
-              low inventory and steady demand. Well-priced homes are selling
-              quickly, and appreciation continues to outpace national averages.
-              Here's what sellers need to know about current conditions.
+              {MARKET_SNAPSHOT_SOURCE}. These are listing medians, not your net.
+              Days on market and list-to-sale ratio need a live MLS pull.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">
-                  +4.2%
+                  {formatUsd(LISTING_MEDIANS_USD.lasVegas)}
                 </div>
                 <div className="text-slate-300 text-sm">
-                  Year-Over-Year Appreciation
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold mb-1">28 Days</div>
-                <div className="text-slate-300 text-sm">
-                  Avg. Days on Market
+                  Las Vegas listing median
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-1">2.1 Mo</div>
+                <div className="text-3xl font-bold mb-1">
+                  {formatUsd(LISTING_MEDIANS_USD.hendersonListing)}
+                </div>
                 <div className="text-slate-300 text-sm">
-                  Inventory (Seller's Market)
+                  Henderson listing median
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-1">98.5%</div>
+                <div className="text-3xl font-bold mb-1">
+                  {formatUsd(LISTING_MEDIANS_USD.centennialHills)}
+                </div>
                 <div className="text-slate-300 text-sm">
-                  List-to-Sale Price Ratio
+                  Centennial Hills listing median
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold mb-1">CMA</div>
+                <div className="text-slate-300 text-sm">
+                  Your street, not a headline
                 </div>
               </div>
             </div>
@@ -418,10 +432,14 @@ export default function SellersPage() {
               </div>
               <div className="text-center">
                 <TrendingUp className="h-24 w-24 text-blue-200 mx-auto mb-4" />
-                <p className="text-2xl font-bold">$450,000</p>
-                <p className="text-blue-200">Median Home Price (Jan 2026)</p>
+                <p className="text-2xl font-bold">
+                  {formatUsd(LISTING_MEDIANS_USD.lasVegas)}
+                </p>
+                <p className="text-blue-200">
+                  Las Vegas listing median ({MARKET_SNAPSHOT_AS_OF})
+                </p>
                 <p className="text-blue-300 text-sm mt-2">
-                  Up 4.2% from last year
+                  Listing median, not a sold CMA
                 </p>
               </div>
             </div>
@@ -440,7 +458,7 @@ export default function SellersPage() {
               {[
                 {
                   q: "How long will it take to sell my Las Vegas home?",
-                  a: "Well-priced Las Vegas homes are selling in an average of 28 days. Luxury homes ($1M+) may take 45+ days. The key is pricing correctly from day one—overpriced homes can sit for months, losing both time and money.",
+                  a: "UNKNOWN without a CMA and a live MLS pull. Well-priced houses can go fast; overpriced houses sit. I will not publish a 28-day average as if it were your street.",
                 },
                 {
                   q: "What do I need to do to prepare my home for sale?",

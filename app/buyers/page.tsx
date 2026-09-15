@@ -17,6 +17,14 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { PageCTA } from "@/components/shared/PageCTA";
+import { PageHeroImage } from "@/components/shared/PageHeroImage";
+import { PAGE_HERO_IMAGES } from "@/lib/site-images";
+import {
+  formatUsd,
+  LISTING_MEDIANS_USD,
+  MARKET_SNAPSHOT_AS_OF,
+  MARKET_SNAPSHOT_SOURCE,
+} from "@/lib/market-snapshots";
 
 export const metadata: Metadata = {
   title: "Home Buying Guide Las Vegas | Berkshire Hathaway HomeServices",
@@ -129,6 +137,10 @@ export default function BuyersPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Buy Your Las Vegas Home with Confidence
             </h1>
+            <PageHeroImage
+              src={PAGE_HERO_IMAGES.buyers.src}
+              alt={PAGE_HERO_IMAGES.buyers.alt}
+            />
             <p className="text-xl text-slate-600 mb-8">
               When you work with a{" "}
               <strong>Berkshire Hathaway HomeServices</strong> buyer&apos;s
@@ -437,30 +449,44 @@ export default function BuyersPage() {
           {/* Market Stats */}
           <section className="mb-16 bg-blue-600 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-4 text-center">
-              Las Vegas Buyer Market Statistics | January 2026
+              Las Vegas Buyer Listing Snapshot | {MARKET_SNAPSHOT_AS_OF}
             </h2>
             <p className="text-blue-100 text-center max-w-3xl mx-auto mb-8">
-              Understanding the current market helps you make informed decisions
-              about timing, pricing, and negotiation strategies. Here's a
-              snapshot of what buyers are facing in the Las Vegas market right
-              now.
+              {MARKET_SNAPSHOT_SOURCE}. Listing medians are not a CMA and are
+              not days-on-market. Ask for a live pull before you bid.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold mb-1">$450K</div>
-                <div className="text-blue-200 text-sm">Median Home Price</div>
+                <div className="text-3xl font-bold mb-1">
+                  {formatUsd(LISTING_MEDIANS_USD.lasVegas)}
+                </div>
+                <div className="text-blue-200 text-sm">
+                  Las Vegas listing median
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-1">4,850</div>
-                <div className="text-blue-200 text-sm">Active Listings</div>
+                <div className="text-3xl font-bold mb-1">
+                  {formatUsd(LISTING_MEDIANS_USD.hendersonListing)}
+                </div>
+                <div className="text-blue-200 text-sm">
+                  Henderson listing median
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-1">28 Days</div>
-                <div className="text-blue-200 text-sm">Avg. Days on Market</div>
+                <div className="text-3xl font-bold mb-1">
+                  {formatUsd(LISTING_MEDIANS_USD.centennialHills)}
+                </div>
+                <div className="text-blue-200 text-sm">
+                  Centennial Hills listing median
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-1">+4.2%</div>
-                <div className="text-blue-200 text-sm">Year-Over-Year</div>
+                <div className="text-3xl font-bold mb-1">
+                  {formatUsd(LISTING_MEDIANS_USD.northLasVegas)}
+                </div>
+                <div className="text-blue-200 text-sm">
+                  North Las Vegas listing median
+                </div>
               </div>
             </div>
           </section>

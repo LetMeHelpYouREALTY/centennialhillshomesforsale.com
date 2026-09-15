@@ -31,7 +31,7 @@ export default function SunCitySummerlinPage() {
       intro="Sun City Summerlin is Nevada’s largest 55+ community: Del Webb, 1989, about 2,400 acres and 7,700+ homes in ZIP 89134. Age restriction is Housing for Older Persons Act (HOPA), not a lifestyle slogan."
       zipCodes={["89134"]}
       city="Las Vegas"
-      imageSrc="/images/neighborhoods/summerlin.png"
+      imageSrc="/images/neighborhoods/sun-city-summerlin.png"
       imageAlt="Sun City Summerlin streets in west Las Vegas ZIP 89134"
       latitude={36.2048}
       longitude={-115.2954}

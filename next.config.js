@@ -18,7 +18,14 @@ const nextConfig = {
       { protocol: "https", hostname: "developers.google.com" },
       { protocol: "https", hostname: "www.google.com" },
       { protocol: "https", hostname: "files.keepingcurrentmatters.com" },
+      { protocol: "https", hostname: "imagedelivery.net" },
     ],
+    ...(process.env.NEXT_PUBLIC_CLOUDFLARE_IMAGES_ENABLED === "true"
+      ? {
+          loader: "custom",
+          loaderFile: "./lib/cloudflare-image-loader.ts",
+        }
+      : {}),
   },
 
   // Compression

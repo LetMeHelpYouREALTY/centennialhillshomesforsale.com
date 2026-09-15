@@ -30,7 +30,7 @@ export default function MountainsEdgePage() {
       intro="Mountains Edge is a southwest Las Vegas master plan organized around Exploration Peak Park. It is not Summerlin, not Henderson, and not Southern Highlands Golf Club."
       zipCodes={["89178", "89179"]}
       city="Las Vegas"
-      imageSrc="/images/neighborhoods/the-ridges.png"
+      imageSrc="/images/neighborhoods/mountains-edge.png"
       imageAlt="Southwest Las Vegas desert mountain setting near Mountains Edge"
       latitude={36.0005}
       longitude={-115.262}

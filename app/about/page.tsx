@@ -19,6 +19,8 @@ import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import { AGENT_PHOTO_PATH } from "@/lib/brand-assets";
 import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
 import { VisitOffice } from "@/components/shared/VisitOffice";
+import { PageHeroImage } from "@/components/shared/PageHeroImage";
+import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { getPublicSiteUrl } from "@/lib/site-url";
 
 export const metadata: Metadata = {
@@ -141,6 +143,10 @@ export default function AboutPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Meet Your Berkshire Hathaway HomeServices Agent
             </h1>
+            <PageHeroImage
+              src={PAGE_HERO_IMAGES.about.src}
+              alt={PAGE_HERO_IMAGES.about.alt}
+            />
             <p className="text-xl text-slate-600">
               Dr. Jan Duffy has been serving Las Vegas since 2008—backed by the
               most trusted name in real estate. Whether you're buying, selling,

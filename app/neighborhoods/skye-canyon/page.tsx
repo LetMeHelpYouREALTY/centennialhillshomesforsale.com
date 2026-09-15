@@ -23,7 +23,7 @@ export default function SkyeCanyonPage() {
       intro="Skye Canyon is a newer northwest Las Vegas master plan around Skye Center, with trail access toward Floyd Lamb Park. It is not Centennial Hills and it is not Summerlin."
       zipCodes={["89166"]}
       city="Las Vegas"
-      imageSrc="/images/neighborhoods/centennial-hills.png"
+      imageSrc="/images/neighborhoods/skye-canyon.png"
       imageAlt="Northwest Las Vegas desert foothills near Skye Canyon"
       latitude={36.313}
       longitude={-115.318}

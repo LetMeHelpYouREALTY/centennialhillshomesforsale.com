@@ -6,9 +6,18 @@ import {
   AGENT_EMAIL,
   CTA_PHONE,
   CTA_PHONE_E164,
+  OFFICE_NAP,
   OPENING_HOURS_SPEC,
 } from "./contact";
+import { officeInfo } from "./site-config";
+import { OFFICE_PHOTO_PATH } from "./site-images";
 import { getPublicSiteUrl } from "./site-url";
+import {
+  formatUsd,
+  LISTING_MEDIANS_USD,
+  MARKET_SNAPSHOT_AS_OF,
+  MARKET_SNAPSHOT_SOURCE,
+} from "./market-snapshots";
 
 export const businessInfo = {
   // NAP - Must match GBP exactly
@@ -42,10 +51,10 @@ export const businessInfo = {
     sunday: "By Appointment",
   },
 
-  // Geo coordinates for distance ranking
+  // Geo coordinates — must match officeInfo / Google Maps pin
   geo: {
-    latitude: 36.1941,
-    longitude: -115.2678,
+    latitude: officeInfo.coordinates.lat,
+    longitude: officeInfo.coordinates.lng,
   },
 
   // Service areas - Start focused, expand with prominence
@@ -223,8 +232,7 @@ export const gbpFAQs = [
   },
   {
     question: "What is the average home price in Las Vegas in 2026?",
-    answer:
-      "As of January 2026, the Las Vegas median home price is $450,000, up 4.2% year-over-year. Henderson's median is slightly higher at $485,000. Luxury communities like Summerlin average $625,000, while The Ridges averages $2.5 million. Contact Dr. Jan for current market data.",
+    answer: `As of ${MARKET_SNAPSHOT_AS_OF}, the Las Vegas city median listing price is ${formatUsd(LISTING_MEDIANS_USD.lasVegas)} (${MARKET_SNAPSHOT_SOURCE}). Henderson listing median is ${formatUsd(LISTING_MEDIANS_USD.hendersonListing)}; sold median ${formatUsd(LISTING_MEDIANS_USD.hendersonSold)}. Centennial Hills listing median is ${formatUsd(LISTING_MEDIANS_USD.centennialHills)}. Those are not a CMA for a specific house. Call (702) 222-1964 for live comps.`,
   },
   {
     question: "Does Dr. Jan work with first-time home buyers?",
@@ -255,7 +263,10 @@ export function generateLocalBusinessSchema() {
     "@type": "RealEstateAgent",
     "@id": "https://heyberkshire.com/#organization",
     name: businessInfo.name,
-    image: `${getPublicSiteUrl()}${AGENT_PHOTO_PATH}`,
+    image: [
+      `${getPublicSiteUrl()}${AGENT_PHOTO_PATH}`,
+      `${getPublicSiteUrl()}${OFFICE_PHOTO_PATH}`,
+    ],
     url: businessInfo.url,
     telephone: businessInfo.phone.tel,
     email: businessInfo.email,
@@ -269,6 +280,7 @@ export function generateLocalBusinessSchema() {
       latitude: businessInfo.geo.latitude,
       longitude: businessInfo.geo.longitude,
     },
+    hasMap: OFFICE_NAP.mapsUrl,
     openingHoursSpecification: OPENING_HOURS_SPEC.map((spec) => ({
       "@type": "OpeningHoursSpecification",
       dayOfWeek: [...spec.dayOfWeek],
@@ -301,6 +313,8 @@ export function generateLocalBusinessSchema() {
       "https://www.facebook.com/drjanduffy",
       "https://www.instagram.com/drjanduffy",
       "https://www.linkedin.com/in/drjanduffy",
+      OFFICE_NAP.mapsUrl,
+      OFFICE_NAP.reviewsUrl,
     ],
   };
 }

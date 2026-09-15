@@ -17,6 +17,8 @@ import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import { AGENT_PHOTO_PATH } from "@/lib/brand-assets";
 import { CTA_PHONE, CTA_TEL, OFFICE_HOURS } from "@/lib/contact";
 import { OfficeMap } from "@/components/shared/OfficeMap";
+import { PageHeroImage } from "@/components/shared/PageHeroImage";
+import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { getPublicSiteUrl } from "@/lib/site-url";
 
 export const metadata: Metadata = {
@@ -72,6 +74,10 @@ export default function ContactPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Contact Dr. Jan Duffy
             </h1>
+            <PageHeroImage
+              src={PAGE_HERO_IMAGES.contact.src}
+              alt={PAGE_HERO_IMAGES.contact.alt}
+            />
             <div className="mb-8 flex justify-center">
               <AgentPhoto variant="card" priority />
             </div>
@@ -337,7 +343,7 @@ export default function ContactPage() {
 
         {/* Last Updated */}
         <div className="text-center text-sm text-slate-500 mt-8">
-          Last Updated: January 2026
+          Last updated: September 2026
         </div>
       </main>
       <RealScoutListings />

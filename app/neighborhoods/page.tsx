@@ -3,11 +3,14 @@ import Link from "next/link";
 import { MapPin, Home, GraduationCap } from "lucide-react";
 import type { Metadata } from "next";
 import { PageCTA } from "@/components/shared/PageCTA";
+import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import {
   formatUsd,
   LISTING_MEDIANS_USD,
   MARKET_SNAPSHOT_AS_OF,
 } from "@/lib/market-snapshots";
+import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Las Vegas Neighborhoods | Centennial Hills, Inspirada, Summerlin",
@@ -220,6 +223,10 @@ export default function NeighborhoodsPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Las Vegas & Henderson Neighborhoods
             </h1>
+            <PageHeroImage
+              src={PAGE_HERO_IMAGES.homepage.src}
+              alt="Las Vegas and Henderson neighborhood street with desert mountain views"
+            />
             <p className="text-xl text-slate-600">
               Centennial Hills, Inspirada, Tournament Hills, 89144, and 89138
               are different maps. Listing medians below are from realtor.com as
@@ -235,38 +242,54 @@ export default function NeighborhoodsPage() {
                 <Link
                   key={neighborhood.slug}
                   href={`/neighborhoods/${neighborhood.slug}`}
-                  className="bg-white border border-slate-200 rounded-lg p-6 hover:shadow-lg transition-all hover:border-blue-300 group"
+                  className="bg-white border border-slate-200 rounded-lg overflow-hidden hover:shadow-lg transition-all hover:border-blue-300 group"
                 >
-                  <div className="flex justify-between items-start mb-3">
-                    <div>
-                      <h2 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
-                        {neighborhood.name}
-                      </h2>
-                      <p className="text-sm text-slate-500">
-                        {neighborhood.bestFor}
-                      </p>
-                    </div>
-                    <div className="text-right">
-                      <div className="font-bold text-slate-900">
-                        {neighborhood.medianPrice}
+                  {(() => {
+                    const photo = getNeighborhoodImage(neighborhood.slug);
+                    return (
+                      <div className="relative h-40">
+                        <Image
+                          src={photo.src}
+                          alt={photo.alt}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          className="object-cover"
+                        />
                       </div>
-                      <div className="text-xs text-slate-500">
-                        {neighborhood.priceNote}
+                    );
+                  })()}
+                  <div className="p-6">
+                    <div className="mb-3 flex items-start justify-between">
+                      <div>
+                        <h2 className="text-xl font-bold text-slate-900 transition-colors group-hover:text-blue-600">
+                          {neighborhood.name}
+                        </h2>
+                        <p className="text-sm text-slate-500">
+                          {neighborhood.bestFor}
+                        </p>
+                      </div>
+                      <div className="text-right">
+                        <div className="font-bold text-slate-900">
+                          {neighborhood.medianPrice}
+                        </div>
+                        <div className="text-xs text-slate-500">
+                          {neighborhood.priceNote}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <p className="text-slate-600 text-sm mb-4">
-                    {neighborhood.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {neighborhood.highlights.map((highlight) => (
-                      <span
-                        key={highlight}
-                        className="bg-slate-100 text-slate-700 text-xs px-2 py-1 rounded"
-                      >
-                        {highlight}
-                      </span>
-                    ))}
+                    <p className="mb-4 text-sm text-slate-600">
+                      {neighborhood.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {neighborhood.highlights.map((highlight) => (
+                        <span
+                          key={highlight}
+                          className="rounded bg-slate-100 px-2 py-1 text-xs text-slate-700"
+                        >
+                          {highlight}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </Link>
               ))}

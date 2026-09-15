@@ -31,7 +31,7 @@ export default function SunCityAnthemPage() {
       intro="Sun City Anthem is the large Del Webb 55+ community in Henderson, with Anthem Center as the amenity core and about 7,100 homes. It is not Solera at Anthem and it is not Sun City Summerlin."
       zipCodes={["89052"]}
       city="Henderson"
-      imageSrc="/images/neighborhoods/inspirada.png"
+      imageSrc="/images/neighborhoods/henderson.png"
       imageAlt="Henderson desert foothills near Sun City Anthem"
       latitude={35.961}
       longitude={-115.087}

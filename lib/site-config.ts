@@ -1,6 +1,12 @@
 // Site Configuration - HeyBerkshire.com
 // Berkshire Hathaway HomeServices Nevada Properties
 
+import {
+  formatUsd,
+  LISTING_MEDIANS_USD,
+  MARKET_SNAPSHOT_AS_OF,
+} from "./market-snapshots";
+
 export const siteConfig = {
   name: "HeyBerkshire",
   fullName: "Berkshire Hathaway HomeServices Nevada Properties",
@@ -43,39 +49,41 @@ export const officeInfo = {
   phoneTel: "tel:+17022221964",
 };
 
-// Market Statistics (Updated January 2026)
+// Market Statistics (listing medians, not a CMA)
 export const marketStats = {
-  lastUpdated: "January 2026",
+  lastUpdated: MARKET_SNAPSHOT_AS_OF,
   lasVegas: {
-    medianPrice: 450000,
-    medianPriceFormatted: "$450,000",
-    yearOverYearChange: "+4.2%",
-    daysOnMarket: 28,
-    activeListings: 4850,
-    closedSales: 2340,
-    inventoryMonths: 2.1,
+    medianPrice: LISTING_MEDIANS_USD.lasVegas,
+    medianPriceFormatted: formatUsd(LISTING_MEDIANS_USD.lasVegas),
+    yearOverYearChange: "UNKNOWN — ask for a live pull",
+    daysOnMarket: "UNKNOWN — ask for a live pull",
+    activeListings: "UNKNOWN — ask for a live pull",
+    closedSales: "UNKNOWN — ask for a live pull",
+    inventoryMonths: "UNKNOWN — ask for a live pull",
   },
   henderson: {
-    medianPrice: 485000,
-    medianPriceFormatted: "$485,000",
-    yearOverYearChange: "+5.1%",
-    daysOnMarket: 24,
-    activeListings: 1280,
+    medianPrice: LISTING_MEDIANS_USD.hendersonListing,
+    medianPriceFormatted: formatUsd(LISTING_MEDIANS_USD.hendersonListing),
+    soldMedian: LISTING_MEDIANS_USD.hendersonSold,
+    soldMedianFormatted: formatUsd(LISTING_MEDIANS_USD.hendersonSold),
+    yearOverYearChange: "UNKNOWN — ask for a live pull",
+    daysOnMarket: "UNKNOWN — ask for a live pull",
+    activeListings: "UNKNOWN — ask for a live pull",
   },
   summerlin: {
-    medianPrice: 625000,
-    medianPriceFormatted: "$625,000",
-    yearOverYearChange: "+6.8%",
-    daysOnMarket: 22,
-    luxuryMedian: 1200000,
-    luxuryMedianFormatted: "$1.2M",
+    medianPrice: LISTING_MEDIANS_USD.summerlinNorth,
+    medianPriceFormatted: formatUsd(LISTING_MEDIANS_USD.summerlinNorth),
+    yearOverYearChange: "UNKNOWN — ask for a live pull",
+    daysOnMarket: "UNKNOWN — ask for a live pull",
+    luxuryMedian: LISTING_MEDIANS_USD.summerlinWest,
+    luxuryMedianFormatted: formatUsd(LISTING_MEDIANS_USD.summerlinWest),
   },
   luxury: {
-    medianPrice: 1200000,
-    medianPriceFormatted: "$1.2M",
-    activeListings: 890,
-    daysOnMarket: 45,
-    pricePerSqFt: 385,
+    medianPrice: LISTING_MEDIANS_USD.southernHighlands,
+    medianPriceFormatted: formatUsd(LISTING_MEDIANS_USD.southernHighlands),
+    activeListings: "UNKNOWN — ask for a live pull",
+    daysOnMarket: "UNKNOWN — ask for a live pull",
+    pricePerSqFt: "UNKNOWN — ask for a live pull",
   },
 };
 
@@ -104,7 +112,7 @@ export const neighborhoods = [
     slug: "summerlin",
     description:
       "Master-planned community with parks, trails, and Red Rock Canyon access",
-    medianPrice: "$625,000",
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.summerlinNorth),
     highlights: [
       "Red Rock views",
       "150+ parks",
@@ -117,7 +125,7 @@ export const neighborhoods = [
     slug: "henderson",
     description:
       "Nevada's second-largest city with parks, trails, and master-planned villages",
-    medianPrice: "$485,000",
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.hendersonListing),
     highlights: [
       "Parks and trails",
       "Lake Las Vegas",
@@ -129,26 +137,26 @@ export const neighborhoods = [
     name: "Green Valley",
     slug: "green-valley",
     description: "Established Henderson community with mature landscaping",
-    medianPrice: "$520,000",
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.greenValleySouth),
     highlights: ["Golf courses", "Walking trails", "Shopping", "Parks"],
   },
   {
     name: "The Ridges",
     slug: "the-ridges",
-    description: "Ultra-luxury guard-gated community in Summerlin",
-    medianPrice: "$2.5M",
+    description: "Guard-gated custom community in Summerlin",
+    medianPrice: "Ask CMA",
     highlights: [
-      "Celebrity homes",
       "Custom estates",
-      "Bear's Best Golf",
-      "Strip views",
+      "Architectural controls",
+      "View lots",
+      "Gated access",
     ],
   },
   {
     name: "Southern Highlands",
     slug: "southern-highlands",
     description: "Master-planned luxury community with championship golf",
-    medianPrice: "$750,000",
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.southernHighlands),
     highlights: [
       "Golf community",
       "Guard-gated",
@@ -160,7 +168,7 @@ export const neighborhoods = [
     name: "North Las Vegas",
     slug: "north-las-vegas",
     description: "Rapidly growing area with affordable new construction",
-    medianPrice: "$385,000",
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.northLasVegas),
     highlights: [
       "New construction",
       "Entry-level pricing",
@@ -172,7 +180,7 @@ export const neighborhoods = [
     name: "Skye Canyon",
     slug: "skye-canyon",
     description: "Newer master-planned community in northwest Las Vegas",
-    medianPrice: "$550,000",
+    medianPrice: "Ask CMA",
     highlights: [
       "New homes",
       "Mountain views",
@@ -184,14 +192,14 @@ export const neighborhoods = [
     name: "Centennial Hills",
     slug: "centennial-hills",
     description: "Northwest Las Vegas community with mountain proximity",
-    medianPrice: "$495,000",
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.centennialHills),
     highlights: ["Mountain access", "Parks", "Shopping", "Town Center"],
   },
   {
     name: "Inspirada",
     slug: "inspirada",
     description: "Henderson master-planned community with resort-style living",
-    medianPrice: "$525,000",
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.inspirada),
     highlights: [
       "Resort pools",
       "Walking trails",
@@ -203,13 +211,8 @@ export const neighborhoods = [
     name: "Mountains Edge",
     slug: "mountains-edge",
     description: "Southwest Las Vegas master-planned community",
-    medianPrice: "$475,000",
-    highlights: [
-      "Mountain views",
-      "Parks",
-      "Growing area",
-      "Affordable luxury",
-    ],
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.mountainsEdge),
+    highlights: ["Mountain views", "Parks", "Growing area", "I-215 access"],
   },
 ];
 

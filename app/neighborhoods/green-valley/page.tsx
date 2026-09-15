@@ -32,7 +32,7 @@ export default function GreenValleyPage() {
       intro="Green Valley is Henderson’s established 1980s–90s master plan: mature trees, finished streets, and The District at Green Valley Ranch. It is not Inspirada and it is not brand-new production in 89044."
       zipCodes={["89012", "89014", "89074"]}
       city="Henderson"
-      imageSrc="/images/neighborhoods/inspirada.png"
+      imageSrc="/images/neighborhoods/green-valley.png"
       imageAlt="Established Henderson residential streets near Green Valley"
       latitude={36.055}
       longitude={-115.081}

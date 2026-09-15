@@ -31,7 +31,7 @@ export default function DelWebbLakeLasVegasPage() {
       intro="Del Webb at Lake Las Vegas is a newer 55+ village inside the Lake Las Vegas setting in Henderson — lake and mountain views, Del Webb programming, not the 1989 Sun City Summerlin campus."
       zipCodes={["89011"]}
       city="Henderson"
-      imageSrc="/images/neighborhoods/inspirada.png"
+      imageSrc="/images/neighborhoods/55-plus-hub.png"
       imageAlt="Lake Las Vegas Henderson setting near Del Webb"
       latitude={36.103}
       longitude={-114.929}

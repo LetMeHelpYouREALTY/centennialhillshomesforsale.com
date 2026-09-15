@@ -30,7 +30,7 @@ export default function NorthLasVegasPage() {
       intro="North Las Vegas is a separate city north of Las Vegas, with master plans such as Aliante, Tule Springs, and Valley Vista plus in-fill resale. Citywide listing medians sit below Henderson and Summerlin West — still not a promise for every street."
       zipCodes={["89031", "89032", "89081", "89084", "89085", "89086"]}
       city="North Las Vegas"
-      imageSrc="/images/neighborhoods/centennial-hills.png"
+      imageSrc="/images/neighborhoods/north-las-vegas.png"
       imageAlt="Northwest Las Vegas Valley residential streets near North Las Vegas"
       latitude={36.1989}
       longitude={-115.1175}

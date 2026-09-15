@@ -22,12 +22,16 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { PageCTA } from "@/components/shared/PageCTA";
+import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { REALSCOUT_SEARCH_URL } from "@/lib/contact";
 import {
   formatUsd,
   LISTING_MEDIANS_USD,
   MARKET_SNAPSHOT_AS_OF,
+  MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
+import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title:
@@ -351,6 +355,10 @@ export default function FiftyFiveCommunitiesPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Find Your Perfect 55+ Community in Las Vegas
             </h1>
+            <PageHeroImage
+              src={PAGE_HERO_IMAGES.fiftyFivePlus.src}
+              alt={PAGE_HERO_IMAGES.fiftyFivePlus.alt}
+            />
             <p className="text-xl md:text-2xl text-slate-600 mb-8">
               Sun City, Del Webb, Heritage at Stonebridge & more—
               <br className="hidden md:block" />
@@ -381,30 +389,39 @@ export default function FiftyFiveCommunitiesPage() {
             <h2 className="text-2xl font-bold mb-8 text-center">
               Las Vegas 55+ snapshot | {MARKET_SNAPSHOT_AS_OF}
             </h2>
+            <p className="mb-8 text-center text-sm text-slate-300">
+              {MARKET_SNAPSHOT_SOURCE}. Listing medians, not a CMA.
+            </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-amber-400 mb-1">
-                  25,000+
+                  {formatUsd(LISTING_MEDIANS_USD.sunCitySummerlin)}
                 </div>
                 <div className="text-slate-300 text-sm">
-                  55+ Homes Available
+                  Sun City Summerlin listing median
                 </div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">
-                  $280K-$1.2M
+                  {formatUsd(LISTING_MEDIANS_USD.sunCityAnthem)}
                 </div>
-                <div className="text-slate-300 text-sm">Price Range</div>
+                <div className="text-slate-300 text-sm">
+                  Sun City Anthem listing median
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-1">$140-$350</div>
-                <div className="text-slate-300 text-sm">Monthly HOA Range</div>
+                <div className="text-3xl font-bold mb-1">HOPA</div>
+                <div className="text-slate-300 text-sm">
+                  80% 55+ occupancy rule
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-1">
-                  +5.8%
+                  CMA
                 </div>
-                <div className="text-slate-300 text-sm">YoY Appreciation</div>
+                <div className="text-slate-300 text-sm">
+                  HOA and age rules vary
+                </div>
               </div>
             </div>
           </section>
@@ -436,10 +453,10 @@ export default function FiftyFiveCommunitiesPage() {
                     </div>
                     <div className="bg-white rounded-lg p-4 text-center">
                       <div className="text-2xl font-bold text-green-600">
-                        50-60%
+                        Pair comps
                       </div>
                       <div className="text-sm text-slate-600">
-                        Less Than CA Prices
+                        Not a 50–60% slogan
                       </div>
                     </div>
                     <div className="bg-white rounded-lg p-4 text-center">
@@ -536,6 +553,27 @@ export default function FiftyFiveCommunitiesPage() {
                   key={community.name}
                   className="bg-white border border-slate-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow"
                 >
+                  {community.slug ? (
+                    <div className="relative h-40">
+                      <Image
+                        src={getNeighborhoodImage(community.slug).src}
+                        alt={getNeighborhoodImage(community.slug).alt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <div className="relative h-40">
+                      <Image
+                        src={PAGE_HERO_IMAGES.fiftyFivePlus.src}
+                        alt={PAGE_HERO_IMAGES.fiftyFivePlus.alt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover"
+                      />
+                    </div>
+                  )}
                   <div className="bg-slate-900 text-white p-6">
                     <h3 className="text-xl font-bold mb-1">{community.name}</h3>
                     <div className="flex items-center text-slate-300 text-sm">

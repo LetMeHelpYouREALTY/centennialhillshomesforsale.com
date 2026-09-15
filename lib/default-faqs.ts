@@ -32,6 +32,6 @@ export const defaultFaqs: SiteFaq[] = [
   {
     question: "What are your fees?",
     answer:
-      "Buyer representation is typically paid by the listing side of the commission. Seller fees are negotiated in writing before you list. Call for a numbers-first consult.",
+      "Buyer-broker compensation is disclosed in a written buyer agreement. It may be paid by the seller, the buyer, or both. Seller fees are negotiated in writing before you list. Call for a numbers-first consult.",
   },
 ];

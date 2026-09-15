@@ -12,6 +12,12 @@ import { getCanonicalUrl, getRequestOrigin } from "@/lib/site-url";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import { AGENT_PHOTO_PATH } from "@/lib/brand-assets";
 import { CTA_PHONE, CTA_TEL, OFFICE_NAP } from "@/lib/contact";
+import {
+  formatUsd,
+  LISTING_MEDIANS_USD,
+  MARKET_SNAPSHOT_AS_OF,
+  MARKET_SNAPSHOT_SOURCE,
+} from "@/lib/market-snapshots";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -203,19 +209,24 @@ export default async function Home() {
                 Centennial Hills listing snapshot
               </h2>
               <p className="text-slate-400">
-                Neighborhood listing median about $525,000 as of June 2026
-                (realtor.com Centennial Hills report). Days on market and count
-                move weekly — ask for a live pull.
+                Neighborhood listing median{" "}
+                {formatUsd(LISTING_MEDIANS_USD.centennialHills)} as of{" "}
+                {MARKET_SNAPSHOT_AS_OF} ({MARKET_SNAPSHOT_SOURCE}). Days on
+                market and inventory move weekly — ask for a live pull.
               </p>
             </div>
             <div className="mx-auto grid max-w-4xl grid-cols-2 gap-8 md:grid-cols-4">
               {[
                 {
-                  value: "$525K",
+                  value: formatUsd(LISTING_MEDIANS_USD.centennialHills),
                   label: "Listing median",
-                  sub: "June 2026 report",
+                  sub: MARKET_SNAPSHOT_AS_OF,
                 },
-                { value: "48", label: "Median DOM", sub: "Same report" },
+                {
+                  value: formatUsd(LISTING_MEDIANS_USD.lasVegas),
+                  label: "LV city listing median",
+                  sub: "Same source",
+                },
                 {
                   value: "89149",
                   label: "Core ZIP",

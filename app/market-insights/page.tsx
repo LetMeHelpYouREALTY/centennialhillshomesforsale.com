@@ -15,6 +15,13 @@ import {
 import type { Metadata } from "next";
 import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
 import { getSearchCentralPosts } from "@/lib/search-central-feed";
+import {
+  formatUsd,
+  LISTING_MEDIANS_USD,
+  MARKET_SNAPSHOT_SOURCE,
+} from "@/lib/market-snapshots";
+import { PageHeroImage } from "@/components/shared/PageHeroImage";
+import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 
 export const revalidate = 3600;
 
@@ -76,6 +83,10 @@ export default async function MarketInsightsPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Centennial Hills Market Insights
             </h1>
+            <PageHeroImage
+              src={PAGE_HERO_IMAGES.homepage.src}
+              alt="Centennial Hills Las Vegas homes used for this market insights brief"
+            />
             <p className="text-xl text-slate-600">
               First-party notes for this website — 89149 vs 89144, Inspirada’s
               remaining new homes, and why a cloned valley-wide report will not
@@ -96,10 +107,9 @@ export default async function MarketInsightsPage() {
               weekly cadence. Each URL self-canonicalizes to this domain.
             </p>
             <p className="text-slate-700 mb-4">
-              June 2026 listing data for the Centennial Hills neighborhood
-              (realtor.com) showed a median list near $525,000 and about 48 days
-              on market. That is not 89144 Summerlin and it is not Tournament
-              Hills.{" "}
+              {MARKET_SNAPSHOT_SOURCE} listed a Centennial Hills neighborhood
+              median of {formatUsd(LISTING_MEDIANS_USD.centennialHills)}. That
+              is not 89144 Summerlin and it is not Tournament Hills.{" "}
               <Link href="/neighborhoods/centennial-hills">
                 Centennial Hills homes for sale
               </Link>{" "}

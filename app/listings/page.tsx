@@ -16,6 +16,14 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { PageCTA } from "@/components/shared/PageCTA";
+import { PageHeroImage } from "@/components/shared/PageHeroImage";
+import { PAGE_HERO_IMAGES } from "@/lib/site-images";
+import {
+  formatUsd,
+  LISTING_MEDIANS_USD,
+  MARKET_SNAPSHOT_AS_OF,
+  MARKET_SNAPSHOT_SOURCE,
+} from "@/lib/market-snapshots";
 
 export const metadata: Metadata = {
   title:
@@ -160,6 +168,10 @@ export default function ListingsPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Las Vegas Homes for Sale
             </h1>
+            <PageHeroImage
+              src={PAGE_HERO_IMAGES.listings.src}
+              alt={PAGE_HERO_IMAGES.listings.alt}
+            />
             <p className="text-xl text-slate-600 mb-8">
               Search thousands of Las Vegas, Henderson, and Summerlin properties
               with live MLS listings updated every 15 minutes. Find your dream
@@ -243,7 +255,8 @@ export default function ListingsPage() {
               to California and other western states. With no state income tax
               and housing prices 40-60% lower than coastal cities, your dollar
               stretches further in Southern Nevada. Here's what you can expect
-              at different price points in the current January 2026 market.
+              at different price points in the current {MARKET_SNAPSHOT_AS_OF}{" "}
+              market. Counts below are illustrative bands, not a live MLS count.
             </p>
             <div className="space-y-4">
               {priceRanges.map((price, index) => (
@@ -388,34 +401,37 @@ export default function ListingsPage() {
               Las Vegas Real Estate Market Statistics
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              The Las Vegas housing market remains strong heading into 2026,
-              with steady appreciation and healthy inventory levels.
-              Understanding current market conditions helps buyers make informed
-              decisions about timing, pricing, and negotiation strategies.
-              Here's a snapshot of the current market as of January 2026.
+              {MARKET_SNAPSHOT_SOURCE}. Listing medians are not days-on-market
+              and are not a CMA. Ask for a live pull before you bid.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="bg-blue-50 rounded-lg p-6 text-center">
                 <div className="text-3xl font-bold text-blue-600 mb-1">
-                  $450K
+                  {formatUsd(LISTING_MEDIANS_USD.lasVegas)}
                 </div>
-                <div className="text-sm text-slate-600">Median Home Price</div>
-              </div>
-              <div className="bg-blue-50 rounded-lg p-6 text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-1">28</div>
-                <div className="text-sm text-slate-600">Avg Days on Market</div>
+                <div className="text-sm text-slate-600">LV listing median</div>
               </div>
               <div className="bg-blue-50 rounded-lg p-6 text-center">
                 <div className="text-3xl font-bold text-blue-600 mb-1">
-                  4,850
+                  {formatUsd(LISTING_MEDIANS_USD.hendersonListing)}
                 </div>
-                <div className="text-sm text-slate-600">Active Listings</div>
+                <div className="text-sm text-slate-600">
+                  Henderson listing median
+                </div>
               </div>
               <div className="bg-blue-50 rounded-lg p-6 text-center">
                 <div className="text-3xl font-bold text-blue-600 mb-1">
-                  +4.2%
+                  {formatUsd(LISTING_MEDIANS_USD.centennialHills)}
                 </div>
-                <div className="text-sm text-slate-600">Year-Over-Year</div>
+                <div className="text-sm text-slate-600">
+                  Centennial Hills listing median
+                </div>
+              </div>
+              <div className="bg-blue-50 rounded-lg p-6 text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-1">
+                  {MARKET_SNAPSHOT_AS_OF}
+                </div>
+                <div className="text-sm text-slate-600">As of date</div>
               </div>
             </div>
           </section>
