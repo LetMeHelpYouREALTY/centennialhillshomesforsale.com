@@ -16,6 +16,10 @@ describe("listings hub FAQs", () => {
     expect(src).toContain("/neighborhoods/89138");
     expect(src).toContain("/55-plus-communities/siena");
     expect(src).toContain("/neighborhoods/centennial-hills");
+    expect(src).toContain("/buyers/first-time-buyers");
+    expect(src).toContain("/relocation");
+    expect(src).toContain("/home-valuation");
+    expect(src).toContain("First-Time Las Vegas Buyers");
     expect(src).toContain('name: "Siena 55+"');
     expect(src).toContain('source="listings-hub-mid"');
     expect(src).toContain("listings-mls-heading");
