@@ -23,12 +23,28 @@ export const DEFAULT_GUIDE_RELATED: GuideRelatedLink[] = [
   { href: "/contact", label: "Call or email the office" },
 ];
 
+function normalizeRelatedPath(pathname: string): string {
+  if (!pathname || pathname === "/") {
+    return "/";
+  }
+  return pathname.replace(/\/+$/, "") || "/";
+}
+
 export function mergeGuideRelated(
   related: GuideRelatedLink[],
   extras: GuideRelatedLink[] = DEFAULT_GUIDE_RELATED,
+  currentPath?: string,
 ): GuideRelatedLink[] {
   const hrefs = new Set(related.map((item) => item.href));
-  return [...related, ...extras.filter((item) => !hrefs.has(item.href))];
+  const merged = [
+    ...related,
+    ...extras.filter((item) => !hrefs.has(item.href)),
+  ];
+  const current = currentPath ? normalizeRelatedPath(currentPath) : "";
+  if (!current || current === "/") {
+    return merged;
+  }
+  return merged.filter((item) => item.href !== current);
 }
 
 export function defaultGuideCmaFaq(name: string): GuideFaq {

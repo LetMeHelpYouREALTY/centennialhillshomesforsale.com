@@ -23,7 +23,11 @@ import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
-import { getCanonicalUrl, getPublicSiteUrl } from "@/lib/site-url";
+import {
+  getCanonicalUrl,
+  getPublicSiteUrl,
+  getRequestPathname,
+} from "@/lib/site-url";
 import { getNeighborhoodImage } from "@/lib/site-images";
 import { generateWebPageSchema } from "@/lib/schema";
 import {
@@ -119,10 +123,14 @@ export default function NeighborhoodGuide({
     ? { src: imageSrc, alt: imageAlt ?? `${name} homes in ${city}, Nevada` }
     : getNeighborhoodImage(slug);
   const geo = resolveNeighborhoodGeo(slug, latitude, longitude);
-  const relatedLinks = mergeGuideRelated(related, [
-    { href: "/listings", label: `Search live MLS for ${name}` },
-    ...DEFAULT_GUIDE_RELATED.filter((item) => item.href !== "/listings"),
-  ]);
+  const relatedLinks = mergeGuideRelated(
+    related,
+    [
+      { href: "/listings", label: `Search live MLS for ${name}` },
+      ...DEFAULT_GUIDE_RELATED.filter((item) => item.href !== "/listings"),
+    ],
+    getRequestPathname(),
+  );
   const guideFaqs = mergeGuideFaqs(faqs, name);
 
   return (

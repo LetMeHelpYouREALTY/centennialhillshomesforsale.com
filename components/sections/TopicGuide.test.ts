@@ -27,6 +27,7 @@ describe("TopicGuide conversion chrome", () => {
     expect(src).toContain("Frequently asked questions");
     expect(src).toContain("Related pages for ${name}");
     expect(src).toContain("photoHeading");
+    expect(src).toContain("getRequestPathname");
     expect(src).not.toContain("text-blue-200");
     expect(src).not.toContain("text-slate-500");
   });

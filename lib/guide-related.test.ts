@@ -48,6 +48,28 @@ describe("guide related links", () => {
     ).toHaveLength(1);
     expect(merged[0].label).toBe("This ZIP");
   });
+
+  it("drops the current page so related grids do not link to themselves", () => {
+    const merged = mergeGuideRelated(
+      [{ href: "/neighborhoods/summerlin", label: "Summerlin homes" }],
+      undefined,
+      "/home-valuation",
+    );
+    expect(merged.map((item) => item.href)).not.toContain("/home-valuation");
+    expect(merged.map((item) => item.href)).toContain("/relocation");
+    expect(merged.map((item) => item.href)).toContain(
+      "/buyers/first-time-buyers",
+    );
+  });
+
+  it("drops a current path even when the page related array included it", () => {
+    const merged = mergeGuideRelated(
+      [{ href: "/contact", label: "Office" }],
+      undefined,
+      "/contact/",
+    );
+    expect(merged.map((item) => item.href)).not.toContain("/contact");
+  });
 });
 
 describe("guide FAQ merge", () => {

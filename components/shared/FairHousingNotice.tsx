@@ -14,17 +14,17 @@ export function FairHousingNotice({
   switch (variant) {
     case "dark":
       linkClass =
-        "text-slate-300 underline-offset-2 hover:text-white hover:underline";
+        "text-slate-300 underline-offset-2 hover:text-white hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white";
       textClass = "";
       break;
     case "light":
       linkClass =
-        "text-blue-700 underline-offset-2 hover:text-blue-800 hover:underline";
+        "text-blue-700 underline-offset-2 hover:text-blue-800 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600";
       textClass = "";
       break;
     case "onBrand":
       linkClass =
-        "text-blue-50 underline-offset-2 hover:text-white hover:underline";
+        "text-blue-50 underline-offset-2 hover:text-white hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white";
       textClass = "text-white";
       break;
     default: {

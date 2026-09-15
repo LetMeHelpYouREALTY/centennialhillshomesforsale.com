@@ -19,7 +19,11 @@ import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
-import { getCanonicalUrl, getPublicSiteUrl } from "@/lib/site-url";
+import {
+  getCanonicalUrl,
+  getPublicSiteUrl,
+  getRequestPathname,
+} from "@/lib/site-url";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { generateWebPageSchema } from "@/lib/schema";
 import {
@@ -95,7 +99,11 @@ export default function TopicGuide({
 }: TopicGuideProps) {
   const origin = getPublicSiteUrl();
   const heroSrc = imageSrc ?? PAGE_HERO_IMAGES.listings.src;
-  const relatedLinks = mergeGuideRelated(related, DEFAULT_GUIDE_RELATED);
+  const relatedLinks = mergeGuideRelated(
+    related,
+    DEFAULT_GUIDE_RELATED,
+    getRequestPathname(),
+  );
   const guideFaqs = mergeGuideFaqs(faqs, name);
 
   return (

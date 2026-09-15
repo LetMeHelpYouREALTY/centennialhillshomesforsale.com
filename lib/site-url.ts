@@ -48,8 +48,13 @@ export function normalizePathname(pathname: string | null | undefined): string {
   return trimmed || "/";
 }
 
+export function getRequestPathname(): string {
+  return normalizePathname(headers().get("x-pathname"));
+}
+
 export function getCanonicalUrl(pathname?: string): string {
-  const path = normalizePathname(pathname ?? headers().get("x-pathname"));
+  const path =
+    pathname === undefined ? getRequestPathname() : normalizePathname(pathname);
   const origin = getRequestOrigin();
   return path === "/" ? `${origin}/` : `${origin}${path}`;
 }
