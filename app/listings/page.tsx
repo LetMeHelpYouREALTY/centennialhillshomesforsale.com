@@ -16,6 +16,12 @@ import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { FAQSchema } from "@/components/SchemaScript";
 import {
+  CTA_PHONE,
+  CTA_TEL,
+  REALSCOUT_SEARCH_URL,
+  TEXT_LINK_CLASS,
+} from "@/lib/contact";
+import {
   formatUsd,
   LISTING_MEDIANS_USD,
   MARKET_SNAPSHOT_AS_OF,
@@ -182,7 +188,15 @@ const neighborhoods = [
   },
 ];
 
-export default function ListingsPage() {
+export default function ListingsPage({
+  searchParams,
+}: {
+  searchParams: { q?: string | string[] };
+}) {
+  const rawQuery = searchParams.q;
+  const query =
+    (Array.isArray(rawQuery) ? rawQuery[0] : rawQuery)?.trim() ?? "";
+
   return (
     <>
       <FAQSchema faqs={listingFaqs} />
@@ -210,6 +224,26 @@ export default function ListingsPage() {
               5,000-listing headline. Call Dr. Jan Duffy at{" "}
               <strong>Berkshire Hathaway HomeServices</strong>.
             </p>
+            {query ? (
+              <p className="mx-auto mb-8 max-w-2xl rounded-lg border border-blue-200 bg-blue-50 p-4 text-left text-slate-800">
+                You searched for “{query}”. Live MLS is in the widget below. If
+                that phrase does not match a street or ZIP,{" "}
+                <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
+                  call {CTA_PHONE}
+                </a>{" "}
+                or{" "}
+                <a
+                  href={REALSCOUT_SEARCH_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={TEXT_LINK_CLASS}
+                >
+                  open RealScout
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+                .
+              </p>
+            ) : null}
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
               <span className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Live MLS
@@ -380,19 +414,17 @@ export default function ListingsPage() {
               Why Work With a Berkshire Hathaway HomeServices Agent
             </h2>
             <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
-              In today's competitive Las Vegas market, having expert
-              representation can mean the difference between winning your dream
-              home and losing out. Dr. Jan Duffy brings the resources of
-              Berkshire Hathaway HomeServices—the most trusted name in real
-              estate— combined with deep local market knowledge from serving Las
-              Vegas since 2008.
+              In today's Las Vegas market, representation is a written buyer
+              agreement and a live MLS pull. Dr. Jan Duffy brings Berkshire
+              Hathaway HomeServices marketing and referral tools plus street-
+              level knowledge from serving Las Vegas since 2008.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Search className="h-6 w-6" />
                 </div>
-                <h3 className="font-bold mb-2">Off-Market Access</h3>
+                <h3 className="font-bold mb-2">MLS + referral network</h3>
                 <p className="text-slate-400 text-sm">
                   See listings through RealScout MLS search and the BHHS
                   referral network — not a 50,000-agent slogan

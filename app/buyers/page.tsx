@@ -105,7 +105,7 @@ const buyingSteps = [
     icon: Search,
     title: "Define Your Priorities & Search",
     description:
-      "Dr. Jan provides access to all MLS listings, off-market opportunities, and new construction. She'll help you match ZIP, commute, square footage, and amenities, then set up automated alerts so you never miss a new listing.",
+      "Dr. Jan provides access to live MLS listings, new construction after you register her, and private showings when the listing agent allows. She'll help you match ZIP, commute, square footage, and amenities, then set up alerts so you never miss a new listing.",
   },
   {
     icon: FileText,
@@ -238,7 +238,7 @@ export default function BuyersPage() {
                 </p>
                 <ul className="space-y-2">
                   {[
-                    "Full MLS access + off-market opportunities",
+                    "Full MLS access + private showings when listing agents allow",
                     "Expert negotiation on your behalf",
                     "Contract and disclosure review",
                     "Inspection coordination and repair negotiation",
@@ -431,14 +431,13 @@ export default function BuyersPage() {
                 href="/buyers/luxury-homes-las-vegas"
                 className="block min-h-11 bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
-                <div className="text-3xl mb-4">💎</div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
                   Luxury Home Buyers
                 </h3>
                 <p className="text-slate-600 text-sm mb-3">
-                  $1M+ properties with discrete service. The Ridges, MacDonald
-                  Highlands, Southern Highlands, and Las Vegas Strip views.
-                  Off-market opportunities available.
+                  $1M+ properties. The Ridges, MacDonald Highlands, Southern
+                  Highlands, and Las Vegas Strip views. Price from live comps —
+                  not a secret-inventory claim.
                 </p>
                 <span className="text-blue-600 font-semibold text-sm">
                   Learn More →

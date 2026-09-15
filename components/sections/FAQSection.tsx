@@ -2,7 +2,7 @@
 
 import { useId, useState } from "react";
 import { ChevronDown, ChevronUp, Phone } from "lucide-react";
-import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
+import { CTA_PHONE, CTA_TEL, TEXT_LINK_CLASS } from "@/lib/contact";
 import { defaultFaqs, type SiteFaq } from "@/lib/default-faqs";
 
 export type FAQ = SiteFaq;
@@ -87,10 +87,7 @@ export default function FAQSection({
 
         <p className="mt-10 text-center text-slate-600">
           Still have a question?{" "}
-          <a
-            href={CTA_TEL}
-            className="inline-flex items-center font-semibold text-blue-700"
-          >
+          <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
             <Phone className="mr-1 h-4 w-4" aria-hidden="true" />
             Call {CTA_PHONE}
           </a>

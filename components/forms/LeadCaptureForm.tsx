@@ -56,7 +56,9 @@ export function LeadCaptureForm({
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     const { name, value, type } = e.target;
 
@@ -330,11 +332,11 @@ export function LeadCaptureForm({
               id="timeline"
               name="timeline"
               value={formData.timeline}
-              onChange={(e) => handleChange(e as any)}
+              onChange={handleChange}
               disabled={loading}
               className="w-full rounded-md border border-gray-300 px-3 py-2"
             >
-              <option value="">Select timeline...</option>
+              <option value="">Select timeline…</option>
               <option value="Immediately">Immediately (ASAP)</option>
               <option value="1-3 months">1-3 months</option>
               <option value="3-6 months">3-6 months</option>
@@ -403,9 +405,9 @@ export function LeadCaptureForm({
           loading ||
           (!turnstileToken && !!process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY)
         }
-        className="w-full"
+        className="min-h-11 w-full"
       >
-        {loading ? "Submitting..." : "Submit"}
+        {loading ? "Submitting…" : "Send message"}
       </Button>
 
       <p className="text-xs text-gray-500 text-center">

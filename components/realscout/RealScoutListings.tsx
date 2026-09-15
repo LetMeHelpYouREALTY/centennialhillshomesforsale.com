@@ -40,9 +40,7 @@ export default function RealScoutListings() {
               agent-encoded-id="QWdlbnQtMjI1MDUw" 
               sort-order="NEWEST" 
               listing-status="For Sale" 
-              property-types=",SFR,MF,TC" 
-              price-min="500000" 
-              price-max="800000"
+              property-types=",SFR,MF,TC"
             ></realscout-office-listings>`,
             }}
           />

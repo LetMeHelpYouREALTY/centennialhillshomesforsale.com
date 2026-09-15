@@ -90,12 +90,12 @@ const specializations = [
   {
     title: "Luxury Properties ($1M+)",
     description:
-      "The Ridges, MacDonald Highlands, Southern Highlands, and exclusive communities",
+      "The Ridges, MacDonald Highlands, and Southern Highlands guard-gated and custom villages",
   },
   {
     title: "New Construction",
     description:
-      "Free buyer representation with Toll Brothers, Lennar, Century Communities, and more",
+      "Register before the first model-home visit with Toll Brothers, Lennar, Century Communities, and more",
   },
   {
     title: "Investment Properties",
@@ -151,10 +151,10 @@ export default function AboutPage() {
               alt={PAGE_HERO_IMAGES.about.alt}
             />
             <p className="text-xl text-slate-600">
-              Dr. Jan Duffy has been serving Las Vegas since 2008—backed by the
-              most trusted name in real estate. Whether you're buying, selling,
-              investing, or relocating, you'll receive expert guidance with
-              integrity and professionalism.
+              Dr. Jan Duffy has been serving Las Vegas since 2008 with Berkshire
+              Hathaway HomeServices Nevada Properties. Whether you're buying,
+              selling, investing, or relocating, you'll get a written plan and
+              live comps — not a ranking slogan.
             </p>
           </div>
 
@@ -195,8 +195,8 @@ export default function AboutPage() {
                     Inc.—a name synonymous with financial strength and ethical
                     standards. When you're making the biggest financial decision
                     of your life, that trust matters. You deserve an agent who
-                    puts your interests first, provides honest advice, and has
-                    the resources to deliver exceptional results.
+                    puts your interests first, provides honest advice, and walks
+                    the file until it closes.
                   </p>
                   <p>
                     I treat every client as a principal in the file. Whether

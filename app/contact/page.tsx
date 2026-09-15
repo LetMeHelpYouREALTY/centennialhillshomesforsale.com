@@ -22,6 +22,7 @@ import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { getPublicSiteUrl } from "@/lib/site-url";
 import { FAQSchema } from "@/components/SchemaScript";
+import { LeadCaptureForm } from "@/components/forms/LeadCaptureForm";
 
 export const metadata: Metadata = withShareImage(
   {
@@ -210,6 +211,17 @@ export default function ContactPage() {
               </div>
 
               <OfficeMap className="mb-8" height={300} />
+
+              <div className="mb-8 rounded-xl border border-slate-200 bg-white p-6">
+                <h2 className="mb-2 text-xl font-bold text-slate-900">
+                  Send a Message
+                </h2>
+                <p className="mb-4 text-sm text-slate-600">
+                  Prefer email over Calendly? Send the address, ZIP, and
+                  timeline. Dr. Jan Duffy replies during posted hours.
+                </p>
+                <LeadCaptureForm source="contact-page" formType="contact" />
+              </div>
 
               {/* Credentials */}
               <div className="p-4 bg-blue-50 rounded-lg">

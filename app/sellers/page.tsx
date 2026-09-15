@@ -479,7 +479,7 @@ export default function SellersPage() {
                 </p>
                 <Link
                   href="/home-valuation"
-                  className="inline-block bg-white text-blue-600 px-8 py-3 rounded-md font-bold hover:bg-blue-50 transition-colors"
+                  className="inline-flex min-h-11 items-center justify-center rounded-md bg-white px-8 py-3 font-bold text-blue-600 no-underline hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
                 >
                   Get Free Valuation
                 </Link>

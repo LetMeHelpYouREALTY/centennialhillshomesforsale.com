@@ -274,9 +274,9 @@ export default function NeighborhoodsPage() {
                   <div className="p-6">
                     <div className="mb-3 flex items-start justify-between">
                       <div>
-                        <h2 className="text-xl font-bold text-slate-900 transition-colors group-hover:text-blue-600">
+                        <h3 className="text-xl font-bold text-slate-900 transition-colors group-hover:text-blue-600">
                           {neighborhood.name}
-                        </h2>
+                        </h3>
                         <p className="text-sm text-slate-500">
                           {neighborhood.bestFor}
                         </p>

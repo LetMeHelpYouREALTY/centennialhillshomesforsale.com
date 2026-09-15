@@ -128,7 +128,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ],
     pageType: "search",
     realscoutAgentId: REALSCOUT_AGENT_ID,
-    ctaBadge: "Top-Rated Agent",
+    ctaBadge: "Las Vegas REALTOR®",
     ctaHeadline: "Call for a consult",
     ctaSubheadline:
       "Let's talk about your real estate goals — no pressure, just expertise.",
@@ -202,7 +202,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "Heritage at Stonebridge 55+ active adult community homes. Expert guidance from Dr. Jan Duffy.",
     heroHeadline: "Heritage at Stonebridge Homes",
     heroSubheadline:
-      "Award-winning 55+ active adult community with resort-style amenities in Summerlin.",
+      "Heritage at Stonebridge 55+ HOPA campus in Summerlin. Confirm occupancy, HOA, and live MLS with Dr. Jan Duffy.",
     keywords: [
       "Heritage Stonebridge homes",
       "55 plus Summerlin",
@@ -261,7 +261,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "Las Vegas home buying and selling expert. Dr. Jan Duffy, BHHS Nevada Properties.",
     heroHeadline: "Las Vegas Home Expert",
     heroSubheadline:
-      "The most knowledgeable real estate professional in the Las Vegas Valley.",
+      "Las Vegas REALTOR® since 2008. Call (702) 222-1964 for a live MLS pull — not a ranking slogan.",
     keywords: [
       "Las Vegas home expert",
       "Las Vegas real estate expert",
@@ -511,7 +511,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "Expert Skye Canyon real estate guidance. Find new and resale homes in Skye Canyon Las Vegas.",
     heroHeadline: "Skye Canyon Real Estate Expert",
     heroSubheadline:
-      "Get insider access to every lot, every floor plan, and every builder incentive in Skye Canyon.",
+      "Skye Canyon new construction and resale. Register before the first model-home visit. Confirm builder incentives on that file.",
     keywords: [
       "Skye Canyon real estate",
       "Skye Canyon NW Las Vegas",
@@ -522,7 +522,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "Skye Canyon Specialist",
     ctaHeadline: "Work With the Skye Canyon Expert",
     ctaSubheadline:
-      "No one knows Skye Canyon better. Let me find you the best deal available.",
+      "Skye Canyon files from a Las Vegas practice since 2008. Call 702-222-1964 for live inventory.",
   },
   "speedycashhomeoffers.com": {
     domain: "speedycashhomeoffers.com",
@@ -532,7 +532,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "Sell your Las Vegas home fast for cash. Get a competitive offer from Dr. Jan Duffy's network.",
     heroHeadline: "Fast Cash Offers for Las Vegas Homes",
     heroSubheadline:
-      "Close in as few as 7 days. No repairs, no showings, no hassle.",
+      "Ask for a cash-offer worksheet. Close date, repairs, and net are file-specific — not a 7-day slogan.",
     keywords: [
       "cash home offer Las Vegas",
       "sell house fast Las Vegas",
@@ -592,9 +592,10 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     neighborhood: "The Ridges Summerlin",
     tagline: "The Ridges Summerlin Luxury Homes",
     description:
-      "The Ridges Summerlin luxury homes for sale. Guard-gated living in Summerlin's finest community.",
+      "The Ridges Summerlin luxury homes for sale. Guard-gated custom villages — confirm HOA and live comps.",
     heroHeadline: "The Ridges Summerlin Homes for Sale",
-    heroSubheadline: "Summerlin's most exclusive guard-gated luxury community.",
+    heroSubheadline:
+      "The Ridges is guard-gated custom Summerlin. Price from live comps, not an exclusivity slogan.",
     keywords: [
       "The Ridges Summerlin",
       "Ridges Summerlin homes",

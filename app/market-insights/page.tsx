@@ -202,10 +202,10 @@ export default async function MarketInsightsPage() {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="prose prose-lg max-w-none text-slate-700">
                 <p>
-                  Las Vegas is rapidly becoming a legitimate tech hub. What
-                  started with data centers attracted by cheap power and land
-                  has evolved into a broader technology ecosystem. The
-                  implications for real estate are significant.
+                  Henderson's data-center corridor hosts operators including
+                  Google, Amazon Web Services, and Switch. Confirm current
+                  employers and commute on a CMA — I will not invent a
+                  job-growth rate or call the valley a tech hub slogan.
                 </p>
                 <h3 className="text-xl font-bold text-slate-900 mt-6 mb-3">
                   Data Center Corridor
@@ -323,8 +323,8 @@ export default async function MarketInsightsPage() {
                   <li className="flex items-start">
                     <span className="text-amber-400 mr-2">5.</span>
                     <span>
-                      <strong>Entertainment:</strong> World-class dining, shows,
-                      sports
+                      <strong>Entertainment:</strong> Dining, shows, and sports
+                      you can drive to — confirm the calendar, not a slogan
                     </span>
                   </li>
                 </ul>
@@ -509,8 +509,9 @@ export default async function MarketInsightsPage() {
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
                     <span>
-                      <strong>Consider tech corridors:</strong> Henderson and
-                      west Summerlin positioned for continued job growth
+                      <strong>Ask for a commute map:</strong> Henderson and
+                      Summerlin west are different freeways from Centennial
+                      Hills. I will not forecast job growth.
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -531,8 +532,9 @@ export default async function MarketInsightsPage() {
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
                     <span>
-                      <strong>Price correctly:</strong> Overpriced homes sit;
-                      correctly priced homes sell in under 30 days
+                      <strong>Price to the comps:</strong> Overpriced homes sit.
+                      Days on market is a live MLS pull by ZIP and price band —
+                      not a 30-day slogan
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -559,10 +561,10 @@ export default async function MarketInsightsPage() {
             <div className="bg-slate-900 text-white rounded-xl p-8">
               <blockquote className="text-lg italic mb-4">
                 "Understanding market forces—not just current prices—separates
-                informed decisions from reactive ones. Las Vegas is no longer
-                just a gaming and tourism economy. Tech investment, California
-                migration, and economic diversification are reshaping which
-                neighborhoods will outperform. As a{" "}
+                informed decisions from reactive ones. Listing medians and
+                commute maps beat a forecast. Tech employers, California inbound
+                buyers, and village-level inventory show up on the CMA — I will
+                not pick which neighborhoods will outperform. As a{" "}
                 <strong>Berkshire Hathaway HomeServices</strong> agent, I help
                 clients position themselves for where the market is going, not
                 just where it's been."
@@ -575,26 +577,26 @@ export default async function MarketInsightsPage() {
           </section>
 
           {/* CTA */}
-          <section className="text-center bg-purple-600 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <section className="mx-auto max-w-4xl rounded-2xl bg-blue-600 p-8 text-center text-white md:p-12">
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">
               Get Personalized Market Analysis
             </h2>
-            <p className="text-xl text-purple-100 mb-8">
+            <p className="mb-8 text-xl text-blue-100">
               Wondering what these trends mean for your specific situation? Dr.
               Jan Duffy provides free consultations with customized market
               analysis.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <a
                 href={CTA_TEL}
-                className="inline-flex min-h-11 items-center justify-center bg-white text-purple-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-purple-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-purple-600"
+                className="inline-flex min-h-11 items-center justify-center rounded-md bg-white px-8 py-4 text-lg font-bold text-blue-600 hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
               >
-                <Phone className="h-5 w-5 mr-2" />
+                <Phone className="mr-2 h-5 w-5" />
                 Call {CTA_PHONE}
               </a>
               <Link
                 href="/market-report"
-                className="inline-flex min-h-11 items-center justify-center bg-purple-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-purple-400 transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-purple-600"
+                className="inline-flex min-h-11 items-center justify-center rounded-md bg-blue-700 px-8 py-4 text-lg font-bold text-white no-underline hover:bg-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
               >
                 View Market Report →
               </Link>

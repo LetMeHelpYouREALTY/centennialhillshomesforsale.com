@@ -143,13 +143,9 @@ export const businessInfo = {
       "Wheelchair accessible restroom",
     ],
     // Service options
-    serviceOptions: [
-      "Online appointments",
-      "Onsite services",
-      "Same-day appointments",
-    ],
-    // Highlights
-    highlights: ["Identifies as women-owned", "LGBTQ+ friendly", "Veteran-led"],
+    serviceOptions: ["Online appointments", "Onsite services"],
+    // Identity attributes belong on the live GBP profile, not invented here.
+    highlights: [] as string[],
     // Offerings
     offerings: ["Free consultation", "Free estimates"],
     // Amenities
@@ -168,7 +164,7 @@ export const businessInfo = {
   ],
 
   // Languages spoken
-  languages: ["English", "Spanish"],
+  languages: ["English"],
 
   // Payment methods accepted
   paymentAccepted: ["Credit Card", "Check", "Wire Transfer"],
@@ -214,7 +210,7 @@ export const gbpFAQs = [
   {
     question: "What 55+ communities does Dr. Jan specialize in?",
     answer:
-      "Dr. Jan specializes in Sun City Summerlin (Nevada's largest 55+ community with 7,700+ homes), Sun City Anthem in Henderson, Del Webb Lake Las Vegas, and Solera at Anthem. Each community offers different amenities and price points for active adult living.",
+      "Dr. Jan specializes in Sun City Summerlin, Sun City Anthem in Henderson, Del Webb Lake Las Vegas, and Solera at Anthem. Confirm HOA, occupancy, and listing median on the resale packet — campus size is not a price.",
   },
   {
     question:

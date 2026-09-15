@@ -58,5 +58,14 @@ describe("GBP schema NAP and Maps alignment", () => {
     const answers = gbpFAQs.map((faq) => faq.answer).join("\n");
     expect(answers).not.toMatch(/world-class/i);
     expect(answers).not.toMatch(/50,000/);
+    expect(answers).not.toMatch(/7,700/);
+  });
+
+  it("does not invent identity attributes or a Spanish-language claim", () => {
+    expect(businessInfo.attributes.highlights).toEqual([]);
+    expect(businessInfo.languages).toEqual(["English"]);
+    expect(businessInfo.attributes.serviceOptions).not.toContain(
+      "Same-day appointments",
+    );
   });
 });

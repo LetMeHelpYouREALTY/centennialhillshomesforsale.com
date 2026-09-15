@@ -1,5 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { generateRealEstateAgentSchema, generateReviewSchema } from "./schema";
+import {
+  generateRealEstateAgentSchema,
+  generateReviewSchema,
+  generateWebSiteSchema,
+} from "./schema";
 import { SOCIAL_PROFILES } from "./contact";
 
 describe("RealEstateAgent JSON-LD", () => {
@@ -31,5 +35,17 @@ describe("RealEstateAgent JSON-LD", () => {
   it("does not attach an invented AggregateRating to review JSON-LD", () => {
     const reviewSchema = generateReviewSchema([]);
     expect(reviewSchema).not.toHaveProperty("aggregateRating");
+  });
+});
+
+describe("WebSite SearchAction", () => {
+  it("points Google sitelinks search at the listings page query", () => {
+    const schema = generateWebSiteSchema();
+    const action = schema.potentialAction as {
+      target: { urlTemplate: string };
+    };
+    expect(action.target.urlTemplate).toContain(
+      "/listings?q={search_term_string}",
+    );
   });
 });
