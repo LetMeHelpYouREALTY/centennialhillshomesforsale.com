@@ -21,8 +21,8 @@ export default function RedRockCountryClubPage() {
       intro="Red Rock Country Club is a golf community in Summerlin (89135), with two courses and a mix of attached and detached product. It is not Centennial Hills and it is not Red Rock Canyon itself."
       zipCodes={["89135"]}
       city="Las Vegas"
-      imageSrc="/images/neighborhoods/the-ridges.png"
-      imageAlt="Summerlin golf community setting near Red Rock Country Club"
+      imageSrc="/images/neighborhoods/red-rock-country-club.png"
+      imageAlt="Red Rock Country Club golf community in Summerlin 89135"
       stats={[
         { value: "89135", label: "Primary ZIP" },
         { value: "2", label: "Golf courses" },

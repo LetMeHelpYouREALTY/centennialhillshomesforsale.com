@@ -26,4 +26,23 @@ describe("site images catalog", () => {
       true,
     );
   });
+
+  it("gives distinct hero files to communities that share a master plan", () => {
+    const uniqueSlugs = [
+      "summerlin-west",
+      "89138",
+      "lone-mountain",
+      "groves-at-inspirada",
+      "trilogy-summerlin",
+      "solera-anthem",
+      "sun-city-anthem",
+      "sun-city-aliante",
+    ];
+    const srcs = uniqueSlugs.map((slug) => getNeighborhoodImage(slug).src);
+    expect(new Set(srcs).size).toBe(uniqueSlugs.length);
+    const root = path.join(__dirname, "..", "public");
+    for (const src of srcs) {
+      expect(existsSync(path.join(root, src.replace(/^\//, "")))).toBe(true);
+    }
+  });
 });

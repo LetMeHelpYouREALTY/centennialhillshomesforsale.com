@@ -77,13 +77,13 @@ export default function WhyChooseUs() {
         <div className="mt-10 text-center">
           <Link
             href="/about"
-            className="mr-4 inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-5 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50"
+            className="mr-4 inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-5 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
           >
             About Dr. Jan
           </Link>
           <a
             href={CTA_TEL}
-            className="inline-flex min-h-11 items-center justify-center rounded-md bg-blue-600 px-5 py-3 font-semibold text-white no-underline hover:bg-blue-700"
+            className="inline-flex min-h-11 items-center justify-center rounded-md bg-blue-600 px-5 py-3 font-semibold text-white no-underline hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
           >
             Call {CTA_PHONE}
           </a>

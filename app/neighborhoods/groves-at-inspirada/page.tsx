@@ -22,8 +22,8 @@ export default function GrovesAtInspiradaPage() {
       intro="The Groves at Inspirada is a KB Home townhome neighborhood inside the Inspirada master plan (Henderson 89044). New construction in Groves is done; what you buy today is resale."
       zipCodes={["89044"]}
       city="Henderson"
-      imageSrc="/images/neighborhoods/inspirada.png"
-      imageAlt="Inspirada Henderson parks and residential streets near Groves townhomes"
+      imageSrc="/images/neighborhoods/groves-at-inspirada.png"
+      imageAlt="Groves at Inspirada townhomes and pocket parks in Henderson 89044"
       stats={[
         { value: "KB Home", label: "Original builder" },
         { value: "TH", label: "Townhome" },

@@ -30,8 +30,8 @@ export default function SoleraAnthemPage() {
       intro="Solera at Anthem is a smaller guard-gated 55+ community in Henderson 89052. It is not Sun City Anthem. Occupancy rules here more often require every resident to be 55+ — confirm the current CC&Rs."
       zipCodes={["89052"]}
       city="Henderson"
-      imageSrc="/images/neighborhoods/henderson.png"
-      imageAlt="Henderson foothills residential setting near Solera at Anthem"
+      imageSrc="/images/neighborhoods/solera-anthem.png"
+      imageAlt="Solera at Anthem Henderson 55-plus single-story homes and rec courts"
       latitude={35.965}
       longitude={-115.1}
       stats={[

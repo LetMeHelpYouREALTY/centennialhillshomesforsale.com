@@ -6,7 +6,6 @@ import {
   Award,
   Users,
   Home,
-  TrendingUp,
   CheckCircle,
   MapPin,
   Shield,
@@ -107,7 +106,7 @@ const specializations = [
   {
     title: "California Relocation",
     description:
-      "Helping CA families transition to Nevada's tax advantages and lower costs",
+      "Helping CA buyers compare Nevada's 0% wage tax and live Las Vegas comps",
   },
 ];
 
@@ -177,12 +176,12 @@ export default function AboutPage() {
                   </p>
                   <p>
                     Since 2008, I've closed $127 million in transactions and
-                    helped hundreds of families find their perfect home in Las
-                    Vegas, Henderson, Summerlin, and throughout Southern Nevada.
-                    My expertise spans luxury properties, new construction,
+                    helped hundreds of clients buy or sell in Las Vegas,
+                    Henderson, Summerlin, and throughout Southern Nevada. My
+                    expertise spans luxury properties, new construction,
                     investment real estate, 55+ active adult communities, and
-                    relocations—particularly for California families seeking
-                    Nevada's tax advantages.
+                    relocations—particularly for California buyers comparing
+                    Nevada's wage-tax statute against live Las Vegas comps.
                   </p>
                   <p>
                     What sets{" "}
@@ -197,13 +196,13 @@ export default function AboutPage() {
                     the resources to deliver exceptional results.
                   </p>
                   <p>
-                    I believe in treating every client like family. Whether
+                    I treat every client as a principal in the file. Whether
                     you're a first-time buyer navigating the process for the
-                    first time, a luxury home seeker requiring discretion, or an
+                    first time, a luxury buyer who needs discretion, or an
                     investor building a rental portfolio, I provide the same
                     level of dedication, expertise, and personalized attention.
-                    Real estate is more than a transaction—it's about helping
-                    people find their place in the world.
+                    Real estate is more than a transaction—it's about matching
+                    square footage, commute, and budget to the right ZIP.
                   </p>
                 </div>
 
@@ -518,14 +517,14 @@ export default function AboutPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+17022221964"
-                className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
+                className="inline-flex min-h-11 items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
               >
                 <Phone className="h-5 w-5 mr-2" />
                 Call (702) 222-1964
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors"
+                className="inline-flex min-h-11 items-center justify-center bg-blue-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
               >
                 Schedule Consultation
               </Link>

@@ -12,7 +12,6 @@ import {
   TrendingUp,
   Users,
   Award,
-  Clock,
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
@@ -180,7 +179,8 @@ export default function BuyersPage() {
                   <strong>Berkshire Hathaway HomeServices</strong> agents
                   protect your interests, not the seller's. In a competitive
                   market like Las Vegas, having expert representation can mean
-                  the difference between winning your dream home and losing out.
+                  the difference between winning the house you want and losing
+                  out.
                 </p>
                 <ul className="space-y-2">
                   {[
@@ -265,10 +265,10 @@ export default function BuyersPage() {
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Las Vegas offers diverse neighborhoods for every lifestyle and
               budget. Whether you're seeking luxury estates in guard-gated
-              communities, family homes near parks, trails, and recreation
-              centers, or affordable new construction, Dr. Jan helps you find
-              the perfect neighborhood. Here's a quick guide to median prices
-              and what each area offers.
+              communities, homes near parks, trails, and recreation centers, or
+              new construction, Dr. Jan helps you match ZIP, commute, and square
+              footage. Here's a quick guide to listing medians and what each
+              area offers.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {neighborhoods.map((neighborhood) => (
@@ -323,9 +323,10 @@ export default function BuyersPage() {
                   California Relocators
                 </h3>
                 <p className="text-slate-600 text-sm mb-3">
-                  0% state income tax, 40-60% lower home prices. See what your
-                  CA equity buys in Las Vegas. Dr. Jan specializes in helping
-                  California families transition to Nevada.
+                  Nevada charges 0% state income tax on wages. Home-price
+                  differences are not a fixed 40–60% on every street — see live
+                  comps. Dr. Jan helps California buyers sequence a sale and a
+                  Las Vegas purchase.
                 </p>
                 <span className="text-blue-600 font-semibold text-sm">
                   Learn More →

@@ -7,18 +7,15 @@ import {
   Star,
   CheckCircle,
   MessageSquare,
-  Camera,
-  FileText,
   Award,
   Users,
   Home,
-  Building,
-  Heart,
 } from "lucide-react";
 import type { Metadata } from "next";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import { OFFICE_NAP } from "@/lib/contact";
 import { VisitOffice } from "@/components/shared/VisitOffice";
+import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import {
@@ -383,7 +380,7 @@ export default function GoogleBusinessPage() {
                 href={OFFICE_NAP.reviewsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                className="inline-flex min-h-11 items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
               >
                 Leave a Google Review
               </a>
@@ -401,14 +398,14 @@ export default function GoogleBusinessPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href={`tel:${businessInfo.phone.tel}`}
-                  className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors"
+                  className="inline-flex min-h-11 items-center justify-center bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                 >
                   <Phone className="h-5 w-5 mr-2" />
                   {businessInfo.phone.display}
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center bg-white text-slate-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-slate-100 transition-colors"
+                  className="inline-flex min-h-11 items-center justify-center bg-white text-slate-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-slate-100 transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                 >
                   <Mail className="h-5 w-5 mr-2" />
                   Send Message
@@ -427,6 +424,10 @@ export default function GoogleBusinessPage() {
           Last Updated: September 2026
         </div>
       </main>
+      <PageCTA
+        headline="Match the Google listing to this office"
+        subheadline="9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Call (702) 222-1964."
+      />
     </>
   );
 }

@@ -62,6 +62,8 @@ export default function Navbar() {
     { href: "/55-plus-communities", label: "55+ Communities" },
     { href: "/new-construction", label: "New Construction" },
     { href: "/home-valuation", label: "Home Valuation" },
+    { href: "/relocation", label: "Relocation" },
+    { href: "/investment-properties", label: "Investment" },
     { href: "/market-report", label: "Market Report" },
     { href: "/market-insights", label: "Market Insights" },
   ];
@@ -103,7 +105,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   aria-current={isCurrent ? "page" : undefined}
-                  className={`rounded-md px-1 py-1 text-sm font-medium no-underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 ${
+                  className={`inline-flex min-h-11 items-center rounded-md px-1 py-1 text-sm font-medium no-underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 ${
                     isCurrent
                       ? "text-blue-700"
                       : "text-slate-700 hover:text-blue-600"
@@ -117,7 +119,7 @@ export default function Navbar() {
             <div className="relative" ref={servicesRef}>
               <button
                 type="button"
-                className="flex items-center rounded-md px-2 py-1 text-sm font-medium text-slate-700 transition-colors hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+                className="flex min-h-11 items-center rounded-md px-2 py-1 text-sm font-medium text-slate-700 transition-colors hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
                 onClick={() => setIsServicesOpen((open) => !open)}
                 onMouseEnter={() => setIsServicesOpen(true)}
                 aria-expanded={isServicesOpen}
@@ -141,7 +143,7 @@ export default function Navbar() {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="block px-4 py-2 text-sm text-slate-700 no-underline hover:bg-blue-50 hover:text-blue-600 focus-visible:bg-blue-50 focus-visible:text-blue-600 focus-visible:outline-none"
+                      className="block min-h-11 px-4 py-2 text-sm text-slate-700 no-underline hover:bg-blue-50 hover:text-blue-600 focus-visible:bg-blue-50 focus-visible:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-600"
                       onClick={() => setIsServicesOpen(false)}
                       role="menuitem"
                     >
@@ -175,7 +177,7 @@ export default function Navbar() {
             </Button>
             <button
               type="button"
-              className="rounded-md p-1 text-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md p-1 text-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
               onClick={() => setIsMobileMenuOpen((open) => !open)}
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMobileMenuOpen}
@@ -207,7 +209,7 @@ export default function Navbar() {
                     key={link.href}
                     href={link.href}
                     aria-current={isCurrent ? "page" : undefined}
-                    className={`rounded px-3 py-2 font-medium no-underline transition-colors hover:bg-blue-50 hover:text-blue-600 ${
+                    className={`flex min-h-11 items-center rounded px-3 py-2 font-medium no-underline transition-colors hover:bg-blue-50 hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 ${
                       isCurrent ? "bg-blue-50 text-blue-700" : "text-slate-700"
                     }`}
                     onClick={() => setIsMobileMenuOpen(false)}
@@ -225,7 +227,7 @@ export default function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="block rounded px-3 py-2 font-medium text-slate-700 no-underline transition-colors hover:bg-blue-50 hover:text-blue-600"
+                    className="flex min-h-11 items-center rounded px-3 py-2 font-medium text-slate-700 no-underline transition-colors hover:bg-blue-50 hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.label}

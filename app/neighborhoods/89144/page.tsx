@@ -22,7 +22,7 @@ export default function Zip89144Page() {
       intro="ZIP 89144 is central / west-central Summerlin: The Arbors, The Trails, Queensridge, and nearby villages. It is a different market from Centennial Hills. If you searched 89144 homes for sale, this is the correct map."
       zipCodes={["89144"]}
       city="Las Vegas"
-      imageSrc="/images/neighborhoods/summerlin.png"
+      imageSrc="/images/neighborhoods/89144.png"
       imageAlt="Established Summerlin streetscape in ZIP 89144 Las Vegas"
       stats={[
         { value: "89144", label: "ZIP code" },

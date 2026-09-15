@@ -1,34 +1,21 @@
-import Image from "next/image";
 import Link from "next/link";
-import { Bed, Bath, Square, MapPin, Calendar } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import type { Metadata } from "next";
-import { CTA_PHONE, CTA_TEL, REALSCOUT_SEARCH_URL } from "@/lib/contact";
+import { Phone } from "lucide-react";
+import { PageHeroImage } from "@/components/shared/PageHeroImage";
+import { PageCTA } from "@/components/shared/PageCTA";
 import { MlsDisclaimer } from "@/components/shared/MlsDisclaimer";
+import { CTA_PHONE, CTA_TEL, REALSCOUT_SEARCH_URL } from "@/lib/contact";
+import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 
 export const metadata: Metadata = {
-  title: "Property Details | Las Vegas & Henderson Real Estate",
+  title: "Live MLS Listings | Dr. Jan Duffy",
   description:
-    "View detailed information about this property listing in Las Vegas or Henderson, NV.",
+    "This site does not host fake listing detail pages. Search live MLS with Dr. Jan Duffy or call (702) 222-1964.",
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
-
-// This would typically fetch from RealScout API
-async function getProperty(id: string) {
-  // Placeholder - replace with RealScout API call
-  return {
-    id,
-    name: "Modern Luxury Home",
-    location: "Summerlin, Las Vegas, NV",
-    price: "$850,000",
-    image: "/Image/hero_bg_1.jpg",
-    bedrooms: 4,
-    bathrooms: 3,
-    squareFeet: 3200,
-    yearBuilt: 2018,
-    description:
-      "Stunning modern home in desirable Summerlin community. Features open floor plan, updated kitchen, and beautiful backyard. Close to shopping, parks, and the Las Vegas Strip corridor.",
-  };
-}
 
 type PropertyPageProps = {
   params: Promise<{ id: string }>;
@@ -36,129 +23,53 @@ type PropertyPageProps = {
 
 export default async function PropertyPage({ params }: PropertyPageProps) {
   const { id } = await params;
-  const property = await getProperty(id);
 
   return (
-    <>
-      <main className="pb-16">
-        <div className="container mx-auto px-4">
-          {/* Property Header */}
-          <div className="mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">
-              {property.name}
-            </h1>
-            <div className="flex items-center text-slate-600 mb-4">
-              <MapPin className="h-5 w-5 mr-2" />
-              {property.location}
-            </div>
-            <div className="text-3xl font-bold text-blue-600">
-              {property.price}
-            </div>
-          </div>
-
-          {/* Main Image */}
-          <div className="relative h-64 md:h-96 rounded-lg overflow-hidden mb-8">
-            <Image
-              src={property.image}
-              alt={`${property.name} in ${property.location}`}
-              fill
-              sizes="(max-width: 768px) 100vw, 896px"
-              className="object-cover"
-              priority
-            />
-          </div>
-
-          {/* Property Details Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {/* Main Content */}
-            <div className="md:col-span-2">
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">
-                Property Details
-              </h2>
-              <p className="text-slate-700 mb-6">{property.description}</p>
-
-              <div className="bg-slate-50 rounded-lg p-6 mb-6">
-                <h3 className="text-xl font-bold text-slate-900 mb-4">
-                  Features
-                </h3>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="flex items-center">
-                    <Bed className="h-5 w-5 text-blue-600 mr-2" />
-                    <span className="text-slate-700">
-                      {property.bedrooms} Bedrooms
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <Bath className="h-5 w-5 text-blue-600 mr-2" />
-                    <span className="text-slate-700">
-                      {property.bathrooms} Bathrooms
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <Square className="h-5 w-5 text-blue-600 mr-2" />
-                    <span className="text-slate-700">
-                      {property.squareFeet.toLocaleString()} sq ft
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <Calendar className="h-5 w-5 text-blue-600 mr-2" />
-                    <span className="text-slate-700">
-                      Built {property.yearBuilt}
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* RealScout Widget Integration Point */}
-              <div className="bg-blue-50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  Schedule a Showing
-                </h3>
-                <p className="text-slate-700 mb-4">
-                  Contact us to schedule a private viewing of this property.
-                </p>
-                <Button asChild className="bg-blue-600 hover:bg-blue-700">
-                  <Link href="/contact">Contact Agent</Link>
-                </Button>
-              </div>
-            </div>
-
-            {/* Sidebar */}
-            <div className="md:col-span-1">
-              <div className="bg-white border border-slate-200 rounded-lg p-6 sticky top-24">
-                <h3 className="text-xl font-bold text-slate-900 mb-4">
-                  Contact Agent
-                </h3>
-                <p className="text-slate-600 mb-4">Dr. Jan Duffy</p>
-                <p className="text-sm text-slate-600 mb-6">
-                  Berkshire Hathaway HomeServices Nevada Properties
-                </p>
-                <div className="space-y-3">
-                  <Button
-                    asChild
-                    className="w-full bg-blue-600 hover:bg-blue-700"
-                  >
-                    <a href={CTA_TEL}>Call {CTA_PHONE}</a>
-                  </Button>
-                  <Button asChild variant="outline" className="w-full">
-                    <Link href="/contact">Send Message</Link>
-                  </Button>
-                  <Button asChild variant="outline" className="w-full">
-                    <a
-                      href={REALSCOUT_SEARCH_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Search Live MLS
-                    </a>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <MlsDisclaimer className="mt-8" />
+    <main className="pb-16">
+      <div className="container mx-auto max-w-3xl px-4">
+        <PageHeroImage
+          src={PAGE_HERO_IMAGES.listings.src}
+          alt={PAGE_HERO_IMAGES.listings.alt}
+        />
+        <h1 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl">
+          Live inventory is on MLS — not a sample listing
+        </h1>
+        <p className="mb-4 text-lg text-slate-600">
+          URL segment <span className="font-mono text-slate-900">{id}</span> is
+          not a published CMA or a current MLS photo set. RealScout already
+          syncs live listings. I will not invent an $850,000 Summerlin house for
+          Google.
+        </p>
+        <div className="mb-10 flex flex-col gap-3 sm:flex-row">
+          <Link
+            href="/listings"
+            className="inline-flex min-h-11 items-center justify-center rounded-md bg-blue-600 px-6 py-3 font-semibold text-white no-underline hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            Search Las Vegas listings
+          </Link>
+          <a
+            href={REALSCOUT_SEARCH_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-6 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            Open live MLS
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
+          <a
+            href={CTA_TEL}
+            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-6 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
+            Call {CTA_PHONE}
+          </a>
         </div>
-      </main>
-    </>
+        <MlsDisclaimer />
+      </div>
+      <PageCTA
+        headline="Want a specific address walked?"
+        subheadline="Call Dr. Jan Duffy. She will pull the live MLS file, not a placeholder."
+      />
+    </main>
   );
 }

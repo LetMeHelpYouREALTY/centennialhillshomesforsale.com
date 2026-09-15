@@ -1,17 +1,10 @@
 import Link from "next/link";
 import {
-  Home,
   MapPin,
   DollarSign,
   TrendingUp,
   Search,
-  Filter,
-  Heart,
-  Building2,
-  Users,
-  Clock,
   CheckCircle,
-  Star,
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
@@ -62,92 +55,101 @@ const popularSearches = [
   {
     name: "Summerlin Homes",
     href: "/neighborhoods/summerlin",
-    count: "1,200+",
+    note: "Open the Summerlin guide",
   },
   {
     name: "Henderson Properties",
     href: "/neighborhoods/henderson",
-    count: "980+",
+    note: "Open the Henderson guide",
   },
-  { name: "Green Valley", href: "/neighborhoods/green-valley", count: "450+" },
+  {
+    name: "Green Valley",
+    href: "/neighborhoods/green-valley",
+    note: "Open the Green Valley guide",
+  },
   {
     name: "The Ridges Luxury",
     href: "/neighborhoods/the-ridges",
-    count: "85+",
+    note: "Open The Ridges guide",
   },
-  { name: "55+ Communities", href: "/55-plus-communities", count: "320+" },
-  { name: "New Construction", href: "/new-construction", count: "600+" },
+  { name: "55+ Communities", href: "/55-plus-communities", note: "55+ hub" },
+  {
+    name: "New Construction",
+    href: "/new-construction",
+    note: "Builder pages",
+  },
 ];
 
 const priceRanges = [
   {
     range: "Under $400K",
-    description: "Starter homes, condos, townhomes",
-    count: "1,500+",
+    description: "Condos, townhomes, and some detached resale",
   },
   {
     range: "$400K - $600K",
     description: "Detached resale and townhomes in current MLS bands",
-    count: "2,100+",
   },
   {
     range: "$600K - $1M",
-    description: "Premium locations, larger homes",
-    count: "1,200+",
+    description: "Larger homes and later-phase master-plan product",
   },
   {
     range: "$1M - $2M",
-    description: "Luxury homes, guard-gated communities",
-    count: "450+",
+    description: "Luxury homes and guard-gated communities",
   },
   {
     range: "$2M+",
-    description: "Ultra-luxury estates, custom builds",
-    count: "180+",
+    description: "Custom estates — confirm with a live CMA",
   },
 ];
 
 const neighborhoods = [
   {
-    name: "Summerlin",
+    name: "Summerlin North",
+    href: "/neighborhoods/summerlin",
     description:
-      "Master-planned community with Red Rock views, 150+ parks, and Downtown Summerlin",
-    medianPrice: "$625,000",
-    daysOnMarket: 22,
+      "Master-planned streets with Red Rock views, parks, and Downtown Summerlin",
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.summerlinNorth),
+    medianNote: "Listing median",
   },
   {
     name: "Henderson",
+    href: "/neighborhoods/henderson",
     description:
-      "Nevada's second-largest city with Henderson communities with parks and trail access and parks and trails",
-    medianPrice: "$485,000",
-    daysOnMarket: 24,
+      "Nevada's second-largest city — parks, trails, and multiple master plans",
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.hendersonListing),
+    medianNote: "Listing median",
   },
   {
-    name: "Green Valley",
+    name: "Green Valley South",
+    href: "/neighborhoods/green-valley",
     description:
       "Established Henderson community with mature landscaping and golf courses",
-    medianPrice: "$520,000",
-    daysOnMarket: 26,
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.greenValleySouth),
+    medianNote: "Listing median",
   },
   {
     name: "Southern Highlands",
+    href: "/neighborhoods/southern-highlands",
     description:
       "Guard-gated luxury community with championship golf and mountain views",
-    medianPrice: "$750,000",
-    daysOnMarket: 32,
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.southernHighlands),
+    medianNote: "Listing median",
   },
   {
     name: "North Las Vegas",
-    description: "Affordable new construction and growing infrastructure",
-    medianPrice: "$385,000",
-    daysOnMarket: 18,
+    href: "/neighborhoods/north-las-vegas",
+    description: "Newer production inventory and growing infrastructure",
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.northLasVegas),
+    medianNote: "Listing median",
   },
   {
     name: "Skye Canyon",
+    href: "/neighborhoods/skye-canyon",
     description:
-      "Newer master-planned community with modern amenities and mountain access",
-    medianPrice: "$550,000",
-    daysOnMarket: 20,
+      "Northwest master-plan with modern amenities — price any bid with a live CMA",
+    medianPrice: "Live CMA",
+    medianNote: "No sourced ZIP median",
   },
 ];
 
@@ -173,9 +175,9 @@ export default function ListingsPage() {
               alt={PAGE_HERO_IMAGES.listings.alt}
             />
             <p className="text-xl text-slate-600 mb-8">
-              Search thousands of Las Vegas, Henderson, and Summerlin properties
-              with live MLS listings updated every 15 minutes. Find your dream
-              home with expert guidance from Dr. Jan Duffy at{" "}
+              Search live Las Vegas, Henderson, and Summerlin MLS inventory
+              through RealScout. Counts change by the hour — I will not invent a
+              5,000-listing headline. Call Dr. Jan Duffy at{" "}
               <strong>Berkshire Hathaway HomeServices</strong>.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
@@ -188,8 +190,8 @@ export default function ListingsPage() {
                 Every 15 Min
               </span>
               <span className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> 5,000+
-                Active Listings
+                <CheckCircle className="h-4 w-4 text-green-500 mr-1" />{" "}
+                RealScout MLS
               </span>
             </div>
           </div>
@@ -218,11 +220,10 @@ export default function ListingsPage() {
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Las Vegas offers diverse neighborhoods for every lifestyle and
               budget. Whether you're seeking luxury estates in guard-gated
-              communities, family homes near parks, trails, and recreation
-              centers, or affordable new construction, our comprehensive search
-              tools help you find exactly what you're looking for. Browse the
-              most popular searches below or use the advanced filters to
-              customize your home search experience.
+              communities, homes near parks, trails, and recreation centers, or
+              new construction, search live MLS or open a neighborhood guide.
+              Browse the searches below or use RealScout to filter live
+              inventory.
             </p>
             <div className="grid md:grid-cols-3 gap-4">
               {popularSearches.map((search) => (
@@ -236,7 +237,7 @@ export default function ListingsPage() {
                       {search.name}
                     </h3>
                     <span className="text-sm text-slate-500">
-                      {search.count} listings
+                      {search.note}
                     </span>
                   </div>
                   <ArrowRight className="h-5 w-5 text-slate-400 group-hover:text-blue-600" />
@@ -251,15 +252,14 @@ export default function ListingsPage() {
               Las Vegas Home Price Guide
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              The Las Vegas real estate market offers exceptional value compared
-              to California and other western states. With no state income tax
-              and housing prices 40-60% lower than coastal cities, your dollar
-              stretches further in Southern Nevada. Here's what you can expect
-              at different price points in the current {MARKET_SNAPSHOT_AS_OF}{" "}
-              market. Counts below are illustrative bands, not a live MLS count.
+              Nevada charges no state income tax on wages. Home-price
+              differences versus coastal cities are not a fixed 40–60% on every
+              street — I pair live comps. Here's what you can expect at
+              different price points in the current {MARKET_SNAPSHOT_AS_OF}{" "}
+              market. Search live MLS for current counts.
             </p>
             <div className="space-y-4">
-              {priceRanges.map((price, index) => (
+              {priceRanges.map((price) => (
                 <div
                   key={price.range}
                   className="bg-white rounded-lg p-4 border border-slate-200 flex flex-col md:flex-row md:items-center justify-between"
@@ -276,7 +276,7 @@ export default function ListingsPage() {
                     </div>
                   </div>
                   <span className="text-blue-600 font-semibold">
-                    {price.count} homes
+                    Search live MLS
                   </span>
                 </div>
               ))}
@@ -294,15 +294,15 @@ export default function ListingsPage() {
               parks and trail access of Henderson. Understanding these
               differences is crucial to finding a home that fits your needs. As
               a Berkshire Hathaway HomeServices agent serving Las Vegas since
-              2008, Dr. Jan Duffy provides expert guidance on which
-              neighborhoods match your priorities—whether that's schools,
-              commute times, amenities, or investment potential.
+              2008, Dr. Jan Duffy matches ZIP, commute times, amenities, and
+              budget — not school slogans or a “family-friendly” pitch.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {neighborhoods.map((neighborhood) => (
-                <div
+                <Link
                   key={neighborhood.name}
-                  className="bg-white border border-slate-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+                  href={neighborhood.href}
+                  className="bg-white border border-slate-200 rounded-lg p-6 hover:shadow-lg transition-shadow no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                 >
                   <h3 className="font-bold text-lg text-slate-900 mb-2">
                     {neighborhood.name}
@@ -312,19 +312,16 @@ export default function ListingsPage() {
                   </p>
                   <div className="flex justify-between text-sm">
                     <span className="text-slate-500">
-                      Median:{" "}
-                      <strong className="text-slate-900">
+                      {neighborhood.medianNote}:{" "}
+                      <strong className="tabular-nums text-slate-900">
                         {neighborhood.medianPrice}
                       </strong>
                     </span>
-                    <span className="text-slate-500">
-                      DOM:{" "}
-                      <strong className="text-slate-900">
-                        {neighborhood.daysOnMarket} days
-                      </strong>
+                    <span className="text-blue-700 font-semibold">
+                      Open guide
                     </span>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
             <div className="text-center mt-8">

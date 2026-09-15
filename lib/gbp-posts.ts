@@ -50,10 +50,10 @@ Call Dr. Jan Duffy at (702) 222-1964 for comps on a specific street.`,
     title: "California Buyers: Your Home Equity Goes Further in Las Vegas",
     content: `Thinking about relocating from California to Las Vegas? Here's why 37% of Las Vegas home buyers come from CA:
 
-✅ 0% state income tax (save thousands annually)
-✅ 40-60% lower home prices vs. comparable CA properties
-✅ Same-quality schools, better affordability
-✅ 4-hour drive to LA, easy flights everywhere
+✅ 0% state income tax on wages (Nevada statute)
+✅ Pair your California sale against live Las Vegas comps — not a 40–60% slogan
+✅ Named campuses and commute times instead of school slogans
+✅ About a 4-hour drive to LA, plus direct flights
 
 A $1.2M California home could buy you a luxury property in Summerlin or The Ridges. Dr. Jan Duffy specializes in California-to-Nevada relocations and can help you maximize your equity.
 
@@ -176,7 +176,7 @@ Why luxury buyers choose Las Vegas:
 ✅ No state income tax
 ✅ Privacy and discretion
 ✅ World-class dining, entertainment, golf
-✅ 40-60% lower than comparable CA/NY properties
+✅ Compare live comps — do not assume a 40–60% discount vs CA/NY
 
 Confidential luxury home search: (702) 222-1964`,
     cta: {

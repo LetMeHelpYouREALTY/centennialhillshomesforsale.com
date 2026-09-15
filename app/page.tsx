@@ -12,6 +12,7 @@ import { getCanonicalUrl, getRequestOrigin } from "@/lib/site-url";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import { AGENT_PHOTO_PATH } from "@/lib/brand-assets";
 import { CTA_PHONE, CTA_TEL, OFFICE_NAP } from "@/lib/contact";
+import { getNeighborhoodImage } from "@/lib/site-images";
 import {
   formatUsd,
   LISTING_MEDIANS_USD,
@@ -41,15 +42,44 @@ export async function generateMetadata(): Promise<Metadata> {
 const communities = [
   {
     href: "/neighborhoods/centennial-hills",
+    slug: "centennial-hills",
     label: "Centennial Hills (89149)",
   },
-  { href: "/neighborhoods/89144", label: "89144 Summerlin homes" },
-  { href: "/neighborhoods/inspirada", label: "Inspirada Henderson" },
-  { href: "/neighborhoods/groves-at-inspirada", label: "Groves at Inspirada" },
-  { href: "/neighborhoods/tournament-hills", label: "Tournament Hills" },
-  { href: "/neighborhoods/summerlin-west", label: "Summerlin West / 89138" },
-  { href: "/neighborhoods/lone-mountain", label: "Lone Mountain" },
-  { href: "/neighborhoods/skye-canyon", label: "Skye Canyon" },
+  {
+    href: "/neighborhoods/89144",
+    slug: "89144",
+    label: "89144 Summerlin homes",
+  },
+  {
+    href: "/neighborhoods/inspirada",
+    slug: "inspirada",
+    label: "Inspirada Henderson",
+  },
+  {
+    href: "/neighborhoods/groves-at-inspirada",
+    slug: "groves-at-inspirada",
+    label: "Groves at Inspirada",
+  },
+  {
+    href: "/neighborhoods/tournament-hills",
+    slug: "tournament-hills",
+    label: "Tournament Hills",
+  },
+  {
+    href: "/neighborhoods/summerlin-west",
+    slug: "summerlin-west",
+    label: "Summerlin West / 89138",
+  },
+  {
+    href: "/neighborhoods/lone-mountain",
+    slug: "lone-mountain",
+    label: "Lone Mountain",
+  },
+  {
+    href: "/neighborhoods/skye-canyon",
+    slug: "skye-canyon",
+    label: "Skye Canyon",
+  },
 ];
 
 export default async function Home() {
@@ -159,14 +189,14 @@ export default async function Home() {
                 <div className="flex flex-col justify-center gap-3 sm:flex-row md:justify-start">
                   <a
                     href={CTA_TEL}
-                    className="inline-flex items-center justify-center rounded-md bg-blue-600 px-5 py-3 font-semibold text-white hover:bg-blue-700"
+                    className="inline-flex min-h-11 items-center justify-center rounded-md bg-blue-600 px-5 py-3 font-semibold text-white hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
                   >
                     <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                     Call {CTA_PHONE}
                   </a>
                   <Link
                     href="/about"
-                    className="inline-flex items-center justify-center rounded-md border border-slate-300 px-5 py-3 font-semibold text-slate-900 hover:bg-slate-50"
+                    className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-5 py-3 font-semibold text-slate-900 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
                   >
                     About Dr. Jan
                   </Link>
@@ -189,15 +219,29 @@ export default async function Home() {
               </p>
             </div>
             <div className="mx-auto grid max-w-5xl gap-4 md:grid-cols-2">
-              {communities.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="rounded-xl border border-slate-200 px-5 py-4 font-semibold text-slate-900 hover:border-blue-400 hover:bg-blue-50"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {communities.map((item) => {
+                const image = getNeighborhoodImage(item.slug);
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="group flex min-h-11 overflow-hidden rounded-xl border border-slate-200 no-underline hover:border-blue-400 hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+                  >
+                    <span className="relative h-24 w-28 shrink-0 sm:h-28 sm:w-36">
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        fill
+                        sizes="144px"
+                        className="object-cover"
+                      />
+                    </span>
+                    <span className="flex min-w-0 items-center px-4 py-3 font-semibold text-pretty text-slate-900 group-hover:text-blue-700">
+                      {item.label}
+                    </span>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -252,7 +296,7 @@ export default async function Home() {
             <div className="mt-8 text-center">
               <Link
                 href="/market-insights"
-                className="inline-block rounded-md bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-700"
+                className="inline-flex min-h-11 items-center justify-center rounded-md bg-blue-600 px-6 py-3 font-semibold text-white no-underline transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
               >
                 Centennial Hills market insights
               </Link>

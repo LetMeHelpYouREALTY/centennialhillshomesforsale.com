@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { AGENT_EMAIL, CTA_PHONE, CTA_TEL, OFFICE_NAP } from "@/lib/contact";
+import { PageCTA } from "@/components/shared/PageCTA";
+import { VisitOffice } from "@/components/shared/VisitOffice";
 
 export const metadata: Metadata = {
   title: "Security Policy",
@@ -87,9 +90,7 @@ export default function SecurityPolicyPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="font-semibold text-gray-900 mb-2">
-                  🛡️ Protection
-                </h3>
+                <h3 className="font-semibold text-gray-900 mb-2">Protection</h3>
                 <ul className="text-gray-700 space-y-1 text-sm">
                   <li>• Cloudflare Turnstile CAPTCHA</li>
                   <li>• Rate limiting (Upstash)</li>
@@ -100,9 +101,7 @@ export default function SecurityPolicyPage() {
               </div>
 
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="font-semibold text-gray-900 mb-2">
-                  📊 Monitoring
-                </h3>
+                <h3 className="font-semibold text-gray-900 mb-2">Monitoring</h3>
                 <ul className="text-gray-700 space-y-1 text-sm">
                   <li>• Sentry error tracking</li>
                   <li>• Vercel Analytics</li>
@@ -114,7 +113,7 @@ export default function SecurityPolicyPage() {
 
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="font-semibold text-gray-900 mb-2">
-                  🔐 Data Protection
+                  Data Protection
                 </h3>
                 <ul className="text-gray-700 space-y-1 text-sm">
                   <li>• Encrypted connections (TLS 1.3)</li>
@@ -126,9 +125,7 @@ export default function SecurityPolicyPage() {
               </div>
 
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="font-semibold text-gray-900 mb-2">
-                  ✅ Compliance
-                </h3>
+                <h3 className="font-semibold text-gray-900 mb-2">Compliance</h3>
                 <ul className="text-gray-700 space-y-1 text-sm">
                   <li>• GDPR ready</li>
                   <li>• CCPA compliant</li>
@@ -189,15 +186,14 @@ export default function SecurityPolicyPage() {
             <div className="bg-green-50 border-l-4 border-green-500 p-6">
               <h3 className="font-semibold text-green-900 mb-3">We Promise</h3>
               <ul className="text-green-800 space-y-2">
-                <li>✅ We will respond within 48 hours</li>
-                <li>✅ We will keep you updated on our progress</li>
-                <li>✅ We will credit you for the discovery (if desired)</li>
+                <li>We will respond within 48 hours</li>
+                <li>We will keep you updated on our progress</li>
+                <li>We will credit you for the discovery (if desired)</li>
                 <li>
-                  ✅ We will not take legal action against good-faith
-                  researchers
+                  We will not take legal action against good-faith researchers
                 </li>
                 <li>
-                  ✅ We will work with you to understand and resolve the issue
+                  We will work with you to understand and resolve the issue
                 </li>
               </ul>
             </div>
@@ -258,19 +254,20 @@ export default function SecurityPolicyPage() {
               <p className="mb-2">
                 Berkshire Hathaway HomeServices Nevada Properties
               </p>
+              <p className="mb-2">{OFFICE_NAP.full}</p>
               <p className="mb-2">
                 Email:{" "}
                 <a
-                  href="mailto:info@heyberkshire.com"
+                  href={`mailto:${AGENT_EMAIL}`}
                   className="text-blue-600 underline"
                 >
-                  info@heyberkshire.com
+                  {AGENT_EMAIL}
                 </a>
               </p>
               <p>
                 Phone:{" "}
-                <a href="tel:+17022221964" className="text-blue-600 underline">
-                  (702) 222-1964
+                <a href={CTA_TEL} className="text-blue-600 underline">
+                  {CTA_PHONE}
                 </a>
               </p>
             </div>
@@ -279,7 +276,7 @@ export default function SecurityPolicyPage() {
           {/* Last Updated */}
           <footer className="border-t pt-6 mt-12">
             <p className="text-sm text-gray-500">
-              Last updated: February 14, 2026
+              Last updated: September 15, 2026
             </p>
             <p className="text-sm text-gray-500">
               This policy is reviewed and updated regularly.
@@ -287,6 +284,11 @@ export default function SecurityPolicyPage() {
           </footer>
         </div>
       </div>
+      <VisitOffice compact />
+      <PageCTA
+        headline="Questions about this policy?"
+        subheadline={`${OFFICE_NAP.full}. Call ${CTA_PHONE} or email ${AGENT_EMAIL}.`}
+      />
     </main>
   );
 }

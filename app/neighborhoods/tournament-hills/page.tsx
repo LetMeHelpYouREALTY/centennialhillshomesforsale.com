@@ -21,8 +21,8 @@ export default function TournamentHillsPage() {
       intro="Tournament Hills is a guard-gated custom-home village in Summerlin, not Centennial Hills. Searchers looking for Tournament Hills Summerlin real estate are shopping large lots near TPC Summerlin in ZIP 89134."
       zipCodes={["89134"]}
       city="Las Vegas"
-      imageSrc="/images/neighborhoods/summerlin.png"
-      imageAlt="Summerlin golf-course and mountain setting near Tournament Hills Las Vegas"
+      imageSrc="/images/neighborhoods/tournament-hills.png"
+      imageAlt="Tournament Hills custom homes near TPC Summerlin in ZIP 89134"
       stats={[
         { value: "89134", label: "Primary ZIP" },
         { value: "Custom", label: "Home type" },

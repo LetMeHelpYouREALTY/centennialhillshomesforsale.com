@@ -274,10 +274,10 @@ export const services = [
 export const expertQuotes = {
   market: `"The Las Vegas market remains strong heading into 2026. We're seeing continued demand from California relocators and remote workers, but the days of 20 offers on every listing are behind us. Buyers finally have some negotiating power."`,
   buyers: `"My job isn't just to show you houses—it's to make sure you don't overpay, that you understand what you're buying, and that you're protected through every step of the transaction."`,
-  sellers: `"Pricing your home correctly from day one is the single most important factor in getting top dollar. Overpriced homes sit, and every day on market costs you money."`,
+  sellers: `"Pricing your home to the comps from day one is the single most important listing decision. Overpriced homes sit, and every extra day on market costs carrying cost and buyer leverage."`,
   luxury: `"Luxury buyers expect discretion, market expertise, and flawless execution. In this price range, one wrong move can cost hundreds of thousands of dollars."`,
   investment: `"Las Vegas rental yields are among the best in the country right now. But you need to know which neighborhoods are appreciating and which have peaked."`,
-  relocation: `"Moving to a new city is stressful enough. I handle everything from neighborhood tours to school research to contractor referrals so you can focus on your new beginning."`,
+  relocation: `"Moving to a new city is stressful enough. I handle neighborhood tours, commute timing, contractor referrals, and a written buy-sell calendar so you can focus on the move."`,
   newConstruction: `"Builders have sales agents who work for them, not you. Having your own representation costs you nothing but can save you tens of thousands in upgrades and negotiations."`,
   valueProposition: `"When clients ask why they should choose a Berkshire Hathaway HomeServices agent, I tell them: you're not just getting me—you're getting a global network of 50,000 agents, world-class marketing, and a brand that's synonymous with trust."`,
 };
@@ -299,7 +299,7 @@ export const commonFAQs = {
     {
       question: "How do Berkshire Hathaway HomeServices agents get paid?",
       answer:
-        "Commission structures are negotiable. Dr. Jan Duffy offers transparent pricing and will walk you through all costs before you sign anything. For buyers, our services are typically free as commissions are paid by the seller.",
+        "Commission structures are negotiable and written before work starts. After the 2024 NAR practice changes, buyer-broker compensation is no longer an automatic MLS offer. Dr. Jan Duffy will walk through how she is paid before you sign a buyer agreement.",
     },
     {
       question: "What is Dr. Jan Duffy's experience in Las Vegas real estate?",
@@ -333,7 +333,7 @@ export const commonFAQs = {
     {
       question: "How long will it take to sell my home?",
       answer:
-        "Currently, well-priced homes in Las Vegas are selling in an average of 28 days. Luxury homes may take longer (45+ days). Pricing strategy is crucial—overpriced homes can sit for months.",
+        "Days on market move weekly by ZIP and price band. I will not quote a valley-wide average as if it were your street. Ask for a live MLS pull before you price or bid.",
     },
     {
       question: "What do I need to do to prepare my home for sale?",

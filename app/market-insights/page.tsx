@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
+import { PageCTA } from "@/components/shared/PageCTA";
+import { VisitOffice } from "@/components/shared/VisitOffice";
 import { getSearchCentralPosts } from "@/lib/search-central-feed";
 import {
   formatUsd,
@@ -272,8 +274,8 @@ export default async function MarketInsightsPage() {
                   <li className="flex items-start">
                     <span className="text-amber-400 mr-2">2.</span>
                     <span>
-                      <strong>Housing costs:</strong> 40-60% less than
-                      comparable CA markets
+                      <strong>Housing costs:</strong> Compare live Las Vegas
+                      comps to your California sale — not a 40–60% slogan
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -535,14 +537,14 @@ export default async function MarketInsightsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href={CTA_TEL}
-                className="inline-flex items-center justify-center bg-white text-purple-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-purple-50 transition-colors"
+                className="inline-flex min-h-11 items-center justify-center bg-white text-purple-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-purple-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-purple-600"
               >
                 <Phone className="h-5 w-5 mr-2" />
                 Call {CTA_PHONE}
               </a>
               <Link
                 href="/market-report"
-                className="inline-flex items-center justify-center bg-purple-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-purple-400 transition-colors"
+                className="inline-flex min-h-11 items-center justify-center bg-purple-500 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-purple-400 transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-purple-600"
               >
                 View Market Report →
               </Link>
@@ -553,6 +555,11 @@ export default async function MarketInsightsPage() {
           Last Updated: September 2026
         </div>
       </main>
+      <VisitOffice compact />
+      <PageCTA
+        headline="Need the live comps, not a valley average?"
+        subheadline="Call Dr. Jan Duffy. She will pull MLS for your ZIP, not a recycled headline."
+      />
       <RealScoutListings />
     </>
   );

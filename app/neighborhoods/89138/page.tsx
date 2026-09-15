@@ -22,7 +22,7 @@ export default function Zip89138Page() {
       intro="89138 is the Summerlin West ZIP. Searchers asking for homes, houses, or real estate in 89138 are not searching Centennial Hills."
       zipCodes={["89138"]}
       city="Las Vegas"
-      imageSrc="/images/neighborhoods/summerlin.png"
+      imageSrc="/images/neighborhoods/89138.png"
       imageAlt="Newer Summerlin West homes in ZIP 89138 Las Vegas"
       stats={[
         { value: "89138", label: "ZIP code" },

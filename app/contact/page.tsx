@@ -5,18 +5,18 @@ import {
   MapPin,
   Clock,
   Calendar,
-  CheckCircle,
   Star,
   Users,
   Shield,
 } from "lucide-react";
 import CalendlyWidget from "@/components/calendly/CalendlyWidget";
-import Link from "next/link";
 import type { Metadata } from "next";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import { AGENT_PHOTO_PATH } from "@/lib/brand-assets";
 import { CTA_PHONE, CTA_TEL, OFFICE_HOURS } from "@/lib/contact";
 import { OfficeMap } from "@/components/shared/OfficeMap";
+import { VisitOffice } from "@/components/shared/VisitOffice";
+import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { getPublicSiteUrl } from "@/lib/site-url";
@@ -346,6 +346,11 @@ export default function ContactPage() {
           Last updated: September 2026
         </div>
       </main>
+      <VisitOffice compact />
+      <PageCTA
+        headline="Call before you tour"
+        subheadline="Dr. Jan Duffy will pull the live MLS file and meet at 9406 W Lake Mead Blvd, Suite 100."
+      />
       <RealScoutListings />
     </>
   );

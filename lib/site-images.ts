@@ -107,16 +107,16 @@ const NEIGHBORHOOD_IMAGE_MAP: Record<string, SiteImage> = {
     alt: "Summerlin master-planned streets with Red Rock mountain backdrop",
   },
   "summerlin-west": {
-    src: "/images/neighborhoods/summerlin.png",
-    alt: "Summerlin West homes near Red Rock Canyon, Las Vegas",
+    src: "/images/neighborhoods/summerlin-west.png",
+    alt: "Newer Summerlin West homes in ZIP 89138 with Red Rock Canyon backdrop",
   },
   "89138": {
-    src: "/images/neighborhoods/summerlin.png",
-    alt: "89138 Summerlin West residential street, Las Vegas",
+    src: "/images/neighborhoods/89138.png",
+    alt: "Newer Summerlin West homes in ZIP 89138 Las Vegas",
   },
   "89144": {
-    src: "/images/neighborhoods/summerlin.png",
-    alt: "89144 Summerlin homes west of the 215, Las Vegas",
+    src: "/images/neighborhoods/89144.png",
+    alt: "Established Summerlin streetscape in ZIP 89144 Las Vegas",
   },
   henderson: {
     src: "/images/neighborhoods/henderson.png",
@@ -131,8 +131,8 @@ const NEIGHBORHOOD_IMAGE_MAP: Record<string, SiteImage> = {
     alt: "Inspirada Henderson master-plan homes and parks",
   },
   "groves-at-inspirada": {
-    src: "/images/neighborhoods/inspirada.png",
-    alt: "Groves at Inspirada townhomes in Henderson 89044",
+    src: "/images/neighborhoods/groves-at-inspirada.png",
+    alt: "Groves at Inspirada townhomes and pocket parks in Henderson 89044",
   },
   "the-ridges": {
     src: "/images/neighborhoods/the-ridges.png",
@@ -155,44 +155,44 @@ const NEIGHBORHOOD_IMAGE_MAP: Record<string, SiteImage> = {
     alt: "Mountains Edge Las Vegas homes looking toward the Spring Mountains",
   },
   "lone-mountain": {
-    src: "/images/neighborhoods/north-las-vegas.png",
-    alt: "Lone Mountain northwest Las Vegas residential streets",
+    src: "/images/neighborhoods/lone-mountain.png",
+    alt: "Lone Mountain northwest Las Vegas homes climbing toward the named peak",
   },
   "red-rock-country-club": {
-    src: "/images/neighborhoods/the-ridges.png",
-    alt: "Red Rock Country Club gated golf community in Summerlin",
+    src: "/images/neighborhoods/red-rock-country-club.png",
+    alt: "Red Rock Country Club golf community in Summerlin 89135",
   },
   "tournament-hills": {
-    src: "/images/neighborhoods/summerlin.png",
-    alt: "Tournament Hills Summerlin golf-community homes",
+    src: "/images/neighborhoods/tournament-hills.png",
+    alt: "Tournament Hills custom homes near TPC Summerlin in 89134",
   },
   "sun-city-summerlin": {
     src: "/images/neighborhoods/sun-city-summerlin.png",
     alt: "Sun City Summerlin 55-plus single-story homes and rec amenities",
   },
   "sun-city-anthem": {
-    src: "/images/neighborhoods/henderson.png",
-    alt: "Sun City Anthem Henderson 55-plus community setting",
+    src: "/images/neighborhoods/sun-city-anthem.png",
+    alt: "Sun City Anthem Henderson 55-plus single-story homes near the rec campus",
   },
   "del-webb-lake-las-vegas": {
-    src: "/images/neighborhoods/55-plus-hub.png",
+    src: "/images/neighborhoods/del-webb-lake-las-vegas.png",
     alt: "Del Webb Lake Las Vegas 55-plus community near the lake",
   },
   "heritage-stonebridge": {
-    src: "/images/neighborhoods/summerlin.png",
-    alt: "Heritage at Stonebridge Summerlin 55-plus streets",
+    src: "/images/neighborhoods/heritage-stonebridge.png",
+    alt: "Heritage at Stonebridge Summerlin 55-plus single-story homes",
   },
   "sun-city-aliante": {
-    src: "/images/neighborhoods/north-las-vegas.png",
-    alt: "Sun City Aliante North Las Vegas 55-plus homes",
+    src: "/images/neighborhoods/sun-city-aliante.png",
+    alt: "Sun City Aliante North Las Vegas 55-plus homes and rec pavilion",
   },
   "trilogy-summerlin": {
-    src: "/images/neighborhoods/summerlin.png",
-    alt: "Trilogy at Summerlin 55-plus community homes",
+    src: "/images/neighborhoods/trilogy-summerlin.png",
+    alt: "Trilogy at Summerlin 55-plus contemporary homes in ZIP 89135",
   },
   "solera-anthem": {
-    src: "/images/neighborhoods/henderson.png",
-    alt: "Solera at Anthem Henderson 55-plus community",
+    src: "/images/neighborhoods/solera-anthem.png",
+    alt: "Solera at Anthem Henderson 55-plus single-story homes and rec courts",
   },
 };
 

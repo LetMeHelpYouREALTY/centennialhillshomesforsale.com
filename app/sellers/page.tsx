@@ -1,18 +1,12 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
-  Camera,
   Globe,
   DollarSign,
   TrendingUp,
   CheckCircle,
   BarChart,
   Users,
-  Home,
-  Clock,
-  Shield,
-  ArrowRight,
-  Award,
 } from "lucide-react";
 import type { Metadata } from "next";
 import { PageCTA } from "@/components/shared/PageCTA";
@@ -28,7 +22,7 @@ import {
 export const metadata: Metadata = {
   title: "Sell Your Las Vegas Home | Berkshire Hathaway HomeServices",
   description:
-    "Sell your Las Vegas or Henderson home for top dollar with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Free home valuation. World-class marketing. Call (702) 222-1964.",
+    "Sell your Las Vegas or Henderson home with comps-based pricing and Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Free home valuation. Call (702) 222-1964.",
   keywords: [
     "sell home Las Vegas",
     "Las Vegas listing agent",
@@ -149,7 +143,7 @@ export default function SellersPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Sell Your Las Vegas Home for Top Dollar
+              Sell Your Las Vegas Home to the Comps
             </h1>
             <PageHeroImage
               src={PAGE_HERO_IMAGES.sellers.src}
@@ -160,8 +154,8 @@ export default function SellersPage() {
               <strong>Berkshire Hathaway HomeServices</strong>, you get
               world-class marketing, expert pricing, and a name that buyers
               trust. Dr. Jan Duffy has been serving Las Vegas since 2008—helping
-              sellers achieve top-dollar results with proven marketing
-              strategies and skilled negotiation.
+              sellers price to the comps with professional marketing and skilled
+              negotiation.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
               <span className="flex items-center">
@@ -306,7 +300,7 @@ export default function SellersPage() {
                   Move-Up Sellers
                 </h3>
                 <p className="text-slate-600 text-sm mb-3">
-                  Leverage your equity into your dream home. Coordinated buy &
+                  Leverage your equity into the next house. Coordinated buy &
                   sell strategies.
                 </p>
                 <span className="text-blue-600 font-semibold text-sm">
@@ -371,13 +365,13 @@ export default function SellersPage() {
             </h2>
             <div className="bg-slate-50 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Pricing your home correctly from day one is the single most
-                important factor in getting top dollar. Overpriced homes sit on
-                the market, and every day on market costs you money—both in
-                carrying costs and buyer perception. That's why I use
-                comprehensive market analysis and my experience serving Las
-                Vegas since 2008 to price homes right the first time. The
-                result? My listings typically sell within 2% of asking price."
+                "Pricing your home to the comps from day one is the single most
+                important listing decision. Overpriced homes sit on the market,
+                and every extra day costs carrying cost and buyer leverage.
+                That's why I use comprehensive market analysis and my experience
+                serving Las Vegas since 2008 to price homes right the first
+                time. The result? Listings I price this way typically close near
+                asking—confirm the live file, not a slogan."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
                 — Dr. Jan Duffy, BHHS Nevada Properties | Serving Las Vegas

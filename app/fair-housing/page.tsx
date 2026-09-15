@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { CTA_PHONE, CTA_TEL, OFFICE_NAP, AGENT_EMAIL } from "@/lib/contact";
+import { PageCTA } from "@/components/shared/PageCTA";
+import { VisitOffice } from "@/components/shared/VisitOffice";
 
 export const metadata: Metadata = {
   title: "Fair Housing Statement | Equal Housing Opportunity",
@@ -55,7 +57,10 @@ export default function FairHousingPage() {
           <p className="text-slate-700">
             If you need a reasonable accommodation to access our services or
             office, call{" "}
-            <a href={CTA_TEL} className="font-semibold text-blue-700">
+            <a
+              href={CTA_TEL}
+              className="font-semibold text-blue-700 min-h-11 inline-flex items-center"
+            >
               {CTA_PHONE}
             </a>{" "}
             or email{" "}
@@ -97,6 +102,11 @@ export default function FairHousingPage() {
           </ul>
         </section>
       </div>
+      <VisitOffice compact />
+      <PageCTA
+        headline="Ask for a showing without a lifestyle slogan"
+        subheadline="I describe square footage, amenities, named campuses, and commute times. Call (702) 222-1964."
+      />
     </main>
   );
 }

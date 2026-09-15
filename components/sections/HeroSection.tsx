@@ -8,16 +8,16 @@ import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
 
 const images = [
   {
-    src: "/Image/hero_bg_1.jpg",
-    alt: "Las Vegas valley homes with mountain backdrop",
+    src: "/images/neighborhoods/centennial-hills.png",
+    alt: "Centennial Hills Las Vegas homes with northwest desert mountain views",
   },
   {
-    src: "/Image/hero_bg_2.jpg",
-    alt: "Henderson residential street and desert landscaping",
+    src: "/images/neighborhoods/henderson.png",
+    alt: "Henderson Nevada residential street with McCullough Range views",
   },
   {
-    src: "/Image/hero_bg_3.jpg",
-    alt: "Summerlin homes near Red Rock Canyon views",
+    src: "/images/neighborhoods/summerlin-west.png",
+    alt: "Summerlin West homes near Red Rock Canyon, Las Vegas",
   },
 ];
 
@@ -78,7 +78,7 @@ export default function HeroSection() {
 
         <a
           href={CTA_TEL}
-          className="mt-4 inline-flex min-h-11 items-center rounded-md bg-blue-600 px-6 py-3 font-semibold text-white no-underline hover:bg-blue-700"
+          className="mt-4 inline-flex min-h-11 items-center rounded-md bg-blue-600 px-6 py-3 font-semibold text-white no-underline hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
         >
           <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
           Call {CTA_PHONE}

@@ -16,7 +16,7 @@ export default function AIChatWidget() {
     {
       role: "assistant",
       content:
-        "Hello! I'm your real estate assistant. How can I help you find your dream home in Las Vegas or Henderson today?",
+        "Hello. I can help you search Las Vegas or Henderson listings, compare ZIPs, or connect you with Dr. Jan Duffy at (702) 222-1964.",
     },
   ]);
   const [input, setInput] = useState("");
@@ -101,7 +101,7 @@ export default function AIChatWidget() {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-lg z-50 transition-all hover:scale-110"
+          className="fixed bottom-6 right-6 z-50 inline-flex min-h-11 min-w-11 items-center justify-center rounded-full bg-blue-600 p-4 text-white shadow-lg hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 motion-safe:transition-transform motion-safe:hover:scale-110"
           aria-label="Open chat"
         >
           <MessageCircle className="h-6 w-6" />
@@ -119,7 +119,7 @@ export default function AIChatWidget() {
             </div>
             <button
               onClick={() => setIsOpen(false)}
-              className="hover:bg-blue-700 rounded p-1 transition-colors"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded p-1 hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               aria-label="Close chat"
             >
               <X className="h-5 w-5" />
@@ -127,7 +127,10 @@ export default function AIChatWidget() {
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4">
+          <div
+            className="flex-1 overflow-y-auto p-4 space-y-4"
+            aria-live="polite"
+          >
             {messages.map((message, index) => (
               <div
                 key={index}
@@ -166,14 +169,18 @@ export default function AIChatWidget() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyPress={handleKeyPress}
-                placeholder="Type your message..."
+                placeholder="Ask about a ZIP or listing…"
                 disabled={isLoading}
                 className="flex-1"
+                name="chat-message"
+                autoComplete="off"
+                aria-label="Chat message"
               />
               <Button
                 onClick={handleSend}
                 disabled={isLoading || !input.trim()}
-                className="bg-blue-600 hover:bg-blue-700"
+                className="min-h-11 bg-blue-600 hover:bg-blue-700"
+                aria-label={isLoading ? "Sending…" : "Send message"}
               >
                 {isLoading ? (
                   <Loader2 className="h-4 w-4 animate-spin" />

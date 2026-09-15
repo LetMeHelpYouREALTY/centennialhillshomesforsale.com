@@ -23,8 +23,8 @@ export default function SummerlinWestPage() {
       intro="Summerlin West is the later Howard Hughes build-out on the far west side of the master plan, primarily ZIP 89138. It is not Centennial Hills and it is not Tournament Hills."
       zipCodes={["89138"]}
       city="Las Vegas"
-      imageSrc="/images/neighborhoods/summerlin.png"
-      imageAlt="West Summerlin desert foothills and newer residential streets in ZIP 89138"
+      imageSrc="/images/neighborhoods/summerlin-west.png"
+      imageAlt="Newer Summerlin West homes in ZIP 89138 with Red Rock Canyon backdrop"
       stats={[
         {
           value: formatUsd(LISTING_MEDIANS_USD.summerlinWest),
