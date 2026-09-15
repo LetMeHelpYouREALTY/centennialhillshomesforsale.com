@@ -37,4 +37,12 @@ describe("multi-domain landing copy", () => {
       "homes@heyberkshire.com",
     );
   });
+
+  it("puts the client email on every domain description", () => {
+    for (const domain of Object.keys(DOMAIN_CONFIGS)) {
+      expect(getDomainConfig(domain).description).toContain(
+        "homes@heyberkshire.com",
+      );
+    }
+  });
 });

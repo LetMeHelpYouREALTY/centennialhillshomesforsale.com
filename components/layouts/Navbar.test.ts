@@ -18,5 +18,9 @@ describe("navbar keyboard", () => {
     expect(src).toContain("document.getElementById(id)");
     expect(src).toContain('position = "fixed"');
     expect(src).toContain('event.key !== "Tab"');
+    expect(src).toContain("listServiceLinks");
+    expect(src).toContain("focusServiceLink");
+    expect(src).toContain("ArrowDown");
+    expect(src).not.toContain("priority className");
   });
 });

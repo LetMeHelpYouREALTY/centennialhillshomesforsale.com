@@ -14,5 +14,6 @@ describe("homepage MLS search", () => {
     expect(src).toContain("homes@heyberkshire.com");
     expect(src).toContain("AGENT_EMAIL_MAILTO");
     expect(src).toContain("Siena");
+    expect(src).not.toContain("text-white/80");
   });
 });

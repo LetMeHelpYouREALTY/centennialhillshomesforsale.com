@@ -705,5 +705,6 @@ export function getDomainConfig(hostname: string): DomainConfig {
     ...config,
     description: withClientEmail(config.description),
     heroSubheadline: withClientEmail(config.heroSubheadline),
+    ctaSubheadline: withClientEmail(config.ctaSubheadline),
   };
 }

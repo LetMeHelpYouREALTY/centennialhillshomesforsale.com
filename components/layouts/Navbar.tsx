@@ -36,6 +36,33 @@ function setChromeInert(inert: boolean) {
   }
 }
 
+function listServiceLinks(root: HTMLElement | null): HTMLAnchorElement[] {
+  if (!root) {
+    return [];
+  }
+  return Array.from(
+    root.querySelectorAll<HTMLAnchorElement>("#services-menu a"),
+  ).filter(isDisplayed);
+}
+
+function focusServiceLink(
+  links: HTMLAnchorElement[],
+  current: Element | null,
+  delta: number,
+) {
+  if (links.length === 0) {
+    return;
+  }
+  const index = links.findIndex((link) => link === current);
+  const next =
+    index === -1
+      ? delta > 0
+        ? 0
+        : links.length - 1
+      : (index + delta + links.length) % links.length;
+  links[next].focus();
+}
+
 export default function Navbar() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -45,6 +72,7 @@ export default function Navbar() {
   const navRef = useRef<HTMLElement>(null);
   const mobileNavRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const servicesMenuFocusRef = useRef<"first" | "last" | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -86,6 +114,22 @@ export default function Navbar() {
     setIsMobileMenuOpen(false);
     setIsServicesOpen(false);
   }, [pathname]);
+
+  useEffect(() => {
+    if (!isServicesOpen || !servicesMenuFocusRef.current) {
+      return;
+    }
+    const links = listServiceLinks(servicesRef.current);
+    if (links.length === 0) {
+      return;
+    }
+    const target =
+      servicesMenuFocusRef.current === "last"
+        ? links[links.length - 1]
+        : links[0];
+    target.focus();
+    servicesMenuFocusRef.current = null;
+  }, [isServicesOpen]);
 
   useEffect(() => {
     if (!isMobileMenuOpen) return;
@@ -178,7 +222,7 @@ export default function Navbar() {
             className="flex min-h-11 min-w-0 items-center gap-3 no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
             aria-label="Dr. Jan Duffy, Berkshire Hathaway HomeServices — home"
           >
-            <AgentPhoto variant="navbar" priority className="shrink-0" />
+            <AgentPhoto variant="navbar" className="shrink-0" />
             <span className="flex min-w-0 flex-col">
               <span className="text-lg font-bold leading-tight text-slate-900 transition-colors hover:text-blue-600 md:text-xl lg:text-2xl">
                 Berkshire Hathaway
@@ -219,6 +263,15 @@ export default function Navbar() {
                 className="flex min-h-11 items-center rounded-md px-2 py-1 text-sm font-medium text-slate-700 transition-colors hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
                 onClick={() => setIsServicesOpen((open) => !open)}
                 onMouseEnter={() => setIsServicesOpen(true)}
+                onKeyDown={(event) => {
+                  if (event.key !== "ArrowDown" && event.key !== "ArrowUp") {
+                    return;
+                  }
+                  event.preventDefault();
+                  servicesMenuFocusRef.current =
+                    event.key === "ArrowUp" ? "last" : "first";
+                  setIsServicesOpen(true);
+                }}
                 aria-expanded={isServicesOpen}
                 aria-haspopup="true"
                 aria-controls="services-menu"
@@ -233,6 +286,28 @@ export default function Navbar() {
                   id="services-menu"
                   className="absolute left-0 top-full z-50 mt-2 w-52 list-none rounded-lg bg-white py-2 shadow-lg"
                   onMouseLeave={() => setIsServicesOpen(false)}
+                  onKeyDown={(event) => {
+                    const links = listServiceLinks(servicesRef.current);
+                    if (event.key === "ArrowDown") {
+                      event.preventDefault();
+                      focusServiceLink(links, event.target as Element, 1);
+                      return;
+                    }
+                    if (event.key === "ArrowUp") {
+                      event.preventDefault();
+                      focusServiceLink(links, event.target as Element, -1);
+                      return;
+                    }
+                    if (event.key === "Home") {
+                      event.preventDefault();
+                      links[0]?.focus();
+                      return;
+                    }
+                    if (event.key === "End") {
+                      event.preventDefault();
+                      links[links.length - 1]?.focus();
+                    }
+                  }}
                 >
                   {serviceLinks.map((link) => (
                     <li key={link.href}>

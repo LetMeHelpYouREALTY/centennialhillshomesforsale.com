@@ -46,7 +46,7 @@ export default function Footer() {
                 href={SOCIAL_PROFILES.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-400 transition-colors hover:text-white inline-flex min-h-11 min-w-11 items-center justify-center"
+                className="text-slate-300 transition-colors hover:text-white inline-flex min-h-11 min-w-11 items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                 aria-label="Dr. Jan Duffy on Facebook (opens in a new tab)"
               >
                 <Facebook className="h-5 w-5" aria-hidden="true" />
@@ -55,7 +55,7 @@ export default function Footer() {
                 href={SOCIAL_PROFILES.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-400 transition-colors hover:text-white inline-flex min-h-11 min-w-11 items-center justify-center"
+                className="text-slate-300 transition-colors hover:text-white inline-flex min-h-11 min-w-11 items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                 aria-label="Dr. Jan Duffy on Instagram (opens in a new tab)"
               >
                 <Instagram className="h-5 w-5" aria-hidden="true" />
@@ -64,7 +64,7 @@ export default function Footer() {
                 href={SOCIAL_PROFILES.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-400 transition-colors hover:text-white inline-flex min-h-11 min-w-11 items-center justify-center"
+                className="text-slate-300 transition-colors hover:text-white inline-flex min-h-11 min-w-11 items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                 aria-label="Dr. Jan Duffy on LinkedIn (opens in a new tab)"
               >
                 <Linkedin className="h-5 w-5" aria-hidden="true" />
@@ -200,48 +200,48 @@ export default function Footer() {
 
         <div className="mt-8 border-t border-slate-800 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <p className="text-center text-sm text-slate-400 md:text-left">
+            <p className="text-center text-sm text-slate-300 md:text-left">
               © {currentYear} Berkshire Hathaway HomeServices Nevada
               Properties. All Rights Reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <Link
                 href="/google-business"
-                className="inline-flex min-h-11 items-center text-slate-400 no-underline transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                className="inline-flex min-h-11 items-center text-slate-300 no-underline transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 Google Business
               </Link>
               <Link
                 href="/fair-housing"
-                className="inline-flex min-h-11 items-center text-slate-400 no-underline transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                className="inline-flex min-h-11 items-center text-slate-300 no-underline transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 Fair Housing
               </Link>
               <Link
                 href="/faq"
-                className="inline-flex min-h-11 items-center text-slate-400 no-underline transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                className="inline-flex min-h-11 items-center text-slate-300 no-underline transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 FAQ
               </Link>
               <Link
                 href="/security-policy"
-                className="inline-flex min-h-11 items-center text-slate-400 no-underline transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                className="inline-flex min-h-11 items-center text-slate-300 no-underline transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 Security
               </Link>
               <Link
                 href="/sitemap.xml"
-                className="inline-flex min-h-11 items-center text-slate-400 no-underline transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                className="inline-flex min-h-11 items-center text-slate-300 no-underline transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 Sitemap
               </Link>
             </div>
           </div>
-          <p className="mt-4 text-center text-xs text-slate-500">
+          <p className="mt-4 text-center text-xs text-slate-300">
             Dr. Jan Duffy, REALTOR® | License {AGENT_LICENSE} | Berkshire
             Hathaway HomeServices Nevada Properties
           </p>
-          <FairHousingNotice className="mx-auto mt-3 max-w-3xl text-center text-slate-500" />
+          <FairHousingNotice className="mx-auto mt-3 max-w-3xl text-center text-slate-300" />
         </div>
       </div>
     </footer>

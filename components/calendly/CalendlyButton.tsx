@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
-import Script from "next/script";
 import { CALENDLY_SHOWING_URL } from "@/lib/contact";
-import { CALENDLY_WIDGET_JS, ensureCalendlyStylesheet } from "./load-calendly";
+import {
+  ensureCalendlyScript,
+  ensureCalendlyStylesheet,
+} from "./load-calendly";
 import "./types";
 
 interface CalendlyButtonProps {
@@ -21,6 +23,7 @@ export default function CalendlyButton({
 }: CalendlyButtonProps) {
   useEffect(() => {
     ensureCalendlyStylesheet();
+    ensureCalendlyScript();
   }, []);
 
   const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
@@ -31,22 +34,15 @@ export default function CalendlyButton({
   };
 
   return (
-    <>
-      <Script
-        id="calendly-widget-js"
-        src={CALENDLY_WIDGET_JS}
-        strategy="lazyOnload"
-      />
-      <a
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={handleClick}
-        className={className}
-      >
-        {children || text}
-        <span className="sr-only"> Opens a scheduling popup</span>
-      </a>
-    </>
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={handleClick}
+      className={className}
+    >
+      {children || text}
+      <span className="sr-only"> Opens a scheduling popup</span>
+    </a>
   );
 }

@@ -15,5 +15,8 @@ describe("lead capture form chrome", () => {
     expect(src).toContain('inputMode="numeric"');
     expect(src).toContain('inputMode="decimal"');
     expect(src).toContain('inputMode="tel"');
+    expect(src).toContain(
+      "focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2",
+    );
   });
 });

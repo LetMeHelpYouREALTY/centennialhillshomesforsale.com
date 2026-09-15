@@ -34,6 +34,27 @@ export default function FAQSection({
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const onFaqKeyDown = (
+    event: React.KeyboardEvent<HTMLButtonElement>,
+    index: number,
+  ) => {
+    const last = faqs.length - 1;
+    let next = index;
+    if (event.key === "ArrowDown") {
+      next = index === last ? 0 : index + 1;
+    } else if (event.key === "ArrowUp") {
+      next = index === 0 ? last : index - 1;
+    } else if (event.key === "Home") {
+      next = 0;
+    } else if (event.key === "End") {
+      next = last;
+    } else {
+      return;
+    }
+    event.preventDefault();
+    document.getElementById(`${baseId}-faq-button-${next}`)?.focus();
+  };
+
   return (
     <section className={`bg-white py-16 md:py-24 ${className}`}>
       <div className="container mx-auto px-4">
@@ -62,6 +83,7 @@ export default function FAQSection({
                   aria-expanded={isOpen}
                   aria-controls={panelId}
                   onClick={() => toggleFAQ(index)}
+                  onKeyDown={(event) => onFaqKeyDown(event, index)}
                   className="flex min-h-11 w-full items-center justify-between px-6 py-4 text-left transition-colors hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-inset"
                 >
                   <span className="pr-4 font-semibold text-slate-900">

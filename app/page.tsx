@@ -194,7 +194,7 @@ export default async function Home() {
             <h1 className="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
               Centennial Hills Homes for Sale
             </h1>
-            <p className="mx-auto mb-10 max-w-3xl text-pretty text-xl text-white/80 md:text-2xl">
+            <p className="mx-auto mb-10 max-w-3xl text-pretty text-xl text-white md:text-2xl">
               Northwest Las Vegas listings in 89149, 89131, and 89143 — written
               for this site, not copied from another domain.
             </p>
@@ -206,7 +206,7 @@ export default async function Home() {
               />
             </div>
 
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-white/80">
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-white">
               <div className="flex items-center gap-2">
                 <span className="font-semibold text-white">Since 2008</span>
                 <span>Las Vegas closings</span>
@@ -219,7 +219,7 @@ export default async function Home() {
                 href={OFFICE_NAP.reviewsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-11 items-center gap-2 text-white/80 no-underline hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                className="inline-flex min-h-11 items-center gap-2 text-white no-underline hover:text-blue-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 <span className="font-semibold text-white">Google</span>
                 <span>reviews on the profile</span>

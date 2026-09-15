@@ -294,11 +294,11 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
     src: PAGE_HERO_IMAGES.market.src,
   },
   {
-    test: /\b(search|mls|for sale|listings?|price guide)\b/i,
-    src: PAGE_HERO_IMAGES.listings.src,
+    test: /\b(drive times?|commute|freeway|us-95|i-215|downtown)\b/i,
+    src: PAGE_HERO_IMAGES.relocation.src,
   },
   {
-    test: /\b(drive time|commute|freeway|us-95|i-215|downtown)\b/i,
+    test: /\b(search|mls|for sale|listings?|price guide)\b/i,
     src: PAGE_HERO_IMAGES.listings.src,
   },
   {

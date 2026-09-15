@@ -11,5 +11,9 @@ describe("site footer", () => {
     expect(src).toContain("89138");
     expect(src).toContain("Siena");
     expect(src).toContain("/55-plus-communities/siena");
+    expect(src).toContain("text-slate-300");
+    expect(src).not.toContain("text-slate-400");
+    expect(src).not.toContain("text-slate-500");
+    expect(src).toContain("focus-visible:ring-white");
   });
 });

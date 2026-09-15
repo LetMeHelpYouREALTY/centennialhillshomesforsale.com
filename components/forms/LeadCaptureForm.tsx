@@ -468,7 +468,7 @@ export function LeadCaptureForm({
               checked={formData.preApproved}
               onChange={handleChange}
               disabled={loading}
-              className="h-5 w-5 rounded"
+              className="h-5 w-5 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
             />
             <label htmlFor={ids.preApproved} className="text-sm">
               I am pre-approved for financing

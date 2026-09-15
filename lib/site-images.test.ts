@@ -62,6 +62,7 @@ describe("site images catalog", () => {
       neighborhoodSlug: "centennial-hills",
       avoidSrc: "/images/neighborhoods/centennial-hills.png",
     });
+    expect(commute.src).toBe(PAGE_HERO_IMAGES.relocation.src);
     expect(commute.src).not.toBe("/images/neighborhoods/centennial-hills.png");
     expect(commute.alt).toContain("Sample drive times from Centennial Hills");
 

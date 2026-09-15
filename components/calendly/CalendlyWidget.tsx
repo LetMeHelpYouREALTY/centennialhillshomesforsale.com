@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Script from "next/script";
 import {
   CALENDLY_SHOWING_URL,
   AGENT_EMAIL,
@@ -9,7 +8,10 @@ import {
   CTA_PHONE,
   CTA_TEL,
 } from "@/lib/contact";
-import { CALENDLY_WIDGET_JS, ensureCalendlyStylesheet } from "./load-calendly";
+import {
+  ensureCalendlyScript,
+  ensureCalendlyStylesheet,
+} from "./load-calendly";
 import "./types";
 
 type CalendlyWidgetProps = {
@@ -17,6 +19,43 @@ type CalendlyWidgetProps = {
   minWidth?: string;
   height?: string;
 };
+
+function CalendlyContactFallback({
+  url,
+  message,
+}: {
+  url: string;
+  message: string;
+}) {
+  return (
+    <div className="mt-4 flex flex-col items-center justify-center gap-4 text-center">
+      <p className="text-pretty text-slate-700">{message}</p>
+      <div className="flex flex-col gap-3 sm:flex-row">
+        <a
+          href={CTA_TEL}
+          className="inline-flex min-h-11 items-center justify-center rounded-md bg-blue-600 px-6 py-3 font-semibold text-white no-underline hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+        >
+          Call {CTA_PHONE}
+        </a>
+        <a
+          href={AGENT_EMAIL_MAILTO}
+          className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+        >
+          {AGENT_EMAIL}
+        </a>
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+        >
+          Open Calendly
+          <span className="sr-only"> (opens in a new tab)</span>
+        </a>
+      </div>
+    </div>
+  );
+}
 
 /**
  * Inline Calendly embed. The iframe is third-party, so we wait until it is
@@ -94,6 +133,20 @@ export default function CalendlyWidget({
       return true;
     };
 
+    const fail = () => {
+      if (!initializedRef.current) {
+        setBusy(false);
+        setFailed(true);
+      }
+    };
+
+    ensureCalendlyScript({
+      onLoad: () => {
+        initWidget();
+      },
+      onError: fail,
+    });
+
     if (initWidget()) {
       return;
     }
@@ -105,10 +158,7 @@ export default function CalendlyWidget({
     }, 100);
     const timeoutId = setTimeout(() => {
       clearInterval(intervalId);
-      if (!initializedRef.current) {
-        setBusy(false);
-        setFailed(true);
-      }
+      fail();
     }, 10000);
 
     return () => {
@@ -121,62 +171,36 @@ export default function CalendlyWidget({
   if (failed) {
     return (
       <div
-        className="flex min-h-[400px] flex-col items-center justify-center gap-4 rounded-xl border border-slate-200 bg-slate-50 p-6 text-center"
+        className="flex min-h-[400px] flex-col items-center justify-center rounded-xl border border-slate-200 bg-slate-50 p-6"
         style={{ minWidth, height, width: "100%" }}
         aria-busy={false}
         role="status"
       >
-        <p className="text-pretty text-slate-700">
-          The scheduler did not load. Call, email, or open Calendly in a new
-          tab.
-        </p>
-        <div className="flex flex-col gap-3 sm:flex-row">
-          <a
-            href={CTA_TEL}
-            className="inline-flex min-h-11 items-center justify-center rounded-md bg-blue-600 px-6 py-3 font-semibold text-white no-underline hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
-          >
-            Call {CTA_PHONE}
-          </a>
-          <a
-            href={AGENT_EMAIL_MAILTO}
-            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
-          >
-            {AGENT_EMAIL}
-          </a>
-          <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
-          >
-            Open Calendly
-            <span className="sr-only"> (opens in a new tab)</span>
-          </a>
-        </div>
+        <CalendlyContactFallback
+          url={url}
+          message="The scheduler did not load. Call, email, or open Calendly in a new tab."
+        />
       </div>
     );
   }
 
   return (
-    <>
-      {loadWidget ? (
-        <Script
-          id="calendly-widget-js"
-          src={CALENDLY_WIDGET_JS}
-          strategy="lazyOnload"
-          onError={() => {
-            setBusy(false);
-            setFailed(true);
-          }}
-        />
-      ) : null}
+    <div className="relative" style={{ minWidth, height, width: "100%" }}>
       <div
         ref={widgetRef}
-        className="min-h-[400px]"
+        className="min-h-[400px] h-full"
         style={{ minWidth, height, width: "100%" }}
         aria-busy={busy}
         aria-label="Schedule a showing with Dr. Jan Duffy"
       />
-    </>
+      {busy ? (
+        <div className="absolute inset-0 flex items-center justify-center overflow-auto rounded-xl border border-slate-200 bg-slate-50 p-6">
+          <CalendlyContactFallback
+            url={url}
+            message="The scheduler is loading. Call or email if you do not want to wait."
+          />
+        </div>
+      ) : null}
+    </div>
   );
 }
