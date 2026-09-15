@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
   AGENT_LICENSE,
   CALENDLY_SHOWING_URL,
   CTA_PHONE,
@@ -27,6 +28,7 @@ describe("client-facing contact constants", () => {
     expect(OFFICE_NAP.state).toBe("NV");
     expect(OFFICE_NAP.zip).toBe("89134");
     expect(AGENT_EMAIL).toBe("homes@heyberkshire.com");
+    expect(AGENT_EMAIL_MAILTO).toBe("mailto:homes@heyberkshire.com");
     expect(AGENT_LICENSE).toBe("S.0197614.LLC");
     expect(OFFICE_POSTAL_ADDRESS.addressCountry).toBe("US");
     expect(OFFICE_POSTAL_ADDRESS.streetAddress).toBe(OFFICE_NAP.street);

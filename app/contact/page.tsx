@@ -287,7 +287,7 @@ export default function ContactPage() {
               {/* Why Contact BHHS */}
               <div className="mt-6 bg-slate-900 text-white rounded-xl p-6">
                 <h3 className="font-bold text-lg mb-4">
-                  Why Contact Berkshire Hathaway HomeServices?
+                  What you get on the first call
                 </h3>
                 <div className="space-y-3">
                   <div className="flex items-start">

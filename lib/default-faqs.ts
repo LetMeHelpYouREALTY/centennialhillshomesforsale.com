@@ -7,7 +7,7 @@ export const defaultFaqs: SiteFaq[] = [
   {
     question: "What areas do you serve?",
     answer:
-      "Las Vegas and Henderson, including Summerlin, Green Valley, Centennial Hills, and surrounding communities. Coverage includes residential, luxury, and investment properties throughout Southern Nevada.",
+      "Las Vegas, Henderson, Summerlin, Green Valley, Centennial Hills, and North Las Vegas. Coverage includes residential, luxury, and investment properties throughout Clark County.",
   },
   {
     question: "How long does the home buying process take?",
@@ -20,7 +20,7 @@ export const defaultFaqs: SiteFaq[] = [
       "Yes. We provide a CMA from current MLS comps — whether you are listing or checking equity. The consult is separate from a listing agreement.",
   },
   {
-    question: "What makes you different from other real estate agents?",
+    question: "Who is the agent of record?",
     answer:
       "Serving Las Vegas since 2008, Dr. Jan Duffy is one agent of record at Berkshire Hathaway HomeServices Nevada Properties — not a kiosk script.",
   },

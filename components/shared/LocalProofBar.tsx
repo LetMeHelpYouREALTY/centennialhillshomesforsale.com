@@ -1,5 +1,12 @@
-import { Clock, MapPin, Phone, Star } from "lucide-react";
-import { CTA_PHONE, CTA_TEL, OFFICE_HOURS, OFFICE_NAP } from "@/lib/contact";
+import { Clock, Mail, MapPin, Phone, Star } from "lucide-react";
+import {
+  AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
+  CTA_PHONE,
+  CTA_TEL,
+  OFFICE_HOURS,
+  OFFICE_NAP,
+} from "@/lib/contact";
 
 type LocalProofBarProps = {
   className?: string;
@@ -53,13 +60,20 @@ export function LocalProofBar({
             <span>{OFFICE_HOURS.display}</span>
           </p>
         </div>
-        <div className="flex flex-col gap-3 sm:flex-row">
+        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <a
             href={CTA_TEL}
             className="inline-flex min-h-11 items-center justify-center rounded-md bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white no-underline hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
           >
             <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
             Call {CTA_PHONE}
+          </a>
+          <a
+            href={AGENT_EMAIL_MAILTO}
+            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-900 no-underline hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            <Mail className="mr-2 h-4 w-4" aria-hidden="true" />
+            {AGENT_EMAIL}
           </a>
           <a
             href={OFFICE_NAP.directionsUrl}

@@ -1,5 +1,12 @@
-import { Phone } from "lucide-react";
-import { CTA_PHONE, CTA_TEL, OFFICE_NAP } from "@/lib/contact";
+import { Mail, Phone } from "lucide-react";
+import {
+  AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
+  CTA_PHONE,
+  CTA_TEL,
+  OFFICE_NAP,
+  TEXT_LINK_CLASS,
+} from "@/lib/contact";
 
 type GoogleReviewsCtaProps = {
   className?: string;
@@ -40,8 +47,25 @@ export function GoogleReviewsCta({ className = "" }: GoogleReviewsCtaProps) {
             <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
             Call {CTA_PHONE}
           </a>
+          <a
+            href={AGENT_EMAIL_MAILTO}
+            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            <Mail className="mr-2 h-4 w-4" aria-hidden="true" />
+            {AGENT_EMAIL}
+          </a>
         </div>
-        <p className="mt-6 text-sm text-slate-500">{OFFICE_NAP.full}</p>
+        <p className="mt-6 text-sm text-slate-500">
+          <a
+            href={OFFICE_NAP.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={TEXT_LINK_CLASS}
+          >
+            {OFFICE_NAP.full}
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
+        </p>
       </div>
     </section>
   );

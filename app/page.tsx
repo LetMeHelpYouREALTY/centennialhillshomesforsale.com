@@ -55,7 +55,14 @@ export async function generateMetadata(): Promise<Metadata> {
   );
 }
 
-const communities = [
+type HomeCommunityCard = {
+  href: string;
+  label: string;
+  slug?: string;
+  image?: { src: string; alt: string };
+};
+
+const communities: HomeCommunityCard[] = [
   {
     href: "/neighborhoods/centennial-hills",
     slug: "centennial-hills",
@@ -95,6 +102,21 @@ const communities = [
     href: "/neighborhoods/skye-canyon",
     slug: "skye-canyon",
     label: "Skye Canyon",
+  },
+  {
+    href: "/neighborhoods/henderson",
+    slug: "henderson",
+    label: "Henderson homes",
+  },
+  {
+    href: "/neighborhoods/summerlin",
+    slug: "summerlin",
+    label: "Summerlin homes",
+  },
+  {
+    href: "/55-plus-communities",
+    image: PAGE_HERO_IMAGES.fiftyFivePlus,
+    label: "55+ HOPA communities",
   },
 ];
 
@@ -217,6 +239,15 @@ export default async function Home() {
                   >
                     About Dr. Jan
                   </Link>
+                  <a
+                    href={OFFICE_NAP.directionsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-5 py-3 font-semibold text-slate-900 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+                  >
+                    Get Directions
+                    <span className="sr-only"> (opens in a new tab)</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -241,7 +272,9 @@ export default async function Home() {
             </div>
             <div className="mx-auto grid max-w-5xl gap-4 md:grid-cols-2">
               {communities.map((item) => {
-                const image = getNeighborhoodImage(item.slug);
+                const image =
+                  item.image ??
+                  getNeighborhoodImage(item.slug ?? "centennial-hills");
                 return (
                   <Link
                     key={item.href}

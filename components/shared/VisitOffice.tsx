@@ -1,7 +1,15 @@
 import Image from "next/image";
-import { Clock, Star } from "lucide-react";
+import { Clock, Mail, Phone, Star } from "lucide-react";
 import { OfficeMap } from "@/components/shared/OfficeMap";
-import { OFFICE_HOURS, OFFICE_NAP, TEXT_LINK_CLASS } from "@/lib/contact";
+import {
+  AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
+  CTA_PHONE,
+  CTA_TEL,
+  OFFICE_HOURS,
+  OFFICE_NAP,
+  TEXT_LINK_CLASS,
+} from "@/lib/contact";
 import {
   OFFICE_PHOTO_ALT,
   OFFICE_PHOTO_PATH,
@@ -55,18 +63,41 @@ export function VisitOffice({
           />
         </div>
         <OfficeMap height={compact ? 240 : 300} />
-        <p className="mt-4 text-center">
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
+          <a
+            href={CTA_TEL}
+            className="inline-flex min-h-11 items-center justify-center rounded-md bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white no-underline hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
+            Call {CTA_PHONE}
+          </a>
+          <a
+            href={AGENT_EMAIL_MAILTO}
+            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-900 no-underline hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            <Mail className="mr-2 h-4 w-4" aria-hidden="true" />
+            {AGENT_EMAIL}
+          </a>
+          <a
+            href={OFFICE_NAP.directionsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-900 no-underline hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            Get Directions
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
           <a
             href={OFFICE_NAP.reviewsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-11 items-center justify-center font-semibold text-blue-700 no-underline hover:text-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-900 no-underline hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
           >
             <Star className="mr-2 h-4 w-4" aria-hidden="true" />
             View Google Reviews
             <span className="sr-only"> (opens in a new tab)</span>
           </a>
-        </p>
+        </div>
       </div>
     </section>
   );

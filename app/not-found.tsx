@@ -1,6 +1,13 @@
 import Link from "next/link";
 import { Phone } from "lucide-react";
-import { CTA_PHONE, CTA_TEL, OFFICE_NAP, TEXT_LINK_CLASS } from "@/lib/contact";
+import {
+  AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
+  CTA_PHONE,
+  CTA_TEL,
+  OFFICE_NAP,
+  TEXT_LINK_CLASS,
+} from "@/lib/contact";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 
 export default function NotFound() {
@@ -16,7 +23,20 @@ export default function NotFound() {
         <p className="mb-8 text-lg text-slate-600">
           The URL may be mistyped, or the listing moved. Use a neighborhood
           guide, search live MLS, or call the office line. Office:{" "}
-          {OFFICE_NAP.full}.
+          <a
+            href={OFFICE_NAP.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={TEXT_LINK_CLASS}
+          >
+            {OFFICE_NAP.full}
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
+          . Email{" "}
+          <a href={AGENT_EMAIL_MAILTO} className={TEXT_LINK_CLASS}>
+            {AGENT_EMAIL}
+          </a>
+          .
         </p>
         <div className="mb-10 flex flex-col justify-center gap-3 sm:flex-row">
           <Link
@@ -37,6 +57,12 @@ export default function NotFound() {
           >
             <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
             Call {CTA_PHONE}
+          </a>
+          <a
+            href={AGENT_EMAIL_MAILTO}
+            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-6 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            {AGENT_EMAIL}
           </a>
         </div>
         <ul className="space-y-2 text-left text-slate-700">

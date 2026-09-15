@@ -53,7 +53,7 @@ export default function WhyChooseUs() {
             fallbackSrc={PAGE_HERO_IMAGES.about.src}
             avoidSrc={PAGE_HERO_IMAGES.homepage.src}
           >
-            Why Work With Dr. Jan Duffy
+            How Dr. Jan Duffy actually works a file
           </SectionHeading>
           <p className="mx-auto max-w-3xl text-xl text-slate-600">
             Berkshire Hathaway HomeServices Nevada Properties — local closings

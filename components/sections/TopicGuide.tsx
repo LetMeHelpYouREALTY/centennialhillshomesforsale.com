@@ -1,10 +1,13 @@
 import Link from "next/link";
-import { Phone, MapPin, Star } from "lucide-react";
+import { Mail, Phone, MapPin, Star } from "lucide-react";
 import {
+  AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
   CTA_PHONE,
   CTA_TEL,
   OFFICE_HOURS,
   OFFICE_NAP,
+  TEXT_LINK_CLASS,
   TEXT_LINK_ON_DARK_CLASS,
 } from "@/lib/contact";
 import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
@@ -115,7 +118,24 @@ export default function TopicGuide({
             <p className="mb-6 text-lg text-slate-600">{intro}</p>
             <p className="mb-10 text-sm text-slate-500">
               Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties ·
-              License S.0197614.LLC · {OFFICE_HOURS.display} · {OFFICE_NAP.full}
+              License S.0197614.LLC · {OFFICE_HOURS.display} ·{" "}
+              <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
+                {CTA_PHONE}
+              </a>{" "}
+              ·{" "}
+              <a href={AGENT_EMAIL_MAILTO} className={TEXT_LINK_CLASS}>
+                {AGENT_EMAIL}
+              </a>
+              <br />
+              <a
+                href={OFFICE_NAP.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={TEXT_LINK_CLASS}
+              >
+                {OFFICE_NAP.full}
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
             </p>
 
             <section className="mb-12 rounded-2xl bg-slate-900 p-8 text-white">
@@ -247,6 +267,13 @@ export default function TopicGuide({
                 >
                   Send a Message
                 </Link>
+                <a
+                  href={AGENT_EMAIL_MAILTO}
+                  className={`${ctaClass} border border-white/40 text-white hover:bg-blue-700`}
+                >
+                  <Mail className="mr-2 h-5 w-5" aria-hidden="true" />
+                  {AGENT_EMAIL}
+                </a>
                 <a
                   href={OFFICE_NAP.directionsUrl}
                   target="_blank"

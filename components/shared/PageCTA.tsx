@@ -1,6 +1,8 @@
 import Link from "next/link";
-import { MapPin, Phone, Star } from "lucide-react";
+import { Mail, MapPin, Phone, Star } from "lucide-react";
 import {
+  AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
   CTA_PHONE,
   CTA_TEL,
   OFFICE_NAP,
@@ -70,6 +72,13 @@ export function PageCTA({
               Send a Message
             </Link>
             <a
+              href={AGENT_EMAIL_MAILTO}
+              className="inline-flex min-h-11 items-center justify-center rounded-md border border-white/40 px-8 py-4 text-lg font-bold text-white no-underline transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
+            >
+              <Mail className="mr-2 h-5 w-5" aria-hidden="true" />
+              {AGENT_EMAIL}
+            </a>
+            <a
               href={OFFICE_NAP.directionsUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -102,6 +111,10 @@ export function PageCTA({
             </a>
             {" · "}
             License S.0197614.LLC
+            {" · "}
+            <a href={AGENT_EMAIL_MAILTO} className={TEXT_LINK_ON_DARK_CLASS}>
+              {AGENT_EMAIL}
+            </a>
           </p>
         </div>
       </section>

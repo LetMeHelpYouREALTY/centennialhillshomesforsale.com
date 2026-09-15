@@ -466,7 +466,7 @@ export default function BuyersPage() {
               fallbackSrc={PAGE_HERO_IMAGES.about.src}
               avoidSrc={PAGE_HERO_IMAGES.buyers.src}
             >
-              Why Buy with Berkshire Hathaway HomeServices
+              What a BHHS buyer agreement actually includes
             </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Berkshire Hathaway HomeServices Nevada Properties is a franchise

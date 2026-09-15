@@ -2,7 +2,14 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
-import { CTA_PHONE, CTA_TEL, OFFICE_NAP } from "@/lib/contact";
+import {
+  AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
+  CTA_PHONE,
+  CTA_TEL,
+  OFFICE_NAP,
+  TEXT_LINK_CLASS,
+} from "@/lib/contact";
 
 export default function Error({
   error,
@@ -23,7 +30,21 @@ export default function Error({
         </h1>
         <p className="mb-8 text-slate-600">
           Reload this page, or call {CTA_PHONE} and we will pull the listing
-          from MLS while this screen is fixed. Office: {OFFICE_NAP.full}.
+          from MLS while this screen is fixed. Office:{" "}
+          <a
+            href={OFFICE_NAP.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={TEXT_LINK_CLASS}
+          >
+            {OFFICE_NAP.full}
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
+          . Email{" "}
+          <a href={AGENT_EMAIL_MAILTO} className={TEXT_LINK_CLASS}>
+            {AGENT_EMAIL}
+          </a>
+          .
         </p>
         <div className="flex flex-col flex-wrap justify-center gap-3 sm:flex-row">
           <button
@@ -50,6 +71,12 @@ export default function Error({
             className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-6 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
           >
             Call {CTA_PHONE}
+          </a>
+          <a
+            href={AGENT_EMAIL_MAILTO}
+            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-6 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            {AGENT_EMAIL}
           </a>
         </div>
       </div>

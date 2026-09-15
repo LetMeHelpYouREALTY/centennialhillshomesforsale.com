@@ -43,7 +43,7 @@ export default function CaliforniaRelocatorPage() {
         { value: "0%", label: "NV wage income tax" },
         { value: lv, label: "LV listing median" },
         { value: hen, label: "Henderson listing median" },
-        { value: "~1–1.5 hr", label: "Typical CA flight" },
+        { value: "LAS", label: "Time your own itinerary" },
       ]}
       sections={[
         {
