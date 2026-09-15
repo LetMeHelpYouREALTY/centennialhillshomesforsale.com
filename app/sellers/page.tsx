@@ -156,7 +156,7 @@ const sellingProcess = [
 const includedServices = [
   "Professional photography & virtual tour",
   "Drone video for properties with views or large lots",
-  "Comprehensive market analysis & pricing strategy",
+  "CMA from live comps and a list-price range",
   "MLS listing plus BHHS network exposure",
   "Berkshire Hathaway global network exposure",
   "Social media marketing campaign",
@@ -334,13 +334,12 @@ export default function SellersPage() {
               fallbackSrc={PAGE_HERO_IMAGES.sellers.src}
               avoidSrc={PAGE_HERO_IMAGES.sellers.src}
             >
-              Specialized Services for Every Seller
+              Seller files I actually work
             </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Every seller's situation is unique. Whether you're upgrading,
-              downsizing, dealing with a life change, or relocating for work,
-              Dr. Jan provides customized strategies that address your specific
-              needs and timeline.
+              Move-up, downsizing, divorce/probate, and out-of-state listings
+              are different files. Compensation, showing rules, and close dates
+              go in writing. Call 702-222-1964 with the address.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Link
@@ -352,11 +351,10 @@ export default function SellersPage() {
                   Move-Up Sellers
                 </h3>
                 <p className="text-slate-600 text-sm mb-3">
-                  Leverage your equity into the next house. Coordinated buy &
-                  sell strategies.
+                  Sequence the sale and the next purchase on contract dates.
                 </p>
                 <span className="text-blue-600 font-semibold text-sm">
-                  Learn More →
+                  Move-up seller guide →
                 </span>
               </Link>
               <Link
@@ -368,11 +366,11 @@ export default function SellersPage() {
                   Downsizing
                 </h3>
                 <p className="text-slate-600 text-sm mb-3">
-                  Extract equity, simplify life. 55+ communities and
-                  low-maintenance options.
+                  One-story, townhome, or 55+ HOPA — list the house you have,
+                  then match the next door.
                 </p>
                 <span className="text-blue-600 font-semibold text-sm">
-                  Learn More →
+                  Downsizing guide →
                 </span>
               </Link>
               <Link
@@ -384,11 +382,10 @@ export default function SellersPage() {
                   Divorce & Probate
                 </h3>
                 <p className="text-slate-600 text-sm mb-3">
-                  Sensitive situations handled with discretion and
-                  professionalism.
+                  Court orders, two signatures, and a CMA. Not legal advice.
                 </p>
                 <span className="text-blue-600 font-semibold text-sm">
-                  Learn More →
+                  Divorce and probate guide →
                 </span>
               </Link>
               <Link
@@ -400,11 +397,11 @@ export default function SellersPage() {
                   Relocation
                 </h3>
                 <p className="text-slate-600 text-sm mb-3">
-                  Moving for work? BHHS nationwide network coordinates both
-                  ends.
+                  Moving for work? BHHS referral network can coordinate both
+                  ends. I still list this house from a live CMA.
                 </p>
                 <span className="text-blue-600 font-semibold text-sm">
-                  Learn More →
+                  Relocation seller guide →
                 </span>
               </Link>
             </div>
@@ -440,7 +437,7 @@ export default function SellersPage() {
               fallbackSrc={PAGE_HERO_IMAGES.sellersListing.src}
               avoidSrc={PAGE_HERO_IMAGES.sellers.src}
             >
-              What's Included When You List with BHHS
+              What's on the listing agreement
             </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               When you list with Dr. Jan Duffy at Berkshire Hathaway
@@ -465,7 +462,7 @@ export default function SellersPage() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-3xl font-bold mb-4">
-                  What's Your Home Worth?
+                  Request a CMA for this house
                 </h2>
                 <p className="text-blue-100 mb-6">
                   Request a CMA from current MLS comps. Dr. Jan has served Las

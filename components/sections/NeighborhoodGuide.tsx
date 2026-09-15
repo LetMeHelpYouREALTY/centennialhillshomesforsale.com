@@ -267,7 +267,7 @@ export default function NeighborhoodGuide({
                 First-party local guidance — not a syndicated listing dump. Call
                 or text the client line.
               </p>
-              <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <div className="flex flex-col flex-wrap items-center justify-center gap-3 sm:flex-row">
                 <a
                   href={CTA_TEL}
                   className={`${ctaClass} bg-white text-blue-600 hover:bg-blue-50`}

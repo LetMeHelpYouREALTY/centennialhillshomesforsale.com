@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Clock, Star } from "lucide-react";
 import { OfficeMap } from "@/components/shared/OfficeMap";
-import { OFFICE_HOURS, OFFICE_NAP } from "@/lib/contact";
+import { OFFICE_HOURS, OFFICE_NAP, TEXT_LINK_CLASS } from "@/lib/contact";
 import {
   OFFICE_PHOTO_ALT,
   OFFICE_PHOTO_PATH,
@@ -30,7 +30,17 @@ export function VisitOffice({
         >
           Visit the office
         </h2>
-        <p className="mb-2 text-slate-600">{OFFICE_NAP.full}</p>
+        <p className="mb-2 text-slate-600">
+          <a
+            href={OFFICE_NAP.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={TEXT_LINK_CLASS}
+          >
+            {OFFICE_NAP.full}
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
+        </p>
         <p className="mb-6 flex items-start gap-2 text-sm text-slate-500">
           <Clock className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
           <span>{OFFICE_HOURS.display}</span>

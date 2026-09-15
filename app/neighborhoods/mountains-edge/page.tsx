@@ -74,7 +74,7 @@ export default function MountainsEdgePage() {
         {
           question: "What is Exploration Peak Park?",
           answer:
-            "A large public park inside the Mountains Edge area with trails and a peak hike. Confirm walkability from the specific listing.",
+            "A large public park inside the Mountains Edge area with trails and a peak hike. Confirm park access from the listing address.",
         },
       ]}
       related={[

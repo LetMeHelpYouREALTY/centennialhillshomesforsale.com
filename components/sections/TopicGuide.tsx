@@ -224,7 +224,7 @@ export default function TopicGuide({
               <p className="mx-auto mb-6 max-w-2xl text-blue-100">
                 First-party local guidance. Call or text the client line.
               </p>
-              <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <div className="flex flex-col flex-wrap items-center justify-center gap-3 sm:flex-row">
                 <a
                   href={CTA_TEL}
                   className={`${ctaClass} bg-white text-blue-600 hover:bg-blue-50`}
@@ -238,6 +238,15 @@ export default function TopicGuide({
                 >
                   Send a Message
                 </Link>
+                <a
+                  href={OFFICE_NAP.directionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${ctaClass} border border-white/40 text-white hover:bg-blue-700`}
+                >
+                  Get Directions
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
                 <a
                   href={OFFICE_NAP.reviewsUrl}
                   target="_blank"

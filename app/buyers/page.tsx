@@ -380,14 +380,14 @@ export default function BuyersPage() {
               fallbackSrc={PAGE_HERO_IMAGES.buyers.src}
               avoidSrc={PAGE_HERO_IMAGES.buyers.src}
             >
-              Specialized Guidance for Every Buyer
+              Buyer files I actually work
             </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Different buyers have different needs. A first-time buyer needs
-              education and hand-holding through the process. A California
-              relocator needs tax guidance and neighborhood matching. A luxury
-              buyer needs discretion and access. Dr. Jan Duffy tailors her
-              approach to match your specific situation and goals.
+              Different buyers have different files. A first-time buyer needs a
+              written agreement and a lender worksheet. A California relocator
+              needs paired comps, not a tax slogan. A luxury buyer needs gate
+              access and a showing window. Dr. Jan Duffy matches the file, not a
+              buyer-type slogan.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               <Link
@@ -405,7 +405,7 @@ export default function BuyersPage() {
                   Las Vegas purchase.
                 </p>
                 <span className="text-blue-600 font-semibold text-sm">
-                  Learn More →
+                  California relocator guide →
                 </span>
               </Link>
               <Link
@@ -417,12 +417,12 @@ export default function BuyersPage() {
                   First-Time Buyers
                 </h3>
                 <p className="text-slate-600 text-sm mb-3">
-                  Down payment assistance programs, FHA/VA loans, and builder
-                  incentives explained. Step-by-step guidance through your first
-                  home purchase.
+                  Written buyer agreement, lender pre-approval, and an
+                  inspection calendar. I introduce Clark County lenders; I do
+                  not originate loans.
                 </p>
                 <span className="text-blue-600 font-semibold text-sm">
-                  Learn More →
+                  First-time buyer guide →
                 </span>
               </Link>
               <Link
@@ -438,7 +438,7 @@ export default function BuyersPage() {
                   not a secret-inventory claim.
                 </p>
                 <span className="text-blue-600 font-semibold text-sm">
-                  Learn More →
+                  Luxury buyer guide →
                 </span>
               </Link>
             </div>

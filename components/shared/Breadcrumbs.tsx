@@ -41,7 +41,7 @@ export function Breadcrumbs({ items, className = "" }: BreadcrumbsProps) {
                 ) : (
                   <Link
                     href={item.href}
-                    className="inline-flex min-h-11 items-center text-slate-600 no-underline hover:text-blue-600"
+                    className="inline-flex min-h-11 items-center text-slate-600 no-underline hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                   >
                     {item.name}
                   </Link>

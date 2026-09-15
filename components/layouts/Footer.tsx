@@ -86,7 +86,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="inline-flex min-h-11 items-center text-sm text-slate-300 no-underline transition-colors hover:text-white"
+                    className="inline-flex min-h-11 items-center text-sm text-slate-300 no-underline transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                   >
                     {link.label}
                   </Link>
@@ -113,7 +113,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="inline-flex min-h-11 items-center text-sm text-slate-300 no-underline transition-colors hover:text-white"
+                    className="inline-flex min-h-11 items-center text-sm text-slate-300 no-underline transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                   >
                     {link.label}
                   </Link>
@@ -131,9 +131,17 @@ export default function Footer() {
                   aria-hidden="true"
                 />
                 <address className="text-sm not-italic text-slate-300">
-                  {OFFICE_NAP.street}
-                  <br />
-                  {OFFICE_NAP.city}, {OFFICE_NAP.state} {OFFICE_NAP.zip}
+                  <a
+                    href={OFFICE_NAP.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={TEXT_LINK_ON_DARK_CLASS}
+                  >
+                    {OFFICE_NAP.street}
+                    <br />
+                    {OFFICE_NAP.city}, {OFFICE_NAP.state} {OFFICE_NAP.zip}
+                    <span className="sr-only"> (opens in a new tab)</span>
+                  </a>
                 </address>
               </li>
               <li className="flex items-center">

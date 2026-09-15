@@ -54,7 +54,7 @@ export default function HeritageStonebridgePage() {
       sections={[
         {
           heading: "Smaller gated campus vs Sun City Summerlin",
-          body: "Sun City Summerlin is the large Del Webb map in the same ZIP. Heritage is a smaller, guard-gated pocket with its own HOA. Buyers who want a gate and a shorter hop to Downtown Summerlin often land here. Buyers who want three golf courses stay at Sun City. I will not call either “better.”",
+          body: "Sun City Summerlin is the large Del Webb map in the same ZIP. Heritage is a smaller, guard-gated pocket with its own HOA. Buyers who want a gate and a shorter hop to Downtown Summerlin often land here. Buyers who want the large Del Webb rec campus stay at Sun City. Confirm golf membership on the club packet. I will not call either “better.”",
         },
         {
           heading: `Pricing as of ${MARKET_SNAPSHOT_AS_OF}`,

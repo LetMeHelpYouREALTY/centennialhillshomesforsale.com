@@ -47,7 +47,7 @@ export default function TheRidgesPage() {
         },
         {
           heading: "How it compares to nearby Summerlin luxury",
-          body: "Tournament Hills (89134) is custom lots near TPC Summerlin. Red Rock Country Club is a golf-membership setting with attached and detached product. The Ridges usually wins on estate scale and view corridors, not on golf-club access. I will not rank them as better. I will match gate, dues, and the lot.",
+          body: "Tournament Hills (89134) is custom lots near TPC Summerlin. Red Rock Country Club is a golf-membership setting with attached and detached product. The Ridges is a guard-gated custom map. I match gate, dues, and the lot — not a ranking slogan.",
         },
         {
           heading: `Privacy as of ${MARKET_SNAPSHOT_AS_OF}`,

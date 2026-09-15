@@ -1,6 +1,11 @@
 import Link from "next/link";
-import { Phone } from "lucide-react";
-import { CTA_PHONE, CTA_TEL, OFFICE_NAP } from "@/lib/contact";
+import { MapPin, Phone, Star } from "lucide-react";
+import {
+  CTA_PHONE,
+  CTA_TEL,
+  OFFICE_NAP,
+  TEXT_LINK_ON_DARK_CLASS,
+} from "@/lib/contact";
 import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
 
 type PageCTAProps = {
@@ -50,7 +55,7 @@ export function PageCTA({
               {subheadline}
             </p>
           ) : null}
-          <div className="flex flex-col justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col flex-wrap justify-center gap-4 sm:flex-row">
             <a
               href={CTA_TEL}
               className="inline-flex min-h-11 items-center justify-center rounded-md bg-white px-8 py-4 text-lg font-bold text-blue-600 no-underline transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
@@ -64,9 +69,39 @@ export function PageCTA({
             >
               Send a Message
             </Link>
+            <a
+              href={OFFICE_NAP.directionsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-11 items-center justify-center rounded-md border border-white/40 px-8 py-4 text-lg font-bold text-white no-underline transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
+            >
+              <MapPin className="mr-2 h-5 w-5" aria-hidden="true" />
+              Get Directions
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+            <a
+              href={OFFICE_NAP.reviewsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-11 items-center justify-center rounded-md border border-white/40 px-8 py-4 text-lg font-bold text-white no-underline transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
+            >
+              <Star className="mr-2 h-5 w-5" aria-hidden="true" />
+              Google Reviews
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
           </div>
           <p className="mt-6 text-sm text-blue-200">
-            {OFFICE_NAP.full} · License S.0197614.LLC
+            <a
+              href={OFFICE_NAP.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={TEXT_LINK_ON_DARK_CLASS}
+            >
+              {OFFICE_NAP.full}
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+            {" · "}
+            License S.0197614.LLC
           </p>
         </div>
       </section>

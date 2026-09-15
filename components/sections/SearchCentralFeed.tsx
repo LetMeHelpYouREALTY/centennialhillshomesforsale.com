@@ -48,9 +48,12 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
         The August 28, 2026{" "}
         <a
           href="https://developers.google.com/search/blog/2026/08/update-site-reputation-policy"
-          className="text-blue-700 underline"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={TEXT_LINK_CLASS}
         >
           site reputation policy update
+          <span className="sr-only"> (opens in a new tab)</span>
         </a>{" "}
         still changes results for people searching in the United States. EEA
         results are treated differently. This Las Vegas site writes first-party
@@ -77,7 +80,7 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
                 href={item.link}
                 rel="noopener noreferrer"
                 target="_blank"
-                className="block"
+                className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-600"
               >
                 <img
                   src={image}
@@ -98,7 +101,7 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
                     href={item.link}
                     rel="noopener noreferrer"
                     target="_blank"
-                    className="hover:text-blue-700"
+                    className="inline-flex min-h-11 items-center hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                   >
                     {item.title}
                     <span className="sr-only"> (opens in a new tab)</span>
@@ -116,9 +119,12 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
         Headlines and excerpts from the official{" "}
         <a
           href="https://developers.google.com/search/blog/feed.xml"
+          target="_blank"
+          rel="noopener noreferrer"
           className={TEXT_LINK_CLASS}
         >
           Google Search Central Blog RSS
+          <span className="sr-only"> (opens in a new tab)</span>
         </a>
         . Full posts stay on developers.google.com.
       </p>

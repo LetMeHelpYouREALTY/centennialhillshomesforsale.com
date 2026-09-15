@@ -43,7 +43,7 @@ export default function RedRockCountryClubPage() {
         },
         {
           heading: "How it compares to Tournament Hills and The Ridges",
-          body: "Tournament Hills (89134) is custom lots near TPC Summerlin. The Ridges is a higher-status guard-gated Summerlin village. Red Rock Country Club often wins on golf access per dollar. I will not rank them as “better” — I will match lot, dues, and the actual house.",
+          body: "Tournament Hills (89134) is custom lots near TPC Summerlin. The Ridges is a separate guard-gated Summerlin village. Red Rock Country Club is the golf-membership setting with attached and detached product. I match lot, dues, and the actual house — not a status ranking.",
         },
       ]}
       faqs={[
