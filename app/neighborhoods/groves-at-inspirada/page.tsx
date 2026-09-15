@@ -34,13 +34,13 @@ export default function GrovesAtInspiradaPage() {
       stats={[
         { value: "KB Home", label: "Original builder" },
         { value: "TH", label: "Townhome" },
-        { value: "~1,430–1,921", label: "Sq ft (plans)" },
+        { value: "89044", label: "Henderson ZIP" },
         { value: "Resale", label: "2026 status" },
       ]}
       sections={[
         {
           heading: "What Groves actually is",
-          body: "Groves is two-story townhome product originally marketed from the mid $300s when KB was selling new. Plans ran about 1,430 to 1,921 square feet. That is not the same as Pardee / Tri Pointe single-family product in Linea or Alterra, and it is not Aventura Park (a 20-acre amenity, not a subdivision). Searchers mixing “groves at inspirada new homes for sale” with 2026 should know the new-home window in Groves already closed — you are shopping used townhomes inside a finished village.",
+          body: "Groves is two-story townhome product from KB Home. Plan square footage and original list prices are UNKNOWN on this page until I pull the listing and the HOA resale package. That is not the same as Pardee / Tri Pointe single-family product in Linea or Alterra, and it is not Aventura Park (a community park, not a subdivision). Searchers mixing “groves at inspirada new homes for sale” with 2026 should know the new-home window in Groves already closed — you are shopping used townhomes inside a finished village.",
         },
         {
           heading: "Parks you actually use from Groves",
@@ -48,7 +48,7 @@ export default function GrovesAtInspiradaPage() {
         },
         {
           heading: "New construction elsewhere in Inspirada",
-          body: "As of mid-2026 reporting, Inspirada as a whole was in a final new-construction window (on the order of tens of remaining homes across KB, Toll Brothers, and Tri Pointe — not Groves). If you need a brand-new detached home, say so on the call. I will not rehost another site’s builder inventory on this domain.",
+          body: "If any Inspirada pod is still selling new, it is not Groves. If you need a brand-new detached home, say so on the call. I will not rehost another site’s builder inventory on this domain.",
         },
       ]}
       faqs={[

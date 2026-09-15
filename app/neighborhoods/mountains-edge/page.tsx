@@ -43,7 +43,7 @@ export default function MountainsEdgePage() {
       longitude={-115.262}
       stats={[
         { value: median, label: "Median listing" },
-        { value: "120 acres", label: "Exploration Peak Park" },
+        { value: "Public park", label: "Exploration Peak" },
         { value: "SW", label: "Valley side" },
         { value: "I-215", label: "Beltway access" },
       ]}

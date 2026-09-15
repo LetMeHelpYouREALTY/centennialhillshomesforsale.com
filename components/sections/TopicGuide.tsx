@@ -259,6 +259,9 @@ export default function TopicGuide({
                 </a>
               </p>
               <p className="mt-2 text-xs text-blue-200">
+                {OFFICE_HOURS.display}
+              </p>
+              <p className="mt-2 text-xs text-blue-200">
                 {origin.replace("https://", "")} · Berkshire Hathaway
                 HomeServices Nevada Properties
               </p>

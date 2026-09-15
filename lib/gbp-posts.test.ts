@@ -13,6 +13,7 @@ describe("GBP post templates", () => {
     expect(joined).not.toMatch(/perfect fit/);
     expect(joined).not.toMatch(/world-class/i);
     expect(joined).not.toMatch(/Free consultation/i);
+    expect(joined).not.toMatch(/4-hour drive/i);
   });
 
   it("uses Request a CMA instead of a free-analysis CTA", () => {

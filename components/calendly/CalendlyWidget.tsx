@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Script from "next/script";
-import { CALENDLY_SHOWING_URL } from "@/lib/contact";
+import { CALENDLY_SHOWING_URL, CTA_PHONE, CTA_TEL } from "@/lib/contact";
 import { CALENDLY_WIDGET_JS, ensureCalendlyStylesheet } from "./load-calendly";
 import "./types";
 
@@ -28,6 +28,7 @@ export default function CalendlyWidget({
   const initializedRef = useRef(false);
   const [loadWidget, setLoadWidget] = useState(false);
   const [busy, setBusy] = useState(true);
+  const [failed, setFailed] = useState(false);
 
   useEffect(() => {
     const node = widgetRef.current;
@@ -98,6 +99,10 @@ export default function CalendlyWidget({
     }, 100);
     const timeoutId = setTimeout(() => {
       clearInterval(intervalId);
+      if (!initializedRef.current) {
+        setBusy(false);
+        setFailed(true);
+      }
     }, 10000);
 
     return () => {
@@ -107,6 +112,38 @@ export default function CalendlyWidget({
     };
   }, [loadWidget, url, minWidth, height]);
 
+  if (failed) {
+    return (
+      <div
+        className="flex min-h-[400px] flex-col items-center justify-center gap-4 rounded-xl border border-slate-200 bg-slate-50 p-6 text-center"
+        style={{ minWidth, height, width: "100%" }}
+        aria-busy={false}
+        role="status"
+      >
+        <p className="text-slate-700">
+          The scheduler did not load. Call or open Calendly in a new tab.
+        </p>
+        <div className="flex flex-col gap-3 sm:flex-row">
+          <a
+            href={CTA_TEL}
+            className="inline-flex min-h-11 items-center justify-center rounded-md bg-blue-600 px-6 py-3 font-semibold text-white no-underline hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+          >
+            Call {CTA_PHONE}
+          </a>
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+          >
+            Open Calendly
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <>
       {loadWidget ? (
@@ -114,6 +151,10 @@ export default function CalendlyWidget({
           id="calendly-widget-js"
           src={CALENDLY_WIDGET_JS}
           strategy="lazyOnload"
+          onError={() => {
+            setBusy(false);
+            setFailed(true);
+          }}
         />
       ) : null}
       <div

@@ -53,7 +53,7 @@ Call Dr. Jan Duffy at (702) 222-1964 for comps on a specific street.`,
 ✅ 0% state income tax on wages (Nevada statute)
 ✅ Pair your California sale against live Las Vegas comps — not a 40–60% slogan
 ✅ Named campuses and commute times instead of school slogans
-✅ About a 4-hour drive to LA, plus direct flights
+✅ I-15 drive or a LAS flight — time your own itinerary
 
 I will not invent a buyer-origin percentage or a California-sale-buys-luxury promise. Call with your California sale range and I will pull live Summerlin, Henderson, and Centennial Hills comps.
 

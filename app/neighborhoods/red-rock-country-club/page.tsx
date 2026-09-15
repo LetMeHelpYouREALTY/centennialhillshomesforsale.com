@@ -39,7 +39,7 @@ export default function RedRockCountryClubPage() {
       sections={[
         {
           heading: "What you are buying",
-          body: "Red Rock Country Club is a membership-optional golf setting with guard-gated entries and a wide price spread: attached product on the low end of the community, custom golf-frontage on the high end. July 2026 luxury-village samples put a median sold near $1.175 million at about $370 per square foot — a sample, not a promise for every floor plan. Membership is a separate contract from the deed.",
+          body: "Red Rock Country Club is a membership-optional golf setting with guard-gated entries and a wide price spread: attached product on the low end of the community, custom golf-frontage on the high end. A village sample is not a promise for every floor plan. Ask for a live CMA. Membership is a separate contract from the deed.",
         },
         {
           heading: "How it compares to Tournament Hills and The Ridges",

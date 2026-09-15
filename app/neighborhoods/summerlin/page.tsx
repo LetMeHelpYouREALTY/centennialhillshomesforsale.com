@@ -60,7 +60,7 @@ export default function SummerlinPage() {
         },
         {
           heading: "Parks, trails, and Red Rock access",
-          body: "Howard Hughes planned Summerlin around a trail network and 150+ parks. Red Rock Canyon National Conservation Area is west of the master plan — public land, not a HOA amenity. Drive time to the scenic loop depends on the village: Summerlin West is closer than 89144. I match trailheads and Downtown Summerlin errands to the street, not a 1990s brochure.",
+          body: "Howard Hughes planned Summerlin around a trail network and city parks. Red Rock Canyon National Conservation Area is west of the master plan — public land, not a HOA amenity. Drive time to the scenic loop depends on the village: Summerlin West is closer than 89144. I match trailheads and Downtown Summerlin errands to the street, not a 1990s brochure.",
         },
         {
           heading: "First-party representation",

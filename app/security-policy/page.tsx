@@ -140,11 +140,10 @@ export default function SecurityPolicyPage() {
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="font-semibold text-gray-900 mb-2">Compliance</h3>
                 <ul className="text-gray-700 space-y-1 text-sm">
-                  <li>• GDPR ready</li>
-                  <li>• CCPA compliant</li>
+                  <li>• We honor CCPA consumer requests</li>
                   <li>• Fair Housing Act</li>
                   <li>• Nevada real estate laws</li>
-                  <li>• WCAG 2.1 (accessibility)</li>
+                  <li>• We design toward WCAG 2.1 AA</li>
                 </ul>
               </div>
             </div>
@@ -156,8 +155,8 @@ export default function SecurityPolicyPage() {
               Third-Party Services
             </h2>
             <p className="text-gray-700 mb-4">
-              We use trusted third-party services to provide the best
-              experience:
+              We use third-party services for hosting, CRM, MLS search, and
+              scheduling:
             </p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
               <li>

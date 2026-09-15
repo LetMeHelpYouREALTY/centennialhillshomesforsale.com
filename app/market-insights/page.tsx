@@ -100,8 +100,8 @@ export default async function MarketInsightsPage() {
               Centennial Hills Market Insights
             </h1>
             <PageHeroImage
-              src={PAGE_HERO_IMAGES.homepage.src}
-              alt="Centennial Hills Las Vegas homes used for this market insights brief"
+              src={PAGE_HERO_IMAGES.market.src}
+              alt={PAGE_HERO_IMAGES.market.alt}
             />
             <p className="text-xl text-slate-600">
               First-party notes for this website — 89149 vs 89144, Inspirada’s
@@ -314,8 +314,9 @@ export default async function MarketInsightsPage() {
                   <li className="flex items-start">
                     <span className="text-amber-400 mr-2">1.</span>
                     <span>
-                      <strong>Tax savings:</strong> 9.3%-13.3% state income tax
-                      eliminated
+                      <strong>Tax:</strong> Nevada has no wage income tax.
+                      California rates are UNKNOWN until your CPA quotes your
+                      file.
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -328,15 +329,16 @@ export default async function MarketInsightsPage() {
                   <li className="flex items-start">
                     <span className="text-amber-400 mr-2">3.</span>
                     <span>
-                      <strong>Proximity:</strong> 4-hour drive, 1-hour flight to
-                      most of CA
+                      <strong>Proximity:</strong> I-15 drive or a LAS flight —
+                      time your own itinerary. I will not publish a four-hour /
+                      one-hour slogan.
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-amber-400 mr-2">4.</span>
                     <span>
-                      <strong>Similar climate:</strong> Same sunshine, less
-                      humidity
+                      <strong>Climate:</strong> Desert sun and monsoon season —
+                      confirm the calendar, not a slogan
                     </span>
                   </li>
                   <li className="flex items-start">

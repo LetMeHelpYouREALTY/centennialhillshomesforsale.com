@@ -49,7 +49,7 @@ export default function RelocationPage() {
       sections={[
         {
           heading: "Inbound: pick a map, not a nickname",
-          body: `As of ${MARKET_SNAPSHOT_AS_OF}, Las Vegas city median listing is ${formatUsd(LISTING_MEDIANS_USD.lasVegas)} and Henderson ${formatUsd(LISTING_MEDIANS_USD.hendersonListing)}. Summerlin, Henderson, and Centennial Hills are different freeways. I build a drive-time matrix to your workplace or hospital, then tour. Henderson lists 60+ parks. Summerlin is built around a trail network and Downtown Summerlin. Ask for that matrix — do not rely on a “safe neighborhood” slogan.`,
+          body: `As of ${MARKET_SNAPSHOT_AS_OF}, Las Vegas city median listing is ${formatUsd(LISTING_MEDIANS_USD.lasVegas)} and Henderson ${formatUsd(LISTING_MEDIANS_USD.hendersonListing)}. Summerlin, Henderson, and Centennial Hills are different freeways. I build a drive-time matrix to your workplace or hospital, then tour. Henderson has city parks and recreation centers. Summerlin is built around a trail network and Downtown Summerlin. Ask for that matrix — do not rely on a “safe neighborhood” slogan.`,
         },
         {
           heading: "Outbound: list here, buy there",

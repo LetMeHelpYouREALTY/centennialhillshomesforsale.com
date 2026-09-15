@@ -8,6 +8,7 @@ import {
   Users,
   Shield,
 } from "lucide-react";
+import Link from "next/link";
 import CalendlyWidget from "@/components/calendly/CalendlyWidget";
 import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
@@ -72,7 +73,7 @@ const contactFaqs = [
   {
     question: "Do I need to be pre-approved before scheduling a showing?",
     answer:
-      "A pre-approval letter strengthens an offer, but it is not required for an initial consult. I can connect you with local lenders during our first meeting if you have not started financing yet.",
+      "A pre-approval letter strengthens an offer, but it is not required for an initial consult. Dr. Jan can introduce Clark County lenders. Rates are UNKNOWN until that lender quotes your file.",
   },
   {
     question: "How quickly can you respond to inquiries?",
@@ -81,7 +82,7 @@ const contactFaqs = [
   {
     question: "Do you charge for consultations?",
     answer:
-      "No. Initial consultations are always free and without obligation. Whether you're ready to move forward or just exploring your options, there's never any pressure.",
+      "No separate consult fee. The first call is a written-plan conversation: timeline, budget, ZIP, and whether you need a buyer-broker or listing agreement. Representation is a separate written agreement.",
   },
 ];
 
@@ -301,27 +302,38 @@ export default function ContactPage() {
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                "Las Vegas",
-                "Henderson",
-                "Summerlin",
-                "Green Valley",
-                "North Las Vegas",
-                "Southern Highlands",
-                "Skye Canyon",
-                "Centennial Hills",
-                "The Ridges",
-                "Inspirada",
-                "Mountains Edge",
-                "Spring Valley",
+                { name: "Las Vegas", href: "/neighborhoods" },
+                { name: "Henderson", href: "/neighborhoods/henderson" },
+                { name: "Summerlin", href: "/neighborhoods/summerlin" },
+                { name: "Green Valley", href: "/neighborhoods/green-valley" },
+                {
+                  name: "North Las Vegas",
+                  href: "/neighborhoods/north-las-vegas",
+                },
+                {
+                  name: "Southern Highlands",
+                  href: "/neighborhoods/southern-highlands",
+                },
+                { name: "Skye Canyon", href: "/neighborhoods/skye-canyon" },
+                {
+                  name: "Centennial Hills",
+                  href: "/neighborhoods/centennial-hills",
+                },
+                { name: "The Ridges", href: "/neighborhoods/the-ridges" },
+                { name: "Inspirada", href: "/neighborhoods/inspirada" },
+                {
+                  name: "Mountains Edge",
+                  href: "/neighborhoods/mountains-edge",
+                },
+                { name: "Spring Valley", href: "/listings" },
               ].map((area) => (
-                <div
-                  key={area}
-                  className="bg-slate-50 rounded-lg p-3 text-center hover:bg-blue-50 transition-colors"
+                <Link
+                  key={area.name}
+                  href={area.href}
+                  className="flex min-h-11 items-center justify-center rounded-lg bg-slate-50 p-3 text-center text-sm font-medium text-slate-700 no-underline transition-colors hover:bg-blue-50 hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                 >
-                  <span className="text-slate-700 font-medium text-sm">
-                    {area}
-                  </span>
-                </div>
+                  {area.name}
+                </Link>
               ))}
             </div>
           </section>

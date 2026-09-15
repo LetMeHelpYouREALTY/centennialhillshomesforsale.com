@@ -112,9 +112,9 @@ export const neighborhoods = [
     medianPrice: formatUsd(LISTING_MEDIANS_USD.summerlinNorth),
     highlights: [
       "Red Rock views",
-      "150+ parks",
       "Trail network",
-      "Golf courses",
+      "Downtown Summerlin",
+      "Village ZIPs",
     ],
   },
   {
@@ -133,7 +133,7 @@ export const neighborhoods = [
   {
     name: "Green Valley",
     slug: "green-valley",
-    description: "Established Henderson community with mature landscaping",
+    description: "1980s–90s Henderson streets with mature landscaping",
     medianPrice: formatUsd(LISTING_MEDIANS_USD.greenValleySouth),
     highlights: ["Golf courses", "Walking trails", "Shopping", "Parks"],
   },

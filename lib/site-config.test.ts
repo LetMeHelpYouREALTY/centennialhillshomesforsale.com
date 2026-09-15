@@ -1,5 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { commonFAQs, expertQuotes, services } from "./site-config";
+import {
+  commonFAQs,
+  expertQuotes,
+  neighborhoods,
+  services,
+} from "./site-config";
 import { defaultFaqs } from "./default-faqs";
 
 describe("site copy does not sell ranking slogans", () => {
@@ -16,5 +21,7 @@ describe("site copy does not sell ranking slogans", () => {
     expect(blob).not.toMatch(/trusted local lenders/i);
     expect(blob).not.toMatch(/We specialize/i);
     expect(blob).not.toMatch(/flawless execution/i);
+    expect(JSON.stringify(neighborhoods)).not.toMatch(/150\+ parks/i);
+    expect(JSON.stringify(neighborhoods)).not.toMatch(/Established Henderson/i);
   });
 });

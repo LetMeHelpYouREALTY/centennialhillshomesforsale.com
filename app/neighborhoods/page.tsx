@@ -40,10 +40,10 @@ const neighborhoods = [
     description:
       "Howard Hughes master plan — villages and ZIPs are not interchangeable",
     highlights: [
-      "150+ Parks",
       "Trail network",
       "Red Rock access",
       "Downtown Summerlin",
+      "Village ZIPs",
     ],
     bestFor: "Parks, trails, and Downtown Summerlin access",
   },
@@ -54,7 +54,12 @@ const neighborhoods = [
     priceNote: "City listing median · realtor.com",
     description:
       "Nevada's second-largest city — Green Valley, Inspirada, Anthem, Lake Las Vegas",
-    highlights: ["60+ Parks", "Lake Las Vegas", "Green Valley", "Master plans"],
+    highlights: [
+      "City parks",
+      "Lake Las Vegas",
+      "Green Valley",
+      "Master plans",
+    ],
     bestFor: "Henderson parks, trails, and lake access",
   },
   {
@@ -63,7 +68,7 @@ const neighborhoods = [
     medianPrice: formatUsd(LISTING_MEDIANS_USD.greenValleySouth),
     priceNote: "GV South listing median · realtor.com",
     description:
-      "Established Henderson streets, mature trees, The District at Green Valley Ranch",
+      "1980s–90s Henderson streets, mature trees, The District at Green Valley Ranch",
     highlights: [
       "Finished streets",
       "Walking trails",

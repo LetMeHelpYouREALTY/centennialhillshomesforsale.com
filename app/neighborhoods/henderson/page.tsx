@@ -58,7 +58,7 @@ export default function HendersonPage() {
           value: formatUsd(LISTING_MEDIANS_USD.inspirada),
           label: "Inspirada listing",
         },
-        { value: "60+", label: "City parks" },
+        { value: "City parks", label: "Recreation" },
       ]}
       sections={[
         {
@@ -71,7 +71,7 @@ export default function HendersonPage() {
         },
         {
           heading: "Commute and daily geography",
-          body: "I-215 and I-15 connect Henderson to the airport and the Strip; time those drives at your hour. St. Rose Parkway is the east-west spine for Green Valley and Inspirada. City recreation centers and 60+ parks are the civic layer — confirm which park is actually walkable from the listing, not from the city homepage.",
+          body: "I-215 and I-15 connect Henderson to the airport and the Strip; time those drives at your hour. St. Rose Parkway is the east-west spine for Green Valley and Inspirada. City recreation centers and parks are the civic layer — confirm which park is actually walkable from the listing, not from the city homepage.",
         },
         {
           heading: "Campuses",
