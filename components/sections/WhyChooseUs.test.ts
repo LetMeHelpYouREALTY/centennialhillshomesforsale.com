@@ -13,5 +13,9 @@ describe("WhyChooseUs homepage section", () => {
     expect(src).toContain("homes@heyberkshire.com");
     expect(src).toContain("AGENT_EMAIL_MAILTO");
     expect(src).not.toMatch(/national brand behind the contract/i);
+    expect(src).toContain("How I actually work a file");
+    expect(src).toContain("I answer the client line");
+    expect(src).not.toContain("How Dr. Jan Duffy actually works a file");
+    expect(src).not.toContain("Dr. Jan Duffy answers the client line");
   });
 });

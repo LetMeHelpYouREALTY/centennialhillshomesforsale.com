@@ -36,7 +36,7 @@ export default function SummerlinPage() {
       name="Summerlin"
       slug="summerlin"
       h1="Summerlin Homes for Sale in Las Vegas"
-      intro="Summerlin is the Howard Hughes master plan on the west side of the valley — distinct villages, distinct ZIPs, and a price spread that a single “Summerlin median” cannot describe. Dr. Jan Duffy tours by village, not by a brand slogan."
+      intro="Summerlin is the Howard Hughes master plan on the west side of the valley — distinct villages, distinct ZIPs, and a price spread that a single “Summerlin median” cannot describe. I tour by village, not by a brand slogan."
       zipCodes={["89134", "89135", "89138", "89144"]}
       city="Las Vegas"
       imageSrc="/images/neighborhoods/summerlin.png"

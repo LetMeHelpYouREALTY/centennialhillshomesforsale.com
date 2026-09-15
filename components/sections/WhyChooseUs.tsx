@@ -34,7 +34,7 @@ const features = [
     icon: Users,
     title: "One agent of record",
     description:
-      "Dr. Jan Duffy answers the client line. No callback queue, no assistant filter.",
+      "I answer the client line. No callback queue, no assistant filter.",
   },
   {
     icon: Award,
@@ -66,7 +66,7 @@ export default function WhyChooseUs() {
             fallbackSrc={PAGE_HERO_IMAGES.about.src}
             avoidSrc={PAGE_HERO_IMAGES.homepage.src}
           >
-            How Dr. Jan Duffy actually works a file
+            How I actually work a file
           </SectionHeading>
           <p className="mx-auto max-w-3xl text-pretty text-xl text-slate-600">
             Berkshire Hathaway HomeServices Nevada Properties — Centennial

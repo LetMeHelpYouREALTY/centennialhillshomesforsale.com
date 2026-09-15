@@ -265,7 +265,7 @@ export default function ContactPage() {
                 </h2>
                 <p className="mb-4 text-pretty text-sm text-slate-600">
                   Prefer email over Calendly? Send the address, ZIP, and
-                  timeline. Dr. Jan Duffy replies during posted hours.
+                  timeline. I reply during posted hours.
                 </p>
                 <LeadCaptureForm source="contact-page" formType="contact" />
               </div>
@@ -359,9 +359,9 @@ export default function ContactPage() {
               Areas We Serve
             </SectionHeading>
             <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Dr. Jan Duffy represents buyers and sellers throughout the Las
-              Vegas Valley, including 89138 Summerlin West and 55+ campuses such
-              as Siena. Call or email with the ZIP or address.
+              I represent buyers and sellers throughout the Las Vegas Valley,
+              including 89138 Summerlin West and 55+ campuses such as Siena.
+              Call or email with the ZIP or address.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[

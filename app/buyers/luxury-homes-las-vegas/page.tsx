@@ -35,7 +35,7 @@ export default function LuxuryHomesLasVegasPage() {
       h1="Luxury Homes in Las Vegas and Henderson"
       imageSrc="/images/hero/luxury-homes.png"
       imageAlt="Luxury custom home with mountain views in The Ridges, Summerlin"
-      intro="Luxury here is a lot, a gate, and a view corridor — The Ridges, Tournament Hills, Red Rock Country Club, MacDonald Highlands, Southern Highlands, and 89138 Summerlin West — not a celebrity list. 55+ HOPA files such as Siena are a different occupancy packet. Dr. Jan Duffy schedules gated access and prices from live comps."
+      intro="Luxury here is a lot, a gate, and a view corridor — The Ridges, Tournament Hills, Red Rock Country Club, MacDonald Highlands, Southern Highlands, and 89138 Summerlin West — not a celebrity list. 55+ HOPA files such as Siena are a different occupancy packet. I schedule gated access and price from live comps."
       stats={[
         {
           value: formatUsd(LISTING_MEDIANS_USD.southernHighlands),

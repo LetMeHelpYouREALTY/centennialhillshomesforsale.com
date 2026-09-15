@@ -21,5 +21,11 @@ describe("buyers hub", () => {
     expect(src).not.toContain("Dr. Jan can introduce");
     expect(src).not.toContain("register her");
     expect(src).not.toContain("Dr. Jan has served");
+    expect(src).toContain("I match the file, not a buyer-type slogan");
+    expect(src).toContain("I match the street to those priorities");
+    expect(src).toContain("I help California buyers");
+    expect(src).not.toContain("Dr. Jan Duffy matches the file");
+    expect(src).not.toContain("Dr. Jan matches the street");
+    expect(src).not.toContain("Dr. Jan helps California");
   });
 });

@@ -182,6 +182,27 @@ describe("site images catalog", () => {
     });
     expect(willAndWillNot.src).toBe(PAGE_HERO_IMAGES.office.src);
 
+    const mls = resolveSectionImage({
+      heading: "Search live MLS",
+      neighborhoodName: "Siena",
+      avoidSrc: PAGE_HERO_IMAGES.fiftyFivePlus.src,
+    });
+    expect(mls.src).toBe(PAGE_HERO_IMAGES.listings.src);
+
+    const mlsSiena = resolveSectionImage({
+      heading: "Search live MLS in Siena",
+      neighborhoodName: "Siena",
+      avoidSrc: PAGE_HERO_IMAGES.fiftyFivePlus.src,
+    });
+    expect(mlsSiena.src).toBe(PAGE_HERO_IMAGES.listings.src);
+
+    const howIWork = resolveSectionImage({
+      heading: "How I work 55+ files",
+      neighborhoodName: "Las Vegas",
+      avoidSrc: PAGE_HERO_IMAGES.fiftyFivePlus.src,
+    });
+    expect(howIWork.src).toBe(PAGE_HERO_IMAGES.about.src);
+
     const root = path.join(__dirname, "..", "public");
     expect(existsSync(path.join(root, golf.src.replace(/^\//, "")))).toBe(true);
     expect(existsSync(path.join(root, commute.src.replace(/^\//, "")))).toBe(

@@ -13,7 +13,7 @@ import {
 import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
 import { FairHousingNotice } from "@/components/shared/FairHousingNotice";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
-import { SectionPhoto } from "@/components/shared/SectionPhoto";
+import { SectionHeading, SectionPhoto } from "@/components/shared/SectionPhoto";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
@@ -149,12 +149,15 @@ export default function TopicGuide({
             </p>
 
             <section className="mb-10" aria-labelledby={`${slug}-mls-heading`}>
-              <h2
+              <SectionHeading
                 id={`${slug}-mls-heading`}
                 className="mb-3 text-2xl font-bold text-slate-900"
+                neighborhoodName={name}
+                fallbackSrc={heroSrc}
+                avoidSrc={heroSrc}
               >
                 Search live MLS
-              </h2>
+              </SectionHeading>
               <p className="mb-4 text-pretty text-slate-600">
                 ZIP, street, or community. Submits to current listings — not a
                 scraped sample.

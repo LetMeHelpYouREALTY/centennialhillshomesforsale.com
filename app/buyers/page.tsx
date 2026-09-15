@@ -96,7 +96,7 @@ const buyerFaqs = [
   {
     question: "Which neighborhoods have parks, trails, and nearby campuses?",
     answer:
-      "Summerlin (including 89138 and 89144), Henderson (Green Valley, Inspirada), Centennial Hills, and 55+ campuses such as Siena and Trilogy are compared on parks, trail miles, commute times, and named campuses. Dr. Jan matches the street to those priorities.",
+      "Summerlin (including 89138 and 89144), Henderson (Green Valley, Inspirada), Centennial Hills, and 55+ campuses such as Siena and Trilogy are compared on parks, trail miles, commute times, and named campuses. I match the street to those priorities.",
   },
   {
     question: "How do I get a buyer CMA or current listings?",
@@ -453,7 +453,7 @@ export default function BuyersPage() {
               written agreement and a lender worksheet. A California relocator
               needs paired comps, not a tax slogan. A luxury buyer needs gate
               access and a showing window. A 55+ buyer needs HOPA occupancy in
-              writing. Dr. Jan Duffy matches the file, not a buyer-type slogan.
+              writing. I match the file, not a buyer-type slogan.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Link
@@ -467,8 +467,8 @@ export default function BuyersPage() {
                 <p className="text-pretty text-slate-600 text-sm mb-3">
                   Nevada charges 0% state income tax on wages. Home-price
                   differences are not a fixed 40–60% on every street — see live
-                  comps. Dr. Jan helps California buyers sequence a sale and a
-                  Las Vegas purchase.
+                  comps. I help California buyers sequence a sale and a Las
+                  Vegas purchase.
                 </p>
                 <span className="text-blue-600 font-semibold text-sm">
                   California relocator guide →

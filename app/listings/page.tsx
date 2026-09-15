@@ -466,8 +466,8 @@ export default function ListingsPage({
               Summerlin (including 89138), Henderson, Centennial Hills, Siena
               55+, and North Las Vegas differ by ZIP, commute, HOA, and square
               footage. As a Berkshire Hathaway HomeServices agent serving Las
-              Vegas since 2008, Dr. Jan Duffy matches those facts — not school
-              slogans or a “family-friendly” pitch.
+              Vegas since 2008, I match those facts — not school slogans or a
+              “family-friendly” pitch.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {neighborhoods.map((neighborhood) => (
@@ -513,9 +513,9 @@ export default function ListingsPage({
               Why tour Las Vegas listings with Dr. Jan Duffy
             </h2>
             <p className="text-pretty text-slate-300 text-center max-w-3xl mx-auto mb-8">
-              Representation is a written buyer agreement and a live MLS pull.
-              Dr. Jan Duffy brings Berkshire Hathaway HomeServices marketing and
-              referral tools plus Clark County files since 2008.
+              Representation is a written buyer agreement and a live MLS pull. I
+              bring Berkshire Hathaway HomeServices marketing and referral tools
+              plus Clark County files since 2008.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
@@ -649,9 +649,9 @@ export default function ListingsPage({
                   </h3>
                   <p className="text-pretty text-slate-600 text-sm">
                     Location, size, features, and budget all factor into your
-                    search. Dr. Jan helps you match ZIP, commute, square
-                    footage, and amenities, then sets up MLS alerts so new
-                    matches land in your inbox.
+                    search. I help you match ZIP, commute, square footage, and
+                    amenities, then set up MLS alerts so new matches land in
+                    your inbox.
                   </p>
                 </div>
               </div>
@@ -665,7 +665,7 @@ export default function ListingsPage({
                   </h3>
                   <p className="text-pretty text-slate-600 text-sm">
                     Visit homes that meet the worksheet, in person or virtually.
-                    When a house matches, Dr. Jan writes an offer with price,
+                    When a house matches, I write an offer with price,
                     contingencies, and dates from the comps — not a ranking
                     slogan.
                   </p>
@@ -698,8 +698,8 @@ export default function ListingsPage({
                     Close date is on the purchase agreement — often 30-ish days
                     with a conventional loan, longer with FHA, VA, or new
                     construction. You sign, funds transfer, and keys release
-                    when escrow records. Dr. Jan Duffy remains available after
-                    closing. I will not promise a 7-day close.
+                    when escrow records. I remain available after closing. I
+                    will not promise a 7-day close.
                   </p>
                 </div>
               </div>

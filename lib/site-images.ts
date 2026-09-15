@@ -298,6 +298,10 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
     src: PAGE_HERO_IMAGES.about.src,
   },
   {
+    test: /\b(how i work|how i actually work)\b/i,
+    src: PAGE_HERO_IMAGES.about.src,
+  },
+  {
     test: /\b(contact|get in touch|reach out|how to start|how to reach|how to use this page)\b/i,
     src: PAGE_HERO_IMAGES.contact.src,
   },

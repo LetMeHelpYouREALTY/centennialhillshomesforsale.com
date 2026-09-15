@@ -20,6 +20,9 @@ describe("TopicGuide conversion chrome", () => {
     expect(src).toContain("MARKET_SNAPSHOT_AS_OF");
     expect(src).toContain("text-slate-300");
     expect(src).toContain("GoogleReviewsCta");
+    expect(src).toContain("SectionHeading");
+    expect(src).toContain("Search live MLS");
+    expect(src).toContain("avoidSrc={heroSrc}");
     expect(src).not.toContain("text-blue-200");
     expect(src).not.toContain("text-slate-500");
   });

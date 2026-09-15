@@ -92,7 +92,7 @@ const faqSchema = {
       name: "Can I buy in a 55+ community if I'm under 55?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Generally no. Some files allow a purchase if you will be 55 by close of escrow, or as an investor who will rent to 55+ occupants. Confirm the CC&Rs. Dr. Jan Duffy reads the packet with you.",
+        text: "Generally no. Some files allow a purchase if you will be 55 by close of escrow, or as an investor who will rent to 55+ occupants. Confirm the CC&Rs. I read the packet with you.",
       },
     },
     {
@@ -116,7 +116,7 @@ const faqSchema = {
       name: "Can grandchildren visit or stay in 55+ communities?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Guest-stay limits and under-age occupancy vary by HOA. Confirm days per year in the current CC&Rs. Dr. Jan Duffy reads the packet with you before you bid.",
+        text: "Guest-stay limits and under-age occupancy vary by HOA. Confirm days per year in the current CC&Rs. I read the packet with you before you bid.",
       },
     },
     {
@@ -625,9 +625,9 @@ export default function FiftyFiveCommunitiesPage() {
                       40–45 slogan.
                     </p>
                     <p className="text-pretty text-blue-800 font-medium">
-                      Each community has specific rules. Dr. Jan Duffy provides
-                      detailed guidance on occupancy rules for the campus you
-                      are touring.
+                      Each community has specific rules. I provide detailed
+                      guidance on occupancy rules for the campus you are
+                      touring.
                     </p>
                   </div>
                 </div>
@@ -909,8 +909,7 @@ export default function FiftyFiveCommunitiesPage() {
                 <p className="text-pretty text-slate-600">
                   Generally no. Some files allow a purchase if you will be 55 by
                   close of escrow, or as an investor who will rent to 55+
-                  occupants. Confirm the CC&Rs. Dr. Jan Duffy reads the packet
-                  with you.
+                  occupants. Confirm the CC&Rs. I read the packet with you.
                 </p>
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">
@@ -955,8 +954,8 @@ export default function FiftyFiveCommunitiesPage() {
                 </h3>
                 <p className="text-pretty text-slate-600">
                   Guest-stay limits and under-age occupancy vary by HOA. Confirm
-                  days per year in the current CC&Rs. Dr. Jan Duffy reads the
-                  packet with you before you bid.
+                  days per year in the current CC&Rs. I read the packet with you
+                  before you bid.
                 </p>
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">
@@ -982,7 +981,7 @@ export default function FiftyFiveCommunitiesPage() {
               fallbackSrc={PAGE_HERO_IMAGES.about.src}
               avoidSrc={PAGE_HERO_IMAGES.fiftyFivePlus.src}
             >
-              How Dr. Jan Duffy works 55+ files
+              How I work 55+ files
             </SectionHeading>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="flex items-start">

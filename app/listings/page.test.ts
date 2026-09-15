@@ -25,5 +25,15 @@ describe("listings hub FAQs", () => {
     expect(src).not.toContain("She will send matching listings");
     expect(src).not.toContain("Dr. Jan can introduce");
     expect(src).not.toContain("text-slate-500");
+    expect(src).toContain("I match those facts");
+    expect(src).toContain("bring Berkshire Hathaway HomeServices marketing");
+    expect(src).toContain("I remain available after closing");
+    expect(src).toContain("I help you match ZIP");
+    expect(src).toContain("I write an offer");
+    expect(src).not.toContain("Dr. Jan Duffy matches those facts");
+    expect(src).not.toContain("Dr. Jan Duffy brings");
+    expect(src).not.toContain("Dr. Jan Duffy remains");
+    expect(src).not.toContain("Dr. Jan helps you match");
+    expect(src).not.toContain("Dr. Jan writes an offer");
   });
 });

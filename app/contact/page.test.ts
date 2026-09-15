@@ -19,5 +19,9 @@ describe("contact hub", () => {
     expect(src).toContain("GoogleReviewsCta");
     expect(src).not.toContain("Dr. Jan Duffy will pull");
     expect(src).not.toContain("Dr. Jan can introduce");
+    expect(src).toContain("I reply during posted hours");
+    expect(src).toContain("I represent buyers and sellers");
+    expect(src).not.toContain("Dr. Jan Duffy replies");
+    expect(src).not.toContain("Dr. Jan Duffy represents");
   });
 });

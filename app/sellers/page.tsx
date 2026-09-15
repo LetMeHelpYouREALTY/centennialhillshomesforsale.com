@@ -97,7 +97,7 @@ const sellerFaqs = [
   {
     question: "What do I need to do to prepare my home for sale?",
     answer:
-      "Dr. Jan walks the house and writes a preparation checklist. Decluttering, minor repairs, fresh paint, and professional staging are the usual first items — not a guaranteed return. I mark what actually shows in photos and on the first tour.",
+      "I walk the house and write a preparation checklist. Decluttering, minor repairs, fresh paint, and professional staging are the usual first items — not a guaranteed return. I mark what actually shows in photos and on the first tour.",
   },
   {
     question: "How does Berkshire Hathaway market my home?",
@@ -107,7 +107,7 @@ const sellerFaqs = [
   {
     question: "What are your commission rates?",
     answer:
-      "Commission is negotiable. Dr. Jan walks through listing-side compensation, buyer-broker agreements, and net-sheet math on the consult. I will not claim marketing “typically more than offsets” the fee — your net is the CMA plus the offer, not a slogan.",
+      "Commission is negotiable. I walk through listing-side compensation, buyer-broker agreements, and net-sheet math on the consult. I will not claim marketing “typically more than offsets” the fee — your net is the CMA plus the offer, not a slogan.",
   },
   {
     question: "Should I wait for prices to go higher?",
@@ -203,9 +203,8 @@ export default function SellersPage() {
               When you list with{" "}
               <strong>Berkshire Hathaway HomeServices</strong>, you get
               professional photography, comps-based pricing, and a listing plan
-              in writing. Dr. Jan Duffy has been serving Las Vegas since
-              2008—helping sellers price to the comps and negotiate the net
-              sheet.
+              in writing. I have been serving Las Vegas since 2008—helping
+              sellers price to the comps and negotiate the net sheet.
             </p>
             <div className="mb-8">
               <MlsSearchForm inputId="mls-q-sellers" />
@@ -337,8 +336,8 @@ export default function SellersPage() {
             </SectionHeading>
             <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Selling a home has many steps. You do not have to run them alone.
-              Dr. Jan Duffy manages the file from CMA to closing and keeps you
-              on the written timeline.
+              I manage the file from CMA to closing and keep you on the written
+              timeline.
             </p>
             <div className="space-y-6">
               {sellingProcess.map((item) => (

@@ -34,7 +34,7 @@ export default function LuxuryHomesPage() {
       h1="Las Vegas Luxury Homes for Sale"
       imageSrc="/images/hero/luxury-ridges.png"
       imageAlt="Gated custom estate architecture in The Ridges, Las Vegas"
-      intro="This is the listing-side companion to the luxury buyer guide: how Dr. Jan Duffy prices, photographs, and gates a $1M+ Clark County home in The Ridges, Tournament Hills, or 89138 Summerlin West — without celebrity marketing. 55+ HOPA files such as Siena are a separate occupancy packet."
+      intro="This is the listing-side companion to the luxury buyer guide: how I price, photograph, and gate a $1M+ Clark County home in The Ridges, Tournament Hills, or 89138 Summerlin West — without celebrity marketing. 55+ HOPA files such as Siena are a separate occupancy packet."
       stats={[
         {
           value: formatUsd(LISTING_MEDIANS_USD.summerlinSouth),

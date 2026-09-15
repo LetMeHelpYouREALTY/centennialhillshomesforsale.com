@@ -21,5 +21,12 @@ describe("sellers hub", () => {
     expect(src).not.toContain("She'll mark");
     expect(src).not.toContain("text-blue-200");
     expect(src).not.toContain("Dr. Jan has served");
+    expect(src).toContain("I have been serving Las Vegas");
+    expect(src).toContain("I manage the file from CMA");
+    expect(src).toContain("I walk the house and write");
+    expect(src).toContain("I walk through listing-side");
+    expect(src).not.toContain("Dr. Jan Duffy has been serving");
+    expect(src).not.toContain("Dr. Jan Duffy manages");
+    expect(src).not.toContain("Dr. Jan walks");
   });
 });

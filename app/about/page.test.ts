@@ -20,6 +20,11 @@ describe("about page service-area coverage", () => {
     expect(src).toContain('source="about-page-mid"');
     expect(src).not.toContain("Whether you're buying");
     expect(src).toContain("I have served Las Vegas");
+    expect(src).toContain("I have been serving Las Vegas");
+    expect(src).toContain("I work residential files");
+    expect(src).toContain("I serve the entire Las Vegas Valley");
     expect(src).not.toContain("She has served");
+    expect(src).not.toContain("she prices");
+    expect(src).not.toContain("Dr. Jan Duffy has been serving");
   });
 });

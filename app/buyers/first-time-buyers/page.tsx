@@ -33,7 +33,7 @@ export default function FirstTimeBuyersPage() {
       h1="First-Time Home Buyers in Las Vegas"
       imageSrc="/images/hero/first-time-buyers.png"
       imageAlt="First-time buyers on the porch of a single-story Las Vegas home"
-      intro="A first purchase in Clark County is a written buyer agreement, a lender pre-approval, and a house that survives inspection — not a “free agent” slogan. Dr. Jan Duffy walks the contract dates with you, including 89138 Summerlin West. I will not send a first-time file to Siena unless HOPA occupancy actually fits."
+      intro="A first purchase in Clark County is a written buyer agreement, a lender pre-approval, and a house that survives inspection — not a “free agent” slogan. I walk the contract dates with you, including 89138 Summerlin West. I will not send a first-time file to Siena unless HOPA occupancy actually fits."
       stats={[
         {
           value: formatUsd(LISTING_MEDIANS_USD.lasVegas),

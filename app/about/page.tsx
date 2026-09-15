@@ -214,10 +214,10 @@ export default function AboutPage() {
               alt={PAGE_HERO_IMAGES.about.alt}
             />
             <p className="text-pretty text-xl text-slate-600">
-              Dr. Jan Duffy has been serving Las Vegas since 2008 with Berkshire
-              Hathaway HomeServices Nevada Properties. Buyers, sellers,
-              investors, and relocators get a written plan and live comps — not
-              a ranking slogan.
+              I have been serving Las Vegas since 2008 with Berkshire Hathaway
+              HomeServices Nevada Properties. Buyers, sellers, investors, and
+              relocators get a written plan and live comps — not a ranking
+              slogan.
             </p>
             <div className="mt-8">
               <MlsSearchForm inputId="mls-q-about" />
@@ -455,8 +455,8 @@ export default function AboutPage() {
               Files I actually work
             </SectionHeading>
             <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Dr. Jan Duffy works residential files across Las Vegas, Henderson,
-              and Summerlin. First-time buyers, luxury tours, investors, and 55+
+              I work residential files across Las Vegas, Henderson, and
+              Summerlin. First-time buyers, luxury tours, investors, and 55+
               HOPA occupancy rules each get a written plan — not a lifestyle
               slogan.
             </p>
@@ -548,10 +548,10 @@ export default function AboutPage() {
               Areas Served by BHHS Nevada Properties
             </SectionHeading>
             <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Dr. Jan Duffy serves the entire Las Vegas Valley with named ZIPs,
-              commute times, HOA notes, and square footage. From custom homes in
-              The Ridges to production inventory in North Las Vegas, she prices
-              each file with a live CMA.
+              I serve the entire Las Vegas Valley with named ZIPs, commute
+              times, HOA notes, and square footage. From custom homes in The
+              Ridges to production inventory in North Las Vegas, I price each
+              file with a live CMA.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {areasServed.map((area) => (
