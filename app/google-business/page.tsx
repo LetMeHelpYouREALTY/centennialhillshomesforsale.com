@@ -314,7 +314,7 @@ export default function GoogleBusinessPage() {
                       <h3 className="font-semibold text-slate-900">
                         {service.name}
                       </h3>
-                      <p className="text-sm text-slate-600">
+                      <p className="text-pretty text-sm text-slate-600">
                         {service.description}
                       </p>
                     </div>
@@ -515,7 +515,9 @@ export default function GoogleBusinessPage() {
                     />
                     {faq.question}
                   </h3>
-                  <p className="text-slate-600 ml-7">{faq.answer}</p>
+                  <p className="text-pretty text-slate-600 ml-7">
+                    {faq.answer}
+                  </p>
                 </div>
               ))}
             </div>
@@ -537,7 +539,7 @@ export default function GoogleBusinessPage() {
               >
                 Leave a Google Review for This Office
               </SectionHeading>
-              <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
+              <p className="text-pretty text-slate-600 mb-6 max-w-2xl mx-auto">
                 If Dr. Jan helped you buy or sell a home, please consider
                 sharing your experience. Mention your neighborhood, type of
                 transaction, and what made the experience valuable.

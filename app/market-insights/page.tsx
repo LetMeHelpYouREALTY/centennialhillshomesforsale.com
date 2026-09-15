@@ -429,7 +429,7 @@ export default async function MarketInsightsPage() {
                 <h3 className="font-bold text-slate-900 mb-3">
                   Raiders & Sports
                 </h3>
-                <p className="text-slate-600 text-sm mb-3">
+                <p className="text-pretty text-slate-600 text-sm mb-3">
                   Allegiant Stadium hosts Raiders games and events. Golden
                   Knights and Aces play in the valley. Expansion rumors are
                   UNKNOWN until a league announces. Drive time to the venue
@@ -443,7 +443,7 @@ export default async function MarketInsightsPage() {
                 <h3 className="font-bold text-slate-900 mb-3">
                   Healthcare Growth
                 </h3>
-                <p className="text-slate-600 text-sm mb-3">
+                <p className="text-pretty text-slate-600 text-sm mb-3">
                   Henderson and Summerlin have named hospital campuses. Confirm
                   commute to the campus you actually use — I will not invent a
                   job-growth rate.
@@ -456,7 +456,7 @@ export default async function MarketInsightsPage() {
                 <h3 className="font-bold text-slate-900 mb-3">
                   Film & Production
                 </h3>
-                <p className="text-slate-600 text-sm mb-3">
+                <p className="text-pretty text-slate-600 text-sm mb-3">
                   Nevada publishes film-incentive rules. Current productions and
                   studio jobs are UNKNOWN on this page until a sourced count
                   exists.
@@ -494,7 +494,7 @@ export default async function MarketInsightsPage() {
                     median
                   </span>
                 </div>
-                <p className="text-slate-600 text-sm mb-3">
+                <p className="text-pretty text-slate-600 text-sm mb-3">
                   Tech corridor, parks, trails, and rec campuses keep inbound
                   demand. I will not use a “safety ranking” slogan or an
                   appreciation forecast. Ask for a live CMA on Inspirada, Green
@@ -512,7 +512,7 @@ export default async function MarketInsightsPage() {
                     listing median
                   </span>
                 </div>
-                <p className="text-slate-600 text-sm mb-3">
+                <p className="text-pretty text-slate-600 text-sm mb-3">
                   Red Rock views, Downtown Summerlin, and a finished trail
                   network. 89144, 89138, and The Ridges are different maps —
                   confirm village comps, not a “strong buy” label.
@@ -529,7 +529,7 @@ export default async function MarketInsightsPage() {
                     median
                   </span>
                 </div>
-                <p className="text-slate-600 text-sm mb-3">
+                <p className="text-pretty text-slate-600 text-sm mb-3">
                   City listing median is not Aliante or Skye Canyon. New retail
                   and freeway access matter for commute math — not a “value
                   play” slogan.
@@ -548,7 +548,7 @@ export default async function MarketInsightsPage() {
                     median
                   </span>
                 </div>
-                <p className="text-slate-600 text-sm mb-3">
+                <p className="text-pretty text-slate-600 text-sm mb-3">
                   Tract homes near Exploration Peak Park. New construction
                   competes with resales. I will not invent “solid appreciation.”
                 </p>

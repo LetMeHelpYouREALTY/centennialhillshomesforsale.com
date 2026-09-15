@@ -1,5 +1,5 @@
 import { LeadCaptureForm } from "@/components/forms/LeadCaptureForm";
-import { CTA_PHONE } from "@/lib/contact";
+import { CTA_PHONE, AGENT_EMAIL } from "@/lib/contact";
 import { cn } from "@/lib/utils";
 
 type GuideLeadFormProps = {
@@ -29,9 +29,9 @@ export function GuideLeadForm({
       >
         {heading}
       </h2>
-      <p className="mb-6 text-slate-600">
-        Send the address or ZIP. Call {CTA_PHONE} if you want a faster live
-        pull.
+      <p className="mb-6 text-pretty text-slate-600">
+        Send the address or ZIP. Call {CTA_PHONE} or email {AGENT_EMAIL} if you
+        want a faster live pull.
       </p>
       <LeadCaptureForm source={source} formType={formType} />
     </section>

@@ -326,7 +326,7 @@ export default function BuyersPage() {
             >
               The Home Buying Process in Las Vegas
             </SectionHeading>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Pre-approval, live MLS, a written offer, inspection, then the
               close date on the purchase agreement. That is the sequence when
               you buy in Las Vegas with Dr. Jan Duffy and Berkshire Hathaway
@@ -357,7 +357,9 @@ export default function BuyersPage() {
                           {step.title}
                         </h3>
                       </div>
-                      <p className="text-slate-600">{step.description}</p>
+                      <p className="text-pretty text-slate-600">
+                        {step.description}
+                      </p>
                     </div>
                   </div>
                 );
@@ -452,7 +454,7 @@ export default function BuyersPage() {
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
                   California Relocators
                 </h3>
-                <p className="text-slate-600 text-sm mb-3">
+                <p className="text-pretty text-slate-600 text-sm mb-3">
                   Nevada charges 0% state income tax on wages. Home-price
                   differences are not a fixed 40–60% on every street — see live
                   comps. Dr. Jan helps California buyers sequence a sale and a
@@ -470,7 +472,7 @@ export default function BuyersPage() {
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
                   First-Time Buyers
                 </h3>
-                <p className="text-slate-600 text-sm mb-3">
+                <p className="text-pretty text-slate-600 text-sm mb-3">
                   Written buyer agreement, lender pre-approval, and an
                   inspection calendar. I introduce Clark County lenders; I do
                   not originate loans.
@@ -487,7 +489,7 @@ export default function BuyersPage() {
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
                   Luxury Home Buyers
                 </h3>
-                <p className="text-slate-600 text-sm mb-3">
+                <p className="text-pretty text-slate-600 text-sm mb-3">
                   $1M+ properties. The Ridges, MacDonald Highlands, Southern
                   Highlands, and Las Vegas Strip views. Price from live comps —
                   not a secret-inventory claim.
@@ -504,7 +506,7 @@ export default function BuyersPage() {
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
                   55+ HOPA Buyers
                 </h3>
-                <p className="text-slate-600 text-sm mb-3">
+                <p className="text-pretty text-slate-600 text-sm mb-3">
                   Siena, Trilogy, Sun City, and Del Webb. Occupancy rules and
                   HOA dues go in writing before you tour.
                 </p>
@@ -524,7 +526,7 @@ export default function BuyersPage() {
             >
               What a BHHS buyer agreement actually includes
             </SectionHeading>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Berkshire Hathaway HomeServices Nevada Properties is a franchise
               brokerage. You get a written buyer agreement, a global referral
               network, and one agent of record — not a Buffett slogan.
@@ -535,7 +537,7 @@ export default function BuyersPage() {
                   <Award className="h-7 w-7 text-blue-600" aria-hidden="true" />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">Written plan</h3>
-                <p className="text-slate-600 text-sm">
+                <p className="text-pretty text-slate-600 text-sm">
                   Compensation, showing rules, and the buyer agreement are in
                   writing before we tour.
                 </p>
@@ -547,7 +549,7 @@ export default function BuyersPage() {
                 <h3 className="font-bold text-slate-900 mb-2">
                   Global Network
                 </h3>
-                <p className="text-slate-600 text-sm">
+                <p className="text-pretty text-slate-600 text-sm">
                   Global BHHS referral network for inbound and outbound moves
                 </p>
               </div>
@@ -561,7 +563,7 @@ export default function BuyersPage() {
                 <h3 className="font-bold text-slate-900 mb-2">
                   Local practice
                 </h3>
-                <p className="text-slate-600 text-sm">
+                <p className="text-pretty text-slate-600 text-sm">
                   Dr. Jan has served Las Vegas since 2008 with BHHS Nevada
                   Properties
                 </p>
@@ -576,7 +578,7 @@ export default function BuyersPage() {
                 <h3 className="font-bold text-slate-900 mb-2">
                   Written offer strategy
                 </h3>
-                <p className="text-slate-600 text-sm">
+                <p className="text-pretty text-slate-600 text-sm">
                   Street-level CMA math and written offer strategy
                 </p>
               </div>
@@ -667,7 +669,7 @@ export default function BuyersPage() {
                   <h3 className="font-bold text-slate-900 mb-2">
                     {faq.question}
                   </h3>
-                  <p className="text-slate-600">{faq.answer}</p>
+                  <p className="text-pretty text-slate-600">{faq.answer}</p>
                 </div>
               ))}
             </div>

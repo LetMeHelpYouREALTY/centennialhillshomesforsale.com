@@ -7,7 +7,7 @@ import ReviewsWithSchema from "@/components/sections/ReviewsWithSchema";
 import FAQWithSchema from "@/components/sections/FAQWithSchema";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { VisitOffice } from "@/components/shared/VisitOffice";
-import { Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { getPageDomainConfig } from "@/lib/get-domain-config";
 import { getCanonicalUrl, getRequestOrigin } from "@/lib/site-url";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
@@ -17,6 +17,7 @@ import {
   CTA_PHONE_E164,
   CTA_TEL,
   AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
   OFFICE_NAP,
   OFFICE_POSTAL_ADDRESS,
 } from "@/lib/contact";
@@ -192,7 +193,7 @@ export default async function Home() {
             <h1 className="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
               Centennial Hills Homes for Sale
             </h1>
-            <p className="mx-auto mb-10 max-w-3xl text-xl text-white/80 md:text-2xl">
+            <p className="mx-auto mb-10 max-w-3xl text-pretty text-xl text-white/80 md:text-2xl">
               Northwest Las Vegas listings in 89149, 89131, and 89143 — written
               for this site, not copied from another domain.
             </p>
@@ -238,18 +239,26 @@ export default async function Home() {
                 <h2 className="mb-3 text-3xl font-bold text-slate-900 md:text-4xl">
                   Dr. Jan Duffy
                 </h2>
-                <p className="mb-4 text-lg text-slate-600">
+                <p className="mb-4 text-pretty text-lg text-slate-600">
                   Berkshire Hathaway HomeServices Nevada Properties. License
-                  S.0197614.LLC. Call {CTA_PHONE} for Centennial Hills,
-                  Summerlin, and Henderson listings.
+                  S.0197614.LLC. Call {CTA_PHONE} or email {AGENT_EMAIL} for
+                  Centennial Hills, Summerlin (89138), Henderson, and 55+
+                  campuses such as Siena.
                 </p>
-                <div className="flex flex-col justify-center gap-3 sm:flex-row md:justify-start">
+                <div className="flex flex-col flex-wrap justify-center gap-3 sm:flex-row md:justify-start">
                   <a
                     href={CTA_TEL}
                     className="inline-flex min-h-11 items-center justify-center rounded-md bg-blue-600 px-5 py-3 font-semibold text-white hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
                   >
                     <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                     Call {CTA_PHONE}
+                  </a>
+                  <a
+                    href={AGENT_EMAIL_MAILTO}
+                    className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-5 py-3 font-semibold text-slate-900 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+                  >
+                    <Mail className="mr-2 h-4 w-4" aria-hidden="true" />
+                    {AGENT_EMAIL}
                   </a>
                   <Link
                     href="/about"

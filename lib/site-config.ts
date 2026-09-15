@@ -164,12 +164,12 @@ export const neighborhoods = [
   {
     name: "North Las Vegas",
     slug: "north-las-vegas",
-    description: "Rapidly growing area with affordable new construction",
+    description: "Newer production inventory and employment-center access",
     medianPrice: formatUsd(LISTING_MEDIANS_USD.northLasVegas),
     highlights: [
       "New construction",
-      "Entry-level pricing",
-      "Growing employment centers",
+      "Production inventory",
+      "Employment-center access",
       "Parks and recreation",
     ],
   },

@@ -346,7 +346,7 @@ export default function NeighborhoodsPage() {
                         </div>
                       </div>
                     </div>
-                    <p className="mb-4 text-sm text-slate-600">
+                    <p className="mb-4 text-pretty text-sm text-slate-600">
                       {neighborhood.description}
                     </p>
                     <div className="flex flex-wrap gap-2">

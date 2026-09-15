@@ -36,9 +36,10 @@ export default function Footer() {
             <h2 className="mb-4 text-xl font-bold">
               Berkshire Hathaway HomeServices
             </h2>
-            <p className="mb-4 text-sm text-slate-300">
-              Nevada Properties — Las Vegas, Henderson, and Summerlin listings
-              with Dr. Jan Duffy. License {AGENT_LICENSE}.
+            <p className="mb-4 text-pretty text-sm text-slate-300">
+              Nevada Properties — Las Vegas, Henderson, Summerlin (including
+              89138), and 55+ campuses such as Siena with Dr. Jan Duffy. License{" "}
+              {AGENT_LICENSE}.
             </p>
             <div className="flex space-x-4">
               <a

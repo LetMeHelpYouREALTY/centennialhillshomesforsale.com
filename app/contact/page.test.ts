@@ -12,5 +12,7 @@ describe("contact hub", () => {
     expect(src).toContain("email homes@heyberkshire.com");
     expect(src).toContain("or email ${AGENT_EMAIL}");
     expect(src).toContain("text-pretty");
+    expect(src).toContain("/neighborhoods/89138");
+    expect(src).toContain("/55-plus-communities/siena");
   });
 });

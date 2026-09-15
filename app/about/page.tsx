@@ -465,7 +465,9 @@ export default function AboutPage() {
                     />
                     {spec.title}
                   </h3>
-                  <p className="text-sm text-slate-600">{spec.description}</p>
+                  <p className="text-pretty text-sm text-slate-600">
+                    {spec.description}
+                  </p>
                 </Link>
               ))}
             </div>
@@ -534,7 +536,7 @@ export default function AboutPage() {
             >
               Areas Served by BHHS Nevada Properties
             </SectionHeading>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Dr. Jan Duffy serves the entire Las Vegas Valley with named ZIPs,
               commute times, HOA notes, and square footage. From custom homes in
               The Ridges to production inventory in North Las Vegas, she prices
@@ -582,7 +584,7 @@ export default function AboutPage() {
                   <h3 className="mb-2 font-bold text-slate-900">
                     {faq.question}
                   </h3>
-                  <p className="text-slate-600">{faq.answer}</p>
+                  <p className="text-pretty text-slate-600">{faq.answer}</p>
                 </div>
               ))}
             </div>

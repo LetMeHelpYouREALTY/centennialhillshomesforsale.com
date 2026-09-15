@@ -37,6 +37,18 @@ const neighborhoods: NeighborhoodCard[] = [
     name: "Henderson",
     medianLabel: formatUsd(LISTING_MEDIANS_USD.hendersonListing),
   },
+  {
+    slug: "89138",
+    href: "/neighborhoods/89138",
+    name: "89138 Summerlin West",
+    medianLabel: formatUsd(LISTING_MEDIANS_USD.summerlinWest),
+  },
+  {
+    slug: "siena",
+    href: "/55-plus-communities/siena",
+    name: "Siena 55+",
+    medianLabel: "Live CMA",
+  },
 ];
 
 export default function FeaturedProperties() {

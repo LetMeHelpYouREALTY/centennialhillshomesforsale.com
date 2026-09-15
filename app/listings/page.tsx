@@ -235,6 +235,30 @@ const neighborhoods = [
     medianPrice: "Live CMA",
     medianNote: "No sourced ZIP median",
   },
+  {
+    name: "Centennial Hills",
+    href: "/neighborhoods/centennial-hills",
+    description:
+      "Northwest Las Vegas 89149 — Town Center, park, and 215 Beltway access",
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.centennialHills),
+    medianNote: "Listing median",
+  },
+  {
+    name: "89138 Summerlin West",
+    href: "/neighborhoods/89138",
+    description:
+      "Summerlin West ZIP — Reverence and later Howard Hughes villages",
+    medianPrice: formatUsd(LISTING_MEDIANS_USD.summerlinWest),
+    medianNote: "Listing median",
+  },
+  {
+    name: "Siena 55+",
+    href: "/55-plus-communities/siena",
+    description:
+      "Guard-gated 55+ campus in Summerlin South. Confirm HOA and occupancy on resale docs",
+    medianPrice: "Live CMA",
+    medianNote: "HOPA campus",
+  },
 ];
 
 export default function ListingsPage({
@@ -342,12 +366,13 @@ export default function ListingsPage({
             >
               Popular Property Searches in Las Vegas
             </SectionHeading>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Search live MLS across named Las Vegas, Henderson, and Summerlin
-              communities by ZIP, square footage, commute, and amenities. Luxury
-              estates in guard-gated communities, homes near parks and trails,
-              and new construction are all in RealScout. Browse the searches
-              below or open a neighborhood guide.
+              communities by ZIP, square footage, commute, and amenities —
+              including 89138 and 55+ campuses such as Siena. Luxury estates in
+              guard-gated communities, homes near parks and trails, and new
+              construction are all in RealScout. Browse the searches below or
+              open a neighborhood guide.
             </p>
             <div className="grid md:grid-cols-3 gap-4">
               {popularSearches.map((search) => (
@@ -382,7 +407,7 @@ export default function ListingsPage({
             >
               Las Vegas Home Price Guide
             </SectionHeading>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Nevada charges no state income tax on wages. Home-price
               differences versus coastal cities are not a fixed 40–60% on every
               street — I pair live comps. Here's what you can expect at
@@ -405,7 +430,7 @@ export default function ListingsPage({
                       <h3 className="font-bold text-slate-900">
                         {price.range}
                       </h3>
-                      <p className="text-sm text-slate-600">
+                      <p className="text-pretty text-sm text-slate-600">
                         {price.description}
                       </p>
                     </div>
@@ -427,12 +452,12 @@ export default function ListingsPage({
             >
               Las Vegas Neighborhoods & Communities
             </SectionHeading>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Summerlin, Henderson, Centennial Hills, and North Las Vegas differ
-              by ZIP, commute, HOA, and square footage. As a Berkshire Hathaway
-              HomeServices agent serving Las Vegas since 2008, Dr. Jan Duffy
-              matches those facts — not school slogans or a “family-friendly”
-              pitch.
+            <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
+              Summerlin (including 89138), Henderson, Centennial Hills, Siena
+              55+, and North Las Vegas differ by ZIP, commute, HOA, and square
+              footage. As a Berkshire Hathaway HomeServices agent serving Las
+              Vegas since 2008, Dr. Jan Duffy matches those facts — not school
+              slogans or a “family-friendly” pitch.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {neighborhoods.map((neighborhood) => (
@@ -444,7 +469,7 @@ export default function ListingsPage({
                   <h3 className="font-bold text-lg text-slate-900 mb-2">
                     {neighborhood.name}
                   </h3>
-                  <p className="text-slate-600 text-sm mb-4">
+                  <p className="text-pretty text-slate-600 text-sm mb-4">
                     {neighborhood.description}
                   </p>
                   <div className="flex justify-between text-sm">
@@ -477,7 +502,7 @@ export default function ListingsPage({
             <h2 className="text-3xl font-bold mb-6 text-center">
               Why tour Las Vegas listings with Dr. Jan Duffy
             </h2>
-            <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-pretty text-slate-300 text-center max-w-3xl mx-auto mb-8">
               Representation is a written buyer agreement and a live MLS pull.
               Dr. Jan Duffy brings Berkshire Hathaway HomeServices marketing and
               referral tools plus Clark County files since 2008.
@@ -488,7 +513,7 @@ export default function ListingsPage({
                   <Search className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <h3 className="font-bold mb-2">MLS + referral network</h3>
-                <p className="text-slate-400 text-sm">
+                <p className="text-pretty text-slate-400 text-sm">
                   See listings through RealScout MLS search and the BHHS
                   referral network — not a 50,000-agent slogan
                 </p>
@@ -498,7 +523,7 @@ export default function ListingsPage({
                   <TrendingUp className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <h3 className="font-bold mb-2">Written offer strategy</h3>
-                <p className="text-slate-400 text-sm">
+                <p className="text-pretty text-slate-400 text-sm">
                   Street-level CMA math and written offer strategy — not a
                   career-volume slogan
                 </p>
@@ -508,7 +533,7 @@ export default function ListingsPage({
                   <MapPin className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <h3 className="font-bold mb-2">Street-level files</h3>
-                <p className="text-slate-400 text-sm">
+                <p className="text-pretty text-slate-400 text-sm">
                   Commute times, named campuses, and HOA documents on the
                   worksheet — not an insider slogan
                 </p>
@@ -518,7 +543,7 @@ export default function ListingsPage({
                   <CheckCircle className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <h3 className="font-bold mb-2">Written buyer agreement</h3>
-                <p className="text-slate-400 text-sm">
+                <p className="text-pretty text-slate-400 text-sm">
                   Compensation is disclosed in writing. It may be paid by the
                   seller, the buyer, or both — never assumed.
                 </p>
@@ -535,7 +560,7 @@ export default function ListingsPage({
             >
               Las Vegas Real Estate Market Statistics
             </SectionHeading>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               {MARKET_SNAPSHOT_SOURCE}. Listing medians are not days-on-market
               and are not a CMA. Ask for a live pull before you bid.
             </p>
@@ -580,7 +605,7 @@ export default function ListingsPage({
             >
               The Home Buying Process in Las Vegas
             </SectionHeading>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Pre-approval, live MLS, a written offer, inspection, then the
               close date on the purchase agreement. That is the sequence when
               you buy in Las Vegas with Dr. Jan Duffy and Berkshire Hathaway
@@ -595,7 +620,7 @@ export default function ListingsPage({
                   <h3 className="font-bold text-slate-900 mb-1">
                     Get Pre-Approved for Financing
                   </h3>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-pretty text-slate-600 text-sm">
                     A pre-approval letter shows sellers you can close and gives
                     you a clear budget. Dr. Jan can introduce Clark County
                     lenders. Rates and fees are UNKNOWN until that lender quotes
@@ -612,7 +637,7 @@ export default function ListingsPage({
                   <h3 className="font-bold text-slate-900 mb-1">
                     Define Your Priorities & Search
                   </h3>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-pretty text-slate-600 text-sm">
                     Location, size, features, and budget all factor into your
                     search. Dr. Jan helps you match ZIP, commute, square
                     footage, and amenities, then sets up MLS alerts so new
@@ -628,7 +653,7 @@ export default function ListingsPage({
                   <h3 className="font-bold text-slate-900 mb-1">
                     Tour Properties & Make an Offer
                   </h3>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-pretty text-slate-600 text-sm">
                     Visit homes that meet the worksheet, in person or virtually.
                     When a house matches, Dr. Jan writes an offer with price,
                     contingencies, and dates from the comps — not a ranking
@@ -644,7 +669,7 @@ export default function ListingsPage({
                   <h3 className="font-bold text-slate-900 mb-1">
                     Due Diligence & Inspections
                   </h3>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-pretty text-slate-600 text-sm">
                     Once under contract, you'll have time for home inspections,
                     appraisals, and final financing approval. Dr. Jan
                     coordinates with all parties and helps you negotiate repairs
@@ -660,7 +685,7 @@ export default function ListingsPage({
                   <h3 className="font-bold text-slate-900 mb-1">
                     Close on the contract dates
                   </h3>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-pretty text-slate-600 text-sm">
                     Close date is on the purchase agreement — often 30-ish days
                     with a conventional loan, longer with FHA, VA, or new
                     construction. You sign, funds transfer, and keys release
@@ -687,7 +712,7 @@ export default function ListingsPage({
                   <h3 className="font-bold text-slate-900 mb-2">
                     {faq.question}
                   </h3>
-                  <p className="text-slate-600">{faq.answer}</p>
+                  <p className="text-pretty text-slate-600">{faq.answer}</p>
                 </div>
               ))}
             </div>

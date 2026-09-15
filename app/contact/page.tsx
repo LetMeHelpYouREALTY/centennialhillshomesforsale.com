@@ -255,7 +255,7 @@ export default function ContactPage() {
                 <h2 className="mb-2 text-xl font-bold text-slate-900">
                   Send a Message
                 </h2>
-                <p className="mb-4 text-sm text-slate-600">
+                <p className="mb-4 text-pretty text-sm text-slate-600">
                   Prefer email over Calendly? Send the address, ZIP, and
                   timeline. Dr. Jan Duffy replies during posted hours.
                 </p>
@@ -348,9 +348,10 @@ export default function ContactPage() {
             >
               Areas We Serve
             </SectionHeading>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Dr. Jan Duffy represents buyers and sellers throughout the Las
-              Vegas Valley. Call with the ZIP or address.
+              Vegas Valley, including 89138 Summerlin West and 55+ campuses such
+              as Siena. Call or email with the ZIP or address.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
@@ -370,6 +371,14 @@ export default function ContactPage() {
                 {
                   name: "Centennial Hills",
                   href: "/neighborhoods/centennial-hills",
+                },
+                {
+                  name: "89138 Summerlin West",
+                  href: "/neighborhoods/89138",
+                },
+                {
+                  name: "Siena 55+",
+                  href: "/55-plus-communities/siena",
                 },
                 { name: "The Ridges", href: "/neighborhoods/the-ridges" },
                 { name: "Inspirada", href: "/neighborhoods/inspirada" },
@@ -438,7 +447,7 @@ export default function ContactPage() {
                   <h3 className="font-bold text-slate-900 mb-2">
                     {faq.question}
                   </h3>
-                  <p className="text-slate-600">{faq.answer}</p>
+                  <p className="text-pretty text-slate-600">{faq.answer}</p>
                 </div>
               ))}
             </div>

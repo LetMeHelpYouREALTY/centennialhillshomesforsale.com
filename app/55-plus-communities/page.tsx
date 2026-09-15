@@ -508,7 +508,7 @@ export default function FiftyFiveCommunitiesPage() {
                   <h3 className="text-2xl font-bold text-slate-900 mb-4">
                     Relocating from California?
                   </h3>
-                  <p className="text-lg text-slate-700 mb-4">
+                  <p className="text-pretty text-lg text-slate-700 mb-4">
                     Many 55+ buyers are relocating from California. Nevada has
                     no wage income tax. Pair your California sale against live
                     Las Vegas 55+ comps. Confirm HOA, insurance, and commute
@@ -540,7 +540,7 @@ export default function FiftyFiveCommunitiesPage() {
                       </div>
                     </div>
                   </div>
-                  <p className="text-slate-600 italic">
+                  <p className="text-pretty text-slate-600 italic">
                     Sell a California house and pair live Las Vegas 55+ comps
                     before you assume cash left over. Nevada has no state income
                     tax on wages; federal tax still applies.
@@ -559,10 +559,11 @@ export default function FiftyFiveCommunitiesPage() {
             >
               What 55+ HOPA campuses in Las Vegas actually include
             </SectionHeading>
-            <p className="text-lg text-slate-600 text-center mb-8 max-w-3xl mx-auto">
+            <p className="text-pretty text-lg text-slate-600 text-center mb-8 max-w-3xl mx-auto">
               55+ HOPA communities pair rec campuses, golf, and one-story floor
-              plans with named ZIPs. Confirm occupancy rules on the resale docs
-              before you bid.
+              plans with named ZIPs — Siena, Trilogy, Sun City, and Del Webb
+              among them. Confirm occupancy rules on the resale docs before you
+              bid.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {communityBenefits.map((benefit) => (
@@ -579,7 +580,7 @@ export default function FiftyFiveCommunitiesPage() {
                   <h3 className="font-bold text-slate-900 mb-2">
                     {benefit.title}
                   </h3>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-pretty text-slate-600 text-sm">
                     {benefit.description}
                   </p>
                 </div>
@@ -600,20 +601,20 @@ export default function FiftyFiveCommunitiesPage() {
                     Understanding 55+ Age Requirements
                   </h3>
                   <div className="text-slate-700 space-y-3">
-                    <p>
+                    <p className="text-pretty">
                       <strong>Federal HOPA Guidelines:</strong> At least 80% of
                       occupied units must have one resident 55 or older. The
                       remaining 20% can include younger residents, though
                       individual communities may be more restrictive.
                     </p>
-                    <p>
+                    <p className="text-pretty">
                       <strong>Spouse/Partner Rules:</strong> Most communities
                       allow a spouse or partner under 55 to reside with a
                       qualifying resident. Minimum ages for non-qualifying
                       residents are in the current CC&Rs — I will not publish a
                       40–45 slogan.
                     </p>
-                    <p className="text-blue-800 font-medium">
+                    <p className="text-pretty text-blue-800 font-medium">
                       Each community has specific rules. Dr. Jan Duffy provides
                       detailed guidance on requirements for any community you're
                       considering.
@@ -639,8 +640,10 @@ export default function FiftyFiveCommunitiesPage() {
               size="section"
               className="mx-auto mb-8 max-w-4xl"
             />
-            <p className="text-lg text-slate-600 text-center mb-8">
-              Click "View Homes" to explore each community in detail
+            <p className="text-pretty text-lg text-slate-600 text-center mb-8">
+              Open the campus guide for HOPA occupancy, HOA, and live MLS — not
+              a lifestyle slogan. Siena, Trilogy, Sun City, Heritage, Solera,
+              and Del Webb are different files.
             </p>
             <div className="grid md:grid-cols-2 gap-8">
               {communities.map((community) => (
@@ -677,7 +680,7 @@ export default function FiftyFiveCommunitiesPage() {
                     </div>
                   </div>
                   <div className="p-6">
-                    <p className="text-slate-600 mb-4">
+                    <p className="text-pretty text-slate-600 mb-4">
                       {community.description}
                     </p>
 
@@ -877,7 +880,7 @@ export default function FiftyFiveCommunitiesPage() {
                   What are the age requirements for 55+ communities in Las
                   Vegas?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-pretty text-slate-600">
                   Per the Housing for Older Persons Act (HOPA), at least 80% of
                   occupied units must have one resident 55 or older. Some
                   campuses require every occupant to be 55+. Whether a younger
@@ -893,7 +896,7 @@ export default function FiftyFiveCommunitiesPage() {
                   />
                   Can I buy in a 55+ community if I'm under 55?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-pretty text-slate-600">
                   Generally no. Some files allow a purchase if you will be 55 by
                   close of escrow, or as an investor who will rent to 55+
                   occupants. Confirm the CC&Rs. Dr. Jan Duffy reads the packet
@@ -908,7 +911,7 @@ export default function FiftyFiveCommunitiesPage() {
                   />
                   What do HOA fees cover in 55+ communities?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-pretty text-slate-600">
                   HOA fees typically cover clubhouse access, pools, fitness,
                   landscaping, and exterior maintenance. Golf memberships are
                   often separate. I will not publish a monthly dollar band as if
@@ -924,7 +927,7 @@ export default function FiftyFiveCommunitiesPage() {
                   />
                   Why do California residents choose Las Vegas 55+ communities?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-pretty text-slate-600">
                   No Nevada state income tax on wages. Purchase prices are often
                   lower than coastal California on a like-for-like house — I
                   pair comps, I do not promise a 50% discount. Confirm HOA,
@@ -940,7 +943,7 @@ export default function FiftyFiveCommunitiesPage() {
                   />
                   Can grandchildren visit or stay in 55+ communities?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-pretty text-slate-600">
                   Guest-stay limits and under-age occupancy vary by HOA. Confirm
                   days per year in the current CC&Rs. Dr. Jan Duffy reads the
                   packet with you before you bid.
@@ -954,7 +957,7 @@ export default function FiftyFiveCommunitiesPage() {
                   />
                   How do I get current 55+ listings or a CMA?
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-pretty text-slate-600">
                   Call (702) 222-1964 or email homes@heyberkshire.com with the
                   campus name. I send live MLS — not a campus slogan.
                 </p>
@@ -983,7 +986,7 @@ export default function FiftyFiveCommunitiesPage() {
                   <h3 className="font-bold text-slate-900 mb-1">
                     HOPA and HOA files
                   </h3>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-pretty text-slate-600 text-sm">
                     Age verification, HOA reserves, occupancy rules, and
                     rec-campus access go in the packet before you bid — not
                     after.
@@ -998,7 +1001,7 @@ export default function FiftyFiveCommunitiesPage() {
                   <h3 className="font-bold text-slate-900 mb-1">
                     Relocation Support
                   </h3>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-pretty text-slate-600 text-sm">
                     Many 55+ buyers relocate from out of state. BHHS referrals,
                     video tours, and the current CC&Rs go in the packet before
                     you fly.
@@ -1016,7 +1019,7 @@ export default function FiftyFiveCommunitiesPage() {
                   <h3 className="font-bold text-slate-900 mb-1">
                     Written plan
                   </h3>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-pretty text-slate-600 text-sm">
                     BHHS Nevada Properties is a franchise. Compensation, HOA
                     occupancy, and the showing plan go in writing — not a brand
                     slogan.
@@ -1034,7 +1037,7 @@ export default function FiftyFiveCommunitiesPage() {
                   <h3 className="font-bold text-slate-900 mb-1">
                     Written occupancy and HOA facts
                   </h3>
-                  <p className="text-slate-600 text-sm">
+                  <p className="text-pretty text-slate-600 text-sm">
                     HOPA occupancy rules and HOA dues go in writing before you
                     tour. Take the time the file needs; the facts stay on paper.
                   </p>

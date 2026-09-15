@@ -38,7 +38,7 @@ export function VisitOffice({
         >
           Visit the office
         </h2>
-        <p className="mb-2 text-slate-600">
+        <p className="mb-2 text-pretty text-slate-600">
           <a
             href={OFFICE_NAP.mapsUrl}
             target="_blank"

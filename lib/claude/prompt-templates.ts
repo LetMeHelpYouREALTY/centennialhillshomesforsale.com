@@ -107,7 +107,7 @@ export const propertySearchTemplate: PromptTemplate = {
 - **Southern Highlands**: Luxury, golf, gated communities
 - **The Ridges**: Ultra-luxury, guard-gated, mountain and Strip views
 - **Downtown/Arts District**: Urban, walkable, entertainment
-- **North Las Vegas**: Entry-level pricing, newer developments
+- **North Las Vegas**: Production inventory, newer developments
 - **Mountains Edge**: Southwest, newer homes, parks and trails`,
   cacheable: true,
   estimatedTokens: 330,

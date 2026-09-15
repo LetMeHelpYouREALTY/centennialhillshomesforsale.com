@@ -197,7 +197,7 @@ export default function SellersPage() {
               src={PAGE_HERO_IMAGES.sellers.src}
               alt={PAGE_HERO_IMAGES.sellers.alt}
             />
-            <p className="text-xl text-slate-600 mb-8">
+            <p className="text-pretty text-xl text-slate-600 mb-8">
               When you list with{" "}
               <strong>Berkshire Hathaway HomeServices</strong>, you get
               professional photography, comps-based pricing, and a listing plan
@@ -285,7 +285,7 @@ export default function SellersPage() {
             >
               What a BHHS listing plan actually includes
             </SectionHeading>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Not all listing plans are the same. When you choose a Berkshire
               Hathaway HomeServices agent, you get MLS marketing, a global
               referral network, and a net-sheet conversation before you sign.
@@ -307,7 +307,9 @@ export default function SellersPage() {
                     <h3 className="text-xl font-bold text-slate-900 mb-3">
                       {benefit.title}
                     </h3>
-                    <p className="text-slate-600">{benefit.description}</p>
+                    <p className="text-pretty text-slate-600">
+                      {benefit.description}
+                    </p>
                   </div>
                 );
               })}
@@ -323,7 +325,7 @@ export default function SellersPage() {
             >
               The Home Selling Process
             </SectionHeading>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Selling a home involves many steps, but you don't have to navigate
               them alone. Dr. Jan Duffy manages every detail from initial
               valuation to closing day, keeping you informed and in control
@@ -342,7 +344,9 @@ export default function SellersPage() {
                     <h3 className="font-bold text-slate-900 mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-slate-600 text-sm">{item.description}</p>
+                    <p className="text-pretty text-slate-600 text-sm">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -373,7 +377,7 @@ export default function SellersPage() {
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
                   Move-Up Sellers
                 </h3>
-                <p className="text-slate-600 text-sm mb-3">
+                <p className="text-pretty text-slate-600 text-sm mb-3">
                   Sequence the sale and the next purchase on contract dates.
                 </p>
                 <span className="text-blue-600 font-semibold text-sm">
@@ -388,7 +392,7 @@ export default function SellersPage() {
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
                   Downsizing
                 </h3>
-                <p className="text-slate-600 text-sm mb-3">
+                <p className="text-pretty text-slate-600 text-sm mb-3">
                   One-story, townhome, or 55+ HOPA (Siena, Trilogy, Sun City) —
                   list the house you have, then match the next door.
                 </p>
@@ -404,7 +408,7 @@ export default function SellersPage() {
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
                   Divorce & Probate
                 </h3>
-                <p className="text-slate-600 text-sm mb-3">
+                <p className="text-pretty text-slate-600 text-sm mb-3">
                   Court orders, two signatures, and a CMA. Not legal advice.
                 </p>
                 <span className="text-blue-600 font-semibold text-sm">
@@ -419,7 +423,7 @@ export default function SellersPage() {
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
                   Relocation
                 </h3>
-                <p className="text-slate-600 text-sm mb-3">
+                <p className="text-pretty text-slate-600 text-sm mb-3">
                   Moving for work? BHHS referral network can coordinate both
                   ends. I still list this house from a live CMA.
                 </p>
@@ -480,7 +484,7 @@ export default function SellersPage() {
             >
               What's on the listing agreement
             </SectionHeading>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               When you list with Dr. Jan Duffy at Berkshire Hathaway
               HomeServices, you receive MLS syndication, photos, and a written
               listing plan. Sale price comes from comps, not a slogan.
@@ -559,7 +563,7 @@ export default function SellersPage() {
                   <h3 className="font-bold text-slate-900 mb-2">
                     {faq.question}
                   </h3>
-                  <p className="text-slate-600">{faq.answer}</p>
+                  <p className="text-pretty text-slate-600">{faq.answer}</p>
                 </div>
               ))}
             </div>
