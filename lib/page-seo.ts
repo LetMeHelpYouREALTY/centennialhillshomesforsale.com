@@ -68,6 +68,7 @@ function clipAtWord(text: string, max: number): string {
 }
 
 const BROKERAGE_NAME = "Berkshire Hathaway HomeServices Nevada Properties";
+const BHHS_SHORT_NAME = "BHHS Nevada Properties";
 
 function finishClippedLead(lead: string, original: string): string {
   let next = lead.replace(/[.,;:]+$/, "");
@@ -80,6 +81,15 @@ function finishClippedLead(lead: string, original: string): string {
     if (idx > 0) {
       next = dropDanglingLastWords(next.slice(0, idx).replace(/[\s,;:]+$/, ""));
     }
+  }
+  if (
+    original.includes(BHHS_SHORT_NAME) &&
+    !next.includes(BHHS_SHORT_NAME) &&
+    /\bBHHS Nevada$/.test(next)
+  ) {
+    next = dropDanglingLastWords(
+      next.replace(/,?\s*BHHS Nevada$/, "").replace(/[\s,;:]+$/, ""),
+    );
   }
   const lastPeriod = next.lastIndexOf(". ");
   if (lastPeriod > 0) {

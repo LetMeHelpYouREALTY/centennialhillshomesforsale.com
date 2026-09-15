@@ -152,6 +152,13 @@ describe("clipSerpDescription", () => {
     expect(buyers.length).toBeLessThanOrEqual(SERP_DESCRIPTION_MAX);
     expect(buyers).not.toMatch(/buyer-broker\./);
     expect(buyers).toContain("Las Vegas");
+
+    const marketUpdate = clipSerpDescription(
+      "Current Las Vegas and Henderson listing medians dated September 14, 2026. Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
+    );
+    expect(marketUpdate.length).toBeLessThanOrEqual(SERP_DESCRIPTION_MAX);
+    expect(marketUpdate).not.toMatch(/BHHS Nevada\./);
+    expect(marketUpdate).toContain("September 14, 2026");
   });
 });
 
