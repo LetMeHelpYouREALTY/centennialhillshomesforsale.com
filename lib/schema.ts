@@ -18,6 +18,7 @@ import {
 import { OFFICE_PHOTO_PATH } from "./site-images";
 import { getPublicSiteUrl } from "./site-url";
 import { MARKET_SNAPSHOT_ISO } from "./market-snapshots";
+import { withClientEmail } from "./page-seo";
 
 // ============================================================================
 // Types
@@ -569,7 +570,7 @@ export function generateWebPageSchema(page: {
     "@type": "WebPage",
     "@id": `${page.url.startsWith("http") ? page.url : `${BASE_URL}${page.url}`}#webpage`,
     name: page.name,
-    description: page.description,
+    description: withClientEmail(page.description),
     url: page.url.startsWith("http") ? page.url : `${BASE_URL}${page.url}`,
     isPartOf: {
       "@id": `${BASE_URL}#website`,

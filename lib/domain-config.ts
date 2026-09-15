@@ -3,6 +3,8 @@
  * Each domain maps to neighborhood-specific content rendered server-side via middleware.
  */
 
+import { withClientEmail } from "./page-seo";
+
 export interface DomainConfig {
   domain: string;
   neighborhood: string;
@@ -698,5 +700,9 @@ export const DEFAULT_CONFIG: DomainConfig = {
 
 export function getDomainConfig(hostname: string): DomainConfig {
   const clean = hostname.replace(/^www\./, "").toLowerCase();
-  return DOMAIN_CONFIGS[clean] ?? DEFAULT_CONFIG;
+  const config = DOMAIN_CONFIGS[clean] ?? DEFAULT_CONFIG;
+  return {
+    ...config,
+    description: withClientEmail(config.description),
+  };
 }

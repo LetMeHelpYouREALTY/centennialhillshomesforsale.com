@@ -28,7 +28,7 @@ export default function ServicesPage() {
       h1="Las Vegas Real Estate Services"
       imageSrc="/images/hero/office-lake-mead.png"
       imageAlt="Las Vegas office where Dr. Jan Duffy handles buyer and seller files"
-      intro="One agent of record for Clark County residential work. Pick the page that matches the file — buyer, seller, 55+, new construction, luxury, investment, or relocation."
+      intro="One agent of record for Clark County residential work — including 89138 Summerlin West and 55+ campuses such as Siena. Pick the page that matches the file: buyer, seller, 55+, new construction, luxury, investment, or relocation."
       stats={[
         { value: "Buy", label: "Written buyer agreement" },
         { value: "Sell", label: "CMA then list" },
@@ -55,7 +55,7 @@ export default function ServicesPage() {
           imageSrc: "/images/hero/55-plus-hub.png",
           imageAlt:
             "55-plus active adult community in Summerlin with golf course and rec center",
-          body: "Luxury (gated custom), 55+ HOPA, new construction (register first), investment (no property management), relocation inbound and outbound. I do not duplicate RealScout or Follow Up Boss features those platforms already provide.",
+          body: "Luxury (gated custom), 55+ HOPA such as Siena and Trilogy, new construction (register first), investment (no property management), relocation inbound and outbound. I do not duplicate RealScout or Follow Up Boss features those platforms already provide.",
         },
         {
           heading: "How representation starts",
@@ -81,7 +81,7 @@ export default function ServicesPage() {
         {
           question: "Do you work Henderson and North Las Vegas?",
           answer:
-            "Yes. Henderson, Summerlin, Centennial Hills, and North Las Vegas are all in the practice area.",
+            "Yes. Henderson, Summerlin (including 89138), Centennial Hills, North Las Vegas, and 55+ campuses such as Siena are all in the practice area.",
         },
         {
           question: "How do I start?",

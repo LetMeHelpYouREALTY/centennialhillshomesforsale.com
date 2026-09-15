@@ -1,5 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { DEFAULT_CONFIG, DOMAIN_CONFIGS } from "./domain-config";
+import {
+  DEFAULT_CONFIG,
+  DOMAIN_CONFIGS,
+  getDomainConfig,
+} from "./domain-config";
 
 describe("multi-domain landing copy", () => {
   const blob = `${JSON.stringify(DOMAIN_CONFIGS)}\n${JSON.stringify(DEFAULT_CONFIG)}`;
@@ -19,5 +23,14 @@ describe("multi-domain landing copy", () => {
     expect(blob).not.toMatch(/Luxury Living/);
     expect(blob).not.toMatch(/Call for a consult/);
     expect(blob).not.toMatch(/Ready to Buy or Sell\?/);
+  });
+
+  it("puts the client email on fallback domain metadata", () => {
+    expect(getDomainConfig("unknown-host.example").description).toContain(
+      "homes@heyberkshire.com",
+    );
+    expect(getDomainConfig("unknown-host.example").description).toContain(
+      "(702) 222-1964",
+    );
   });
 });

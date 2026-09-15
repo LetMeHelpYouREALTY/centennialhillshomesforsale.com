@@ -81,6 +81,26 @@ export default function GlobalError({
                 {AGENT_EMAIL}
               </a>
             </div>
+            <ul className="mt-8 space-y-2 text-left text-slate-700">
+              <li>
+                <a href="/neighborhoods/89138" className={TEXT_LINK_CLASS}>
+                  89138 Summerlin West homes
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/55-plus-communities/siena"
+                  className={TEXT_LINK_CLASS}
+                >
+                  Siena 55+ Summerlin
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className={TEXT_LINK_CLASS}>
+                  Contact Dr. Jan Duffy
+                </a>
+              </li>
+            </ul>
           </div>
         </main>
       </body>

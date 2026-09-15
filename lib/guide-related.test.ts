@@ -9,6 +9,8 @@ describe("guide related links", () => {
     expect(merged.map((item) => item.href)).toEqual([
       "/neighborhoods/summerlin",
       "/listings",
+      "/neighborhoods/89138",
+      "/55-plus-communities/siena",
       "/contact",
     ]);
   });
@@ -18,8 +20,27 @@ describe("guide related links", () => {
       { href: "/listings", label: "Current 89138 listings" },
       { href: "/contact", label: "Office" },
     ]);
-    expect(merged).toHaveLength(2);
+    expect(merged.map((item) => item.href)).toEqual([
+      "/listings",
+      "/contact",
+      "/neighborhoods/89138",
+      "/55-plus-communities/siena",
+    ]);
     expect(merged[0].label).toBe("Current 89138 listings");
+  });
+
+  it("does not duplicate 89138 or Siena when the page already linked them", () => {
+    const merged = mergeGuideRelated([
+      { href: "/neighborhoods/89138", label: "This ZIP" },
+      { href: "/55-plus-communities/siena", label: "This campus" },
+    ]);
+    expect(
+      merged.filter((item) => item.href === "/neighborhoods/89138"),
+    ).toHaveLength(1);
+    expect(
+      merged.filter((item) => item.href === "/55-plus-communities/siena"),
+    ).toHaveLength(1);
+    expect(merged[0].label).toBe("This ZIP");
   });
 });
 

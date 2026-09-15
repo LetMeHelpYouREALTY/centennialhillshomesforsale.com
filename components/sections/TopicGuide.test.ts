@@ -11,6 +11,7 @@ describe("TopicGuide conversion chrome", () => {
     expect(src).toContain("MlsSearchForm");
     expect(src).toContain("mergeGuideFaqs");
     expect(src).toContain("AGENT_EMAIL_MAILTO");
+    expect(src).toContain("DEFAULT_GUIDE_RELATED");
     expect(src).toContain("text-pretty");
   });
 });

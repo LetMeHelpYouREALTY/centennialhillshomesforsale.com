@@ -88,7 +88,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
         <div className="mb-10">
           <MlsSearchForm className="mx-0" inputId="mls-q-listing-placeholder" />
         </div>
-        <p className="mb-8 text-sm text-slate-500">
+        <p className="mb-8 text-pretty text-sm text-slate-500">
           Office:{" "}
           <a
             href={OFFICE_NAP.mapsUrl}
@@ -100,6 +100,23 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
             <span className="sr-only"> (opens in a new tab)</span>
           </a>
         </p>
+        <ul className="mb-8 space-y-2 text-left text-slate-700">
+          <li>
+            <Link href="/neighborhoods/89138" className={TEXT_LINK_CLASS}>
+              89138 Summerlin West homes
+            </Link>
+          </li>
+          <li>
+            <Link href="/55-plus-communities/siena" className={TEXT_LINK_CLASS}>
+              Siena 55+ Summerlin
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact" className={TEXT_LINK_CLASS}>
+              Contact Dr. Jan Duffy
+            </Link>
+          </li>
+        </ul>
         <MlsDisclaimer />
       </div>
       <VisitOffice compact />

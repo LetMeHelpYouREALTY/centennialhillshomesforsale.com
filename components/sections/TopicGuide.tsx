@@ -21,7 +21,11 @@ import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import { getCanonicalUrl, getPublicSiteUrl } from "@/lib/site-url";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { generateWebPageSchema } from "@/lib/schema";
-import { mergeGuideFaqs, mergeGuideRelated } from "@/lib/guide-related";
+import {
+  DEFAULT_GUIDE_RELATED,
+  mergeGuideFaqs,
+  mergeGuideRelated,
+} from "@/lib/guide-related";
 
 export type TopicFaq = {
   question: string;
@@ -89,10 +93,7 @@ export default function TopicGuide({
 }: TopicGuideProps) {
   const origin = getPublicSiteUrl();
   const heroSrc = imageSrc ?? PAGE_HERO_IMAGES.listings.src;
-  const relatedLinks = mergeGuideRelated(related, [
-    { href: "/listings", label: "Search live MLS listings" },
-    { href: "/contact", label: "Call or email the office" },
-  ]);
+  const relatedLinks = mergeGuideRelated(related, DEFAULT_GUIDE_RELATED);
   const guideFaqs = mergeGuideFaqs(faqs, name);
 
   return (

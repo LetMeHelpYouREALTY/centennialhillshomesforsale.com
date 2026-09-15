@@ -25,7 +25,11 @@ import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import { getCanonicalUrl, getPublicSiteUrl } from "@/lib/site-url";
 import { getNeighborhoodImage } from "@/lib/site-images";
 import { generateWebPageSchema } from "@/lib/schema";
-import { mergeGuideFaqs, mergeGuideRelated } from "@/lib/guide-related";
+import {
+  DEFAULT_GUIDE_RELATED,
+  mergeGuideFaqs,
+  mergeGuideRelated,
+} from "@/lib/guide-related";
 import { resolveNeighborhoodGeo } from "@/lib/neighborhood-geo";
 
 export type NeighborhoodFaq = {
@@ -115,7 +119,7 @@ export default function NeighborhoodGuide({
   const geo = resolveNeighborhoodGeo(slug, latitude, longitude);
   const relatedLinks = mergeGuideRelated(related, [
     { href: "/listings", label: `Search live MLS for ${name}` },
-    { href: "/contact", label: "Call or email the office" },
+    ...DEFAULT_GUIDE_RELATED.filter((item) => item.href !== "/listings"),
   ]);
   const guideFaqs = mergeGuideFaqs(faqs, name);
 

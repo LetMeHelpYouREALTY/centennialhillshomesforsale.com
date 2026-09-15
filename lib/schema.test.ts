@@ -90,6 +90,8 @@ describe("RealEstateAgent JSON-LD", () => {
     });
     expect(String(page.url)).toContain("/faq");
     expect(page.dateModified).toBe(MARKET_SNAPSHOT_ISO);
+    expect(String(page.description)).toContain("homes@heyberkshire.com");
+    expect(String(page.description)).toContain("(702) 222-1964");
   });
 
   it("does not attach an invented AggregateRating to review JSON-LD", () => {

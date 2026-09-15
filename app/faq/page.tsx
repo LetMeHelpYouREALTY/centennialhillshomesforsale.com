@@ -34,7 +34,7 @@ export default function FaqPage() {
       h1="Las Vegas Real Estate FAQ"
       imageSrc="/images/gbp/visit-office.png"
       imageAlt="Interior consult desk at 9406 W Lake Mead Blvd for Las Vegas real estate questions"
-      intro="Short answers. Live numbers live in a CMA, not in this list. Compensation is disclosed in writing. Fair Housing copy lives on /fair-housing."
+      intro="Short answers for Las Vegas, Henderson, 89138 Summerlin West, and 55+ campuses such as Siena. Live numbers live in a CMA, not in this list. Compensation is disclosed in writing. Fair Housing copy lives on /fair-housing."
       stats={[
         {
           value: formatUsd(LISTING_MEDIANS_USD.lasVegas),
@@ -50,7 +50,7 @@ export default function FaqPage() {
           imageSrc: "/images/hero/about.png",
           imageAlt:
             "Dr. Jan Duffy at the Las Vegas office answering buyer and seller questions",
-          body: "Dr. Jan Duffy, REALTOR, license S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Client line (702) 222-1964. Email homes@heyberkshire.com. I cover Las Vegas, Henderson, North Las Vegas, Summerlin, and Centennial Hills.",
+          body: "Dr. Jan Duffy, REALTOR, license S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Client line (702) 222-1964. Email homes@heyberkshire.com. I cover Las Vegas, Henderson, North Las Vegas, Summerlin (including 89138), Centennial Hills, and 55+ campuses such as Siena.",
         },
         {
           heading: "Buying",

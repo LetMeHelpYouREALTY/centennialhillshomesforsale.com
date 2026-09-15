@@ -29,7 +29,7 @@ export default function WhyBerkshirePage() {
       h1="Why Berkshire Hathaway HomeServices Nevada Properties"
       imageSrc="/images/hero/office-lake-mead.png"
       imageAlt="Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard"
-      intro="The brand is the distribution and the E&O. The work is one agent — Dr. Jan Duffy, license S.0197614.LLC — writing CMAs and walking houses in Clark County. I will not sell you a kiosk."
+      intro="The brand is the distribution and the E&O. The work is one agent — Dr. Jan Duffy, license S.0197614.LLC — writing CMAs and walking houses in Clark County, including 89138 Summerlin West and 55+ campuses such as Siena. I will not sell you a kiosk."
       stats={[
         { value: "BHHS", label: "Brokerage" },
         { value: "S.0197614.LLC", label: "License" },
@@ -43,7 +43,7 @@ export default function WhyBerkshirePage() {
         },
         {
           heading: "What I actually do",
-          body: "Live MLS, gate access, builder registration, 55+ CC&Rs, and written buyer or listing agreements. Phone (702) 222-1964 is the client line. (702) 500-1942 is the professional/FUB line, not a consumer CTA.",
+          body: "Live MLS, gate access, builder registration, 55+ CC&Rs (Siena, Trilogy, Sun City), 89138 Summerlin West, and written buyer or listing agreements. Phone (702) 222-1964 is the client line. (702) 500-1942 is the professional/FUB line, not a consumer CTA.",
         },
         {
           heading: "Fair Housing",

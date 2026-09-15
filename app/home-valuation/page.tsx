@@ -28,7 +28,7 @@ export default function HomeValuationPage() {
       h1="Las Vegas Home Valuation"
       imageSrc="/images/hero/home-valuation.png"
       imageAlt="CMA comps and tablet on a kitchen table for a Las Vegas home valuation"
-      intro="A CMA is sold comps, active competition, and your house — not a Zestimate. Call or send the address. I will not email a price without walking the file (and usually the house)."
+      intro="A CMA is sold comps, active competition, and your house — not a Zestimate. Call or email the address for Centennial Hills, 89138 Summerlin West, Henderson, or a 55+ campus such as Siena. I will not email a price without walking the file (and usually the house)."
       stats={[
         { value: "CMA", label: "Not an AVM" },
         { value: "Sold + active", label: "Comps" },

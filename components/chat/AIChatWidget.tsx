@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { Send, MessageCircle, X, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { AGENT_EMAIL, CTA_PHONE } from "@/lib/contact";
 
 interface Message {
   role: "user" | "assistant";
@@ -15,8 +16,7 @@ export default function AIChatWidget() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content:
-        "Hello. I can help you search Las Vegas or Henderson listings, compare ZIPs, or connect you with Dr. Jan Duffy at (702) 222-1964.",
+      content: `Hello. I can help you search Las Vegas or Henderson listings, compare ZIPs such as 89138, or connect you with Dr. Jan Duffy at ${CTA_PHONE} or ${AGENT_EMAIL}.`,
     },
   ]);
   const [input, setInput] = useState("");
@@ -79,8 +79,7 @@ export default function AIChatWidget() {
       console.error("Chat error:", error);
       const errorMessage: Message = {
         role: "assistant",
-        content:
-          "I'm sorry, I'm having trouble connecting right now. Please try again or contact Dr. Jan Duffy directly at (702) 222-1964.",
+        content: `I'm sorry, I'm having trouble connecting right now. Please try again or contact Dr. Jan Duffy at ${CTA_PHONE} or ${AGENT_EMAIL}.`,
       };
       setMessages((prev) => [...prev, errorMessage]);
     } finally {
@@ -115,7 +114,9 @@ export default function AIChatWidget() {
           <div className="bg-blue-600 text-white p-4 rounded-t-lg flex justify-between items-center">
             <div>
               <h3 className="font-semibold">Real Estate Assistant</h3>
-              <p className="text-xs text-blue-100">Ask me anything!</p>
+              <p className="text-xs text-blue-100">
+                Call {CTA_PHONE} or email {AGENT_EMAIL}
+              </p>
             </div>
             <button
               onClick={() => setIsOpen(false)}

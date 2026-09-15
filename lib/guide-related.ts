@@ -12,6 +12,8 @@ export type GuideFaq = {
 
 export const DEFAULT_GUIDE_RELATED: GuideRelatedLink[] = [
   { href: "/listings", label: "Search live MLS listings" },
+  { href: "/neighborhoods/89138", label: "89138 Summerlin West homes" },
+  { href: "/55-plus-communities/siena", label: "Siena 55+ Summerlin" },
   { href: "/contact", label: "Call or email the office" },
 ];
 
