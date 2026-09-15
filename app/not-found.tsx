@@ -115,7 +115,12 @@ export default function NotFound() {
           </li>
           <li>
             <Link href="/home-valuation" className={TEXT_LINK_CLASS}>
-              Home valuation
+              Request a Las Vegas CMA
+            </Link>
+          </li>
+          <li>
+            <Link href="/relocation" className={TEXT_LINK_CLASS}>
+              Las Vegas relocation
             </Link>
           </li>
         </ul>

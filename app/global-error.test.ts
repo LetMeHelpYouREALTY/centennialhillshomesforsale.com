@@ -15,6 +15,8 @@ describe("global error recovery screen", () => {
     expect(src).toContain("OFFICE_NAP");
     expect(src).toContain("/neighborhoods/89138");
     expect(src).toContain("/55-plus-communities/siena");
+    expect(src).toContain("/home-valuation");
+    expect(src).toContain("/relocation");
     expect(src).toContain("<main");
     expect(src).toContain('id="main-content"');
     expect(src).toContain("SkipLink");

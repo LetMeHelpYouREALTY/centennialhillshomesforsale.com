@@ -16,6 +16,8 @@ describe("error recovery screen", () => {
     expect(src).toContain("text-pretty");
     expect(src).toContain("/neighborhoods/89138");
     expect(src).toContain("/55-plus-communities/siena");
+    expect(src).toContain("/home-valuation");
+    expect(src).toContain("/relocation");
     expect(src).toContain("call {CTA_PHONE}");
     expect(src).toContain("TEXT_LINK_CLASS");
     expect(src).toContain("GoogleReviewsCta");

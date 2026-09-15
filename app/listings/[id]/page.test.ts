@@ -13,6 +13,8 @@ describe("listing placeholder page", () => {
     expect(src).toContain("generateWebPageSchema");
     expect(src).toContain("SectionHeading");
     expect(src).toContain("listing-placeholder-mls-heading");
+    expect(src).toContain("/home-valuation");
+    expect(src).toContain("/relocation");
     expect(src).not.toContain("She will pull");
   });
 });

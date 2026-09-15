@@ -125,6 +125,16 @@ export default function GlobalError({
                 </a>
               </li>
               <li>
+                <a href="/home-valuation" className={TEXT_LINK_CLASS}>
+                  Request a Las Vegas CMA
+                </a>
+              </li>
+              <li>
+                <a href="/relocation" className={TEXT_LINK_CLASS}>
+                  Las Vegas relocation
+                </a>
+              </li>
+              <li>
                 <a href="/contact" className={TEXT_LINK_CLASS}>
                   Contact Dr. Jan Duffy
                 </a>

@@ -140,6 +140,16 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
             </Link>
           </li>
           <li>
+            <Link href="/home-valuation" className={TEXT_LINK_CLASS}>
+              Request a Las Vegas CMA
+            </Link>
+          </li>
+          <li>
+            <Link href="/relocation" className={TEXT_LINK_CLASS}>
+              Las Vegas relocation
+            </Link>
+          </li>
+          <li>
             <Link href="/contact" className={TEXT_LINK_CLASS}>
               Contact Dr. Jan Duffy
             </Link>
