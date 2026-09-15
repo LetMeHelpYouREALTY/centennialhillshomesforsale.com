@@ -201,6 +201,10 @@ export default function Navbar() {
 
   const serviceLinks = [
     { href: "/buyers", label: "Home Buying" },
+    {
+      href: "/buyers/first-time-buyers",
+      label: "First-Time Buyers",
+    },
     { href: "/sellers", label: "Home Selling" },
     { href: "/luxury-homes", label: "Luxury Homes" },
     { href: "/55-plus-communities", label: "55+ Communities" },
@@ -321,7 +325,7 @@ export default function Navbar() {
                   }}
                 >
                   {serviceLinks.map((link) => {
-                    const isCurrent = isCurrentHref(pathname, link.href);
+                    const isCurrent = pathname === link.href;
                     return (
                       <li key={link.href}>
                         <Link
@@ -445,7 +449,7 @@ export default function Navbar() {
                   Services
                 </span>
                 {serviceLinks.map((link) => {
-                  const isCurrent = isCurrentHref(pathname, link.href);
+                  const isCurrent = pathname === link.href;
                   return (
                     <Link
                       key={link.href}

@@ -22,6 +22,7 @@ describe("navbar keyboard", () => {
     expect(src).toContain("focusServiceLink");
     expect(src).toContain("isCurrentHref");
     expect(src).toContain("isServicesSectionCurrent");
+    expect(src).toContain("/buyers/first-time-buyers");
     expect(src).toContain("ArrowDown");
     expect(src).not.toContain("priority className");
   });
