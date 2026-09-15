@@ -4,6 +4,12 @@ import { siteConfig } from "./site-config";
 import type { SiteImage } from "./site-images";
 import { getCanonicalUrl } from "./site-url";
 
+/** Google SERP snippets typically display ~155–160 characters. */
+export const SERP_DESCRIPTION_MAX = 160;
+
+const SERP_TITLE_SUFFIX = " | Dr. Jan Duffy";
+const SERP_NAP = ` Call ${CTA_PHONE} or email ${AGENT_EMAIL}.`;
+
 /** Keep SERP snippets on the client line, not phone-only. */
 export function withClientEmail(description: string): string {
   if (description.includes(AGENT_EMAIL)) {
@@ -14,6 +20,90 @@ export function withClientEmail(description: string): string {
   }
   const trimmed = description.trim().replace(/\.$/, "");
   return `${trimmed}. Call ${CTA_PHONE} or email ${AGENT_EMAIL}.`;
+}
+
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+const DANGLING_LAST_WORDS = new Set([
+  "a",
+  "an",
+  "and",
+  "as",
+  "at",
+  "by",
+  "for",
+  "from",
+  "get",
+  "in",
+  "into",
+  "of",
+  "on",
+  "or",
+  "the",
+  "to",
+  "with",
+  "your",
+]);
+
+function clipAtWord(text: string, max: number): string {
+  const trimmed = text.replace(/\s+/g, " ").trim();
+  if (trimmed.length <= max) return trimmed;
+  const slice = trimmed.slice(0, max);
+  const lastSpace = slice.lastIndexOf(" ");
+  let cut =
+    lastSpace >= Math.floor(max * 0.6) ? slice.slice(0, lastSpace) : slice;
+  cut = cut.replace(/[\s.,;:–—-]+$/, "");
+  const words = cut.split(/\s+/);
+  while (words.length > 1) {
+    const last = words[words.length - 1]?.replace(/[^\w]/g, "").toLowerCase();
+    if (!last || !DANGLING_LAST_WORDS.has(last)) break;
+    words.pop();
+  }
+  return words.join(" ").replace(/[\s.,;:–—-]+$/, "");
+}
+
+/**
+ * Clip a meta description to SERP length while keeping the client phone
+ * and email when they were in the original copy.
+ */
+export function clipSerpDescription(
+  description: string,
+  max = SERP_DESCRIPTION_MAX,
+): string {
+  const text = description.replace(/\s+/g, " ").trim();
+  if (text.length <= max) return text;
+
+  const keepPhone = text.includes(CTA_PHONE);
+  const keepEmail = text.includes(AGENT_EMAIL);
+  if (keepPhone && keepEmail) {
+    if (SERP_NAP.length >= max) {
+      return `Call ${CTA_PHONE} or email ${AGENT_EMAIL}.`;
+    }
+    const uniqueMax = max - SERP_NAP.length;
+    const unique = text
+      .replace(new RegExp(escapeRegExp(AGENT_EMAIL), "g"), " ")
+      .replace(new RegExp(escapeRegExp(CTA_PHONE), "g"), " ")
+      .replace(/,?\s*(?:or\s+)?email\s*[.,]?/gi, " ")
+      .replace(
+        /,?\s*call(?:\s+Dr\.?\s+Jan(?:\s+Duffy)?)?(?:\s+at)?\s*[.,]?/gi,
+        " ",
+      )
+      .replace(/\s+/g, " ")
+      .replace(/\s+([.,;:])/g, "$1")
+      .replace(/^[.\s,]+/, "")
+      .replace(/[.\s,]+$/, "")
+      .trim();
+    if (!unique || uniqueMax < 24) {
+      return `Call ${CTA_PHONE} or email ${AGENT_EMAIL}.`;
+    }
+    const lead = clipAtWord(unique, uniqueMax).replace(/[.,;:]+$/, "");
+    return `${lead}.${SERP_NAP}`.replace(/\s+/g, " ").trim();
+  }
+
+  const clipped = clipAtWord(text, max);
+  return /[.!?]$/.test(clipped) ? clipped : `${clipped}.`;
 }
 
 function resolveTitle(title: Metadata["title"]): string | undefined {
@@ -27,6 +117,20 @@ function resolveTitle(title: Metadata["title"]): string | undefined {
     return title.absolute;
   }
   return undefined;
+}
+
+/**
+ * Open Graph / Twitter titles do not use the layout `title.template`, so
+ * unbranded string titles need the same " | Dr. Jan Duffy" suffix the
+ * document title gets from the root layout.
+ */
+function shareCardTitle(title: Metadata["title"]): string | undefined {
+  if (typeof title === "string") {
+    return title.includes("Dr. Jan Duffy")
+      ? title
+      : `${title}${SERP_TITLE_SUFFIX}`;
+  }
+  return resolveTitle(title);
 }
 
 /**
@@ -53,10 +157,13 @@ export function titleWithoutLayoutSuffix(
  * `getCanonicalUrl()` can read `x-pathname`.
  */
 export function withShareImage(metadata: Metadata, image: SiteImage): Metadata {
-  const title = resolveTitle(metadata.title);
+  const cardTitle =
+    typeof metadata.openGraph?.title === "string"
+      ? metadata.openGraph.title
+      : shareCardTitle(metadata.title);
   const description =
     typeof metadata.description === "string"
-      ? withClientEmail(metadata.description)
+      ? clipSerpDescription(withClientEmail(metadata.description))
       : undefined;
   const canonical = getCanonicalUrl();
 
@@ -74,7 +181,7 @@ export function withShareImage(metadata: Metadata, image: SiteImage): Metadata {
       siteName: siteConfig.fullName,
       ...metadata.openGraph,
       url: metadata.openGraph?.url ?? canonical,
-      title,
+      title: cardTitle,
       description,
       images: [
         {
@@ -88,7 +195,7 @@ export function withShareImage(metadata: Metadata, image: SiteImage): Metadata {
     twitter: {
       card: "summary_large_image",
       ...metadata.twitter,
-      title,
+      title: cardTitle,
       description,
       images: [image.src],
     },

@@ -117,6 +117,24 @@ export default function WhyChooseUs() {
             <Mail className="mr-2 h-4 w-4" aria-hidden="true" />
             {AGENT_EMAIL}
           </a>
+          <Link
+            href="/buyers/first-time-buyers"
+            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-5 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            First-Time Las Vegas Buyers
+          </Link>
+          <Link
+            href="/relocation"
+            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-5 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            Las Vegas Relocation
+          </Link>
+          <Link
+            href="/home-valuation"
+            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-5 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            Request a Las Vegas CMA
+          </Link>
         </div>
       </div>
     </section>

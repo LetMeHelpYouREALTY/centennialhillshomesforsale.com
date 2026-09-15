@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { SERP_DESCRIPTION_MAX } from "./page-seo";
 import {
   DEFAULT_CONFIG,
   DOMAIN_CONFIGS,
@@ -43,6 +44,17 @@ describe("multi-domain landing copy", () => {
       expect(getDomainConfig(domain).description).toContain(
         "homes@heyberkshire.com",
       );
+    }
+  });
+
+  it("clips domain meta descriptions to SERP length", () => {
+    const hosts = [...Object.keys(DOMAIN_CONFIGS), "unknown-host.example"];
+    for (const host of hosts) {
+      const description = getDomainConfig(host).description;
+      expect(description.length, host).toBeLessThanOrEqual(
+        SERP_DESCRIPTION_MAX,
+      );
+      expect(description, host).toContain("(702) 222-1964");
     }
   });
 });

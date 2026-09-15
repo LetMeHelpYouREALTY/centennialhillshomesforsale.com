@@ -17,5 +17,11 @@ describe("WhyChooseUs homepage section", () => {
     expect(src).toContain("I answer the client line");
     expect(src).not.toContain("How Dr. Jan Duffy actually works a file");
     expect(src).not.toContain("Dr. Jan Duffy answers the client line");
+    expect(src).toContain("/buyers/first-time-buyers");
+    expect(src).toContain("First-Time Las Vegas Buyers");
+    expect(src).toContain("/relocation");
+    expect(src).toContain("Las Vegas Relocation");
+    expect(src).toContain("/home-valuation");
+    expect(src).toContain("Request a Las Vegas CMA");
   });
 });

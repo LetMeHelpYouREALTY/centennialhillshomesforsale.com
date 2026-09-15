@@ -3,7 +3,7 @@
  * Each domain maps to neighborhood-specific content rendered server-side via middleware.
  */
 
-import { withClientEmail } from "./page-seo";
+import { clipSerpDescription, withClientEmail } from "./page-seo";
 
 export interface DomainConfig {
   domain: string;
@@ -703,7 +703,7 @@ export function getDomainConfig(hostname: string): DomainConfig {
   const config = DOMAIN_CONFIGS[clean] ?? DEFAULT_CONFIG;
   return {
     ...config,
-    description: withClientEmail(config.description),
+    description: clipSerpDescription(withClientEmail(config.description)),
     heroSubheadline: withClientEmail(config.heroSubheadline),
     ctaSubheadline: withClientEmail(config.ctaSubheadline),
   };

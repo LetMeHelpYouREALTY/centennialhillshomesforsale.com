@@ -1,5 +1,10 @@
 import { describe, expect, it, vi } from "vitest";
-import { titleWithoutLayoutSuffix, withShareImage } from "./page-seo";
+import {
+  clipSerpDescription,
+  SERP_DESCRIPTION_MAX,
+  titleWithoutLayoutSuffix,
+  withShareImage,
+} from "./page-seo";
 
 vi.mock("next/headers", () => ({
   headers: () => ({
@@ -42,6 +47,12 @@ describe("withShareImage", () => {
     expect(metadata.description).toContain("homes@heyberkshire.com");
     expect(metadata.description).toContain("(702) 222-1964");
     expect(metadata.title).toBe("Centennial Hills Homes for Sale");
+    expect(metadata.openGraph?.title).toBe(
+      "Centennial Hills Homes for Sale | Dr. Jan Duffy",
+    );
+    expect(metadata.twitter?.title).toBe(
+      "Centennial Hills Homes for Sale | Dr. Jan Duffy",
+    );
     expect(metadata.openGraph?.url).toBe(
       "https://www.heyberkshire.com/home-valuation",
     );
@@ -83,6 +94,47 @@ describe("withShareImage", () => {
     expect(metadata.openGraph?.title).toBe(
       "Las Vegas Home Valuation | CMA with Dr. Jan Duffy",
     );
+  });
+
+  it("clips long descriptions to SERP length and keeps the client line", () => {
+    const metadata = withShareImage(
+      {
+        title:
+          "Contact Dr. Jan Duffy | Berkshire Hathaway HomeServices Las Vegas",
+        description:
+          "Contact Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Schedule an appointment, get directions, call (702) 222-1964, or email homes@heyberkshire.com. Las Vegas, Henderson, Summerlin.",
+      },
+      hero,
+    );
+    expect(metadata.description?.length).toBeLessThanOrEqual(
+      SERP_DESCRIPTION_MAX,
+    );
+    expect(metadata.description).toContain("(702) 222-1964");
+    expect(metadata.description).toContain("homes@heyberkshire.com");
+    expect(metadata.description).not.toMatch(/\bget\.\s*Call/);
+    expect(metadata.description).toContain("appointment");
+    expect(metadata.openGraph?.description).toBe(metadata.description);
+  });
+});
+
+describe("clipSerpDescription", () => {
+  it("leaves a short description unchanged", () => {
+    const short =
+      "Request a CMA. Call (702) 222-1964 or email homes@heyberkshire.com.";
+    expect(clipSerpDescription(short)).toBe(short);
+  });
+
+  it("keeps phone and email when clipping a long homepage description", () => {
+    const long =
+      "Centennial Hills homes for sale in northwest Las Vegas (89149, 89131, 89143). Search current listings with Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.";
+    const clipped = clipSerpDescription(long);
+    expect(clipped.length).toBeLessThanOrEqual(SERP_DESCRIPTION_MAX);
+    expect(clipped.length).toBeLessThan(long.length);
+    expect(clipped).toContain("(702) 222-1964");
+    expect(clipped).toContain("homes@heyberkshire.com");
+    expect(clipped).toContain("Centennial Hills");
+    expect(clipped).not.toMatch(/\bwith\.\s*Call/);
+    expect(clipped).toContain("listings");
   });
 });
 
