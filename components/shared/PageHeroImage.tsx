@@ -20,6 +20,9 @@ export function PageHeroImage({
   const isHero = size === "hero";
   const heightClass = isHero ? "h-56 md:h-80" : "h-40 md:h-52";
   const imagePriority = priority ?? isHero;
+  const sizes = isHero
+    ? "(max-width: 768px) 100vw, 1024px"
+    : "(max-width: 768px) 100vw, 896px";
 
   return (
     <figure className={`mb-10 ${className}`.trim()}>
@@ -28,9 +31,10 @@ export function PageHeroImage({
           src={src}
           alt={alt}
           fill
-          sizes="(max-width: 768px) 100vw, 1024px"
+          sizes={sizes}
           className="object-cover"
           priority={imagePriority}
+          fetchPriority={imagePriority ? "high" : "low"}
         />
       </div>
       {caption ? (

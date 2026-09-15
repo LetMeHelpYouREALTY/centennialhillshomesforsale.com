@@ -12,7 +12,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Sun City Anthem Homes for Sale | 55+ Henderson",
     description:
-      "Sun City Anthem Henderson 55+ homes. Anthem Center, golf, and current listings with Dr. Jan Duffy. Call (702) 222-1964.",
+      "Sun City Anthem Henderson 55+ homes. Anthem Center, golf, and current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Sun City Anthem homes for sale",
       "Sun City Anthem Henderson",

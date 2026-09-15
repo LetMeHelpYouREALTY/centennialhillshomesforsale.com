@@ -18,6 +18,7 @@ import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { generateServiceSchema, generateWebPageSchema } from "@/lib/schema";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
+import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
 import { TEXT_LINK_CLASS } from "@/lib/contact";
 import {
   formatUsd,
@@ -207,6 +208,14 @@ export default function SellersPage() {
             </p>
             <div className="mb-8">
               <MlsSearchForm inputId="mls-q-sellers" />
+            </div>
+            <div className="mx-auto mb-8 max-w-3xl text-left">
+              <GuideLeadForm
+                source="sellers-hub-mid"
+                heading="Request a CMA"
+                formType="home-valuation"
+                className="mb-0"
+              />
             </div>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
               <span className="flex items-center">

@@ -14,5 +14,6 @@ describe("sellers hub", () => {
     expect(src).toContain("Call or email Dr. Jan Duffy");
     expect(src).not.toContain("leave money on the table");
     expect(src).not.toContain("generate competition and sell");
+    expect(src).toContain('source="sellers-hub-mid"');
   });
 });

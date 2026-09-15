@@ -6,7 +6,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Lone Mountain Homes for Sale | Northwest Las Vegas",
     description:
-      "Lone Mountain homes for sale in northwest Las Vegas near Centennial Hills. Views, lots, and current listings with Dr. Jan Duffy. Call (702) 222-1964.",
+      "Lone Mountain homes for sale in northwest Las Vegas near Centennial Hills. Views, lots, and current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "lone mountain las vegas homes",
       "lone mountain real estate",

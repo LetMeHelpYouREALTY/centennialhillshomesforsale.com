@@ -12,7 +12,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Las Vegas Market Update | September 2026",
     description:
-      "Current Las Vegas and Henderson listing medians dated September 14, 2026. Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964.",
+      "Current Las Vegas and Henderson listing medians dated September 14, 2026. Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Las Vegas real estate market update",
       "Las Vegas housing market 2026",

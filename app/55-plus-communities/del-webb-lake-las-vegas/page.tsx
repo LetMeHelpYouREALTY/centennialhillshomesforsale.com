@@ -12,7 +12,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Del Webb at Lake Las Vegas Homes | 55+ Henderson",
     description:
-      "Del Webb Lake Las Vegas 55+ homes in Henderson. Lake setting, resort amenities, current listings with Dr. Jan Duffy. Call (702) 222-1964.",
+      "Del Webb Lake Las Vegas 55+ homes in Henderson. Lake setting, resort amenities, current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Del Webb Lake Las Vegas",
       "Lake Las Vegas 55 plus",

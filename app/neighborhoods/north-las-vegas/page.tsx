@@ -12,7 +12,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "North Las Vegas Homes for Sale | Aliante, Tule Springs",
     description:
-      "North Las Vegas homes for sale with Dr. Jan Duffy — Aliante, Tule Springs, Valley Vista, and current listings. Call (702) 222-1964.",
+      "North Las Vegas homes for sale with Dr. Jan Duffy — Aliante, Tule Springs, Valley Vista, and current listings. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "North Las Vegas homes for sale",
       "Aliante homes",

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   AGENT_EMAIL,
@@ -21,6 +21,7 @@ const WIDGET_HTML = `<realscout-office-listings
 
 export default function RealScoutListings() {
   const mountRef = useRef<HTMLDivElement>(null);
+  const headingId = useId();
   const [showWidget, setShowWidget] = useState(false);
 
   useEffect(() => {
@@ -44,11 +45,14 @@ export default function RealScoutListings() {
   }, [showWidget]);
 
   return (
-    <section className="bg-slate-50 py-16 md:py-24">
+    <section className="bg-slate-50 py-16 md:py-24" aria-labelledby={headingId}>
       <div className="container mx-auto px-4">
         <div className="mb-12 flex flex-col items-center justify-between md:flex-row">
           <div>
-            <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl">
+            <h2
+              id={headingId}
+              className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl"
+            >
               Current Las Vegas Listings
             </h2>
             <p className="text-pretty text-lg text-slate-600">
@@ -79,7 +83,7 @@ export default function RealScoutListings() {
         <div
           ref={mountRef}
           className="min-h-[24rem]"
-          aria-label="Live office listings from RealScout"
+          aria-labelledby={headingId}
         >
           {showWidget ? (
             <div dangerouslySetInnerHTML={{ __html: WIDGET_HTML }} />

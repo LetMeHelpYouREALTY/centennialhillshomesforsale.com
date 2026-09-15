@@ -6,7 +6,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Selling a Las Vegas Home While Relocating | Dr. Jan Duffy",
     description:
-      "List your Las Vegas or Henderson home from out of state. Remote showings, lockbox, weekly updates with Dr. Jan Duffy. Call (702) 222-1964.",
+      "List your Las Vegas or Henderson home from out of state. Remote showings, lockbox, weekly updates with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "sell Las Vegas home while moving",
       "relocation home sale Nevada",

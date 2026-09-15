@@ -323,7 +323,7 @@ export default function NeighborhoodGuide({
               >
                 Tour {name} with Dr. Jan Duffy
               </h2>
-              <p className="mx-auto mb-6 max-w-2xl text-pretty text-blue-100">
+              <p className="mx-auto mb-6 max-w-2xl text-pretty text-blue-50">
                 First-party local guidance — not a syndicated listing dump.
                 Call, email, or text the client line.
               </p>
@@ -337,13 +337,13 @@ export default function NeighborhoodGuide({
                 </a>
                 <Link
                   href="/contact"
-                  className={`${ctaClass} border border-white/40 text-white hover:bg-blue-700`}
+                  className={`${ctaClass} border border-white/70 text-white hover:bg-blue-700`}
                 >
                   Send a Message
                 </Link>
                 <a
                   href={AGENT_EMAIL_MAILTO}
-                  className={`${ctaClass} border border-white/40 text-white hover:bg-blue-700`}
+                  className={`${ctaClass} border border-white/70 text-white hover:bg-blue-700`}
                 >
                   <Mail className="mr-2 h-5 w-5" aria-hidden="true" />
                   {AGENT_EMAIL}
@@ -352,7 +352,7 @@ export default function NeighborhoodGuide({
                   href={OFFICE_NAP.directionsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`${ctaClass} border border-white/40 text-white hover:bg-blue-700`}
+                  className={`${ctaClass} border border-white/70 text-white hover:bg-blue-700`}
                 >
                   Get Directions
                   <span className="sr-only"> (opens in a new tab)</span>
@@ -361,14 +361,14 @@ export default function NeighborhoodGuide({
                   href={OFFICE_NAP.reviewsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`${ctaClass} border border-white/40 text-white hover:bg-blue-700`}
+                  className={`${ctaClass} border border-white/70 text-white hover:bg-blue-700`}
                 >
                   <Star className="mr-2 h-4 w-4" aria-hidden="true" />
                   Google Reviews
                   <span className="sr-only"> (opens in a new tab)</span>
                 </a>
               </div>
-              <p className="mt-6 flex items-center justify-center gap-2 text-sm text-blue-100">
+              <p className="mt-6 flex items-center justify-center gap-2 text-sm text-blue-50">
                 <MapPin className="h-4 w-4" aria-hidden="true" />
                 <a
                   href={OFFICE_NAP.mapsUrl}
@@ -387,7 +387,7 @@ export default function NeighborhoodGuide({
                 {origin.replace("https://", "")} · Berkshire Hathaway
                 HomeServices Nevada Properties
               </p>
-              <FairHousingNotice className="mt-6 text-blue-100" />
+              <FairHousingNotice className="mt-6" variant="onBrand" />
             </section>
           </article>
         </div>

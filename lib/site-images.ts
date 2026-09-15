@@ -278,6 +278,22 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
     src: VISIT_OFFICE_PHOTO_PATH,
   },
   {
+    test: /\b(hoa|cc&rs|ccrs|assessment)\b/i,
+    src: VISIT_OFFICE_PHOTO_PATH,
+  },
+  {
+    test: /\b(pool|spa)\b/i,
+    src: PAGE_HERO_IMAGES.sellers.src,
+  },
+  {
+    test: /\b(park|greenbelt|playground)\b/i,
+    src: "/images/neighborhoods/summerlin.png",
+  },
+  {
+    test: /\b(gated|gate)\b/i,
+    src: PAGE_HERO_IMAGES.luxury.src,
+  },
+  {
     test: /\b(about dr\.? jan|dr\. jan duffy)\b/i,
     src: PAGE_HERO_IMAGES.about.src,
   },

@@ -11,7 +11,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Solera at Anthem Homes | Guard-Gated 55+ Henderson",
     description:
-      "Solera at Anthem Henderson 55+ homes. Smaller guard-gated community in 89052. Dr. Jan Duffy. Call (702) 222-1964.",
+      "Solera at Anthem Henderson 55+ homes. Smaller guard-gated community in 89052. Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Solera at Anthem homes for sale",
       "Solera Anthem Henderson",

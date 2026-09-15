@@ -16,5 +16,7 @@ describe("RealScout office listings widget", () => {
     expect(src).toContain("text-pretty");
     expect(src).toContain("CTA_TEL");
     expect(src).toContain("AGENT_EMAIL_MAILTO");
+    expect(src).toContain("headingId");
+    expect(src).toContain("aria-labelledby={headingId}");
   });
 });

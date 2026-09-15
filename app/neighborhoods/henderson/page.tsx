@@ -12,7 +12,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Henderson Homes for Sale | Green Valley, Inspirada, Anthem",
     description:
-      "Henderson, Nevada homes for sale with Dr. Jan Duffy, BHHS Nevada Properties. Green Valley, Inspirada, Anthem, and Lake Las Vegas. Call (702) 222-1964.",
+      "Henderson, Nevada homes for sale with Dr. Jan Duffy, BHHS Nevada Properties. Green Valley, Inspirada, Anthem, and Lake Las Vegas. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Henderson homes for sale",
       "Henderson real estate agent",

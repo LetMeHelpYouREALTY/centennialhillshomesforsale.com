@@ -12,7 +12,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Las Vegas Real Estate Market Report | September 2026",
     description:
-      "Las Vegas and Henderson housing snapshot from realtor.com listing medians dated September 14, 2026. Analysis from Dr. Jan Duffy. Call (702) 222-1964.",
+      "Las Vegas and Henderson housing snapshot from realtor.com listing medians dated September 14, 2026. Analysis from Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Las Vegas real estate market",
       "Las Vegas home prices 2026",

@@ -11,7 +11,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Las Vegas Relocation Real Estate | Dr. Jan Duffy",
     description:
-      "Relocating to or from Las Vegas? Remote tours, dual-state sequencing, and live comps with Dr. Jan Duffy. Call (702) 222-1964.",
+      "Relocating to or from Las Vegas? Remote tours, dual-state sequencing, and live comps with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Las Vegas relocation realtor",
       "moving to Las Vegas",

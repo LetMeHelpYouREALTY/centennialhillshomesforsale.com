@@ -6,7 +6,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Divorce and Probate Home Sales Las Vegas | Dr. Jan Duffy",
     description:
-      "Clark County divorce, probate, and estate home sales with Dr. Jan Duffy. Court orders, two signatures, clean close. Call (702) 222-1964. Not legal advice.",
+      "Clark County divorce, probate, and estate home sales with Dr. Jan Duffy. Court orders, two signatures, clean close. Call (702) 222-1964 or email homes@heyberkshire.com. Not legal advice.",
     keywords: [
       "divorce home sale Las Vegas",
       "probate real estate Nevada",

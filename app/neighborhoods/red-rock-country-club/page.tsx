@@ -11,7 +11,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Red Rock Country Club Homes | Summerlin Golf Community",
     description:
-      "Red Rock Country Club homes for sale in Summerlin — two-course golf community. Private tours with Dr. Jan Duffy. Call (702) 222-1964.",
+      "Red Rock Country Club homes for sale in Summerlin — two-course golf community. Private tours with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "red rock country club homes",
       "red rock country club summerlin",

@@ -6,7 +6,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Las Vegas Home Valuation | CMA with Dr. Jan Duffy",
     description:
-      "Request a Las Vegas or Henderson CMA from Dr. Jan Duffy. Not an online AVM. Call (702) 222-1964.",
+      "Request a Las Vegas or Henderson CMA from Dr. Jan Duffy. Not an online AVM. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Las Vegas home valuation",
       "CMA Las Vegas",

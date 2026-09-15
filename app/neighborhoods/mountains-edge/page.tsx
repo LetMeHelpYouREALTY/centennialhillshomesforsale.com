@@ -12,7 +12,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Mountains Edge Homes for Sale | Southwest Las Vegas",
     description:
-      "Mountains Edge Las Vegas homes for sale near Exploration Peak Park. Current listings with Dr. Jan Duffy. Call (702) 222-1964.",
+      "Mountains Edge Las Vegas homes for sale near Exploration Peak Park. Current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Mountains Edge homes for sale",
       "Mountains Edge Las Vegas",

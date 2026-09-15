@@ -7,7 +7,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Heritage at Stonebridge Homes | Guard-Gated 55+ Summerlin",
     description:
-      "Heritage at Stonebridge Summerlin 55+ homes. Guard-gated pocket near Downtown Summerlin. Dr. Jan Duffy. Call (702) 222-1964.",
+      "Heritage at Stonebridge Summerlin 55+ homes. Guard-gated pocket near Downtown Summerlin. Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Heritage at Stonebridge homes for sale",
       "Heritage Stonebridge Summerlin",

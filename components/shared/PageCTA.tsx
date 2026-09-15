@@ -1,3 +1,4 @@
+import { useId } from "react";
 import Link from "next/link";
 import { Mail, MapPin, Phone, Star } from "lucide-react";
 import {
@@ -27,6 +28,8 @@ export function PageCTA({
   formHeading,
   formType = "contact",
 }: PageCTAProps) {
+  const headingId = useId();
+
   return (
     <>
       {formSource ? (
@@ -43,17 +46,17 @@ export function PageCTA({
       ) : null}
       <section
         className={`bg-blue-600 py-16 text-white md:py-20 ${className}`}
-        aria-labelledby="page-cta-heading"
+        aria-labelledby={headingId}
       >
         <div className="container mx-auto px-4 text-center">
           <h2
-            id="page-cta-heading"
+            id={headingId}
             className="mb-4 text-3xl font-bold text-balance md:text-4xl"
           >
             {headline}
           </h2>
           {subheadline ? (
-            <p className="mx-auto mb-8 max-w-2xl text-xl text-pretty text-blue-100">
+            <p className="mx-auto mb-8 max-w-2xl text-xl text-pretty text-blue-50">
               {subheadline}
             </p>
           ) : null}
@@ -73,7 +76,7 @@ export function PageCTA({
             </Link>
             <a
               href={AGENT_EMAIL_MAILTO}
-              className="inline-flex min-h-11 items-center justify-center rounded-md border border-white/40 px-8 py-4 text-lg font-bold text-white no-underline transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
+              className="inline-flex min-h-11 items-center justify-center rounded-md border border-white/70 px-8 py-4 text-lg font-bold text-white no-underline transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
             >
               <Mail className="mr-2 h-5 w-5" aria-hidden="true" />
               {AGENT_EMAIL}
@@ -82,7 +85,7 @@ export function PageCTA({
               href={OFFICE_NAP.directionsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-11 items-center justify-center rounded-md border border-white/40 px-8 py-4 text-lg font-bold text-white no-underline transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
+              className="inline-flex min-h-11 items-center justify-center rounded-md border border-white/70 px-8 py-4 text-lg font-bold text-white no-underline transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
             >
               <MapPin className="mr-2 h-5 w-5" aria-hidden="true" />
               Get Directions
@@ -92,7 +95,7 @@ export function PageCTA({
               href={OFFICE_NAP.reviewsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-11 items-center justify-center rounded-md border border-white/40 px-8 py-4 text-lg font-bold text-white no-underline transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
+              className="inline-flex min-h-11 items-center justify-center rounded-md border border-white/70 px-8 py-4 text-lg font-bold text-white no-underline transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
             >
               <Star className="mr-2 h-5 w-5" aria-hidden="true" />
               Google Reviews

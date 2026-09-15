@@ -11,7 +11,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "New Construction Homes Las Vegas | Buyer Representation",
     description:
-      "New construction in Las Vegas and Henderson: register your agent before the first visit. Dr. Jan Duffy reviews builder contracts. Call (702) 222-1964.",
+      "New construction in Las Vegas and Henderson: register your agent before the first visit. Dr. Jan Duffy reviews builder contracts. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "new construction Las Vegas",
       "new homes Henderson",

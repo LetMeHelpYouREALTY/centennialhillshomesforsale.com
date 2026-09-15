@@ -12,7 +12,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Siena Homes for Sale | Guard-Gated 55+ Summerlin 89135",
     description:
-      "Siena 55+ homes in Summerlin South ZIP 89135. Guard-gated campus, golf club vs HOA, current listings with Dr. Jan Duffy. Call (702) 222-1964.",
+      "Siena 55+ homes in Summerlin South ZIP 89135. Guard-gated campus, golf club vs HOA, current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Siena Summerlin homes for sale",
       "Siena 55 plus Las Vegas",

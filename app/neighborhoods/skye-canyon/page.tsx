@@ -7,7 +7,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Skye Canyon Homes for Sale | Northwest Las Vegas",
     description:
-      "Skye Canyon Las Vegas homes for sale — Skye Center amenities, Floyd Lamb Park adjacency, current listings with Dr. Jan Duffy. Call (702) 222-1964.",
+      "Skye Canyon Las Vegas homes for sale — Skye Center amenities, Floyd Lamb Park adjacency, current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Skye Canyon homes for sale",
       "Skye Canyon Las Vegas",

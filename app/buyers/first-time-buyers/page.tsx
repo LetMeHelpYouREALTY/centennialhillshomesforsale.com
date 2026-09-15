@@ -11,7 +11,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "First-Time Home Buyers Las Vegas | Dr. Jan Duffy",
     description:
-      "First-time Las Vegas home buyers: written buyer agreement, FHA/VA, inspections, and live comps with Dr. Jan Duffy. Call (702) 222-1964.",
+      "First-time Las Vegas home buyers: written buyer agreement, FHA/VA, inspections, and live comps with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "first time home buyer Las Vegas",
       "FHA Las Vegas",

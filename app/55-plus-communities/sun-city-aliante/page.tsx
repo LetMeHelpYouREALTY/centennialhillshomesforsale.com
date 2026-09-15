@@ -12,7 +12,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Sun City Aliante Homes for Sale | 55+ North Las Vegas",
     description:
-      "Sun City Aliante 55+ homes in North Las Vegas 89084. Golf, rec center, current listings with Dr. Jan Duffy. Call (702) 222-1964.",
+      "Sun City Aliante 55+ homes in North Las Vegas 89084. Golf, rec center, current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Sun City Aliante homes for sale",
       "Sun City Aliante Las Vegas",

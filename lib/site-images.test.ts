@@ -74,6 +74,18 @@ describe("site images catalog", () => {
     expect(siena.src).toBe(PAGE_HERO_IMAGES.fiftyFivePlus.src);
     expect(siena.alt).toContain("Siena occupancy");
 
+    const hoa = resolveSectionImage({
+      heading: "HOA packet before the gate",
+      neighborhoodName: "Siena",
+    });
+    expect(hoa.src).toBe("/images/gbp/visit-office.png");
+
+    const pool = resolveSectionImage({
+      heading: "Pool and spa lots on the resale market",
+      neighborhoodName: "Summerlin",
+    });
+    expect(pool.src).toBe(PAGE_HERO_IMAGES.sellers.src);
+
     const root = path.join(__dirname, "..", "public");
     expect(existsSync(path.join(root, golf.src.replace(/^\//, "")))).toBe(true);
     expect(existsSync(path.join(root, commute.src.replace(/^\//, "")))).toBe(

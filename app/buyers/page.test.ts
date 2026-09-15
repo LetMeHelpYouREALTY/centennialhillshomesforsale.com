@@ -13,5 +13,6 @@ describe("buyers hub", () => {
     expect(src).toContain('href: "/55-plus-communities/siena"');
     expect(src).toContain('href="/55-plus-communities"');
     expect(src).toContain("homes@heyberkshire.com");
+    expect(src).toContain('source="buyers-hub-mid"');
   });
 });

@@ -7,7 +7,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "89138 Homes for Sale | Summerlin West ZIP Code",
     description:
-      "Homes for sale in 89138 — Summerlin West and Reverence. Current Las Vegas listings with Dr. Jan Duffy. Call (702) 222-1964.",
+      "Homes for sale in 89138 — Summerlin West and Reverence. Current Las Vegas listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "homes for sale in 89138",
       "houses for sale in 89138",

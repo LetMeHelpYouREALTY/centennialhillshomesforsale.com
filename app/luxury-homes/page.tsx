@@ -11,7 +11,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Las Vegas Luxury Homes for Sale | Dr. Jan Duffy",
     description:
-      "Las Vegas and Henderson luxury listings: The Ridges, Tournament Hills, MacDonald Highlands, Southern Highlands. Dr. Jan Duffy. Call (702) 222-1964.",
+      "Las Vegas and Henderson luxury listings: The Ridges, Tournament Hills, MacDonald Highlands, Southern Highlands. Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Las Vegas luxury homes",
       "The Ridges Las Vegas",

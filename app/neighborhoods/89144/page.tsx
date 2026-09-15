@@ -6,7 +6,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "89144 Homes for Sale | Summerlin ZIP Code Real Estate",
     description:
-      "89144 zip code homes for sale are in Summerlin (The Arbors, Trails, Queensridge) — not Centennial Hills. Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964.",
+      "89144 zip code homes for sale are in Summerlin (The Arbors, Trails, Queensridge) — not Centennial Hills. Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "89144 zip code homes for sale",
       "homes for sale in 89144",

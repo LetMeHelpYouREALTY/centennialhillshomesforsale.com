@@ -89,7 +89,7 @@ export default function HeroSection() {
           </a>
           <a
             href={AGENT_EMAIL_MAILTO}
-            className="inline-flex min-h-11 items-center rounded-md border border-white/40 px-6 py-3 font-semibold text-white no-underline hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            className="inline-flex min-h-11 items-center rounded-md border border-white/70 px-6 py-3 font-semibold text-white no-underline hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
           >
             <Mail className="mr-2 h-4 w-4" aria-hidden="true" />
             {AGENT_EMAIL}

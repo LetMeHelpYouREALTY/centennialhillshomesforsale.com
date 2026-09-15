@@ -12,7 +12,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Relocating from California to Las Vegas | Dr. Jan Duffy",
     description:
-      "Moving from California to Las Vegas? Nevada has no wage income tax. Pair your sale against live Las Vegas comps with Dr. Jan Duffy. Call (702) 222-1964.",
+      "Moving from California to Las Vegas? Nevada has no wage income tax. Pair your sale against live Las Vegas comps with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "California to Las Vegas relocation",
       "moving from California to Nevada",

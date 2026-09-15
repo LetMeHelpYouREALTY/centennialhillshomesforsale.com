@@ -11,7 +11,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Trilogy at Summerlin Homes | Luxury 55+ Shea Community",
     description:
-      "Trilogy at Summerlin 55+ homes in 89135. Shea Homes, spa, dining, current listings with Dr. Jan Duffy. Call (702) 222-1964.",
+      "Trilogy at Summerlin 55+ homes in 89135. Shea Homes, spa, dining, current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Trilogy at Summerlin homes for sale",
       "Trilogy Summerlin Las Vegas",

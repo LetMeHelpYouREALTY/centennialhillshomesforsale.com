@@ -1,3 +1,4 @@
+import { useId } from "react";
 import { CTA_PHONE, AGENT_EMAIL } from "@/lib/contact";
 import { cn } from "lib/utils";
 
@@ -13,9 +14,11 @@ export function MlsSearchForm({
   className = "",
   inputClassName = "",
   buttonClassName = "",
-  inputId = "mls-q",
+  inputId,
   defaultQuery,
 }: MlsSearchFormProps) {
+  const generatedId = useId();
+  const resolvedInputId = inputId ?? generatedId;
   return (
     <form
       action="/listings"
@@ -26,11 +29,11 @@ export function MlsSearchForm({
       )}
       role="search"
     >
-      <label htmlFor={inputId} className="sr-only">
+      <label htmlFor={resolvedInputId} className="sr-only">
         Search Las Vegas MLS by ZIP, street, or community
       </label>
       <input
-        id={inputId}
+        id={resolvedInputId}
         name="q"
         type="search"
         autoComplete="off"

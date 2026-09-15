@@ -6,7 +6,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Groves at Inspirada Homes | Henderson Townhomes",
     description:
-      "Groves at Inspirada Henderson townhomes by KB Home (resale). Square footage, parks, and current listings with Dr. Jan Duffy. Call (702) 222-1964.",
+      "Groves at Inspirada Henderson townhomes by KB Home (resale). Square footage, parks, and current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "groves at inspirada",
       "groves at inspirada henderson",

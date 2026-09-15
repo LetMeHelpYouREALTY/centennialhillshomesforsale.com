@@ -7,7 +7,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Summerlin West Homes for Sale | 89138 Real Estate",
     description:
-      "Summerlin West homes for sale in ZIP 89138 — Reverence and later Howard Hughes villages. Search listings with Dr. Jan Duffy. Call (702) 222-1964.",
+      "Summerlin West homes for sale in ZIP 89138 — Reverence and later Howard Hughes villages. Search listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "summerlin west homes for sale",
       "summerlin west real estate",

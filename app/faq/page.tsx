@@ -12,7 +12,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "FAQ | Las Vegas Real Estate with Dr. Jan Duffy",
     description:
-      "Answers on buying, selling, 55+, new construction, and compensation with Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964.",
+      "Answers on buying, selling, 55+, new construction, and compensation with Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Las Vegas real estate FAQ",
       "Berkshire Hathaway HomeServices FAQ",

@@ -6,7 +6,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Real Estate Services Las Vegas | Dr. Jan Duffy",
     description:
-      "Buying, selling, luxury, 55+, new construction, investment, and relocation with Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964.",
+      "Buying, selling, luxury, 55+, new construction, investment, and relocation with Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Las Vegas real estate services",
       "home buying Las Vegas",

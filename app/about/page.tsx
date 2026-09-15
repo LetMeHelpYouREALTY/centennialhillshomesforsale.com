@@ -36,6 +36,7 @@ import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
 import { getPublicSiteUrl } from "@/lib/site-url";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
+import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
 
 export const metadata: Metadata = withShareImage(
   {
@@ -219,6 +220,13 @@ export default function AboutPage() {
             </p>
             <div className="mt-8">
               <MlsSearchForm inputId="mls-q-about" />
+            </div>
+            <div className="mx-auto mt-8 max-w-3xl text-left">
+              <GuideLeadForm
+                source="about-page-mid"
+                heading="Ask Dr. Jan Duffy"
+                className="mb-0"
+              />
             </div>
           </div>
 

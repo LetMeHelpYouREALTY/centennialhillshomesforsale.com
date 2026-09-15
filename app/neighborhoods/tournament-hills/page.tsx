@@ -6,7 +6,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Tournament Hills Real Estate | Summerlin Luxury Homes",
     description:
-      "Tournament Hills real estate in Summerlin (89134): custom estates near TPC Summerlin. Current listings and private tours with Dr. Jan Duffy. Call (702) 222-1964.",
+      "Tournament Hills real estate in Summerlin (89134): custom estates near TPC Summerlin. Current listings and private tours with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "tournament hills real estate",
       "tournament hills summerlin real estate",

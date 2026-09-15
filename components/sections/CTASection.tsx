@@ -17,7 +17,7 @@ export default function CTASection() {
           <h2 className="mb-6 text-3xl font-bold md:text-4xl lg:text-5xl">
             Ready to Tour Las Vegas Homes?
           </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-pretty text-xl text-blue-100">
+          <p className="mx-auto mb-8 max-w-2xl text-pretty text-xl text-blue-50">
             Call or email Dr. Jan Duffy for current MLS matches in 89138,
             Centennial Hills, and 55+ campuses such as Siena.
           </p>
@@ -83,7 +83,7 @@ export default function CTASection() {
             </Button>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-blue-100">
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-blue-50">
             <span className="font-semibold text-white">CMA first</span>
             <span className="font-semibold text-white">
               Listing is a separate agreement

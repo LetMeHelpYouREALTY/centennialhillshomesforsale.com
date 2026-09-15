@@ -12,7 +12,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Sun City Summerlin Homes for Sale | 55+ Las Vegas",
     description:
-      "Sun City Summerlin 55+ homes in ZIP 89134. Golf, rec centers, and current listings with Dr. Jan Duffy. Call (702) 222-1964.",
+      "Sun City Summerlin 55+ homes in ZIP 89134. Golf, rec centers, and current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Sun City Summerlin homes for sale",
       "Sun City Summerlin Las Vegas",

@@ -6,7 +6,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Downsizing in Las Vegas | One-Story and 55+ Options",
     description:
-      "Downsizing in Las Vegas or Henderson: one-story resale, townhomes, 55+ HOPA communities. Dr. Jan Duffy. Call (702) 222-1964.",
+      "Downsizing in Las Vegas or Henderson: one-story resale, townhomes, 55+ HOPA communities. Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "downsizing Las Vegas",
       "one story homes Las Vegas",

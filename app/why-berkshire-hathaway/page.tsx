@@ -7,7 +7,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Why Berkshire Hathaway HomeServices | Dr. Jan Duffy",
     description:
-      "Why work with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. One agent of record, BHHS brand, local CMA. Call (702) 222-1964.",
+      "Why work with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. One agent of record, BHHS brand, local CMA. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Berkshire Hathaway HomeServices Las Vegas",
       "Dr. Jan Duffy realtor",

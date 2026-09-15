@@ -1,3 +1,4 @@
+import { useId } from "react";
 import Image from "next/image";
 import { Clock, Mail, Phone, Star } from "lucide-react";
 import { OfficeMap } from "@/components/shared/OfficeMap";
@@ -26,14 +27,16 @@ export function VisitOffice({
   className = "",
   compact = false,
 }: VisitOfficeProps) {
+  const headingId = useId();
+
   return (
     <section
       className={`bg-slate-50 ${compact ? "py-10" : "py-14"} ${className}`}
-      aria-labelledby="visit-office-heading"
+      aria-labelledby={headingId}
     >
       <div className="container mx-auto max-w-4xl px-4">
         <h2
-          id="visit-office-heading"
+          id={headingId}
           className="mb-2 text-2xl font-bold text-slate-900 md:text-3xl"
         >
           Visit the office
@@ -49,7 +52,7 @@ export function VisitOffice({
             <span className="sr-only"> (opens in a new tab)</span>
           </a>
         </p>
-        <p className="mb-6 flex items-start gap-2 text-sm text-slate-500">
+        <p className="mb-6 flex items-start gap-2 text-sm text-slate-600">
           <Clock className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
           <span>{OFFICE_HOURS.display}</span>
         </p>

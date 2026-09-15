@@ -12,7 +12,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Southern Highlands Homes for Sale | Las Vegas Golf Community",
     description:
-      "Southern Highlands Las Vegas homes for sale — Robert Trent Jones Jr. golf, gated sections, current listings with Dr. Jan Duffy. Call (702) 222-1964.",
+      "Southern Highlands Las Vegas homes for sale — Robert Trent Jones Jr. golf, gated sections, current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Southern Highlands homes for sale",
       "Southern Highlands golf",

@@ -12,7 +12,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Las Vegas Investment Properties | Dr. Jan Duffy",
     description:
-      "Las Vegas rental and investment homes with Dr. Jan Duffy. Live rent comps, 1031 coordination, no property management. Call (702) 222-1964.",
+      "Las Vegas rental and investment homes with Dr. Jan Duffy. Live rent comps, 1031 coordination, no property management. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Las Vegas investment property",
       "Las Vegas rental property",
