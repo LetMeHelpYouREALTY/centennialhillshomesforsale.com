@@ -13,5 +13,6 @@ describe("error recovery screen", () => {
     expect(src).toContain("AGENT_EMAIL");
     expect(src).toContain("CTA_PHONE");
     expect(src).toContain("OFFICE_NAP");
+    expect(src).toContain("text-pretty");
   });
 });

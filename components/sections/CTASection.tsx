@@ -18,8 +18,8 @@ export default function CTASection() {
             Ready to Tour Las Vegas Homes?
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-xl text-blue-100">
-            Call Dr. Jan Duffy for current MLS matches, a listing strategy, or a
-            private showing.
+            Call or email Dr. Jan Duffy for current MLS matches, a listing
+            strategy, or a private showing.
           </p>
 
           <div className="mb-8 flex flex-col items-center justify-center gap-4 sm:flex-row">

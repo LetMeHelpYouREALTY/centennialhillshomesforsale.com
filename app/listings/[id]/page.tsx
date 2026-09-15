@@ -22,7 +22,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Live MLS Listings | Dr. Jan Duffy",
     description:
-      "This site does not host fake listing detail pages. Search live MLS with Dr. Jan Duffy or call (702) 222-1964.",
+      "This site does not host fake listing detail pages. Search live MLS with Dr. Jan Duffy or call (702) 222-1964 or email homes@heyberkshire.com.",
     robots: {
       index: false,
       follow: true,
@@ -48,14 +48,14 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
         <h1 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl">
           Live inventory is on MLS — not a sample listing
         </h1>
-        <p className="mb-4 text-lg text-slate-600">
+        <p className="mb-4 text-pretty text-lg text-slate-600">
           URL segment <span className="font-mono text-slate-900">{id}</span> is
           not a published CMA or a current MLS photo set. Berkshire Hathaway
           HomeServices Nevada Properties and Dr. Jan Duffy use RealScout for
           live listings. I will not invent an $850,000 Summerlin house for
           Google.
         </p>
-        <div className="mb-10 flex flex-col gap-3 sm:flex-row">
+        <div className="mb-10 flex flex-col flex-wrap gap-3 sm:flex-row">
           <Link
             href="/listings"
             className="inline-flex min-h-11 items-center justify-center rounded-md bg-blue-600 px-6 py-3 font-semibold text-white no-underline hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
@@ -105,7 +105,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
       <VisitOffice compact />
       <PageCTA
         headline="Want a specific address walked?"
-        subheadline="Call Dr. Jan Duffy. She will pull the live MLS file, not a placeholder."
+        subheadline="Call or email Dr. Jan Duffy. She will pull the live MLS file, not a placeholder."
         formSource="listing-placeholder"
         formHeading="Ask about a live listing"
         formType="property-search"

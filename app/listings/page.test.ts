@@ -14,5 +14,7 @@ describe("listings hub FAQs", () => {
     expect(src).toContain("How do I confirm HOA dues on a Las Vegas listing?");
     expect(src).toContain("homes@heyberkshire.com");
     expect(src).toContain("/neighborhoods/89138");
+    expect(src).toContain("/55-plus-communities/siena");
+    expect(src).toContain("/neighborhoods/centennial-hills");
   });
 });

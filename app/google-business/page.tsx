@@ -15,6 +15,7 @@ import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import {
+  AGENT_EMAIL,
   AGENT_EMAIL_MAILTO,
   CTA_TEL,
   OFFICE_HOURS,
@@ -42,7 +43,7 @@ export const metadata: Metadata = withShareImage(
     title:
       "Dr. Jan Duffy, REALTOR® Las Vegas | Berkshire Hathaway HomeServices",
     description:
-      "Dr. Jan Duffy is a Las Vegas REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. Summerlin, Henderson, 55+ communities, California relocation, and luxury listings. Call (702) 222-1964.",
+      "Dr. Jan Duffy is a Las Vegas REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. Summerlin, Henderson, 55+ communities, California relocation, and luxury listings. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Dr. Jan Duffy realtor",
       "Las Vegas real estate agent",
@@ -557,13 +558,13 @@ export default function GoogleBusinessPage() {
           <section className="max-w-4xl mx-auto">
             <div className="bg-slate-900 text-white rounded-2xl p-8 md:p-12 text-center">
               <h2 className="text-3xl font-bold mb-4">
-                Call with the address you want on a CMA
+                Call or email with the address you want on a CMA
               </h2>
-              <p className="text-xl text-slate-300 mb-8">
-                Call Dr. Jan Duffy with the address you want on a CMA — buying
-                or selling in Las Vegas.
+              <p className="text-pretty text-xl text-slate-300 mb-8">
+                Call or email Dr. Jan Duffy with the address you want on a CMA —
+                buying or selling in Las Vegas.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
                 <a
                   href={`tel:${businessInfo.phone.tel}`}
                   className="inline-flex min-h-11 items-center justify-center bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
@@ -571,12 +572,18 @@ export default function GoogleBusinessPage() {
                   <Phone className="h-5 w-5 mr-2" aria-hidden="true" />
                   {businessInfo.phone.display}
                 </a>
+                <a
+                  href={AGENT_EMAIL_MAILTO}
+                  className="inline-flex min-h-11 items-center justify-center bg-white text-slate-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-slate-100 transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                >
+                  <Mail className="h-5 w-5 mr-2" aria-hidden="true" />
+                  {AGENT_EMAIL}
+                </a>
                 <Link
                   href="/contact"
                   className="inline-flex min-h-11 items-center justify-center bg-white text-slate-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-slate-100 transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                 >
-                  <Mail className="h-5 w-5 mr-2" aria-hidden="true" />
-                  Send Message
+                  Send a contact form
                 </Link>
               </div>
               <p className="text-slate-400 text-sm mt-6">

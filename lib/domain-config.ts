@@ -111,7 +111,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "Centennial Hills listings",
     ctaHeadline: "See Centennial Hills homes this week",
     ctaSubheadline:
-      "I will send live 89149 / 89131 / 89143 matches — call (702) 222-1964.",
+      "I will send live 89149 / 89131 / 89143 matches — call (702) 222-1964 or email homes@heyberkshire.com.",
   },
   "drjanduffyreviews.com": {
     domain: "drjanduffyreviews.com",
@@ -646,7 +646,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "55+ communities",
     ctaHeadline: "Find Your 55+ Community",
     ctaSubheadline:
-      "I tour Sun City, Del Webb, Trilogy, and Heritage by ZIP and HOPA rules. Call (702) 222-1964.",
+      "I tour Sun City, Del Webb, Trilogy, Siena, and Heritage by ZIP and HOPA rules. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },
   "yourdivorcerealtor.com": {
     domain: "yourdivorcerealtor.com",
@@ -691,7 +691,7 @@ export const DEFAULT_CONFIG: DomainConfig = {
   ctaBadge: "Las Vegas REALTOR®",
   ctaHeadline: "Find Your Las Vegas Home",
   ctaSubheadline:
-    "Call or text Dr. Jan at (702) 222-1964 — I answer the client line.",
+    "Call or text Dr. Jan at (702) 222-1964, or email homes@heyberkshire.com — I answer the client line.",
 };
 
 export function getDomainConfig(hostname: string): DomainConfig {

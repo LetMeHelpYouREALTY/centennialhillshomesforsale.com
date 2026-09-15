@@ -20,6 +20,7 @@ import RealScoutListings from "@/components/realscout/RealScoutListings";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import {
   AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
   CTA_PHONE,
   CTA_PHONE_E164,
   CTA_TEL,
@@ -141,6 +142,16 @@ const popularSearches = [
     note: "Open the 89144 ZIP guide",
   },
   {
+    name: "Centennial Hills",
+    href: "/neighborhoods/centennial-hills",
+    note: "Open the 89149 guide",
+  },
+  {
+    name: "Siena 55+",
+    href: "/55-plus-communities/siena",
+    note: "Open the Siena HOPA guide",
+  },
+  {
     name: "New Construction",
     href: "/new-construction",
     note: "Builder pages",
@@ -255,10 +266,10 @@ export default function ListingsPage({
               src={PAGE_HERO_IMAGES.listings.src}
               alt={PAGE_HERO_IMAGES.listings.alt}
             />
-            <p className="text-xl text-slate-600 mb-8">
+            <p className="text-pretty text-xl text-slate-600 mb-8">
               Search live Las Vegas, Henderson, and Summerlin MLS inventory
               through RealScout. Counts change by the hour — I will not invent a
-              5,000-listing headline. Call Dr. Jan Duffy at{" "}
+              5,000-listing headline. Call or email Dr. Jan Duffy at{" "}
               <strong>Berkshire Hathaway HomeServices</strong>.
             </p>
             {query ? (
@@ -267,6 +278,10 @@ export default function ListingsPage({
                 that phrase does not match a street or ZIP,{" "}
                 <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
                   call {CTA_PHONE}
+                </a>{" "}
+                or{" "}
+                <a href={AGENT_EMAIL_MAILTO} className={TEXT_LINK_CLASS}>
+                  email {AGENT_EMAIL}
                 </a>{" "}
                 or{" "}
                 <a
@@ -301,6 +316,13 @@ export default function ListingsPage({
                   aria-hidden="true"
                 />{" "}
                 Call {CTA_PHONE}
+              </span>
+              <span className="flex items-center">
+                <CheckCircle
+                  className="h-4 w-4 text-green-500 mr-1"
+                  aria-hidden="true"
+                />{" "}
+                Email {AGENT_EMAIL}
               </span>
             </div>
           </div>
@@ -672,7 +694,7 @@ export default function ListingsPage({
           <VisitOffice compact />
           <PageCTA
             headline="Ready to filter live MLS results?"
-            subheadline="Call Dr. Jan Duffy with beds, ZIP, and budget. She will send matching listings — not a scraped dump."
+            subheadline="Call or email Dr. Jan Duffy with beds, ZIP, and budget. She will send matching listings — not a scraped dump."
             className="rounded-2xl"
             formSource="listings-hub"
             formHeading="Tell me the ZIP and beds"

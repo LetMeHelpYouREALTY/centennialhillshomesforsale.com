@@ -12,5 +12,6 @@ describe("google-business hub", () => {
     expect(src).not.toContain("mailto:${businessInfo.email}");
     expect(src).toContain('href: "/neighborhoods/89138"');
     expect(src).toContain('href: "/55-plus-communities/siena"');
+    expect(src).toContain("Call or email Dr. Jan Duffy");
   });
 });

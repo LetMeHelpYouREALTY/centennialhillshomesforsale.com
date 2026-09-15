@@ -21,7 +21,7 @@ export default function NotFound() {
         <h1 className="mb-4 text-4xl font-bold text-slate-900">
           That page is not on this site
         </h1>
-        <p className="mb-8 text-lg text-slate-600">
+        <p className="mb-8 text-pretty text-lg text-slate-600">
           The URL may be mistyped, or the listing moved. Use a neighborhood
           guide, search live MLS, or call the office line. Office:{" "}
           <a
@@ -39,7 +39,7 @@ export default function NotFound() {
           </a>
           .
         </p>
-        <div className="mb-10 flex flex-col justify-center gap-3 sm:flex-row">
+        <div className="mb-10 flex flex-col flex-wrap justify-center gap-3 sm:flex-row">
           <Link
             href="/listings"
             className="inline-flex min-h-11 items-center justify-center rounded-md bg-blue-600 px-6 py-3 font-semibold text-white no-underline hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
@@ -76,6 +76,21 @@ export default function NotFound() {
               className={TEXT_LINK_CLASS}
             >
               Centennial Hills homes
+            </Link>
+          </li>
+          <li>
+            <Link href="/neighborhoods/89138" className={TEXT_LINK_CLASS}>
+              89138 Summerlin West homes
+            </Link>
+          </li>
+          <li>
+            <Link href="/55-plus-communities" className={TEXT_LINK_CLASS}>
+              Las Vegas 55+ communities
+            </Link>
+          </li>
+          <li>
+            <Link href="/55-plus-communities/siena" className={TEXT_LINK_CLASS}>
+              Siena 55+ Summerlin
             </Link>
           </li>
           <li>

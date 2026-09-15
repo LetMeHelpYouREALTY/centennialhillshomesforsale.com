@@ -41,7 +41,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "About Dr. Jan Duffy | Berkshire Hathaway HomeServices Las Vegas",
     description:
-      "Meet Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Serving Las Vegas, Henderson, and Summerlin since 2008. Call (702) 222-1964.",
+      "Meet Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Serving Las Vegas, Henderson, and Summerlin since 2008. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "Dr. Jan Duffy",
       "Berkshire Hathaway HomeServices agent",

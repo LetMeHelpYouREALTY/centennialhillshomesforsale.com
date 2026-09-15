@@ -22,7 +22,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Las Vegas Neighborhoods | Centennial Hills, Inspirada, Summerlin",
     description:
-      "Centennial Hills, Inspirada, Tournament Hills, 89144, and 89138 guides from Dr. Jan Duffy. Call (702) 222-1964.",
+      "Centennial Hills, Inspirada, Tournament Hills, 89144, 89138, and Siena 55+ guides from Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "centennial hills real estate",
       "inspirada henderson",

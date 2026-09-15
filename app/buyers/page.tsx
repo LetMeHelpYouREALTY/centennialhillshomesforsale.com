@@ -36,7 +36,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Home Buying Guide Las Vegas | Berkshire Hathaway HomeServices",
     description:
-      "Buy a Las Vegas or Henderson home with Dr. Jan Duffy, BHHS Nevada Properties. Written buyer-broker agreement and live MLS. Call (702) 222-1964.",
+      "Buy a Las Vegas or Henderson home with Dr. Jan Duffy, BHHS Nevada Properties. Written buyer-broker agreement and live MLS. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "buy home Las Vegas",
       "Las Vegas home buyer",
@@ -94,7 +94,7 @@ const buyerFaqs = [
   {
     question: "Which neighborhoods have parks, trails, and nearby campuses?",
     answer:
-      "Summerlin, Henderson (Green Valley, Inspirada), and Centennial Hills are compared on parks, trail miles, commute times, and named campuses. Dr. Jan matches the street to those priorities.",
+      "Summerlin (including 89138 and 89144), Henderson (Green Valley, Inspirada), Centennial Hills, and 55+ campuses such as Siena and Trilogy are compared on parks, trail miles, commute times, and named campuses. Dr. Jan matches the street to those priorities.",
   },
   {
     question: "How do I get a buyer CMA or current listings?",
@@ -136,7 +136,20 @@ const buyingSteps = [
   },
 ];
 
-const neighborhoods = [
+const neighborhoods: Array<{
+  name: string;
+  slug: string;
+  href?: string;
+  price: string;
+  description: string;
+}> = [
+  {
+    name: "Centennial Hills",
+    slug: "centennial-hills",
+    price: `${formatUsd(LISTING_MEDIANS_USD.centennialHills)} listing median`,
+    description:
+      "Northwest Las Vegas 89149 — Town Center, park, and 215 Beltway access",
+  },
   {
     name: "Summerlin",
     slug: "summerlin",
@@ -179,6 +192,21 @@ const neighborhoods = [
     description:
       "Golf-course luxury south of the Strip — confirm village vs city comps",
   },
+  {
+    name: "89138 Summerlin West",
+    slug: "89138",
+    price: `${formatUsd(LISTING_MEDIANS_USD.summerlinWest)} listing median`,
+    description:
+      "Summerlin West ZIP — Reverence and later Howard Hughes villages",
+  },
+  {
+    name: "Siena 55+",
+    slug: "siena",
+    href: "/55-plus-communities/siena",
+    price: "Live CMA — HOPA campus",
+    description:
+      "Guard-gated 55+ campus in Summerlin South. Confirm HOA and occupancy on resale docs",
+  },
 ];
 
 export default function BuyersPage() {
@@ -200,7 +228,7 @@ export default function BuyersPage() {
               src={PAGE_HERO_IMAGES.buyers.src}
               alt={PAGE_HERO_IMAGES.buyers.alt}
             />
-            <p className="text-xl text-slate-600 mb-8">
+            <p className="text-pretty text-xl text-slate-600 mb-8">
               When you work with a{" "}
               <strong>Berkshire Hathaway HomeServices</strong> buyer&apos;s
               agent, you get written advocacy for your side of the deal.
@@ -346,7 +374,7 @@ export default function BuyersPage() {
             >
               Las Vegas Neighborhoods for Home Buyers
             </SectionHeading>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Las Vegas ZIPs are different maps. Listing medians below are from{" "}
               {MARKET_SNAPSHOT_SOURCE} as of {MARKET_SNAPSHOT_AS_OF} — not a
               CMA. Match commute, square footage, and HOA docs, not a slogan.
@@ -357,7 +385,9 @@ export default function BuyersPage() {
                 return (
                   <Link
                     key={neighborhood.slug}
-                    href={`/neighborhoods/${neighborhood.slug}`}
+                    href={
+                      neighborhood.href ?? `/neighborhoods/${neighborhood.slug}`
+                    }
                     className="min-h-11 overflow-hidden rounded-lg border border-slate-200 bg-white no-underline transition-shadow hover:border-blue-300 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                   >
                     <div className="relative h-32">
@@ -406,14 +436,14 @@ export default function BuyersPage() {
             >
               Buyer files I actually work
             </SectionHeading>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Different buyers have different files. A first-time buyer needs a
               written agreement and a lender worksheet. A California relocator
               needs paired comps, not a tax slogan. A luxury buyer needs gate
-              access and a showing window. Dr. Jan Duffy matches the file, not a
-              buyer-type slogan.
+              access and a showing window. A 55+ buyer needs HOPA occupancy in
+              writing. Dr. Jan Duffy matches the file, not a buyer-type slogan.
             </p>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Link
                 href="/buyers/california-relocator"
                 className="block min-h-11 bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
@@ -453,6 +483,7 @@ export default function BuyersPage() {
                 href="/buyers/luxury-homes-las-vegas"
                 className="block min-h-11 bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
+                <div className="text-3xl mb-4">🏡</div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
                   Luxury Home Buyers
                 </h3>
@@ -463,6 +494,22 @@ export default function BuyersPage() {
                 </p>
                 <span className="text-blue-600 font-semibold text-sm">
                   Luxury buyer guide →
+                </span>
+              </Link>
+              <Link
+                href="/55-plus-communities"
+                className="block min-h-11 bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+              >
+                <div className="text-3xl mb-4">☀️</div>
+                <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
+                  55+ HOPA Buyers
+                </h3>
+                <p className="text-slate-600 text-sm mb-3">
+                  Siena, Trilogy, Sun City, and Del Webb. Occupancy rules and
+                  HOA dues go in writing before you tour.
+                </p>
+                <span className="text-blue-600 font-semibold text-sm">
+                  55+ community hub →
                 </span>
               </Link>
             </div>
@@ -608,10 +655,11 @@ export default function BuyersPage() {
             >
               Frequently Asked Questions About Buying in Las Vegas
             </SectionHeading>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Get answers to the most common questions from Las Vegas home
-              buyers. If you don't see your question here, call Dr. Jan Duffy at
-              (702) 222-1964 with the address or ZIP.
+              buyers. If you don&apos;t see your question here, email
+              homes@heyberkshire.com or call Dr. Jan Duffy at (702) 222-1964
+              with the address or ZIP.
             </p>
             <div className="space-y-4">
               {buyerFaqs.map((faq) => (
@@ -628,7 +676,7 @@ export default function BuyersPage() {
           <VisitOffice compact />
           <PageCTA
             headline="Ready to tour Las Vegas listings?"
-            subheadline="Call Dr. Jan Duffy for a buyer consult. Representation is typically paid by the seller under a listing agreement — confirm current compensation in writing."
+            subheadline="Call or email Dr. Jan Duffy for a buyer consult. Representation is typically paid by the seller under a listing agreement — confirm current compensation in writing."
             className="rounded-2xl"
             formSource="buyers-hub"
             formHeading="Ask about a Las Vegas home"

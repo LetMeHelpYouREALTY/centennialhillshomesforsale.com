@@ -49,11 +49,12 @@ export const metadata: Metadata = withShareImage(
     title:
       "55+ Active Adult Communities Las Vegas | Sun City, Del Webb, Heritage | Dr. Jan Duffy",
     description:
-      "Find 55+ homes in Las Vegas. Sun City Summerlin, Sun City Aliante, Del Webb Lake Las Vegas, Heritage at Stonebridge, Solera, Trilogy. Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964.",
+      "Find 55+ homes in Las Vegas. Sun City Summerlin, Siena, Sun City Aliante, Del Webb Lake Las Vegas, Heritage at Stonebridge, Solera, Trilogy. Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "55+ communities Las Vegas",
       "active adult communities Las Vegas",
       "Sun City Summerlin",
+      "Siena Summerlin",
       "Sun City Aliante",
       "Del Webb Lake Las Vegas",
       "Heritage at Stonebridge",
@@ -65,7 +66,7 @@ export const metadata: Metadata = withShareImage(
     openGraph: {
       title: "55+ Communities in Las Vegas | Dr. Jan Duffy",
       description:
-        "Sun City, Del Webb, Heritage at Stonebridge, and other 55+ HOPA campuses with Dr. Jan Duffy. Berkshire Hathaway HomeServices Nevada Properties.",
+        "Sun City, Siena, Del Webb, Heritage at Stonebridge, and other 55+ HOPA campuses with Dr. Jan Duffy. Berkshire Hathaway HomeServices Nevada Properties.",
       type: "website",
     },
   },
@@ -386,7 +387,7 @@ export default function FiftyFiveCommunitiesPage() {
         schema={generateWebPageSchema({
           name: "Las Vegas 55+ Communities",
           description:
-            "55+ HOPA communities in Las Vegas and Henderson including Sun City, Del Webb, and Henderson campuses. Dr. Jan Duffy. Call (702) 222-1964.",
+            "55+ HOPA communities in Las Vegas and Henderson including Sun City, Siena, Trilogy, Del Webb, and Henderson campuses. Dr. Jan Duffy. Call (702) 222-1964.",
           url: "/55-plus-communities",
         })}
       />
@@ -415,8 +416,8 @@ export default function FiftyFiveCommunitiesPage() {
               src={PAGE_HERO_IMAGES.fiftyFivePlus.src}
               alt={PAGE_HERO_IMAGES.fiftyFivePlus.alt}
             />
-            <p className="text-xl md:text-2xl text-slate-600 mb-8">
-              Sun City, Del Webb, Heritage at Stonebridge & more—
+            <p className="text-xl md:text-2xl text-pretty text-slate-600 mb-8">
+              Sun City, Siena, Del Webb, Heritage at Stonebridge & more—
               <br className="hidden md:block" />
               <strong>
                 HOPA occupancy, HOA, and live MLS — not a campus slogan
@@ -847,8 +848,8 @@ export default function FiftyFiveCommunitiesPage() {
                 <strong>Berkshire Hathaway HomeServices</strong> agent I write
                 those items into the showing plan, walk the rec campus, and
                 review the HOA packet before you bid. Many clients are
-                relocating from California. Call (702) 222-1964 with the
-                community name."
+                relocating from California. Call (702) 222-1964 or email
+                homes@heyberkshire.com with the community name."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada
@@ -1045,7 +1046,7 @@ export default function FiftyFiveCommunitiesPage() {
           <VisitOffice compact />
           <PageCTA
             headline="Match the 55+ campus to the street"
-            subheadline="Sun City Summerlin, Sun City Anthem, Trilogy, Heritage, Solera, and Del Webb Lake Las Vegas are different HOAs. Call with the community name."
+            subheadline="Sun City Summerlin, Siena, Sun City Anthem, Trilogy, Heritage, Solera, and Del Webb Lake Las Vegas are different HOAs. Call or email with the community name."
             className="rounded-2xl"
             formSource="55-plus-hub"
             formHeading="Ask about a 55+ community"

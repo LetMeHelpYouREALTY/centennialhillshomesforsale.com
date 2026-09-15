@@ -19,7 +19,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Fair Housing Statement | Equal Housing Opportunity",
     description:
-      "Equal Housing Opportunity statement for Dr. Jan Duffy and Berkshire Hathaway HomeServices Nevada Properties. We provide real estate services without discrimination.",
+      "Equal Housing Opportunity statement for Dr. Jan Duffy and Berkshire Hathaway HomeServices Nevada Properties. We provide real estate services without discrimination. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },
   { src: OFFICE_PHOTO_PATH, alt: OFFICE_PHOTO_ALT },
 );
@@ -45,7 +45,7 @@ export default function FairHousingPage() {
           <h1 className="mb-6 text-4xl font-bold text-slate-900">
             Equal Housing Opportunity
           </h1>
-          <p className="mb-8 text-lg text-slate-700">
+          <p className="mb-8 text-pretty text-lg text-slate-700">
             Dr. Jan Duffy and Berkshire Hathaway HomeServices Nevada Properties
             provide professional real estate services without regard to race,
             color, religion, sex, handicap, familial status, or national origin.
@@ -55,7 +55,7 @@ export default function FairHousingPage() {
             <h2 className="mb-3 text-2xl font-bold text-slate-900">
               Our Commitment
             </h2>
-            <p className="text-slate-700">
+            <p className="text-pretty text-slate-700">
               This commitment applies to listings, advertising, consultations,
               showings, transaction processing, and marketing. All dwellings
               advertised here are available on an equal opportunity basis.
@@ -66,7 +66,7 @@ export default function FairHousingPage() {
             <h2 className="mb-3 text-2xl font-bold text-slate-900">
               Advertising Standard
             </h2>
-            <p className="text-slate-700">
+            <p className="text-pretty text-slate-700">
               All real estate advertised herein is subject to the Federal Fair
               Housing Act, which makes it illegal to advertise any preference,
               limitation, or discrimination because of race, color, religion,
@@ -80,7 +80,7 @@ export default function FairHousingPage() {
             <h2 className="mb-3 text-2xl font-bold text-slate-900">
               Reasonable Accommodations
             </h2>
-            <p className="text-slate-700">
+            <p className="text-pretty text-slate-700">
               If you need a reasonable accommodation to access our services or
               office, call{" "}
               <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
@@ -98,7 +98,7 @@ export default function FairHousingPage() {
             <h2 className="mb-3 text-2xl font-bold text-slate-900">
               Reporting Discrimination
             </h2>
-            <p className="mb-4 text-slate-700">
+            <p className="mb-4 text-pretty text-slate-700">
               If you believe you have been discriminated against, you may file a
               complaint with:
             </p>
@@ -126,7 +126,7 @@ export default function FairHousingPage() {
         <VisitOffice compact />
         <PageCTA
           headline="Ask for a showing without a lifestyle slogan"
-          subheadline="I describe square footage, amenities, named campuses, and commute times. Call (702) 222-1964."
+          subheadline="I describe square footage, amenities, named campuses, and commute times. Call (702) 222-1964 or email homes@heyberkshire.com."
         />
       </main>
     </>

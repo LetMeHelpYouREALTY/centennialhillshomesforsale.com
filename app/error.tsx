@@ -29,7 +29,7 @@ export default function Error({
         <h1 className="mb-4 text-3xl font-bold text-slate-900">
           Something went wrong
         </h1>
-        <p className="mb-8 text-slate-600">
+        <p className="mb-8 text-pretty text-slate-600">
           Reload this page, or call {CTA_PHONE} and we will pull the listing
           from MLS while this screen is fixed. Office:{" "}
           <a

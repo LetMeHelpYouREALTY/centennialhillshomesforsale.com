@@ -18,6 +18,7 @@ import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { generateServiceSchema, generateWebPageSchema } from "@/lib/schema";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
+import { TEXT_LINK_CLASS } from "@/lib/contact";
 import {
   formatUsd,
   LISTING_MEDIANS_USD,
@@ -29,7 +30,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Sell Your Las Vegas Home | Berkshire Hathaway HomeServices",
     description:
-      "Sell your Las Vegas or Henderson home with comps-based pricing and Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Request a CMA. Call (702) 222-1964.",
+      "Sell your Las Vegas or Henderson home with comps-based pricing and Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Request a CMA. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "sell home Las Vegas",
       "Las Vegas listing agent",
@@ -357,10 +358,11 @@ export default function SellersPage() {
             >
               Seller files I actually work
             </SectionHeading>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Move-up, downsizing, divorce/probate, and out-of-state listings
               are different files. Compensation, showing rules, and close dates
-              go in writing. Call (702) 222-1964 with the address.
+              go in writing. Call (702) 222-1964 or email homes@heyberkshire.com
+              with the address.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Link
@@ -387,8 +389,8 @@ export default function SellersPage() {
                   Downsizing
                 </h3>
                 <p className="text-slate-600 text-sm mb-3">
-                  One-story, townhome, or 55+ HOPA — list the house you have,
-                  then match the next door.
+                  One-story, townhome, or 55+ HOPA (Siena, Trilogy, Sun City) —
+                  list the house you have, then match the next door.
                 </p>
                 <span className="text-blue-600 font-semibold text-sm">
                   Downsizing guide →
@@ -426,6 +428,24 @@ export default function SellersPage() {
                 </span>
               </Link>
             </div>
+            <p className="mt-8 text-center text-pretty text-slate-600">
+              Listing in Summerlin West? See the{" "}
+              <Link href="/neighborhoods/89138" className={TEXT_LINK_CLASS}>
+                89138 ZIP guide
+              </Link>
+              . Downsizing to 55+? Start at{" "}
+              <Link
+                href="/55-plus-communities/siena"
+                className={TEXT_LINK_CLASS}
+              >
+                Siena
+              </Link>{" "}
+              or the{" "}
+              <Link href="/55-plus-communities" className={TEXT_LINK_CLASS}>
+                55+ hub
+              </Link>
+              .
+            </p>
           </section>
 
           {/* Listing quote */}
@@ -528,9 +548,10 @@ export default function SellersPage() {
             >
               Frequently Asked Questions About Selling in Las Vegas
             </SectionHeading>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Selling your home raises many questions. Here are answers to the
-              most common concerns from Las Vegas home sellers.
+              most common concerns from Las Vegas home sellers. Email
+              homes@heyberkshire.com or call (702) 222-1964 with the address.
             </p>
             <div className="space-y-4">
               {sellerFaqs.map((faq) => (
@@ -547,7 +568,7 @@ export default function SellersPage() {
           <VisitOffice compact />
           <PageCTA
             headline="Ready to price a listing?"
-            subheadline="Call Dr. Jan Duffy for a listing consult and a live CMA. Listing is a separate agreement."
+            subheadline="Call or email Dr. Jan Duffy for a listing consult and a live CMA. Listing is a separate agreement."
             className="rounded-2xl"
             formSource="sellers-hub"
             formHeading="Request a listing CMA"

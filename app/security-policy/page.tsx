@@ -19,7 +19,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Security Policy | Dr. Jan Duffy, Las Vegas REALTOR®",
     description:
-      "Security policy and responsible disclosure for heyberkshire.com — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964.",
+      "Security policy and responsible disclosure for heyberkshire.com — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com. Report vulnerabilities to security@heyberkshire.com.",
     robots: {
       index: true,
       follow: true,

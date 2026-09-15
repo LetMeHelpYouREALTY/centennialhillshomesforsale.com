@@ -5,12 +5,11 @@ import { describe, expect, it } from "vitest";
 
 const here = dirname(fileURLToPath(import.meta.url));
 
-describe("homepage MLS search", () => {
-  it("uses a unique MLS input id so it does not collide with other pages", () => {
+describe("fair housing statement", () => {
+  it("puts phone and email on the metadata and closing CTA", () => {
     const src = readFileSync(resolve(here, "page.tsx"), "utf8");
-    expect(src).toContain('inputId="mls-q-home"');
-    expect(src).toContain("MlsSearchForm");
-    expect(src).toContain("/55-plus-communities/siena");
+    expect(src).toContain("(702) 222-1964");
     expect(src).toContain("homes@heyberkshire.com");
+    expect(src).toContain("text-pretty");
   });
 });

@@ -41,7 +41,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Contact Dr. Jan Duffy | Berkshire Hathaway HomeServices Las Vegas",
     description:
-      "Contact Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Schedule an appointment, get directions, or call (702) 222-1964. Las Vegas, Henderson, Summerlin.",
+      "Contact Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Schedule an appointment, get directions, call (702) 222-1964, or email homes@heyberkshire.com. Las Vegas, Henderson, Summerlin.",
     keywords: [
       "contact real estate agent Las Vegas",
       "Berkshire Hathaway contact",
@@ -452,7 +452,7 @@ export default function ContactPage() {
       <VisitOffice compact />
       <PageCTA
         headline="Call before you tour"
-        subheadline="Dr. Jan Duffy will pull the live MLS file and meet at 9406 W Lake Mead Blvd, Suite 100."
+        subheadline="Dr. Jan Duffy will pull the live MLS file and meet at 9406 W Lake Mead Blvd, Suite 100. Call (702) 222-1964 or email homes@heyberkshire.com."
       />
     </>
   );

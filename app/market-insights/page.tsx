@@ -47,7 +47,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Centennial Hills Market Insights 2026 | Northwest Las Vegas",
     description:
-      "First-party Centennial Hills market insights: 89149 vs 89144, Inspirada new-construction wind-down, and how northwest Las Vegas listings are trading. Dr. Jan Duffy. Call (702) 222-1964.",
+      "First-party Centennial Hills market insights: 89149 vs 89144, Inspirada new-construction wind-down, and how northwest Las Vegas listings are trading. Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     keywords: [
       "centennial hills real estate",
       "centennial hills las vegas real estate",

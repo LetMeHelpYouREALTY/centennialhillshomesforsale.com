@@ -5,12 +5,13 @@ import { describe, expect, it } from "vitest";
 
 const here = dirname(fileURLToPath(import.meta.url));
 
-describe("homepage MLS search", () => {
-  it("uses a unique MLS input id so it does not collide with other pages", () => {
+describe("buyers hub", () => {
+  it("links Centennial Hills, 89138, Siena, and the 55+ hub", () => {
     const src = readFileSync(resolve(here, "page.tsx"), "utf8");
-    expect(src).toContain('inputId="mls-q-home"');
-    expect(src).toContain("MlsSearchForm");
-    expect(src).toContain("/55-plus-communities/siena");
+    expect(src).toContain('slug: "centennial-hills"');
+    expect(src).toContain('slug: "89138"');
+    expect(src).toContain('href: "/55-plus-communities/siena"');
+    expect(src).toContain('href="/55-plus-communities"');
     expect(src).toContain("homes@heyberkshire.com");
   });
 });

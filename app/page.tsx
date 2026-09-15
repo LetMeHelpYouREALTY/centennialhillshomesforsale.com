@@ -42,7 +42,7 @@ export async function generateMetadata(): Promise<Metadata> {
           "Centennial Hills Homes for Sale | Las Vegas 89149 Real Estate | Dr. Jan Duffy",
       },
       description:
-        "Centennial Hills homes for sale in northwest Las Vegas (89149, 89131, 89143). Search current listings with Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964.",
+        "Centennial Hills homes for sale in northwest Las Vegas (89149, 89131, 89143). Search current listings with Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [
         "centennial hills real estate",
         "centennial hills las vegas real estate",
@@ -124,6 +124,11 @@ const communities: HomeCommunityCard[] = [
     image: PAGE_HERO_IMAGES.fiftyFivePlus,
     label: "55+ HOPA communities",
   },
+  {
+    href: "/55-plus-communities/siena",
+    slug: "siena",
+    label: "Siena 55+ Summerlin",
+  },
 ];
 
 export default async function Home() {
@@ -144,8 +149,11 @@ export default async function Home() {
       "Centennial Hills",
       "Las Vegas",
       "Summerlin",
+      "Summerlin West",
+      "89138",
       "Henderson",
       "Inspirada",
+      "Siena",
     ],
   };
 
@@ -276,8 +284,8 @@ export default async function Home() {
               </SectionHeading>
               <p className="text-lg text-slate-600">
                 Google is showing this site for Centennial Hills, Inspirada,
-                Tournament Hills, and 89144. Those are different maps. Pick the
-                page that matches the street you want.
+                Tournament Hills, 89144, 89138, and 55+ campuses. Those are
+                different maps. Pick the page that matches the street you want.
               </p>
             </div>
             <div className="mx-auto grid max-w-5xl gap-4 md:grid-cols-2">

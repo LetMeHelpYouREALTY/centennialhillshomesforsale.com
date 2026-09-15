@@ -11,5 +11,6 @@ describe("neighborhoods hub", () => {
     expect(src).toContain('slug: "89138"');
     expect(src).toContain("homes@heyberkshire.com");
     expect(src).toContain("/55-plus-communities");
+    expect(src).toContain("Siena");
   });
 });
