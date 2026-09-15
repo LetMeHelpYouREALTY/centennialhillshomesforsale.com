@@ -45,7 +45,7 @@ export default function SecurityPolicyPage() {
       <div className="min-h-screen bg-white pb-16">
         <div className="container mx-auto max-w-4xl px-4">
           <PageHeroImage src={OFFICE_PHOTO_PATH} alt={OFFICE_PHOTO_ALT} />
-          <h1 className="text-4xl font-bold text-slate-900 mb-8">
+          <h1 className="mb-8 text-balance text-4xl font-bold text-slate-900">
             Security Policy
           </h1>
 

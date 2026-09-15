@@ -177,7 +177,7 @@ export default function NeighborhoodGuide({
               </p>
             ) : null}
 
-            <h1 className="mb-4 text-4xl font-bold text-slate-900 md:text-5xl">
+            <h1 className="mb-4 text-balance text-4xl font-bold text-slate-900 md:text-5xl">
               {h1}
             </h1>
             <p className="mb-6 text-pretty text-lg text-slate-600">{intro}</p>

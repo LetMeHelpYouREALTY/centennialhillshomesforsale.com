@@ -14,6 +14,7 @@ describe("guide related links", () => {
       "/home-valuation",
       "/relocation",
       "/buyers/first-time-buyers",
+      "/buyers/california-relocator",
       "/contact",
     ]);
   });
@@ -31,6 +32,7 @@ describe("guide related links", () => {
       "/home-valuation",
       "/relocation",
       "/buyers/first-time-buyers",
+      "/buyers/california-relocator",
     ]);
     expect(merged[0].label).toBe("Current 89138 listings");
   });
@@ -60,6 +62,9 @@ describe("guide related links", () => {
     expect(merged.map((item) => item.href)).toContain(
       "/buyers/first-time-buyers",
     );
+    expect(merged.map((item) => item.href)).toContain(
+      "/buyers/california-relocator",
+    );
   });
 
   it("drops a current path even when the page related array included it", () => {
@@ -69,6 +74,18 @@ describe("guide related links", () => {
       "/contact/",
     );
     expect(merged.map((item) => item.href)).not.toContain("/contact");
+  });
+
+  it("drops California relocator when that is the current page", () => {
+    const merged = mergeGuideRelated(
+      [{ href: "/relocation", label: "Las Vegas relocation hub" }],
+      undefined,
+      "/buyers/california-relocator",
+    );
+    expect(merged.map((item) => item.href)).not.toContain(
+      "/buyers/california-relocator",
+    );
+    expect(merged.map((item) => item.href)).toContain("/relocation");
   });
 });
 

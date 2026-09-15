@@ -18,8 +18,8 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           "placeholder:text-zinc-400 dark:placeholder:text-zinc-500",
           "disabled:opacity-50 disabled:cursor-not-allowed",
           "ring-offset-white focus-visible:ring-offset-2 dark:ring-offset-zinc-950",
-          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950",
-          "dark:focus-visible:ring-zinc-300",
+          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600",
+          "dark:focus-visible:ring-blue-300",
           className,
         )}
         ref={ref}

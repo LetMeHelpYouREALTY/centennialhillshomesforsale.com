@@ -20,6 +20,10 @@ export const DEFAULT_GUIDE_RELATED: GuideRelatedLink[] = [
     href: "/buyers/first-time-buyers",
     label: "First-Time Las Vegas Buyers",
   },
+  {
+    href: "/buyers/california-relocator",
+    label: "California to Las Vegas",
+  },
   { href: "/contact", label: "Call or email the office" },
 ];
 

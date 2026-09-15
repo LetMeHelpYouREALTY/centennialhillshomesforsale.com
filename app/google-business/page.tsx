@@ -131,7 +131,7 @@ export default function GoogleBusinessPage() {
                       Berkshire Hathaway HomeServices
                     </span>
                   </div>
-                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                  <h1 className="mb-4 text-balance text-4xl font-bold md:text-5xl">
                     Dr. Jan Duffy
                   </h1>
                   <p className="text-xl text-blue-50 mb-2">

@@ -44,7 +44,7 @@ export default function FairHousingPage() {
             Berkshire Hathaway HomeServices Nevada Properties
           </p>
           <PageHeroImage src={OFFICE_PHOTO_PATH} alt={OFFICE_PHOTO_ALT} />
-          <h1 className="mb-6 text-4xl font-bold text-slate-900">
+          <h1 className="mb-6 text-balance text-4xl font-bold text-slate-900">
             Equal Housing Opportunity
           </h1>
           <p className="mb-8 text-pretty text-lg text-slate-700">

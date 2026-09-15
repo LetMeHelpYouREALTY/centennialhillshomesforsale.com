@@ -60,7 +60,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
           src={PAGE_HERO_IMAGES.listings.src}
           alt={PAGE_HERO_IMAGES.listings.alt}
         />
-        <h1 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl">
+        <h1 className="mb-4 text-balance text-3xl font-bold text-slate-900 md:text-4xl">
           Live inventory is on MLS — not a sample listing
         </h1>
         <p className="mb-4 text-pretty text-lg text-slate-600">

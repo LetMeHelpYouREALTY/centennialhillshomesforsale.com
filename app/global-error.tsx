@@ -37,7 +37,7 @@ export default function GlobalError({
           className="min-h-screen pb-20 pt-16"
         >
           <div className="mx-auto max-w-2xl px-4 text-center">
-            <h1 className="mb-4 text-3xl font-bold text-slate-900">
+            <h1 className="mb-4 text-balance text-3xl font-bold text-slate-900">
               Something went wrong
             </h1>
             <p className="mb-8 text-pretty text-slate-600">

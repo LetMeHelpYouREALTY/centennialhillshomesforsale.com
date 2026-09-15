@@ -18,5 +18,6 @@ describe("homepage MLS search", () => {
     expect(src).toContain("Siena");
     expect(src).not.toContain("text-white/80");
     expect(src).toContain('source="homepage-mid"');
+    expect(src).toContain("text-balance");
   });
 });

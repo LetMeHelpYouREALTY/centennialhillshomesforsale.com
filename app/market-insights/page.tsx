@@ -127,7 +127,7 @@ export default async function MarketInsightsPage() {
               <TrendingUp className="h-4 w-4 mr-2" aria-hidden="true" />
               2026 Economic & Real Estate Analysis
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="mb-6 text-balance text-4xl font-bold text-slate-900 md:text-5xl lg:text-6xl">
               Centennial Hills Market Insights
             </h1>
             <PageHeroImage

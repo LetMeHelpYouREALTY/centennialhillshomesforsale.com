@@ -192,7 +192,7 @@ export default async function Home() {
                 {config.ctaBadge}
               </span>
             )}
-            <h1 className="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+            <h1 className="mb-6 text-balance text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
               Centennial Hills Homes for Sale
             </h1>
             <p className="mx-auto mb-10 max-w-3xl text-pretty text-xl text-white md:text-2xl">

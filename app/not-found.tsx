@@ -20,7 +20,7 @@ export default function NotFound() {
         <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-blue-600">
           404
         </p>
-        <h1 className="mb-4 text-4xl font-bold text-slate-900">
+        <h1 className="mb-4 text-balance text-4xl font-bold text-slate-900">
           That page is not on this site
         </h1>
         <p className="mb-8 text-pretty text-lg text-slate-600">

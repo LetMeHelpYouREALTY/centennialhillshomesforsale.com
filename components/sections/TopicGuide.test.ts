@@ -13,6 +13,7 @@ describe("TopicGuide conversion chrome", () => {
     expect(src).toContain("AGENT_EMAIL_MAILTO");
     expect(src).toContain("DEFAULT_GUIDE_RELATED");
     expect(src).toContain("text-pretty");
+    expect(src).toContain("text-balance");
     expect(src).not.toContain("<main");
     expect(src).toContain('variant="onBrand"');
     expect(src).toContain("text-blue-50");
