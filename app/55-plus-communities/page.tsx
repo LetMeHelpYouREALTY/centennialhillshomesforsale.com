@@ -157,14 +157,14 @@ const communities = [
       "Pools",
     ],
     highlights: [
-      "Nevada's largest 55+ community",
+      "7,700+ homes on about 2,400 acres",
       "3 golf courses",
       "4 recreation centers with pools",
       "Confirm clubs in the HOA packet",
       "Mountain View Hospital nearby",
     ],
     description:
-      "Nevada's largest 55+ community, set against the Spring Mountains with golf and rec campuses on site.",
+      "Del Webb 55+ community in ZIP 89134 with golf and rec campuses on site. About 7,700 homes.",
     color: "amber",
   },
   {
@@ -756,24 +756,26 @@ export default function FiftyFiveCommunitiesPage() {
                   <li>• Exterior maintenance included</li>
                   <li>• On-site restaurants (select)</li>
                   <li>• Healthcare facilities nearby</li>
-                  <li>• Concierge services (luxury)</li>
+                  <li>
+                    • Front desk or concierge on some campuses — confirm in HOA
+                    docs
+                  </li>
                 </ul>
               </div>
             </div>
           </section>
 
-          {/* Expert Quote */}
+          {/* Agent note */}
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
-                "Buying in a 55+ community involves considerations beyond a
-                typical purchase. You need to understand HOA rules, HOPA
-                occupancy, and rec-campus access. As a{" "}
-                <strong>Berkshire Hathaway HomeServices</strong> agent
-                specializing in active adult communities, I guide clients
-                through every step—from touring amenities to reviewing HOA
-                documents. Many clients are relocating from California, and they
-                rely on my local knowledge to make confident decisions."
+                "Buying in a 55+ community involves HOA rules, HOPA occupancy,
+                and rec-campus access — not a lifestyle slogan. As a{" "}
+                <strong>Berkshire Hathaway HomeServices</strong> agent I write
+                those items into the showing plan, walk the rec campus, and
+                review the HOA packet before you bid. Many clients are
+                relocating from California. Call (702) 222-1964 with the
+                community name."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada
@@ -876,12 +878,12 @@ export default function FiftyFiveCommunitiesPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">
-                    Specialized Expertise
+                    HOPA and HOA files
                   </h3>
                   <p className="text-slate-600 text-sm">
-                    Dr. Jan understands the unique needs of 55+ buyers—from age
-                    verification processes to evaluating HOA reserves and
-                    understanding community rules.
+                    Age verification, HOA reserves, occupancy rules, and
+                    rec-campus access go in the packet before you bid — not
+                    after.
                   </p>
                 </div>
               </div>
@@ -938,6 +940,8 @@ export default function FiftyFiveCommunitiesPage() {
             headline="Match the 55+ campus to the street"
             subheadline="Sun City Summerlin, Sun City Anthem, Trilogy, Heritage, Solera, and Del Webb Lake Las Vegas are different HOAs. Call with the community name."
             className="rounded-2xl"
+            formSource="55-plus-hub"
+            formHeading="Ask about a 55+ community"
           />
         </div>
       </main>

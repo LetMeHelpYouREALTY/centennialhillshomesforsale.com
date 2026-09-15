@@ -429,10 +429,10 @@ export default function ListingsPage({
                 <div className="bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
                   <MapPin className="h-6 w-6" />
                 </div>
-                <h3 className="font-bold mb-2">Local Expertise</h3>
+                <h3 className="font-bold mb-2">Street-level files</h3>
                 <p className="text-slate-400 text-sm">
-                  Insider knowledge of commute times, named campuses, and HOA
-                  documents
+                  Commute times, named campuses, and HOA documents on the
+                  worksheet — not an insider slogan
                 </p>
               </div>
               <div className="text-center">
@@ -619,6 +619,9 @@ export default function ListingsPage({
             headline="Ready to filter live MLS results?"
             subheadline="Call Dr. Jan Duffy with beds, ZIP, and budget. She will send matching listings — not a scraped dump."
             className="rounded-2xl"
+            formSource="listings-hub"
+            formHeading="Tell me the ZIP and beds"
+            formType="property-search"
           />
         </div>
         <p className="mt-8 text-center text-sm text-slate-500">

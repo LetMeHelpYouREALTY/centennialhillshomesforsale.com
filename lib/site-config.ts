@@ -219,26 +219,28 @@ export const services = [
     name: "Home Buying",
     slug: "buyers",
     description:
-      "Expert guidance through every step of the home buying process",
+      "Written buyer-broker agreement, MLS search, and a closing timeline",
     icon: "Home",
   },
   {
     name: "Home Selling",
     slug: "sellers",
     description:
-      "Maximize your home's value with professional marketing and negotiation",
+      "Comps-based pricing, listing marketing, and a written listing agreement",
     icon: "TrendingUp",
   },
   {
     name: "Luxury Homes",
     slug: "luxury-homes",
-    description: "Specialized expertise in Las Vegas luxury real estate",
+    description:
+      "Listed homes from $1.5M+ in Summerlin, The Ridges, and MacDonald Highlands",
     icon: "Star",
   },
   {
     name: "New Construction",
     slug: "new-construction",
-    description: "Free buyer representation for new home purchases",
+    description:
+      "Buyer-broker agreement for new-home purchases. Builder credits go on the contract",
     icon: "Building",
   },
   {
@@ -256,7 +258,7 @@ export const services = [
   {
     name: "Home Valuation",
     slug: "home-valuation",
-    description: "Free property valuations using current market data",
+    description: "CMA from recent GLVAR comps. Request one at /home-valuation",
     icon: "Calculator",
   },
   {
@@ -272,7 +274,7 @@ export const expertQuotes = {
   market: `"The Las Vegas market moves by village and by week. I will not invent a 20-offer headline. Buyers get a live CMA and a written offer plan."`,
   buyers: `"My job isn't just to show you houses—it's to make sure you don't overpay, that you understand what you're buying, and that you're protected through every step of the transaction."`,
   sellers: `"Pricing your home to the comps from day one is the single most important listing decision. Overpriced homes sit, and every extra day on market costs carrying cost and buyer leverage."`,
-  luxury: `"Luxury buyers expect discretion, market expertise, and flawless execution. In this price range, one wrong move can cost hundreds of thousands of dollars."`,
+  luxury: `"Luxury here means listed homes from $1.5M+ in Summerlin, The Ridges, and MacDonald Highlands. I write a buyer-broker or listing agreement and pull recent GLVAR comps. Call (702) 222-1964."`,
   investment: `"Cap rate, HOA, and insurance are on the worksheet. I will not rank Las Vegas rental yields against the country from this page."`,
   relocation: `"Moving to a new city is stressful enough. I handle neighborhood tours, commute timing, contractor referrals, and a written buy-sell calendar so you can focus on the move."`,
   newConstruction: `"Builders have sales agents who work for them, not you. Register me before the first model-home visit. Compensation is in the written buyer agreement — it is not 'free' as a slogan."`,
@@ -291,7 +293,7 @@ export const commonFAQs = {
       question:
         "What areas does Berkshire Hathaway HomeServices Nevada Properties cover?",
       answer:
-        "BHHS Nevada Properties serves all of Las Vegas, Henderson, North Las Vegas, and surrounding areas, with specialized expertise in Summerlin, The Ridges, Skye Canyon, Southern Highlands, Green Valley, and Henderson's master-planned communities.",
+        "BHHS Nevada Properties serves Las Vegas, Henderson, North Las Vegas, and Clark County, including Summerlin, The Ridges, Skye Canyon, Southern Highlands, Green Valley, and Henderson master-planned communities.",
     },
     {
       question: "How do Berkshire Hathaway HomeServices agents get paid?",
@@ -308,12 +310,12 @@ export const commonFAQs = {
     {
       question: "How long does the home buying process take in Las Vegas?",
       answer:
-        "Typically 30-45 days from offer acceptance to closing. Cash purchases can close in as little as 7-14 days. The timeline depends on financing, inspections, and other contingencies.",
+        "Escrow length is set in the purchase contract, often 30–45 days for financed purchases. Cash and new construction can close on a different timeline. I put the dates in writing; I do not promise a 7-day close.",
     },
     {
       question: "Do I need a pre-approval before looking at homes?",
       answer:
-        "Yes, a pre-approval letter is essential. It shows sellers you're serious and gives you a clear budget. Dr. Jan can connect you with trusted local lenders who offer competitive rates.",
+        "Yes. A pre-approval letter shows sellers a budget range. Dr. Jan can introduce Clark County lenders. Rates and programs are UNKNOWN until the lender quotes them.",
     },
     {
       question: "How much do I need for a down payment?",
@@ -325,7 +327,7 @@ export const commonFAQs = {
     {
       question: "What is my home worth in today's Las Vegas market?",
       answer:
-        "Home values depend on location, condition, size, and recent comparable sales. Dr. Jan provides free, comprehensive home valuations using current MLS data and her expertise serving Las Vegas since 2008.",
+        "Home values depend on location, condition, size, and recent comparable sales. Dr. Jan provides a no-obligation CMA from current MLS comps. Serving Las Vegas since 2008.",
     },
     {
       question: "How long will it take to sell my home?",

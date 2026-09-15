@@ -79,4 +79,12 @@ describe("GBP schema NAP and Maps alignment", () => {
       "Same-day appointments",
     );
   });
+
+  it("does not use Specialist ranking in GBP service names", () => {
+    const names = businessInfo.services
+      .map((service) => service.name)
+      .join("\n");
+    expect(names).not.toMatch(/Specialist/i);
+    expect(names).not.toMatch(/Expert/i);
+  });
 });

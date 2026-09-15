@@ -514,6 +514,8 @@ export default function AboutPage() {
             headline="Ready to get started?"
             subheadline="Questions about buying or selling in Las Vegas? Call or text with the address. I will run a CMA — not a free-consult product pitch."
             className="mb-8 rounded-2xl"
+            formSource="about-page"
+            formHeading="Ask Dr. Jan Duffy"
           />
         </div>
 

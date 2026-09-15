@@ -447,8 +447,8 @@ export default function SellersPage() {
             </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               When you list with Dr. Jan Duffy at Berkshire Hathaway
-              HomeServices, you receive comprehensive marketing and support
-              services designed to maximize your home's exposure and sale price.
+              HomeServices, you receive MLS syndication, photos, and a written
+              listing plan. Sale price comes from comps, not a slogan.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {includedServices.map((item) => (
@@ -529,6 +529,9 @@ export default function SellersPage() {
             headline="Ready to price a listing?"
             subheadline="Call Dr. Jan Duffy for a listing consult and a live CMA. No obligation."
             className="rounded-2xl"
+            formSource="sellers-hub"
+            formHeading="Request a listing CMA"
+            formType="home-valuation"
           />
         </div>
         <p className="mt-8 text-center text-sm text-slate-500">

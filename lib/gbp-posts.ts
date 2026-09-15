@@ -77,7 +77,7 @@ Call (702) 222-1964 for a California equity comparison.`,
     title: "55+ Active Adult Communities in Las Vegas - Your Options",
     content: `Looking for 55+ living in the Las Vegas Valley? Here are the top communities:
 
-🏌️ Sun City Summerlin - Nevada's largest 55+ community (7,700+ homes, 3 golf courses)
+🏌️ Sun City Summerlin - Del Webb 55+ in ZIP 89134 (7,700+ homes, 3 golf courses)
 🌄 Sun City Anthem - Henderson location with mountain views
 🌊 Del Webb Lake Las Vegas - Resort-style lakefront living
 ⛳ Solera at Anthem - Smaller Henderson 55+ campus with a guard-gated entry

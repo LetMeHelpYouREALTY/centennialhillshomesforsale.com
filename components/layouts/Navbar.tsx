@@ -79,7 +79,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <Link
             href="/"
-            className="flex min-w-0 items-center gap-3 no-underline"
+            className="flex min-h-11 min-w-0 items-center gap-3 no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+            aria-label="Dr. Jan Duffy, Berkshire Hathaway HomeServices — home"
           >
             <AgentPhoto variant="navbar" priority className="shrink-0" />
             <span className="flex min-w-0 flex-col">

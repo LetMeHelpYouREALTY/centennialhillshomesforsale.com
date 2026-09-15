@@ -17,6 +17,7 @@ import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionPhoto } from "@/components/shared/SectionPhoto";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
+import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
 import { getPublicSiteUrl } from "@/lib/site-url";
 import { getNeighborhoodImage } from "@/lib/site-images";
 
@@ -247,6 +248,11 @@ export default function NeighborhoodGuide({
               </div>
             </section>
 
+            <GuideLeadForm
+              source={`${slug}-guide`}
+              heading={`Ask about ${name}`}
+            />
+
             <section
               className="rounded-2xl bg-blue-600 p-8 text-center text-white md:p-12"
               aria-labelledby={`${slug}-cta-heading`}
@@ -269,6 +275,12 @@ export default function NeighborhoodGuide({
                   <Phone className="mr-2 h-5 w-5" aria-hidden="true" />
                   Call {CTA_PHONE}
                 </a>
+                <Link
+                  href="/contact"
+                  className={`${ctaClass} border border-white/40 text-white hover:bg-blue-700`}
+                >
+                  Send a Message
+                </Link>
                 <a
                   href={OFFICE_NAP.directionsUrl}
                   target="_blank"

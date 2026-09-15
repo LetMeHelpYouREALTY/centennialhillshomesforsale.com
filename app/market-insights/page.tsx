@@ -575,18 +575,16 @@ export default async function MarketInsightsPage() {
             </div>
           </section>
 
-          {/* Expert Quote */}
+          {/* Agent note */}
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-slate-900 text-white rounded-xl p-8">
               <blockquote className="text-lg italic mb-4">
-                "Understanding market forces—not just current prices—separates
-                informed decisions from reactive ones. Listing medians and
-                commute maps beat a forecast. Tech employers, California inbound
-                buyers, and village-level inventory show up on the CMA — I will
-                not pick which neighborhoods will outperform. As a{" "}
-                <strong>Berkshire Hathaway HomeServices</strong> agent, I help
-                clients position themselves for where the market is going, not
-                just where it's been."
+                "Listing medians and commute maps beat a forecast. Tech
+                employers, California inbound buyers, and village-level
+                inventory show up on the CMA. I will not pick which
+                neighborhoods will outperform. As a{" "}
+                <strong>Berkshire Hathaway HomeServices</strong> agent, I pull
+                the live file for the ZIP you named — not a recycled headline."
               </blockquote>
               <cite className="text-slate-300 font-semibold">
                 — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada
@@ -649,6 +647,8 @@ export default async function MarketInsightsPage() {
       <PageCTA
         headline="Need the live comps, not a valley average?"
         subheadline="Call Dr. Jan Duffy. She will pull MLS for your ZIP, not a recycled headline."
+        formSource="market-insights"
+        formHeading="Ask for a live MLS pull"
       />
       <RealScoutListings />
     </>

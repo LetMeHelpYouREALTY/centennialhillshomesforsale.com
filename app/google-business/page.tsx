@@ -336,7 +336,7 @@ export default function GoogleBusinessPage() {
               {/* Neighborhood Specialties */}
               <div className="mt-8 pt-8 border-t border-blue-200">
                 <h3 className="font-bold text-slate-900 mb-4">
-                  Neighborhood Expertise
+                  Neighborhood files
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {[
@@ -458,6 +458,8 @@ export default function GoogleBusinessPage() {
       <PageCTA
         headline="Match the Google listing to this office"
         subheadline="9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Call (702) 222-1964."
+        formSource="google-business"
+        formHeading="Ask about this office"
       />
     </>
   );

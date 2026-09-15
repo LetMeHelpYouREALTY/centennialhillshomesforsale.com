@@ -34,7 +34,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Home Buying Guide Las Vegas | Berkshire Hathaway HomeServices",
     description:
-      "Looking to buy a home in Las Vegas? Dr. Jan Duffy with Berkshire Hathaway HomeServices Nevada Properties guides you through every step. Free buyer consultation. Call (702) 222-1964.",
+      "Buy a Las Vegas or Henderson home with Dr. Jan Duffy, BHHS Nevada Properties. Written buyer-broker agreement and live MLS. Call (702) 222-1964.",
     keywords: [
       "buy home Las Vegas",
       "Las Vegas home buyer",
@@ -99,7 +99,7 @@ const buyingSteps = [
     icon: DollarSign,
     title: "Get Pre-Approved for Financing",
     description:
-      "Know your budget before you start looking. Dr. Jan connects you with trusted local lenders who offer competitive rates and programs for every situation—FHA, VA, conventional, and down payment assistance programs.",
+      "Know your budget before you start looking. Dr. Jan can introduce Clark County lenders for FHA, VA, conventional, and down-payment assistance. Rates are UNKNOWN until the lender quotes them.",
   },
   {
     icon: Search,
@@ -506,7 +506,7 @@ export default function BuyersPage() {
             </div>
           </section>
 
-          {/* Expert Quote */}
+          {/* Agent note */}
           <section className="mb-16 max-w-4xl mx-auto">
             <div className="bg-slate-50 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
@@ -600,6 +600,9 @@ export default function BuyersPage() {
             headline="Ready to tour Las Vegas listings?"
             subheadline="Call Dr. Jan Duffy for a buyer consult. Representation is typically paid by the seller under a listing agreement — confirm current compensation in writing."
             className="rounded-2xl"
+            formSource="buyers-hub"
+            formHeading="Ask about a Las Vegas home"
+            formType="property-search"
           />
         </div>
         <p className="mt-8 text-center text-sm text-slate-500">

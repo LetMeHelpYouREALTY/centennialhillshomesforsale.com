@@ -39,6 +39,7 @@ export default function CalendlyButton({
       />
       <a href={url} onClick={handleClick} className={className}>
         {children || text}
+        <span className="sr-only"> Opens a scheduling popup</span>
       </a>
     </>
   );

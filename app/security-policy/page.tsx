@@ -9,6 +9,7 @@ import {
   TEXT_LINK_CLASS,
 } from "@/lib/contact";
 import { PageCTA } from "@/components/shared/PageCTA";
+import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 
 export const metadata: Metadata = withShareImage(
@@ -28,6 +29,7 @@ export default function SecurityPolicyPage() {
   return (
     <main className="min-h-screen bg-white pb-16">
       <div className="container mx-auto max-w-4xl px-4">
+        <PageHeroImage src={OFFICE_PHOTO_PATH} alt={OFFICE_PHOTO_ALT} />
         <h1 className="text-4xl font-bold text-gray-900 mb-8">
           Security Policy
         </h1>

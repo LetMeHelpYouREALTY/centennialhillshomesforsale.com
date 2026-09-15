@@ -9,6 +9,7 @@ import {
   TEXT_LINK_CLASS,
 } from "@/lib/contact";
 import { PageCTA } from "@/components/shared/PageCTA";
+import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 
 export const metadata: Metadata = withShareImage(
@@ -27,6 +28,7 @@ export default function FairHousingPage() {
         <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-blue-600">
           Berkshire Hathaway HomeServices Nevada Properties
         </p>
+        <PageHeroImage src={OFFICE_PHOTO_PATH} alt={OFFICE_PHOTO_ALT} />
         <h1 className="mb-6 text-4xl font-bold text-slate-900">
           Equal Housing Opportunity
         </h1>

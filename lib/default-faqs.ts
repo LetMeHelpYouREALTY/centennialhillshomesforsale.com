@@ -7,12 +7,12 @@ export const defaultFaqs: SiteFaq[] = [
   {
     question: "What areas do you serve?",
     answer:
-      "We specialize in Las Vegas and Henderson, Nevada, including Summerlin, Green Valley, Centennial Hills, and surrounding communities. Coverage includes residential, luxury, and investment properties throughout Southern Nevada.",
+      "Las Vegas and Henderson, including Summerlin, Green Valley, Centennial Hills, and surrounding communities. Coverage includes residential, luxury, and investment properties throughout Southern Nevada.",
   },
   {
     question: "How long does the home buying process take?",
     answer:
-      "Typically, the home buying process takes 30-45 days from offer acceptance to closing. Timelines vary with financing and inspections. We walk the contract dates with you so nothing is a surprise.",
+      "Escrow length is set in the purchase contract, often 30–45 days for financed purchases. Cash and new construction can close on a different timeline. We walk the contract dates with you so nothing is a surprise.",
   },
   {
     question: "Do you help with home valuations?",

@@ -13,6 +13,7 @@ import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionPhoto } from "@/components/shared/SectionPhoto";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
+import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
 import { getPublicSiteUrl } from "@/lib/site-url";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 
@@ -53,6 +54,11 @@ type TopicGuideProps = {
   lastUpdated: string;
   showListings?: boolean;
   children?: React.ReactNode;
+  leadFormType?:
+    | "contact"
+    | "property-search"
+    | "home-valuation"
+    | "newsletter";
 };
 
 const ctaClass =
@@ -73,6 +79,7 @@ export default function TopicGuide({
   lastUpdated,
   showListings = false,
   children,
+  leadFormType = "contact",
 }: TopicGuideProps) {
   const origin = getPublicSiteUrl();
   const heroSrc = imageSrc ?? PAGE_HERO_IMAGES.listings.src;
@@ -193,6 +200,16 @@ export default function TopicGuide({
                 ))}
               </div>
             </section>
+
+            <GuideLeadForm
+              source={`${slug}-guide`}
+              heading={
+                leadFormType === "home-valuation"
+                  ? "Request a CMA"
+                  : `Ask about ${name}`
+              }
+              formType={leadFormType}
+            />
 
             <section
               className="rounded-2xl bg-blue-600 p-8 text-center text-white md:p-12"
