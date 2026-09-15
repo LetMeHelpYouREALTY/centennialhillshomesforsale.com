@@ -69,8 +69,9 @@ export default function WhyChooseUs() {
             How Dr. Jan Duffy actually works a file
           </SectionHeading>
           <p className="mx-auto max-w-3xl text-pretty text-xl text-slate-600">
-            Berkshire Hathaway HomeServices Nevada Properties — local closings
-            with a national brand behind the contract.
+            Berkshire Hathaway HomeServices Nevada Properties — Centennial
+            Hills, Summerlin (89138), Henderson, and 55+ campuses such as Siena.
+            Call or email the client line.
           </p>
         </div>
 

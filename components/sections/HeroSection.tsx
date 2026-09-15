@@ -68,9 +68,10 @@ export default function HeroSection() {
           <br />
           <span className="text-blue-400">with Dr. Jan Duffy</span>
         </h1>
-        <p className="mb-8 max-w-2xl text-lg text-white/90 md:text-xl">
-          Berkshire Hathaway HomeServices Nevada Properties. Search current
-          listings, then call or email the client line for a live pull.
+        <p className="mb-8 max-w-2xl text-pretty text-lg text-white/90 md:text-xl">
+          Berkshire Hathaway HomeServices Nevada Properties. Search 89138,
+          Centennial Hills, Henderson, and 55+ campuses such as Siena, then call
+          or email the client line for a live pull.
         </p>
         <div className="mb-4 flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row">
           <a

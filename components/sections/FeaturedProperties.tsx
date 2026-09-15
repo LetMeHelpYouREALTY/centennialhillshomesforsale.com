@@ -100,7 +100,7 @@ export default function FeaturedProperties() {
                   <h3 className="mb-2 text-xl font-bold text-slate-900">
                     {neighborhood.name}
                   </h3>
-                  <p className="mb-4 text-slate-600">
+                  <p className="mb-4 text-pretty text-slate-600">
                     Listing median, not a sold price and not a CMA for a
                     specific house.
                   </p>

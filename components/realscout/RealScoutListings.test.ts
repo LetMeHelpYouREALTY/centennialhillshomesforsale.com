@@ -10,5 +10,9 @@ describe("RealScout office listings widget", () => {
     const src = readFileSync(resolve(here, "RealScoutListings.tsx"), "utf8");
     expect(src).not.toContain('price-min="500000"');
     expect(src).not.toContain('price-max="800000"');
+    expect(src).toContain("AGENT_EMAIL");
+    expect(src).toContain("89138");
+    expect(src).toContain("Siena");
+    expect(src).toContain("text-pretty");
   });
 });

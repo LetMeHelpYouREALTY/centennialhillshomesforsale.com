@@ -96,6 +96,23 @@ export default function Error({
           </p>
           <MlsSearchForm inputId="mls-q-error" />
         </section>
+        <ul className="mt-8 space-y-2 text-left text-slate-700">
+          <li>
+            <Link href="/neighborhoods/89138" className={TEXT_LINK_CLASS}>
+              89138 Summerlin West homes
+            </Link>
+          </li>
+          <li>
+            <Link href="/55-plus-communities/siena" className={TEXT_LINK_CLASS}>
+              Siena 55+ Summerlin
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact" className={TEXT_LINK_CLASS}>
+              Contact Dr. Jan Duffy
+            </Link>
+          </li>
+        </ul>
       </div>
     </main>
   );

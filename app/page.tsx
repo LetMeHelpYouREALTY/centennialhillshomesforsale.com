@@ -291,10 +291,11 @@ export default async function Home() {
               >
                 Match the search to the right ZIP
               </SectionHeading>
-              <p className="text-lg text-slate-600">
+              <p className="text-pretty text-lg text-slate-600">
                 Google is showing this site for Centennial Hills, Inspirada,
-                Tournament Hills, 89144, 89138, and 55+ campuses. Those are
-                different maps. Pick the page that matches the street you want.
+                Tournament Hills, 89144, 89138, and 55+ campuses such as Siena.
+                Those are different maps. Pick the page that matches the street
+                you want.
               </p>
             </div>
             <div className="mx-auto grid max-w-5xl gap-4 md:grid-cols-2">

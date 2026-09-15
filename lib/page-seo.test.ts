@@ -25,6 +25,8 @@ describe("withShareImage", () => {
     expect(metadata.twitter?.images).toEqual([
       "/images/neighborhoods/centennial-hills.png",
     ]);
+    expect(metadata.description).toContain("homes@heyberkshire.com");
+    expect(metadata.description).toContain("(702) 222-1964");
   });
 
   it("uses an absolute title object for Open Graph", () => {

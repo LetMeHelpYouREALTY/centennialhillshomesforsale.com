@@ -1,4 +1,10 @@
-import { CTA_PHONE, CTA_TEL, TEXT_LINK_CLASS } from "@/lib/contact";
+import {
+  AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
+  CTA_PHONE,
+  CTA_TEL,
+  TEXT_LINK_CLASS,
+} from "@/lib/contact";
 import {
   SEARCH_CENTRAL_FALLBACK_IMAGE,
   type SearchCentralItem,
@@ -28,10 +34,14 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
         <h2 className="text-3xl font-bold text-slate-900 mb-4">
           Google Search Central, applied to this site
         </h2>
-        <p className="text-slate-700">
+        <p className="text-pretty text-slate-700">
           The Search Central feed is unavailable right now. Call{" "}
           <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
             {CTA_PHONE}
+          </a>{" "}
+          or email{" "}
+          <a href={AGENT_EMAIL_MAILTO} className={TEXT_LINK_CLASS}>
+            {AGENT_EMAIL}
           </a>{" "}
           for a live Centennial Hills listing pull.
         </p>
@@ -44,7 +54,7 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
       <h2 className="text-3xl font-bold text-slate-900 mb-4">
         Google Search Central, applied to this site
       </h2>
-      <p className="text-slate-700 mb-4">
+      <p className="text-pretty text-slate-700 mb-4">
         The August 28, 2026{" "}
         <a
           href="https://developers.google.com/search/blog/2026/08/update-site-reputation-policy"
@@ -59,12 +69,16 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
         results are treated differently. This Las Vegas site writes first-party
         copy. We do not rent the domain to third-party advertorials.
       </p>
-      <p className="text-slate-700 mb-8">
+      <p className="text-pretty text-slate-700 mb-8">
         Search Console platform properties (July 2026) track Instagram, TikTok,
         X, and YouTube inside Google — that is not a page we need to build.
         Generative AI reports launched June 3, 2026. Call{" "}
         <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
           {CTA_PHONE}
+        </a>{" "}
+        or email{" "}
+        <a href={AGENT_EMAIL_MAILTO} className={TEXT_LINK_CLASS}>
+          {AGENT_EMAIL}
         </a>{" "}
         for a Centennial Hills listing, not a syndicated dump.
       </p>

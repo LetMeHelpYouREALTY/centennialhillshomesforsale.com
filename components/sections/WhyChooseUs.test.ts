@@ -9,7 +9,9 @@ describe("WhyChooseUs homepage section", () => {
   it("names Siena on the 55+ file type and keeps the office email", () => {
     const src = readFileSync(resolve(here, "WhyChooseUs.tsx"), "utf8");
     expect(src).toContain("Siena");
+    expect(src).toContain("89138");
     expect(src).toContain("homes@heyberkshire.com");
     expect(src).toContain("AGENT_EMAIL_MAILTO");
+    expect(src).not.toMatch(/national brand behind the contract/i);
   });
 });

@@ -130,7 +130,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     pageType: "search",
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Las Vegas REALTOR®",
-    ctaHeadline: "Call for a consult",
+    ctaHeadline: "Call or email the client line",
     ctaSubheadline:
       "Call (702) 222-1964 or email homes@heyberkshire.com with the address. I answer the client line.",
   },
@@ -150,7 +150,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     pageType: "search",
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Las Vegas REALTOR®",
-    ctaHeadline: "Ready to Buy or Sell?",
+    ctaHeadline: "Call or email with the address",
     ctaSubheadline:
       "Call, text, or email homes@heyberkshire.com — I answer the client line.",
   },
@@ -667,7 +667,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     pageType: "lifestyle",
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Confidential Support",
-    ctaHeadline: "Confidential divorce-sale consult",
+    ctaHeadline: "Confidential divorce-sale file",
     ctaSubheadline:
       "I handle divorce sales with complete discretion. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },

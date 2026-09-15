@@ -17,9 +17,9 @@ export default function CTASection() {
           <h2 className="mb-6 text-3xl font-bold md:text-4xl lg:text-5xl">
             Ready to Tour Las Vegas Homes?
           </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-xl text-blue-100">
-            Call or email Dr. Jan Duffy for current MLS matches, a listing
-            strategy, or a private showing.
+          <p className="mx-auto mb-8 max-w-2xl text-pretty text-xl text-blue-100">
+            Call or email Dr. Jan Duffy for current MLS matches in 89138,
+            Centennial Hills, and 55+ campuses such as Siena.
           </p>
 
           <div className="mb-8 flex flex-col items-center justify-center gap-4 sm:flex-row">

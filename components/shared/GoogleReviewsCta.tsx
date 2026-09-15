@@ -25,10 +25,10 @@ export function GoogleReviewsCta({ className = "" }: GoogleReviewsCtaProps) {
         >
           Read the Google reviews
         </h2>
-        <p className="mx-auto mb-8 max-w-2xl text-slate-600">
+        <p className="mx-auto mb-8 max-w-2xl text-pretty text-slate-600">
           I will not invent named testimonials or a star rating on this site.
           Open the Google Business Profile for the Lake Mead Boulevard office,
-          then call if the file is a match.
+          then call or email if the file is a match.
         </p>
         <div className="flex flex-col justify-center gap-4 sm:flex-row">
           <a

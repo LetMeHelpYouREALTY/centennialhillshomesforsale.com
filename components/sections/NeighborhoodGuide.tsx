@@ -298,7 +298,7 @@ export default function NeighborhoodGuide({
                     <h3 className="mb-2 font-bold text-slate-900">
                       {faq.question}
                     </h3>
-                    <p className="text-slate-600">{faq.answer}</p>
+                    <p className="text-pretty text-slate-600">{faq.answer}</p>
                   </div>
                 ))}
               </div>
@@ -319,7 +319,7 @@ export default function NeighborhoodGuide({
               >
                 Tour {name} with Dr. Jan Duffy
               </h2>
-              <p className="mx-auto mb-6 max-w-2xl text-blue-100">
+              <p className="mx-auto mb-6 max-w-2xl text-pretty text-blue-100">
                 First-party local guidance — not a syndicated listing dump.
                 Call, email, or text the client line.
               </p>

@@ -14,5 +14,7 @@ describe("error recovery screen", () => {
     expect(src).toContain("CTA_PHONE");
     expect(src).toContain("OFFICE_NAP");
     expect(src).toContain("text-pretty");
+    expect(src).toContain("/neighborhoods/89138");
+    expect(src).toContain("/55-plus-communities/siena");
   });
 });

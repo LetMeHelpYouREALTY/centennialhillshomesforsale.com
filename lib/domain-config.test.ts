@@ -17,5 +17,7 @@ describe("multi-domain landing copy", () => {
     expect(blob).not.toMatch(/updated in real time/i);
     expect(blob).not.toMatch(/Private Consultation Available/);
     expect(blob).not.toMatch(/Luxury Living/);
+    expect(blob).not.toMatch(/Call for a consult/);
+    expect(blob).not.toMatch(/Ready to Buy or Sell\?/);
   });
 });

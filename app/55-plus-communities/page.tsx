@@ -387,7 +387,7 @@ export default function FiftyFiveCommunitiesPage() {
         schema={generateWebPageSchema({
           name: "Las Vegas 55+ Communities",
           description:
-            "55+ HOPA communities in Las Vegas and Henderson including Sun City, Siena, Trilogy, Del Webb, and Henderson campuses. Dr. Jan Duffy. Call (702) 222-1964.",
+            "55+ HOPA communities in Las Vegas and Henderson including Sun City, Siena, Trilogy, Del Webb, and Henderson campuses. Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
           url: "/55-plus-communities",
         })}
       />
