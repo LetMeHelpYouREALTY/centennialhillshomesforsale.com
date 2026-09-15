@@ -400,18 +400,17 @@ export default function ListingsPage({
           {/* Why Use an Agent Section */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold mb-6 text-center">
-              Why Work With a Berkshire Hathaway HomeServices Agent
+              Why tour Las Vegas listings with Dr. Jan Duffy
             </h2>
             <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
-              In today's Las Vegas market, representation is a written buyer
-              agreement and a live MLS pull. Dr. Jan Duffy brings Berkshire
-              Hathaway HomeServices marketing and referral tools plus street-
-              level knowledge from serving Las Vegas since 2008.
+              Representation is a written buyer agreement and a live MLS pull.
+              Dr. Jan Duffy brings Berkshire Hathaway HomeServices marketing and
+              referral tools plus Clark County files since 2008.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Search className="h-6 w-6" />
+                  <Search className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <h3 className="font-bold mb-2">MLS + referral network</h3>
                 <p className="text-slate-400 text-sm">
@@ -421,7 +420,7 @@ export default function ListingsPage({
               </div>
               <div className="text-center">
                 <div className="bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <TrendingUp className="h-6 w-6" />
+                  <TrendingUp className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <h3 className="font-bold mb-2">Written offer strategy</h3>
                 <p className="text-slate-400 text-sm">
@@ -431,7 +430,7 @@ export default function ListingsPage({
               </div>
               <div className="text-center">
                 <div className="bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <MapPin className="h-6 w-6" />
+                  <MapPin className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <h3 className="font-bold mb-2">Street-level files</h3>
                 <p className="text-slate-400 text-sm">
@@ -441,7 +440,7 @@ export default function ListingsPage({
               </div>
               <div className="text-center">
                 <div className="bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <CheckCircle className="h-6 w-6" />
+                  <CheckCircle className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <h3 className="font-bold mb-2">Written buyer agreement</h3>
                 <p className="text-slate-400 text-sm">

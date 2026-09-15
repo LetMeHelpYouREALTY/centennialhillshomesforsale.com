@@ -13,8 +13,9 @@ import {
 } from "@/lib/market-snapshots";
 import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
-import { FAQSchema } from "@/components/SchemaScript";
+import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
 import Image from "next/image";
+import { generateWebPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = withShareImage(
   {
@@ -243,6 +244,15 @@ const neighborhoodFaqs = [
 export default function NeighborhoodsPage() {
   return (
     <>
+      <SchemaScript
+        id="webpage-schema"
+        schema={generateWebPageSchema({
+          name: "Las Vegas Neighborhoods",
+          description:
+            "Centennial Hills, Inspirada, Tournament Hills, Summerlin, and Henderson guides from Dr. Jan Duffy.",
+          url: "/neighborhoods",
+        })}
+      />
       <FAQSchema faqs={neighborhoodFaqs} />
       <main className="pb-16">
         <div className="container mx-auto px-4">
