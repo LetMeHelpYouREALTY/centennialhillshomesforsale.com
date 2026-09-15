@@ -25,6 +25,8 @@ describe("NeighborhoodGuide conversion chrome", () => {
     expect(src).toContain("SectionHeading");
     expect(src).toContain("Search live MLS in ${name}");
     expect(src).toContain("avoidSrc={hero.src}");
+    expect(src).toContain("imageSrc={section.imageSrc}");
+    expect(src).toContain("Frequently asked questions");
     expect(src).not.toContain("text-blue-200");
     expect(src).not.toContain("text-slate-500");
   });

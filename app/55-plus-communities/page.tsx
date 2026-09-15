@@ -451,9 +451,24 @@ export default function FiftyFiveCommunitiesPage() {
                 <span className="sr-only"> (opens in a new tab)</span>
               </a>
             </div>
-            <div className="mt-8">
+            <section
+              className="mt-8 text-left"
+              aria-labelledby="fifty-five-mls-heading"
+            >
+              <SectionHeading
+                id="fifty-five-mls-heading"
+                className="mb-3 text-center text-2xl font-bold text-slate-900"
+                fallbackSrc={PAGE_HERO_IMAGES.listings.src}
+                avoidSrc={PAGE_HERO_IMAGES.fiftyFivePlus.src}
+              >
+                Search live MLS
+              </SectionHeading>
+              <p className="mb-4 text-center text-pretty text-slate-600">
+                ZIP, street, or community. Submits to current listings — not a
+                scraped sample.
+              </p>
               <MlsSearchForm inputId="mls-q-55-plus" />
-            </div>
+            </section>
             <div className="mx-auto mt-8 max-w-3xl text-left">
               <GuideLeadForm
                 source="55-plus-hub-mid"

@@ -196,18 +196,17 @@ export default function TopicGuide({
 
             {sections.map((section) => (
               <section key={section.heading} className="mb-10">
-                <h2 className="mb-4 text-2xl font-bold text-slate-900">
-                  {section.heading}
-                </h2>
-                <SectionPhoto
-                  heading={section.heading}
+                <SectionHeading
+                  className="mb-4 text-2xl font-bold text-slate-900"
                   neighborhoodName={name}
                   fallbackSrc={heroSrc}
                   avoidSrc={heroSrc}
                   imageSrc={section.imageSrc}
                   imageAlt={section.imageAlt}
-                  className="mb-6"
-                />
+                  photoClassName="mb-6"
+                >
+                  {section.heading}
+                </SectionHeading>
                 <p className="whitespace-pre-line text-pretty text-slate-700">
                   {section.body}
                 </p>
@@ -242,16 +241,15 @@ export default function TopicGuide({
             </section>
 
             <section className="mb-12">
-              <h2 className="mb-6 text-2xl font-bold text-slate-900">
-                Frequently asked questions
-              </h2>
-              <SectionPhoto
-                heading={`Frequently asked questions about ${name}`}
+              <SectionHeading
+                className="mb-6 text-2xl font-bold text-slate-900"
                 neighborhoodName={name}
                 fallbackSrc={heroSrc}
                 avoidSrc={heroSrc}
-                className="mb-6"
-              />
+                photoClassName="mb-6"
+              >
+                Frequently asked questions
+              </SectionHeading>
               <div className="space-y-4">
                 {guideFaqs.map((faq) => (
                   <div

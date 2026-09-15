@@ -294,9 +294,24 @@ export default function NeighborhoodsPage() {
               realtor.com as of {MARKET_SNAPSHOT_AS_OF} — not a CMA. Pick the
               guide that matches the street.
             </p>
-            <div className="mt-8">
+            <section
+              className="mt-8"
+              aria-labelledby="neighborhoods-mls-heading"
+            >
+              <SectionHeading
+                id="neighborhoods-mls-heading"
+                className="mb-3 text-2xl font-bold text-slate-900"
+                fallbackSrc={PAGE_HERO_IMAGES.listings.src}
+                avoidSrc={PAGE_HERO_IMAGES.homepage.src}
+              >
+                Search live MLS
+              </SectionHeading>
+              <p className="mb-4 text-pretty text-slate-600">
+                ZIP, street, or community. Submits to current listings — not a
+                scraped sample.
+              </p>
               <MlsSearchForm inputId="mls-q-neighborhoods" />
-            </div>
+            </section>
             <div className="mx-auto mt-8 max-w-3xl text-left">
               <GuideLeadForm
                 source="neighborhoods-hub-mid"

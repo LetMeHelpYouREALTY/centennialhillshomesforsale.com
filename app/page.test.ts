@@ -10,6 +10,8 @@ describe("homepage MLS search", () => {
     const src = readFileSync(resolve(here, "page.tsx"), "utf8");
     expect(src).toContain('inputId="mls-q-home"');
     expect(src).toContain("MlsSearchForm");
+    expect(src).toContain("Search live MLS");
+    expect(src).toContain("home-mls-heading");
     expect(src).toContain("/55-plus-communities/siena");
     expect(src).toContain("homes@heyberkshire.com");
     expect(src).toContain("AGENT_EMAIL_MAILTO");

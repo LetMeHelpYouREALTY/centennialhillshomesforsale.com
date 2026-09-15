@@ -442,7 +442,7 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
     src: "/images/neighborhoods/lone-mountain.png",
   },
   {
-    test: /\b(faq|question)\b/i,
+    test: /\b(faqs?|questions?)\b/i,
     src: VISIT_OFFICE_PHOTO_PATH,
   },
 ];

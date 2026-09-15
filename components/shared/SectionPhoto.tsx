@@ -50,6 +50,9 @@ type SectionHeadingProps = {
   neighborhoodSlug?: string;
   fallbackSrc?: string;
   avoidSrc?: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  photoClassName?: string;
 };
 
 export function SectionHeading({
@@ -60,6 +63,9 @@ export function SectionHeading({
   neighborhoodSlug,
   fallbackSrc,
   avoidSrc,
+  imageSrc,
+  imageAlt,
+  photoClassName,
 }: SectionHeadingProps) {
   return (
     <>
@@ -72,6 +78,9 @@ export function SectionHeading({
         neighborhoodSlug={neighborhoodSlug}
         fallbackSrc={fallbackSrc}
         avoidSrc={avoidSrc}
+        imageSrc={imageSrc}
+        imageAlt={imageAlt}
+        className={photoClassName}
       />
     </>
   );

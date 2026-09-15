@@ -18,6 +18,8 @@ describe("listings hub FAQs", () => {
     expect(src).toContain("/neighborhoods/centennial-hills");
     expect(src).toContain('name: "Siena 55+"');
     expect(src).toContain('source="listings-hub-mid"');
+    expect(src).toContain("listings-mls-heading");
+    expect(src).toContain("Search live MLS");
     expect(src).toContain("MARKET_SNAPSHOT_AS_OF");
     expect(src).not.toContain("text-slate-400");
     expect(src).toContain("GoogleReviewsCta");

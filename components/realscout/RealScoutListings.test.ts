@@ -18,7 +18,7 @@ describe("RealScout office listings widget", () => {
     expect(src).toContain("AGENT_EMAIL_MAILTO");
     expect(src).toContain("headingId");
     expect(src).toContain("aria-labelledby={headingId}");
-    expect(src).toContain("SectionPhoto");
+    expect(src).toContain("SectionHeading");
     expect(src).toContain("Current Las Vegas Listings");
   });
 });

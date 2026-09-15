@@ -17,5 +17,7 @@ describe("neighborhoods hub", () => {
     expect(src).not.toContain("She will not send you");
     expect(src).toContain("55+ HOPA campuses are a different map");
     expect(src).toContain("SectionHeading");
+    expect(src).toContain("neighborhoods-mls-heading");
+    expect(src).toContain("Search live MLS");
   });
 });

@@ -18,6 +18,7 @@ import {
 } from "@/lib/contact";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
+import { SectionHeading } from "@/components/shared/SectionPhoto";
 import SchemaScript from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
 
@@ -97,9 +98,24 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
             {AGENT_EMAIL}
           </a>
         </div>
-        <div className="mb-10">
+        <section
+          className="mb-10"
+          aria-labelledby="listing-placeholder-mls-heading"
+        >
+          <SectionHeading
+            id="listing-placeholder-mls-heading"
+            className="mb-3 text-xl font-bold text-slate-900"
+            fallbackSrc={PAGE_HERO_IMAGES.buyers.src}
+            avoidSrc={PAGE_HERO_IMAGES.listings.src}
+          >
+            Search live MLS
+          </SectionHeading>
+          <p className="mb-4 text-pretty text-slate-600">
+            ZIP, street, or community. Submits to current listings — not a
+            scraped sample.
+          </p>
           <MlsSearchForm className="mx-0" inputId="mls-q-listing-placeholder" />
-        </div>
+        </section>
         <p className="mb-8 text-pretty text-sm text-slate-600">
           Office:{" "}
           <a

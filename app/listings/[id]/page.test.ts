@@ -11,6 +11,8 @@ describe("listing placeholder page", () => {
     expect(src).toContain("GoogleReviewsCta");
     expect(src).toContain("I pull the live file, not a placeholder");
     expect(src).toContain("generateWebPageSchema");
+    expect(src).toContain("SectionHeading");
+    expect(src).toContain("listing-placeholder-mls-heading");
     expect(src).not.toContain("She will pull");
   });
 });

@@ -210,6 +210,20 @@ describe("site images catalog", () => {
     });
     expect(hours.src).toBe("/images/gbp/visit-office.png");
 
+    const faqs = resolveSectionImage({
+      heading: "55+ Community Buying FAQs",
+      neighborhoodName: "Las Vegas",
+      avoidSrc: PAGE_HERO_IMAGES.fiftyFivePlus.src,
+    });
+    expect(faqs.src).toBe("/images/gbp/visit-office.png");
+
+    const questions = resolveSectionImage({
+      heading: "Frequently asked questions",
+      neighborhoodName: "Las Vegas",
+      avoidSrc: PAGE_HERO_IMAGES.listings.src,
+    });
+    expect(questions.src).toBe("/images/gbp/visit-office.png");
+
     const reviews = resolveSectionImage({
       heading: "Read the Google reviews",
       neighborhoodName: "Las Vegas",

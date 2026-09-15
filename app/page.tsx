@@ -200,12 +200,20 @@ export default async function Home() {
               for this site, not copied from another domain.
             </p>
 
-            <div className="mb-8 flex justify-center">
-              <MlsSearchForm
-                inputId="mls-q-home"
-                buttonClassName="bg-white text-blue-700 hover:bg-blue-50"
-              />
-            </div>
+            <section className="mb-8" aria-labelledby="home-mls-heading">
+              <h2
+                id="home-mls-heading"
+                className="mb-3 text-xl font-bold text-white md:text-2xl"
+              >
+                Search live MLS
+              </h2>
+              <div className="flex justify-center">
+                <MlsSearchForm
+                  inputId="mls-q-home"
+                  buttonClassName="bg-white text-blue-700 hover:bg-blue-50"
+                />
+              </div>
+            </section>
 
             <div className="flex flex-wrap justify-center gap-6 text-sm text-white">
               <div className="flex items-center gap-2">

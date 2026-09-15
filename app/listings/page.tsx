@@ -324,12 +324,27 @@ export default function ListingsPage({
                 .
               </p>
             ) : null}
-            <div className="mb-8">
+            <section
+              className="mb-8 text-left"
+              aria-labelledby="listings-mls-heading"
+            >
+              <SectionHeading
+                id="listings-mls-heading"
+                className="mb-3 text-center text-2xl font-bold text-slate-900"
+                fallbackSrc={PAGE_HERO_IMAGES.buyers.src}
+                avoidSrc={PAGE_HERO_IMAGES.listings.src}
+              >
+                Search live MLS
+              </SectionHeading>
+              <p className="mb-4 text-center text-pretty text-slate-600">
+                ZIP, street, or community. Submits to current listings — not a
+                scraped sample.
+              </p>
               <MlsSearchForm
                 inputId="mls-q-listings"
                 defaultQuery={query || undefined}
               />
-            </div>
+            </section>
             <div className="mx-auto mb-8 max-w-3xl text-left">
               <GuideLeadForm
                 source="listings-hub-mid"
