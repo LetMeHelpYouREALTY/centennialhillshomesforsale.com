@@ -11,6 +11,7 @@ import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
+import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { FAQSchema } from "@/components/SchemaScript";
 import {
@@ -243,16 +244,19 @@ export default function ListingsPage() {
 
           {/* Popular Searches Section */}
           <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-8 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.listings.src}
+              avoidSrc={PAGE_HERO_IMAGES.listings.src}
+            >
               Popular Property Searches in Las Vegas
-            </h2>
+            </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Las Vegas offers diverse neighborhoods for every lifestyle and
-              budget. Whether you're seeking luxury estates in guard-gated
-              communities, homes near parks, trails, and recreation centers, or
-              new construction, search live MLS or open a neighborhood guide.
-              Browse the searches below or use RealScout to filter live
-              inventory.
+              Search live MLS across named Las Vegas, Henderson, and Summerlin
+              communities by ZIP, square footage, commute, and amenities. Luxury
+              estates in guard-gated communities, homes near parks and trails,
+              and new construction are all in RealScout. Browse the searches
+              below or open a neighborhood guide.
             </p>
             <div className="grid md:grid-cols-3 gap-4">
               {popularSearches.map((search) => (
@@ -277,9 +281,13 @@ export default function ListingsPage() {
 
           {/* Price Range Guide */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-4 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.listings.src}
+              avoidSrc={PAGE_HERO_IMAGES.listings.src}
+            >
               Las Vegas Home Price Guide
-            </h2>
+            </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Nevada charges no state income tax on wages. Home-price
               differences versus coastal cities are not a fixed 40–60% on every
@@ -314,24 +322,26 @@ export default function ListingsPage() {
 
           {/* Neighborhood Overview */}
           <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-4 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.listings.src}
+              avoidSrc={PAGE_HERO_IMAGES.listings.src}
+            >
               Las Vegas Neighborhoods & Communities
-            </h2>
+            </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Each Las Vegas neighborhood offers a unique lifestyle, from the
-              resort-style living of Summerlin to the Henderson communities with
-              parks and trail access of Henderson. Understanding these
-              differences is crucial to finding a home that fits your needs. As
-              a Berkshire Hathaway HomeServices agent serving Las Vegas since
-              2008, Dr. Jan Duffy matches ZIP, commute times, amenities, and
-              budget — not school slogans or a “family-friendly” pitch.
+              Summerlin, Henderson, Centennial Hills, and North Las Vegas differ
+              by ZIP, commute, HOA, and square footage. As a Berkshire Hathaway
+              HomeServices agent serving Las Vegas since 2008, Dr. Jan Duffy
+              matches those facts — not school slogans or a “family-friendly”
+              pitch.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {neighborhoods.map((neighborhood) => (
                 <Link
                   key={neighborhood.name}
                   href={neighborhood.href}
-                  className="bg-white border border-slate-200 rounded-lg p-6 hover:shadow-lg transition-shadow no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+                  className="bg-white border border-slate-200 rounded-lg p-6 hover:shadow-lg transition-shadow no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 min-h-11"
                 >
                   <h3 className="font-bold text-lg text-slate-900 mb-2">
                     {neighborhood.name}
@@ -356,7 +366,7 @@ export default function ListingsPage() {
             <div className="text-center mt-8">
               <Link
                 href="/neighborhoods"
-                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+                className="inline-flex min-h-11 items-center text-blue-600 hover:text-blue-700 font-semibold no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
                 Explore All Neighborhoods{" "}
                 <ArrowRight className="h-4 w-4 ml-2" />
@@ -423,9 +433,13 @@ export default function ListingsPage() {
 
           {/* Market Stats */}
           <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-4 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.market.src}
+              avoidSrc={PAGE_HERO_IMAGES.listings.src}
+            >
               Las Vegas Real Estate Market Statistics
-            </h2>
+            </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               {MARKET_SNAPSHOT_SOURCE}. Listing medians are not days-on-market
               and are not a CMA. Ask for a live pull before you bid.
@@ -464,9 +478,13 @@ export default function ListingsPage() {
 
           {/* Home Buying Process */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-4 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.buyers.src}
+              avoidSrc={PAGE_HERO_IMAGES.listings.src}
+            >
               The Home Buying Process in Las Vegas
-            </h2>
+            </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Buying a home is one of the most significant financial decisions
               you'll make. Understanding the process helps reduce stress and
@@ -501,9 +519,9 @@ export default function ListingsPage() {
                   </h3>
                   <p className="text-slate-600 text-sm">
                     Location, size, features, and budget all factor into your
-                    search. Dr. Jan helps you identify which Las Vegas
-                    neighborhoods match your lifestyle while setting up
-                    automated MLS alerts so you never miss a new listing.
+                    search. Dr. Jan helps you match ZIP, commute, square
+                    footage, and amenities, then sets up automated MLS alerts so
+                    you never miss a new listing.
                   </p>
                 </div>
               </div>
@@ -560,9 +578,13 @@ export default function ListingsPage() {
 
           {/* FAQ Section */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-8 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.contact.src}
+              avoidSrc={PAGE_HERO_IMAGES.listings.src}
+            >
               Frequently Asked Questions About Las Vegas Real Estate
-            </h2>
+            </SectionHeading>
             <div className="space-y-4">
               {listingFaqs.map((faq) => (
                 <div key={faq.question} className="bg-slate-50 rounded-lg p-6">

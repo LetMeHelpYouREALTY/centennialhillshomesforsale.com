@@ -18,6 +18,7 @@ import { AGENT_PHOTO_PATH } from "@/lib/brand-assets";
 import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
+import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import { getPublicSiteUrl } from "@/lib/site-url";
@@ -344,9 +345,13 @@ export default function AboutPage() {
 
           {/* Specializations Section */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
+            <SectionHeading
+              className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.about.src}
+              avoidSrc={PAGE_HERO_IMAGES.about.src}
+            >
               Areas of Specialization
-            </h2>
+            </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Dr. Jan Duffy works residential files across Las Vegas, Henderson,
               and Summerlin. First-time buyers, luxury tours, investors, and 55+
@@ -427,15 +432,18 @@ export default function AboutPage() {
 
           {/* Areas Served */}
           <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
+            <SectionHeading
+              className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.listings.src}
+              avoidSrc={PAGE_HERO_IMAGES.about.src}
+            >
               Areas Served by BHHS Nevada Properties
-            </h2>
+            </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Dr. Jan Duffy serves the entire Las Vegas Valley with specialized
-              knowledge of each neighborhood's unique characteristics, price
-              points, and lifestyle offerings. From luxury estates in The Ridges
-              to affordable new construction in North Las Vegas, she provides
-              expert guidance wherever you want to buy or sell.
+              Dr. Jan Duffy serves the entire Las Vegas Valley with named ZIPs,
+              commute times, HOA notes, and square footage. From custom homes in
+              The Ridges to production inventory in North Las Vegas, she prices
+              each file with a live CMA.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {areasServed.map((area) => (

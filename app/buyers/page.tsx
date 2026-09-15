@@ -18,6 +18,7 @@ import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
+import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
 import Image from "next/image";
 import {
@@ -69,7 +70,7 @@ const buyingSteps = [
     icon: Search,
     title: "Define Your Priorities & Search",
     description:
-      "Dr. Jan provides access to all MLS listings, off-market opportunities, and new construction. She'll help you identify which Las Vegas neighborhoods match your lifestyle while setting up automated alerts so you never miss a new listing.",
+      "Dr. Jan provides access to all MLS listings, off-market opportunities, and new construction. She'll help you match ZIP, commute, square footage, and amenities, then set up automated alerts so you never miss a new listing.",
   },
   {
     icon: FileText,
@@ -234,9 +235,13 @@ export default function BuyersPage() {
 
           {/* Buying Process */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-4 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.buyers.src}
+              avoidSrc={PAGE_HERO_IMAGES.buyers.src}
+            >
               The Home Buying Process in Las Vegas
-            </h2>
+            </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Buying a home is one of the most significant financial decisions
               you'll make. Understanding the process helps reduce stress and
@@ -276,9 +281,13 @@ export default function BuyersPage() {
 
           {/* Neighborhood Guide */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-4 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.listings.src}
+              avoidSrc={PAGE_HERO_IMAGES.buyers.src}
+            >
               Las Vegas Neighborhoods for Home Buyers
-            </h2>
+            </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Las Vegas ZIPs are different maps. Listing medians below are from{" "}
               {MARKET_SNAPSHOT_SOURCE} as of {MARKET_SNAPSHOT_AS_OF} — not a
@@ -332,9 +341,13 @@ export default function BuyersPage() {
 
           {/* Buyer Types */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-4 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.buyers.src}
+              avoidSrc={PAGE_HERO_IMAGES.buyers.src}
+            >
               Specialized Guidance for Every Buyer
-            </h2>
+            </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Different buyers have different needs. A first-time buyer needs
               education and hand-holding through the process. A California
@@ -400,9 +413,13 @@ export default function BuyersPage() {
 
           {/* Why BHHS */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-4 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.about.src}
+              avoidSrc={PAGE_HERO_IMAGES.buyers.src}
+            >
               Why Buy with Berkshire Hathaway HomeServices
-            </h2>
+            </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Not all real estate agents are created equal. When you choose a
               Berkshire Hathaway HomeServices agent, you're choosing the only
@@ -522,9 +539,13 @@ export default function BuyersPage() {
 
           {/* FAQ */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-4 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.contact.src}
+              avoidSrc={PAGE_HERO_IMAGES.buyers.src}
+            >
               Frequently Asked Questions About Buying in Las Vegas
-            </h2>
+            </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Get answers to the most common questions from Las Vegas home
               buyers. If you don't see your question here, call Dr. Jan Duffy at

@@ -8,6 +8,7 @@ import {
 } from "@/components/SchemaScript";
 import { FairHousingNotice } from "@/components/shared/FairHousingNotice";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
+import { SectionPhoto } from "@/components/shared/SectionPhoto";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import { getPublicSiteUrl } from "@/lib/site-url";
@@ -168,14 +169,16 @@ export default function NeighborhoodGuide({
                 <h2 className="mb-4 text-2xl font-bold text-slate-900">
                   {section.heading}
                 </h2>
-                {section.imageSrc ? (
-                  <PageHeroImage
-                    src={section.imageSrc}
-                    alt={section.imageAlt ?? section.heading}
-                    priority={false}
-                    className="mb-6"
-                  />
-                ) : null}
+                <SectionPhoto
+                  heading={section.heading}
+                  neighborhoodName={name}
+                  neighborhoodSlug={slug}
+                  fallbackSrc={hero.src}
+                  avoidSrc={hero.src}
+                  imageSrc={section.imageSrc}
+                  imageAlt={section.imageAlt}
+                  className="mb-6"
+                />
                 <p className="whitespace-pre-line text-slate-700">
                   {section.body}
                 </p>
@@ -188,6 +191,14 @@ export default function NeighborhoodGuide({
               <h2 className="mb-4 text-2xl font-bold text-slate-900">
                 Nearby pages
               </h2>
+              <SectionPhoto
+                heading={`Nearby pages from ${name}`}
+                neighborhoodName={name}
+                neighborhoodSlug={slug}
+                fallbackSrc={hero.src}
+                avoidSrc={hero.src}
+                className="mb-6"
+              />
               <ul className="grid gap-3 md:grid-cols-2">
                 {related.map((item) => (
                   <li key={item.href}>
@@ -206,6 +217,14 @@ export default function NeighborhoodGuide({
               <h2 className="mb-6 text-2xl font-bold text-slate-900">
                 Frequently asked questions
               </h2>
+              <SectionPhoto
+                heading={`Frequently asked questions about ${name}`}
+                neighborhoodName={name}
+                neighborhoodSlug={slug}
+                fallbackSrc={hero.src}
+                avoidSrc={hero.src}
+                className="mb-6"
+              />
               <div className="space-y-4">
                 {faqs.map((faq) => (
                   <div

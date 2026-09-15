@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { OFFICE_PHOTO_PATH, OFFICE_PHOTO_ALT } from "@/lib/site-images";
-import { CTA_PHONE, CTA_TEL, OFFICE_NAP, AGENT_EMAIL } from "@/lib/contact";
+import {
+  CTA_PHONE,
+  CTA_TEL,
+  OFFICE_NAP,
+  AGENT_EMAIL,
+  TEXT_LINK_CLASS,
+} from "@/lib/contact";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 
@@ -62,17 +68,11 @@ export default function FairHousingPage() {
           <p className="text-slate-700">
             If you need a reasonable accommodation to access our services or
             office, call{" "}
-            <a
-              href={CTA_TEL}
-              className="font-semibold text-blue-700 min-h-11 inline-flex items-center"
-            >
+            <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
               {CTA_PHONE}
             </a>{" "}
             or email{" "}
-            <a
-              href={`mailto:${AGENT_EMAIL}`}
-              className="font-semibold text-blue-700"
-            >
+            <a href={`mailto:${AGENT_EMAIL}`} className={TEXT_LINK_CLASS}>
               {AGENT_EMAIL}
             </a>
             . Office: {OFFICE_NAP.full}.
@@ -93,7 +93,7 @@ export default function FairHousingPage() {
               Housing: 1-800-669-9777 ·{" "}
               <a
                 href="https://www.hud.gov/fairhousing"
-                className="text-blue-700 underline"
+                className={TEXT_LINK_CLASS}
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Phone } from "lucide-react";
-import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
+import { CTA_PHONE, CTA_TEL, TEXT_LINK_CLASS } from "@/lib/contact";
 
 export default function NotFound() {
   return (
@@ -41,18 +41,18 @@ export default function NotFound() {
           <li>
             <Link
               href="/neighborhoods/centennial-hills"
-              className="text-blue-700"
+              className={TEXT_LINK_CLASS}
             >
               Centennial Hills homes
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="text-blue-700">
+            <Link href="/contact" className={TEXT_LINK_CLASS}>
               Contact Dr. Jan Duffy
             </Link>
           </li>
           <li>
-            <Link href="/home-valuation" className="text-blue-700">
+            <Link href="/home-valuation" className={TEXT_LINK_CLASS}>
               Home valuation
             </Link>
           </li>

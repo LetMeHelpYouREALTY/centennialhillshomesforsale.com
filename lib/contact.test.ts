@@ -8,6 +8,8 @@ import {
   FUB_PHONE,
   OFFICE_NAP,
   REALSCOUT_SEARCH_URL,
+  TEXT_LINK_CLASS,
+  TEXT_LINK_ON_DARK_CLASS,
 } from "./contact";
 
 describe("client-facing contact constants", () => {
@@ -25,6 +27,12 @@ describe("client-facing contact constants", () => {
     expect(OFFICE_NAP.zip).toBe("89134");
     expect(AGENT_EMAIL).toBe("homes@heyberkshire.com");
     expect(AGENT_LICENSE).toBe("S.0197614.LLC");
+  });
+
+  it("keeps inline text links at a 44px target", () => {
+    expect(TEXT_LINK_CLASS).toContain("min-h-11");
+    expect(TEXT_LINK_ON_DARK_CLASS).toContain("min-h-11");
+    expect(TEXT_LINK_CLASS).toContain("focus-visible:ring-2");
   });
 
   it("uses https for RealScout and Calendly destinations", () => {

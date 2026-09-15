@@ -12,6 +12,14 @@ export const AGENT_EMAIL = "homes@heyberkshire.com";
 export const AGENT_EMAIL_MAILTO = "mailto:homes@heyberkshire.com";
 export const AGENT_LICENSE = "S.0197614.LLC";
 
+/** Inline tel/mailto/external text links — 44px target + visible focus. */
+export const TEXT_LINK_CLASS =
+  "inline-flex min-h-11 items-center font-semibold text-blue-700 underline decoration-blue-700/40 underline-offset-2 hover:decoration-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600";
+
+/** Inline links on dark NAP / hero cards. */
+export const TEXT_LINK_ON_DARK_CLASS =
+  "inline-flex min-h-11 items-center font-medium text-white hover:text-blue-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white";
+
 export const REALSCOUT_SEARCH_URL = "https://drjanduffy.realscout.com/";
 export const CALENDLY_SHOWING_URL = "https://calendly.com/drjanduffy/showing";
 

@@ -12,6 +12,7 @@ import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
+import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import {
   formatUsd,
@@ -222,9 +223,13 @@ export default function SellersPage() {
 
           {/* Benefits */}
           <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-4 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.sellers.src}
+              avoidSrc={PAGE_HERO_IMAGES.sellers.src}
+            >
               The Berkshire Hathaway HomeServices Selling Advantage
-            </h2>
+            </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Not all real estate agents can deliver the same results. When you
               choose a Berkshire Hathaway HomeServices agent, you're choosing
@@ -254,9 +259,13 @@ export default function SellersPage() {
 
           {/* Selling Process */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-4 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.sellersListing.src}
+              avoidSrc={PAGE_HERO_IMAGES.sellers.src}
+            >
               The Home Selling Process
-            </h2>
+            </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Selling a home involves many steps, but you don't have to navigate
               them alone. Dr. Jan Duffy manages every detail from initial
@@ -285,9 +294,13 @@ export default function SellersPage() {
 
           {/* Seller Types */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-4 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.sellers.src}
+              avoidSrc={PAGE_HERO_IMAGES.sellers.src}
+            >
               Specialized Services for Every Seller
-            </h2>
+            </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Every seller's situation is unique. Whether you're upgrading,
               downsizing, dealing with a life change, or relocating for work,
@@ -364,9 +377,13 @@ export default function SellersPage() {
 
           {/* Expert Quote */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-6 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.sellersListing.src}
+              avoidSrc={PAGE_HERO_IMAGES.sellers.src}
+            >
               Expert Selling Advice
-            </h2>
+            </SectionHeading>
             <div className="bg-slate-50 rounded-lg p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
                 "Pricing your home to the comps from day one is the single most
@@ -386,9 +403,13 @@ export default function SellersPage() {
 
           {/* What's Included */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-4 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.sellersListing.src}
+              avoidSrc={PAGE_HERO_IMAGES.sellers.src}
+            >
               What's Included When You List with BHHS
-            </h2>
+            </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               When you list with Dr. Jan Duffy at Berkshire Hathaway
               HomeServices, you receive comprehensive marketing and support
@@ -445,9 +466,13 @@ export default function SellersPage() {
 
           {/* FAQ */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-4 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.contact.src}
+              avoidSrc={PAGE_HERO_IMAGES.sellers.src}
+            >
               Frequently Asked Questions About Selling in Las Vegas
-            </h2>
+            </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Selling your home raises many questions. Here are answers to the
               most common concerns from Las Vegas home sellers.

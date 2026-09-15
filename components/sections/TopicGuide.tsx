@@ -4,9 +4,11 @@ import { CTA_PHONE, CTA_TEL, OFFICE_HOURS, OFFICE_NAP } from "@/lib/contact";
 import { FAQSchema } from "@/components/SchemaScript";
 import { FairHousingNotice } from "@/components/shared/FairHousingNotice";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
+import { SectionPhoto } from "@/components/shared/SectionPhoto";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import { getPublicSiteUrl } from "@/lib/site-url";
+import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 
 export type TopicFaq = {
   question: string;
@@ -67,6 +69,7 @@ export default function TopicGuide({
   children,
 }: TopicGuideProps) {
   const origin = getPublicSiteUrl();
+  const heroSrc = imageSrc ?? PAGE_HERO_IMAGES.listings.src;
 
   return (
     <>
@@ -117,15 +120,15 @@ export default function TopicGuide({
                 <h2 className="mb-4 text-2xl font-bold text-slate-900">
                   {section.heading}
                 </h2>
-                {section.imageSrc ? (
-                  <PageHeroImage
-                    src={section.imageSrc}
-                    alt={section.imageAlt ?? section.heading}
-                    priority={false}
-                    size="section"
-                    className="mb-6"
-                  />
-                ) : null}
+                <SectionPhoto
+                  heading={section.heading}
+                  neighborhoodName={name}
+                  fallbackSrc={heroSrc}
+                  avoidSrc={heroSrc}
+                  imageSrc={section.imageSrc}
+                  imageAlt={section.imageAlt}
+                  className="mb-6"
+                />
                 <p className="whitespace-pre-line text-slate-700">
                   {section.body}
                 </p>
@@ -138,6 +141,13 @@ export default function TopicGuide({
               <h2 className="mb-4 text-2xl font-bold text-slate-900">
                 Related pages
               </h2>
+              <SectionPhoto
+                heading={`Related pages for ${name}`}
+                neighborhoodName={name}
+                fallbackSrc={heroSrc}
+                avoidSrc={heroSrc}
+                className="mb-6"
+              />
               <ul className="grid gap-3 md:grid-cols-2">
                 {related.map((item) => (
                   <li key={item.href}>
@@ -156,6 +166,13 @@ export default function TopicGuide({
               <h2 className="mb-6 text-2xl font-bold text-slate-900">
                 Frequently asked questions
               </h2>
+              <SectionPhoto
+                heading={`Frequently asked questions about ${name}`}
+                neighborhoodName={name}
+                fallbackSrc={heroSrc}
+                avoidSrc={heroSrc}
+                className="mb-6"
+              />
               <div className="space-y-4">
                 {faqs.map((faq) => (
                   <div

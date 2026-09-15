@@ -205,6 +205,182 @@ export function getNeighborhoodImage(slug: string): SiteImage {
   );
 }
 
+/**
+ * Heading keyword → existing git photo. More specific rules first.
+ * Alts are built per heading so inner H2s stay unique.
+ */
+export const HEADING_IMAGE_RULES: ReadonlyArray<{
+  test: RegExp;
+  src: string;
+}> = [
+  {
+    test: /\b(golf|tpc|tee time|country club)\b/i,
+    src: "/images/neighborhoods/red-rock-country-club.png",
+  },
+  {
+    test: /\b(lake las vegas|waterfront|marina)\b/i,
+    src: "/images/neighborhoods/del-webb-lake-las-vegas.png",
+  },
+  {
+    test: /\b(55\+|sun city|del webb|hopa|active adult|age-restrict)/i,
+    src: PAGE_HERO_IMAGES.fiftyFivePlus.src,
+  },
+  {
+    test: /\b(the ridges|custom estate|guard-gated luxury)\b/i,
+    src: PAGE_HERO_IMAGES.luxuryRidges.src,
+  },
+  {
+    test: /\b(luxury|guard-gated)\b/i,
+    src: PAGE_HERO_IMAGES.luxury.src,
+  },
+  {
+    test: /\b(new construction|builder|production home)\b/i,
+    src: PAGE_HERO_IMAGES.newConstruction.src,
+  },
+  {
+    test: /\b(first[- ]time|first home)\b/i,
+    src: PAGE_HERO_IMAGES.firstTimeBuyers.src,
+  },
+  {
+    test: /\b(california)\b/i,
+    src: PAGE_HERO_IMAGES.californiaRelocator.src,
+  },
+  {
+    test: /\b(relocation|moving truck|inbound move)\b/i,
+    src: PAGE_HERO_IMAGES.relocation.src,
+  },
+  {
+    test: /\b(invest|rental|cash flow)\b/i,
+    src: PAGE_HERO_IMAGES.investment.src,
+  },
+  {
+    test: /\b(valuation|cma|comps|worth)\b/i,
+    src: PAGE_HERO_IMAGES.homeValuation.src,
+  },
+  {
+    test: /\b(staging|list your|selling process|seller)\b/i,
+    src: PAGE_HERO_IMAGES.sellersListing.src,
+  },
+  {
+    test: /\b(google business|gbp|review)\b/i,
+    src: PAGE_HERO_IMAGES.googleBusiness.src,
+  },
+  {
+    test: /\b(office hours|visit the office|lake mead)\b/i,
+    src: VISIT_OFFICE_PHOTO_PATH,
+  },
+  {
+    test: /\b(about dr\.? jan|dr\. jan duffy)\b/i,
+    src: PAGE_HERO_IMAGES.about.src,
+  },
+  {
+    test: /\b(contact|get in touch|reach out)\b/i,
+    src: PAGE_HERO_IMAGES.contact.src,
+  },
+  {
+    test: /\b(buyer|tour|showing|offer)\b/i,
+    src: PAGE_HERO_IMAGES.buyers.src,
+  },
+  {
+    test: /\b(market|inventory|median|statistics|outlook)\b/i,
+    src: PAGE_HERO_IMAGES.market.src,
+  },
+  {
+    test: /\b(search|mls|for sale|listings?|price guide)\b/i,
+    src: PAGE_HERO_IMAGES.listings.src,
+  },
+  {
+    test: /\b(drive time|commute|freeway|us-95|i-215|downtown)\b/i,
+    src: PAGE_HERO_IMAGES.listings.src,
+  },
+  {
+    test: /\b(red rock|hiking|trail)\b/i,
+    src: "/images/neighborhoods/summerlin.png",
+  },
+  {
+    test: /\b(89138|summerlin west)\b/i,
+    src: "/images/neighborhoods/summerlin-west.png",
+  },
+  {
+    test: /\b(summerlin)\b/i,
+    src: "/images/neighborhoods/summerlin.png",
+  },
+  {
+    test: /\b(centennial)\b/i,
+    src: "/images/neighborhoods/centennial-hills.png",
+  },
+  {
+    test: /\b(henderson|green valley|inspirada)\b/i,
+    src: "/images/neighborhoods/henderson.png",
+  },
+  {
+    test: /\b(skye canyon)\b/i,
+    src: "/images/neighborhoods/skye-canyon.png",
+  },
+  {
+    test: /\b(lone mountain)\b/i,
+    src: "/images/neighborhoods/lone-mountain.png",
+  },
+  {
+    test: /\b(faq|question)\b/i,
+    src: VISIT_OFFICE_PHOTO_PATH,
+  },
+];
+
+function hashHeading(heading: string): number {
+  let hash = 0;
+  for (let i = 0; i < heading.length; i += 1) {
+    hash = (hash + heading.charCodeAt(i) * (i + 1)) % 997;
+  }
+  return hash;
+}
+
+function pickFromPool(heading: string, pool: string[]): string {
+  if (pool.length === 0) {
+    return PAGE_HERO_IMAGES.listings.src;
+  }
+  return pool[hashHeading(heading) % pool.length];
+}
+
+export type ResolveSectionImageInput = {
+  heading: string;
+  neighborhoodName?: string;
+  neighborhoodSlug?: string;
+  fallbackSrc?: string;
+  avoidSrc?: string;
+};
+
+/** Compact, heading-matched photo from the git-backed catalog. */
+export function resolveSectionImage(
+  input: ResolveSectionImageInput,
+): SiteImage {
+  const heading = input.heading.trim().replace(/\s+/g, " ");
+  const place = input.neighborhoodName ?? "Las Vegas";
+  const alt = `${heading} — ${place}, Nevada photo for Dr. Jan Duffy`;
+  const avoid = input.avoidSrc;
+
+  for (const rule of HEADING_IMAGE_RULES) {
+    if (rule.test.test(heading) && rule.src !== avoid) {
+      return { src: rule.src, alt };
+    }
+  }
+
+  if (input.neighborhoodSlug) {
+    const neighborhood = getNeighborhoodImage(input.neighborhoodSlug);
+    if (neighborhood.src !== avoid) {
+      return { src: neighborhood.src, alt };
+    }
+  }
+
+  const pool = Object.values(PAGE_HERO_IMAGES)
+    .map((image) => image.src)
+    .filter((src) => src !== avoid);
+  const fallback = input.fallbackSrc ?? PAGE_HERO_IMAGES.listings.src;
+  const src = pool.length > 0 ? pickFromPool(heading, pool) : fallback;
+
+  return { src, alt };
+}
+
 /** Cloudflare Images custom id for a git-backed public path. */
 export function cloudflareImageId(src: string): string {
   return src

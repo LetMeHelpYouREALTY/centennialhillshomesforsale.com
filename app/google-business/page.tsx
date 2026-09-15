@@ -14,10 +14,11 @@ import {
 import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
-import { OFFICE_NAP } from "@/lib/contact";
+import { OFFICE_NAP, TEXT_LINK_ON_DARK_CLASS } from "@/lib/contact";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
+import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import {
   businessInfo,
@@ -114,7 +115,7 @@ export default function GoogleBusinessPage() {
                       <Phone className="h-5 w-5 text-blue-400 flex-shrink-0" />
                       <a
                         href={`tel:${businessInfo.phone.tel}`}
-                        className="font-medium hover:text-blue-300"
+                        className={TEXT_LINK_ON_DARK_CLASS}
                       >
                         {businessInfo.phone.display}
                       </a>
@@ -123,7 +124,7 @@ export default function GoogleBusinessPage() {
                       <Mail className="h-5 w-5 text-blue-400 flex-shrink-0" />
                       <a
                         href={`mailto:${businessInfo.email}`}
-                        className="hover:text-blue-300"
+                        className={TEXT_LINK_ON_DARK_CLASS}
                       >
                         {businessInfo.email}
                       </a>
@@ -202,9 +203,13 @@ export default function GoogleBusinessPage() {
 
           {/* About - 750 Word Description Structure */}
           <section className="max-w-4xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-8 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.about.src}
+              avoidSrc={PAGE_HERO_IMAGES.googleBusiness.src}
+            >
               About Dr. Jan Duffy
-            </h2>
+            </SectionHeading>
 
             {/* Section 1: Who We Are */}
             <div className="mb-8">
@@ -242,9 +247,13 @@ export default function GoogleBusinessPage() {
 
           {/* Services - Each creates searchable GBP field */}
           <section className="max-w-5xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-8 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.buyers.src}
+              avoidSrc={PAGE_HERO_IMAGES.googleBusiness.src}
+            >
               Real Estate Services
-            </h2>
+            </SectionHeading>
             <div className="grid md:grid-cols-3 gap-4">
               {businessInfo.services.map((service) => (
                 <div
@@ -269,9 +278,13 @@ export default function GoogleBusinessPage() {
 
           {/* Service Areas - Distance factor */}
           <section className="max-w-5xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-8 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.listings.src}
+              avoidSrc={PAGE_HERO_IMAGES.googleBusiness.src}
+            >
               Service Areas
-            </h2>
+            </SectionHeading>
             <div className="bg-blue-50 rounded-xl p-8">
               <div className="grid md:grid-cols-3 gap-8">
                 <div>
@@ -351,9 +364,13 @@ export default function GoogleBusinessPage() {
 
           {/* FAQ Section - Extra ranking boost */}
           <section className="max-w-4xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-8 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.contact.src}
+              avoidSrc={PAGE_HERO_IMAGES.googleBusiness.src}
+            >
               Frequently Asked Questions
-            </h2>
+            </SectionHeading>
             <div className="space-y-4">
               {gbpFAQs.map((faq, index) => (
                 <div
@@ -376,9 +393,13 @@ export default function GoogleBusinessPage() {
           <section className="max-w-4xl mx-auto mb-16">
             <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border border-yellow-200 rounded-xl p-8 text-center">
               <Star className="h-12 w-12 text-yellow-500 mx-auto mb-4" />
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">
+              <SectionHeading
+                className="text-2xl font-bold text-slate-900 mb-4"
+                fallbackSrc={PAGE_HERO_IMAGES.googleBusiness.src}
+                avoidSrc={PAGE_HERO_IMAGES.googleBusiness.src}
+              >
                 Your Review Helps Others Find Quality Service
-              </h2>
+              </SectionHeading>
               <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
                 If Dr. Jan helped you buy or sell a home, please consider
                 sharing your experience. Mention your neighborhood, type of

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
+import { SectionPhoto } from "@/components/shared/SectionPhoto";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
 import {
   formatUsd,
@@ -108,6 +109,13 @@ export default function CentennialHillsPage() {
         <h2 className="mb-4 text-2xl font-bold text-slate-900">
           Sample drive times from Centennial Hills
         </h2>
+        <SectionPhoto
+          heading="Sample drive times from Centennial Hills"
+          neighborhoodName="Centennial Hills"
+          neighborhoodSlug="centennial-hills"
+          avoidSrc="/images/neighborhoods/centennial-hills.png"
+          className="mb-6"
+        />
         <div className="overflow-x-auto">
           <table className="w-full border border-slate-200 bg-white text-sm">
             <caption className="mb-2 text-left text-slate-600">

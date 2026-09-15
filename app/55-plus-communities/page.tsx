@@ -20,7 +20,8 @@ import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
-import { REALSCOUT_SEARCH_URL } from "@/lib/contact";
+import { SectionHeading } from "@/components/shared/SectionPhoto";
+import { CTA_PHONE, CTA_TEL, REALSCOUT_SEARCH_URL } from "@/lib/contact";
 import {
   formatUsd,
   LISTING_MEDIANS_USD,
@@ -211,7 +212,7 @@ const communities = [
       "Lakefront and mountain views",
       "Resort-style amenities",
       "Newest construction (2016+)",
-      "Del Webb lifestyle programming",
+      "Del Webb rec programming",
     ],
     description:
       "The newest Del Webb community combines modern construction with stunning Lake Las Vegas setting.",
@@ -369,17 +370,17 @@ export default function FiftyFiveCommunitiesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+17022221964"
-                className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
+                href={CTA_TEL}
+                className="inline-flex min-h-11 items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call (702) 222-1964
+                Call {CTA_PHONE}
               </a>
               <a
                 href={REALSCOUT_SEARCH_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-slate-100 text-slate-900 px-8 py-4 rounded-md font-bold text-lg hover:bg-slate-200 transition-colors"
+                className="inline-flex min-h-11 items-center justify-center bg-slate-100 text-slate-900 px-8 py-4 rounded-md font-bold text-lg hover:bg-slate-200 transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
               >
                 Explore Communities
                 <ArrowRight className="h-5 w-5 ml-2" />
@@ -483,12 +484,17 @@ export default function FiftyFiveCommunitiesPage() {
 
           {/* Lifestyle Benefits */}
           <section className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-4 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.fiftyFivePlus.src}
+              avoidSrc={PAGE_HERO_IMAGES.fiftyFivePlus.src}
+            >
               Why Active Adults Choose Las Vegas
-            </h2>
+            </SectionHeading>
             <p className="text-lg text-slate-600 text-center mb-8 max-w-3xl mx-auto">
-              Beyond the world-class amenities, Las Vegas 55+ communities offer
-              a lifestyle that's hard to match anywhere else.
+              55+ HOPA communities pair rec campuses, golf, and one-story floor
+              plans with named ZIPs. Confirm occupancy rules on the resale docs
+              before you bid.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {lifestyleBenefits.map((benefit) => (
@@ -545,9 +551,13 @@ export default function FiftyFiveCommunitiesPage() {
 
           {/* Communities Grid */}
           <section id="communities" className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-4 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.fiftyFivePlus.src}
+              avoidSrc={PAGE_HERO_IMAGES.fiftyFivePlus.src}
+            >
               Las Vegas 55+ Communities
-            </h2>
+            </SectionHeading>
             <PageHeroImage
               src={PAGE_HERO_IMAGES.fiftyFivePlus.src}
               alt={PAGE_HERO_IMAGES.fiftyFivePlus.alt}
@@ -683,9 +693,13 @@ export default function FiftyFiveCommunitiesPage() {
 
           {/* Amenities Overview */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-8 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.fiftyFivePlus.src}
+              avoidSrc={PAGE_HERO_IMAGES.fiftyFivePlus.src}
+            >
               What 55+ Community Amenities Include
-            </h2>
+            </SectionHeading>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white border border-slate-200 rounded-xl p-6">
                 <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
@@ -740,10 +754,10 @@ export default function FiftyFiveCommunitiesPage() {
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
                 "Buying in a 55+ community involves considerations beyond a
-                typical purchase. You need to understand HOA rules, age
-                verification processes, and how the community fits your
-                lifestyle. As a <strong>Berkshire Hathaway HomeServices</strong>{" "}
-                agent specializing in active adult communities, I guide clients
+                typical purchase. You need to understand HOA rules, HOPA
+                occupancy, and rec-campus access. As a{" "}
+                <strong>Berkshire Hathaway HomeServices</strong> agent
+                specializing in active adult communities, I guide clients
                 through every step—from touring amenities to reviewing HOA
                 documents. Many clients are relocating from California, and they
                 rely on my local knowledge to make confident decisions."
@@ -757,9 +771,13 @@ export default function FiftyFiveCommunitiesPage() {
 
           {/* FAQ Section */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-8 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.contact.src}
+              avoidSrc={PAGE_HERO_IMAGES.fiftyFivePlus.src}
+            >
               55+ Community Buying FAQs
-            </h2>
+            </SectionHeading>
             <div className="space-y-6">
               <div className="bg-white border border-slate-200 rounded-lg p-6">
                 <h3 className="font-bold text-slate-900 mb-2 flex items-center">
@@ -831,9 +849,13 @@ export default function FiftyFiveCommunitiesPage() {
 
           {/* Why BHHS */}
           <section className="mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-6 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.about.src}
+              avoidSrc={PAGE_HERO_IMAGES.fiftyFivePlus.src}
+            >
               Why Choose Dr. Jan Duffy for 55+ Communities?
-            </h2>
+            </SectionHeading>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="flex items-start">
                 <div className="bg-blue-100 p-2 rounded-full mr-4 flex-shrink-0">

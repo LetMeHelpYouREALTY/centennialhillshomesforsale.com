@@ -25,6 +25,7 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
+import { SectionHeading, SectionPhoto } from "@/components/shared/SectionPhoto";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 
 export const revalidate = 3600;
@@ -91,9 +92,13 @@ export default async function MarketInsightsPage() {
           </div>
 
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-4"
+              fallbackSrc={PAGE_HERO_IMAGES.market.src}
+              avoidSrc={PAGE_HERO_IMAGES.market.src}
+            >
               What this page is (and is not)
-            </h2>
+            </SectionHeading>
             <p className="text-slate-700 mb-4">
               Google Search Console listed this URL as a duplicate without a
               user-selected canonical. This page is now a Centennial Hills /
@@ -181,6 +186,11 @@ export default async function MarketInsightsPage() {
                 Las Vegas Tech Transformation
               </h2>
             </div>
+            <SectionPhoto
+              heading="Las Vegas Tech Transformation"
+              fallbackSrc={PAGE_HERO_IMAGES.market.src}
+              avoidSrc={PAGE_HERO_IMAGES.market.src}
+            />
             <div className="grid md:grid-cols-2 gap-8">
               <div className="prose prose-lg max-w-none text-slate-700">
                 <p>
@@ -330,6 +340,11 @@ export default async function MarketInsightsPage() {
                 Economic Diversification
               </h2>
             </div>
+            <SectionPhoto
+              heading="Economic Diversification"
+              fallbackSrc={PAGE_HERO_IMAGES.investment.src}
+              avoidSrc={PAGE_HERO_IMAGES.market.src}
+            />
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white border border-slate-200 rounded-xl p-6">
                 <h3 className="font-bold text-slate-900 mb-3">
@@ -462,9 +477,13 @@ export default async function MarketInsightsPage() {
 
           {/* What This Means */}
           <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-8 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.buyers.src}
+              avoidSrc={PAGE_HERO_IMAGES.market.src}
+            >
               What This Means for You
-            </h2>
+            </SectionHeading>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-green-50 border border-green-200 rounded-xl p-6">
                 <h3 className="font-bold text-green-900 text-xl mb-4 flex items-center">

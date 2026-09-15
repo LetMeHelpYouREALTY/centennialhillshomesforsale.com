@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { OFFICE_PHOTO_PATH, OFFICE_PHOTO_ALT } from "@/lib/site-images";
-import { AGENT_EMAIL, CTA_PHONE, CTA_TEL, OFFICE_NAP } from "@/lib/contact";
+import {
+  AGENT_EMAIL,
+  CTA_PHONE,
+  CTA_TEL,
+  OFFICE_NAP,
+  TEXT_LINK_CLASS,
+} from "@/lib/contact";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 
@@ -59,15 +65,15 @@ export default function SecurityPolicyPage() {
                   <strong>Email:</strong>{" "}
                   <a
                     href="mailto:security@heyberkshire.com"
-                    className="underline"
+                    className={TEXT_LINK_CLASS}
                   >
                     security@heyberkshire.com
                   </a>
                 </li>
                 <li>
                   <strong>Phone:</strong>{" "}
-                  <a href="tel:+17022221964" className="underline">
-                    (702) 222-1964
+                  <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
+                    {CTA_PHONE}
                   </a>
                 </li>
                 <li>
@@ -262,16 +268,13 @@ export default function SecurityPolicyPage() {
               <p className="mb-2">{OFFICE_NAP.full}</p>
               <p className="mb-2">
                 Email:{" "}
-                <a
-                  href={`mailto:${AGENT_EMAIL}`}
-                  className="text-blue-600 underline"
-                >
+                <a href={`mailto:${AGENT_EMAIL}`} className={TEXT_LINK_CLASS}>
                   {AGENT_EMAIL}
                 </a>
               </p>
               <p>
                 Phone:{" "}
-                <a href={CTA_TEL} className="text-blue-600 underline">
+                <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
                   {CTA_PHONE}
                 </a>
               </p>

@@ -6,6 +6,7 @@ import {
   cloudflareImageId,
   getNeighborhoodImage,
   OFFICE_PHOTO_PATH,
+  resolveSectionImage,
 } from "./site-images";
 
 describe("site images catalog", () => {
@@ -44,5 +45,30 @@ describe("site images catalog", () => {
     for (const src of srcs) {
       expect(existsSync(path.join(root, src.replace(/^\//, "")))).toBe(true);
     }
+  });
+
+  it("resolves heading-matched section photos without repeating the page hero", () => {
+    const golf = resolveSectionImage({
+      heading: "Golf course lots and TPC access",
+      neighborhoodName: "Red Rock Country Club",
+    });
+    expect(golf.src).toBe("/images/neighborhoods/red-rock-country-club.png");
+    expect(golf.alt).toContain("Golf course lots and TPC access");
+    expect(golf.alt).toContain("Red Rock Country Club");
+
+    const commute = resolveSectionImage({
+      heading: "Sample drive times from Centennial Hills",
+      neighborhoodName: "Centennial Hills",
+      neighborhoodSlug: "centennial-hills",
+      avoidSrc: "/images/neighborhoods/centennial-hills.png",
+    });
+    expect(commute.src).not.toBe("/images/neighborhoods/centennial-hills.png");
+    expect(commute.alt).toContain("Sample drive times from Centennial Hills");
+
+    const root = path.join(__dirname, "..", "public");
+    expect(existsSync(path.join(root, golf.src.replace(/^\//, "")))).toBe(true);
+    expect(existsSync(path.join(root, commute.src.replace(/^\//, "")))).toBe(
+      true,
+    );
   });
 });

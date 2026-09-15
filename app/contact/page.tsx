@@ -14,6 +14,7 @@ import { withShareImage } from "@/lib/page-seo";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import { AGENT_PHOTO_PATH } from "@/lib/brand-assets";
 import { CTA_PHONE, CTA_TEL, OFFICE_HOURS } from "@/lib/contact";
+import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { OfficeMap } from "@/components/shared/OfficeMap";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import { PageCTA } from "@/components/shared/PageCTA";
@@ -118,9 +119,13 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Info & Map */}
             <div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-6">
+              <SectionHeading
+                className="text-2xl font-bold text-slate-900 mb-6"
+                fallbackSrc={PAGE_HERO_IMAGES.contact.src}
+                avoidSrc={PAGE_HERO_IMAGES.contact.src}
+              >
                 Get In Touch
-              </h2>
+              </SectionHeading>
               <p className="text-slate-700 mb-8">
                 Whether you're buying your first home, selling a luxury
                 property, or exploring investment opportunities, I'm here to
@@ -271,9 +276,13 @@ export default function ContactPage() {
 
           {/* Service Areas Section */}
           <section className="max-w-5xl mx-auto mt-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-6 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.listings.src}
+              avoidSrc={PAGE_HERO_IMAGES.contact.src}
+            >
               Areas We Serve
-            </h2>
+            </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Dr. Jan Duffy provides expert real estate services throughout the
               Las Vegas Valley. Whether you're buying, selling, or investing in
@@ -309,9 +318,13 @@ export default function ContactPage() {
 
           {/* Quick Contact Options */}
           <section className="max-w-4xl mx-auto mt-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-6 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.contact.src}
+              avoidSrc={PAGE_HERO_IMAGES.contact.src}
+            >
               Prefer to Reach Out Directly?
-            </h2>
+            </SectionHeading>
             <div className="grid md:grid-cols-2 gap-6">
               <a
                 href={CTA_TEL}
@@ -338,9 +351,13 @@ export default function ContactPage() {
 
           {/* FAQ Section */}
           <section className="max-w-4xl mx-auto mt-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            <SectionHeading
+              className="text-3xl font-bold text-slate-900 mb-8 text-center"
+              fallbackSrc={PAGE_HERO_IMAGES.contact.src}
+              avoidSrc={PAGE_HERO_IMAGES.contact.src}
+            >
               Frequently Asked Questions
-            </h2>
+            </SectionHeading>
             <div className="space-y-4">
               {contactFaqs.map((faq) => (
                 <div key={faq.question} className="bg-slate-50 rounded-lg p-6">
