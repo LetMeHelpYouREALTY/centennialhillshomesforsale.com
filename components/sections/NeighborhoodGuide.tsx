@@ -305,9 +305,12 @@ export default function NeighborhoodGuide({
                 <MapPin className="h-4 w-4" aria-hidden="true" />
                 <a
                   href={OFFICE_NAP.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={TEXT_LINK_ON_DARK_CLASS}
                 >
                   {OFFICE_NAP.full}
+                  <span className="sr-only"> (opens in a new tab)</span>
                 </a>
               </p>
               <p className="mt-2 text-xs text-blue-200">

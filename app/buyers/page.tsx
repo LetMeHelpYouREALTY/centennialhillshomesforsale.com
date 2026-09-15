@@ -121,9 +121,9 @@ const buyingSteps = [
   },
   {
     icon: Key,
-    title: "Close & Get Your Keys",
+    title: "Close on the contract dates",
     description:
-      "Dr. Jan coordinates with lenders, title, and escrow to ensure a smooth closing. The typical closing process takes 30-45 days from offer acceptance—then you get the keys to your new Las Vegas home!",
+      "Dr. Jan Duffy coordinates with lenders, title, and escrow. Close date is on the purchase agreement — often 30-ish days with a conventional loan, longer with FHA, VA, or new construction. I will not promise a 7-day close.",
   },
 ];
 

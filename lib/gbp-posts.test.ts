@@ -16,6 +16,11 @@ describe("GBP post templates", () => {
     expect(joined).not.toMatch(/4-hour drive/i);
   });
 
+  it("does not use luxury-living slogans in titles", () => {
+    const titles = gbpPostTemplates.map((post) => post.title).join("\n");
+    expect(titles).not.toMatch(/Luxury Living/i);
+  });
+
   it("uses Request a CMA instead of a free-analysis CTA", () => {
     const ctas = gbpPostTemplates
       .map((post) => post.cta?.text ?? "")

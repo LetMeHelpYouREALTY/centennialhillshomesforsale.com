@@ -99,7 +99,7 @@ export const valuePropositions = {
   trust:
     "Berkshire Hathaway HomeServices is backed by Berkshire Hathaway Inc. You get a global referral network, listing marketing in writing, and documented ethics standards.",
   expertise:
-    "Serving Las Vegas since 2008, Dr. Jan Duffy combines deep local market knowledge with the resources of a global brand.",
+    "Serving Las Vegas since 2008. One agent of record, live MLS, and a written plan — not a brand slogan.",
 };
 
 // Neighborhoods served

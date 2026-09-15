@@ -112,6 +112,15 @@ export function LeadCaptureForm({
       return;
     }
 
+    const email = formData.email.trim();
+    if (!email.includes("@") || !email.includes(".")) {
+      setInvalidFields(["email"]);
+      setError("Enter an email with an @ and a domain.");
+      setLoading(false);
+      emailRef.current?.focus();
+      return;
+    }
+
     try {
       const response = await fetch("/api/leads/capture", {
         method: "POST",
@@ -165,6 +174,8 @@ export function LeadCaptureForm({
   };
 
   const fieldInvalid = (name: string) => invalidFields.includes(name);
+  const turnstileRequired = Boolean(process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY);
+  const turnstilePending = turnstileRequired && !turnstileToken;
 
   if (success) {
     return (
@@ -173,7 +184,9 @@ export function LeadCaptureForm({
         role="status"
         aria-live="polite"
       >
-        <div className="text-4xl mb-4">✓</div>
+        <div className="text-4xl mb-4" aria-hidden="true">
+          ✓
+        </div>
         <h3 className="text-xl font-semibold text-green-900 mb-2">
           Thank You!
         </h3>
@@ -458,11 +471,20 @@ export function LeadCaptureForm({
         </div>
       )}
 
+      {turnstilePending && (
+        <p
+          id="turnstile-pending-help"
+          className="text-center text-sm text-slate-600"
+        >
+          Complete the CAPTCHA to send.
+        </p>
+      )}
+
       <Button
         type="submit"
-        disabled={
-          loading ||
-          (!turnstileToken && !!process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY)
+        disabled={loading || turnstilePending}
+        aria-describedby={
+          turnstilePending ? "turnstile-pending-help" : undefined
         }
         className="min-h-11 w-full"
       >

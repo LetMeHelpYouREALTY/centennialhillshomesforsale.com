@@ -39,7 +39,7 @@ const features = [
     icon: Home,
     title: "Full service",
     description:
-      "Buying, selling, 55+, luxury, and new construction on one contract.",
+      "Buying, selling, 55+, luxury, and new construction — each on its own written agreement.",
   },
 ];
 

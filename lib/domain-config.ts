@@ -30,7 +30,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
   "consenzaestates.com": {
     domain: "consenzaestates.com",
     neighborhood: "Consenza Estates",
-    tagline: "Luxury Living in Consenza Estates",
+    tagline: "Consenza Estates Homes for Sale",
     description:
       "Search Consenza Estates listings in Las Vegas with Dr. Jan Duffy.",
     heroHeadline: "Consenza Estates Homes for Sale",
@@ -55,7 +55,8 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     description:
       "Search Aliante homes for sale in North Las Vegas. Live MLS with Dr. Jan Duffy.",
     heroHeadline: "Aliante Homes for Sale",
-    heroSubheadline: "Master-planned living in the heart of North Las Vegas.",
+    heroSubheadline:
+      "Confirm the Aliante village on live MLS, then tour. Call 702-222-1964.",
     keywords: [
       "Aliante homes for sale",
       "Aliante North Las Vegas",
@@ -87,7 +88,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     ctaBadge: "California relocation",
     ctaHeadline: "Sequence a California sale and a Las Vegas purchase",
     ctaSubheadline:
-      "I've helped California buyers sequence a sale and a Las Vegas purchase. Let's talk.",
+      "I've helped California buyers sequence a sale and a Las Vegas purchase. Call 702-222-1964.",
   },
   "centennialhillshomesforsale.com": {
     domain: "centennialhillshomesforsale.com",
@@ -120,7 +121,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "Read Google reviews for Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Call 702-222-1964.",
     heroHeadline: "What Clients Say About Dr. Jan",
     heroSubheadline:
-      "Serving Las Vegas since 2008. Real results, real Google reviews.",
+      "Read Google reviews on the profile. License S.0197614.LLC. Serving Las Vegas since 2008.",
     keywords: [
       "Dr Jan Duffy reviews",
       "BHHS Nevada Properties reviews",
@@ -311,7 +312,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     pageType: "community",
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Lone Mountain Vistas",
-    ctaHeadline: "Lone Mountain Vistas Awaits",
+    ctaHeadline: "Lone Mountain Vistas listings",
     ctaSubheadline:
       "Lone Mountain views and lot sizes vary by street — I will pull live inventory, not a vista slogan.",
   },
@@ -332,7 +333,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     pageType: "luxury",
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Luxury listings",
-    ctaHeadline: "MacDonald Highlands Living Awaits",
+    ctaHeadline: "MacDonald Highlands private tours",
     ctaSubheadline:
       "Private tours available. Confirm hillside vs valley lots on the live MLS sheet.",
   },
@@ -344,7 +345,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "Search midtown Las Vegas condos and high-rise living with Dr. Jan Duffy.",
     heroHeadline: "Midtown Las Vegas Condos for Sale",
     heroSubheadline:
-      "Urban living, walkable neighborhoods, and Las Vegas Strip views.",
+      "Confirm the building, HOA, and any Strip view on the live MLS sheet.",
     keywords: [
       "midtown Las Vegas condos",
       "Las Vegas urban living",
@@ -386,7 +387,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "Las Vegas open houses this weekend. Find open homes near you with Dr. Jan Duffy.",
     heroHeadline: "Las Vegas Open Houses",
     heroSubheadline:
-      "This weekend's open houses across the Las Vegas Valley — updated in real time.",
+      "This weekend's open houses across the Las Vegas Valley — confirm times before you drive.",
     keywords: [
       "Las Vegas open houses",
       "open house Las Vegas",
@@ -407,7 +408,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "Current Las Vegas open house listings and schedule. Find your next home this weekend.",
     heroHeadline: "Las Vegas Open House Updates",
     heroSubheadline:
-      "Real-time open house schedule for Las Vegas, Henderson, and Summerlin.",
+      "Confirm open-house times before you drive — Las Vegas, Henderson, and Summerlin.",
     keywords: [
       "Las Vegas open house updates",
       "Henderson open houses",
@@ -416,7 +417,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     pageType: "search",
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Weekend Open Houses",
-    ctaHeadline: "Never Miss an Open House",
+    ctaHeadline: "This weekend's matching open houses",
     ctaSubheadline:
       "I will send this weekend's open houses that match beds, ZIP, and budget.",
   },
@@ -465,10 +466,9 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     neighborhood: "Las Vegas",
     tagline: "Search Las Vegas Homes for Sale",
     description:
-      "Search all Las Vegas homes for sale. MLS listings updated daily. Dr. Jan Duffy, BHHS.",
+      "Search all Las Vegas homes for sale. Live MLS search with Dr. Jan Duffy, BHHS.",
     heroHeadline: "Search Las Vegas Homes for Sale",
-    heroSubheadline:
-      "Every MLS listing in the Las Vegas Valley — updated daily.",
+    heroSubheadline: "Live MLS search for Las Vegas Valley listings.",
     keywords: [
       "search Las Vegas homes",
       "Las Vegas MLS",
@@ -528,7 +528,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     neighborhood: "Las Vegas",
     tagline: "Fast Cash Home Offers Las Vegas",
     description:
-      "Sell your Las Vegas home fast for cash. Get a competitive offer from Dr. Jan Duffy's network.",
+      "Sell your Las Vegas home fast for cash. Request a cash-offer worksheet from Dr. Jan Duffy.",
     heroHeadline: "Fast Cash Offers for Las Vegas Homes",
     heroSubheadline:
       "Ask for a cash-offer worksheet. Close date, repairs, and net are file-specific — not a 7-day slogan.",
@@ -540,9 +540,9 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     pageType: "search",
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Cash offers",
-    ctaHeadline: "Get Your Cash Offer Today",
+    ctaHeadline: "Request a cash-offer worksheet",
     ctaSubheadline:
-      "Call 702-222-1964 for a no-obligation cash offer on your Las Vegas home.",
+      "Call 702-222-1964 for a cash-offer worksheet on your Las Vegas home.",
   },
   "suncitysummerlinhomesforsale.com": {
     domain: "suncitysummerlinhomesforsale.com",
@@ -583,8 +583,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Sunstone listings",
     ctaHeadline: "Find Your Sunstone Home",
-    ctaSubheadline:
-      "Everything you need to know about buying in Sunstone — let's talk.",
+    ctaSubheadline: "Call 702-222-1964 for a live MLS pull on Sunstone.",
   },
   "theridgessummerlinhomes.com": {
     domain: "theridgessummerlinhomes.com",
@@ -624,7 +623,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     pageType: "55plus",
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Trilogy at Sunstone",
-    ctaHeadline: "Discover Trilogy at Sunstone",
+    ctaHeadline: "Trilogy at Sunstone 55+ resales",
     ctaSubheadline:
       "Del Webb rec campus, one-story plans, and HOPA occupancy — call 702-222-1964.",
   },
@@ -666,9 +665,9 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     pageType: "lifestyle",
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Confidential Support",
-    ctaHeadline: "Private Consultation Available",
+    ctaHeadline: "Confidential divorce-sale consult",
     ctaSubheadline:
-      "I handle divorce sales with complete discretion. Let's discuss your options privately.",
+      "I handle divorce sales with complete discretion. Call 702-222-1964.",
   },
 };
 

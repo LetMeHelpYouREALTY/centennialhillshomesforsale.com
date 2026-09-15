@@ -11,5 +11,11 @@ describe("multi-domain landing copy", () => {
     expect(blob).not.toMatch(/inside and out/i);
     expect(blob).not.toMatch(/ctaBadge":"[^"]*Expert"/);
     expect(blob).not.toMatch(/ctaBadge":"[^"]*Specialist"/);
+    expect(blob).not.toMatch(/Awaits/);
+    expect(blob).not.toMatch(/Never Miss an Open House/);
+    expect(blob).not.toMatch(/updated daily/i);
+    expect(blob).not.toMatch(/updated in real time/i);
+    expect(blob).not.toMatch(/Private Consultation Available/);
+    expect(blob).not.toMatch(/Luxury Living/);
   });
 });

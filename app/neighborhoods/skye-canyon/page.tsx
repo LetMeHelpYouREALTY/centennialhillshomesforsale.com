@@ -43,7 +43,7 @@ export default function SkyeCanyonPage() {
       sections={[
         {
           heading: "Skye Center vs the house",
-          body: "Skye Center is a multi-acre amenity campus (pools, fitness, courts, event space). HOA dues buy access — they do not describe the floor plan on a specific street. Builder pods inside Skye Canyon have different elevations and lot premiums. I tour the house, then the center, not the reverse.",
+          body: "Skye Center is the amenity campus (pools, fitness, courts, event space) — confirm size and access in the HOA packet. HOA dues buy access — they do not describe the floor plan on a specific street. Builder pods inside Skye Canyon have different elevations and lot premiums. I tour the house, then the center, not the reverse.",
         },
         {
           heading: `Pricing as of ${MARKET_SNAPSHOT_AS_OF}`,

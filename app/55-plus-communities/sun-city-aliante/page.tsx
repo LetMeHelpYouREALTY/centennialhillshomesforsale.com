@@ -35,7 +35,7 @@ export default function SunCityAliantePage() {
       pathPrefix="/55-plus-communities"
       badge="55+ HOPA community"
       h1="Sun City Aliante Homes for Sale"
-      intro="Sun City Aliante is the Del Webb 55+ village inside Aliante in North Las Vegas ZIP 89084 — smaller and typically lower-priced than Sun City Summerlin, with its own golf course and rec campus."
+      intro="Sun City Aliante is the Del Webb 55+ village inside Aliante in North Las Vegas ZIP 89084 — a smaller campus than Sun City Summerlin, with its own golf course and rec campus. Price versus Summerlin needs paired comps, not a campus slogan."
       zipCodes={["89084"]}
       city="North Las Vegas"
       imageSrc="/images/neighborhoods/sun-city-aliante.png"

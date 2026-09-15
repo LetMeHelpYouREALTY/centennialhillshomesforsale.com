@@ -47,6 +47,20 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", onPointerDown);
   }, []);
 
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setIsServicesOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isMobileMenuOpen]);
+
   const mainNavLinks = [
     { href: "/", label: "Home", external: false },
     { href: "/listings", label: "Properties", external: false },
@@ -124,34 +138,31 @@ export default function Navbar() {
                 onClick={() => setIsServicesOpen((open) => !open)}
                 onMouseEnter={() => setIsServicesOpen(true)}
                 aria-expanded={isServicesOpen}
-                aria-haspopup="true"
                 aria-controls="services-menu"
-                aria-label="Services menu"
+                aria-label="Services"
               >
                 Services
                 <ChevronDown className="ml-1 h-4 w-4" aria-hidden="true" />
               </button>
 
               {isServicesOpen && (
-                <div
+                <ul
                   id="services-menu"
-                  className="absolute left-0 top-full z-50 mt-2 w-52 rounded-lg bg-white py-2 shadow-lg"
+                  className="absolute left-0 top-full z-50 mt-2 w-52 list-none rounded-lg bg-white py-2 shadow-lg"
                   onMouseLeave={() => setIsServicesOpen(false)}
-                  role="menu"
-                  aria-orientation="vertical"
                 >
                   {serviceLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className="block min-h-11 px-4 py-2 text-sm text-slate-700 no-underline hover:bg-blue-50 hover:text-blue-600 focus-visible:bg-blue-50 focus-visible:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-600"
-                      onClick={() => setIsServicesOpen(false)}
-                      role="menuitem"
-                    >
-                      {link.label}
-                    </Link>
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="block min-h-11 px-4 py-2 text-sm text-slate-700 no-underline hover:bg-blue-50 hover:text-blue-600 focus-visible:bg-blue-50 focus-visible:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-600"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
                   ))}
-                </div>
+                </ul>
               )}
             </div>
 
@@ -169,7 +180,11 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-3 lg:hidden">
-            <Button asChild size="sm" className="bg-blue-600 hover:bg-blue-700">
+            <Button
+              asChild
+              size="sm"
+              className="min-h-11 min-w-11 bg-blue-600 hover:bg-blue-700"
+            >
               <a
                 href={CTA_TEL}
                 aria-label={`Call Dr. Jan Duffy at ${CTA_PHONE}`}

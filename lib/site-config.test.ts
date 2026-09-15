@@ -4,6 +4,7 @@ import {
   expertQuotes,
   neighborhoods,
   services,
+  valuePropositions,
 } from "./site-config";
 import { defaultFaqs } from "./default-faqs";
 
@@ -13,6 +14,7 @@ describe("site copy does not sell ranking slogans", () => {
     commonFAQs,
     expertQuotes,
     defaultFaqs,
+    valuePropositions,
   });
 
   it("does not advertise free buyer representation or expert ranking", () => {
@@ -21,6 +23,8 @@ describe("site copy does not sell ranking slogans", () => {
     expect(blob).not.toMatch(/trusted local lenders/i);
     expect(blob).not.toMatch(/We specialize/i);
     expect(blob).not.toMatch(/flawless execution/i);
+    expect(blob).not.toMatch(/deep local market knowledge/i);
+    expect(blob).not.toMatch(/resources of a global brand/i);
     expect(JSON.stringify(neighborhoods)).not.toMatch(/150\+ parks/i);
     expect(JSON.stringify(neighborhoods)).not.toMatch(/Established Henderson/i);
   });

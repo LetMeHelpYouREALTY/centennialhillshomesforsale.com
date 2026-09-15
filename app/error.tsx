@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from "next/link";
 import { CTA_PHONE, CTA_TEL, OFFICE_NAP } from "@/lib/contact";
 
 export default function Error({
@@ -24,7 +25,7 @@ export default function Error({
           Reload this page, or call {CTA_PHONE} and we will pull the listing
           from MLS while this screen is fixed. Office: {OFFICE_NAP.full}.
         </p>
-        <div className="flex flex-col justify-center gap-3 sm:flex-row">
+        <div className="flex flex-col flex-wrap justify-center gap-3 sm:flex-row">
           <button
             type="button"
             onClick={reset}
@@ -32,6 +33,18 @@ export default function Error({
           >
             Try again
           </button>
+          <Link
+            href="/"
+            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-6 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            Home
+          </Link>
+          <Link
+            href="/listings"
+            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-6 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            Search listings
+          </Link>
           <a
             href={CTA_TEL}
             className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-6 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"

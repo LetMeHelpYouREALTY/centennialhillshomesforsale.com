@@ -33,7 +33,7 @@ export default function HomeValuationPage() {
         { value: "CMA", label: "Not an AVM" },
         { value: "Sold + active", label: "Comps" },
         { value: "HOA / SID", label: "On the worksheet" },
-        { value: "No obligation", label: "To list" },
+        { value: "CMA first", label: "List only if you choose" },
       ]}
       sections={[
         {
@@ -60,7 +60,7 @@ export default function HomeValuationPage() {
       ]}
       faqs={[
         {
-          question: "Is the valuation free?",
+          question: "Is there a charge for a CMA?",
           answer:
             "The CMA consult is no-obligation. Listing is a separate agreement.",
         },

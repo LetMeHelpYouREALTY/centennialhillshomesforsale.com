@@ -582,13 +582,14 @@ export default function ListingsPage({
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">
-                    Close & Get Your Keys
+                    Close on the contract dates
                   </h3>
                   <p className="text-slate-600 text-sm">
-                    The closing process typically takes 30-45 days from offer
-                    acceptance. You'll sign final documents, transfer funds, and
-                    receive the keys to your new Las Vegas home. Dr. Jan remains
-                    available for any questions even after closing.
+                    Close date is on the purchase agreement — often 30-ish days
+                    with a conventional loan, longer with FHA, VA, or new
+                    construction. You sign, funds transfer, and keys release
+                    when escrow records. Dr. Jan Duffy remains available after
+                    closing. I will not promise a 7-day close.
                   </p>
                 </div>
               </div>

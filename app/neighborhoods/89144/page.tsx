@@ -16,7 +16,7 @@ export const metadata: Metadata = withShareImage(
   },
   {
     src: "/images/neighborhoods/89144.png",
-    alt: "Established Summerlin streetscape in ZIP 89144 Las Vegas",
+    alt: "Summerlin streetscape in ZIP 89144 Las Vegas",
   },
 );
 
@@ -30,7 +30,7 @@ export default function Zip89144Page() {
       zipCodes={["89144"]}
       city="Las Vegas"
       imageSrc="/images/neighborhoods/89144.png"
-      imageAlt="Established Summerlin streetscape in ZIP 89144 Las Vegas"
+      imageAlt="Summerlin streetscape in ZIP 89144 Las Vegas"
       stats={[
         { value: "89144", label: "ZIP code" },
         { value: "Summerlin", label: "Master plan" },
@@ -44,7 +44,7 @@ export default function Zip89144Page() {
         },
         {
           heading: "Pricing — do not trust one median",
-          body: "Public 2026 ZIP reports for 89144 disagree with each other (some listing medians in the mid $500,000s, others much higher because Queensridge and similar product pull the average). I will not invent a single number. Tell me beds, lot, and village and I will run a CMA from current MLS.",
+          body: "Public 2026 ZIP reports for 89144 disagree with each other because Queensridge and similar product pull averages away from smaller lots. I will not invent a single number. Tell me beds, lot, and village and I will run a CMA from current MLS.",
         },
         {
           heading: "What I send after you call",

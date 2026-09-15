@@ -56,7 +56,7 @@ export default function FaqPage() {
           imageSrc: "/images/hero/buyers.png",
           imageAlt:
             "Las Vegas buyer touring a northwest desert-contemporary home",
-          body: `Typical close is 30–45 days after acceptance. Get a lender pre-approval before touring. Down payment is UNKNOWN without a loan program. As of ${MARKET_SNAPSHOT_AS_OF}, Las Vegas city median listing is ${formatUsd(LISTING_MEDIANS_USD.lasVegas)} — not your bid. New construction: register me before the first builder visit. Compensation is in a written buyer agreement; the builder or seller may contribute, or you may pay.`,
+          body: `Close date is on the purchase agreement — often 30-ish days with a conventional loan, longer with FHA, VA, or new construction. Get a lender pre-approval before touring. Down payment is UNKNOWN without a loan program. As of ${MARKET_SNAPSHOT_AS_OF}, Las Vegas city median listing is ${formatUsd(LISTING_MEDIANS_USD.lasVegas)} — not your bid. New construction: register me before the first builder visit. Compensation is in a written buyer agreement; the builder or seller may contribute, or you may pay.`,
         },
         {
           heading: "Selling",

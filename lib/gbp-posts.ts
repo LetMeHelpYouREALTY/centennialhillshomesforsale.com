@@ -161,7 +161,8 @@ Get a listing consult from Dr. Jan Duffy: (702) 222-1964`,
   {
     id: "luxury-homes",
     type: "update",
-    title: "Luxury Living in Las Vegas: The Ridges, MacDonald Highlands & More",
+    title:
+      "The Ridges, MacDonald Highlands, and other Las Vegas luxury listings",
     content: `Las Vegas luxury real estate is priced on live comps, not a slogan:
 
 🏔️ The Ridges, Summerlin — guard-gated custom estates (live CMA, not a $2M slogan)

@@ -108,6 +108,7 @@ export default async function Home() {
       addressLocality: OFFICE_NAP.city,
       addressRegion: OFFICE_NAP.state,
       postalCode: OFFICE_NAP.zip,
+      addressCountry: "US",
     },
     areaServed: [
       "Centennial Hills",
