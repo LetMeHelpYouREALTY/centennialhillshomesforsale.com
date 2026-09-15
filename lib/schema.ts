@@ -9,6 +9,7 @@
 import { siteConfig, agentInfo, officeInfo, agentStats } from "./site-config";
 import { AGENT_PHOTO_PATH, FAVICON_32_PATH } from "./brand-assets";
 import {
+  AGENT_EMAIL,
   CTA_PHONE_E164,
   OFFICE_NAP,
   OFFICE_POSTAL_ADDRESS,
@@ -534,7 +535,7 @@ export function generateServiceSchema(service: {
     "@context": "https://schema.org",
     "@type": "Service",
     name: service.name,
-    description: service.description,
+    description: withClientEmail(service.description),
     url: service.url.startsWith("http")
       ? service.url
       : `${BASE_URL}${service.url}`,
@@ -543,12 +544,15 @@ export function generateServiceSchema(service: {
       "@type": "RealEstateAgent",
       name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
       telephone: CTA_PHONE_E164,
+      email: AGENT_EMAIL,
       address: OFFICE_POSTAL_ADDRESS,
     },
     areaServed: service.areaServed || [
       "Las Vegas",
       "Henderson",
       "Summerlin",
+      "Summerlin West",
+      "Siena",
       "North Las Vegas",
     ],
     serviceType: service.serviceType || "Real Estate Services",

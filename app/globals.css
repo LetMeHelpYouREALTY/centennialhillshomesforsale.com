@@ -10,12 +10,8 @@
 
   a,
   button {
-    @apply transition-colors;
+    @apply transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2;
     touch-action: manipulation;
-  }
-
-  a {
-    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2;
   }
 
   ::selection {
@@ -46,6 +42,9 @@
   left: 1rem;
   top: -100%;
   z-index: 60;
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
   border-radius: 0.375rem;
   background: #1d4ed8;
   padding: 0.5rem 1rem;
@@ -54,7 +53,8 @@
   text-decoration: none;
 }
 
-.skip-link:focus {
+.skip-link:focus,
+.skip-link:focus-visible {
   top: 1rem;
 }
 

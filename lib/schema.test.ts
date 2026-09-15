@@ -76,6 +76,11 @@ describe("RealEstateAgent JSON-LD", () => {
       "9406 W Lake Mead Blvd",
     );
     expect(service.provider.telephone).toBe("+17022221964");
+    expect(service.provider.email).toBe("homes@heyberkshire.com");
+    expect(String(service.description)).toContain("homes@heyberkshire.com");
+    expect(service.areaServed).toEqual(
+      expect.arrayContaining(["Summerlin West", "Siena"]),
+    );
   });
 
   it("WebPage JSON-LD points at the office organization", () => {

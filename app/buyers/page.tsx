@@ -547,10 +547,10 @@ export default function BuyersPage() {
                   <Users className="h-7 w-7 text-blue-600" aria-hidden="true" />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">
-                  Global Network
+                  Referral network for relocations
                 </h3>
                 <p className="text-pretty text-slate-600 text-sm">
-                  Global BHHS referral network for inbound and outbound moves
+                  BHHS referral network for inbound and outbound moves
                 </p>
               </div>
               <div className="text-center">

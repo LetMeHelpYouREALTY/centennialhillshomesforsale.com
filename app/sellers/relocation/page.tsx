@@ -28,7 +28,7 @@ export default function SellersRelocationPage() {
       h1="Selling Your Las Vegas Home While You Relocate"
       imageSrc="/images/hero/relocation.png"
       imageAlt="Moving truck in the driveway of a Las Vegas home during relocation"
-      intro="You can list from another time zone. I handle access, vendors, and the offer paper. You sign electronically and get a weekly written update — not a mystery lockbox."
+      intro="You can list from another time zone — 89138 Summerlin West, Centennial Hills, or a 55+ campus such as Siena. I handle access, vendors, and the offer paper. You sign electronically and get a weekly written update — not a mystery lockbox."
       stats={[
         { value: "Remote", label: "E-sign + photos" },
         { value: "Lockbox", label: "Supervised access" },

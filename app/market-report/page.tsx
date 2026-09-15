@@ -40,7 +40,7 @@ export default function MarketReportPage() {
       h1="Las Vegas Real Estate Market Report"
       imageSrc="/images/hero/market-report.png"
       imageAlt="Market packet on a desk overlooking the Las Vegas valley"
-      intro={`${MARKET_SNAPSHOT_SOURCE}. These are listing medians (and one Henderson sold median), not a CMA for your street. I will not recycle a January 2026 $450K Las Vegas headline.`}
+      intro={`${MARKET_SNAPSHOT_SOURCE}. These are listing medians (and one Henderson sold median), not a CMA for 89138 Summerlin West or a 55+ campus such as Siena. I will not recycle a January 2026 $450K Las Vegas headline.`}
       stats={[
         { value: lv, label: "Las Vegas listing median" },
         { value: henList, label: "Henderson listing median" },
@@ -50,7 +50,7 @@ export default function MarketReportPage() {
       sections={[
         {
           heading: `Valley snapshot as of ${MARKET_SNAPSHOT_AS_OF}`,
-          body: `Las Vegas city median listing ${lv}. Henderson listing ${henList}, sold ${henSold}. Days on market and active count are UNKNOWN on this page until a new sourced pull. North Las Vegas listing ${nlv}. Centennial Hills listing ${ch}. Summerlin is not one number: North ${formatUsd(LISTING_MEDIANS_USD.summerlinNorth)}, West ${formatUsd(LISTING_MEDIANS_USD.summerlinWest)}, South ${formatUsd(LISTING_MEDIANS_USD.summerlinSouth)}.`,
+          body: `Las Vegas city median listing ${lv}. Henderson listing ${henList}, sold ${henSold}. Days on market and active count are UNKNOWN on this page until a new sourced pull. North Las Vegas listing ${nlv}. Centennial Hills listing ${ch}. Summerlin is not one number: North ${formatUsd(LISTING_MEDIANS_USD.summerlinNorth)}, West ${formatUsd(LISTING_MEDIANS_USD.summerlinWest)} (89138 sample), South ${formatUsd(LISTING_MEDIANS_USD.summerlinSouth)}. Siena 55+ is a live CMA, not a campus median.`,
         },
         {
           heading: "How to use this page",

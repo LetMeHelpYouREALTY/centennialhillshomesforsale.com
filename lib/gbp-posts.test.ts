@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { gbpPostTemplates } from "./gbp-posts";
+import { gbpPostTemplates, reviewResponseTemplates } from "./gbp-posts";
 import { formatUsd, LISTING_MEDIANS_USD } from "./market-snapshots";
 
 describe("GBP post templates", () => {
@@ -14,6 +14,7 @@ describe("GBP post templates", () => {
     expect(joined).not.toMatch(/world-class/i);
     expect(joined).not.toMatch(/Free consultation/i);
     expect(joined).not.toMatch(/4-hour drive/i);
+    expect(joined).not.toMatch(/homeownership journey/i);
   });
 
   it("does not use luxury-living slogans in titles", () => {
@@ -42,5 +43,14 @@ describe("GBP post templates", () => {
     expect(firstTime?.content).toContain(
       formatUsd(LISTING_MEDIANS_USD.centennialHills),
     );
+  });
+
+  it("does not use perfect-home slogans in review replies", () => {
+    const replies = Object.values(reviewResponseTemplates)
+      .map((fn) => fn("Alex", "Summerlin", "details"))
+      .join("\n");
+    expect(replies).not.toMatch(/perfect home/i);
+    expect(replies).not.toMatch(/next chapter/i);
+    expect(replies).toContain("homes@heyberkshire.com");
   });
 });

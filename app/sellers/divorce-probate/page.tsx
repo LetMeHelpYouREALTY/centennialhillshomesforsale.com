@@ -28,7 +28,7 @@ export default function DivorceProbatePage() {
       h1="Divorce and Probate Home Sales in Las Vegas"
       imageSrc="/images/hero/sellers-listing.png"
       imageAlt="Las Vegas home prepared for a court-supervised listing"
-      intro="These listings close when the paperwork matches the MLS. I coordinate court orders, personal representatives, and two-party signatures. I am not your attorney or your CPA."
+      intro="These listings close when the paperwork matches the MLS, whether the house is in 89138 Summerlin West, Siena 55+, or another Clark County ZIP. I coordinate court orders, personal representatives, and two-party signatures. I am not your attorney or your CPA."
       stats={[
         { value: "Order", label: "Court / probate first" },
         { value: "CMA", label: "Price to the file" },

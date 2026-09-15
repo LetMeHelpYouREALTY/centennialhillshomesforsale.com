@@ -38,7 +38,7 @@ export default function CaliforniaRelocatorPage() {
       h1="Relocating from California to Las Vegas"
       imageSrc="/images/hero/california-relocator.png"
       imageAlt="California relocators arriving at a Las Vegas desert-contemporary house"
-      intro="Nevada charges no state income tax on wages. That is a statute, not a slogan. Home-price “savings” are not 40–60% on every street — I pair your California sale against live Las Vegas comps before you bid."
+      intro="Nevada charges no state income tax on wages. That is a statute, not a slogan. Home-price “savings” are not 40–60% on every street — I pair your California sale against live Las Vegas comps in 89138 Summerlin West, Centennial Hills, or a 55+ campus such as Siena before you bid."
       stats={[
         { value: "0%", label: "NV wage income tax" },
         { value: lv, label: "LV listing median" },

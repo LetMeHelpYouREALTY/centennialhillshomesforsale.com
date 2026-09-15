@@ -28,7 +28,7 @@ export default function DownsizingPage() {
       h1="Downsizing in Las Vegas and Henderson"
       imageSrc="/images/hero/55-plus-hub.png"
       imageAlt="One-story 55-plus community homes in Summerlin Las Vegas"
-      intro="Downsizing is square footage, stairs, and HOA — then a sale that funds the next door. I list the house you have and match one-story, townhome, or 55+ HOPA product without a lifestyle slogan."
+      intro="Downsizing is square footage, stairs, and HOA — then a sale that funds the next door in 89138 Summerlin West, a one-story resale, or a 55+ HOPA campus such as Siena. I list the house you have without a lifestyle slogan."
       stats={[
         { value: "One-story", label: "Common request" },
         { value: "55+", label: "HOPA option" },

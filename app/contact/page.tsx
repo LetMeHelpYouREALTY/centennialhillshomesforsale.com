@@ -329,7 +329,9 @@ export default function ContactPage() {
                       aria-hidden="true"
                     />
                     <p className="text-slate-300 text-sm">
-                      <strong className="text-white">Global Network:</strong>{" "}
+                      <strong className="text-white">
+                        Referral network for relocations:
+                      </strong>{" "}
                       BHHS referral network for inbound and outbound
                       relocations.
                     </p>

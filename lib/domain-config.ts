@@ -46,7 +46,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     pageType: "luxury",
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Consenza Estates listings",
-    ctaHeadline: "Find Your Consenza Estates Home",
+    ctaHeadline: "Search live Consenza Estates MLS",
     ctaSubheadline:
       "I will pull live MLS for this community. Call (702) 222-1964 or email homes@heyberkshire.com with the address.",
   },
@@ -173,7 +173,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     pageType: "community",
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Eagle Hills listings",
-    ctaHeadline: "Find Your Eagle Hills Home",
+    ctaHeadline: "Search live Eagle Hills MLS",
     ctaSubheadline:
       "I will pull live Eagle Hills MLS. Call (702) 222-1964 or email homes@heyberkshire.com with the address.",
   },
@@ -294,7 +294,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     pageType: "community",
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Lone Mountain listings",
-    ctaHeadline: "Find Your Lone Mountain Home",
+    ctaHeadline: "Search live Lone Mountain MLS",
     ctaSubheadline:
       "I will pull live Lone Mountain MLS. Call (702) 222-1964 or email homes@heyberkshire.com with the address.",
   },
@@ -357,7 +357,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     pageType: "luxury",
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Condo listings",
-    ctaHeadline: "Find Your Las Vegas Condo",
+    ctaHeadline: "Search live Las Vegas condo MLS",
     ctaSubheadline:
       "High-rises and lofts: I pull the building, HOA, and live inventory — not a floor-plan slogan.",
   },
@@ -378,7 +378,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     pageType: "community",
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Mountain's Edge listings",
-    ctaHeadline: "Find Your Mountain's Edge Home",
+    ctaHeadline: "Search live Mountain's Edge MLS",
     ctaSubheadline:
       "Mountain's Edge around Exploration Peak Park. Confirm 89178 vs 89179 on a CMA.",
   },
@@ -440,7 +440,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     pageType: "search",
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Las Vegas REALTOR®",
-    ctaHeadline: "Find Your Las Vegas Home",
+    ctaHeadline: "Search live Las Vegas MLS",
     ctaSubheadline: "Local MLS work from a Las Vegas practice since 2008.",
   },
   "searchforhomesinhenderson.com": {
@@ -460,7 +460,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     pageType: "search",
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Henderson listings",
-    ctaHeadline: "Find Your Henderson Home",
+    ctaHeadline: "Search live Henderson MLS",
     ctaSubheadline:
       "Green Valley, MacDonald Highlands, Anthem — I pull live Henderson MLS by village.",
   },
@@ -564,7 +564,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     pageType: "55plus",
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Sun City Summerlin",
-    ctaHeadline: "Find Your Sun City Home",
+    ctaHeadline: "Search live Sun City MLS",
     ctaSubheadline:
       "I work Sun City Summerlin files every week. Call (702) 222-1964 or email homes@heyberkshire.com and I will send live inventory.",
   },
@@ -585,7 +585,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     pageType: "community",
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Sunstone listings",
-    ctaHeadline: "Find Your Sunstone Home",
+    ctaHeadline: "Search live Sunstone MLS",
     ctaSubheadline:
       "Call (702) 222-1964 or email homes@heyberkshire.com for a live MLS pull on Sunstone.",
   },
@@ -648,7 +648,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     pageType: "55plus",
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "55+ communities",
-    ctaHeadline: "Find Your 55+ Community",
+    ctaHeadline: "Search live 55+ MLS",
     ctaSubheadline:
       "I tour Sun City, Del Webb, Trilogy, Siena, and Heritage by ZIP and HOPA rules. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },
@@ -693,7 +693,7 @@ export const DEFAULT_CONFIG: DomainConfig = {
   pageType: "search",
   realscoutAgentId: REALSCOUT_AGENT_ID,
   ctaBadge: "Las Vegas REALTOR®",
-  ctaHeadline: "Find Your Las Vegas Home",
+  ctaHeadline: "Search live Las Vegas MLS",
   ctaSubheadline:
     "Call or text Dr. Jan at (702) 222-1964, or email homes@heyberkshire.com — I answer the client line.",
 };
@@ -704,5 +704,6 @@ export function getDomainConfig(hostname: string): DomainConfig {
   return {
     ...config,
     description: withClientEmail(config.description),
+    heroSubheadline: withClientEmail(config.heroSubheadline),
   };
 }

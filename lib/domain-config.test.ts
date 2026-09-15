@@ -23,6 +23,7 @@ describe("multi-domain landing copy", () => {
     expect(blob).not.toMatch(/Luxury Living/);
     expect(blob).not.toMatch(/Call for a consult/);
     expect(blob).not.toMatch(/Ready to Buy or Sell\?/);
+    expect(blob).not.toMatch(/Find Your /);
   });
 
   it("puts the client email on fallback domain metadata", () => {
@@ -31,6 +32,9 @@ describe("multi-domain landing copy", () => {
     );
     expect(getDomainConfig("unknown-host.example").description).toContain(
       "(702) 222-1964",
+    );
+    expect(getDomainConfig("unknown-host.example").heroSubheadline).toContain(
+      "homes@heyberkshire.com",
     );
   });
 });

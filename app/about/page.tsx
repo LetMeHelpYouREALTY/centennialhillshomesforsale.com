@@ -499,7 +499,9 @@ export default function AboutPage() {
                 <div className="bg-blue-600 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <Users className="h-8 w-8" aria-hidden="true" />
                 </div>
-                <h3 className="font-bold text-xl mb-2">Global Network</h3>
+                <h3 className="font-bold text-xl mb-2">
+                  Referral network for relocations
+                </h3>
                 <p className="text-slate-300 text-sm">
                   Global referral network for inbound and outbound relocations.
                   California-to-Nevada files are a regular part of this

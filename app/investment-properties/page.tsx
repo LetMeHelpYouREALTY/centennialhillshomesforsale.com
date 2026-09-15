@@ -34,7 +34,7 @@ export default function InvestmentPropertiesPage() {
       h1="Las Vegas Investment Properties"
       imageSrc="/images/hero/investment.png"
       imageAlt="Single-family Las Vegas rental house with desert xeriscape"
-      intro="I represent buyers and sellers of rental houses in Clark County. I do not manage rentals and I will not publish a fake cap rate for a ZIP. Bring the address; I run rent comps and expenses."
+      intro="I represent buyers and sellers of rental houses in Clark County — production inventory, 89138 Summerlin West, and Henderson streets. I do not treat Siena as a generic rental ZIP: it is a HOPA campus with occupancy rules. I do not manage rentals and I will not publish a fake cap rate. Bring the address; I run rent comps and expenses."
       stats={[
         {
           value: formatUsd(LISTING_MEDIANS_USD.lasVegas),

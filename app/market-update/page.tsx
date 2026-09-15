@@ -34,7 +34,7 @@ export default function MarketUpdatePage() {
       h1="Las Vegas Real Estate Market Update"
       imageSrc="/images/hero/market-report.png"
       imageAlt="Las Vegas market update notes on a desk with valley views"
-      intro={`${MARKET_SNAPSHOT_SOURCE}. This replaces the old “week of January 20, 2026” newsletter copy. I do not auto-publish weekly MLS averages on this domain.`}
+      intro={`${MARKET_SNAPSHOT_SOURCE}. This replaces the old “week of January 20, 2026” newsletter copy. I do not auto-publish weekly MLS averages, a 89138-only median, or a Siena campus median on this domain.`}
       stats={[
         {
           value: formatUsd(LISTING_MEDIANS_USD.lasVegas),

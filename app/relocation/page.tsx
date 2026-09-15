@@ -33,7 +33,7 @@ export default function RelocationPage() {
       h1="Relocating To or From Las Vegas"
       imageSrc="/images/hero/relocation.png"
       imageAlt="Relocation day at a Las Vegas desert-contemporary home"
-      intro="Inbound and outbound moves are two calendars. I tour by video, then in person. I will not send you to 89144 when you asked for Centennial Hills, and I will not use a “safe neighborhood” slogan instead of parks, trails, and drive times."
+      intro="Inbound and outbound moves are two calendars. I tour by video, then in person. I will not send you to 89138 when you asked for Centennial Hills, or to Siena 55+ when occupancy does not fit, and I will not use a “safe neighborhood” slogan instead of parks, trails, and drive times."
       stats={[
         {
           value: formatUsd(LISTING_MEDIANS_USD.lasVegas),

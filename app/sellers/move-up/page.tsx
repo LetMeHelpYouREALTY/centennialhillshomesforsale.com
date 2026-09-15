@@ -28,7 +28,7 @@ export default function MoveUpSellerPage() {
       h1="Move-Up Sellers in Las Vegas"
       imageSrc="/images/hero/sellers.png"
       imageAlt="Staged Las Vegas listing living room opening to a backyard pool"
-      intro="A move-up is two contracts, not a vibe. I price the home you have with a live CMA, then write the next offer with the contingency — or cash-from-sale plan — that actually closes."
+      intro="A move-up is two contracts, not a vibe. I price the home you have with a live CMA, then write the next offer — 89138 Summerlin West, Centennial Hills, or a 55+ campus such as Siena — with the contingency or cash-from-sale plan that actually closes."
       stats={[
         { value: "CMA", label: "Current house" },
         { value: "Two files", label: "Sell + buy" },

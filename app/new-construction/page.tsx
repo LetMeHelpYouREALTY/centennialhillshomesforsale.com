@@ -34,7 +34,7 @@ export default function NewConstructionPage() {
       h1="New Construction Homes in Las Vegas"
       imageSrc="/images/hero/new-construction.png"
       imageAlt="New construction homes under desert sky in Las Vegas"
-      intro="Builder sales offices work for the builder. Register Dr. Jan Duffy as your agent before you walk in, or the file may not pay a cooperating broker. Compensation is still in a written buyer agreement — it is not “always free.”"
+      intro="Builder sales offices work for the builder. Register Dr. Jan Duffy as your agent before you walk in — including 89138 Summerlin West pods and 55+ campuses such as Siena — or the file may not pay a cooperating broker. Compensation is still in a written buyer agreement — it is not “always free.”"
       stats={[
         { value: "Register first", label: "Before the model" },
         { value: "Contract", label: "50+ pages typical" },
@@ -46,7 +46,7 @@ export default function NewConstructionPage() {
           heading: "Registration is the whole game on day one",
           imageSrc: "/images/hero/new-construction.png",
           imageAlt: "New construction homes under desert sky in Las Vegas",
-          body: "Most Las Vegas and Henderson builders will only recognize the agent who is with you (or registered) on the first visit. If you tour alone, you may forfeit representation on that community. Text (702) 222-1964 before you put your name on the kiosk iPad.",
+          body: "Most Las Vegas and Henderson builders will only recognize the agent who is with you (or registered) on the first visit. If you tour alone, you may forfeit representation on that community. Text (702) 222-1964 or email homes@heyberkshire.com before you put your name on the kiosk iPad.",
         },
         {
           heading: "Where new construction still exists in 2026",

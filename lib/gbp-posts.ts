@@ -116,7 +116,7 @@ Popular first-time buyer neighborhoods (realtor.com listing medians as of 2026-0
 - Mountains Edge ($499,900)
 - Centennial Hills ($514,500)
 
-Call (702) 222-1964 to start your homeownership journey.`,
+Call (702) 222-1964 or email homes@heyberkshire.com with the ZIP.`,
     cta: {
       text: "First-Time Buyer Guide",
       url: "https://heyberkshire.com/buyers/first-time-buyers",
@@ -199,11 +199,7 @@ export const reviewResponseTemplates = {
     neighborhood: string,
     details: string,
   ) => `
-Thank you so much, ${clientName}! It was truly a pleasure helping you find your perfect home in ${neighborhood}. ${details}
-
-Working with buyers who know what they want makes my job a joy. I'm always here if you have questions about your new home or need recommendations for local services.
-
-Welcome to the neighborhood! 🏠
+Thank you, ${clientName}. I appreciate the review. ${details} The ${neighborhood} file closed on the purchase agreement dates — not a slogan. Call (702) 222-1964 or email homes@heyberkshire.com if a neighbor needs a live CMA.
 
 - Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
 `,
@@ -213,17 +209,13 @@ Welcome to the neighborhood! 🏠
     neighborhood: string,
     details: string,
   ) => `
-Thank you for the kind words, ${clientName}! Selling your ${neighborhood} home was a great experience, and I'm thrilled we were able to ${details}.
-
-The Las Vegas market is competitive, but with the right pricing strategy and marketing, we got you excellent results. Wishing you all the best in your next chapter!
+Thank you, ${clientName}. The ${neighborhood} listing closed on a written plan and live comps. ${details} Call (702) 222-1964 or email homes@heyberkshire.com if the next file is a buy or a second listing.
 
 - Dr. Jan Duffy, BHHS Nevada Properties
 `,
 
   fourStar: (clientName: string, details: string) => `
-Thank you for your review, ${clientName}! I appreciate your feedback about ${details}. Your satisfaction is my priority, and I'm always looking for ways to improve.
-
-If there's anything I can help with going forward, please don't hesitate to reach out. I value your trust in choosing Berkshire Hathaway HomeServices.
+Thank you for the review, ${clientName}. ${details} Call (702) 222-1964 or email homes@heyberkshire.com if anything on the file still needs a written follow-up.
 
 - Dr. Jan Duffy
 `,

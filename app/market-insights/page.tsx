@@ -514,8 +514,9 @@ export default async function MarketInsightsPage() {
                 </div>
                 <p className="text-pretty text-slate-600 text-sm mb-3">
                   Red Rock views, Downtown Summerlin, and a finished trail
-                  network. 89144, 89138, and The Ridges are different maps —
-                  confirm village comps, not a “strong buy” label.
+                  network. 89144, 89138, The Ridges, and Siena 55+ are different
+                  maps — confirm village or campus comps, not a “strong buy”
+                  label.
                 </p>
                 <div className="text-sm text-slate-500">
                   Tour: The Ridges, 89138, Paseos
