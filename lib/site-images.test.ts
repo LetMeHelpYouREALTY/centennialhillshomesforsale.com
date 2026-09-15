@@ -105,7 +105,7 @@ describe("site images catalog", () => {
     expect(showing.src).toBe(PAGE_HERO_IMAGES.buyers.src);
 
     const kitchen = resolveSectionImage({
-      heading: "Kitchen updates that show on the CMA",
+      heading: "Updated kitchen before the listing goes live",
       neighborhoodName: "Henderson",
     });
     expect(kitchen.src).toBe(PAGE_HERO_IMAGES.sellers.src);
