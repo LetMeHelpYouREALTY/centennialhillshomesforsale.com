@@ -67,7 +67,7 @@ const contactFaqs = [
   {
     question: "What should I expect during my first consultation?",
     answer:
-      "Your consultation is a no-pressure conversation about your real estate goals. We'll discuss your timeline, budget, preferences, and answer any questions you have about the Las Vegas market. Whether you're buying, selling, or exploring options, I'll provide honest guidance tailored to your situation.",
+      "The first consult is a written-plan conversation: timeline, budget, ZIP, and whether you need a buyer-broker or listing agreement. Bring the address if you have one. I will pull live MLS, not a script.",
   },
   {
     question: "Do I need to be pre-approved before scheduling a showing?",

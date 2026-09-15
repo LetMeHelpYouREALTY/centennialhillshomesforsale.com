@@ -87,6 +87,11 @@ export const INDEXABLE_PATHS: Array<{
     priority: 0.5,
     changeFrequency: "monthly",
   },
+  {
+    path: "/55-plus-communities/siena",
+    priority: 0.6,
+    changeFrequency: "monthly",
+  },
   { path: "/neighborhoods", priority: 0.9, changeFrequency: "weekly" },
   {
     path: "/neighborhoods/centennial-hills",

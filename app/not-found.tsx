@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Phone } from "lucide-react";
-import { CTA_PHONE, CTA_TEL, TEXT_LINK_CLASS } from "@/lib/contact";
+import { CTA_PHONE, CTA_TEL, OFFICE_NAP, TEXT_LINK_CLASS } from "@/lib/contact";
+import { VisitOffice } from "@/components/shared/VisitOffice";
 
 export default function NotFound() {
   return (
@@ -14,7 +15,8 @@ export default function NotFound() {
         </h1>
         <p className="mb-8 text-lg text-slate-600">
           The URL may be mistyped, or the listing moved. Use a neighborhood
-          guide, search live MLS, or call the office line.
+          guide, search live MLS, or call the office line. Office:{" "}
+          {OFFICE_NAP.full}.
         </p>
         <div className="mb-10 flex flex-col justify-center gap-3 sm:flex-row">
           <Link
@@ -58,6 +60,7 @@ export default function NotFound() {
           </li>
         </ul>
       </div>
+      <VisitOffice compact />
     </main>
   );
 }

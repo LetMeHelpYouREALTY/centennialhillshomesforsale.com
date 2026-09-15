@@ -20,5 +20,6 @@ describe("indexable paths", () => {
     expect(paths.has("/neighborhoods/tournament-hills")).toBe(true);
     expect(paths.has("/neighborhoods/89144")).toBe(true);
     expect(paths.has("/neighborhoods/89138")).toBe(true);
+    expect(paths.has("/55-plus-communities/siena")).toBe(true);
   });
 });

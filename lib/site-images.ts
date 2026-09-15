@@ -194,6 +194,10 @@ const NEIGHBORHOOD_IMAGE_MAP: Record<string, SiteImage> = {
     src: "/images/neighborhoods/solera-anthem.png",
     alt: "Solera at Anthem Henderson 55-plus single-story homes and rec courts",
   },
+  siena: {
+    src: "/images/hero/55-plus-hub.png",
+    alt: "Summerlin 55-plus golf and rec setting used for the Siena guide until a first-party Siena street photo is on file",
+  },
 };
 
 export function getNeighborhoodImage(slug: string): SiteImage {

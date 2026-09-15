@@ -108,6 +108,7 @@ export default function SunCitySummerlinPage() {
           href: "/55-plus-communities/heritage-stonebridge",
           label: "Heritage at Stonebridge",
         },
+        { href: "/55-plus-communities/siena", label: "Siena Summerlin South" },
         { href: "/neighborhoods/summerlin", label: "Summerlin all-ages homes" },
       ]}
       lastUpdated="September 2026"

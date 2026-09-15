@@ -91,6 +91,7 @@ export default function TrilogySummerlinPage() {
           href: "/55-plus-communities/heritage-stonebridge",
           label: "Heritage at Stonebridge",
         },
+        { href: "/55-plus-communities/siena", label: "Siena Summerlin South" },
         {
           href: "/neighborhoods/summerlin-west",
           label: "Summerlin West all-ages",

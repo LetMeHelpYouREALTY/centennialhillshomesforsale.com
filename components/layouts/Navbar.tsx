@@ -159,6 +159,7 @@ export default function Navbar() {
               <a
                 href={CTA_TEL}
                 className="flex items-center gap-2 no-underline"
+                aria-label={`Call Dr. Jan Duffy at ${CTA_PHONE}`}
               >
                 <Phone className="h-4 w-4" aria-hidden="true" />
                 <span className="hidden xl:inline">{CTA_PHONE}</span>

@@ -432,8 +432,8 @@ export function LeadCaptureForm({
           className={textareaClassName}
           placeholder={
             formType === "home-valuation"
-              ? "Street address, occupancy (owner / vacant / tenant), and anything that would change a CMA."
-              : "How can Dr. Jan Duffy help you?"
+              ? "Street address, occupancy (owner / vacant / tenant), and anything that would change a CMA…"
+              : "How can Dr. Jan Duffy help you…"
           }
         />
       </div>

@@ -38,6 +38,7 @@ const SEGMENT_LABELS: Record<string, string> = {
   "heritage-stonebridge": "Heritage at Stonebridge",
   "trilogy-summerlin": "Trilogy Summerlin",
   "solera-anthem": "Solera at Anthem",
+  siena: "Siena",
   "centennial-hills": "Centennial Hills",
   summerlin: "Summerlin",
   "summerlin-west": "Summerlin West",

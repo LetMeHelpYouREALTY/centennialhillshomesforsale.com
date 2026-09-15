@@ -49,11 +49,12 @@ export const metadata: Metadata = withShareImage(
 
 const listingsSchema = {
   "@context": "https://schema.org",
-  "@type": "RealEstateListing",
+  "@type": "CollectionPage",
   name: "Las Vegas MLS Property Listings",
   description:
-    "Live MLS property listings for Las Vegas, Henderson, and Summerlin homes for sale",
-  provider: {
+    "Live MLS property search for Las Vegas, Henderson, and Summerlin homes for sale",
+  url: "https://heyberkshire.com/listings",
+  about: {
     "@type": "RealEstateAgent",
     name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
     telephone: "+17022221964",
@@ -61,7 +62,7 @@ const listingsSchema = {
   areaServed: [
     { "@type": "City", name: "Las Vegas, NV" },
     { "@type": "City", name: "Henderson, NV" },
-    { "@type": "City", name: "Summerlin, NV" },
+    { "@type": "Place", name: "Summerlin, NV" },
   ],
 };
 
@@ -79,7 +80,7 @@ const listingFaqs = [
   {
     question: "How much do I need for a down payment in Las Vegas?",
     answer:
-      "Down payment requirements vary by loan type: FHA loans require 3.5%, conventional loans typically 3-20%, VA loans 0% for eligible veterans. Nevada also offers down payment assistance programs for first-time buyers. Dr. Jan can connect you with lenders who specialize in various loan programs.",
+      "Down payment requirements vary by loan type: FHA loans require 3.5%, conventional loans typically 3-20%, VA loans 0% for eligible veterans. Nevada also offers down payment assistance programs. Dr. Jan can introduce Clark County lenders. Rates are UNKNOWN until the lender quotes them.",
   },
   {
     question: "Are Las Vegas HOA fees expensive?",

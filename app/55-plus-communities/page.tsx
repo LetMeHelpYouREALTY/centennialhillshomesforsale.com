@@ -288,7 +288,7 @@ const communities = [
   },
   {
     name: "Siena",
-    slug: null, // No dedicated page yet
+    slug: "siena",
     location: "Summerlin",
     ageRequirement: "55+ (at least one resident)",
     hoaFees: HOA_CONFIRM,
@@ -296,13 +296,13 @@ const communities = [
     homes: "Confirm HOA count",
     amenities: ["Golf course", "Pools", "Fitness", "Social clubs"],
     highlights: [
-      "Summerlin 55+ campus west of the 215",
-      "18-hole golf course",
-      "Opened in the 1990s",
-      "Golf, pools, and club calendar",
+      "Summerlin South 55+ campus in ZIP 89135",
+      "Guard-gated; golf club is a separate question",
+      "Sunrise Company development, not Del Webb",
+      "Confirm occupancy in the current CC&Rs",
     ],
     description:
-      "Siena is a Summerlin 55+ campus. Ask for a live CMA — I will not invent a price band.",
+      "Siena is a guard-gated 55+ campus in Summerlin South (89135). Sunrise Company built it. Confirm HOA, golf-club dues, and occupancy on resale docs — I will not invent a home count.",
     color: "slate",
   },
 ];

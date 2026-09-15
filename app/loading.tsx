@@ -4,8 +4,9 @@ export default function Loading() {
       className="container mx-auto max-w-4xl px-4 py-16"
       aria-busy="true"
       aria-live="polite"
+      role="status"
     >
-      <span className="sr-only">Loading page</span>
+      <span className="sr-only">Loading page…</span>
       <div className="space-y-4">
         <div className="h-10 w-2/3 animate-pulse rounded bg-slate-200" />
         <div className="h-6 w-full animate-pulse rounded bg-slate-100" />
