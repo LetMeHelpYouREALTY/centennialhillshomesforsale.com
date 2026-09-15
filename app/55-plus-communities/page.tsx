@@ -101,7 +101,7 @@ const faqSchema = {
       name: "Can grandchildren visit or stay in 55+ communities?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, most communities allow guests of any age to visit and stay temporarily (typically 30-90 days per year). However, children cannot be permanent residents. Each community has specific guest policies that Dr. Jan Duffy can explain.",
+        text: "Guest-stay limits and under-age occupancy vary by HOA. Confirm days per year in the current CC&Rs. Children cannot be permanent residents under typical HOPA rules. Dr. Jan Duffy reads the packet with you before you bid.",
       },
     },
     {
@@ -157,7 +157,7 @@ const communities = [
       "Pools",
     ],
     highlights: [
-      "7,700+ homes on about 2,400 acres",
+      "7,700+ homes",
       "3 golf courses",
       "4 recreation centers with pools",
       "Confirm clubs in the HOA packet",
@@ -176,14 +176,14 @@ const communities = [
     priceRange: `${formatUsd(LISTING_MEDIANS_USD.sunCityAnthem)} listing median`,
     homes: "7,100+ homes",
     amenities: [
-      "2 golf courses",
-      "64K sf clubhouse",
+      "Anthem Center",
+      "Confirm golf membership",
       "HOA club calendar",
       "Pools",
     ],
     highlights: [
       "Henderson 55+ Del Webb campus",
-      "2 golf courses",
+      "Confirm golf vs HOA separately",
       "Mountain views",
       "Henderson parks, trails, and recreation centers",
     ],
@@ -454,11 +454,10 @@ export default function FiftyFiveCommunitiesPage() {
                     Relocating from California?
                   </h3>
                   <p className="text-lg text-slate-700 mb-4">
-                    Many of our 55+ buyers are relocating from California—and
-                    for good reason.{" "}
-                    <strong>Enjoy more home for your money</strong> with no
-                    state income tax, lower property taxes, and a cost of living
-                    that stretches your retirement dollars further.
+                    Many 55+ buyers are relocating from California. Nevada has
+                    no wage income tax. Pair your California sale against live
+                    Las Vegas 55+ comps. Confirm HOA, insurance, and commute
+                    before you assume total cost of living is lower.
                   </p>
                   <div className="grid md:grid-cols-3 gap-4 mb-4">
                     <div className="bg-white rounded-lg p-4 text-center">
@@ -479,10 +478,10 @@ export default function FiftyFiveCommunitiesPage() {
                     </div>
                     <div className="bg-white rounded-lg p-4 text-center">
                       <div className="text-2xl font-bold text-green-600">
-                        45 min
+                        LAS
                       </div>
                       <div className="text-sm text-slate-600">
-                        Direct flights to California
+                        Flights — time your own itinerary
                       </div>
                     </div>
                   </div>
@@ -503,7 +502,7 @@ export default function FiftyFiveCommunitiesPage() {
               fallbackSrc={PAGE_HERO_IMAGES.fiftyFivePlus.src}
               avoidSrc={PAGE_HERO_IMAGES.fiftyFivePlus.src}
             >
-              Why Active Adults Choose Las Vegas
+              What 55+ HOPA campuses in Las Vegas actually include
             </SectionHeading>
             <p className="text-lg text-slate-600 text-center mb-8 max-w-3xl mx-auto">
               55+ HOPA communities pair rec campuses, golf, and one-story floor
@@ -550,7 +549,8 @@ export default function FiftyFiveCommunitiesPage() {
                       <strong>Spouse/Partner Rules:</strong> Most communities
                       allow a spouse or partner under 55 to reside with a
                       qualifying resident. Minimum ages for non-qualifying
-                      residents vary (often 40-45 minimum).
+                      residents are in the current CC&Rs — I will not publish a
+                      40–45 slogan.
                     </p>
                     <p className="text-blue-800 font-medium">
                       Each community has specific rules. Dr. Jan Duffy provides
@@ -854,10 +854,10 @@ export default function FiftyFiveCommunitiesPage() {
                   Can grandchildren visit or stay in 55+ communities?
                 </h3>
                 <p className="text-slate-600">
-                  Yes, most communities allow guests of any age to visit and
-                  stay temporarily (typically 30-90 days per year). However,
-                  children cannot be permanent residents. Each community has
-                  specific guest policies that Dr. Jan Duffy can explain.
+                  Guest-stay limits and under-age occupancy vary by HOA. Confirm
+                  days per year in the current CC&Rs. Children cannot be
+                  permanent residents under typical HOPA rules. Dr. Jan Duffy
+                  reads the packet with you before you bid.
                 </p>
               </div>
             </div>
@@ -870,7 +870,7 @@ export default function FiftyFiveCommunitiesPage() {
               fallbackSrc={PAGE_HERO_IMAGES.about.src}
               avoidSrc={PAGE_HERO_IMAGES.fiftyFivePlus.src}
             >
-              Why Choose Dr. Jan Duffy for 55+ Communities?
+              How Dr. Jan Duffy works 55+ files
             </SectionHeading>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="flex items-start">

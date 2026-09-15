@@ -44,7 +44,7 @@ export default function DelWebbLakeLasVegasPage() {
       longitude={-114.929}
       stats={[
         { value: areaMedian, label: "Lake LV listing median" },
-        { value: "Newer", label: "Del Webb vintage" },
+        { value: "Confirm HOA", label: "Home count" },
         { value: "89011", label: "Primary ZIP" },
         { value: "Lake", label: "Setting" },
       ]}

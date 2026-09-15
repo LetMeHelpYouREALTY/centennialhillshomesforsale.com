@@ -43,7 +43,7 @@ export default function FirstTimeBuyersPage() {
           value: formatUsd(LISTING_MEDIANS_USD.northLasVegas),
           label: "NLV listing median",
         },
-        { value: "30–45 days", label: "Typical close" },
+        { value: "Contract dates", label: "Set with lender" },
         { value: "Written", label: "Buyer agreement" },
       ]}
       sections={[

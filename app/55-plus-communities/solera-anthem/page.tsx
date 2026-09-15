@@ -60,7 +60,7 @@ export default function SoleraAnthemPage() {
       sections={[
         {
           heading: "Why buyers compare Solera to Sun City Anthem",
-          body: "Sun City Anthem is the large Del Webb campus with Anthem Center. Solera is a smaller gated map with a different HOA and typically lower dues than the big campus. Some buyers want fewer neighbors and a gate. Some want 64,000 square feet of clubhouse. I tour both on the same Henderson loop.",
+          body: "Sun City Anthem is the large Del Webb campus with Anthem Center. Solera is a smaller gated map with a different HOA and typically lower dues than the big campus. Some buyers want fewer neighbors and a gate. Some want the full Anthem Center amenity campus — confirm size and dues on the HOA packet. I tour both on the same Henderson loop.",
         },
         {
           heading: `Pricing as of ${MARKET_SNAPSHOT_AS_OF}`,

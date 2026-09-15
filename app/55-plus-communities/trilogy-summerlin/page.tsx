@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
-import { MARKET_SNAPSHOT_AS_OF } from "@/lib/market-snapshots";
+import {
+  formatUsd,
+  LISTING_MEDIANS_USD,
+  MARKET_SNAPSHOT_AS_OF,
+} from "@/lib/market-snapshots";
 
 export const metadata: Metadata = withShareImage(
   {
@@ -58,7 +62,7 @@ export default function TrilogySummerlinPage() {
         },
         {
           heading: `Pricing as of ${MARKET_SNAPSHOT_AS_OF}`,
-          body: "Marketing price bands are not a CMA. Summerlin West listing medians sit well above Summerlin North; Trilogy is 89135 product and should be compared to 89135 comps, not to Sun City Summerlin 89134. I pull Trilogy-only sales.",
+          body: `Marketing price bands are not a CMA. As of ${MARKET_SNAPSHOT_AS_OF}, Summerlin South listing median is ${formatUsd(LISTING_MEDIANS_USD.summerlinSouth)}. Trilogy is 89135 product and should be compared to 89135 comps, not to Sun City Summerlin 89134. I pull Trilogy-only sales.`,
         },
         {
           heading: "Geography",

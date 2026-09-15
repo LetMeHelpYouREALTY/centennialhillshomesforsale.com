@@ -25,7 +25,7 @@ export const metadata: Metadata = withShareImage(
   },
 );
 
-const summerlinSouth = formatUsd(LISTING_MEDIANS_USD.summerlinWest);
+const summerlinSouth = formatUsd(LISTING_MEDIANS_USD.summerlinSouth);
 
 export default function SienaPage() {
   return (
@@ -46,7 +46,7 @@ export default function SienaPage() {
         { value: "89135", label: "ZIP" },
         {
           value: summerlinSouth,
-          label: "89138/West listing median (not Siena alone)",
+          label: "Summerlin South listing median (not Siena alone)",
         },
       ]}
       senior={{
@@ -62,11 +62,11 @@ export default function SienaPage() {
       sections={[
         {
           heading: "Who built it, and who it is not",
-          body: "Sunrise Company’s own record: age-qualified master plan, about 667 acres, construction started February 1999, sales completed 2006. That is not Del Webb’s Sun City Summerlin in 89134, and it is not Shea’s Trilogy in the same 89135 ZIP. I tour Siena vs Trilogy vs Sun City on the same week when a buyer is choosing gate, golf, and vintage.",
+          body: "Sunrise Company’s own record: age-qualified master plan, construction started February 1999, sales completed 2006. Confirm current acreage on HOA or master-plan docs. That is not Del Webb’s Sun City Summerlin in 89134, and it is not Shea’s Trilogy in the same 89135 ZIP. I tour Siena vs Trilogy vs Sun City on the same week when a buyer is choosing gate, golf, and vintage.",
         },
         {
           heading: `Pricing as of ${MARKET_SNAPSHOT_AS_OF}`,
-          body: `I will not publish a Siena-only median I cannot source. The Summerlin West / 89138 listing median on this site is ${summerlinSouth} — a different ZIP sample, not this HOA. Golf-front vs interior lots do not share one number. Ask for a live CMA on the floor plan.`,
+          body: `I will not publish a Siena-only median I cannot source. The Summerlin South listing median on this site is ${summerlinSouth} — a ZIP sample, not this HOA. Golf-front vs interior lots do not share one number. Ask for a live CMA on the floor plan.`,
         },
         {
           heading: "Golf club vs HOA",

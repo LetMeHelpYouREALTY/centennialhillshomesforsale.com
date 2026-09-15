@@ -45,7 +45,7 @@ export default function SunCityAnthemPage() {
       stats={[
         { value: median, label: "Median listing" },
         { value: "7,100+", label: "Homes" },
-        { value: "64K sf", label: "Anthem Center" },
+        { value: "Confirm HOA", label: "Anthem Center size" },
         { value: "89052", label: "Primary ZIP" },
       ]}
       senior={{
@@ -64,11 +64,11 @@ export default function SunCityAnthemPage() {
       sections={[
         {
           heading: "Anthem Center vs golf membership",
-          body: "Anthem Center is the community clubhouse (reported around 64,000 square feet) with indoor and outdoor pools, fitness, and dining. Golf at Anthem Country Club or Revere is a separate membership question — do not assume the HOA includes championship golf. I separate club dues from HOA in every offer worksheet.",
+          body: "Anthem Center is the community clubhouse with indoor and outdoor pools, fitness, and dining. Confirm current square footage on the HOA packet. Golf at Anthem Country Club or Revere is a separate membership question — do not assume the HOA includes golf. I separate club dues from HOA in every offer worksheet.",
         },
         {
           heading: `Pricing as of ${MARKET_SNAPSHOT_AS_OF}`,
-          body: `${MARKET_SNAPSHOT_SOURCE} shows a Sun City Anthem median listing of ${median}. Henderson city listing median on the same pull was ${formatUsd(LISTING_MEDIANS_USD.hendersonListing)}. Golf-course and view lots list above the Sun City sample. Confirm HOA on the resale docs; older $180–$230/month figures can be stale.`,
+          body: `${MARKET_SNAPSHOT_SOURCE} shows a Sun City Anthem median listing of ${median}. Henderson city listing median on the same pull was ${formatUsd(LISTING_MEDIANS_USD.hendersonListing)}. Golf-course and view lots list above the Sun City sample. Confirm HOA on the resale docs.`,
         },
         {
           heading: "How this differs from Solera",

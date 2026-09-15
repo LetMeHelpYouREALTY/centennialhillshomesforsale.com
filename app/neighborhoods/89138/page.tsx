@@ -44,7 +44,7 @@ export default function Zip89138Page() {
         },
         {
           heading: "Buying in 89138",
-          body: "Expect newer construction, active HOAs, and view premiums on elevated lots. Days on market in 2026 luxury samples for Reverence have been shorter than Tournament Hills, which tells you this ZIP still turns when priced to the village — not that every 89138 listing is a Reverence home. I filter by subdivision, not ZIP alone.",
+          body: "Expect newer construction, active HOAs, and view premiums on elevated lots. Days on market vary by village and week — I pull live MLS, not a blog sample. Not every 89138 listing is a Reverence home. I filter by subdivision, not ZIP alone.",
         },
       ]}
       faqs={[

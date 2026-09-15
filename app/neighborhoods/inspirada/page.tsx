@@ -54,11 +54,11 @@ export default function InspiradaPage() {
         },
         {
           heading: `Pricing as of ${MARKET_SNAPSHOT_AS_OF}`,
-          body: `${MARKET_SNAPSHOT_SOURCE} shows an Inspirada median listing of ${median}. Townhomes in Groves, detached KB / Toll / Tri Pointe product, and any leftover new construction do not share one number. Mid-2026 reporting put Inspirada in a final new-construction window measured in tens of homes across remaining builder pods — confirm on a live pull, not a 2024 blog.`,
+          body: `${MARKET_SNAPSHOT_SOURCE} shows an Inspirada median listing of ${median}. Townhomes in Groves, detached KB / Toll / Tri Pointe product, and any leftover new construction do not share one number. Confirm remaining new-construction count on a live MLS or builder pull, not a 2024 blog.`,
         },
         {
           heading: "Groves vs detached",
-          body: "The Groves at Inspirada is two-story KB townhome product (about 1,430–1,921 sq ft) that is now resale only. Linea, Alterra, and similar pods are detached. If you searched “new homes in Inspirada” in 2026, say whether you need a townhome or a house so I do not send the wrong village.",
+          body: "The Groves at Inspirada is two-story KB townhome product that is now resale only. Confirm plan square footage on the listing sheet. Linea, Alterra, and similar pods are detached. If you searched “new homes in Inspirada” in 2026, say whether you need a townhome or a house so I do not send the wrong village.",
         },
         {
           heading: "Commute",

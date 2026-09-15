@@ -39,7 +39,7 @@ export default function TournamentHillsPage() {
       sections={[
         {
           heading: "What buyers actually get in Tournament Hills",
-          body: "Listing addresses such as Greensboro Lane, Trophy Hills Drive, and Pine Island Court confirm this village sits in 89134, in The Hills South area of Summerlin. Homes here are custom and semi-custom, typically on larger lots than production tract product in northwest Las Vegas. 2026 closed-sale reports for this village have ranged from under $1 million on smaller resales to several million on estate inventory. Inventory is thin, so a single closing can swing a “median.” I price offers from live comps, not a headline number.",
+          body: "Listing addresses such as Greensboro Lane, Trophy Hills Drive, and Pine Island Court confirm this village sits in 89134, in The Hills South area of Summerlin. Homes here are custom and semi-custom, typically on larger lots than production tract product in northwest Las Vegas. Inventory is thin; I will not publish a sold range without live MLS comps. Ask for a CMA.",
         },
         {
           heading: "How this differs from Centennial Hills and 89138",
@@ -59,7 +59,7 @@ export default function TournamentHillsPage() {
         {
           question: "What is the median home price in Tournament Hills?",
           answer:
-            "UNKNOWN as a single reliable median — 2026 reports disagree because few homes trade. Recent asking prices on active luxury listings have been in the multi-million range. Ask for a live CMA.",
+            "UNKNOWN as a single reliable median — inventory is thin and product is custom. Ask for a live CMA.",
         },
         {
           question: "Can I see homes this week?",
