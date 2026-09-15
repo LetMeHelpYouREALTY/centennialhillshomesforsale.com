@@ -15,6 +15,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
@@ -25,20 +26,23 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = {
-  title: "Home Buying Guide Las Vegas | Berkshire Hathaway HomeServices",
-  description:
-    "Looking to buy a home in Las Vegas? Dr. Jan Duffy with Berkshire Hathaway HomeServices Nevada Properties guides you through every step. Free buyer consultation. Call (702) 222-1964.",
-  keywords: [
-    "buy home Las Vegas",
-    "Las Vegas home buyer",
-    "Berkshire Hathaway buyer agent",
-    "Henderson homes for sale",
-    "first time home buyer Las Vegas",
-    "California relocation Las Vegas",
-    "55+ communities Las Vegas",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Home Buying Guide Las Vegas | Berkshire Hathaway HomeServices",
+    description:
+      "Looking to buy a home in Las Vegas? Dr. Jan Duffy with Berkshire Hathaway HomeServices Nevada Properties guides you through every step. Free buyer consultation. Call (702) 222-1964.",
+    keywords: [
+      "buy home Las Vegas",
+      "Las Vegas home buyer",
+      "Berkshire Hathaway buyer agent",
+      "Henderson homes for sale",
+      "first time home buyer Las Vegas",
+      "California relocation Las Vegas",
+      "55+ communities Las Vegas",
+    ],
+  },
+  PAGE_HERO_IMAGES.buyers,
+);
 
 const buyerSchema = {
   "@context": "https://schema.org",
@@ -293,7 +297,7 @@ export default function BuyersPage() {
             <div className="text-center mt-6">
               <Link
                 href="/neighborhoods"
-                className="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center"
+                className="text-blue-600 font-semibold hover:text-blue-700 inline-flex min-h-11 items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
                 Explore All Neighborhoods{" "}
                 <ArrowRight className="h-4 w-4 ml-2" />
@@ -316,7 +320,7 @@ export default function BuyersPage() {
             <div className="grid md:grid-cols-3 gap-6">
               <Link
                 href="/buyers/california-relocator"
-                className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group"
+                className="block min-h-11 bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
                 <div className="text-3xl mb-4">🌴</div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
@@ -334,7 +338,7 @@ export default function BuyersPage() {
               </Link>
               <Link
                 href="/buyers/first-time-buyers"
-                className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group"
+                className="block min-h-11 bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
                 <div className="text-3xl mb-4">🔑</div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
@@ -351,7 +355,7 @@ export default function BuyersPage() {
               </Link>
               <Link
                 href="/buyers/luxury-homes-las-vegas"
-                className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group"
+                className="block min-h-11 bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
                 <div className="text-3xl mb-4">💎</div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">

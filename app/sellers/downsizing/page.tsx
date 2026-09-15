@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import TopicGuide from "@/components/sections/TopicGuide";
 
-export const metadata: Metadata = {
-  title: "Downsizing in Las Vegas | One-Story and 55+ Options",
-  description:
-    "Downsizing in Las Vegas or Henderson: one-story resale, townhomes, 55+ HOPA communities. Dr. Jan Duffy. Call (702) 222-1964.",
-  keywords: [
-    "downsizing Las Vegas",
-    "one story homes Las Vegas",
-    "55 plus downsizing",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Downsizing in Las Vegas | One-Story and 55+ Options",
+    description:
+      "Downsizing in Las Vegas or Henderson: one-story resale, townhomes, 55+ HOPA communities. Dr. Jan Duffy. Call (702) 222-1964.",
+    keywords: [
+      "downsizing Las Vegas",
+      "one story homes Las Vegas",
+      "55 plus downsizing",
+    ],
+  },
+  {
+    src: "/images/hero/55-plus-hub.png",
+    alt: "One-story 55-plus community homes in Summerlin Las Vegas",
+  },
+);
 
 export default function DownsizingPage() {
   return (

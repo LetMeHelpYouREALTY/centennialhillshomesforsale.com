@@ -12,7 +12,8 @@ import { getCanonicalUrl, getRequestOrigin } from "@/lib/site-url";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import { AGENT_PHOTO_PATH } from "@/lib/brand-assets";
 import { CTA_PHONE, CTA_TEL, OFFICE_NAP } from "@/lib/contact";
-import { getNeighborhoodImage } from "@/lib/site-images";
+import { withShareImage } from "@/lib/page-seo";
+import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
 import {
   formatUsd,
   LISTING_MEDIANS_USD,
@@ -21,22 +22,25 @@ import {
 } from "@/lib/market-snapshots";
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: {
-      absolute:
-        "Centennial Hills Homes for Sale | Las Vegas 89149 Real Estate | Dr. Jan Duffy",
+  return withShareImage(
+    {
+      title: {
+        absolute:
+          "Centennial Hills Homes for Sale | Las Vegas 89149 Real Estate | Dr. Jan Duffy",
+      },
+      description:
+        "Centennial Hills homes for sale in northwest Las Vegas (89149, 89131, 89143). Search current listings with Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Call 702-222-1964.",
+      keywords: [
+        "centennial hills real estate",
+        "centennial hills las vegas real estate",
+        "homes for sale in centennial hills nv",
+        "homes for sale in centennial hills",
+        "centennial hills homes for sale",
+        "centennial hills town center nv real estate",
+      ],
     },
-    description:
-      "Centennial Hills homes for sale in northwest Las Vegas (89149, 89131, 89143). Search current listings with Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Call 702-222-1964.",
-    keywords: [
-      "centennial hills real estate",
-      "centennial hills las vegas real estate",
-      "homes for sale in centennial hills nv",
-      "homes for sale in centennial hills",
-      "centennial hills homes for sale",
-      "centennial hills town center nv real estate",
-    ],
-  };
+    PAGE_HERO_IMAGES.homepage,
+  );
 }
 
 const communities = [

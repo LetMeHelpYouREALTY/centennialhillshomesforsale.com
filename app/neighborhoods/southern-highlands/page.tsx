@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
 import {
   formatUsd,
@@ -7,17 +8,23 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = {
-  title: "Southern Highlands Homes for Sale | Las Vegas Golf Community",
-  description:
-    "Southern Highlands Las Vegas homes for sale — Robert Trent Jones Jr. golf, gated sections, current listings with Dr. Jan Duffy. Call (702) 222-1964.",
-  keywords: [
-    "Southern Highlands homes for sale",
-    "Southern Highlands golf",
-    "Las Vegas golf community",
-    "guard gated Las Vegas",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Southern Highlands Homes for Sale | Las Vegas Golf Community",
+    description:
+      "Southern Highlands Las Vegas homes for sale — Robert Trent Jones Jr. golf, gated sections, current listings with Dr. Jan Duffy. Call (702) 222-1964.",
+    keywords: [
+      "Southern Highlands homes for sale",
+      "Southern Highlands golf",
+      "Las Vegas golf community",
+      "guard gated Las Vegas",
+    ],
+  },
+  {
+    src: "/images/neighborhoods/southern-highlands.png",
+    alt: "Southwest Las Vegas golf community setting near Southern Highlands",
+  },
+);
 
 const median = formatUsd(LISTING_MEDIANS_USD.southernHighlands);
 

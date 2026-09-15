@@ -1,17 +1,24 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
 
-export const metadata: Metadata = {
-  title: "Groves at Inspirada Homes | Henderson Townhomes",
-  description:
-    "Groves at Inspirada Henderson townhomes by KB Home (resale). Square footage, parks, and current listings with Dr. Jan Duffy. Call 702-222-1964.",
-  keywords: [
-    "groves at inspirada",
-    "groves at inspirada henderson",
-    "groves at inspirada new homes for sale",
-    "inspirada townhomes",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Groves at Inspirada Homes | Henderson Townhomes",
+    description:
+      "Groves at Inspirada Henderson townhomes by KB Home (resale). Square footage, parks, and current listings with Dr. Jan Duffy. Call 702-222-1964.",
+    keywords: [
+      "groves at inspirada",
+      "groves at inspirada henderson",
+      "groves at inspirada new homes for sale",
+      "inspirada townhomes",
+    ],
+  },
+  {
+    src: "/images/neighborhoods/groves-at-inspirada.png",
+    alt: "Groves at Inspirada townhomes and pocket parks in Henderson 89044",
+  },
+);
 
 export default function GrovesAtInspiradaPage() {
   return (

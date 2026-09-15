@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import TopicGuide from "@/components/sections/TopicGuide";
 import {
   formatUsd,
@@ -6,16 +7,22 @@ import {
   MARKET_SNAPSHOT_AS_OF,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = {
-  title: "First-Time Home Buyers Las Vegas | Dr. Jan Duffy",
-  description:
-    "First-time Las Vegas home buyers: written buyer agreement, FHA/VA, inspections, and live comps with Dr. Jan Duffy. Call (702) 222-1964.",
-  keywords: [
-    "first time home buyer Las Vegas",
-    "FHA Las Vegas",
-    "first time buyer Nevada",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "First-Time Home Buyers Las Vegas | Dr. Jan Duffy",
+    description:
+      "First-time Las Vegas home buyers: written buyer agreement, FHA/VA, inspections, and live comps with Dr. Jan Duffy. Call (702) 222-1964.",
+    keywords: [
+      "first time home buyer Las Vegas",
+      "FHA Las Vegas",
+      "first time buyer Nevada",
+    ],
+  },
+  {
+    src: "/images/hero/first-time-buyers.png",
+    alt: "First-time buyers on the porch of a single-story Las Vegas home",
+  },
+);
 
 export default function FirstTimeBuyersPage() {
   return (

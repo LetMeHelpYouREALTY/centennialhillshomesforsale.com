@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import TopicGuide from "@/components/sections/TopicGuide";
 import {
   formatUsd,
@@ -6,16 +7,22 @@ import {
   MARKET_SNAPSHOT_AS_OF,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = {
-  title: "Las Vegas Relocation Real Estate | Dr. Jan Duffy",
-  description:
-    "Relocating to or from Las Vegas? Remote tours, dual-state sequencing, and live comps with Dr. Jan Duffy. Call (702) 222-1964.",
-  keywords: [
-    "Las Vegas relocation realtor",
-    "moving to Las Vegas",
-    "moving from Las Vegas",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Las Vegas Relocation Real Estate | Dr. Jan Duffy",
+    description:
+      "Relocating to or from Las Vegas? Remote tours, dual-state sequencing, and live comps with Dr. Jan Duffy. Call (702) 222-1964.",
+    keywords: [
+      "Las Vegas relocation realtor",
+      "moving to Las Vegas",
+      "moving from Las Vegas",
+    ],
+  },
+  {
+    src: "/images/hero/relocation.png",
+    alt: "Relocation day at a Las Vegas desert-contemporary home",
+  },
+);
 
 export default function RelocationPage() {
   return (

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
 import {
   formatUsd,
@@ -7,17 +8,23 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = {
-  title: "Green Valley Homes for Sale | Henderson Nevada Real Estate",
-  description:
-    "Green Valley Henderson homes for sale — established streets, The District, and current listings with Dr. Jan Duffy. Call (702) 222-1964.",
-  keywords: [
-    "Green Valley homes for sale",
-    "Green Valley Henderson",
-    "Green Valley real estate",
-    "Green Valley Ranch",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Green Valley Homes for Sale | Henderson Nevada Real Estate",
+    description:
+      "Green Valley Henderson homes for sale — established streets, The District, and current listings with Dr. Jan Duffy. Call (702) 222-1964.",
+    keywords: [
+      "Green Valley homes for sale",
+      "Green Valley Henderson",
+      "Green Valley real estate",
+      "Green Valley Ranch",
+    ],
+  },
+  {
+    src: "/images/neighborhoods/green-valley.png",
+    alt: "Established Henderson residential streets near Green Valley",
+  },
+);
 
 const north = formatUsd(LISTING_MEDIANS_USD.greenValleyNorth);
 const south = formatUsd(LISTING_MEDIANS_USD.greenValleySouth);

@@ -13,6 +13,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { VisitOffice } from "@/components/shared/VisitOffice";
@@ -27,16 +28,19 @@ import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 
 export const revalidate = 3600;
 
-export const metadata: Metadata = {
-  title: "Centennial Hills Market Insights 2026 | Northwest Las Vegas",
-  description:
-    "First-party Centennial Hills market insights: 89149 vs 89144, Inspirada new-construction wind-down, and how northwest Las Vegas listings are trading. Dr. Jan Duffy. Call 702-222-1964.",
-  keywords: [
-    "centennial hills real estate",
-    "centennial hills las vegas real estate",
-    "las vegas market insights 2026",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Centennial Hills Market Insights 2026 | Northwest Las Vegas",
+    description:
+      "First-party Centennial Hills market insights: 89149 vs 89144, Inspirada new-construction wind-down, and how northwest Las Vegas listings are trading. Dr. Jan Duffy. Call 702-222-1964.",
+    keywords: [
+      "centennial hills real estate",
+      "centennial hills las vegas real estate",
+      "las vegas market insights 2026",
+    ],
+  },
+  PAGE_HERO_IMAGES.market,
+);
 
 const reportSchema = {
   "@context": "https://schema.org",

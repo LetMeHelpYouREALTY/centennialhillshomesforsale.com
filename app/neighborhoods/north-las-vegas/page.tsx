@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
 import {
   formatUsd,
@@ -7,17 +8,23 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = {
-  title: "North Las Vegas Homes for Sale | Aliante, Tule Springs",
-  description:
-    "North Las Vegas homes for sale with Dr. Jan Duffy — Aliante, Tule Springs, Valley Vista, and current listings. Call (702) 222-1964.",
-  keywords: [
-    "North Las Vegas homes for sale",
-    "Aliante homes",
-    "Tule Springs homes",
-    "first time home buyer Las Vegas",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "North Las Vegas Homes for Sale | Aliante, Tule Springs",
+    description:
+      "North Las Vegas homes for sale with Dr. Jan Duffy — Aliante, Tule Springs, Valley Vista, and current listings. Call (702) 222-1964.",
+    keywords: [
+      "North Las Vegas homes for sale",
+      "Aliante homes",
+      "Tule Springs homes",
+      "first time home buyer Las Vegas",
+    ],
+  },
+  {
+    src: "/images/neighborhoods/north-las-vegas.png",
+    alt: "Northwest Las Vegas Valley residential streets near North Las Vegas",
+  },
+);
 
 const median = formatUsd(LISTING_MEDIANS_USD.northLasVegas);
 

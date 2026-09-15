@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import TopicGuide from "@/components/sections/TopicGuide";
 
-export const metadata: Metadata = {
-  title: "Why Berkshire Hathaway HomeServices | Dr. Jan Duffy",
-  description:
-    "Why work with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. One agent of record, BHHS brand, local CMA. Call (702) 222-1964.",
-  keywords: [
-    "Berkshire Hathaway HomeServices Las Vegas",
-    "Dr. Jan Duffy realtor",
-    "BHHS Nevada Properties",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Why Berkshire Hathaway HomeServices | Dr. Jan Duffy",
+    description:
+      "Why work with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. One agent of record, BHHS brand, local CMA. Call (702) 222-1964.",
+    keywords: [
+      "Berkshire Hathaway HomeServices Las Vegas",
+      "Dr. Jan Duffy realtor",
+      "BHHS Nevada Properties",
+    ],
+  },
+  {
+    src: "/images/hero/office-lake-mead.png",
+    alt: "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard",
+  },
+);
 
 export default function WhyBerkshirePage() {
   return (

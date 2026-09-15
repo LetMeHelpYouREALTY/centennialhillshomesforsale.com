@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import TopicGuide from "@/components/sections/TopicGuide";
 
-export const metadata: Metadata = {
-  title: "Selling a Las Vegas Home While Relocating | Dr. Jan Duffy",
-  description:
-    "List your Las Vegas or Henderson home from out of state. Remote showings, lockbox, weekly updates with Dr. Jan Duffy. Call (702) 222-1964.",
-  keywords: [
-    "sell Las Vegas home while moving",
-    "relocation home sale Nevada",
-    "list house from out of state Las Vegas",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Selling a Las Vegas Home While Relocating | Dr. Jan Duffy",
+    description:
+      "List your Las Vegas or Henderson home from out of state. Remote showings, lockbox, weekly updates with Dr. Jan Duffy. Call (702) 222-1964.",
+    keywords: [
+      "sell Las Vegas home while moving",
+      "relocation home sale Nevada",
+      "list house from out of state Las Vegas",
+    ],
+  },
+  {
+    src: "/images/hero/relocation.png",
+    alt: "Moving truck in the driveway of a Las Vegas home during relocation",
+  },
+);
 
 export default function SellersRelocationPage() {
   return (

@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import TopicGuide from "@/components/sections/TopicGuide";
 
-export const metadata: Metadata = {
-  title: "Divorce and Probate Home Sales Las Vegas | Dr. Jan Duffy",
-  description:
-    "Clark County divorce, probate, and estate home sales with Dr. Jan Duffy. Court orders, two signatures, clean close. Call (702) 222-1964. Not legal advice.",
-  keywords: [
-    "divorce home sale Las Vegas",
-    "probate real estate Nevada",
-    "estate sale Las Vegas",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Divorce and Probate Home Sales Las Vegas | Dr. Jan Duffy",
+    description:
+      "Clark County divorce, probate, and estate home sales with Dr. Jan Duffy. Court orders, two signatures, clean close. Call (702) 222-1964. Not legal advice.",
+    keywords: [
+      "divorce home sale Las Vegas",
+      "probate real estate Nevada",
+      "estate sale Las Vegas",
+    ],
+  },
+  {
+    src: "/images/hero/sellers-listing.png",
+    alt: "Las Vegas home prepared for a court-supervised listing",
+  },
+);
 
 export default function DivorceProbatePage() {
   return (

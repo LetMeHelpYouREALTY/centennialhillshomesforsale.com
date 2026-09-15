@@ -1,17 +1,24 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
 
-export const metadata: Metadata = {
-  title: "89138 Homes for Sale | Summerlin West ZIP Code",
-  description:
-    "Homes for sale in 89138 — Summerlin West and Reverence. Current Las Vegas listings with Dr. Jan Duffy. Call 702-222-1964.",
-  keywords: [
-    "homes for sale in 89138",
-    "houses for sale in 89138",
-    "real estate in 89138",
-    "homes for sale 89138",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "89138 Homes for Sale | Summerlin West ZIP Code",
+    description:
+      "Homes for sale in 89138 — Summerlin West and Reverence. Current Las Vegas listings with Dr. Jan Duffy. Call 702-222-1964.",
+    keywords: [
+      "homes for sale in 89138",
+      "houses for sale in 89138",
+      "real estate in 89138",
+      "homes for sale 89138",
+    ],
+  },
+  {
+    src: "/images/neighborhoods/89138.png",
+    alt: "Newer Summerlin West homes in ZIP 89138 Las Vegas",
+  },
+);
 
 export default function Zip89138Page() {
   return (

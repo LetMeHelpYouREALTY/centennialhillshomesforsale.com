@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import TopicGuide from "@/components/sections/TopicGuide";
 import {
   formatUsd,
@@ -6,17 +7,23 @@ import {
   MARKET_SNAPSHOT_AS_OF,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = {
-  title: "New Construction Homes Las Vegas | Buyer Representation",
-  description:
-    "New construction in Las Vegas and Henderson: register your agent before the first visit. Dr. Jan Duffy reviews builder contracts. Call (702) 222-1964.",
-  keywords: [
-    "new construction Las Vegas",
-    "new homes Henderson",
-    "Lennar Las Vegas",
-    "KB Home Las Vegas",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "New Construction Homes Las Vegas | Buyer Representation",
+    description:
+      "New construction in Las Vegas and Henderson: register your agent before the first visit. Dr. Jan Duffy reviews builder contracts. Call (702) 222-1964.",
+    keywords: [
+      "new construction Las Vegas",
+      "new homes Henderson",
+      "Lennar Las Vegas",
+      "KB Home Las Vegas",
+    ],
+  },
+  {
+    src: "/images/hero/new-construction.png",
+    alt: "New construction homes under desert sky in Las Vegas",
+  },
+);
 
 export default function NewConstructionPage() {
   return (

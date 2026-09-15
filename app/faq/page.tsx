@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import TopicGuide from "@/components/sections/TopicGuide";
 import {
   formatUsd,
@@ -6,16 +7,22 @@ import {
   MARKET_SNAPSHOT_AS_OF,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = {
-  title: "FAQ | Las Vegas Real Estate with Dr. Jan Duffy",
-  description:
-    "Answers on buying, selling, 55+, new construction, and compensation with Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964.",
-  keywords: [
-    "Las Vegas real estate FAQ",
-    "Berkshire Hathaway HomeServices FAQ",
-    "buying a home Las Vegas",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "FAQ | Las Vegas Real Estate with Dr. Jan Duffy",
+    description:
+      "Answers on buying, selling, 55+, new construction, and compensation with Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964.",
+    keywords: [
+      "Las Vegas real estate FAQ",
+      "Berkshire Hathaway HomeServices FAQ",
+      "buying a home Las Vegas",
+    ],
+  },
+  {
+    src: "/images/hero/google-business.png",
+    alt: "Lake Mead Boulevard office for in-person Las Vegas real estate questions",
+  },
+);
 
 export default function FaqPage() {
   return (

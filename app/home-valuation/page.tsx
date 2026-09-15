@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import TopicGuide from "@/components/sections/TopicGuide";
 
-export const metadata: Metadata = {
-  title: "Las Vegas Home Valuation | CMA with Dr. Jan Duffy",
-  description:
-    "Request a Las Vegas or Henderson CMA from Dr. Jan Duffy. Not an online AVM. Call (702) 222-1964.",
-  keywords: [
-    "Las Vegas home valuation",
-    "CMA Las Vegas",
-    "what is my home worth Las Vegas",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Las Vegas Home Valuation | CMA with Dr. Jan Duffy",
+    description:
+      "Request a Las Vegas or Henderson CMA from Dr. Jan Duffy. Not an online AVM. Call (702) 222-1964.",
+    keywords: [
+      "Las Vegas home valuation",
+      "CMA Las Vegas",
+      "what is my home worth Las Vegas",
+    ],
+  },
+  {
+    src: "/images/hero/home-valuation.png",
+    alt: "CMA comps and tablet on a kitchen table for a Las Vegas home valuation",
+  },
+);
 
 export default function HomeValuationPage() {
   return (

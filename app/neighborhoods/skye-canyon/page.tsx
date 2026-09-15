@@ -1,18 +1,25 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
 import { MARKET_SNAPSHOT_AS_OF } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = {
-  title: "Skye Canyon Homes for Sale | Northwest Las Vegas",
-  description:
-    "Skye Canyon Las Vegas homes for sale — Skye Center amenities, Floyd Lamb Park adjacency, current listings with Dr. Jan Duffy. Call (702) 222-1964.",
-  keywords: [
-    "Skye Canyon homes for sale",
-    "Skye Canyon Las Vegas",
-    "northwest Las Vegas homes",
-    "new construction Skye Canyon",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Skye Canyon Homes for Sale | Northwest Las Vegas",
+    description:
+      "Skye Canyon Las Vegas homes for sale — Skye Center amenities, Floyd Lamb Park adjacency, current listings with Dr. Jan Duffy. Call (702) 222-1964.",
+    keywords: [
+      "Skye Canyon homes for sale",
+      "Skye Canyon Las Vegas",
+      "northwest Las Vegas homes",
+      "new construction Skye Canyon",
+    ],
+  },
+  {
+    src: "/images/neighborhoods/skye-canyon.png",
+    alt: "Northwest Las Vegas desert foothills near Skye Canyon",
+  },
+);
 
 export default function SkyeCanyonPage() {
   return (

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
 import {
   formatUsd,
@@ -7,17 +8,23 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = {
-  title: "Henderson Homes for Sale | Green Valley, Inspirada, Anthem",
-  description:
-    "Henderson, Nevada homes for sale with Dr. Jan Duffy, BHHS Nevada Properties. Green Valley, Inspirada, Anthem, and Lake Las Vegas. Call (702) 222-1964.",
-  keywords: [
-    "Henderson homes for sale",
-    "Henderson real estate agent",
-    "Henderson Nevada",
-    "Green Valley Henderson",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Henderson Homes for Sale | Green Valley, Inspirada, Anthem",
+    description:
+      "Henderson, Nevada homes for sale with Dr. Jan Duffy, BHHS Nevada Properties. Green Valley, Inspirada, Anthem, and Lake Las Vegas. Call (702) 222-1964.",
+    keywords: [
+      "Henderson homes for sale",
+      "Henderson real estate agent",
+      "Henderson Nevada",
+      "Green Valley Henderson",
+    ],
+  },
+  {
+    src: "/images/neighborhoods/henderson.png",
+    alt: "Henderson Nevada parks and residential streets in a master-planned community",
+  },
+);
 
 const listing = formatUsd(LISTING_MEDIANS_USD.hendersonListing);
 const sold = formatUsd(LISTING_MEDIANS_USD.hendersonSold);

@@ -14,6 +14,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import { AGENT_PHOTO_PATH } from "@/lib/brand-assets";
 import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
@@ -22,19 +23,22 @@ import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { getPublicSiteUrl } from "@/lib/site-url";
 
-export const metadata: Metadata = {
-  title: "About Dr. Jan Duffy | Berkshire Hathaway HomeServices Las Vegas",
-  description:
-    "Meet Dr. Jan Duffy, your trusted Berkshire Hathaway HomeServices Nevada Properties agent. Serving Las Vegas since 2008, $127M+ in transactions, Henderson & Summerlin specialist. Call (702) 222-1964.",
-  keywords: [
-    "Dr. Jan Duffy",
-    "Berkshire Hathaway HomeServices agent",
-    "Las Vegas realtor",
-    "BHHS Nevada Properties",
-    "Henderson real estate agent",
-    "Summerlin realtor",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "About Dr. Jan Duffy | Berkshire Hathaway HomeServices Las Vegas",
+    description:
+      "Meet Dr. Jan Duffy, your trusted Berkshire Hathaway HomeServices Nevada Properties agent. Serving Las Vegas since 2008, $127M+ in transactions, Henderson & Summerlin specialist. Call (702) 222-1964.",
+    keywords: [
+      "Dr. Jan Duffy",
+      "Berkshire Hathaway HomeServices agent",
+      "Las Vegas realtor",
+      "BHHS Nevada Properties",
+      "Henderson real estate agent",
+      "Summerlin realtor",
+    ],
+  },
+  PAGE_HERO_IMAGES.about,
+);
 
 const aboutOrigin = getPublicSiteUrl();
 
@@ -446,7 +450,7 @@ export default function AboutPage() {
             <div className="text-center mt-6">
               <Link
                 href="/neighborhoods"
-                className="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center"
+                className="text-blue-600 font-semibold hover:text-blue-700 inline-flex min-h-11 items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
                 Explore All Neighborhoods{" "}
                 <ArrowRight className="h-4 w-4 ml-2" />

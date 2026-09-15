@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
 
-export const metadata: Metadata = {
-  title: "Tournament Hills Real Estate | Summerlin Luxury Homes",
-  description:
-    "Tournament Hills real estate in Summerlin (89134): custom estates near TPC Summerlin. Current listings and private tours with Dr. Jan Duffy. Call 702-222-1964.",
-  keywords: [
-    "tournament hills real estate",
-    "tournament hills summerlin real estate",
-    "tournament hills homes for sale",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Tournament Hills Real Estate | Summerlin Luxury Homes",
+    description:
+      "Tournament Hills real estate in Summerlin (89134): custom estates near TPC Summerlin. Current listings and private tours with Dr. Jan Duffy. Call 702-222-1964.",
+    keywords: [
+      "tournament hills real estate",
+      "tournament hills summerlin real estate",
+      "tournament hills homes for sale",
+    ],
+  },
+  {
+    src: "/images/neighborhoods/tournament-hills.png",
+    alt: "Tournament Hills custom homes near TPC Summerlin in ZIP 89134",
+  },
+);
 
 export default function TournamentHillsPage() {
   return (

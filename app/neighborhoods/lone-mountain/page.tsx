@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
 
-export const metadata: Metadata = {
-  title: "Lone Mountain Homes for Sale | Northwest Las Vegas",
-  description:
-    "Lone Mountain homes for sale in northwest Las Vegas near Centennial Hills. Views, lots, and current listings with Dr. Jan Duffy. Call 702-222-1964.",
-  keywords: [
-    "lone mountain las vegas homes",
-    "lone mountain real estate",
-    "northwest las vegas homes",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Lone Mountain Homes for Sale | Northwest Las Vegas",
+    description:
+      "Lone Mountain homes for sale in northwest Las Vegas near Centennial Hills. Views, lots, and current listings with Dr. Jan Duffy. Call 702-222-1964.",
+    keywords: [
+      "lone mountain las vegas homes",
+      "lone mountain real estate",
+      "northwest las vegas homes",
+    ],
+  },
+  {
+    src: "/images/neighborhoods/lone-mountain.png",
+    alt: "Lone Mountain northwest Las Vegas homes climbing toward the named peak",
+  },
+);
 
 export default function LoneMountainPage() {
   return (

@@ -89,8 +89,8 @@ export default function TopicGuide({
             </h1>
             <p className="mb-6 text-lg text-slate-600">{intro}</p>
             <p className="mb-10 text-sm text-slate-500">
-              Dr. Jan Duffy, License S.0197614.LLC · {OFFICE_HOURS.display} ·{" "}
-              {OFFICE_NAP.full}
+              Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties ·
+              License S.0197614.LLC · {OFFICE_HOURS.display} · {OFFICE_NAP.full}
             </p>
 
             <section className="mb-12 rounded-2xl bg-slate-900 p-8 text-white">

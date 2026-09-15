@@ -44,7 +44,7 @@ export default function Footer() {
                 href={SOCIAL_PROFILES.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-400 transition-colors hover:text-white"
+                className="text-slate-400 transition-colors hover:text-white inline-flex min-h-11 min-w-11 items-center justify-center"
                 aria-label="Dr. Jan Duffy on Facebook (opens in a new tab)"
               >
                 <Facebook className="h-5 w-5" aria-hidden="true" />
@@ -53,7 +53,7 @@ export default function Footer() {
                 href={SOCIAL_PROFILES.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-400 transition-colors hover:text-white"
+                className="text-slate-400 transition-colors hover:text-white inline-flex min-h-11 min-w-11 items-center justify-center"
                 aria-label="Dr. Jan Duffy on Instagram (opens in a new tab)"
               >
                 <Instagram className="h-5 w-5" aria-hidden="true" />
@@ -62,7 +62,7 @@ export default function Footer() {
                 href={SOCIAL_PROFILES.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-400 transition-colors hover:text-white"
+                className="text-slate-400 transition-colors hover:text-white inline-flex min-h-11 min-w-11 items-center justify-center"
                 aria-label="Dr. Jan Duffy on LinkedIn (opens in a new tab)"
               >
                 <Linkedin className="h-5 w-5" aria-hidden="true" />
@@ -85,7 +85,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-slate-300 no-underline transition-colors hover:text-white"
+                    className="inline-flex min-h-11 items-center text-sm text-slate-300 no-underline transition-colors hover:text-white"
                   >
                     {link.label}
                   </Link>
@@ -112,7 +112,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-slate-300 no-underline transition-colors hover:text-white"
+                    className="inline-flex min-h-11 items-center text-sm text-slate-300 no-underline transition-colors hover:text-white"
                   >
                     {link.label}
                   </Link>

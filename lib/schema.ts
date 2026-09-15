@@ -8,7 +8,12 @@
 
 import { siteConfig, agentInfo, officeInfo, agentStats } from "./site-config";
 import { AGENT_PHOTO_PATH, FAVICON_32_PATH } from "./brand-assets";
-import { CTA_PHONE_E164, OFFICE_NAP, OPENING_HOURS_SPEC } from "./contact";
+import {
+  CTA_PHONE_E164,
+  OFFICE_NAP,
+  OPENING_HOURS_SPEC,
+  SOCIAL_PROFILES,
+} from "./contact";
 import { OFFICE_PHOTO_PATH } from "./site-images";
 import { getPublicSiteUrl } from "./site-url";
 
@@ -68,14 +73,7 @@ export interface SeniorCommunityData {
 const BASE_URL = siteConfig.url;
 const AGENT_IMAGE_URL = `${getPublicSiteUrl()}${AGENT_PHOTO_PATH}`;
 
-// Social media profiles (to be updated with actual URLs)
-export const socialProfiles = {
-  facebook: "https://www.facebook.com/heyberkshire",
-  instagram: "https://www.instagram.com/heyberkshire",
-  linkedin: "https://www.linkedin.com/in/drjanduffy",
-  tiktok: "https://www.tiktok.com/@heyberkshire",
-  youtube: "https://www.youtube.com/@heyberkshire",
-};
+export const socialProfiles = SOCIAL_PROFILES;
 
 // ============================================================================
 // Core Schema Generators

@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
+import { OFFICE_PHOTO_PATH, OFFICE_PHOTO_ALT } from "@/lib/site-images";
 import { CTA_PHONE, CTA_TEL, OFFICE_NAP, AGENT_EMAIL } from "@/lib/contact";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 
-export const metadata: Metadata = {
-  title: "Fair Housing Statement | Equal Housing Opportunity",
-  description:
-    "Equal Housing Opportunity statement for Dr. Jan Duffy and Berkshire Hathaway HomeServices Nevada Properties. We provide real estate services without discrimination.",
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Fair Housing Statement | Equal Housing Opportunity",
+    description:
+      "Equal Housing Opportunity statement for Dr. Jan Duffy and Berkshire Hathaway HomeServices Nevada Properties. We provide real estate services without discrimination.",
+  },
+  { src: OFFICE_PHOTO_PATH, alt: OFFICE_PHOTO_ALT },
+);
 
 export default function FairHousingPage() {
   return (

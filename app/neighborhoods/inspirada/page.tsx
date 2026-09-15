@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
 import {
   formatUsd,
@@ -7,17 +8,23 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = {
-  title: "Inspirada Homes for Sale | Henderson 89044 Real Estate",
-  description:
-    "Inspirada homes for sale in Henderson 89044 — Groves townhomes, Aventura Park, remaining new construction. Dr. Jan Duffy. Call 702-222-1964.",
-  keywords: [
-    "inspirada henderson",
-    "homes for sale in inspirada henderson nv",
-    "groves at inspirada",
-    "aventura park inspirada",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Inspirada Homes for Sale | Henderson 89044 Real Estate",
+    description:
+      "Inspirada homes for sale in Henderson 89044 — Groves townhomes, Aventura Park, remaining new construction. Dr. Jan Duffy. Call 702-222-1964.",
+    keywords: [
+      "inspirada henderson",
+      "homes for sale in inspirada henderson nv",
+      "groves at inspirada",
+      "aventura park inspirada",
+    ],
+  },
+  {
+    src: "/images/neighborhoods/inspirada.png",
+    alt: "Inspirada Henderson parks and residential streets",
+  },
+);
 
 const median = formatUsd(LISTING_MEDIANS_USD.inspirada);
 

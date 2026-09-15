@@ -9,6 +9,7 @@ import {
   Users,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
@@ -19,20 +20,23 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = {
-  title: "Sell Your Las Vegas Home | Berkshire Hathaway HomeServices",
-  description:
-    "Sell your Las Vegas or Henderson home with comps-based pricing and Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Free home valuation. Call (702) 222-1964.",
-  keywords: [
-    "sell home Las Vegas",
-    "Las Vegas listing agent",
-    "Berkshire Hathaway sell house",
-    "Henderson home selling",
-    "what is my home worth Las Vegas",
-    "Las Vegas real estate agent",
-    "Summerlin home selling",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Sell Your Las Vegas Home | Berkshire Hathaway HomeServices",
+    description:
+      "Sell your Las Vegas or Henderson home with comps-based pricing and Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Free home valuation. Call (702) 222-1964.",
+    keywords: [
+      "sell home Las Vegas",
+      "Las Vegas listing agent",
+      "Berkshire Hathaway sell house",
+      "Henderson home selling",
+      "what is my home worth Las Vegas",
+      "Las Vegas real estate agent",
+      "Summerlin home selling",
+    ],
+  },
+  PAGE_HERO_IMAGES.sellers,
+);
 
 const sellerSchema = {
   "@context": "https://schema.org",
@@ -293,7 +297,7 @@ export default function SellersPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Link
                 href="/sellers/move-up"
-                className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group"
+                className="block min-h-11 bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
                 <div className="text-3xl mb-4">🏡</div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
@@ -309,7 +313,7 @@ export default function SellersPage() {
               </Link>
               <Link
                 href="/sellers/downsizing"
-                className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group"
+                className="block min-h-11 bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
                 <div className="text-3xl mb-4">🌴</div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
@@ -325,7 +329,7 @@ export default function SellersPage() {
               </Link>
               <Link
                 href="/sellers/divorce-probate"
-                className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group"
+                className="block min-h-11 bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
                 <div className="text-3xl mb-4">⚖️</div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">
@@ -341,7 +345,7 @@ export default function SellersPage() {
               </Link>
               <Link
                 href="/sellers/relocation"
-                className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group"
+                className="block min-h-11 bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow group no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
                 <div className="text-3xl mb-4">✈️</div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600">

@@ -8,6 +8,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
@@ -18,20 +19,23 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = {
-  title:
-    "Las Vegas Homes for Sale | MLS Property Search | Berkshire Hathaway HomeServices",
-  description:
-    "Browse all Las Vegas and Henderson homes for sale with live MLS listings. Search by neighborhood, price, and features. Dr. Jan Duffy, Berkshire Hathaway HomeServices. Call (702) 222-1964.",
-  keywords: [
-    "Las Vegas homes for sale",
-    "Henderson real estate",
-    "MLS listings Las Vegas",
-    "Summerlin homes",
-    "houses for sale Las Vegas",
-    "Berkshire Hathaway listings",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title:
+      "Las Vegas Homes for Sale | MLS Property Search | Berkshire Hathaway HomeServices",
+    description:
+      "Browse all Las Vegas and Henderson homes for sale with live MLS listings. Search by neighborhood, price, and features. Dr. Jan Duffy, Berkshire Hathaway HomeServices. Call (702) 222-1964.",
+    keywords: [
+      "Las Vegas homes for sale",
+      "Henderson real estate",
+      "MLS listings Las Vegas",
+      "Summerlin homes",
+      "houses for sale Las Vegas",
+      "Berkshire Hathaway listings",
+    ],
+  },
+  PAGE_HERO_IMAGES.listings,
+);
 
 const listingsSchema = {
   "@context": "https://schema.org",
@@ -230,7 +234,7 @@ export default function ListingsPage() {
                 <Link
                   key={search.name}
                   href={search.href}
-                  className="bg-white border border-slate-200 rounded-lg p-4 hover:shadow-lg hover:border-blue-300 transition-all group flex justify-between items-center"
+                  className="flex min-h-11 items-center bg-white border border-slate-200 rounded-lg p-4 hover:shadow-lg hover:border-blue-300 transition-shadow group justify-between no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                 >
                   <div>
                     <h3 className="font-bold text-slate-900 group-hover:text-blue-600">

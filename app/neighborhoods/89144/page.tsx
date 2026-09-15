@@ -1,17 +1,24 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
 
-export const metadata: Metadata = {
-  title: "89144 Homes for Sale | Summerlin ZIP Code Real Estate",
-  description:
-    "89144 zip code homes for sale are in Summerlin (The Arbors, Trails, Queensridge) — not Centennial Hills. Dr. Jan Duffy, BHHS Nevada Properties. Call 702-222-1964.",
-  keywords: [
-    "89144 zip code homes for sale",
-    "homes for sale in 89144",
-    "89144 homes for sale",
-    "real estate agent in las vegas 89144",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "89144 Homes for Sale | Summerlin ZIP Code Real Estate",
+    description:
+      "89144 zip code homes for sale are in Summerlin (The Arbors, Trails, Queensridge) — not Centennial Hills. Dr. Jan Duffy, BHHS Nevada Properties. Call 702-222-1964.",
+    keywords: [
+      "89144 zip code homes for sale",
+      "homes for sale in 89144",
+      "89144 homes for sale",
+      "real estate agent in las vegas 89144",
+    ],
+  },
+  {
+    src: "/images/neighborhoods/89144.png",
+    alt: "Established Summerlin streetscape in ZIP 89144 Las Vegas",
+  },
+);
 
 export default function Zip89144Page() {
   return (

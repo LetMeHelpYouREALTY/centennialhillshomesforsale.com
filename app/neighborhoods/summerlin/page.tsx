@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
 import {
   formatUsd,
@@ -7,17 +8,23 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = {
-  title: "Summerlin Homes for Sale | Las Vegas Master-Planned Real Estate",
-  description:
-    "Summerlin homes for sale with Dr. Jan Duffy, BHHS Nevada Properties. Villages, ZIP codes, and current listings. Call (702) 222-1964.",
-  keywords: [
-    "Summerlin homes for sale",
-    "Summerlin real estate agent",
-    "Summerlin Las Vegas",
-    "Berkshire Hathaway HomeServices Summerlin",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Summerlin Homes for Sale | Las Vegas Master-Planned Real Estate",
+    description:
+      "Summerlin homes for sale with Dr. Jan Duffy, BHHS Nevada Properties. Villages, ZIP codes, and current listings. Call (702) 222-1964.",
+    keywords: [
+      "Summerlin homes for sale",
+      "Summerlin real estate agent",
+      "Summerlin Las Vegas",
+      "Berkshire Hathaway HomeServices Summerlin",
+    ],
+  },
+  {
+    src: "/images/neighborhoods/summerlin.png",
+    alt: "Summerlin Las Vegas streetscape with desert mountain backdrop",
+  },
+);
 
 const north = formatUsd(LISTING_MEDIANS_USD.summerlinNorth);
 const west = formatUsd(LISTING_MEDIANS_USD.summerlinWest);

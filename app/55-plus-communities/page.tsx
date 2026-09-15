@@ -9,7 +9,6 @@ import {
   Shield,
   DollarSign,
   MapPin,
-  Heart,
   HelpCircle,
   Sun,
   Trophy,
@@ -21,6 +20,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { REALSCOUT_SEARCH_URL } from "@/lib/contact";
@@ -33,30 +33,33 @@ import {
 import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
 import Image from "next/image";
 
-export const metadata: Metadata = {
-  title:
-    "55+ Active Adult Communities Las Vegas | Sun City, Del Webb, Heritage | Dr. Jan Duffy",
-  description:
-    "Find your perfect 55+ community in Las Vegas. Sun City Summerlin, Sun City Aliante, Del Webb Lake Las Vegas, Heritage at Stonebridge, Solera, Trilogy. Dr. Jan Duffy specializes in active adult living. Call (702) 222-1964.",
-  keywords: [
-    "55+ communities Las Vegas",
-    "active adult communities Las Vegas",
-    "Sun City Summerlin",
-    "Sun City Aliante",
-    "Del Webb Lake Las Vegas",
-    "Heritage at Stonebridge",
-    "Solera at Anthem",
-    "Trilogy Summerlin",
-    "retirement communities Nevada",
-    "55 plus homes Las Vegas",
-  ],
-  openGraph: {
-    title: "Find Your Perfect 55+ Community in Las Vegas | Dr. Jan Duffy",
+export const metadata: Metadata = withShareImage(
+  {
+    title:
+      "55+ Active Adult Communities Las Vegas | Sun City, Del Webb, Heritage | Dr. Jan Duffy",
     description:
-      "Sun City, Del Webb, Heritage at Stonebridge & more—Dr. Duffy specializes in active adult living. Berkshire Hathaway HomeServices Nevada Properties.",
-    type: "website",
+      "Find 55+ homes in Las Vegas. Sun City Summerlin, Sun City Aliante, Del Webb Lake Las Vegas, Heritage at Stonebridge, Solera, Trilogy. Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964.",
+    keywords: [
+      "55+ communities Las Vegas",
+      "active adult communities Las Vegas",
+      "Sun City Summerlin",
+      "Sun City Aliante",
+      "Del Webb Lake Las Vegas",
+      "Heritage at Stonebridge",
+      "Solera at Anthem",
+      "Trilogy Summerlin",
+      "retirement communities Nevada",
+      "55 plus homes Las Vegas",
+    ],
+    openGraph: {
+      title: "55+ Communities in Las Vegas | Dr. Jan Duffy",
+      description:
+        "Sun City, Del Webb, Heritage at Stonebridge & more—Dr. Duffy specializes in 55+ and HOPA communities. Berkshire Hathaway HomeServices Nevada Properties.",
+      type: "website",
+    },
   },
-};
+  PAGE_HERO_IMAGES.fiftyFivePlus,
+);
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -118,7 +121,7 @@ const localBusinessSchema = {
   "@type": "RealEstateAgent",
   name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
   description:
-    "55+ community specialist helping active adults find their perfect Las Vegas retirement home",
+    "55+ community specialist for Sun City, Del Webb, and Henderson 55+ campuses",
   telephone: "(702) 222-1964",
   url: "https://heyberkshire.com/55-plus-communities",
   areaServed: {
@@ -827,7 +830,7 @@ export default function FiftyFiveCommunitiesPage() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="flex items-start">
                 <div className="bg-blue-100 p-2 rounded-full mr-4 flex-shrink-0">
-                  <Heart className="h-5 w-5 text-blue-600" />
+                  <CheckCircle className="h-5 w-5 text-blue-600" />
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">

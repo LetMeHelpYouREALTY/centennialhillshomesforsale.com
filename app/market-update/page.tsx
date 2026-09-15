@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import TopicGuide from "@/components/sections/TopicGuide";
 import {
   formatUsd,
@@ -7,16 +8,22 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = {
-  title: "Las Vegas Market Update | September 2026",
-  description:
-    "Current Las Vegas and Henderson listing medians dated September 14, 2026. Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964.",
-  keywords: [
-    "Las Vegas real estate market update",
-    "Las Vegas housing market 2026",
-    "Henderson real estate market",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Las Vegas Market Update | September 2026",
+    description:
+      "Current Las Vegas and Henderson listing medians dated September 14, 2026. Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964.",
+    keywords: [
+      "Las Vegas real estate market update",
+      "Las Vegas housing market 2026",
+      "Henderson real estate market",
+    ],
+  },
+  {
+    src: "/images/hero/market-report.png",
+    alt: "Las Vegas market update notes on a desk with valley views",
+  },
+);
 
 export default function MarketUpdatePage() {
   return (

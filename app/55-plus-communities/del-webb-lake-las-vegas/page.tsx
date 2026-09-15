@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
 import {
   formatUsd,
@@ -7,16 +8,22 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = {
-  title: "Del Webb at Lake Las Vegas Homes | 55+ Henderson",
-  description:
-    "Del Webb Lake Las Vegas 55+ homes in Henderson. Lake setting, resort amenities, current listings with Dr. Jan Duffy. Call (702) 222-1964.",
-  keywords: [
-    "Del Webb Lake Las Vegas",
-    "Lake Las Vegas 55 plus",
-    "Del Webb homes Henderson",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Del Webb at Lake Las Vegas Homes | 55+ Henderson",
+    description:
+      "Del Webb Lake Las Vegas 55+ homes in Henderson. Lake setting, resort amenities, current listings with Dr. Jan Duffy. Call (702) 222-1964.",
+    keywords: [
+      "Del Webb Lake Las Vegas",
+      "Lake Las Vegas 55 plus",
+      "Del Webb homes Henderson",
+    ],
+  },
+  {
+    src: "/images/neighborhoods/del-webb-lake-las-vegas.png",
+    alt: "Lake Las Vegas Henderson setting near Del Webb",
+  },
+);
 
 const areaMedian = formatUsd(LISTING_MEDIANS_USD.lakeLasVegas);
 

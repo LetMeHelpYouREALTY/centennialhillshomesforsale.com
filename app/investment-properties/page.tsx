@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import TopicGuide from "@/components/sections/TopicGuide";
 import {
   formatUsd,
@@ -7,16 +8,22 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = {
-  title: "Las Vegas Investment Properties | Dr. Jan Duffy",
-  description:
-    "Las Vegas rental and investment homes with Dr. Jan Duffy. Live rent comps, 1031 coordination, no property management. Call (702) 222-1964.",
-  keywords: [
-    "Las Vegas investment property",
-    "Las Vegas rental property",
-    "1031 exchange Las Vegas",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Las Vegas Investment Properties | Dr. Jan Duffy",
+    description:
+      "Las Vegas rental and investment homes with Dr. Jan Duffy. Live rent comps, 1031 coordination, no property management. Call (702) 222-1964.",
+    keywords: [
+      "Las Vegas investment property",
+      "Las Vegas rental property",
+      "1031 exchange Las Vegas",
+    ],
+  },
+  {
+    src: "/images/hero/investment.png",
+    alt: "Single-family Las Vegas rental house with desert xeriscape",
+  },
+);
 
 export default function InvestmentPropertiesPage() {
   return (

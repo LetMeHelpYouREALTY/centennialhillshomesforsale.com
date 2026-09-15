@@ -1,7 +1,8 @@
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
-import { MapPin, Home, GraduationCap } from "lucide-react";
+import { MapPin, Home, Clock } from "lucide-react";
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import {
@@ -12,17 +13,20 @@ import {
 import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
 import Image from "next/image";
 
-export const metadata: Metadata = {
-  title: "Las Vegas Neighborhoods | Centennial Hills, Inspirada, Summerlin",
-  description:
-    "Centennial Hills, Inspirada, Tournament Hills, 89144, and 89138 guides from Dr. Jan Duffy. Call 702-222-1964.",
-  keywords: [
-    "centennial hills real estate",
-    "inspirada henderson",
-    "tournament hills real estate",
-    "89144 homes for sale",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Las Vegas Neighborhoods | Centennial Hills, Inspirada, Summerlin",
+    description:
+      "Centennial Hills, Inspirada, Tournament Hills, 89144, and 89138 guides from Dr. Jan Duffy. Call 702-222-1964.",
+    keywords: [
+      "centennial hills real estate",
+      "inspirada henderson",
+      "tournament hills real estate",
+      "89144 homes for sale",
+    ],
+  },
+  PAGE_HERO_IMAGES.homepage,
+);
 
 const neighborhoods = [
   {
@@ -326,7 +330,7 @@ export default function NeighborhoodsPage() {
                 </p>
               </div>
               <div className="text-center">
-                <GraduationCap className="h-12 w-12 text-blue-400 mx-auto mb-3" />
+                <Clock className="h-12 w-12 text-blue-400 mx-auto mb-3" />
                 <h3 className="font-bold mb-2">Campus maps</h3>
                 <p className="text-slate-400 text-sm">
                   Named campuses, enrollment boundaries, and drive-time to the

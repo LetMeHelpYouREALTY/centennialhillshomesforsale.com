@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
 import {
   formatUsd,
@@ -7,16 +8,22 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = {
-  title: "Sun City Aliante Homes for Sale | 55+ North Las Vegas",
-  description:
-    "Sun City Aliante 55+ homes in North Las Vegas 89084. Golf, rec center, current listings with Dr. Jan Duffy. Call (702) 222-1964.",
-  keywords: [
-    "Sun City Aliante homes for sale",
-    "Sun City Aliante Las Vegas",
-    "55 plus communities North Las Vegas",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Sun City Aliante Homes for Sale | 55+ North Las Vegas",
+    description:
+      "Sun City Aliante 55+ homes in North Las Vegas 89084. Golf, rec center, current listings with Dr. Jan Duffy. Call (702) 222-1964.",
+    keywords: [
+      "Sun City Aliante homes for sale",
+      "Sun City Aliante Las Vegas",
+      "55 plus communities North Las Vegas",
+    ],
+  },
+  {
+    src: "/images/neighborhoods/sun-city-aliante.png",
+    alt: "Sun City Aliante North Las Vegas 55-plus homes and rec pavilion",
+  },
+);
 
 const nlv = formatUsd(LISTING_MEDIANS_USD.northLasVegas);
 

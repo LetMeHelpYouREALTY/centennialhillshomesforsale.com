@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import TopicGuide from "@/components/sections/TopicGuide";
 import {
   formatUsd,
@@ -7,17 +8,23 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = {
-  title: "Relocating from California to Las Vegas | Dr. Jan Duffy",
-  description:
-    "Moving from California to Las Vegas? Nevada has no wage income tax. Pair your sale against live Las Vegas comps with Dr. Jan Duffy. Call (702) 222-1964.",
-  keywords: [
-    "California to Las Vegas relocation",
-    "moving from California to Nevada",
-    "California relocator Las Vegas",
-    "no state income tax Nevada",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Relocating from California to Las Vegas | Dr. Jan Duffy",
+    description:
+      "Moving from California to Las Vegas? Nevada has no wage income tax. Pair your sale against live Las Vegas comps with Dr. Jan Duffy. Call (702) 222-1964.",
+    keywords: [
+      "California to Las Vegas relocation",
+      "moving from California to Nevada",
+      "California relocator Las Vegas",
+      "no state income tax Nevada",
+    ],
+  },
+  {
+    src: "/images/hero/california-relocator.png",
+    alt: "California relocators arriving at a Las Vegas desert-contemporary house",
+  },
+);
 
 const lv = formatUsd(LISTING_MEDIANS_USD.lasVegas);
 const hen = formatUsd(LISTING_MEDIANS_USD.hendersonListing);

@@ -1,17 +1,22 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
+import { OFFICE_PHOTO_PATH, OFFICE_PHOTO_ALT } from "@/lib/site-images";
 import { AGENT_EMAIL, CTA_PHONE, CTA_TEL, OFFICE_NAP } from "@/lib/contact";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 
-export const metadata: Metadata = {
-  title: "Security Policy",
-  description:
-    "Security policy and responsible disclosure information for heyberkshire.com",
-  robots: {
-    index: true,
-    follow: true,
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Security Policy",
+    description:
+      "Security policy and responsible disclosure information for heyberkshire.com",
+    robots: {
+      index: true,
+      follow: true,
+    },
   },
-};
+  { src: OFFICE_PHOTO_PATH, alt: OFFICE_PHOTO_ALT },
+);
 
 export default function SecurityPolicyPage() {
   return (

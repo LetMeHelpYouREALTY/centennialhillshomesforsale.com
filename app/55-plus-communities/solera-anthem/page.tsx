@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
 import {
   formatUsd,
@@ -6,16 +7,22 @@ import {
   MARKET_SNAPSHOT_AS_OF,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = {
-  title: "Solera at Anthem Homes | Guard-Gated 55+ Henderson",
-  description:
-    "Solera at Anthem Henderson 55+ homes. Smaller guard-gated community in 89052. Dr. Jan Duffy. Call (702) 222-1964.",
-  keywords: [
-    "Solera at Anthem homes for sale",
-    "Solera Anthem Henderson",
-    "guard-gated 55+ community Henderson",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Solera at Anthem Homes | Guard-Gated 55+ Henderson",
+    description:
+      "Solera at Anthem Henderson 55+ homes. Smaller guard-gated community in 89052. Dr. Jan Duffy. Call (702) 222-1964.",
+    keywords: [
+      "Solera at Anthem homes for sale",
+      "Solera Anthem Henderson",
+      "guard-gated 55+ community Henderson",
+    ],
+  },
+  {
+    src: "/images/neighborhoods/solera-anthem.png",
+    alt: "Solera at Anthem Henderson 55-plus single-story homes and rec courts",
+  },
+);
 
 const anthem = formatUsd(LISTING_MEDIANS_USD.anthem);
 

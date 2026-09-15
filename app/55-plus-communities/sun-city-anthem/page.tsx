@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
 import {
   formatUsd,
@@ -7,16 +8,22 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = {
-  title: "Sun City Anthem Homes for Sale | 55+ Henderson",
-  description:
-    "Sun City Anthem Henderson 55+ homes. Anthem Center, golf, and current listings with Dr. Jan Duffy. Call (702) 222-1964.",
-  keywords: [
-    "Sun City Anthem homes for sale",
-    "Sun City Anthem Henderson",
-    "55 plus communities Henderson",
-  ],
-};
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Sun City Anthem Homes for Sale | 55+ Henderson",
+    description:
+      "Sun City Anthem Henderson 55+ homes. Anthem Center, golf, and current listings with Dr. Jan Duffy. Call (702) 222-1964.",
+    keywords: [
+      "Sun City Anthem homes for sale",
+      "Sun City Anthem Henderson",
+      "55 plus communities Henderson",
+    ],
+  },
+  {
+    src: "/images/neighborhoods/sun-city-anthem.png",
+    alt: "Sun City Anthem Henderson 55-plus single-story homes near the rec campus",
+  },
+);
 
 const median = formatUsd(LISTING_MEDIANS_USD.sunCityAnthem);
 

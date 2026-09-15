@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { withShareImage } from "@/lib/page-seo";
 import { Phone } from "lucide-react";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { PageCTA } from "@/components/shared/PageCTA";
@@ -7,15 +8,18 @@ import { MlsDisclaimer } from "@/components/shared/MlsDisclaimer";
 import { CTA_PHONE, CTA_TEL, REALSCOUT_SEARCH_URL } from "@/lib/contact";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 
-export const metadata: Metadata = {
-  title: "Live MLS Listings | Dr. Jan Duffy",
-  description:
-    "This site does not host fake listing detail pages. Search live MLS with Dr. Jan Duffy or call (702) 222-1964.",
-  robots: {
-    index: false,
-    follow: true,
+export const metadata: Metadata = withShareImage(
+  {
+    title: "Live MLS Listings | Dr. Jan Duffy",
+    description:
+      "This site does not host fake listing detail pages. Search live MLS with Dr. Jan Duffy or call (702) 222-1964.",
+    robots: {
+      index: false,
+      follow: true,
+    },
   },
-};
+  PAGE_HERO_IMAGES.listings,
+);
 
 type PropertyPageProps = {
   params: Promise<{ id: string }>;
@@ -36,8 +40,9 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
         </h1>
         <p className="mb-4 text-lg text-slate-600">
           URL segment <span className="font-mono text-slate-900">{id}</span> is
-          not a published CMA or a current MLS photo set. RealScout already
-          syncs live listings. I will not invent an $850,000 Summerlin house for
+          not a published CMA or a current MLS photo set. Berkshire Hathaway
+          HomeServices Nevada Properties and Dr. Jan Duffy use RealScout for
+          live listings. I will not invent an $850,000 Summerlin house for
           Google.
         </p>
         <div className="mb-10 flex flex-col gap-3 sm:flex-row">
