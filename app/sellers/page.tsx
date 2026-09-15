@@ -520,7 +520,7 @@ export default function SellersPage() {
                 <h2 className="text-3xl font-bold mb-4">
                   Request a CMA for this house
                 </h2>
-                <p className="text-blue-100 mb-6">
+                <p className="text-blue-50 mb-6">
                   Request a CMA from current MLS comps. I have served Las Vegas
                   since 2008. A city median is not your sold price — the
                   worksheet uses sold comps, actives, and the condition of this

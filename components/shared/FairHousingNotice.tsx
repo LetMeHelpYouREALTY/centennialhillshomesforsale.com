@@ -35,7 +35,7 @@ export function FairHousingNotice({
 
   return (
     <p className={`text-xs leading-relaxed ${textClass} ${className}`.trim()}>
-      Equal Housing Opportunity. We provide real estate services without regard
+      Equal Housing Opportunity. I provide real estate services without regard
       to race, color, religion, sex, handicap, familial status, or national
       origin.{" "}
       <Link href="/fair-housing" className={linkClass}>

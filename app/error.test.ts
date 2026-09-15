@@ -20,5 +20,7 @@ describe("error recovery screen", () => {
     expect(src).toContain("TEXT_LINK_CLASS");
     expect(src).toContain("GoogleReviewsCta");
     expect(src).toContain("VisitOffice");
+    expect(src).toContain("SectionHeading");
+    expect(src).toContain("I will pull the listing");
   });
 });

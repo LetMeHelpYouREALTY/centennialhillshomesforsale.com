@@ -66,7 +66,7 @@ export default function NewConstructionPage() {
           imageSrc: "/images/hero/office-lake-mead.png",
           imageAlt:
             "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard",
-          body: "Builders often budget a cooperating broker fee. After the 2024 NAR practice changes, that is not something I will call automatic or “100% free.” We write it down. If the builder will not pay, we decide whether you pay or we walk.",
+          body: "Builders often budget a cooperating broker fee. After the 2024 NAR practice changes, that is not something I will call automatic or “100% free.” I write it down. If the builder will not pay, we decide whether you pay or we walk.",
         },
         {
           heading: "Register before the kiosk iPad",
@@ -80,7 +80,7 @@ export default function NewConstructionPage() {
         {
           question: "Is buyer representation free on new construction?",
           answer:
-            "Not automatically. Register me first. We disclose compensation in a written buyer agreement. The builder may pay a cooperating fee.",
+            "Not automatically. Register me first. I disclose compensation in a written buyer agreement. The builder may pay a cooperating fee.",
         },
         {
           question: "Do I still need an inspection on a new house?",

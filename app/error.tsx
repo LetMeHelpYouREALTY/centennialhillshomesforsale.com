@@ -13,6 +13,7 @@ import {
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
+import { SectionHeading } from "@/components/shared/SectionPhoto";
 
 export default function Error({
   error,
@@ -36,7 +37,7 @@ export default function Error({
           <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
             call {CTA_PHONE}
           </a>{" "}
-          and we will pull the listing from MLS while this screen is fixed.
+          and I will pull the listing from MLS while this screen is fixed.
           Office:{" "}
           <a
             href={OFFICE_NAP.mapsUrl}
@@ -90,12 +91,12 @@ export default function Error({
           className="mt-10 text-left"
           aria-labelledby="error-mls-heading"
         >
-          <h2
+          <SectionHeading
             id="error-mls-heading"
             className="mb-3 text-center text-xl font-bold text-slate-900"
           >
             Search live MLS
-          </h2>
+          </SectionHeading>
           <p className="mb-4 text-center text-pretty text-slate-600">
             ZIP, street, or community. Submits to current listings — not a
             scraped sample.

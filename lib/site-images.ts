@@ -270,7 +270,7 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
     src: PAGE_HERO_IMAGES.sellersListing.src,
   },
   {
-    test: /\b(google business|gbp|review)\b/i,
+    test: /\b(google business|gbp|reviews?)\b/i,
     src: PAGE_HERO_IMAGES.googleBusiness.src,
   },
   {

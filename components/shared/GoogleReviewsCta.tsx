@@ -8,6 +8,7 @@ import {
   OFFICE_NAP,
   TEXT_LINK_CLASS,
 } from "@/lib/contact";
+import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { cn } from "@/lib/utils";
 
 type GoogleReviewsCtaProps = {
@@ -23,12 +24,12 @@ export function GoogleReviewsCta({ className = "" }: GoogleReviewsCtaProps) {
       aria-labelledby={headingId}
     >
       <div className="container mx-auto max-w-3xl px-4 text-center">
-        <h2
+        <SectionHeading
           id={headingId}
           className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl"
         >
           Read the Google reviews
-        </h2>
+        </SectionHeading>
         <p className="mx-auto mb-8 max-w-2xl text-pretty text-slate-600">
           I will not invent named testimonials or a star rating on this site.
           Open the Google Business Profile for the Lake Mead Boulevard office,

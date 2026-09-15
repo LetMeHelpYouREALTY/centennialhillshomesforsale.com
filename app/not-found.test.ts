@@ -15,5 +15,7 @@ describe("404 recovery screen", () => {
     expect(src).toContain("flex-wrap");
     expect(src).toContain("GoogleReviewsCta");
     expect(src).toContain("VisitOffice");
+    expect(src).toContain("SectionHeading");
+    expect(src).toContain('inputId="mls-q-404"');
   });
 });

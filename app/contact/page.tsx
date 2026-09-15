@@ -293,7 +293,7 @@ export default function ContactPage() {
                   <h2 className="text-2xl font-bold mb-2">
                     Schedule an Appointment
                   </h2>
-                  <p className="text-blue-100">
+                  <p className="text-blue-50">
                     Book a time that works for you—phone consultation, property
                     showing, or in-person meeting at our office.
                   </p>
@@ -356,7 +356,7 @@ export default function ContactPage() {
               fallbackSrc={PAGE_HERO_IMAGES.listings.src}
               avoidSrc={PAGE_HERO_IMAGES.contact.src}
             >
-              Areas We Serve
+              Areas I serve
             </SectionHeading>
             <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               I represent buyers and sellers throughout the Las Vegas Valley,
@@ -426,7 +426,7 @@ export default function ContactPage() {
                 <Phone className="h-8 w-8 mr-4" aria-hidden="true" />
                 <div className="text-left">
                   <div className="font-bold text-lg">Call {CTA_PHONE}</div>
-                  <div className="text-blue-100">Client line</div>
+                  <div className="text-blue-50">Client line</div>
                 </div>
               </a>
               <a

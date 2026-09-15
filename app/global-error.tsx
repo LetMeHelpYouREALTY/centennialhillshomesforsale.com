@@ -10,6 +10,10 @@ import {
   OFFICE_NAP,
   TEXT_LINK_CLASS,
 } from "@/lib/contact";
+import { MlsSearchForm } from "@/components/search/MlsSearchForm";
+import { VisitOffice } from "@/components/shared/VisitOffice";
+import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
+import { SectionHeading } from "@/components/shared/SectionPhoto";
 
 export default function GlobalError({
   error,
@@ -84,6 +88,22 @@ export default function GlobalError({
                 {AGENT_EMAIL}
               </a>
             </div>
+            <section
+              className="mt-10 text-left"
+              aria-labelledby="global-error-mls-heading"
+            >
+              <SectionHeading
+                id="global-error-mls-heading"
+                className="mb-3 text-center text-xl font-bold text-slate-900"
+              >
+                Search live MLS
+              </SectionHeading>
+              <p className="mb-4 text-center text-pretty text-slate-600">
+                ZIP, street, or community. Submits to current listings — not a
+                scraped sample.
+              </p>
+              <MlsSearchForm inputId="mls-q-global-error" />
+            </section>
             <ul className="mt-8 space-y-2 text-left text-slate-700">
               <li>
                 <a href="/neighborhoods/89138" className={TEXT_LINK_CLASS}>
@@ -105,6 +125,8 @@ export default function GlobalError({
               </li>
             </ul>
           </div>
+          <GoogleReviewsCta className="bg-white" />
+          <VisitOffice compact />
         </main>
       </body>
     </html>

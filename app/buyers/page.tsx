@@ -283,7 +283,7 @@ export default function BuyersPage() {
                 </h2>
                 <p className="text-slate-300 mb-6">
                   After the 2024 NAR practice changes, buyer-broker compensation
-                  is no longer an automatic MLS offer. We sign a written buyer
+                  is no longer an automatic MLS offer. I sign a written buyer
                   agreement that states how I am paid. The seller may still
                   contribute — that is negotiated, not assumed.{" "}
                   <strong>Berkshire Hathaway HomeServices</strong> agents
@@ -617,7 +617,7 @@ export default function BuyersPage() {
             <h2 className="text-2xl font-bold mb-4 text-center">
               Las Vegas Buyer Listing Snapshot | {MARKET_SNAPSHOT_AS_OF}
             </h2>
-            <p className="text-blue-100 text-center max-w-3xl mx-auto mb-8">
+            <p className="text-blue-50 text-center max-w-3xl mx-auto mb-8">
               {MARKET_SNAPSHOT_SOURCE}. Listing medians are not a CMA and are
               not days-on-market. Ask for a live pull before you bid.
             </p>

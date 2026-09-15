@@ -18,5 +18,10 @@ describe("global error recovery screen", () => {
     expect(src).toContain("<main");
     expect(src).toContain("call {CTA_PHONE}");
     expect(src).toContain("TEXT_LINK_CLASS");
+    expect(src).toContain("MlsSearchForm");
+    expect(src).toContain('inputId="mls-q-global-error"');
+    expect(src).toContain("SectionHeading");
+    expect(src).toContain("GoogleReviewsCta");
+    expect(src).toContain("VisitOffice");
   });
 });

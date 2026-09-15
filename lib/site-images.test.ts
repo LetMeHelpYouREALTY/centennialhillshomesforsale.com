@@ -210,6 +210,12 @@ describe("site images catalog", () => {
     });
     expect(hours.src).toBe("/images/gbp/visit-office.png");
 
+    const reviews = resolveSectionImage({
+      heading: "Read the Google reviews",
+      neighborhoodName: "Las Vegas",
+    });
+    expect(reviews.src).toBe(PAGE_HERO_IMAGES.googleBusiness.src);
+
     const villages = resolveSectionImage({
       heading: "How these villages actually differ",
       neighborhoodName: "Las Vegas",

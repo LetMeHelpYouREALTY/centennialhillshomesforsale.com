@@ -100,11 +100,11 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
         </a>{" "}
         still changes results for people searching in the United States. EEA
         results are treated differently. This Las Vegas site writes first-party
-        copy. We do not rent the domain to third-party advertorials.
+        copy. I do not rent the domain to third-party advertorials.
       </p>
       <p className="text-pretty text-slate-700 mb-8">
         Search Console platform properties (July 2026) track Instagram, TikTok,
-        X, and YouTube inside Google — that is not a page we need to build.
+        X, and YouTube inside Google — that is not a page I need to build.
         Generative AI reports launched June 3, 2026. Call{" "}
         <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
           {CTA_PHONE}

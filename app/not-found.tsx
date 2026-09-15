@@ -11,6 +11,7 @@ import {
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
+import { SectionHeading } from "@/components/shared/SectionPhoto";
 
 export default function NotFound() {
   return (
@@ -67,9 +68,22 @@ export default function NotFound() {
             {AGENT_EMAIL}
           </a>
         </div>
-        <div className="mb-10">
+        <section
+          className="mb-10 text-left"
+          aria-labelledby="not-found-mls-heading"
+        >
+          <SectionHeading
+            id="not-found-mls-heading"
+            className="mb-3 text-center text-xl font-bold text-slate-900"
+          >
+            Search live MLS
+          </SectionHeading>
+          <p className="mb-4 text-center text-pretty text-slate-600">
+            ZIP, street, or community. Submits to current listings — not a
+            scraped sample.
+          </p>
           <MlsSearchForm inputId="mls-q-404" />
-        </div>
+        </section>
         <ul className="space-y-2 text-left text-slate-700">
           <li>
             <Link

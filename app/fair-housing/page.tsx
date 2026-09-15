@@ -19,7 +19,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Fair Housing Statement | Equal Housing Opportunity",
     description:
-      "Equal Housing Opportunity statement for Dr. Jan Duffy and Berkshire Hathaway HomeServices Nevada Properties. We provide real estate services without discrimination. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      "Equal Housing Opportunity statement for Dr. Jan Duffy and Berkshire Hathaway HomeServices Nevada Properties. I provide real estate services without discrimination. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },
   { src: OFFICE_PHOTO_PATH, alt: OFFICE_PHOTO_ALT },
 );

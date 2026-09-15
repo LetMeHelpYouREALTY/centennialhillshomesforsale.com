@@ -49,7 +49,7 @@ export default function FirstTimeBuyersPage() {
       sections={[
         {
           heading: "Compensation after the 2024 NAR changes",
-          body: "Buyer-broker pay is not an automatic MLS offer. We sign a written buyer agreement that states how I am paid. The seller may contribute, you may pay, or both. I will not tell you representation is free because “the seller always pays.”",
+          body: "Buyer-broker pay is not an automatic MLS offer. I sign a written buyer agreement that states how I am paid. The seller may contribute, you may pay, or both. I will not tell you representation is free because “the seller always pays.”",
         },
         {
           heading: `Price bands as of ${MARKET_SNAPSHOT_AS_OF}`,
@@ -65,14 +65,14 @@ export default function FirstTimeBuyersPage() {
         },
         {
           heading: "How to start without a starter-ZIP slogan",
-          body: "Get a lender pre-approval, then email homes@heyberkshire.com or call (702) 222-1964 with commute and bed count. I will not send you to “the affordable side of town.” We match HOA, square footage, and the actual drive.",
+          body: "Get a lender pre-approval, then email homes@heyberkshire.com or call (702) 222-1964 with commute and bed count. I will not send you to “the affordable side of town.” I match HOA, square footage, and the actual drive.",
         },
       ]}
       faqs={[
         {
           question: "Do I pay Dr. Jan as a buyer?",
           answer:
-            "We put compensation in a written buyer agreement before touring. It may be paid by the seller, you, or both.",
+            "I put compensation in a written buyer agreement before touring. It may be paid by the seller, you, or both.",
         },
         {
           question: "How much do I need down?",
