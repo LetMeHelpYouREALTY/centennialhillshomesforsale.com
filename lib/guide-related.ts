@@ -16,6 +16,10 @@ export const DEFAULT_GUIDE_RELATED: GuideRelatedLink[] = [
   { href: "/55-plus-communities/siena", label: "Siena 55+ Summerlin" },
   { href: "/home-valuation", label: "Request a Las Vegas CMA" },
   { href: "/relocation", label: "Las Vegas relocation" },
+  {
+    href: "/buyers/first-time-buyers",
+    label: "First-Time Las Vegas Buyers",
+  },
   { href: "/contact", label: "Call or email the office" },
 ];
 

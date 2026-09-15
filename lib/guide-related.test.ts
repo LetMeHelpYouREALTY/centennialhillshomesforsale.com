@@ -13,6 +13,7 @@ describe("guide related links", () => {
       "/55-plus-communities/siena",
       "/home-valuation",
       "/relocation",
+      "/buyers/first-time-buyers",
       "/contact",
     ]);
   });
@@ -29,6 +30,7 @@ describe("guide related links", () => {
       "/55-plus-communities/siena",
       "/home-valuation",
       "/relocation",
+      "/buyers/first-time-buyers",
     ]);
     expect(merged[0].label).toBe("Current 89138 listings");
   });
