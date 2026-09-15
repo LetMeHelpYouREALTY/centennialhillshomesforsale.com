@@ -136,6 +136,23 @@ describe("clipSerpDescription", () => {
     expect(clipped).not.toMatch(/\bwith\.\s*Call/);
     expect(clipped).toContain("listings");
   });
+
+  it("does not chop the brokerage name or leave a two-word trailing clause", () => {
+    const fairHousing = clipSerpDescription(
+      "Equal Housing Opportunity statement for Dr. Jan Duffy and Berkshire Hathaway HomeServices Nevada Properties. I provide real estate services without discrimination. Call (702) 222-1964 or email homes@heyberkshire.com.",
+    );
+    expect(fairHousing.length).toBeLessThanOrEqual(SERP_DESCRIPTION_MAX);
+    expect(fairHousing).toContain("(702) 222-1964");
+    expect(fairHousing).not.toMatch(/HomeServices Nevada\./);
+    expect(fairHousing).toContain("Equal Housing Opportunity");
+
+    const buyers = clipSerpDescription(
+      "Buy a Las Vegas or Henderson home with Dr. Jan Duffy, BHHS Nevada Properties. Written buyer-broker agreement and live MLS. Call (702) 222-1964 or email homes@heyberkshire.com.",
+    );
+    expect(buyers.length).toBeLessThanOrEqual(SERP_DESCRIPTION_MAX);
+    expect(buyers).not.toMatch(/buyer-broker\./);
+    expect(buyers).toContain("Las Vegas");
+  });
 });
 
 describe("titleWithoutLayoutSuffix", () => {

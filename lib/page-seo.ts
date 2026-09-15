@@ -47,21 +47,49 @@ const DANGLING_LAST_WORDS = new Set([
   "your",
 ]);
 
-function clipAtWord(text: string, max: number): string {
-  const trimmed = text.replace(/\s+/g, " ").trim();
-  if (trimmed.length <= max) return trimmed;
-  const slice = trimmed.slice(0, max);
-  const lastSpace = slice.lastIndexOf(" ");
-  let cut =
-    lastSpace >= Math.floor(max * 0.6) ? slice.slice(0, lastSpace) : slice;
-  cut = cut.replace(/[\s.,;:–—-]+$/, "");
-  const words = cut.split(/\s+/);
+function dropDanglingLastWords(text: string): string {
+  const words = text.split(/\s+/).filter(Boolean);
   while (words.length > 1) {
     const last = words[words.length - 1]?.replace(/[^\w]/g, "").toLowerCase();
     if (!last || !DANGLING_LAST_WORDS.has(last)) break;
     words.pop();
   }
   return words.join(" ").replace(/[\s.,;:–—-]+$/, "");
+}
+
+function clipAtWord(text: string, max: number): string {
+  const trimmed = text.replace(/\s+/g, " ").trim();
+  if (trimmed.length <= max) return trimmed;
+  const slice = trimmed.slice(0, max);
+  const lastSpace = slice.lastIndexOf(" ");
+  const cut =
+    lastSpace >= Math.floor(max * 0.6) ? slice.slice(0, lastSpace) : slice;
+  return dropDanglingLastWords(cut.replace(/[\s.,;:–—-]+$/, ""));
+}
+
+const BROKERAGE_NAME = "Berkshire Hathaway HomeServices Nevada Properties";
+
+function finishClippedLead(lead: string, original: string): string {
+  let next = lead.replace(/[.,;:]+$/, "");
+  if (
+    original.includes(BROKERAGE_NAME) &&
+    !next.includes(BROKERAGE_NAME) &&
+    /\bBerkshire\b/.test(next)
+  ) {
+    const idx = next.lastIndexOf("Berkshire");
+    if (idx > 0) {
+      next = dropDanglingLastWords(next.slice(0, idx).replace(/[\s,;:]+$/, ""));
+    }
+  }
+  const lastPeriod = next.lastIndexOf(". ");
+  if (lastPeriod > 0) {
+    const tail = next.slice(lastPeriod + 2).trim();
+    const tailWords = tail.split(/\s+/).filter(Boolean);
+    if (tailWords.length > 0 && tailWords.length < 3) {
+      next = next.slice(0, lastPeriod);
+    }
+  }
+  return next.replace(/[.,;:]+$/, "");
 }
 
 /**
@@ -98,7 +126,7 @@ export function clipSerpDescription(
     if (!unique || uniqueMax < 24) {
       return `Call ${CTA_PHONE} or email ${AGENT_EMAIL}.`;
     }
-    const lead = clipAtWord(unique, uniqueMax).replace(/[.,;:]+$/, "");
+    const lead = finishClippedLead(clipAtWord(unique, uniqueMax), unique);
     return `${lead}.${SERP_NAP}`.replace(/\s+/g, " ").trim();
   }
 
