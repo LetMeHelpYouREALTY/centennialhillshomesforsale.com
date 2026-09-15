@@ -73,6 +73,17 @@ describe("GBP schema NAP and Maps alignment", () => {
     expect(answers).not.toMatch(/7,700/);
   });
 
+  it("names Siena, Trilogy, and the office email on a live CMA FAQ", () => {
+    const blob = gbpFAQs
+      .map((faq) => `${faq.question} ${faq.answer}`)
+      .join("\n");
+    expect(blob).toContain("Siena");
+    expect(blob).toContain("Trilogy");
+    expect(blob).toContain("89138");
+    expect(blob).toContain("homes@heyberkshire.com");
+    expect(blob).toMatch(/live CMA/i);
+  });
+
   it("does not invent identity attributes or a Spanish-language claim", () => {
     expect(businessInfo.attributes.highlights).toEqual([]);
     expect(businessInfo.languages).toEqual(["English"]);

@@ -77,6 +77,18 @@ export default function Footer() {
               {[
                 { href: "/listings", label: "Homes for Sale" },
                 { href: "/neighborhoods", label: "Las Vegas Neighborhoods" },
+                {
+                  href: "/neighborhoods/89138",
+                  label: "89138 Summerlin West",
+                },
+                {
+                  href: "/neighborhoods/89144",
+                  label: "89144 Summerlin",
+                },
+                {
+                  href: "/55-plus-communities/siena",
+                  label: "Siena 55+",
+                },
                 { href: "/home-valuation", label: "Home Valuation" },
                 { href: "/why-berkshire-hathaway", label: "Why BHHS" },
                 { href: "/market-insights", label: "Market Insights" },

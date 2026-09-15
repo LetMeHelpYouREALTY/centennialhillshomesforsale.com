@@ -3,6 +3,7 @@ import SearchCentralFeed from "@/components/sections/SearchCentralFeed";
 import Link from "next/link";
 import {
   Phone,
+  Mail,
   TrendingUp,
   Building2,
   Cpu,
@@ -16,6 +17,7 @@ import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import {
   AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
   CTA_PHONE,
   CTA_PHONE_E164,
   CTA_TEL,
@@ -45,7 +47,7 @@ export const metadata: Metadata = withShareImage(
   {
     title: "Centennial Hills Market Insights 2026 | Northwest Las Vegas",
     description:
-      "First-party Centennial Hills market insights: 89149 vs 89144, Inspirada new-construction wind-down, and how northwest Las Vegas listings are trading. Dr. Jan Duffy. Call 702-222-1964.",
+      "First-party Centennial Hills market insights: 89149 vs 89144, Inspirada new-construction wind-down, and how northwest Las Vegas listings are trading. Dr. Jan Duffy. Call (702) 222-1964.",
     keywords: [
       "centennial hills real estate",
       "centennial hills las vegas real estate",
@@ -86,7 +88,7 @@ const marketFaqs = [
   {
     question: "Are these numbers a CMA for my house?",
     answer:
-      "No. Listing medians are city or ZIP samples. A CMA uses sold comps, active competition, and the specific address. Call (702) 222-1964.",
+      "No. Listing medians are city or ZIP samples. A CMA uses sold comps, active competition, and the specific address. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },
   {
     question: "How current is this page?",
@@ -96,6 +98,11 @@ const marketFaqs = [
     question: "Will you forecast which neighborhoods will outperform?",
     answer:
       "No. I will not pick winners. Bring the address and I will run live comps.",
+  },
+  {
+    question: "How do I get a live CMA from this page?",
+    answer:
+      "Call (702) 222-1964 or email homes@heyberkshire.com with the address. I send live MLS — not a citywide slogan. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
   },
 ];
 
@@ -690,16 +697,24 @@ export default async function MarketInsightsPage() {
               Ask for a CMA on this house
             </h2>
             <p className="mb-8 text-xl text-blue-100">
-              Wondering what these trends mean for a specific house? Call with
-              the address. Dr. Jan Duffy will run a CMA — not a citywide slogan.
+              Wondering what these trends mean for a specific house? Call or
+              email with the address. Dr. Jan Duffy will run a CMA — not a
+              citywide slogan.
             </p>
-            <div className="flex flex-col justify-center gap-4 sm:flex-row">
+            <div className="flex flex-col flex-wrap justify-center gap-4 sm:flex-row">
               <a
                 href={CTA_TEL}
                 className="inline-flex min-h-11 items-center justify-center rounded-md bg-white px-8 py-4 text-lg font-bold text-blue-600 hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
               >
                 <Phone className="mr-2 h-5 w-5" aria-hidden="true" />
                 Call {CTA_PHONE}
+              </a>
+              <a
+                href={AGENT_EMAIL_MAILTO}
+                className="inline-flex min-h-11 items-center justify-center rounded-md border border-white/40 px-8 py-4 text-lg font-bold text-white no-underline hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
+              >
+                <Mail className="mr-2 h-5 w-5" aria-hidden="true" />
+                {AGENT_EMAIL}
               </a>
               <Link
                 href="/market-report"
@@ -717,7 +732,7 @@ export default async function MarketInsightsPage() {
       <VisitOffice compact />
       <PageCTA
         headline="Need the live comps, not a valley average?"
-        subheadline="Call Dr. Jan Duffy. She will pull MLS for your ZIP, not a recycled headline."
+        subheadline="Call or email Dr. Jan Duffy. She will pull MLS for your ZIP, not a recycled headline."
         formSource="market-insights"
         formHeading="Ask for a live MLS pull"
       />

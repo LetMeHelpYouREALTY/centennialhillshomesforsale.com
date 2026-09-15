@@ -3,6 +3,7 @@ import { withShareImage } from "@/lib/page-seo";
 import { OFFICE_PHOTO_PATH, OFFICE_PHOTO_ALT } from "@/lib/site-images";
 import {
   AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
   CTA_PHONE,
   CTA_TEL,
   OFFICE_NAP,
@@ -42,17 +43,17 @@ export default function SecurityPolicyPage() {
       <main className="min-h-screen bg-white pb-16">
         <div className="container mx-auto max-w-4xl px-4">
           <PageHeroImage src={OFFICE_PHOTO_PATH} alt={OFFICE_PHOTO_ALT} />
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+          <h1 className="text-4xl font-bold text-slate-900 mb-8">
             Security Policy
           </h1>
 
           <div className="prose prose-lg max-w-none">
             {/* Overview */}
             <section className="mb-12">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="text-2xl font-semibold text-slate-900 mb-4">
                 Our Commitment to Security
               </h2>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-slate-700 leading-relaxed">
                 At Berkshire Hathaway HomeServices Nevada Properties, we take
                 the security of our systems and the privacy of our clients
                 seriously. This page outlines our security practices and
@@ -62,11 +63,11 @@ export default function SecurityPolicyPage() {
 
             {/* Reporting Vulnerabilities */}
             <section className="mb-12">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="text-2xl font-semibold text-slate-900 mb-4">
                 Reporting Security Vulnerabilities
               </h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                If you've discovered a security vulnerability, we appreciate
+              <p className="text-slate-700 leading-relaxed mb-4">
+                If you have discovered a security vulnerability, we appreciate
                 your help in disclosing it to us responsibly.
               </p>
 
@@ -96,10 +97,10 @@ export default function SecurityPolicyPage() {
                 </ul>
               </div>
 
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">
                 What to Include
               </h3>
-              <ul className="list-disc pl-6 text-gray-700 space-y-2">
+              <ul className="list-disc pl-6 text-slate-700 space-y-2">
                 <li>Description of the vulnerability</li>
                 <li>Steps to reproduce the issue</li>
                 <li>Potential impact assessment</li>
@@ -110,15 +111,15 @@ export default function SecurityPolicyPage() {
 
             {/* Security Measures */}
             <section className="mb-12">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="text-2xl font-semibold text-slate-900 mb-4">
                 Security Measures in Place
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 mb-2">
+                <div className="bg-slate-50 p-6 rounded-lg">
+                  <h3 className="font-semibold text-slate-900 mb-2">
                     Protection
                   </h3>
-                  <ul className="text-gray-700 space-y-1 text-sm">
+                  <ul className="text-slate-700 space-y-1 text-sm">
                     <li>• Cloudflare Turnstile CAPTCHA</li>
                     <li>• Rate limiting (Upstash)</li>
                     <li>• CSP headers</li>
@@ -127,11 +128,11 @@ export default function SecurityPolicyPage() {
                   </ul>
                 </div>
 
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 mb-2">
+                <div className="bg-slate-50 p-6 rounded-lg">
+                  <h3 className="font-semibold text-slate-900 mb-2">
                     Monitoring
                   </h3>
-                  <ul className="text-gray-700 space-y-1 text-sm">
+                  <ul className="text-slate-700 space-y-1 text-sm">
                     <li>• Sentry error tracking</li>
                     <li>• Vercel Analytics</li>
                     <li>• Automated security scans</li>
@@ -140,11 +141,11 @@ export default function SecurityPolicyPage() {
                   </ul>
                 </div>
 
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 mb-2">
+                <div className="bg-slate-50 p-6 rounded-lg">
+                  <h3 className="font-semibold text-slate-900 mb-2">
                     Data Protection
                   </h3>
-                  <ul className="text-gray-700 space-y-1 text-sm">
+                  <ul className="text-slate-700 space-y-1 text-sm">
                     <li>• Encrypted connections (TLS 1.3)</li>
                     <li>• Secure API integrations</li>
                     <li>• Regular backups</li>
@@ -153,11 +154,11 @@ export default function SecurityPolicyPage() {
                   </ul>
                 </div>
 
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 mb-2">
+                <div className="bg-slate-50 p-6 rounded-lg">
+                  <h3 className="font-semibold text-slate-900 mb-2">
                     Compliance
                   </h3>
-                  <ul className="text-gray-700 space-y-1 text-sm">
+                  <ul className="text-slate-700 space-y-1 text-sm">
                     <li>• We honor CCPA consumer requests</li>
                     <li>• Fair Housing Act</li>
                     <li>• Nevada real estate laws</li>
@@ -169,14 +170,14 @@ export default function SecurityPolicyPage() {
 
             {/* Third-Party Services */}
             <section className="mb-12">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="text-2xl font-semibold text-slate-900 mb-4">
                 Third-Party Services
               </h2>
-              <p className="text-gray-700 mb-4">
+              <p className="text-slate-700 mb-4">
                 We use third-party services for hosting, CRM, MLS search, and
                 scheduling:
               </p>
-              <ul className="list-disc pl-6 text-gray-700 space-y-2">
+              <ul className="list-disc pl-6 text-slate-700 space-y-2">
                 <li>
                   <strong>Vercel:</strong> Hosting and deployment
                 </li>
@@ -202,7 +203,7 @@ export default function SecurityPolicyPage() {
                   <strong>Anthropic:</strong> AI assistance (Claude)
                 </li>
               </ul>
-              <p className="text-gray-700 mt-4">
+              <p className="text-slate-700 mt-4">
                 Each service maintains its own security practices and compliance
                 certifications.
               </p>
@@ -210,7 +211,7 @@ export default function SecurityPolicyPage() {
 
             {/* Responsible Disclosure */}
             <section className="mb-12">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="text-2xl font-semibold text-slate-900 mb-4">
                 Responsible Disclosure Policy
               </h2>
               <div className="bg-green-50 border-l-4 border-green-500 p-6">
@@ -233,14 +234,14 @@ export default function SecurityPolicyPage() {
 
             {/* Out of Scope */}
             <section className="mb-12">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="text-2xl font-semibold text-slate-900 mb-4">
                 Out of Scope
               </h2>
-              <p className="text-gray-700 mb-4">
+              <p className="text-slate-700 mb-4">
                 Please do not report the following (not considered
                 vulnerabilities):
               </p>
-              <ul className="list-disc pl-6 text-gray-700 space-y-2">
+              <ul className="list-disc pl-6 text-slate-700 space-y-2">
                 <li>
                   Publicly accessible information (e.g., property listings)
                 </li>
@@ -256,19 +257,19 @@ export default function SecurityPolicyPage() {
 
             {/* Security Best Practices */}
             <section className="mb-12">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="text-2xl font-semibold text-slate-900 mb-4">
                 Your Security
               </h2>
-              <p className="text-gray-700 mb-4">
+              <p className="text-slate-700 mb-4">
                 To protect your information when using our site:
               </p>
-              <ul className="list-disc pl-6 text-gray-700 space-y-2">
+              <ul className="list-disc pl-6 text-slate-700 space-y-2">
                 <li>
-                  Ensure you're on the correct domain:{" "}
+                  Ensure you are on the correct domain:{" "}
                   <strong>heyberkshire.com</strong>
                 </li>
                 <li>Look for the padlock icon (HTTPS)</li>
-                <li>Don't share sensitive information via email</li>
+                <li>Do not share sensitive information via email</li>
                 <li>Use strong, unique passwords if creating an account</li>
                 <li>Keep your browser and OS updated</li>
                 <li>Be cautious of phishing attempts</li>
@@ -277,13 +278,13 @@ export default function SecurityPolicyPage() {
 
             {/* Contact */}
             <section className="mb-12">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="text-2xl font-semibold text-slate-900 mb-4">
                 Questions?
               </h2>
-              <p className="text-gray-700 mb-4">
+              <p className="text-slate-700 mb-4">
                 For general questions about our security practices:
               </p>
-              <div className="bg-gray-100 p-6 rounded-lg">
+              <div className="bg-slate-100 p-6 rounded-lg">
                 <p className="mb-2">
                   <strong>Dr. Jan Duffy</strong>
                 </p>
@@ -293,7 +294,7 @@ export default function SecurityPolicyPage() {
                 <p className="mb-2">{OFFICE_NAP.full}</p>
                 <p className="mb-2">
                   Email:{" "}
-                  <a href={`mailto:${AGENT_EMAIL}`} className={TEXT_LINK_CLASS}>
+                  <a href={AGENT_EMAIL_MAILTO} className={TEXT_LINK_CLASS}>
                     {AGENT_EMAIL}
                   </a>
                 </p>
@@ -308,10 +309,10 @@ export default function SecurityPolicyPage() {
 
             {/* Last Updated */}
             <footer className="border-t pt-6 mt-12">
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-slate-500">
                 Last updated: September 15, 2026
               </p>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-slate-500">
                 This policy is reviewed and updated regularly.
               </p>
             </footer>

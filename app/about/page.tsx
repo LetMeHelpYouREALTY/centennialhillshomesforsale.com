@@ -93,6 +93,8 @@ const personSchema = {
     "Luxury real estate",
     "Investment properties",
     "55+ communities",
+    "Siena Summerlin",
+    "Trilogy at Summerlin",
     "California relocation",
   ],
 };
@@ -149,7 +151,7 @@ const specializations = [
     title: "55+ HOPA communities",
     href: "/55-plus-communities",
     description:
-      "Sun City Summerlin, Sun City Anthem, and Del Webb Lake Las Vegas files",
+      "Sun City Summerlin, Siena, Trilogy, Sun City Anthem, and Del Webb Lake Las Vegas files",
   },
   {
     title: "California relocation",
@@ -169,9 +171,13 @@ const areasServed = [
   { name: "Skye Canyon", href: "/neighborhoods/skye-canyon" },
   { name: "Centennial Hills", href: "/neighborhoods/centennial-hills" },
   { name: "The Ridges", href: "/neighborhoods/the-ridges" },
+  { name: "Tournament Hills", href: "/neighborhoods/tournament-hills" },
+  { name: "89138 Summerlin West", href: "/neighborhoods/89138" },
+  { name: "89144 Summerlin", href: "/neighborhoods/89144" },
   { name: "Inspirada", href: "/neighborhoods/inspirada" },
   { name: "Mountains Edge", href: "/neighborhoods/mountains-edge" },
   { name: "Spring Valley", href: "/listings?q=Spring+Valley" },
+  { name: "55+ Communities", href: "/55-plus-communities" },
 ];
 
 export default function AboutPage() {
@@ -587,7 +593,7 @@ export default function AboutPage() {
           <VisitOffice className="mb-16 rounded-2xl" compact />
           <PageCTA
             headline="Ask about a Las Vegas buy or sale"
-            subheadline="Questions about buying or selling in Las Vegas? Call or text with the address. I will run a CMA — not a free-consult product pitch."
+            subheadline="Questions about buying or selling in Las Vegas? Call, text, or email homes@heyberkshire.com with the address. I will run a CMA — not a free-consult product pitch."
             className="mb-8 rounded-2xl"
             formSource="about-page"
             formHeading="Ask Dr. Jan Duffy"

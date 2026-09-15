@@ -1,0 +1,17 @@
+import { readFileSync } from "node:fs";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+import { describe, expect, it } from "vitest";
+
+const here = dirname(fileURLToPath(import.meta.url));
+
+describe("global error recovery screen", () => {
+  it("renders its own html shell with NAP, call, and email", () => {
+    const src = readFileSync(resolve(here, "global-error.tsx"), "utf8");
+    expect(src).toContain('<html lang="en">');
+    expect(src).toContain("./globals.css");
+    expect(src).toContain("AGENT_EMAIL_MAILTO");
+    expect(src).toContain("CTA_PHONE");
+    expect(src).toContain("OFFICE_NAP");
+  });
+});

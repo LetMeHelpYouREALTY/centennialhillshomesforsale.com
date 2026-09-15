@@ -101,7 +101,8 @@ export const businessInfo = {
     },
     {
       name: "55+ HOPA Communities",
-      description: "Sun City, Anthem, Del Webb, and Henderson 55+ campuses",
+      description:
+        "Sun City, Siena, Trilogy, Anthem, Del Webb, and Henderson 55+ campuses",
       href: "/55-plus-communities",
     },
     {
@@ -202,16 +203,16 @@ I work first-time buyers, luxury tours in The Ridges and MacDonald Highlands, 55
   // Section 2: What/why - Value proposition (~250 words)
   whatWeDo: `Clients receive a CMA on the address, written compensation, and a written showing plan. As a Berkshire Hathaway HomeServices agent, Dr. Jan offers a global referral network, marketing for sellers, and live MLS search for buyers.
 
-Files include: buyer and seller representation, luxury home sales, 55+ HOPA communities (Sun City Summerlin, Sun City Anthem, Del Webb Lake Las Vegas), California relocation, probate and divorce real estate, investment property consulting, new construction representation, and first-time buyer programs including FHA, VA, and down payment assistance guidance.
+Files include: buyer and seller representation, luxury home sales, 55+ HOPA communities (Sun City Summerlin, Siena, Trilogy at Summerlin, Sun City Anthem, Del Webb Lake Las Vegas), California relocation, probate and divorce real estate, investment property consulting, new construction representation, and first-time buyer programs including FHA, VA, and down payment assistance guidance.
 
 Dr. Jan's approach is simple: put the client's written goals first, pull live comps, and keep working until the file closes.`,
 
   // Section 3: Where - Areas served (~250 words)
-  whereWeServe: `Dr. Jan serves the Las Vegas Valley: Las Vegas, Summerlin, Henderson, North Las Vegas, and Clark County. Neighborhood files include Summerlin master-planned villages, Henderson's Green Valley and Inspirada, gated custom in The Ridges and Southern Highlands, Centennial Hills and Skye Canyon, and Mountains Edge and North Las Vegas.
+  whereWeServe: `Dr. Jan serves the Las Vegas Valley: Las Vegas, Summerlin, Henderson, North Las Vegas, and Clark County. Neighborhood files include Summerlin master-planned villages (including 89138 Summerlin West, 89144, and Tournament Hills), Henderson's Green Valley and Inspirada, gated custom in The Ridges and Southern Highlands, Centennial Hills and Skye Canyon, and Mountains Edge and North Las Vegas.
 
-55+ HOPA files cover Sun City Summerlin, Sun City Anthem in Henderson, Del Webb Lake Las Vegas, and Solera at Anthem. Investment files cover single-family rentals and multi-family purchases across the Las Vegas metro. I do not manage rentals.
+55+ HOPA files cover Sun City Summerlin, Siena, Trilogy at Summerlin, Sun City Anthem in Henderson, Del Webb Lake Las Vegas, and Solera at Anthem. Investment files cover single-family rentals and multi-family purchases across the Las Vegas metro. I do not manage rentals.
 
-Office located at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Available Monday through Friday 9am-6pm, Saturday 10am-4pm, and Sunday by appointment. Call (702) 222-1964 or visit heyberkshire.com with the address you want on a CMA.`,
+Office located at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Available Monday through Friday 9am-6pm, Saturday 10am-4pm, and Sunday by appointment. Call (702) 222-1964 or email homes@heyberkshire.com with the address you want on a CMA.`,
 };
 
 // FAQ Schema for GBP Q&A section
@@ -219,7 +220,7 @@ export const gbpFAQs = [
   {
     question: "What areas does Dr. Jan Duffy serve in Las Vegas?",
     answer:
-      "Dr. Jan serves all of Las Vegas, Summerlin, Henderson, North Las Vegas, and Clark County. Neighborhood files include Summerlin, Green Valley, The Ridges, Southern Highlands, Centennial Hills, Skye Canyon, Inspirada, and Mountains Edge.",
+      "Dr. Jan serves all of Las Vegas, Summerlin, Henderson, North Las Vegas, and Clark County. Neighborhood files include Summerlin (89134 / 89135 / 89138 / 89144), Tournament Hills, Green Valley, The Ridges, Southern Highlands, Centennial Hills, Skye Canyon, Inspirada, and Mountains Edge.",
   },
   {
     question: "Does Dr. Jan help buyers relocating from California?",
@@ -229,7 +230,7 @@ export const gbpFAQs = [
   {
     question: "What 55+ communities does Dr. Jan specialize in?",
     answer:
-      "Dr. Jan specializes in Sun City Summerlin, Sun City Anthem in Henderson, Del Webb Lake Las Vegas, and Solera at Anthem. Confirm HOA, occupancy, and listing median on the resale packet — campus size is not a price.",
+      "Dr. Jan specializes in Sun City Summerlin, Siena, Trilogy at Summerlin, Sun City Anthem in Henderson, Del Webb Lake Las Vegas, and Solera at Anthem. Confirm HOA, occupancy, and listing median on the resale packet — campus size is not a price.",
   },
   {
     question:
@@ -256,6 +257,10 @@ export const gbpFAQs = [
     question: "Why choose Berkshire Hathaway HomeServices over other agencies?",
     answer:
       "Berkshire Hathaway HomeServices Nevada Properties is a franchise brokerage. You get a global referral network, listing marketing in writing, and documented ethics standards. Warren Buffett does not write your CMA.",
+  },
+  {
+    question: "How do I get a live CMA or current listings?",
+    answer: `Call ${CTA_PHONE} or email ${AGENT_EMAIL} with the address, beds, and ZIP. I send live MLS — not a blog sample. Office: ${OFFICE_NAP.full}.`,
   },
   {
     question: "How do I schedule a consultation with Dr. Jan Duffy?",

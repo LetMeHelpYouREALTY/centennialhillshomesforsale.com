@@ -1,6 +1,19 @@
-import { Shield, TrendingUp, Users, Award, Clock, Home } from "lucide-react";
+import {
+  Award,
+  Clock,
+  Home,
+  Mail,
+  Shield,
+  TrendingUp,
+  Users,
+} from "lucide-react";
 import Link from "next/link";
-import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
+import {
+  AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
+  CTA_PHONE,
+  CTA_TEL,
+} from "@/lib/contact";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 
@@ -33,7 +46,7 @@ const features = [
     icon: Clock,
     title: "Replies during office hours",
     description:
-      "Call or text the client line. I reply during posted hours — I will not promise a two-hour SLA.",
+      "Call, text, or email homes@heyberkshire.com. I reply during posted hours — I will not promise a two-hour SLA.",
   },
   {
     icon: Home,
@@ -81,10 +94,10 @@ export default function WhyChooseUs() {
           })}
         </ul>
 
-        <div className="mt-10 text-center">
+        <div className="mt-10 flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row">
           <Link
             href="/about"
-            className="mr-4 inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-5 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-5 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
           >
             About Dr. Jan
           </Link>
@@ -93,6 +106,13 @@ export default function WhyChooseUs() {
             className="inline-flex min-h-11 items-center justify-center rounded-md bg-blue-600 px-5 py-3 font-semibold text-white no-underline hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
           >
             Call {CTA_PHONE}
+          </a>
+          <a
+            href={AGENT_EMAIL_MAILTO}
+            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-5 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            <Mail className="mr-2 h-4 w-4" aria-hidden="true" />
+            {AGENT_EMAIL}
           </a>
         </div>
       </div>

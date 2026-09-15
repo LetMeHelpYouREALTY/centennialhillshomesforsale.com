@@ -2,9 +2,14 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
+import {
+  AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
+  CTA_PHONE,
+  CTA_TEL,
+} from "@/lib/contact";
 
 const images = [
   {
@@ -67,20 +72,28 @@ export default function HeroSection() {
           Berkshire Hathaway HomeServices Nevada Properties. Search current
           listings, then call the client line for a live pull.
         </p>
-        <a
-          href="/listings"
-          className="mb-4 inline-flex min-h-11 items-center justify-center rounded-md bg-white px-8 py-4 text-lg font-bold text-blue-700 no-underline hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-        >
-          Search live MLS
-        </a>
-
-        <a
-          href={CTA_TEL}
-          className="mt-4 inline-flex min-h-11 items-center rounded-md bg-blue-600 px-6 py-3 font-semibold text-white no-underline hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
-        >
-          <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
-          Call {CTA_PHONE}
-        </a>
+        <div className="mb-4 flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row">
+          <a
+            href="/listings"
+            className="inline-flex min-h-11 items-center justify-center rounded-md bg-white px-8 py-4 text-lg font-bold text-blue-700 no-underline hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          >
+            Search live MLS
+          </a>
+          <a
+            href={CTA_TEL}
+            className="inline-flex min-h-11 items-center rounded-md bg-blue-600 px-6 py-3 font-semibold text-white no-underline hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+          >
+            <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
+            Call {CTA_PHONE}
+          </a>
+          <a
+            href={AGENT_EMAIL_MAILTO}
+            className="inline-flex min-h-11 items-center rounded-md border border-white/40 px-6 py-3 font-semibold text-white no-underline hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          >
+            <Mail className="mr-2 h-4 w-4" aria-hidden="true" />
+            {AGENT_EMAIL}
+          </a>
+        </div>
 
         <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/90">
           <div className="flex items-center gap-2">

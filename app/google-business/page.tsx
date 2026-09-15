@@ -15,6 +15,7 @@ import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import {
+  AGENT_EMAIL_MAILTO,
   CTA_TEL,
   OFFICE_HOURS,
   OFFICE_NAP,
@@ -157,7 +158,7 @@ export default function GoogleBusinessPage() {
                         aria-hidden="true"
                       />
                       <a
-                        href={`mailto:${businessInfo.email}`}
+                        href={AGENT_EMAIL_MAILTO}
                         className={TEXT_LINK_ON_DARK_CLASS}
                       >
                         {businessInfo.email}
@@ -194,7 +195,7 @@ export default function GoogleBusinessPage() {
                     Call {businessInfo.phone.display}
                   </a>
                   <a
-                    href={`mailto:${businessInfo.email}`}
+                    href={AGENT_EMAIL_MAILTO}
                     className="mt-3 inline-flex min-h-11 w-full items-center justify-center rounded-lg border border-white/40 px-6 py-4 text-lg font-bold text-white no-underline transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                   >
                     {businessInfo.email}
@@ -435,23 +436,55 @@ export default function GoogleBusinessPage() {
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    "Summerlin",
-                    "Henderson",
-                    "Green Valley",
-                    "The Ridges",
-                    "Southern Highlands",
-                    "Centennial Hills",
-                    "Skye Canyon",
-                    "Inspirada",
-                    "Mountains Edge",
-                    "North Las Vegas",
+                    { name: "Summerlin", href: "/neighborhoods/summerlin" },
+                    { name: "Henderson", href: "/neighborhoods/henderson" },
+                    {
+                      name: "Green Valley",
+                      href: "/neighborhoods/green-valley",
+                    },
+                    { name: "The Ridges", href: "/neighborhoods/the-ridges" },
+                    {
+                      name: "Southern Highlands",
+                      href: "/neighborhoods/southern-highlands",
+                    },
+                    {
+                      name: "Centennial Hills",
+                      href: "/neighborhoods/centennial-hills",
+                    },
+                    {
+                      name: "Skye Canyon",
+                      href: "/neighborhoods/skye-canyon",
+                    },
+                    { name: "Inspirada", href: "/neighborhoods/inspirada" },
+                    {
+                      name: "Mountains Edge",
+                      href: "/neighborhoods/mountains-edge",
+                    },
+                    {
+                      name: "North Las Vegas",
+                      href: "/neighborhoods/north-las-vegas",
+                    },
+                    {
+                      name: "89138 Summerlin West",
+                      href: "/neighborhoods/89138",
+                    },
+                    { name: "89144 Summerlin", href: "/neighborhoods/89144" },
+                    {
+                      name: "Tournament Hills",
+                      href: "/neighborhoods/tournament-hills",
+                    },
+                    {
+                      name: "55+ Communities",
+                      href: "/55-plus-communities",
+                    },
+                    { name: "Siena", href: "/55-plus-communities/siena" },
                   ].map((area) => (
                     <Link
-                      key={area}
-                      href={`/neighborhoods/${area.toLowerCase().replace(/\s+/g, "-")}`}
+                      key={area.href}
+                      href={area.href}
                       className="inline-flex min-h-11 items-center rounded-full bg-white px-3 py-1 text-sm text-slate-700 no-underline hover:bg-blue-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                     >
-                      {area}
+                      {area.name}
                     </Link>
                   ))}
                 </div>
@@ -569,7 +602,7 @@ export default function GoogleBusinessPage() {
       </main>
       <PageCTA
         headline="Match the Google listing to this office"
-        subheadline="9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Call (702) 222-1964."
+        subheadline="9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Call (702) 222-1964 or email homes@heyberkshire.com."
         formSource="google-business"
         formHeading="Ask about this office"
       />
