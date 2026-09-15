@@ -26,6 +26,7 @@ import SchemaScript from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
 import {
   CTA_PHONE,
+  CTA_PHONE_E164,
   CTA_TEL,
   OFFICE_NAP,
   REALSCOUT_SEARCH_URL,
@@ -108,7 +109,7 @@ const faqSchema = {
       name: "Can grandchildren visit or stay in 55+ communities?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Guest-stay limits and under-age occupancy vary by HOA. Confirm days per year in the current CC&Rs. Children cannot be permanent residents under typical HOPA rules. Dr. Jan Duffy reads the packet with you before you bid.",
+        text: "Guest-stay limits and under-age occupancy vary by HOA. Confirm days per year in the current CC&Rs. Dr. Jan Duffy reads the packet with you before you bid.",
       },
     },
     {
@@ -128,7 +129,7 @@ const localBusinessSchema = {
   name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
   description:
     "55+ HOPA communities including Sun City, Del Webb, and Henderson 55+ campuses",
-  telephone: "+17022221964",
+  telephone: CTA_PHONE_E164,
   url: "https://heyberkshire.com/55-plus-communities",
   address: {
     "@type": "PostalAddress",
@@ -325,9 +326,9 @@ const communities = [
 const communityBenefits = [
   {
     icon: HomeIcon,
-    title: "HOA exterior maintenance",
+    title: "HOA exterior items — confirm the packet",
     description:
-      "Exterior maintenance handled by HOA. Spend time on the rec campus, not the roof.",
+      "Roof, paint, and landscaping are not one HOA. Confirm what the current budget actually covers before you bid.",
   },
   {
     icon: Star,
@@ -410,7 +411,7 @@ export default function FiftyFiveCommunitiesPage() {
                 href={CTA_TEL}
                 className="inline-flex min-h-11 items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
               >
-                <Phone className="h-5 w-5 mr-2" />
+                <Phone className="h-5 w-5 mr-2" aria-hidden="true" />
                 Call {CTA_PHONE}
               </a>
               <a
@@ -420,7 +421,7 @@ export default function FiftyFiveCommunitiesPage() {
                 className="inline-flex min-h-11 items-center justify-center bg-slate-100 text-slate-900 px-8 py-4 rounded-md font-bold text-lg hover:bg-slate-200 transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
               >
                 Explore Communities
-                <ArrowRight className="h-5 w-5 ml-2" />
+                <ArrowRight className="h-5 w-5 ml-2" aria-hidden="true" />
                 <span className="sr-only"> (opens in a new tab)</span>
               </a>
             </div>
@@ -472,7 +473,10 @@ export default function FiftyFiveCommunitiesPage() {
           <section className="mb-16 max-w-5xl mx-auto">
             <div className="bg-gradient-to-r from-amber-50 to-orange-50 border-l-4 border-amber-500 rounded-r-xl p-8">
               <div className="flex items-start">
-                <Palmtree className="h-10 w-10 text-amber-600 mr-4 flex-shrink-0 mt-1" />
+                <Palmtree
+                  className="h-10 w-10 text-amber-600 mr-4 flex-shrink-0 mt-1"
+                  aria-hidden="true"
+                />
                 <div>
                   <h3 className="text-2xl font-bold text-slate-900 mb-4">
                     Relocating from California?
@@ -540,7 +544,10 @@ export default function FiftyFiveCommunitiesPage() {
                   className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
                 >
                   <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                    <benefit.icon className="h-6 w-6 text-blue-600" />
+                    <benefit.icon
+                      className="h-6 w-6 text-blue-600"
+                      aria-hidden="true"
+                    />
                   </div>
                   <h3 className="font-bold text-slate-900 mb-2">
                     {benefit.title}
@@ -557,7 +564,10 @@ export default function FiftyFiveCommunitiesPage() {
           <section className="mb-16 max-w-5xl mx-auto">
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
               <div className="flex items-start">
-                <Users className="h-8 w-8 text-blue-600 mr-4 flex-shrink-0 mt-1" />
+                <Users
+                  className="h-8 w-8 text-blue-600 mr-4 flex-shrink-0 mt-1"
+                  aria-hidden="true"
+                />
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-4">
                     Understanding 55+ Age Requirements
@@ -635,7 +645,7 @@ export default function FiftyFiveCommunitiesPage() {
                   <div className="bg-slate-900 text-white p-6">
                     <h3 className="text-xl font-bold mb-1">{community.name}</h3>
                     <div className="flex items-center text-slate-300 text-sm">
-                      <MapPin className="h-4 w-4 mr-1" />
+                      <MapPin className="h-4 w-4 mr-1" aria-hidden="true" />
                       {community.location}
                     </div>
                   </div>
@@ -701,7 +711,10 @@ export default function FiftyFiveCommunitiesPage() {
                             key={highlight}
                             className="flex items-start text-sm text-slate-600"
                           >
-                            <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                            <CheckCircle
+                              className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                              aria-hidden="true"
+                            />
                             {highlight}
                           </li>
                         ))}
@@ -713,11 +726,11 @@ export default function FiftyFiveCommunitiesPage() {
                         href={`/55-plus-communities/${community.slug}`}
                         className="block min-h-11 text-center bg-blue-600 text-white py-3 px-4 rounded-md font-semibold hover:bg-blue-700 transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
                       >
-                        View Homes in {community.name.split(" at ")[0]} →
+                        View {community.name} guide
                       </Link>
                     ) : (
                       <a
-                        href="tel:+17022221964"
+                        href={CTA_TEL}
                         className="block min-h-11 text-center bg-slate-600 text-white py-3 px-4 rounded-md font-semibold hover:bg-slate-700 transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
                       >
                         Call for {community.name} Info
@@ -741,7 +754,10 @@ export default function FiftyFiveCommunitiesPage() {
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white border border-slate-200 rounded-xl p-6">
                 <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Dumbbell className="h-6 w-6 text-green-600" />
+                  <Dumbbell
+                    className="h-6 w-6 text-green-600"
+                    aria-hidden="true"
+                  />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">
                   Fitness & Recreation
@@ -750,13 +766,16 @@ export default function FiftyFiveCommunitiesPage() {
                   <li>• Fitness centers (confirm equipment list)</li>
                   <li>• Indoor & outdoor pools</li>
                   <li>• Tennis & pickleball courts</li>
-                  <li>• Golf courses (many communities)</li>
+                  <li>• Golf — confirm on the HOA packet</li>
                   <li>• Walking/biking trails</li>
                 </ul>
               </div>
               <div className="bg-white border border-slate-200 rounded-xl p-6">
                 <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Calendar className="h-6 w-6 text-blue-600" />
+                  <Calendar
+                    className="h-6 w-6 text-blue-600"
+                    aria-hidden="true"
+                  />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">
                   Social & Activities
@@ -771,16 +790,19 @@ export default function FiftyFiveCommunitiesPage() {
               </div>
               <div className="bg-white border border-slate-200 rounded-xl p-6">
                 <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Shield className="h-6 w-6 text-purple-600" />
+                  <Shield
+                    className="h-6 w-6 text-purple-600"
+                    aria-hidden="true"
+                  />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">
                   Guard-gated entries & HOA maintenance
                 </h3>
                 <ul className="text-slate-600 text-sm space-y-1">
-                  <li>• Guard-gated entries (many)</li>
-                  <li>• Exterior maintenance included</li>
-                  <li>• On-site restaurants (select)</li>
-                  <li>• Healthcare facilities nearby</li>
+                  <li>• Guard-gated entries — confirm on the HOA packet</li>
+                  <li>• Exterior maintenance — confirm what the HOA covers</li>
+                  <li>• On-site restaurants (select campuses)</li>
+                  <li>• Named hospital campuses — confirm drive time</li>
                   <li>
                     • Front desk or concierge on some campuses — confirm in HOA
                     docs
@@ -821,7 +843,10 @@ export default function FiftyFiveCommunitiesPage() {
             <div className="space-y-6">
               <div className="bg-white border border-slate-200 rounded-lg p-6">
                 <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
+                  <HelpCircle
+                    className="h-5 w-5 text-blue-600 mr-2"
+                    aria-hidden="true"
+                  />
                   What are the age requirements for 55+ communities in Las
                   Vegas?
                 </h3>
@@ -835,7 +860,10 @@ export default function FiftyFiveCommunitiesPage() {
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">
                 <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
+                  <HelpCircle
+                    className="h-5 w-5 text-blue-600 mr-2"
+                    aria-hidden="true"
+                  />
                   Can I buy in a 55+ community if I'm under 55?
                 </h3>
                 <p className="text-slate-600">
@@ -847,7 +875,10 @@ export default function FiftyFiveCommunitiesPage() {
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">
                 <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
+                  <HelpCircle
+                    className="h-5 w-5 text-blue-600 mr-2"
+                    aria-hidden="true"
+                  />
                   What do HOA fees cover in 55+ communities?
                 </h3>
                 <p className="text-slate-600">
@@ -860,7 +891,10 @@ export default function FiftyFiveCommunitiesPage() {
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">
                 <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
+                  <HelpCircle
+                    className="h-5 w-5 text-blue-600 mr-2"
+                    aria-hidden="true"
+                  />
                   Why do California residents choose Las Vegas 55+ communities?
                 </h3>
                 <p className="text-slate-600">
@@ -873,14 +907,16 @@ export default function FiftyFiveCommunitiesPage() {
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">
                 <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mr-2" />
+                  <HelpCircle
+                    className="h-5 w-5 text-blue-600 mr-2"
+                    aria-hidden="true"
+                  />
                   Can grandchildren visit or stay in 55+ communities?
                 </h3>
                 <p className="text-slate-600">
                   Guest-stay limits and under-age occupancy vary by HOA. Confirm
-                  days per year in the current CC&Rs. Children cannot be
-                  permanent residents under typical HOPA rules. Dr. Jan Duffy
-                  reads the packet with you before you bid.
+                  days per year in the current CC&Rs. Dr. Jan Duffy reads the
+                  packet with you before you bid.
                 </p>
               </div>
             </div>
@@ -898,7 +934,10 @@ export default function FiftyFiveCommunitiesPage() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="flex items-start">
                 <div className="bg-blue-100 p-2 rounded-full mr-4 flex-shrink-0">
-                  <CheckCircle className="h-5 w-5 text-blue-600" />
+                  <CheckCircle
+                    className="h-5 w-5 text-blue-600"
+                    aria-hidden="true"
+                  />
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">
@@ -913,22 +952,25 @@ export default function FiftyFiveCommunitiesPage() {
               </div>
               <div className="flex items-start">
                 <div className="bg-blue-100 p-2 rounded-full mr-4 flex-shrink-0">
-                  <Users className="h-5 w-5 text-blue-600" />
+                  <Users className="h-5 w-5 text-blue-600" aria-hidden="true" />
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">
                     Relocation Support
                   </h3>
                   <p className="text-slate-600 text-sm">
-                    Many 55+ buyers relocate from out of state. Our national
-                    BHHS network provides referrals, and Dr. Jan offers virtual
-                    tours and detailed community information.
+                    Many 55+ buyers relocate from out of state. BHHS referrals,
+                    video tours, and the current CC&Rs go in the packet before
+                    you fly.
                   </p>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="bg-blue-100 p-2 rounded-full mr-4 flex-shrink-0">
-                  <Shield className="h-5 w-5 text-blue-600" />
+                  <Shield
+                    className="h-5 w-5 text-blue-600"
+                    aria-hidden="true"
+                  />
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">
@@ -943,7 +985,10 @@ export default function FiftyFiveCommunitiesPage() {
               </div>
               <div className="flex items-start">
                 <div className="bg-blue-100 p-2 rounded-full mr-4 flex-shrink-0">
-                  <DollarSign className="h-5 w-5 text-blue-600" />
+                  <DollarSign
+                    className="h-5 w-5 text-blue-600"
+                    aria-hidden="true"
+                  />
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">

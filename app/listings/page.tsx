@@ -14,7 +14,8 @@ import { VisitOffice } from "@/components/shared/VisitOffice";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
-import { FAQSchema } from "@/components/SchemaScript";
+import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
+import { generateWebPageSchema } from "@/lib/schema";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import {
   CTA_PHONE,
@@ -48,6 +49,13 @@ export const metadata: Metadata = withShareImage(
   },
   PAGE_HERO_IMAGES.listings,
 );
+
+const listingsPageSchema = generateWebPageSchema({
+  name: "Las Vegas Homes for Sale",
+  description:
+    "Browse Las Vegas and Henderson homes for sale with live MLS listings. Dr. Jan Duffy, Berkshire Hathaway HomeServices.",
+  url: "/listings",
+});
 
 const listingsSchema = {
   "@context": "https://schema.org",
@@ -125,22 +133,27 @@ const priceRanges = [
   {
     range: "Under $400K",
     description: "Condos, townhomes, and some detached resale",
+    href: "/listings?q=under+400k",
   },
   {
     range: "$400K - $600K",
     description: "Detached resale and townhomes in current MLS bands",
+    href: "/listings?q=400k-600k",
   },
   {
     range: "$600K - $1M",
     description: "Larger homes and later-phase master-plan product",
+    href: "/listings?q=600k-1m",
   },
   {
     range: "$1M - $2M",
     description: "Luxury homes and guard-gated communities",
+    href: "/listings?q=1m-2m",
   },
   {
     range: "$2M+",
     description: "Custom estates — confirm with a live CMA",
+    href: "/listings?q=2m%2B",
   },
 ];
 
@@ -204,6 +217,7 @@ export default function ListingsPage({
 
   return (
     <>
+      <SchemaScript id="webpage-schema" schema={listingsPageSchema} />
       <FAQSchema faqs={listingFaqs} />
       <script
         type="application/ld+json"
@@ -251,12 +265,18 @@ export default function ListingsPage({
             ) : null}
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
               <span className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Live MLS
-                via RealScout
+                <CheckCircle
+                  className="h-4 w-4 text-green-500 mr-1"
+                  aria-hidden="true"
+                />{" "}
+                Live MLS via RealScout
               </span>
               <span className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Call{" "}
-                {CTA_PHONE}
+                <CheckCircle
+                  className="h-4 w-4 text-green-500 mr-1"
+                  aria-hidden="true"
+                />{" "}
+                Call {CTA_PHONE}
               </span>
             </div>
           </div>
@@ -296,7 +316,10 @@ export default function ListingsPage({
                       {search.note}
                     </span>
                   </div>
-                  <ArrowRight className="h-5 w-5 text-slate-400 group-hover:text-blue-600" />
+                  <ArrowRight
+                    className="h-5 w-5 text-slate-400 group-hover:text-blue-600"
+                    aria-hidden="true"
+                  />
                 </Link>
               ))}
             </div>
@@ -320,12 +343,16 @@ export default function ListingsPage({
             </p>
             <div className="space-y-4">
               {priceRanges.map((price) => (
-                <div
+                <Link
                   key={price.range}
-                  className="bg-white rounded-lg p-4 border border-slate-200 flex flex-col md:flex-row md:items-center justify-between"
+                  href={price.href}
+                  className="flex min-h-11 flex-col justify-between rounded-lg border border-slate-200 bg-white p-4 no-underline hover:border-blue-300 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 md:flex-row md:items-center"
                 >
-                  <div className="flex items-center mb-2 md:mb-0">
-                    <DollarSign className="h-5 w-5 text-green-600 mr-3" />
+                  <div className="mb-2 flex items-center md:mb-0">
+                    <DollarSign
+                      className="mr-3 h-5 w-5 text-green-600"
+                      aria-hidden="true"
+                    />
                     <div>
                       <h3 className="font-bold text-slate-900">
                         {price.range}
@@ -335,10 +362,10 @@ export default function ListingsPage({
                       </p>
                     </div>
                   </div>
-                  <span className="text-blue-600 font-semibold">
+                  <span className="font-semibold text-blue-700">
                     Search live MLS
                   </span>
-                </div>
+                </Link>
               ))}
             </div>
           </section>

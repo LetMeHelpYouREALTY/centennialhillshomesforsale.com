@@ -273,7 +273,7 @@ export default function SellersPage() {
               fallbackSrc={PAGE_HERO_IMAGES.sellers.src}
               avoidSrc={PAGE_HERO_IMAGES.sellers.src}
             >
-              The Berkshire Hathaway HomeServices Selling Advantage
+              What a BHHS listing plan actually includes
             </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Not all listing plans are the same. When you choose a Berkshire
@@ -289,7 +289,10 @@ export default function SellersPage() {
                     className="bg-white border border-slate-200 rounded-xl p-8 hover:shadow-lg transition-shadow"
                   >
                     <div className="bg-blue-100 rounded-full p-4 w-16 h-16 flex items-center justify-center mb-6">
-                      <Icon className="h-8 w-8 text-blue-600" />
+                      <Icon
+                        className="h-8 w-8 text-blue-600"
+                        aria-hidden="true"
+                      />
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 mb-3">
                       {benefit.title}
@@ -490,7 +493,10 @@ export default function SellersPage() {
                 </Link>
               </div>
               <div className="text-center">
-                <TrendingUp className="h-24 w-24 text-blue-200 mx-auto mb-4" />
+                <TrendingUp
+                  className="h-24 w-24 text-blue-200 mx-auto mb-4"
+                  aria-hidden="true"
+                />
                 <p className="text-2xl font-bold">
                   {formatUsd(LISTING_MEDIANS_USD.lasVegas)}
                 </p>

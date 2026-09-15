@@ -362,19 +362,25 @@ export default function NeighborhoodsPage() {
           {/* Neighborhood Services */}
           <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold mb-8 text-center">
-              Neighborhood Services
+              How I actually tour villages
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
-                <MapPin className="h-12 w-12 text-blue-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-2">Area Tours</h3>
+                <MapPin
+                  className="h-12 w-12 text-blue-400 mx-auto mb-3"
+                  aria-hidden="true"
+                />
+                <h3 className="font-bold mb-2">Village tours</h3>
                 <p className="text-slate-400 text-sm">
-                  Personalized neighborhood tours to help you experience each
-                  community firsthand
+                  I sequence named villages in one loop. Confirm HOA, commute,
+                  and lot before you bid.
                 </p>
               </div>
               <div className="text-center">
-                <Clock className="h-12 w-12 text-blue-400 mx-auto mb-3" />
+                <Clock
+                  className="h-12 w-12 text-blue-400 mx-auto mb-3"
+                  aria-hidden="true"
+                />
                 <h3 className="font-bold mb-2">Campus maps</h3>
                 <p className="text-slate-400 text-sm">
                   Named campuses, enrollment boundaries, and drive-time to the
@@ -382,11 +388,14 @@ export default function NeighborhoodsPage() {
                 </p>
               </div>
               <div className="text-center">
-                <Home className="h-12 w-12 text-blue-400 mx-auto mb-3" />
-                <h3 className="font-bold mb-2">Home Matching</h3>
+                <Home
+                  className="h-12 w-12 text-blue-400 mx-auto mb-3"
+                  aria-hidden="true"
+                />
+                <h3 className="font-bold mb-2">ZIP matching</h3>
                 <p className="text-slate-400 text-sm">
-                  Find homes that match beds, ZIP, commute, and budget in the
-                  villages you are actually touring
+                  Match beds, ZIP, commute, and budget in the villages you are
+                  actually touring
                 </p>
               </div>
             </div>

@@ -37,7 +37,7 @@ const features = [
   },
   {
     icon: Home,
-    title: "Full service",
+    title: "Written files by type",
     description:
       "Buying, selling, 55+, luxury, and new construction — each on its own written agreement.",
   },

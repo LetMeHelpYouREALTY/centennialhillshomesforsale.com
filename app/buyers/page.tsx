@@ -232,7 +232,7 @@ export default function BuyersPage() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-3xl font-bold mb-4">
-                  Why You Need a Buyer's Agent
+                  Why a written buyer agent still matters
                 </h2>
                 <p className="text-slate-300 mb-6">
                   After the 2024 NAR practice changes, buyer-broker compensation
@@ -264,7 +264,10 @@ export default function BuyersPage() {
                 </ul>
               </div>
               <div className="bg-slate-800 rounded-lg p-8 text-center">
-                <Shield className="h-16 w-16 text-blue-400 mx-auto mb-4" />
+                <Shield
+                  className="h-16 w-16 text-blue-400 mx-auto mb-4"
+                  aria-hidden="true"
+                />
                 <p className="text-2xl font-bold mb-2">One agent of record</p>
                 <p className="text-slate-400 mb-4">
                   Dr. Jan Duffy works for your side of the deal throughout the
@@ -302,7 +305,10 @@ export default function BuyersPage() {
                   >
                     <div className="flex-shrink-0">
                       <div className="bg-blue-100 rounded-full p-4 w-16 h-16 flex items-center justify-center">
-                        <Icon className="h-8 w-8 text-blue-600" />
+                        <Icon
+                          className="h-8 w-8 text-blue-600"
+                          aria-hidden="true"
+                        />
                       </div>
                     </div>
                     <div>
@@ -470,7 +476,7 @@ export default function BuyersPage() {
             <div className="grid md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Award className="h-7 w-7 text-blue-600" />
+                  <Award className="h-7 w-7 text-blue-600" aria-hidden="true" />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">Written plan</h3>
                 <p className="text-slate-600 text-sm">
@@ -480,7 +486,7 @@ export default function BuyersPage() {
               </div>
               <div className="text-center">
                 <div className="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Users className="h-7 w-7 text-blue-600" />
+                  <Users className="h-7 w-7 text-blue-600" aria-hidden="true" />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">
                   Global Network
@@ -491,7 +497,10 @@ export default function BuyersPage() {
               </div>
               <div className="text-center">
                 <div className="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <MapPin className="h-7 w-7 text-blue-600" />
+                  <MapPin
+                    className="h-7 w-7 text-blue-600"
+                    aria-hidden="true"
+                  />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">
                   Local practice
@@ -503,7 +512,10 @@ export default function BuyersPage() {
               </div>
               <div className="text-center">
                 <div className="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <TrendingUp className="h-7 w-7 text-blue-600" />
+                  <TrendingUp
+                    className="h-7 w-7 text-blue-600"
+                    aria-hidden="true"
+                  />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">
                   Written offer strategy

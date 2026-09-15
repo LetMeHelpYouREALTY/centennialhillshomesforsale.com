@@ -33,7 +33,8 @@ import {
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading, SectionPhoto } from "@/components/shared/SectionPhoto";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
-import { FAQSchema } from "@/components/SchemaScript";
+import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
+import { generateWebPageSchema } from "@/lib/schema";
 
 export const revalidate = 3600;
 
@@ -50,6 +51,13 @@ export const metadata: Metadata = withShareImage(
   },
   PAGE_HERO_IMAGES.market,
 );
+
+const marketPageSchema = generateWebPageSchema({
+  name: "Centennial Hills Market Insights 2026",
+  description:
+    "First-party Centennial Hills market insights: 89149 vs 89144, Inspirada new-construction wind-down, and northwest Las Vegas listing medians.",
+  url: "/market-insights",
+});
 
 const reportSchema = {
   "@context": "https://schema.org",
@@ -91,6 +99,7 @@ export default async function MarketInsightsPage() {
 
   return (
     <>
+      <SchemaScript id="webpage-schema" schema={marketPageSchema} />
       <FAQSchema faqs={marketFaqs} />
       <script
         type="application/ld+json"
@@ -101,7 +110,7 @@ export default async function MarketInsightsPage() {
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              <TrendingUp className="h-4 w-4 mr-2" />
+              <TrendingUp className="h-4 w-4 mr-2" aria-hidden="true" />
               2026 Economic & Real Estate Analysis
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
@@ -216,41 +225,47 @@ export default async function MarketInsightsPage() {
           {/* Tech Transformation */}
           <section className="mb-16 max-w-5xl mx-auto">
             <div className="flex items-center mb-6">
-              <Cpu className="h-8 w-8 text-purple-600 mr-3" />
+              <Cpu
+                className="h-8 w-8 text-purple-600 mr-3"
+                aria-hidden="true"
+              />
               <h2 className="text-3xl font-bold text-slate-900">
-                Las Vegas Tech Transformation
+                Henderson data-center corridor
               </h2>
             </div>
             <SectionPhoto
-              heading="Las Vegas Tech Transformation"
+              heading="Henderson data-center corridor"
               fallbackSrc={PAGE_HERO_IMAGES.market.src}
               avoidSrc={PAGE_HERO_IMAGES.market.src}
             />
             <div className="grid md:grid-cols-2 gap-8">
               <div className="prose prose-lg max-w-none text-slate-700">
                 <p>
-                  Henderson's data-center corridor hosts operators including
-                  Google, Amazon Web Services, and Switch. Confirm current
-                  employers and commute on a CMA — I will not invent a
-                  job-growth rate or call the valley a tech hub slogan.
+                  Henderson&apos;s data-center corridor hosts operators
+                  including Google, Amazon Web Services, and Switch. Confirm
+                  current employers and commute on a CMA — I will not invent a
+                  job-growth rate or call the valley a tech-hub slogan.
                 </p>
                 <h3 className="text-xl font-bold text-slate-900 mt-6 mb-3">
-                  Data Center Corridor
+                  Confirm the employer, not the corridor
                 </h3>
                 <p>
-                  Henderson's data center corridor now hosts Google, Amazon Web
-                  Services, Switch, and other major operators. These facilities
-                  bring high-paying jobs and attract supporting technology
-                  companies.
+                  A data-center campus is not a listing amenity. Drive time,
+                  shift hours, and whether the buyer actually works there belong
+                  on the CMA. I will not copy a tech-hub headline onto a
+                  Henderson ZIP.
                 </p>
               </div>
               <div className="bg-slate-50 rounded-xl p-6">
                 <h3 className="font-bold text-slate-900 mb-4">
-                  Tech Impact on Real Estate
+                  What I will confirm on a CMA
                 </h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle
+                      className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                      aria-hidden="true"
+                    />
                     <span className="text-slate-700">
                       <strong>Henderson demand:</strong> Data-center and
                       medical-corridor jobs keep Henderson on relocation
@@ -260,17 +275,26 @@ export default async function MarketInsightsPage() {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle
+                      className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                      aria-hidden="true"
+                    />
                     <span className="text-slate-700">
-                      <strong>Remote worker influx:</strong> Tech workers
-                      keeping CA salaries while enjoying NV tax advantages
+                      <strong>Remote W-2 files:</strong> Nevada charges no state
+                      income tax on wages. Whether a California remote paycheck
+                      stays CA-sourced is a CPA question. I will not invent an
+                      inbound tech-worker count.
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle
+                      className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                      aria-hidden="true"
+                    />
                     <span className="text-slate-700">
-                      <strong>Infrastructure investment:</strong> Fiber networks
-                      and power infrastructure improving for all residents
+                      <strong>Infrastructure on the listing:</strong> Fiber and
+                      power vary by street. Confirm what the address has — not a
+                      corridor slogan.
                     </span>
                   </li>
                 </ul>
@@ -281,7 +305,7 @@ export default async function MarketInsightsPage() {
           {/* California Migration Deep Dive */}
           <section className="mb-16 bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <div className="flex items-center mb-6">
-              <Globe className="h-8 w-8 mr-3" />
+              <Globe className="h-8 w-8 mr-3" aria-hidden="true" />
               <h2 className="text-3xl font-bold">
                 California Migration Analysis
               </h2>
@@ -316,7 +340,7 @@ export default async function MarketInsightsPage() {
               </div>
               <div>
                 <h3 className="font-bold text-lg mb-4">
-                  Why Californians Choose Las Vegas
+                  What California buyers compare on paper
                 </h3>
                 <ul className="space-y-2 text-blue-100">
                   <li className="flex items-start">
@@ -369,16 +393,19 @@ export default async function MarketInsightsPage() {
             </div>
           </section>
 
-          {/* Economic Diversification */}
+          {/* Named employers and venues */}
           <section className="mb-16 max-w-5xl mx-auto">
             <div className="flex items-center mb-6">
-              <Building2 className="h-8 w-8 text-green-600 mr-3" />
+              <Building2
+                className="h-8 w-8 text-green-600 mr-3"
+                aria-hidden="true"
+              />
               <h2 className="text-3xl font-bold text-slate-900">
-                Economic Diversification
+                Named employers and venues — not a growth slogan
               </h2>
             </div>
             <SectionPhoto
-              heading="Economic Diversification"
+              heading="Named employers and venues — not a growth slogan"
               fallbackSrc={PAGE_HERO_IMAGES.investment.src}
               avoidSrc={PAGE_HERO_IMAGES.market.src}
             />
@@ -388,12 +415,13 @@ export default async function MarketInsightsPage() {
                   Raiders & Sports
                 </h3>
                 <p className="text-slate-600 text-sm mb-3">
-                  Allegiant Stadium anchors a new entertainment district. NHL
-                  Golden Knights, WNBA Aces, and potential MLB/NBA expansion
-                  diversify the economy.
+                  Allegiant Stadium hosts Raiders games and events. Golden
+                  Knights and Aces play in the valley. Expansion rumors are
+                  UNKNOWN until a league announces. Drive time to the venue
+                  depends on the street.
                 </p>
                 <div className="text-green-600 font-semibold text-sm">
-                  Impact: West Las Vegas jobs and event-calendar demand
+                  Confirm commute to the venue you actually use
                 </div>
               </div>
               <div className="bg-white border border-slate-200 rounded-xl p-6">
@@ -401,11 +429,12 @@ export default async function MarketInsightsPage() {
                   Healthcare Growth
                 </h3>
                 <p className="text-slate-600 text-sm mb-3">
-                  New hospitals, medical schools, and healthcare facilities
-                  address historic shortages while creating high-paying jobs.
+                  Henderson and Summerlin have named hospital campuses. Confirm
+                  commute to the campus you actually use — I will not invent a
+                  job-growth rate.
                 </p>
                 <div className="text-green-600 font-semibold text-sm">
-                  Impact: Henderson, Summerlin medical corridors
+                  Henderson and Summerlin medical corridors
                 </div>
               </div>
               <div className="bg-white border border-slate-200 rounded-xl p-6">
@@ -413,12 +442,12 @@ export default async function MarketInsightsPage() {
                   Film & Production
                 </h3>
                 <p className="text-slate-600 text-sm mb-3">
-                  Nevada film incentives attracting production companies. New
-                  studios and post-production facilities creating entertainment
-                  industry jobs.
+                  Nevada publishes film-incentive rules. Current productions and
+                  studio jobs are UNKNOWN on this page until a sourced count
+                  exists.
                 </p>
                 <div className="text-green-600 font-semibold text-sm">
-                  Impact: Creative industry employment growth
+                  Confirm the current incentive, not a slogan
                 </div>
               </div>
             </div>
@@ -427,7 +456,10 @@ export default async function MarketInsightsPage() {
           {/* Neighborhood Forecasts */}
           <section className="mb-16 bg-slate-50 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
             <div className="flex items-center mb-6">
-              <BarChart3 className="h-8 w-8 text-blue-600 mr-3" />
+              <BarChart3
+                className="h-8 w-8 text-blue-600 mr-3"
+                aria-hidden="true"
+              />
               <h2 className="text-3xl font-bold text-slate-900">
                 2026 Neighborhood Outlook
               </h2>
@@ -524,19 +556,26 @@ export default async function MarketInsightsPage() {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-green-50 border border-green-200 rounded-xl p-6">
                 <h3 className="font-bold text-green-900 text-xl mb-4 flex items-center">
-                  <Users className="h-6 w-6 mr-2" />
+                  <Users className="h-6 w-6 mr-2" aria-hidden="true" />
                   For Buyers
                 </h3>
                 <ul className="space-y-3 text-green-800">
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle
+                      className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0"
+                      aria-hidden="true"
+                    />
                     <span>
-                      <strong>Act strategically:</strong> More inventory than
-                      2021-2023, but well-priced homes still move fast
+                      <strong>Price to the comps:</strong> More inventory than
+                      2021–2023 does not mean every listing sits. Priced-to-comp
+                      houses still move.
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle
+                      className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0"
+                      aria-hidden="true"
+                    />
                     <span>
                       <strong>Ask for a commute map:</strong> Henderson and
                       Summerlin west are different freeways from Centennial
@@ -544,7 +583,10 @@ export default async function MarketInsightsPage() {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle
+                      className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0"
+                      aria-hidden="true"
+                    />
                     <span>
                       <strong>Builder incentives:</strong> Rate buydowns and
                       credits make new construction competitive
@@ -554,12 +596,15 @@ export default async function MarketInsightsPage() {
               </div>
               <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
                 <h3 className="font-bold text-blue-900 text-xl mb-4 flex items-center">
-                  <DollarSign className="h-6 w-6 mr-2" />
+                  <DollarSign className="h-6 w-6 mr-2" aria-hidden="true" />
                   For Sellers
                 </h3>
                 <ul className="space-y-3 text-blue-800">
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle
+                      className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0"
+                      aria-hidden="true"
+                    />
                     <span>
                       <strong>Price to the comps:</strong> Overpriced homes sit.
                       Days on market is a live MLS pull by ZIP and price band —
@@ -567,17 +612,25 @@ export default async function MarketInsightsPage() {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle
+                      className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0"
+                      aria-hidden="true"
+                    />
                     <span>
-                      <strong>Target CA buyers:</strong> Marketing to California
-                      relocators expands buyer pool significantly
+                      <strong>Pair the California sale:</strong> MLS, BHHS
+                      syndication, and a CMA they can match against their sale.
+                      I will not invent an inbound-buyer share.
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle
+                      className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0"
+                      aria-hidden="true"
+                    />
                     <span>
-                      <strong>Highlight tech access:</strong> Proximity to data
-                      centers and tech jobs adds value
+                      <strong>Write the commute:</strong> If a named employer
+                      matters, put drive time on the remarks from a timed
+                      itinerary — not a corridor slogan.
                     </span>
                   </li>
                 </ul>
@@ -626,7 +679,7 @@ export default async function MarketInsightsPage() {
 
           <section className="mx-auto max-w-4xl rounded-2xl bg-blue-600 p-8 text-center text-white md:p-12">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-              Get Personalized Market Analysis
+              Ask for a CMA on this house
             </h2>
             <p className="mb-8 text-xl text-blue-100">
               Wondering what these trends mean for a specific house? Call with
@@ -637,7 +690,7 @@ export default async function MarketInsightsPage() {
                 href={CTA_TEL}
                 className="inline-flex min-h-11 items-center justify-center rounded-md bg-white px-8 py-4 text-lg font-bold text-blue-600 hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
               >
-                <Phone className="mr-2 h-5 w-5" />
+                <Phone className="mr-2 h-5 w-5" aria-hidden="true" />
                 Call {CTA_PHONE}
               </a>
               <Link

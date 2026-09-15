@@ -15,14 +15,25 @@ import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import { AGENT_PHOTO_PATH } from "@/lib/brand-assets";
-import { CTA_PHONE, CTA_TEL, OFFICE_NAP } from "@/lib/contact";
+import {
+  AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
+  CTA_PHONE,
+  CTA_PHONE_E164,
+  CTA_TEL,
+  OFFICE_NAP,
+  OFFICE_POSTAL_ADDRESS,
+  REALSCOUT_SEARCH_URL,
+  TEXT_LINK_CLASS,
+} from "@/lib/contact";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
-import { FAQSchema } from "@/components/SchemaScript";
+import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
+import { generateWebPageSchema } from "@/lib/schema";
 import { getPublicSiteUrl } from "@/lib/site-url";
 
 export const metadata: Metadata = withShareImage(
@@ -52,10 +63,11 @@ const personSchema = {
   jobTitle: "REALTOR®",
   description:
     "Licensed real estate agent with Berkshire Hathaway HomeServices Nevada Properties, serving Las Vegas, Henderson, and Summerlin since 2008.",
-  telephone: "+17022221964",
-  email: "homes@heyberkshire.com",
+  telephone: CTA_PHONE_E164,
+  email: AGENT_EMAIL,
   url: `${aboutOrigin}/about`,
   image: `${aboutOrigin}${AGENT_PHOTO_PATH}`,
+  address: OFFICE_POSTAL_ADDRESS,
   worksFor: {
     "@type": "RealEstateAgent",
     name: "Berkshire Hathaway HomeServices Nevada Properties",
@@ -104,32 +116,38 @@ const aboutFaqs = [
 
 const specializations = [
   {
-    title: "Residential Home Sales",
+    title: "Residential home sales",
+    href: "/listings",
     description:
       "Single-family homes, condos, and townhomes throughout Las Vegas and Henderson",
   },
   {
-    title: "Luxury Properties ($1M+)",
+    title: "Luxury listings",
+    href: "/luxury-homes",
     description:
       "The Ridges, MacDonald Highlands, and Southern Highlands guard-gated and custom villages",
   },
   {
-    title: "New Construction",
+    title: "New construction",
+    href: "/new-construction",
     description:
       "Register before the first model-home visit with Toll Brothers, Lennar, Century Communities, and more",
   },
   {
-    title: "Investment Properties",
+    title: "Investment properties",
+    href: "/investment-properties",
     description:
       "Rental houses in Clark County. I represent buyers and sellers; I do not manage rentals.",
   },
   {
-    title: "55+ Active Adult Communities",
+    title: "55+ HOPA communities",
+    href: "/55-plus-communities",
     description:
       "Sun City Summerlin, Sun City Anthem, and Del Webb Lake Las Vegas files",
   },
   {
-    title: "California Relocation",
+    title: "California relocation",
+    href: "/buyers/california-relocator",
     description:
       "Helping CA buyers compare Nevada's 0% wage tax and live Las Vegas comps",
   },
@@ -153,6 +171,15 @@ const areasServed = [
 export default function AboutPage() {
   return (
     <>
+      <SchemaScript
+        id="webpage-schema"
+        schema={generateWebPageSchema({
+          name: "About Dr. Jan Duffy",
+          description:
+            "Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Serving Las Vegas, Henderson, and Summerlin since 2008.",
+          url: "/about",
+        })}
+      />
       <FAQSchema faqs={aboutFaqs} />
       <script
         type="application/ld+json"
@@ -238,26 +265,44 @@ export default function AboutPage() {
                       href={CTA_TEL}
                       className="inline-flex min-h-11 items-center text-slate-700 no-underline hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                     >
-                      <Phone className="h-5 w-5 mr-3 text-blue-600" />
+                      <Phone
+                        className="h-5 w-5 mr-3 text-blue-600"
+                        aria-hidden="true"
+                      />
                       <span className="font-semibold">{CTA_PHONE}</span>
                     </a>
                     <a
-                      href="mailto:homes@heyberkshire.com"
+                      href={AGENT_EMAIL_MAILTO}
                       className="inline-flex min-h-11 items-center text-slate-700 no-underline hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                     >
-                      <Mail className="h-5 w-5 mr-3 text-blue-600" />
-                      Homes@HeyBerkshire.com
+                      <Mail
+                        className="h-5 w-5 mr-3 text-blue-600"
+                        aria-hidden="true"
+                      />
+                      {AGENT_EMAIL}
                     </a>
                     <div className="flex items-start text-slate-700">
-                      <MapPin className="h-5 w-5 mr-3 text-blue-600 mt-0.5" />
+                      <MapPin
+                        className="h-5 w-5 mr-3 text-blue-600 mt-0.5"
+                        aria-hidden="true"
+                      />
                       <address className="not-italic">
-                        9406 W Lake Mead Blvd, Suite 100
-                        <br />
-                        Las Vegas, NV 89134
+                        <a
+                          href={OFFICE_NAP.mapsUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={TEXT_LINK_CLASS}
+                        >
+                          {OFFICE_NAP.full}
+                          <span className="sr-only"> (opens in a new tab)</span>
+                        </a>
                       </address>
                     </div>
                     <div className="flex items-center text-slate-700">
-                      <Clock className="h-5 w-5 mr-3 text-blue-600" />
+                      <Clock
+                        className="h-5 w-5 mr-3 text-blue-600"
+                        aria-hidden="true"
+                      />
                       Mon-Fri 9am-6pm, Sat 10am-4pm, Sun by appointment
                     </div>
                   </div>
@@ -330,30 +375,42 @@ export default function AboutPage() {
                       href="/buyers"
                       className="inline-flex min-h-11 items-center text-slate-700 no-underline hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                     >
-                      <ArrowRight className="h-4 w-4 mr-2 text-blue-600" />
+                      <ArrowRight
+                        className="h-4 w-4 mr-2 text-blue-600"
+                        aria-hidden="true"
+                      />
                       Home Buying Guide
                     </Link>
                     <Link
                       href="/sellers"
                       className="inline-flex min-h-11 items-center text-slate-700 no-underline hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                     >
-                      <ArrowRight className="h-4 w-4 mr-2 text-blue-600" />
+                      <ArrowRight
+                        className="h-4 w-4 mr-2 text-blue-600"
+                        aria-hidden="true"
+                      />
                       Selling Your Home
                     </Link>
                     <Link
                       href="/home-valuation"
                       className="inline-flex min-h-11 items-center text-slate-700 no-underline hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                     >
-                      <ArrowRight className="h-4 w-4 mr-2 text-blue-600" />
+                      <ArrowRight
+                        className="h-4 w-4 mr-2 text-blue-600"
+                        aria-hidden="true"
+                      />
                       Request a CMA
                     </Link>
                     <a
-                      href="https://drjanduffy.realscout.com/"
+                      href={REALSCOUT_SEARCH_URL}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex min-h-11 items-center text-slate-700 no-underline hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                     >
-                      <ArrowRight className="h-4 w-4 mr-2 text-blue-600" />
+                      <ArrowRight
+                        className="h-4 w-4 mr-2 text-blue-600"
+                        aria-hidden="true"
+                      />
                       Browse Listings
                       <span className="sr-only"> (opens in a new tab)</span>
                     </a>
@@ -370,7 +427,7 @@ export default function AboutPage() {
               fallbackSrc={PAGE_HERO_IMAGES.about.src}
               avoidSrc={PAGE_HERO_IMAGES.about.src}
             >
-              Areas of Specialization
+              Files I actually work
             </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Dr. Jan Duffy works residential files across Las Vegas, Henderson,
@@ -380,16 +437,20 @@ export default function AboutPage() {
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {specializations.map((spec) => (
-                <div
-                  key={spec.title}
-                  className="bg-white rounded-lg p-6 border border-slate-200"
+                <Link
+                  key={spec.href}
+                  href={spec.href}
+                  className="block min-h-11 rounded-lg border border-slate-200 bg-white p-6 no-underline hover:border-blue-300 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                 >
-                  <h3 className="font-bold text-slate-900 mb-2 flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                  <h3 className="mb-2 flex items-center font-bold text-slate-900">
+                    <CheckCircle
+                      className="mr-2 h-5 w-5 text-green-500"
+                      aria-hidden="true"
+                    />
                     {spec.title}
                   </h3>
-                  <p className="text-slate-600 text-sm">{spec.description}</p>
-                </div>
+                  <p className="text-sm text-slate-600">{spec.description}</p>
+                </Link>
               ))}
             </div>
           </section>
@@ -407,7 +468,7 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
                 <div className="bg-blue-600 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Award className="h-8 w-8" />
+                  <Award className="h-8 w-8" aria-hidden="true" />
                 </div>
                 <h3 className="font-bold text-xl mb-2">Franchise brokerage</h3>
                 <p className="text-slate-300 text-sm">
@@ -418,7 +479,7 @@ export default function AboutPage() {
               </div>
               <div className="text-center">
                 <div className="bg-blue-600 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Users className="h-8 w-8" />
+                  <Users className="h-8 w-8" aria-hidden="true" />
                 </div>
                 <h3 className="font-bold text-xl mb-2">Global Network</h3>
                 <p className="text-slate-300 text-sm">
@@ -429,7 +490,7 @@ export default function AboutPage() {
               </div>
               <div className="text-center">
                 <div className="bg-blue-600 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Shield className="h-8 w-8" />
+                  <Shield className="h-8 w-8" aria-hidden="true" />
                 </div>
                 <h3 className="font-bold text-xl mb-2">Ethical Standards</h3>
                 <p className="text-slate-300 text-sm">
@@ -486,7 +547,7 @@ export default function AboutPage() {
                 className="text-blue-600 font-semibold hover:text-blue-700 inline-flex min-h-11 items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
                 Explore All Neighborhoods{" "}
-                <ArrowRight className="h-4 w-4 ml-2" />
+                <ArrowRight className="h-4 w-4 ml-2" aria-hidden="true" />
               </Link>
             </div>
           </section>

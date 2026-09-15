@@ -62,7 +62,7 @@ export default function DownsizingPage() {
         {
           question: "Can grandchildren stay overnight in 55+?",
           answer:
-            "Usually for a limited number of days per year. Confirm the CC&Rs. Children cannot be permanent residents.",
+            "Confirm guest-stay limits and under-age occupancy in the current CC&Rs. I will not treat a typical-HOPA slogan as your HOA.",
         },
       ]}
       related={[
