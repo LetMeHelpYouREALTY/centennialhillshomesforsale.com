@@ -163,6 +163,13 @@ describe("clipSerpDescription", () => {
     expect(marketUpdate).toContain("September 14, 2026");
     expect(marketUpdate).toContain("Dr. Jan Duffy");
     expect(marketUpdate).not.toMatch(/Dr\.\s*Call/);
+
+    const listings = clipSerpDescription(
+      "Browse all Las Vegas and Henderson homes for sale with live MLS listings. Search by neighborhood, price, and features. Dr. Jan Duffy, Berkshire Hathaway HomeServices. Call (702) 222-1964 or email homes@heyberkshire.com.",
+    );
+    expect(listings.length).toBeLessThanOrEqual(SERP_DESCRIPTION_MAX);
+    expect(listings).not.toMatch(/price\.\s*Call/);
+    expect(listings).toContain("neighborhood");
   });
 });
 

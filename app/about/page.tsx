@@ -37,6 +37,7 @@ import { generateWebPageSchema } from "@/lib/schema";
 import { getPublicSiteUrl } from "@/lib/site-url";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
+import { HubConversionLinks } from "@/components/shared/HubConversionLinks";
 import { MARKET_SNAPSHOT_AS_OF } from "@/lib/market-snapshots";
 
 export function generateMetadata(): Metadata {
@@ -231,6 +232,7 @@ export default function AboutPage() {
                 className="mb-0"
               />
             </div>
+            <HubConversionLinks />
           </div>
 
           {/* Agent Profile */}

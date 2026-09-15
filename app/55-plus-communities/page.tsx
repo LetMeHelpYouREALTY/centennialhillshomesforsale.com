@@ -44,6 +44,7 @@ import {
 import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
+import { HubConversionLinks } from "@/components/shared/HubConversionLinks";
 import Image from "next/image";
 
 export function generateMetadata(): Metadata {
@@ -479,6 +480,7 @@ export default function FiftyFiveCommunitiesPage() {
                 className="mb-0"
               />
             </div>
+            <HubConversionLinks />
           </div>
 
           {/* Quick Stats */}

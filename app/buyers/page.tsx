@@ -26,6 +26,7 @@ import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
 import { generateServiceSchema, generateWebPageSchema } from "@/lib/schema";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
+import { HubConversionLinks } from "@/components/shared/HubConversionLinks";
 import Image from "next/image";
 import {
   formatUsd,
@@ -251,6 +252,7 @@ export default function BuyersPage() {
                 className="mb-0"
               />
             </div>
+            <HubConversionLinks />
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-600">
               <span className="flex items-center">
                 <CheckCircle

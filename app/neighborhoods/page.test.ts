@@ -19,5 +19,6 @@ describe("neighborhoods hub", () => {
     expect(src).toContain("SectionHeading");
     expect(src).toContain("neighborhoods-mls-heading");
     expect(src).toContain("Search live MLS");
+    expect(src).toContain("HubConversionLinks");
   });
 });

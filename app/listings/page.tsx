@@ -14,6 +14,7 @@ import { VisitOffice } from "@/components/shared/VisitOffice";
 import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
+import { HubConversionLinks } from "@/components/shared/HubConversionLinks";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
@@ -43,7 +44,7 @@ export function generateMetadata(): Metadata {
       title:
         "Las Vegas Homes for Sale | MLS Property Search | Berkshire Hathaway HomeServices",
       description:
-        "Browse all Las Vegas and Henderson homes for sale with live MLS listings. Search by neighborhood, price, and features. Dr. Jan Duffy, Berkshire Hathaway HomeServices. Call (702) 222-1964 or email homes@heyberkshire.com.",
+        "Browse Las Vegas and Henderson live MLS with Dr. Jan Duffy. Search by ZIP, village, and price. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [
         "Las Vegas homes for sale",
         "Henderson real estate",
@@ -378,26 +379,7 @@ export default function ListingsPage({
                 Email {AGENT_EMAIL}
               </span>
             </div>
-            <div className="mt-8 flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row">
-              <Link
-                href="/buyers/first-time-buyers"
-                className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-5 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
-              >
-                First-Time Las Vegas Buyers
-              </Link>
-              <Link
-                href="/relocation"
-                className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-5 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
-              >
-                Las Vegas Relocation
-              </Link>
-              <Link
-                href="/home-valuation"
-                className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-5 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
-              >
-                Request a Las Vegas CMA
-              </Link>
-            </div>
+            <HubConversionLinks />
           </div>
         </div>
 

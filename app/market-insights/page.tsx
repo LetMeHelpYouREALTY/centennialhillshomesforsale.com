@@ -39,6 +39,7 @@ import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
+import { HubConversionLinks } from "@/components/shared/HubConversionLinks";
 
 export const revalidate = 3600;
 
@@ -149,6 +150,7 @@ export default async function MarketInsightsPage() {
                 className="mb-0"
               />
             </div>
+            <HubConversionLinks />
           </div>
 
           <section className="mb-16 max-w-5xl mx-auto">

@@ -31,6 +31,7 @@ import { VisitOffice } from "@/components/shared/VisitOffice";
 import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
+import { HubConversionLinks } from "@/components/shared/HubConversionLinks";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { getPublicSiteUrl } from "@/lib/site-url";
 import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
@@ -148,6 +149,7 @@ export default function ContactPage() {
             <div className="mt-8">
               <MlsSearchForm inputId="mls-q-contact" />
             </div>
+            <HubConversionLinks />
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">

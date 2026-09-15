@@ -17,6 +17,7 @@ describe("contact hub", () => {
     expect(src).toContain("MARKET_SNAPSHOT_AS_OF");
     expect(src).not.toContain("Whether you're buying");
     expect(src).toContain("GoogleReviewsCta");
+    expect(src).toContain("HubConversionLinks");
     expect(src).not.toContain("Dr. Jan Duffy will pull");
     expect(src).not.toContain("Dr. Jan can introduce");
     expect(src).toContain("I reply during posted hours");

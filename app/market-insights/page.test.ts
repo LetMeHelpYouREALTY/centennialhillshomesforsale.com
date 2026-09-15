@@ -15,6 +15,7 @@ describe("market insights report schema", () => {
     expect(src).toContain("Call (702) 222-1964");
     expect(src).toContain("homes@heyberkshire.com");
     expect(src).toContain('source="market-insights-mid"');
+    expect(src).toContain("HubConversionLinks");
     expect(src).toContain("GoogleReviewsCta");
     expect(src).not.toContain("She will pull MLS");
     expect(src).not.toContain("Dr. Jan Duffy will run a CMA");

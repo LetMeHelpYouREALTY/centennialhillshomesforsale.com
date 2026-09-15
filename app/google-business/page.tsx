@@ -33,6 +33,7 @@ import SchemaScript from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
+import { HubConversionLinks } from "@/components/shared/HubConversionLinks";
 import { gbpPostTemplates } from "@/lib/gbp-posts";
 import {
   businessInfo,
@@ -248,6 +249,7 @@ export default function GoogleBusinessPage() {
               className="mb-0"
             />
           </div>
+          <HubConversionLinks className="mb-16" />
 
           {/* Business Hours */}
           <section className="mx-auto mb-16 max-w-5xl">

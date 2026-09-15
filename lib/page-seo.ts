@@ -118,7 +118,22 @@ function finishClippedLead(lead: string, original: string): string {
       next.replace(/\bDr\.?(?:\s+Jan)?$/, "").replace(/[\s,;:]+$/, ""),
     );
   }
-  return next.replace(/[.,;:]+$/, "");
+  return dropTruncatedCommaList(next, original).replace(/[.,;:]+$/, "");
+}
+
+/** Drop a one-word trailing list item when the source sentence continues. */
+function dropTruncatedCommaList(lead: string, original: string): string {
+  const lastComma = lead.lastIndexOf(", ");
+  if (lastComma < 0) return lead;
+  const afterComma = lead.slice(lastComma + 2).trim();
+  if (!afterComma || afterComma.includes(" ")) return lead;
+  const idx = original.indexOf(lead);
+  if (idx < 0) return lead;
+  const rest = original.slice(idx + lead.length);
+  if (/^\s*,/.test(rest) || /^\s+and\b/i.test(rest)) {
+    return lead.slice(0, lastComma).replace(/[\s,;:]+$/, "");
+  }
+  return lead;
 }
 
 /**

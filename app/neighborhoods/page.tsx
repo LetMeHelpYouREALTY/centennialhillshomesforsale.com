@@ -19,6 +19,7 @@ import Image from "next/image";
 import { generateWebPageSchema } from "@/lib/schema";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
+import { HubConversionLinks } from "@/components/shared/HubConversionLinks";
 
 export function generateMetadata(): Metadata {
   return withShareImage(
@@ -321,6 +322,7 @@ export default function NeighborhoodsPage() {
                 className="mb-0"
               />
             </div>
+            <HubConversionLinks />
           </div>
 
           {/* Neighborhood Grid */}
