@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import TopicGuide from "@/components/sections/TopicGuide";
+import { CTA_PHONE } from "@/lib/contact";
 
 export const metadata: Metadata = withShareImage(
   {
@@ -33,7 +34,7 @@ export default function WhyBerkshirePage() {
         { value: "BHHS", label: "Brokerage" },
         { value: "S.0197614.LLC", label: "License" },
         { value: "Since 2008", label: "Las Vegas practice" },
-        { value: "222-1964", label: "Client line" },
+        { value: CTA_PHONE, label: "Client line" },
       ]}
       sections={[
         {
@@ -51,6 +52,10 @@ export default function WhyBerkshirePage() {
         {
           heading: "How to reach this practice",
           body: "Client line (702) 222-1964. Email homes@heyberkshire.com. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Hours Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday by appointment. (702) 500-1942 is the professional/FUB line, not a consumer CTA.",
+        },
+        {
+          heading: "What a CMA from this office looks like",
+          body: "Sold comps, current actives, and the address — not a brand slogan. Warren Buffett does not write it. Email homes@heyberkshire.com or call (702) 222-1964 with the street. Buyer files still need a written buyer agreement.",
         },
       ]}
       faqs={[

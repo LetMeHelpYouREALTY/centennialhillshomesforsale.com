@@ -63,6 +63,13 @@ export default function HomeValuationPage() {
           imageAlt: "Northwest Las Vegas homes used as live CMA comps",
           body: "HOA, SID/LID, tenant status, and recent same-street sales. I will not email a list price from an AVM. Email homes@heyberkshire.com if the form is inconvenient — still include the address and occupancy.",
         },
+        {
+          heading: "How I walk the house after the form",
+          imageSrc: "/images/hero/sellers-listing.png",
+          imageAlt:
+            "Las Vegas home prepared for listing with professional staging",
+          body: "A preliminary range can come during posted hours when the file is straightforward. A number I will list at comes after I see the house — occupied, vacant, or tenant. Email homes@heyberkshire.com or call (702) 222-1964 with the address if the form is inconvenient.",
+        },
       ]}
       faqs={[
         {

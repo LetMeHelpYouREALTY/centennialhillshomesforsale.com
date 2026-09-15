@@ -64,6 +64,13 @@ export default function ServicesPage() {
             "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard",
           body: "Call (702) 222-1964 or email homes@heyberkshire.com. Buyer files need a written buyer agreement. Seller files start with a CMA. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
         },
+        {
+          heading: "How I send the first MLS set",
+          imageSrc: "/images/hero/homepage.png",
+          imageAlt:
+            "Las Vegas Valley rooftops and desert mountains for homes-for-sale search",
+          body: "Name the village or ZIP, beds, and a price band. I filter live MLS and email the set — not a city slogan. Start on /buyers or /sellers if you already know the file type. Email homes@heyberkshire.com or call (702) 222-1964.",
+        },
       ]}
       faqs={[
         {
@@ -78,7 +85,8 @@ export default function ServicesPage() {
         },
         {
           question: "How do I start?",
-          answer: "Call (702) 222-1964 or use /contact.",
+          answer:
+            "Call (702) 222-1964, email homes@heyberkshire.com, or use /contact.",
         },
         {
           question: "What is the office email?",

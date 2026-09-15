@@ -70,6 +70,10 @@ export default function MarketUpdatePage() {
           heading: "Ask for the street, not the city median",
           body: `These listing medians are dated ${MARKET_SNAPSHOT_AS_OF}. They are not sold prices. Email homes@heyberkshire.com or call (702) 222-1964 with the address — or use /home-valuation — for a live CMA.`,
         },
+        {
+          heading: "How I send a live pull from this snapshot",
+          body: "City and village medians on this page are a dated snapshot, not your house. Send the address and I will pull MLS solds and actives. Email homes@heyberkshire.com or call (702) 222-1964 — or use /home-valuation.",
+        },
       ]}
       faqs={[
         {

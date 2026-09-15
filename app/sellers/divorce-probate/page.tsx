@@ -52,6 +52,10 @@ export default function DivorceProbatePage() {
           heading: "Documents before photos",
           body: "Send the decree, letters testamentary, or the order that says who can sign. I will not load MLS photos until title can insure the file. Email homes@heyberkshire.com or call (702) 222-1964 — this is not legal advice.",
         },
+        {
+          heading: "How I start a court-supervised listing",
+          body: "Email the decree, letters testamentary, or the order that names who can sign — then the address. I start with title, not photos. Email homes@heyberkshire.com or call (702) 222-1964. This is not legal advice.",
+        },
       ]}
       faqs={[
         {

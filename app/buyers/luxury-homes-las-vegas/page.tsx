@@ -65,6 +65,10 @@ export default function LuxuryHomesLasVegasPage() {
           heading: "Gate desks and architectural packets",
           body: "I schedule access, then read HOA architectural rules before you bid on a view lot that cannot add a casita. Email homes@heyberkshire.com or call (702) 222-1964 with the gate name — The Ridges, Tournament Hills, Red Rock Country Club, MacDonald Highlands, or Southern Highlands.",
         },
+        {
+          heading: "How I send gated matches",
+          body: "Name the gate, beds, and a price band. I schedule the listing desk and send same-gate comps — not a valley-wide luxury hashtag. Email homes@heyberkshire.com or call (702) 222-1964.",
+        },
       ]}
       faqs={[
         {

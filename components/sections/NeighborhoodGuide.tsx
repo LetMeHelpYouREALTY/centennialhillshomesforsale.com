@@ -166,7 +166,7 @@ export default function NeighborhoodGuide({
             <h1 className="mb-4 text-4xl font-bold text-slate-900 md:text-5xl">
               {h1}
             </h1>
-            <p className="mb-6 text-lg text-slate-600">{intro}</p>
+            <p className="mb-6 text-pretty text-lg text-slate-600">{intro}</p>
             <p className="mb-10 text-sm text-slate-500">
               ZIP {zipCodes.join(", ")} · {city}, NV · Dr. Jan Duffy, Berkshire
               Hathaway HomeServices Nevada Properties · License S.0197614.LLC ·{" "}
@@ -243,7 +243,7 @@ export default function NeighborhoodGuide({
                   imageAlt={section.imageAlt}
                   className="mb-6"
                 />
-                <p className="whitespace-pre-line text-slate-700">
+                <p className="whitespace-pre-line text-pretty text-slate-700">
                   {section.body}
                 </p>
               </section>

@@ -52,6 +52,10 @@ export default function MoveUpSellerPage() {
           heading: "Two files, two disclosure packets",
           body: "The sale and the purchase are separate agreements. I will not hide a conflict if one appears. Email homes@heyberkshire.com or call (702) 222-1964 with both addresses so I can CMA the house you have before we write on the next one.",
         },
+        {
+          heading: "How I start the two-file CMA",
+          body: "Send the current address, the payoff if you have it, and the next ZIP or village. I CMA the house you have first — equity is not a blog chart. Email homes@heyberkshire.com or call (702) 222-1964.",
+        },
       ]}
       faqs={[
         {

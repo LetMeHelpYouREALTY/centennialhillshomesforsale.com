@@ -52,6 +52,10 @@ export default function SellersRelocationPage() {
           heading: "Weekly written updates",
           body: "You get showing feedback and offer summaries in writing, not a mystery lockbox. Email homes@heyberkshire.com from the new time zone if a call window is awkward — I still walk the Clark County house myself.",
         },
+        {
+          heading: "How I start a remote listing CMA",
+          body: "Send the address, occupancy (vacant, occupied, tenant), and photos if you have them. I walk the house, then email a CMA before we pick a list price. Email homes@heyberkshire.com or call (702) 222-1964.",
+        },
       ]}
       faqs={[
         {

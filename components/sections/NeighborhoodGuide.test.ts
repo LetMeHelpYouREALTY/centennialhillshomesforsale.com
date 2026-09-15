@@ -13,5 +13,6 @@ describe("NeighborhoodGuide conversion chrome", () => {
     expect(src).toContain("mergeGuideRelated");
     expect(src).toContain("mergeGuideFaqs");
     expect(src).toContain("defaultQuery={zipCodes[0]}");
+    expect(src).toContain("text-pretty");
   });
 });

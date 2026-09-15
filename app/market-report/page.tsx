@@ -64,6 +64,10 @@ export default function MarketReportPage() {
           heading: "Use this with a CMA, not instead of one",
           body: `City and village listing medians on this page are dated ${MARKET_SNAPSHOT_AS_OF}. They are not sold prices and they are not your house. Email homes@heyberkshire.com or call (702) 222-1964 with the address for a live CMA.`,
         },
+        {
+          heading: "How I turn this table into a CMA",
+          body: "The valley table shows villages diverge. I still need beds, HOA, and the address. Email homes@heyberkshire.com or call (702) 222-1964 — I will not bid $20K under a city median and call it a strategy.",
+        },
       ]}
       faqs={[
         {

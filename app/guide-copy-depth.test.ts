@@ -26,11 +26,11 @@ describe("NeighborhoodGuide and TopicGuide copy depth", () => {
   });
 
   it.each(guidePages)(
-    "%s has at least four unique section headings",
+    "%s has at least five unique section headings",
     (file) => {
       const src = readFileSync(file, "utf8");
       const headings = src.match(/heading:\s*["'`]/g) ?? [];
-      expect(headings.length).toBeGreaterThanOrEqual(4);
+      expect(headings.length).toBeGreaterThanOrEqual(5);
     },
   );
 });

@@ -63,6 +63,10 @@ export default function RelocationPage() {
           heading: "Two clocks on paper",
           body: "The Nevada listing close and the destination purchase (or the inbound purchase and the origin sale) are two calendars. I will not stack two unpriced wishes. Email homes@heyberkshire.com or call (702) 222-1964 with both addresses and the commute that actually matters.",
         },
+        {
+          heading: "How I start an inbound vs outbound file",
+          body: "Inbound: origin city, destination ZIP, and the workplace or hospital you actually drive to. Outbound: Clark County address plus occupancy (vacant, occupied, tenant). I sequence the two clocks after a CMA, not before. Email homes@heyberkshire.com or call (702) 222-1964.",
+        },
       ]}
       faqs={[
         {

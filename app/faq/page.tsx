@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import TopicGuide from "@/components/sections/TopicGuide";
+import { CTA_PHONE } from "@/lib/contact";
 import {
   formatUsd,
   LISTING_MEDIANS_USD,
@@ -39,7 +40,7 @@ export default function FaqPage() {
           value: formatUsd(LISTING_MEDIANS_USD.lasVegas),
           label: "LV listing median",
         },
-        { value: "222-1964", label: "Client phone" },
+        { value: CTA_PHONE, label: "Client phone" },
         { value: "89134", label: "Office ZIP" },
         { value: "Written", label: "Buyer / listing agreement" },
       ]}
@@ -71,6 +72,13 @@ export default function FaqPage() {
           imageAlt:
             "55-plus active adult community in Summerlin with golf course and rec center",
           body: "HOPA occupancy rules differ by campus — confirm CC&Rs. Register me before the first builder visit on new construction. Email homes@heyberkshire.com or call (702) 222-1964. Hours Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday by appointment.",
+        },
+        {
+          heading: "How I answer a live file",
+          imageSrc: "/images/gbp/office-lake-mead.png",
+          imageAlt:
+            "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard",
+          body: "Send the address, ZIP, and whether you are buying, selling, or both. I pull live MLS and reply during posted hours — I will not invent a two-hour SLA. Email homes@heyberkshire.com or call (702) 222-1964. Fair Housing copy lives on /fair-housing.",
         },
       ]}
       faqs={[

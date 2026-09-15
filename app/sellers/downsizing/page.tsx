@@ -42,7 +42,7 @@ export default function DownsizingPage() {
         },
         {
           heading: "55+ vs all-ages one-story",
-          body: "Sun City Summerlin, Sun City Anthem, Heritage at Stonebridge, Trilogy, Solera, and Del Webb Lake Las Vegas are HOPA communities with occupancy rules. All-ages one-story inventory exists in Green Valley, Summerlin villages, and northwest Las Vegas. Confirm whether every occupant must be 55+ before you fall in love with a model.",
+          body: "Sun City Summerlin, Siena, Trilogy, Sun City Anthem, Heritage at Stonebridge, Solera, and Del Webb Lake Las Vegas are HOPA communities with occupancy rules. All-ages one-story inventory exists in Green Valley, Summerlin villages, and northwest Las Vegas. Confirm whether every occupant must be 55+ before you fall in love with a model.",
         },
         {
           heading: "Money order of operations",
@@ -51,6 +51,10 @@ export default function DownsizingPage() {
         {
           heading: "HOA dues on the next door",
           body: "A smaller floor plan can still carry higher monthly HOA than the two-story you are leaving. I put dues, guest-stay rules, and any SID/LID on the worksheet next to the sale proceeds. Email homes@heyberkshire.com or call (702) 222-1964 with both addresses.",
+        },
+        {
+          heading: "How I match the next floor plan",
+          body: "Tell me stairs vs one-story, 55+ vs all-ages, and the current address. I CMA the sale first, then filter the next door by occupancy rules — including Siena and Trilogy, not only Sun City. Email homes@heyberkshire.com or call (702) 222-1964.",
         },
       ]}
       faqs={[

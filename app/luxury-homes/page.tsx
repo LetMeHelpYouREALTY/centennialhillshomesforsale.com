@@ -75,6 +75,12 @@ export default function LuxuryHomesPage() {
             "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard",
           body: "HOA architectural packets can add weeks. I calendar that before we pick a list date. Email homes@heyberkshire.com or call (702) 222-1964 with the address — I CMA the gate you actually live in, not a Southern Highlands median on a Ridges lot.",
         },
+        {
+          heading: "How I start a luxury listing",
+          imageSrc: "/images/neighborhoods/the-ridges.png",
+          imageAlt: "Gated custom homes in The Ridges, Summerlin",
+          body: "Send the address, occupancy, and whether the gate has a listing desk. I pull same-gate sales and calendar architectural review before photos. Email homes@heyberkshire.com or call (702) 222-1964 — I do not list a Ridges lot at a Southern Highlands median.",
+        },
       ]}
       faqs={[
         {

@@ -76,6 +76,13 @@ export default function InvestmentPropertiesPage() {
             "Northwest Las Vegas single-family street typical of investor tours",
           body: "I will not publish a ZIP cap rate. Send the address, current rent (or vacancy), HOA, and whether you need a manager referral. Email homes@heyberkshire.com or call (702) 222-1964. I represent the purchase or sale — I do not place tenants.",
         },
+        {
+          heading: "How I send investor matches",
+          imageSrc: "/images/neighborhoods/north-las-vegas.png",
+          imageAlt:
+            "North Las Vegas residential street of single-family rentals",
+          body: "Name occupancy vs rental, ZIP, and whether you need a manager referral. I tour the house and run rent comps on that address — not a city cap-rate slogan. Email homes@heyberkshire.com or call (702) 222-1964.",
+        },
       ]}
       faqs={[
         {
