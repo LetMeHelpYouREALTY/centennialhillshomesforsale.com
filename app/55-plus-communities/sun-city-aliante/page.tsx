@@ -44,12 +44,11 @@ export default function SunCityAliantePage() {
       longitude={-115.06}
       stats={[
         { value: nlv, label: "NLV city listing median" },
-        { value: "2,800+", label: "Homes" },
+        { value: "Confirm HOA", label: "Home count" },
         { value: "18-hole", label: "Golf" },
         { value: "89084", label: "ZIP" },
       ]}
       senior={{
-        numberOfHomes: 2800,
         priceRange: `North Las Vegas city listing median ${nlv} is not this HOA`,
         hoaFees: "Confirm on resale docs",
         amenities: [

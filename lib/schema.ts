@@ -57,7 +57,7 @@ export interface SeniorCommunityData {
   name: string;
   description: string;
   priceRange: string;
-  numberOfHomes: number;
+  numberOfHomes?: number;
   yearBuilt?: string;
   amenities: CommunityAmenity[];
   latitude?: number;
@@ -384,13 +384,15 @@ export function generateSeniorCommunitySchema(community: SeniorCommunityData) {
     description: community.description,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Henderson",
+      addressLocality: "Las Vegas",
       addressRegion: "NV",
       addressCountry: "US",
     },
-    numberOfAccommodationUnits: community.numberOfHomes,
-    petsAllowed: true,
   };
+
+  if (community.numberOfHomes) {
+    schema.numberOfAccommodationUnits = community.numberOfHomes;
+  }
 
   if (community.latitude && community.longitude) {
     schema.geo = {

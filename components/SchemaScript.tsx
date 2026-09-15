@@ -222,11 +222,11 @@ export function SeniorCommunitySchema({
   hoaFees,
   latitude,
   longitude,
-  city = "Henderson",
+  city = "Las Vegas",
 }: {
   name: string;
   description: string;
-  numberOfHomes: number;
+  numberOfHomes?: number;
   amenities: Array<{ name: string; description?: string }>;
   priceRange: string;
   hoaFees?: string;
@@ -245,7 +245,6 @@ export function SeniorCommunitySchema({
       addressRegion: "NV",
       addressCountry: "US",
     },
-    numberOfAccommodationUnits: numberOfHomes,
     amenityFeature: amenities.map((amenity) => ({
       "@type": "LocationFeatureSpecification",
       name: amenity.name,
@@ -265,6 +264,10 @@ export function SeniorCommunitySchema({
       },
     ],
   };
+
+  if (numberOfHomes) {
+    schema.numberOfAccommodationUnits = numberOfHomes;
+  }
 
   if (hoaFees) {
     (schema.additionalProperty as Array<Record<string, unknown>>).push({

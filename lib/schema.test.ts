@@ -3,6 +3,7 @@ import {
   generateAggregateRatingSchema,
   generateRealEstateAgentSchema,
   generateReviewSchema,
+  generateSeniorCommunitySchema,
   generateWebSiteSchema,
 } from "./schema";
 import { SOCIAL_PROFILES } from "./contact";
@@ -60,5 +61,29 @@ describe("WebSite SearchAction", () => {
     expect(() => generateAggregateRatingSchema(4.9, 0)).toThrow(
       /live GBP pull/,
     );
+  });
+});
+
+describe("SeniorCommunity schema", () => {
+  it("omits invented home counts and pet policies", () => {
+    const schema = generateSeniorCommunitySchema({
+      name: "Solera at Anthem",
+      description: "Henderson 55+ HOPA campus",
+      priceRange: "Confirm with live CMA",
+      amenities: [{ name: "Guard-gated entry" }],
+    });
+    expect(schema).not.toHaveProperty("numberOfAccommodationUnits");
+    expect(schema).not.toHaveProperty("petsAllowed");
+  });
+
+  it("emits a home count only when provided", () => {
+    const schema = generateSeniorCommunitySchema({
+      name: "Sun City Summerlin",
+      description: "Del Webb 55+ in ZIP 89134",
+      priceRange: "Confirm with live CMA",
+      numberOfHomes: 7700,
+      amenities: [],
+    });
+    expect(schema.numberOfAccommodationUnits).toBe(7700);
   });
 });

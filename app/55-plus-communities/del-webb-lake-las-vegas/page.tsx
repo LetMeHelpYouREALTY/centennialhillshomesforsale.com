@@ -49,7 +49,6 @@ export default function DelWebbLakeLasVegasPage() {
         { value: "Lake", label: "Setting" },
       ]}
       senior={{
-        numberOfHomes: 800,
         priceRange: `Lake Las Vegas area listing median ${areaMedian} (not the village alone)`,
         hoaFees: "Confirm on resale docs",
         amenities: [

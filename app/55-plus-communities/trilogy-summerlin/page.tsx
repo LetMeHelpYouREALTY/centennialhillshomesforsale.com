@@ -36,20 +36,19 @@ export default function TrilogySummerlinPage() {
       latitude={36.1523}
       longitude={-115.3456}
       stats={[
-        { value: "800+", label: "Homes" },
+        { value: "Confirm HOA", label: "Home count" },
         { value: "Shea", label: "Builder" },
         { value: "89135", label: "ZIP" },
         { value: "CMA", label: "Price any bid" },
       ]}
       senior={{
-        numberOfHomes: 800,
         priceRange: "Confirm with live CMA",
         hoaFees: "Confirm on resale docs",
         amenities: [
           { name: "On-site restaurant" },
           { name: "Spa" },
           { name: "Fitness center" },
-          { name: "Resort-style pool" },
+          { name: "Community pool" },
         ],
       }}
       sections={[

@@ -42,13 +42,12 @@ export default function SoleraAnthemPage() {
       latitude={35.965}
       longitude={-115.1}
       stats={[
-        { value: "1,200+", label: "Homes" },
+        { value: "Confirm HOA", label: "Home count" },
         { value: "Gated", label: "Access" },
         { value: "89052", label: "ZIP" },
         { value: anthem, label: "Anthem area listing median" },
       ]}
       senior={{
-        numberOfHomes: 1200,
         priceRange: "Confirm with live CMA",
         hoaFees: "Confirm on resale docs",
         amenities: [

@@ -198,7 +198,7 @@ const communities = [
     ageRequirement: "55+ (at least one resident)",
     hoaFees: HOA_CONFIRM,
     priceRange: `NLV city ${formatUsd(LISTING_MEDIANS_USD.northLasVegas)} is not this HOA`,
-    homes: "2,800+ homes",
+    homes: "Confirm HOA count",
     amenities: ["Golf course", "Fitness center", "Pools", "Tennis"],
     highlights: [
       "North Las Vegas Sun City campus",
@@ -217,7 +217,7 @@ const communities = [
     ageRequirement: "55+ (at least one resident)",
     hoaFees: HOA_CONFIRM,
     priceRange: `${formatUsd(LISTING_MEDIANS_USD.lakeLasVegas)} area listing median (not the village alone)`,
-    homes: "1,800+ homes",
+    homes: "Confirm HOA count",
     amenities: ["Lake access", "Resort pools", "Fitness", "Pickleball"],
     highlights: [
       "Lakefront and mountain views",
@@ -236,7 +236,7 @@ const communities = [
     ageRequirement: "55+ (at least one resident)",
     hoaFees: HOA_CONFIRM,
     priceRange: LIVE_CMA,
-    homes: "1,100+ homes",
+    homes: "Confirm HOA count",
     amenities: ["Clubhouse", "Pool & spa", "Fitness", "Social clubs"],
     highlights: [
       "Summerlin 55+ campus",
@@ -255,7 +255,7 @@ const communities = [
     ageRequirement: "55+ (all residents)",
     hoaFees: HOA_CONFIRM,
     priceRange: LIVE_CMA,
-    homes: "1,200+ homes",
+    homes: "Confirm HOA count",
     amenities: ["Guard-gated", "Clubhouse", "Fitness", "Tennis"],
     highlights: [
       "Guard-gated entry",
@@ -274,8 +274,8 @@ const communities = [
     ageRequirement: "55+ (at least one resident)",
     hoaFees: HOA_CONFIRM,
     priceRange: LIVE_CMA,
-    homes: "800+ homes",
-    amenities: ["Farm-to-table dining", "Spa", "Fitness", "Resort pool"],
+    homes: "Confirm HOA count",
+    amenities: ["On-site restaurant", "Spa", "Fitness", "Community pool"],
     highlights: [
       "On-site dining (confirm hours)",
       "Spa and fitness campus",
@@ -293,7 +293,7 @@ const communities = [
     ageRequirement: "55+ (at least one resident)",
     hoaFees: HOA_CONFIRM,
     priceRange: LIVE_CMA,
-    homes: "2,300+ homes",
+    homes: "Confirm HOA count",
     amenities: ["Golf course", "Pools", "Fitness", "Social clubs"],
     highlights: [
       "Summerlin 55+ campus west of the 215",
@@ -316,9 +316,9 @@ const communityBenefits = [
   },
   {
     icon: Star,
-    title: "Resort-Style Amenities",
+    title: "Rec campuses",
     description:
-      "Golf courses, pools, fitness centers, spas, and clubhouses. Confirm which are on the HOA budget.",
+      "Golf, pools, fitness, and clubhouses vary by HOA. Confirm which are on the dues budget.",
   },
   {
     icon: Calendar,

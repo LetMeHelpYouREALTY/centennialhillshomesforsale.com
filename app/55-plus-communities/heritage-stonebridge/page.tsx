@@ -36,13 +36,12 @@ export default function HeritageStonebridgePage() {
       latitude={36.195}
       longitude={-115.292}
       stats={[
-        { value: "1,100+", label: "Homes" },
+        { value: "Confirm HOA", label: "Home count" },
         { value: "Gated", label: "Access" },
         { value: "89134", label: "ZIP" },
         { value: "CMA", label: "Price any bid" },
       ]}
       senior={{
-        numberOfHomes: 1100,
         priceRange: "Confirm with live CMA",
         hoaFees: "Confirm on resale docs",
         amenities: [

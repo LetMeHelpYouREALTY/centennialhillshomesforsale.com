@@ -44,7 +44,7 @@ export type NeighborhoodSection = {
 };
 
 export type SeniorGuideDetails = {
-  numberOfHomes: number;
+  numberOfHomes?: number;
   amenities: Array<{ name: string; description?: string }>;
   priceRange: string;
   hoaFees?: string;
