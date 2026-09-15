@@ -18,6 +18,8 @@ describe("contact hub", () => {
     expect(src).not.toContain("Whether you're buying");
     expect(src).toContain("GoogleReviewsCta");
     expect(src).toContain("HubConversionLinks");
+    expect(src).toContain("OPENING_HOURS_SPEC");
+    expect(src).toContain("openingHoursSpecification");
     expect(src).not.toContain("Dr. Jan Duffy will pull");
     expect(src).not.toContain("Dr. Jan can introduce");
     expect(src).toContain("I reply during posted hours");

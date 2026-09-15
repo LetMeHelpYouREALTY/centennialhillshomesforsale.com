@@ -218,6 +218,7 @@ export default function Navbar() {
     { href: "/investment-properties", label: "Investment" },
     { href: "/market-report", label: "Market Report" },
     { href: "/market-insights", label: "Market Insights" },
+    { href: "/market-update", label: "Market Update" },
   ];
 
   const isServicesSectionCurrent = serviceLinks.some((link) =>

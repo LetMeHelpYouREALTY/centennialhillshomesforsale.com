@@ -46,7 +46,7 @@ export const revalidate = 3600;
 export function generateMetadata(): Metadata {
   return withShareImage(
     {
-      title: "Centennial Hills Market Insights 2026 | Northwest Las Vegas",
+      title: "Centennial Hills Market Insights 2026",
       description:
         "First-party Centennial Hills market insights: 89149 vs 89144, Inspirada new-construction wind-down, and how northwest Las Vegas listings are trading. Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [

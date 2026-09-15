@@ -91,8 +91,10 @@ export default function Footer() {
                   label: "Siena 55+",
                 },
                 { href: "/home-valuation", label: "Home Valuation" },
-                { href: "/why-berkshire-hathaway", label: "Why BHHS" },
+                { href: "/market-report", label: "Market Report" },
                 { href: "/market-insights", label: "Market Insights" },
+                { href: "/market-update", label: "Market Update" },
+                { href: "/why-berkshire-hathaway", label: "Why BHHS" },
                 { href: "/about", label: "About Dr. Jan" },
                 { href: "/contact", label: "Contact" },
               ].map((link) => (

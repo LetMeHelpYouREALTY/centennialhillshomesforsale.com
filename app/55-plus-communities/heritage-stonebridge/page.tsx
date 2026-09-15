@@ -6,7 +6,7 @@ import { MARKET_SNAPSHOT_AS_OF } from "@/lib/market-snapshots";
 export function generateMetadata(): Metadata {
   return withShareImage(
     {
-      title: "Heritage at Stonebridge Homes | Guard-Gated 55+ Summerlin",
+      title: "Heritage at Stonebridge Homes | 55+ Summerlin",
       description:
         "Heritage at Stonebridge Summerlin 55+ homes. Guard-gated pocket near Downtown Summerlin. Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [

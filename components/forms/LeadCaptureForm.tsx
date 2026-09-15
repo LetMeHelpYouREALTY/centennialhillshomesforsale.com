@@ -455,6 +455,7 @@ export function LeadCaptureForm({
             <select
               id={ids.timeline}
               name="timeline"
+              autoComplete="off"
               value={formData.timeline}
               onChange={handleChange}
               disabled={loading}

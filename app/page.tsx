@@ -42,7 +42,7 @@ export async function generateMetadata(): Promise<Metadata> {
     {
       title: {
         absolute:
-          "Centennial Hills Homes for Sale | Las Vegas 89149 Real Estate | Dr. Jan Duffy",
+          "Centennial Hills Homes for Sale | 89149 Las Vegas | Dr. Jan Duffy",
       },
       description:
         "Centennial Hills homes for sale in northwest Las Vegas (89149, 89131, 89143). Search current listings with Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",

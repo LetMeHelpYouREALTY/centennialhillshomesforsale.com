@@ -544,10 +544,14 @@ export function resolveSectionImage(
     }
   }
 
+  const fallback = input.fallbackSrc ?? PAGE_HERO_IMAGES.listings.src;
+  if (fallback && fallback !== avoid) {
+    return { src: fallback, alt };
+  }
+
   const pool = Object.values(PAGE_HERO_IMAGES)
     .map((image) => image.src)
     .filter((src) => src !== avoid);
-  const fallback = input.fallbackSrc ?? PAGE_HERO_IMAGES.listings.src;
   const src = pool.length > 0 ? pickFromPool(heading, pool) : fallback;
 
   return { src, alt };

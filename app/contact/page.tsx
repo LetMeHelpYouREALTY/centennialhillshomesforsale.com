@@ -23,6 +23,7 @@ import {
   OFFICE_HOURS,
   OFFICE_NAP,
   OFFICE_POSTAL_ADDRESS,
+  OPENING_HOURS_SPEC,
   TEXT_LINK_CLASS,
 } from "@/lib/contact";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
@@ -72,6 +73,12 @@ const contactSchema = {
     image: `${contactOrigin}${AGENT_PHOTO_PATH}`,
     url: `${contactOrigin}/contact`,
     address: OFFICE_POSTAL_ADDRESS,
+    openingHoursSpecification: OPENING_HOURS_SPEC.map((spec) => ({
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [...spec.dayOfWeek],
+      opens: spec.opens,
+      closes: spec.closes,
+    })),
   },
 };
 

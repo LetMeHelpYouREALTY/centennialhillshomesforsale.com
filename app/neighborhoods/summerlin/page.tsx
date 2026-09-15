@@ -11,7 +11,7 @@ import {
 export function generateMetadata(): Metadata {
   return withShareImage(
     {
-      title: "Summerlin Homes for Sale | Las Vegas Master-Planned Real Estate",
+      title: "Summerlin Homes for Sale | Master-Planned Las Vegas",
       description:
         "Summerlin homes for sale with Dr. Jan Duffy, BHHS Nevada Properties. Villages, ZIP codes, and current listings. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [

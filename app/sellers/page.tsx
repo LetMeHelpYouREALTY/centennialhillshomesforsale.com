@@ -32,7 +32,7 @@ import {
 export function generateMetadata(): Metadata {
   return withShareImage(
     {
-      title: "Sell Your Las Vegas Home | Berkshire Hathaway HomeServices",
+      title: "Sell Your Las Vegas Home | Live CMA",
       description:
         "Sell your Las Vegas or Henderson home with comps-based pricing and Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Request a CMA. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [

@@ -11,7 +11,7 @@ import {
 export function generateMetadata(): Metadata {
   return withShareImage(
     {
-      title: "Luxury Homes Las Vegas | The Ridges, MacDonald Highlands",
+      title: "Luxury Homes Las Vegas | The Ridges, Highlands",
       description:
         "Las Vegas luxury homes with Dr. Jan Duffy: The Ridges, Tournament Hills, MacDonald Highlands, Southern Highlands. Private tours. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [

@@ -20,6 +20,7 @@ describe("55+ hub", () => {
     expect(src).toContain("fifty-five-mls-heading");
     expect(src).toContain("Search live MLS");
     expect(src).toContain("HubConversionLinks");
+    expect(src).toContain('getNeighborhoodImage("sun-city-summerlin")');
     expect(src).toContain("I read the packet with you");
     expect(src).toContain("I provide detailed");
     expect(src).not.toContain("How Dr. Jan Duffy works 55+ files");

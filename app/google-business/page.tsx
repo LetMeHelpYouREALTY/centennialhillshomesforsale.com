@@ -28,7 +28,7 @@ import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
-import { PAGE_HERO_IMAGES } from "@/lib/site-images";
+import { PAGE_HERO_IMAGES, VISIT_OFFICE_PHOTO_PATH } from "@/lib/site-images";
 import SchemaScript from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
@@ -639,7 +639,7 @@ export default function GoogleBusinessPage() {
               />
               <SectionHeading
                 className="text-2xl font-bold text-slate-900 mb-4"
-                fallbackSrc={PAGE_HERO_IMAGES.googleBusiness.src}
+                fallbackSrc={VISIT_OFFICE_PHOTO_PATH}
                 avoidSrc={PAGE_HERO_IMAGES.googleBusiness.src}
               >
                 Leave a Google Review for This Office

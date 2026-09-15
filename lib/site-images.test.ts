@@ -353,6 +353,30 @@ describe("site images catalog", () => {
       "/images/neighborhoods/centennial-hills.png",
     );
 
+    const mlsWhenListingsHeroIsAvoided = resolveSectionImage({
+      heading: "Search live MLS",
+      neighborhoodName: "Las Vegas",
+      fallbackSrc: PAGE_HERO_IMAGES.buyers.src,
+      avoidSrc: PAGE_HERO_IMAGES.listings.src,
+    });
+    expect(mlsWhenListingsHeroIsAvoided.src).toBe(PAGE_HERO_IMAGES.buyers.src);
+
+    const currentListings = resolveSectionImage({
+      heading: "Current Las Vegas Listings",
+      neighborhoodName: "Las Vegas",
+      fallbackSrc: PAGE_HERO_IMAGES.buyers.src,
+      avoidSrc: PAGE_HERO_IMAGES.listings.src,
+    });
+    expect(currentListings.src).toBe(PAGE_HERO_IMAGES.buyers.src);
+
+    const buyerAgreement = resolveSectionImage({
+      heading: "What a BHHS buyer agreement actually includes",
+      neighborhoodName: "Las Vegas",
+      fallbackSrc: PAGE_HERO_IMAGES.about.src,
+      avoidSrc: PAGE_HERO_IMAGES.buyers.src,
+    });
+    expect(buyerAgreement.src).toBe(PAGE_HERO_IMAGES.about.src);
+
     const root = path.join(__dirname, "..", "public");
     expect(existsSync(path.join(root, golf.src.replace(/^\//, "")))).toBe(true);
     expect(existsSync(path.join(root, commute.src.replace(/^\//, "")))).toBe(

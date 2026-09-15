@@ -25,6 +25,7 @@ describe("navbar keyboard", () => {
     expect(src).toContain("/buyers/first-time-buyers");
     expect(src).toContain("/buyers/california-relocator");
     expect(src).toContain("California Relocators");
+    expect(src).toContain("/market-update");
     expect(src).toContain("ArrowDown");
     expect(src).not.toContain("priority className");
   });

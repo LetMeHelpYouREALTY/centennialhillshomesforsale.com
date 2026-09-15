@@ -117,6 +117,8 @@ export default function LuxuryHomesPage() {
           label: "Red Rock Country Club",
         },
         { href: "/sellers", label: "Selling guide" },
+        { href: "/new-construction", label: "New construction buyers" },
+        { href: "/investment-properties", label: "Investment properties" },
       ]}
       showListings={false}
     />

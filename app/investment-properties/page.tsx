@@ -115,7 +115,7 @@ export default function InvestmentPropertiesPage() {
         },
         { href: "/neighborhoods/henderson", label: "Henderson homes" },
         { href: "/sellers", label: "Selling a rental" },
-        { href: "/contact", label: "Contact" },
+        { href: "/new-construction", label: "New construction buyers" },
       ]}
       showListings={false}
     />

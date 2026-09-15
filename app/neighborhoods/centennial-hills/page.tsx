@@ -12,7 +12,7 @@ import {
 export function generateMetadata(): Metadata {
   return withShareImage(
     {
-      title: "Centennial Hills Homes for Sale | 89149 Las Vegas Real Estate",
+      title: "Centennial Hills Homes for Sale | 89149 Las Vegas",
       description:
         "Homes for sale in Centennial Hills, Las Vegas (89149, 89131, 89143). Town Center, park, and current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [

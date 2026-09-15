@@ -582,7 +582,7 @@ export default function FiftyFiveCommunitiesPage() {
           <section className="mb-16 max-w-6xl mx-auto">
             <SectionHeading
               className="text-3xl font-bold text-slate-900 mb-4 text-center"
-              fallbackSrc={PAGE_HERO_IMAGES.fiftyFivePlus.src}
+              fallbackSrc={getNeighborhoodImage("sun-city-summerlin").src}
               avoidSrc={PAGE_HERO_IMAGES.fiftyFivePlus.src}
             >
               What 55+ HOPA campuses in Las Vegas actually include
@@ -657,17 +657,11 @@ export default function FiftyFiveCommunitiesPage() {
           <section id="communities" className="mb-16 max-w-6xl mx-auto">
             <SectionHeading
               className="text-3xl font-bold text-slate-900 mb-4 text-center"
-              fallbackSrc={PAGE_HERO_IMAGES.fiftyFivePlus.src}
+              fallbackSrc={getNeighborhoodImage("sun-city-summerlin").src}
               avoidSrc={PAGE_HERO_IMAGES.fiftyFivePlus.src}
             >
               Las Vegas 55+ Communities
             </SectionHeading>
-            <PageHeroImage
-              src={PAGE_HERO_IMAGES.fiftyFivePlus.src}
-              alt={PAGE_HERO_IMAGES.fiftyFivePlus.alt}
-              size="section"
-              className="mx-auto mb-8 max-w-4xl"
-            />
             <p className="text-pretty text-lg text-slate-600 text-center mb-8">
               Open the campus guide for HOPA occupancy, HOA, and live MLS — not
               a lifestyle slogan. Siena, Trilogy, Sun City, Heritage, Solera,
@@ -804,7 +798,7 @@ export default function FiftyFiveCommunitiesPage() {
           <section className="mb-16 max-w-5xl mx-auto">
             <SectionHeading
               className="text-3xl font-bold text-slate-900 mb-8 text-center"
-              fallbackSrc={PAGE_HERO_IMAGES.fiftyFivePlus.src}
+              fallbackSrc={getNeighborhoodImage("sun-city-summerlin").src}
               avoidSrc={PAGE_HERO_IMAGES.fiftyFivePlus.src}
             >
               What 55+ Community Amenities Include

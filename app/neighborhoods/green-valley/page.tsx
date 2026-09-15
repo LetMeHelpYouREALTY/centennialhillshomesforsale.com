@@ -11,7 +11,7 @@ import {
 export function generateMetadata(): Metadata {
   return withShareImage(
     {
-      title: "Green Valley Homes for Sale | Henderson Nevada Real Estate",
+      title: "Green Valley Homes for Sale | Henderson Nevada",
       description:
         "Green Valley Henderson homes for sale — 1980s–90s streets, The District, and current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [

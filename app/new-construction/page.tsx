@@ -10,7 +10,7 @@ import {
 export function generateMetadata(): Metadata {
   return withShareImage(
     {
-      title: "New Construction Homes Las Vegas | Buyer Representation",
+      title: "New Construction Homes Las Vegas | Buyer Agent",
       description:
         "New construction in Las Vegas and Henderson: register your agent before the first visit. Dr. Jan Duffy reviews builder contracts. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [
@@ -103,6 +103,8 @@ export default function NewConstructionPage() {
           label: "North Las Vegas",
         },
         { href: "/buyers", label: "Buying guide" },
+        { href: "/luxury-homes", label: "Luxury listings" },
+        { href: "/investment-properties", label: "Investment properties" },
       ]}
       showListings={false}
     />

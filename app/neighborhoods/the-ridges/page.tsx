@@ -10,7 +10,7 @@ import {
 export function generateMetadata(): Metadata {
   return withShareImage(
     {
-      title: "The Ridges Homes for Sale | Guard-Gated Summerlin Luxury",
+      title: "The Ridges Homes for Sale | Summerlin Luxury",
       description:
         "The Ridges Summerlin luxury homes with Dr. Jan Duffy, BHHS Nevada Properties. Guard-gated villages, view lots, private tours. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [

@@ -17,6 +17,8 @@ describe("lead capture form chrome", () => {
     expect(src).toContain('inputMode="tel"');
     expect(src).toContain('enterKeyHint="next"');
     expect(src).toContain('inputMode="email"');
+    expect(src).toContain('name="timeline"');
+    expect(src).toContain('autoComplete="off"');
     expect(src).toContain("focus-visible:ring-offset-2");
     expect(src).toContain("focus-visible:ring-blue-600");
     expect(src).not.toContain("ring-zinc-950");
