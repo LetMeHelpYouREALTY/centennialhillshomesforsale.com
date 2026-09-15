@@ -70,6 +70,20 @@ function clipAtWord(text: string, max: number): string {
 const BROKERAGE_NAME = "Berkshire Hathaway HomeServices Nevada Properties";
 const BHHS_SHORT_NAME = "BHHS Nevada Properties";
 
+function lastSentenceBreak(text: string): number {
+  let idx = -1;
+  const re = /\. /g;
+  let match: RegExpExecArray | null;
+  while ((match = re.exec(text)) !== null) {
+    const before = text.slice(Math.max(0, match.index - 3), match.index);
+    if (/\b(?:Dr|Mr|Ms|Mrs|St)$/.test(before)) {
+      continue;
+    }
+    idx = match.index;
+  }
+  return idx;
+}
+
 function finishClippedLead(lead: string, original: string): string {
   let next = lead.replace(/[.,;:]+$/, "");
   if (
@@ -91,13 +105,18 @@ function finishClippedLead(lead: string, original: string): string {
       next.replace(/,?\s*BHHS Nevada$/, "").replace(/[\s,;:]+$/, ""),
     );
   }
-  const lastPeriod = next.lastIndexOf(". ");
+  const lastPeriod = lastSentenceBreak(next);
   if (lastPeriod > 0) {
     const tail = next.slice(lastPeriod + 2).trim();
     const tailWords = tail.split(/\s+/).filter(Boolean);
     if (tailWords.length > 0 && tailWords.length < 3) {
       next = next.slice(0, lastPeriod);
     }
+  }
+  if (/\bDr\.?(?:\s+Jan)?$/.test(next) && original.includes("Dr. Jan Duffy")) {
+    next = dropDanglingLastWords(
+      next.replace(/\bDr\.?(?:\s+Jan)?$/, "").replace(/[\s,;:]+$/, ""),
+    );
   }
   return next.replace(/[.,;:]+$/, "");
 }

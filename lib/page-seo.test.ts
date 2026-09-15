@@ -145,6 +145,8 @@ describe("clipSerpDescription", () => {
     expect(fairHousing).toContain("(702) 222-1964");
     expect(fairHousing).not.toMatch(/HomeServices Nevada\./);
     expect(fairHousing).toContain("Equal Housing Opportunity");
+    expect(fairHousing).toContain("Dr. Jan Duffy");
+    expect(fairHousing).not.toMatch(/Dr\.\s*Call/);
 
     const buyers = clipSerpDescription(
       "Buy a Las Vegas or Henderson home with Dr. Jan Duffy, BHHS Nevada Properties. Written buyer-broker agreement and live MLS. Call (702) 222-1964 or email homes@heyberkshire.com.",
@@ -159,6 +161,8 @@ describe("clipSerpDescription", () => {
     expect(marketUpdate.length).toBeLessThanOrEqual(SERP_DESCRIPTION_MAX);
     expect(marketUpdate).not.toMatch(/BHHS Nevada\./);
     expect(marketUpdate).toContain("September 14, 2026");
+    expect(marketUpdate).toContain("Dr. Jan Duffy");
+    expect(marketUpdate).not.toMatch(/Dr\.\s*Call/);
   });
 });
 
