@@ -17,7 +17,7 @@ import SchemaScript, {
 } from "@/components/SchemaScript";
 import { FairHousingNotice } from "@/components/shared/FairHousingNotice";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
-import { SectionHeading, SectionPhoto } from "@/components/shared/SectionPhoto";
+import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
@@ -266,17 +266,17 @@ export default function NeighborhoodGuide({
             {children}
 
             <section className="mb-12">
-              <h2 className="mb-4 text-2xl font-bold text-slate-900">
-                Nearby pages
-              </h2>
-              <SectionPhoto
-                heading={`Nearby pages from ${name}`}
+              <SectionHeading
+                className="mb-4 text-2xl font-bold text-slate-900"
                 neighborhoodName={name}
                 neighborhoodSlug={slug}
                 fallbackSrc={hero.src}
                 avoidSrc={hero.src}
-                className="mb-6"
-              />
+                photoHeading={`Nearby pages from ${name}`}
+                photoClassName="mb-6"
+              >
+                Nearby pages
+              </SectionHeading>
               <ul className="grid gap-3 md:grid-cols-2">
                 {relatedLinks.map((item) => (
                   <li key={item.href}>

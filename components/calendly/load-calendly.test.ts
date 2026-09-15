@@ -21,5 +21,7 @@ describe("Calendly script loading", () => {
     expect(`${widget}\n${button}\n${badge}`).not.toContain(
       'id="calendly-widget-js"',
     );
+    expect(button).toContain("Opens a scheduling popup");
+    expect(button).toContain("or a new tab if the widget does not load");
   });
 });

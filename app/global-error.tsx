@@ -14,6 +14,7 @@ import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
+import { SkipLink } from "@/components/shared/SkipLink";
 
 export default function GlobalError({
   error,
@@ -29,7 +30,12 @@ export default function GlobalError({
   return (
     <html lang="en">
       <body className="bg-white text-slate-900">
-        <main className="min-h-screen pb-20 pt-16">
+        <SkipLink />
+        <main
+          id="main-content"
+          tabIndex={-1}
+          className="min-h-screen pb-20 pt-16"
+        >
           <div className="mx-auto max-w-2xl px-4 text-center">
             <h1 className="mb-4 text-3xl font-bold text-slate-900">
               Something went wrong

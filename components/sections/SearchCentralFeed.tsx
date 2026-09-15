@@ -132,7 +132,7 @@ export default function SearchCentralFeed({ items }: SearchCentralFeedProps) {
                 <span className="relative block h-40 w-full bg-slate-100">
                   <Image
                     src={image}
-                    alt={item.title}
+                    alt={`${item.title} — Google Search Central, Las Vegas SEO`}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"

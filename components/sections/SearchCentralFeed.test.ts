@@ -15,6 +15,7 @@ describe("Search Central feed chrome", () => {
     expect(src).toContain("text-slate-600");
     expect(src).toContain("SectionHeading");
     expect(src).toContain("SEARCH_CENTRAL_HEADING");
+    expect(src).toContain("Google Search Central, Las Vegas SEO");
     expect(src).not.toContain("text-slate-500");
   });
 });

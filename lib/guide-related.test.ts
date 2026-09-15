@@ -11,6 +11,8 @@ describe("guide related links", () => {
       "/listings",
       "/neighborhoods/89138",
       "/55-plus-communities/siena",
+      "/home-valuation",
+      "/relocation",
       "/contact",
     ]);
   });
@@ -25,6 +27,8 @@ describe("guide related links", () => {
       "/contact",
       "/neighborhoods/89138",
       "/55-plus-communities/siena",
+      "/home-valuation",
+      "/relocation",
     ]);
     expect(merged[0].label).toBe("Current 89138 listings");
   });

@@ -42,7 +42,10 @@ export default function CalendlyButton({
       className={className}
     >
       {children || text}
-      <span className="sr-only"> Opens a scheduling popup</span>
+      <span className="sr-only">
+        {" "}
+        Opens a scheduling popup, or a new tab if the widget does not load
+      </span>
     </a>
   );
 }

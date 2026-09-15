@@ -114,9 +114,14 @@ export default function Footer() {
               {[
                 { href: "/buyers", label: "Home Buying" },
                 {
+                  href: "/buyers/first-time-buyers",
+                  label: "First-Time Las Vegas Buyers",
+                },
+                {
                   href: "/buyers/california-relocator",
                   label: "California Relocators",
                 },
+                { href: "/relocation", label: "Las Vegas Relocation" },
                 { href: "/sellers", label: "Home Selling" },
                 { href: "/luxury-homes", label: "Luxury Homes" },
                 { href: "/55-plus-communities", label: "55+ Communities" },

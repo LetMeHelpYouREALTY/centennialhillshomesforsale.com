@@ -27,6 +27,8 @@ describe("NeighborhoodGuide conversion chrome", () => {
     expect(src).toContain("avoidSrc={hero.src}");
     expect(src).toContain("imageSrc={section.imageSrc}");
     expect(src).toContain("Frequently asked questions");
+    expect(src).toContain("Nearby pages from ${name}");
+    expect(src).toContain("photoHeading");
     expect(src).not.toContain("text-blue-200");
     expect(src).not.toContain("text-slate-500");
   });

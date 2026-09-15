@@ -52,6 +52,7 @@ type SectionHeadingProps = {
   avoidSrc?: string;
   imageSrc?: string;
   imageAlt?: string;
+  photoHeading?: string;
   photoClassName?: string;
 };
 
@@ -65,6 +66,7 @@ export function SectionHeading({
   avoidSrc,
   imageSrc,
   imageAlt,
+  photoHeading,
   photoClassName,
 }: SectionHeadingProps) {
   return (
@@ -73,7 +75,7 @@ export function SectionHeading({
         {children}
       </h2>
       <SectionPhoto
-        heading={children}
+        heading={photoHeading ?? children}
         neighborhoodName={neighborhoodName}
         neighborhoodSlug={neighborhoodSlug}
         fallbackSrc={fallbackSrc}
