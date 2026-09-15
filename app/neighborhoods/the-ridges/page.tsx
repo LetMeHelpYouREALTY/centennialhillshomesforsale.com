@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
-import { MARKET_SNAPSHOT_AS_OF } from "@/lib/market-snapshots";
+import {
+  formatUsd,
+  LISTING_MEDIANS_USD,
+  MARKET_SNAPSHOT_AS_OF,
+} from "@/lib/market-snapshots";
 
 export const metadata: Metadata = withShareImage(
   {
@@ -38,7 +42,10 @@ export default function TheRidgesPage() {
         { value: "Gated", label: "Access" },
         { value: "Custom", label: "Typical product" },
         { value: "89135", label: "Primary ZIP" },
-        { value: "CMA", label: "Price any bid" },
+        {
+          value: formatUsd(LISTING_MEDIANS_USD.summerlinSouth),
+          label: "Summerlin South listing median (not The Ridges alone)",
+        },
       ]}
       sections={[
         {
@@ -50,8 +57,8 @@ export default function TheRidgesPage() {
           body: "Tournament Hills (89134) is custom lots near TPC Summerlin. Red Rock Country Club is a golf-membership setting with attached and detached product. The Ridges is a guard-gated custom map. I match gate, dues, and the lot — not a ranking slogan.",
         },
         {
-          heading: `Privacy as of ${MARKET_SNAPSHOT_AS_OF}`,
-          body: "I do not publish resident names. Access is gated; I schedule with the listing desk. HOA and architectural packages are part of due diligence, not an afterthought. Call 702-222-1964 for current inventory. I do not scrape off-market gossip onto this domain.",
+          heading: `Privacy and pricing as of ${MARKET_SNAPSHOT_AS_OF}`,
+          body: `I do not publish resident names. Access is gated; I schedule with the listing desk. HOA and architectural packages are part of due diligence, not an afterthought. The Summerlin South listing median on this site is ${formatUsd(LISTING_MEDIANS_USD.summerlinSouth)} — a 89135 ZIP sample, not a Ridges-only CMA. Call 702-222-1964 for current inventory. I do not scrape off-market gossip onto this domain.`,
         },
       ]}
       faqs={[

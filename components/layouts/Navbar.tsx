@@ -3,10 +3,15 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
-import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
+import {
+  AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
+  CTA_PHONE,
+  CTA_TEL,
+} from "@/lib/contact";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -177,6 +182,21 @@ export default function Navbar() {
                 <span className="xl:hidden">Call</span>
               </a>
             </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="min-h-11 border-slate-300"
+            >
+              <a
+                href={AGENT_EMAIL_MAILTO}
+                className="flex items-center gap-2 no-underline"
+                aria-label={`Email Dr. Jan Duffy at ${AGENT_EMAIL}`}
+              >
+                <Mail className="h-4 w-4" aria-hidden="true" />
+                <span className="hidden xl:inline">{AGENT_EMAIL}</span>
+                <span className="xl:hidden">Email</span>
+              </a>
+            </Button>
           </div>
 
           <div className="flex items-center gap-3 lg:hidden">
@@ -190,6 +210,19 @@ export default function Navbar() {
                 aria-label={`Call Dr. Jan Duffy at ${CTA_PHONE}`}
               >
                 <Phone className="h-4 w-4" aria-hidden="true" />
+              </a>
+            </Button>
+            <Button
+              asChild
+              size="sm"
+              variant="outline"
+              className="min-h-11 min-w-11 border-slate-300"
+            >
+              <a
+                href={AGENT_EMAIL_MAILTO}
+                aria-label={`Email Dr. Jan Duffy at ${AGENT_EMAIL}`}
+              >
+                <Mail className="h-4 w-4" aria-hidden="true" />
               </a>
             </Button>
             <button
@@ -252,10 +285,10 @@ export default function Navbar() {
                 ))}
               </div>
 
-              <div className="pt-4">
+              <div className="flex flex-col gap-2 pt-4">
                 <Button
                   asChild
-                  className="w-full bg-blue-600 hover:bg-blue-700"
+                  className="min-h-11 w-full bg-blue-600 hover:bg-blue-700"
                 >
                   <a
                     href={CTA_TEL}
@@ -263,6 +296,19 @@ export default function Navbar() {
                   >
                     <Phone className="h-4 w-4" aria-hidden="true" />
                     Call Dr. Jan: {CTA_PHONE}
+                  </a>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="min-h-11 w-full border-slate-300"
+                >
+                  <a
+                    href={AGENT_EMAIL_MAILTO}
+                    className="flex items-center justify-center gap-2 no-underline"
+                  >
+                    <Mail className="h-4 w-4" aria-hidden="true" />
+                    {AGENT_EMAIL}
                   </a>
                 </Button>
               </div>

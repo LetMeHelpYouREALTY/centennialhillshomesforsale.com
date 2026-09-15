@@ -49,7 +49,7 @@ export default function FaqPage() {
           imageSrc: "/images/hero/about.png",
           imageAlt:
             "Dr. Jan Duffy at the Las Vegas office answering buyer and seller questions",
-          body: "Dr. Jan Duffy, REALTOR, license S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Client line (702) 222-1964. I cover Las Vegas, Henderson, North Las Vegas, Summerlin, and Centennial Hills.",
+          body: "Dr. Jan Duffy, REALTOR, license S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Client line (702) 222-1964. Email homes@heyberkshire.com. I cover Las Vegas, Henderson, North Las Vegas, Summerlin, and Centennial Hills.",
         },
         {
           heading: "Buying",
@@ -68,6 +68,11 @@ export default function FaqPage() {
       ]}
       faqs={[
         {
+          question: "Who is the agent of record?",
+          answer:
+            "Dr. Jan Duffy, license S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties. Serving Las Vegas since 2008.",
+        },
+        {
           question: "Does using a Berkshire Hathaway agent cost more?",
           answer:
             "Fees are negotiated in writing and are not a hidden brand surcharge.",
@@ -80,7 +85,7 @@ export default function FaqPage() {
         {
           question: "Do you help with 55+ communities?",
           answer:
-            "Yes. Sun City Summerlin, Sun City Anthem, Trilogy, Heritage, Solera, Aliante, and Del Webb Lake Las Vegas. HOPA occupancy rules differ.",
+            "Yes. Sun City Summerlin, Sun City Anthem, Trilogy, Heritage, Solera, Aliante, Siena, and Del Webb Lake Las Vegas. HOPA occupancy rules differ. Confirm CC&Rs on the resale packet.",
         },
         {
           question: "Do you manage rentals?",

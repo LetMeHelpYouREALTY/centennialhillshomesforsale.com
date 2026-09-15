@@ -87,7 +87,7 @@ const listingFaqs = [
       "The Las Vegas market moves by village and by week. I will not invent a months-of-inventory figure. Well-priced houses in Summerlin and Henderson can still draw multiple offers. Get a pre-approval and a live MLS pull before you tour.",
   },
   {
-    question: "What's the best time of year to buy a home in Las Vegas?",
+    question: "Does Las Vegas have a seasonal buying calendar?",
     answer:
       "Las Vegas trades year-round. I will not invent a spring-peak or winter-discount calendar. Ask for a live MLS pull for the week you want to tour.",
   },
@@ -97,7 +97,7 @@ const listingFaqs = [
       "Down payment requirements vary by loan type: FHA loans require 3.5%, conventional loans typically 3-20%, VA loans 0% for eligible veterans. Nevada also offers down payment assistance programs. Dr. Jan can introduce Clark County lenders. Rates are UNKNOWN until the lender quotes them.",
   },
   {
-    question: "Are Las Vegas HOA fees expensive?",
+    question: "How do I confirm HOA dues on a Las Vegas listing?",
     answer:
       "HOA dues are on the resale packet, not a sitewide band. I will not publish a valley-wide monthly range as if it were your community. Ask for the current budget, reserves, and any special assessment before you write the offer.",
   },

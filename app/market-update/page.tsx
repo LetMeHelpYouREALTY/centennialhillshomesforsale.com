@@ -62,6 +62,10 @@ export default function MarketUpdatePage() {
           heading: "What I watch on live files",
           body: "List-to-sale ratio, seller credits, and whether new construction is still buying down rates. Those show up on the CMA, not on a blog chart. Call 702-222-1964 with the address.",
         },
+        {
+          heading: "How this page relates to the report and insights",
+          body: "Use /market-report for the valley table. Use /market-insights for the Centennial Hills / northwest brief. This page is the short dated snapshot so an old January newsletter URL does not keep ranking. I will not invent a weekly days-on-market average.",
+        },
       ]}
       faqs={[
         {
@@ -73,6 +77,11 @@ export default function MarketUpdatePage() {
           question: "Do you cover Centennial Hills specifically?",
           answer:
             "Yes. See /market-insights and /neighborhoods/centennial-hills.",
+        },
+        {
+          question: "Can I get a CMA from this page?",
+          answer:
+            "Not from the medians alone. Call (702) 222-1964 or send the address on /home-valuation.",
         },
       ]}
       related={[

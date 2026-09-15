@@ -15,7 +15,13 @@ import { useEffect, useRef, useState } from "react";
 import { Turnstile } from "@marsidev/react-turnstile";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { CTA_PHONE, CTA_TEL, TEXT_LINK_CLASS } from "@/lib/contact";
+import {
+  CTA_PHONE,
+  CTA_TEL,
+  AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
+  TEXT_LINK_CLASS,
+} from "@/lib/contact";
 
 export interface LeadCaptureFormProps {
   source?: string;
@@ -188,22 +194,26 @@ export function LeadCaptureForm({
           ✓
         </div>
         <h3 className="text-xl font-semibold text-green-900 mb-2">
-          Thank You!
+          Request received
         </h3>
         <p className="text-green-700">
-          Your information has been received. Dr. Jan Duffy will call or email
-          shortly. For a faster reply, call{" "}
+          Dr. Jan Duffy will call or email during posted office hours. For a
+          faster reply, call{" "}
           <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
             {CTA_PHONE}
+          </a>{" "}
+          or email{" "}
+          <a href={AGENT_EMAIL_MAILTO} className={TEXT_LINK_CLASS}>
+            {AGENT_EMAIL}
           </a>
           .
         </p>
         <Button
           onClick={() => setSuccess(false)}
           variant="outline"
-          className="mt-4"
+          className="mt-4 min-h-11"
         >
-          Submit Another
+          Submit another request
         </Button>
       </div>
     );
