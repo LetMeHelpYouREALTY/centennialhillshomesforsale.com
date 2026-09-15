@@ -18,7 +18,9 @@ import { FAQSchema } from "@/components/SchemaScript";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import {
   CTA_PHONE,
+  CTA_PHONE_E164,
   CTA_TEL,
+  OFFICE_POSTAL_ADDRESS,
   REALSCOUT_SEARCH_URL,
   TEXT_LINK_CLASS,
 } from "@/lib/contact";
@@ -57,7 +59,8 @@ const listingsSchema = {
   about: {
     "@type": "RealEstateAgent",
     name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-    telephone: "+17022221964",
+    telephone: CTA_PHONE_E164,
+    address: OFFICE_POSTAL_ADDRESS,
   },
   areaServed: [
     { "@type": "City", name: "Las Vegas, NV" },
@@ -389,7 +392,7 @@ export default function ListingsPage({
                 className="inline-flex min-h-11 items-center text-blue-600 hover:text-blue-700 font-semibold no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
                 Explore All Neighborhoods{" "}
-                <ArrowRight className="h-4 w-4 ml-2" />
+                <ArrowRight className="h-4 w-4 ml-2" aria-hidden="true" />
               </Link>
             </div>
           </section>
@@ -504,11 +507,10 @@ export default function ListingsPage({
               The Home Buying Process in Las Vegas
             </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Buying a home is one of the most significant financial decisions
-              you'll make. Understanding the process helps reduce stress and
-              ensures you're prepared at each step. Here's what to expect when
-              purchasing a home in Las Vegas with Dr. Jan Duffy and Berkshire
-              Hathaway HomeServices.
+              Pre-approval, live MLS, a written offer, inspection, then the
+              close date on the purchase agreement. That is the sequence when
+              you buy in Las Vegas with Dr. Jan Duffy and Berkshire Hathaway
+              HomeServices.
             </p>
             <div className="space-y-6">
               <div className="flex items-start">

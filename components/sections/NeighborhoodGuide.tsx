@@ -7,7 +7,7 @@ import {
   OFFICE_NAP,
   TEXT_LINK_ON_DARK_CLASS,
 } from "@/lib/contact";
-import {
+import SchemaScript, {
   FAQSchema,
   NeighborhoodSchema,
   SeniorCommunitySchema,
@@ -18,8 +18,9 @@ import { SectionPhoto } from "@/components/shared/SectionPhoto";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
-import { getPublicSiteUrl } from "@/lib/site-url";
+import { getCanonicalUrl, getPublicSiteUrl } from "@/lib/site-url";
 import { getNeighborhoodImage } from "@/lib/site-images";
+import { generateWebPageSchema } from "@/lib/schema";
 
 export type NeighborhoodFaq = {
   question: string;
@@ -108,6 +109,14 @@ export default function NeighborhoodGuide({
 
   return (
     <>
+      <SchemaScript
+        id="webpage-schema"
+        schema={generateWebPageSchema({
+          name: h1,
+          description: intro,
+          url: getCanonicalUrl(),
+        })}
+      />
       <FAQSchema faqs={faqs} />
       <NeighborhoodSchema
         name={name}

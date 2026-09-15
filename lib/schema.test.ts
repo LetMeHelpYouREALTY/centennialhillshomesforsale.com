@@ -4,6 +4,8 @@ import {
   generateRealEstateAgentSchema,
   generateReviewSchema,
   generateSeniorCommunitySchema,
+  generateServiceSchema,
+  generateWebPageSchema,
   generateWebSiteSchema,
 } from "./schema";
 import { SOCIAL_PROFILES } from "./contact";
@@ -38,6 +40,34 @@ describe("RealEstateAgent JSON-LD", () => {
       ]),
     );
     expect(JSON.stringify(schema.sameAs)).not.toContain("tiktok");
+  });
+
+  it("Service JSON-LD includes a US office address on the provider", () => {
+    const service = generateServiceSchema({
+      name: "Home Buying Services Las Vegas",
+      description: "Written buyer representation and live MLS.",
+      url: "/buyers",
+      serviceType: "Buyer Representation",
+    });
+    expect(service.serviceType).toBe("Buyer Representation");
+    expect(service.provider.address.addressCountry).toBe("US");
+    expect(service.provider.address.streetAddress).toContain(
+      "9406 W Lake Mead Blvd",
+    );
+    expect(service.provider.telephone).toBe("+17022221964");
+  });
+
+  it("WebPage JSON-LD points at the office organization", () => {
+    const page = generateWebPageSchema({
+      name: "Las Vegas Real Estate FAQ",
+      description: "Short answers. Live numbers live in a CMA.",
+      url: "/faq",
+    });
+    expect(page["@type"]).toBe("WebPage");
+    expect(page.about).toEqual({
+      "@id": expect.stringContaining("#organization"),
+    });
+    expect(String(page.url)).toContain("/faq");
   });
 
   it("does not attach an invented AggregateRating to review JSON-LD", () => {

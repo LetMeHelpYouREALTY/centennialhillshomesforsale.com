@@ -61,8 +61,7 @@ export default function HomeValuationPage() {
       faqs={[
         {
           question: "Is there a charge for a CMA?",
-          answer:
-            "The CMA consult is no-obligation. Listing is a separate agreement.",
+          answer: "The CMA is a consult. Listing is a separate agreement.",
         },
         {
           question: "How fast can I get a number?",

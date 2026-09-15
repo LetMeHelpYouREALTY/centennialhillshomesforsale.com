@@ -11,6 +11,7 @@ import { AGENT_PHOTO_PATH, FAVICON_32_PATH } from "./brand-assets";
 import {
   CTA_PHONE_E164,
   OFFICE_NAP,
+  OFFICE_POSTAL_ADDRESS,
   OPENING_HOURS_SPEC,
   SOCIAL_PROFILES,
 } from "./contact";
@@ -513,6 +514,7 @@ export function generateServiceSchema(service: {
   description: string;
   url: string;
   areaServed?: string[];
+  serviceType?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -524,6 +526,10 @@ export function generateServiceSchema(service: {
       : `${BASE_URL}${service.url}`,
     provider: {
       "@id": `${BASE_URL}#organization`,
+      "@type": "RealEstateAgent",
+      name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+      telephone: CTA_PHONE_E164,
+      address: OFFICE_POSTAL_ADDRESS,
     },
     areaServed: service.areaServed || [
       "Las Vegas",
@@ -531,7 +537,7 @@ export function generateServiceSchema(service: {
       "Summerlin",
       "North Las Vegas",
     ],
-    serviceType: "Real Estate Services",
+    serviceType: service.serviceType || "Real Estate Services",
   };
 }
 

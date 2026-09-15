@@ -327,7 +327,7 @@ export const commonFAQs = {
     {
       question: "What is my home worth in today's Las Vegas market?",
       answer:
-        "Home values depend on location, condition, size, and recent comparable sales. Dr. Jan provides a no-obligation CMA from current MLS comps. Serving Las Vegas since 2008.",
+        "Home values depend on location, condition, size, and recent comparable sales. Dr. Jan provides a CMA from current MLS comps. Listing is a separate agreement. Serving Las Vegas since 2008.",
     },
     {
       question: "How long will it take to sell my home?",
@@ -337,7 +337,7 @@ export const commonFAQs = {
     {
       question: "What do I need to do to prepare my home for sale?",
       answer:
-        "Dr. Jan provides a personalized preparation checklist for every listing. Generally, decluttering, minor repairs, fresh paint, and professional photography are the highest-ROI improvements.",
+        "Dr. Jan walks the house and writes a preparation checklist. Decluttering, minor repairs, fresh paint, and professional photography are the usual first items — not a guaranteed return.",
     },
   ],
 };

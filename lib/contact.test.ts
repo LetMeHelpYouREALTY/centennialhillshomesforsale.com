@@ -7,6 +7,7 @@ import {
   CTA_TEL,
   FUB_PHONE,
   OFFICE_NAP,
+  OFFICE_POSTAL_ADDRESS,
   REALSCOUT_SEARCH_URL,
   TEXT_LINK_CLASS,
   TEXT_LINK_ON_DARK_CLASS,
@@ -27,6 +28,9 @@ describe("client-facing contact constants", () => {
     expect(OFFICE_NAP.zip).toBe("89134");
     expect(AGENT_EMAIL).toBe("homes@heyberkshire.com");
     expect(AGENT_LICENSE).toBe("S.0197614.LLC");
+    expect(OFFICE_POSTAL_ADDRESS.addressCountry).toBe("US");
+    expect(OFFICE_POSTAL_ADDRESS.streetAddress).toBe(OFFICE_NAP.street);
+    expect(OFFICE_POSTAL_ADDRESS.postalCode).toBe(OFFICE_NAP.zip);
   });
 
   it("keeps inline text links at a 44px target", () => {

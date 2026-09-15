@@ -14,7 +14,14 @@ import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import { AgentPhoto } from "@/components/shared/AgentPhoto";
 import { AGENT_PHOTO_PATH } from "@/lib/brand-assets";
-import { CTA_PHONE, CTA_TEL, OFFICE_HOURS } from "@/lib/contact";
+import {
+  AGENT_EMAIL,
+  CTA_PHONE,
+  CTA_PHONE_E164,
+  CTA_TEL,
+  OFFICE_HOURS,
+  OFFICE_POSTAL_ADDRESS,
+} from "@/lib/contact";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { OfficeMap } from "@/components/shared/OfficeMap";
 import { VisitOffice } from "@/components/shared/VisitOffice";
@@ -49,18 +56,11 @@ const contactSchema = {
   mainEntity: {
     "@type": "RealEstateAgent",
     name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-    telephone: "+17022221964",
-    email: "homes@heyberkshire.com",
+    telephone: CTA_PHONE_E164,
+    email: AGENT_EMAIL,
     image: `${contactOrigin}${AGENT_PHOTO_PATH}`,
     url: `${contactOrigin}/contact`,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "9406 W Lake Mead Blvd, Suite 100",
-      addressLocality: "Las Vegas",
-      addressRegion: "NV",
-      postalCode: "89134",
-      addressCountry: "US",
-    },
+    address: OFFICE_POSTAL_ADDRESS,
   },
 };
 

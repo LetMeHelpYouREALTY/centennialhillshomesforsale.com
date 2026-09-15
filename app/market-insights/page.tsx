@@ -14,7 +14,13 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
-import { CTA_PHONE, CTA_TEL, TEXT_LINK_CLASS } from "@/lib/contact";
+import {
+  CTA_PHONE,
+  CTA_PHONE_E164,
+  CTA_TEL,
+  OFFICE_POSTAL_ADDRESS,
+  TEXT_LINK_CLASS,
+} from "@/lib/contact";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import { getSearchCentralPosts } from "@/lib/search-central-feed";
@@ -52,6 +58,8 @@ const reportSchema = {
   author: {
     "@type": "RealEstateAgent",
     name: "Dr. Jan Duffy",
+    telephone: CTA_PHONE_E164,
+    address: OFFICE_POSTAL_ADDRESS,
     worksFor: "Berkshire Hathaway HomeServices Nevada Properties",
   },
   datePublished: "2026-09-07",

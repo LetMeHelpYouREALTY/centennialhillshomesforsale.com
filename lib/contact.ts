@@ -71,3 +71,13 @@ export const OFFICE_NAP = {
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=9406+W+Lake+Mead+Blvd+Suite+100,+Las+Vegas,+NV+89134&t=&z=15&ie=UTF8&iwloc=&output=embed",
 };
+
+/** Schema.org PostalAddress that matches OFFICE_NAP / GBP. */
+export const OFFICE_POSTAL_ADDRESS = {
+  "@type": "PostalAddress" as const,
+  streetAddress: OFFICE_NAP.street,
+  addressLocality: OFFICE_NAP.city,
+  addressRegion: OFFICE_NAP.state,
+  postalCode: OFFICE_NAP.zip,
+  addressCountry: "US" as const,
+};

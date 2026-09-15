@@ -14,8 +14,9 @@ import { PageCTA } from "@/components/shared/PageCTA";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
-import { FAQSchema } from "@/components/SchemaScript";
+import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
+import { generateServiceSchema, generateWebPageSchema } from "@/lib/schema";
 import {
   formatUsd,
   LISTING_MEDIANS_USD,
@@ -41,18 +42,20 @@ export const metadata: Metadata = withShareImage(
   PAGE_HERO_IMAGES.sellers,
 );
 
-const sellerSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
+const sellerSchema = generateServiceSchema({
   name: "Home Selling Services Las Vegas",
-  provider: {
-    "@type": "RealEstateAgent",
-    name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-    telephone: "+17022221964",
-  },
-  areaServed: "Las Vegas, Henderson, Summerlin, Clark County NV",
+  description:
+    "Seller representation with comps-based pricing, written listing marketing, and a listing agreement for Las Vegas, Henderson, and Summerlin.",
+  url: "/sellers",
   serviceType: "Seller Representation",
-};
+});
+
+const sellersPageSchema = generateWebPageSchema({
+  name: "Sell Your Las Vegas Home",
+  description:
+    "Sell a Las Vegas or Henderson home with comps-based pricing and Dr. Jan Duffy. Request a CMA.",
+  url: "/sellers",
+});
 
 const sellingBenefits = [
   {
@@ -63,7 +66,7 @@ const sellingBenefits = [
   },
   {
     icon: Users,
-    title: "Global Buyer Network",
+    title: "BHHS referral network",
     description:
       "Berkshire Hathaway HomeServices referral network means your listing can reach qualified relocation buyers — especially important for Las Vegas inbound demand.",
   },
@@ -75,7 +78,7 @@ const sellingBenefits = [
   },
   {
     icon: DollarSign,
-    title: "Skilled Negotiation",
+    title: "Offer-to-close negotiation",
     description:
       "From offer review to closing negotiations, Dr. Jan protects your interests and the net sheet. Street-level CMA math beats a career-volume slogan.",
   },
@@ -90,7 +93,7 @@ const sellerFaqs = [
   {
     question: "What do I need to do to prepare my home for sale?",
     answer:
-      "Dr. Jan provides a personalized preparation checklist for every listing. Generally, decluttering, minor repairs, fresh paint, and professional staging consultation yield the highest ROI. She'll walk through your home and identify exactly what improvements will generate the best return.",
+      "Dr. Jan walks the house and writes a preparation checklist. Decluttering, minor repairs, fresh paint, and professional staging are the usual first items — not a guaranteed return. She'll mark what actually shows in photos and on the first tour.",
   },
   {
     question: "How does Berkshire Hathaway market my home?",
@@ -171,10 +174,7 @@ const includedServices = [
 export default function SellersPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(sellerSchema) }}
-      />
+      <SchemaScript schemas={[sellerSchema, sellersPageSchema]} />
       <FAQSchema faqs={sellerFaqs} />
       <main className="pb-16">
         <div className="container mx-auto px-4">
@@ -200,16 +200,25 @@ export default function SellersPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
               <span className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> CMA
-                first — list if you choose
+                <CheckCircle
+                  className="h-4 w-4 text-green-500 mr-1"
+                  aria-hidden="true"
+                />{" "}
+                CMA first — list if you choose
               </span>
               <span className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> MLS
-                listing marketing
+                <CheckCircle
+                  className="h-4 w-4 text-green-500 mr-1"
+                  aria-hidden="true"
+                />{" "}
+                MLS listing marketing
               </span>
               <span className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Written
-                offer strategy
+                <CheckCircle
+                  className="h-4 w-4 text-green-500 mr-1"
+                  aria-hidden="true"
+                />{" "}
+                Written offer strategy
               </span>
             </div>
           </div>
@@ -450,7 +459,10 @@ export default function SellersPage() {
                   key={item}
                   className="flex items-center bg-white p-4 rounded-lg border border-slate-200"
                 >
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <CheckCircle
+                    className="h-5 w-5 text-green-500 mr-3 flex-shrink-0"
+                    aria-hidden="true"
+                  />
                   <span className="text-slate-700 text-sm">{item}</span>
                 </div>
               ))}

@@ -20,8 +20,9 @@ import { PageCTA } from "@/components/shared/PageCTA";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { SectionHeading } from "@/components/shared/SectionPhoto";
-import { FAQSchema } from "@/components/SchemaScript";
+import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
 import { PAGE_HERO_IMAGES, getNeighborhoodImage } from "@/lib/site-images";
+import { generateServiceSchema, generateWebPageSchema } from "@/lib/schema";
 import Image from "next/image";
 import {
   formatUsd,
@@ -48,18 +49,20 @@ export const metadata: Metadata = withShareImage(
   PAGE_HERO_IMAGES.buyers,
 );
 
-const buyerSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
+const buyerSchema = generateServiceSchema({
   name: "Home Buying Services Las Vegas",
-  provider: {
-    "@type": "RealEstateAgent",
-    name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-    telephone: "+17022221964",
-  },
-  areaServed: "Las Vegas, Henderson, Summerlin, Clark County NV",
+  description:
+    "Buyer representation with a written buyer-broker agreement and live MLS for Las Vegas, Henderson, and Summerlin.",
+  url: "/buyers",
   serviceType: "Buyer Representation",
-};
+});
+
+const buyersPageSchema = generateWebPageSchema({
+  name: "Las Vegas Home Buyer Representation",
+  description:
+    "Buy a Las Vegas or Henderson home with Dr. Jan Duffy. Written buyer-broker agreement and live MLS.",
+  url: "/buyers",
+});
 
 const buyerFaqs = [
   {
@@ -105,7 +108,7 @@ const buyingSteps = [
     icon: Search,
     title: "Define Your Priorities & Search",
     description:
-      "Dr. Jan provides access to live MLS listings, new construction after you register her, and private showings when the listing agent allows. She'll help you match ZIP, commute, square footage, and amenities, then set up alerts so you never miss a new listing.",
+      "Dr. Jan provides access to live MLS listings, new construction after you register her, and private showings when the listing agent allows. She'll help you match ZIP, commute, square footage, and amenities, then set up MLS alerts for listings that match your written criteria.",
   },
   {
     icon: FileText,
@@ -175,10 +178,7 @@ const neighborhoods = [
 export default function BuyersPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(buyerSchema) }}
-      />
+      <SchemaScript schemas={[buyerSchema, buyersPageSchema]} />
       <FAQSchema faqs={buyerFaqs} />
       <main className="pb-16">
         <div className="container mx-auto px-4">
@@ -188,7 +188,7 @@ export default function BuyersPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Buy Your Las Vegas Home with Confidence
+              Buy a Las Vegas Home with Dr. Jan Duffy
             </h1>
             <PageHeroImage
               src={PAGE_HERO_IMAGES.buyers.src}
@@ -204,16 +204,25 @@ export default function BuyersPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
               <span className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Written
-                Buyer Agreement
+                <CheckCircle
+                  className="h-4 w-4 text-green-500 mr-1"
+                  aria-hidden="true"
+                />{" "}
+                Written Buyer Agreement
               </span>
               <span className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Full MLS
-                Access
+                <CheckCircle
+                  className="h-4 w-4 text-green-500 mr-1"
+                  aria-hidden="true"
+                />{" "}
+                Full MLS Access
               </span>
               <span className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Written
-                offer strategy
+                <CheckCircle
+                  className="h-4 w-4 text-green-500 mr-1"
+                  aria-hidden="true"
+                />{" "}
+                Written offer strategy
               </span>
             </div>
           </div>
@@ -245,7 +254,10 @@ export default function BuyersPage() {
                     "Local market files since 2008",
                   ].map((item) => (
                     <li key={item} className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-2 flex-shrink-0" />
+                      <CheckCircle
+                        className="h-5 w-5 text-green-400 mr-2 flex-shrink-0"
+                        aria-hidden="true"
+                      />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -253,9 +265,7 @@ export default function BuyersPage() {
               </div>
               <div className="bg-slate-800 rounded-lg p-8 text-center">
                 <Shield className="h-16 w-16 text-blue-400 mx-auto mb-4" />
-                <p className="text-2xl font-bold mb-2">
-                  Your Agent, Your Advocate
-                </p>
+                <p className="text-2xl font-bold mb-2">One agent of record</p>
                 <p className="text-slate-400 mb-4">
                   Dr. Jan Duffy works for your side of the deal throughout the
                   transaction—from the first showing to the closing table.
@@ -277,11 +287,10 @@ export default function BuyersPage() {
               The Home Buying Process in Las Vegas
             </SectionHeading>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Buying a home is one of the most significant financial decisions
-              you'll make. Understanding the process helps reduce stress and
-              ensures you're prepared at each step. Here's what to expect when
-              purchasing a home in Las Vegas with Dr. Jan Duffy and Berkshire
-              Hathaway HomeServices.
+              Pre-approval, live MLS, a written offer, inspection, then the
+              close date on the purchase agreement. That is the sequence when
+              you buy in Las Vegas with Dr. Jan Duffy and Berkshire Hathaway
+              HomeServices.
             </p>
             <div className="space-y-6">
               {buyingSteps.map((step, index) => {
@@ -368,7 +377,7 @@ export default function BuyersPage() {
                 className="text-blue-600 font-semibold hover:text-blue-700 inline-flex min-h-11 items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
               >
                 Explore All Neighborhoods{" "}
-                <ArrowRight className="h-4 w-4 ml-2" />
+                <ArrowRight className="h-4 w-4 ml-2" aria-hidden="true" />
               </Link>
             </div>
           </section>

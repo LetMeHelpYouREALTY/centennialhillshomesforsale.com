@@ -25,6 +25,8 @@ describe("site copy does not sell ranking slogans", () => {
     expect(blob).not.toMatch(/flawless execution/i);
     expect(blob).not.toMatch(/deep local market knowledge/i);
     expect(blob).not.toMatch(/resources of a global brand/i);
+    expect(blob).not.toMatch(/no-obligation/i);
+    expect(blob).not.toMatch(/highest-ROI/i);
     expect(JSON.stringify(neighborhoods)).not.toMatch(/150\+ parks/i);
     expect(JSON.stringify(neighborhoods)).not.toMatch(/Established Henderson/i);
   });
