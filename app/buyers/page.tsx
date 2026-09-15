@@ -226,7 +226,7 @@ export default function BuyersPage() {
                   table and beyond.
                 </p>
                 <div className="text-sm text-slate-500">
-                  Serving Las Vegas since 2008 | $127M+ in transactions
+                  Serving Las Vegas since 2008 | BHHS Nevada Properties
                 </div>
               </div>
             </div>
@@ -428,8 +428,7 @@ export default function BuyersPage() {
                   Global Network
                 </h3>
                 <p className="text-slate-600 text-sm">
-                  50,000+ agents worldwide for seamless relocations and
-                  referrals
+                  Global BHHS referral network for inbound and outbound moves
                 </p>
               </div>
               <div className="text-center">
@@ -440,8 +439,8 @@ export default function BuyersPage() {
                   Local Expertise
                 </h3>
                 <p className="text-slate-600 text-sm">
-                  Dr. Jan has served Las Vegas since 2008 with $127M+ in
-                  transactions
+                  Dr. Jan has served Las Vegas since 2008 with BHHS Nevada
+                  Properties
                 </p>
               </div>
               <div className="text-center">
@@ -452,7 +451,7 @@ export default function BuyersPage() {
                   Expert Negotiation
                 </h3>
                 <p className="text-slate-600 text-sm">
-                  500+ successful transactions mean proven negotiation skills
+                  Street-level CMA math and written offer strategy
                 </p>
               </div>
             </div>
@@ -547,11 +546,11 @@ export default function BuyersPage() {
                 },
                 {
                   q: "What if I'm relocating from another state?",
-                  a: "Berkshire Hathaway's global network of 50,000+ agents makes relocations seamless. Dr. Jan can coordinate with agents in your current city while helping you find the perfect Las Vegas home remotely through virtual tours and video calls.",
+                  a: "Berkshire Hathaway HomeServices has a global referral network. Dr. Jan coordinates virtual tours and a drive-time matrix for inbound buyers — I will not invent a 50,000-agent headcount.",
                 },
                 {
                   q: "How competitive is the Las Vegas housing market?",
-                  a: "The Las Vegas market is moderately competitive with 2.1 months of inventory—a slight seller's market. Well-priced homes in desirable areas like Summerlin and Henderson often receive multiple offers within the first week. Having a pre-approval and experienced agent gives you a significant advantage.",
+                  a: "The Las Vegas market moves by village and by week. I will not invent a months-of-inventory figure. Well-priced houses in Summerlin and Henderson can still draw multiple offers. Get a pre-approval and a live MLS pull before you tour.",
                 },
                 {
                   q: "Which neighborhoods have parks, trails, and nearby campuses?",

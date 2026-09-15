@@ -1,4 +1,3 @@
-import RealScoutListings from "@/components/realscout/RealScoutListings";
 import Link from "next/link";
 import {
   Phone,
@@ -9,7 +8,6 @@ import {
   CheckCircle,
   MapPin,
   Shield,
-  Star,
   Clock,
   ArrowRight,
 } from "lucide-react";
@@ -21,13 +19,14 @@ import { CTA_PHONE, CTA_TEL } from "@/lib/contact";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
+import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import { getPublicSiteUrl } from "@/lib/site-url";
 
 export const metadata: Metadata = withShareImage(
   {
     title: "About Dr. Jan Duffy | Berkshire Hathaway HomeServices Las Vegas",
     description:
-      "Meet Dr. Jan Duffy, your trusted Berkshire Hathaway HomeServices Nevada Properties agent. Serving Las Vegas since 2008, $127M+ in transactions, Henderson & Summerlin specialist. Call (702) 222-1964.",
+      "Meet Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Serving Las Vegas, Henderson, and Summerlin since 2008. Call (702) 222-1964.",
     keywords: [
       "Dr. Jan Duffy",
       "Berkshire Hathaway HomeServices agent",
@@ -179,11 +178,10 @@ export default function AboutPage() {
                     expertise to every client I serve.
                   </p>
                   <p>
-                    Since 2008, I've closed $127 million in transactions and
-                    helped hundreds of clients buy or sell in Las Vegas,
-                    Henderson, Summerlin, and throughout Southern Nevada. My
-                    expertise spans luxury properties, new construction,
-                    investment real estate, 55+ active adult communities, and
+                    Since 2008, I've represented buyers and sellers in Las
+                    Vegas, Henderson, Summerlin, and throughout Southern Nevada.
+                    My files include luxury properties, new construction,
+                    investment real estate, 55+ HOPA communities, and
                     relocations—particularly for California buyers comparing
                     Nevada's wage-tax statute against live Las Vegas comps.
                   </p>
@@ -218,14 +216,14 @@ export default function AboutPage() {
                   <div className="space-y-3">
                     <a
                       href={CTA_TEL}
-                      className="flex items-center text-slate-700 hover:text-blue-600"
+                      className="inline-flex min-h-11 items-center text-slate-700 no-underline hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                     >
                       <Phone className="h-5 w-5 mr-3 text-blue-600" />
                       <span className="font-semibold">{CTA_PHONE}</span>
                     </a>
                     <a
                       href="mailto:homes@heyberkshire.com"
-                      className="flex items-center text-slate-700 hover:text-blue-600"
+                      className="inline-flex min-h-11 items-center text-slate-700 no-underline hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                     >
                       <Mail className="h-5 w-5 mr-3 text-blue-600" />
                       Homes@HeyBerkshire.com
@@ -274,7 +272,7 @@ export default function AboutPage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-blue-50 rounded-lg p-6 text-center">
                     <div className="text-3xl font-bold text-blue-600 mb-1">
-                      Since 2008
+                      2008
                     </div>
                     <div className="text-sm text-slate-600">
                       Serving Las Vegas
@@ -282,21 +280,25 @@ export default function AboutPage() {
                   </div>
                   <div className="bg-blue-50 rounded-lg p-6 text-center">
                     <div className="text-3xl font-bold text-blue-600 mb-1">
-                      $127M+
+                      BHHS
                     </div>
-                    <div className="text-sm text-slate-600">Volume Closed</div>
+                    <div className="text-sm text-slate-600">
+                      Nevada Properties
+                    </div>
                   </div>
                   <div className="bg-blue-50 rounded-lg p-6 text-center">
                     <div className="text-3xl font-bold text-blue-600 mb-1">
-                      500+
+                      S.0197614
                     </div>
-                    <div className="text-sm text-slate-600">Transactions</div>
+                    <div className="text-sm text-slate-600">Nevada license</div>
                   </div>
                   <div className="bg-blue-50 rounded-lg p-6 text-center">
                     <div className="text-3xl font-bold text-blue-600 mb-1">
-                      4.9★
+                      Google
                     </div>
-                    <div className="text-sm text-slate-600">Client Rating</div>
+                    <div className="text-sm text-slate-600">
+                      Read live reviews
+                    </div>
                   </div>
                 </div>
 
@@ -306,30 +308,30 @@ export default function AboutPage() {
                   <div className="space-y-2">
                     <Link
                       href="/buyers"
-                      className="flex items-center text-slate-700 hover:text-blue-600"
+                      className="inline-flex min-h-11 items-center text-slate-700 no-underline hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                     >
                       <ArrowRight className="h-4 w-4 mr-2 text-blue-600" />
                       Home Buying Guide
                     </Link>
                     <Link
                       href="/sellers"
-                      className="flex items-center text-slate-700 hover:text-blue-600"
+                      className="inline-flex min-h-11 items-center text-slate-700 no-underline hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                     >
                       <ArrowRight className="h-4 w-4 mr-2 text-blue-600" />
                       Selling Your Home
                     </Link>
                     <Link
                       href="/home-valuation"
-                      className="flex items-center text-slate-700 hover:text-blue-600"
+                      className="inline-flex min-h-11 items-center text-slate-700 no-underline hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                     >
                       <ArrowRight className="h-4 w-4 mr-2 text-blue-600" />
                       Free Home Valuation
                     </Link>
                     <a
-                      href="http://drjanduffy.realscout.com/"
+                      href="https://drjanduffy.realscout.com/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-slate-700 hover:text-blue-600"
+                      className="inline-flex min-h-11 items-center text-slate-700 no-underline hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                     >
                       <ArrowRight className="h-4 w-4 mr-2 text-blue-600" />
                       Browse Listings
@@ -346,11 +348,10 @@ export default function AboutPage() {
               Areas of Specialization
             </h2>
             <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Dr. Jan Duffy brings specialized expertise across multiple real
-              estate categories. Whether you're a first-time buyer, luxury home
-              seeker, investor, or retiree looking for the perfect 55+
-              community, you'll receive tailored guidance for your specific
-              needs.
+              Dr. Jan Duffy works residential files across Las Vegas, Henderson,
+              and Summerlin. First-time buyers, luxury tours, investors, and 55+
+              HOPA occupancy rules each get a written plan — not a lifestyle
+              slogan.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {specializations.map((spec) => (
@@ -397,9 +398,9 @@ export default function AboutPage() {
                 </div>
                 <h3 className="font-bold text-xl mb-2">Global Network</h3>
                 <p className="text-slate-300 text-sm">
-                  50,000+ agents worldwide for seamless referrals and
-                  relocations. Whether you're moving from California or anywhere
-                  else, our network has you covered.
+                  Global referral network for inbound and outbound relocations.
+                  California-to-Nevada files are a regular part of this
+                  practice.
                 </p>
               </div>
               <div className="text-center">
@@ -417,7 +418,7 @@ export default function AboutPage() {
             <div className="text-center">
               <Link
                 href="/why-berkshire-hathaway"
-                className="inline-block bg-white text-slate-900 px-8 py-3 rounded-md font-semibold hover:bg-slate-100 transition-colors"
+                className="inline-flex min-h-11 items-center justify-center bg-white text-slate-900 px-8 py-3 rounded-md font-semibold hover:bg-slate-100 transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 Learn More About BHHS
               </Link>
@@ -458,54 +459,7 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* Client Testimonials */}
-          <section className="mb-16 max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
-              What Clients Say About Dr. Jan Duffy
-            </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              With a 4.9-star rating and hundreds of satisfied clients, Dr. Jan
-              has built a reputation for excellence, integrity, and personalized
-              service.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <div className="flex items-center mb-3">
-                  <Star className="h-5 w-5 text-yellow-400" />
-                  <Star className="h-5 w-5 text-yellow-400" />
-                  <Star className="h-5 w-5 text-yellow-400" />
-                  <Star className="h-5 w-5 text-yellow-400" />
-                  <Star className="h-5 w-5 text-yellow-400" />
-                </div>
-                <p className="text-slate-600 italic mb-3">
-                  "Dr. Jan made our California to Las Vegas relocation seamless.
-                  She understood exactly what we were looking for and found us
-                  the perfect home in Summerlin. Her knowledge of the market is
-                  exceptional."
-                </p>
-                <p className="text-slate-900 font-semibold">
-                  — Michael & Sarah T., Summerlin
-                </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-6">
-                <div className="flex items-center mb-3">
-                  <Star className="h-5 w-5 text-yellow-400" />
-                  <Star className="h-5 w-5 text-yellow-400" />
-                  <Star className="h-5 w-5 text-yellow-400" />
-                  <Star className="h-5 w-5 text-yellow-400" />
-                  <Star className="h-5 w-5 text-yellow-400" />
-                </div>
-                <p className="text-slate-600 italic mb-3">
-                  "As first-time home buyers, we were nervous about the process.
-                  Dr. Jan walked us through every step, explained everything
-                  clearly, and helped us get a great deal. Highly recommend!"
-                </p>
-                <p className="text-slate-900 font-semibold">
-                  — Jennifer & David K., Henderson
-                </p>
-              </div>
-            </div>
-          </section>
+          <GoogleReviewsCta className="mb-16 rounded-2xl" />
 
           {/* CTA */}
           <VisitOffice className="mb-16 rounded-2xl" compact />
@@ -520,11 +474,11 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+17022221964"
+                href={CTA_TEL}
                 className="inline-flex min-h-11 items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call (702) 222-1964
+                Call {CTA_PHONE}
               </a>
               <Link
                 href="/contact"
@@ -544,7 +498,6 @@ export default function AboutPage() {
           Last Updated: September 2026
         </div>
       </main>
-      <RealScoutListings />
     </>
   );
 }

@@ -147,11 +147,13 @@ export default function GoogleBusinessPage() {
                       />
                     ))}
                   </div>
-                  <p className="text-3xl font-bold mb-2">4.9 / 5.0</p>
-                  <p className="text-blue-200 mb-6">200+ Client Reviews</p>
+                  <p className="text-3xl font-bold mb-2">Google reviews</p>
+                  <p className="text-blue-200 mb-6">
+                    Live on the Business Profile — I will not invent a rating
+                  </p>
                   <a
                     href={`tel:${businessInfo.phone.tel}`}
-                    className="inline-block w-full bg-blue-600 hover:bg-blue-500 text-white px-6 py-4 rounded-lg font-bold text-lg transition-colors"
+                    className="inline-flex min-h-11 w-full items-center justify-center rounded-lg bg-blue-600 px-6 py-4 text-lg font-bold text-white no-underline transition-colors hover:bg-blue-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                   >
                     Call Now: {businessInfo.phone.display}
                   </a>
@@ -337,7 +339,7 @@ export default function GoogleBusinessPage() {
                     <Link
                       key={area}
                       href={`/neighborhoods/${area.toLowerCase().replace(/\s+/g, "-")}`}
-                      className="bg-white px-3 py-1 rounded-full text-sm text-slate-700 hover:bg-blue-100 transition-colors"
+                      className="inline-flex min-h-11 items-center rounded-full bg-white px-3 py-1 text-sm text-slate-700 no-underline hover:bg-blue-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                     >
                       {area}
                     </Link>

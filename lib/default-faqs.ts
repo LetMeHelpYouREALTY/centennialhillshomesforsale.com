@@ -22,7 +22,7 @@ export const defaultFaqs: SiteFaq[] = [
   {
     question: "What makes you different from other real estate agents?",
     answer:
-      "Serving Las Vegas since 2008 with 500+ closings, Dr. Jan Duffy combines local market knowledge with Berkshire Hathaway HomeServices resources. You get one agent of record, not a kiosk script.",
+      "Serving Las Vegas since 2008, Dr. Jan Duffy combines local market knowledge with Berkshire Hathaway HomeServices resources. You get one agent of record, not a kiosk script.",
   },
   {
     question: "Can you help with investment properties?",

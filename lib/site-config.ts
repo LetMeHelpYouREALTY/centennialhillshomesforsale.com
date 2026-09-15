@@ -100,9 +100,9 @@ export const agentStats = {
 export const valuePropositions = {
   main: "When you work with a Berkshire Hathaway HomeServices agent, you're backed by a name synonymous with trust, ethical standards, and financial strength—the same principles that built Warren Buffett's empire.",
   trust:
-    "Berkshire Hathaway HomeServices is the only real estate brand backed by Warren Buffett's Berkshire Hathaway Inc. This means unmatched financial stability, ethical standards, and a global referral network of 50,000+ agents.",
+    "Berkshire Hathaway HomeServices is the only real estate brand backed by Warren Buffett's Berkshire Hathaway Inc. This means unmatched financial stability, ethical standards, and a global referral network.",
   expertise:
-    "Serving Las Vegas since 2008 with $127M+ in closed transactions, Dr. Jan Duffy combines deep local market knowledge with the resources of a global brand.",
+    "Serving Las Vegas since 2008, Dr. Jan Duffy combines deep local market knowledge with the resources of a global brand.",
 };
 
 // Neighborhoods served
@@ -288,7 +288,7 @@ export const commonFAQs = {
     {
       question: "Why should I choose a Berkshire Hathaway HomeServices agent?",
       answer:
-        "Berkshire Hathaway HomeServices is the only real estate brand backed by Warren Buffett's Berkshire Hathaway Inc. This means unmatched financial stability, ethical standards, and a global referral network of 50,000+ agents. When you're making the biggest purchase of your life, that trust matters.",
+        "Berkshire Hathaway HomeServices is the only real estate brand backed by Warren Buffett's Berkshire Hathaway Inc. This means unmatched financial stability, ethical standards, and a global referral network. When you're making the biggest purchase of your life, that trust matters.",
     },
     {
       question:
@@ -304,7 +304,7 @@ export const commonFAQs = {
     {
       question: "What is Dr. Jan Duffy's experience in Las Vegas real estate?",
       answer:
-        "Dr. Jan Duffy has been serving Las Vegas since 2008, with $127M+ in closed transactions and 500+ satisfied clients. Her expertise spans residential, luxury, investment, and new construction properties throughout Southern Nevada.",
+        "Dr. Jan Duffy has been serving Las Vegas since 2008. Her practice spans residential, luxury, investment, and new construction properties throughout Southern Nevada.",
     },
   ],
   buying: [

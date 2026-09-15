@@ -38,14 +38,23 @@ export default function ServicesPage() {
       sections={[
         {
           heading: "Buyer representation",
+          imageSrc: "/images/hero/buyers.png",
+          imageAlt:
+            "Las Vegas buyer touring a northwest desert-contemporary home",
           body: "MLS search, tours, offers, inspections. Compensation is disclosed in a written buyer agreement and may be paid by the seller, the buyer, or both. Start on /buyers, /buyers/first-time-buyers, or /buyers/california-relocator.",
         },
         {
           heading: "Seller representation",
+          imageSrc: "/images/hero/sellers.png",
+          imageAlt:
+            "Staged Las Vegas listing living room opening to a backyard pool",
           body: "CMA, photos, MLS, negotiation. Fees in writing before you list. Move-up, downsizing, divorce/probate, and out-of-state listings each have their own page under /sellers.",
         },
         {
           heading: "Specialized files",
+          imageSrc: "/images/hero/55-plus-hub.png",
+          imageAlt:
+            "55-plus active adult community in Summerlin with golf course and rec center",
           body: "Luxury (gated custom), 55+ HOPA, new construction (register first), investment (no property management), relocation inbound and outbound. I do not duplicate RealScout or Follow Up Boss features those platforms already provide.",
         },
       ]}

@@ -21,5 +21,6 @@ describe("GBP schema NAP and Maps alignment", () => {
     expect(schema.sameAs).toEqual(
       expect.arrayContaining([OFFICE_NAP.mapsUrl, OFFICE_NAP.reviewsUrl]),
     );
+    expect(schema).not.toHaveProperty("aggregateRating");
   });
 });

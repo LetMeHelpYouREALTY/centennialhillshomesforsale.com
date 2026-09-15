@@ -65,7 +65,7 @@ export default function SoleraAnthemPage() {
         },
         {
           heading: `Pricing as of ${MARKET_SNAPSHOT_AS_OF}`,
-          body: `Anthem’s realtor.com listing median was ${anthem} — that is the broader Anthem sample, not Solera alone. Marketing bands of $380K–$650K are not a CMA. Confirm HOA (older $170–$210/month figures) on the resale package.`,
+          body: `Anthem’s realtor.com listing median was ${anthem} — that is the broader Anthem sample, not Solera alone. Marketing price bands are not a CMA. Confirm HOA on the resale package.`,
         },
         {
           heading: "Occupancy",

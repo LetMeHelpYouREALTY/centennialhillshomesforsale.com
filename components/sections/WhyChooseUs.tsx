@@ -23,8 +23,9 @@ const features = [
   },
   {
     icon: Award,
-    title: "Proven volume",
-    description: "500+ closings and $127M+ sold across Southern Nevada.",
+    title: "Written agreements",
+    description:
+      "Buyer-broker and listing compensation are disclosed in writing. No slogan about “free” representation.",
   },
   {
     icon: Clock,

@@ -62,7 +62,7 @@ const sellingBenefits = [
     icon: Users,
     title: "Global Buyer Network",
     description:
-      "Berkshire Hathaway's 50,000+ agents worldwide means your listing reaches qualified buyers from across the globe—especially important for Las Vegas's strong relocation and international buyer markets.",
+      "Berkshire Hathaway HomeServices referral network means your listing can reach qualified relocation buyers — especially important for Las Vegas inbound demand.",
   },
   {
     icon: BarChart,
@@ -74,7 +74,7 @@ const sellingBenefits = [
     icon: DollarSign,
     title: "Skilled Negotiation",
     description:
-      "From offer review to closing negotiations, Dr. Jan protects your interests and maximizes your net proceeds. $127M+ in closed transactions means she knows how to handle any situation and close deals successfully.",
+      "From offer review to closing negotiations, Dr. Jan protects your interests and the net sheet. Street-level CMA math beats a career-volume slogan.",
   },
 ];
 

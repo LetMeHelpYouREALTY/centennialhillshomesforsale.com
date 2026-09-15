@@ -38,14 +38,23 @@ export default function HomeValuationPage() {
       sections={[
         {
           heading: "What I send you",
+          imageSrc: "/images/hero/home-valuation.png",
+          imageAlt:
+            "CMA comps and tablet on a kitchen table for a Las Vegas home valuation",
           body: "Three to six sold comps, current actives that a buyer will also see, days on market, and a list-price range. If the house needs paint, roof, or a tenant out, that is in the range — not a surprise on listing day.",
         },
         {
           heading: "What I will not do",
+          imageSrc: "/images/hero/sellers-listing.png",
+          imageAlt:
+            "Las Vegas home prepared for listing with professional staging",
           body: "I will not scrape an AVM onto this page and call it a valuation. I will not inflate the number to win the listing. If you want that, call someone else.",
         },
         {
           heading: "How to start",
+          imageSrc: "/images/gbp/office-lake-mead.png",
+          imageAlt:
+            "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard",
           body: "Call or text 702-222-1964 with the address, or use the contact form. Occupied vs vacant vs tenant matters. Photos help if you are out of state.",
         },
       ]}

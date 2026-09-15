@@ -178,62 +178,42 @@ export const neighborhoodExpertTemplate: PromptTemplate = {
 
 ### Summerlin
 - **Overview**: Master-planned community, west Las Vegas
-- **Population**: ~100,000 residents
-- **Price Range**: $400K - $2M+
-- **Schools**: Clark County School District campuses nearby
-- **Features**: Parks, trails, shopping (Downtown Summerlin), community events
-- **Amenities**: 150+ parks, Red Rock Canyon access, Downtown Summerlin
-- **HOA**: Most communities have HOA ($50-$200/month)
+- **Listing medians (realtor.com retrieved 2026-09-14, not a CMA)**: Summerlin North $514,999; Summerlin West $825,000; Summerlin South $877,500
+- **Features**: Parks, trails, Downtown Summerlin, Red Rock Canyon access
+- **HOA**: Confirm on resale docs — do not invent a monthly band
+- **Schools**: Name the campus; do not use school-rating slogans
 
 ### Henderson
 - **Overview**: Separate city, southeast of Las Vegas
-- **Population**: ~330,000 residents
-- **Price Range**: $350K - $3M+
-- **Schools**: Named campuses include Coronado High, Green Valley High, Vanderburg Elementary
-- **Features**: Green Valley area, Lake Las Vegas, growing tech sector
-- **Amenities**: 60+ parks, recreation centers, The District at Green Valley Ranch
-- **HOA**: Varies by community
+- **Listing median (realtor.com 2026-09-14)**: $534,950 listing / $485,000 sold median (citywide, not a village CMA)
+- **Features**: Green Valley, Lake Las Vegas, parks and rec campuses
+- **HOA**: Confirm on resale docs
 
 ### Green Valley (Henderson)
-- **Overview**: Master-planned community with mature landscaping
-- **Population**: ~50,000 residents
-- **Price Range**: $400K - $1M
-- **Schools**: Nearby public campuses
-- **Features**: Golf courses, parks, shopping, mature landscaping
-- **Amenities**: District at Green Valley Ranch, trail network
-- **HOA**: Yes, most communities
+- **Overview**: Henderson villages with mature landscaping
+- **Listing median (realtor.com 2026-09-14)**: Green Valley South $521,200; Green Valley North $456,975; Green Valley Ranch $581,250
+- **Features**: The District at Green Valley Ranch, trail network
+- **HOA**: Confirm on resale docs
 
 ### Southern Highlands
-- **Overview**: Luxury master-planned community, southwest Las Vegas
-- **Population**: ~10,000 residents
-- **Price Range**: $500K - $5M+
-- **Schools**: Private campuses nearby; CCSD options in the southwest valley
-- **Features**: Golf course, gated communities, mountain views
-- **Amenities**: Championship golf, guard-gated villages
-- **HOA**: Yes, typically $100-$300/month
+- **Overview**: Southwest Las Vegas golf-course luxury
+- **Listing median (realtor.com 2026-09-14)**: $1,024,950 (pulled up by gated estate inventory)
+- **HOA**: Confirm on resale docs
 
 ### The Ridges (Summerlin)
-- **Overview**: Ultra-luxury guard-gated community
-- **Population**: ~2,000 residents
-- **Price Range**: $1M - $10M+
-- **Schools**: Private campuses nearby
-- **Features**: Guard gate, golf, Red Rock views, custom homes
-- **Amenities**: Bear's Best Golf, Strip and mountain views
-- **HOA**: Yes, premium services
+- **Overview**: Guard-gated custom homes
+- **Price**: Live CMA only — do not invent a $1M–$10M band
+- **HOA**: Confirm on resale docs
 
 ### 55+ Communities
-- **Sun City Summerlin**: Active adult (55+), $200K-$600K, amenities
-- **Sun City Anthem (Henderson)**: Active adult, $250K-$700K, mountain views
-- **Trilogy at Summerlin**: Luxury 55+, $500K-$1.5M, resort amenities
-- **Solera at Anthem**: 55+, $300K-$600K, Del Webb community
+- **Sun City Summerlin**: listing median $472,424 (realtor.com 2026-09-14)
+- **Sun City Anthem**: listing median $578,800
+- **Trilogy / Heritage / Solera / Aliante / Del Webb LLV**: live CMA; HOA on resale docs
+- **Occupancy**: HOPA 80% 55+ unless the CC&Rs are stricter
 
 ### North Las Vegas
-- **Overview**: Affordable, growing area, north of Las Vegas
-- **Price Range**: $250K - $500K
-- **Schools**: CCSD campuses nearby
-- **Features**: Newer developments, I-15 access
-- **Amenities**: Parks, new construction inventory
-- **Buyer mix**: First-time and move-up buyers
+- **Listing median (realtor.com 2026-09-14)**: $439,990 citywide — not Aliante or Skye Canyon
+- **HOA**: Confirm on resale docs
 
 ## How to Use This Knowledge
 - Match client needs to appropriate neighborhoods

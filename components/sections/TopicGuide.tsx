@@ -122,6 +122,7 @@ export default function TopicGuide({
                     src={section.imageSrc}
                     alt={section.imageAlt ?? section.heading}
                     priority={false}
+                    size="section"
                     className="mb-6"
                   />
                 ) : null}

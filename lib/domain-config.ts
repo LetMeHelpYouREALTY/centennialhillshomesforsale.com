@@ -120,7 +120,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "Read what clients say about Dr. Jan Duffy, Las Vegas top real estate agent at BHHS Nevada Properties.",
     heroHeadline: "What Clients Say About Dr. Jan",
     heroSubheadline:
-      "500+ clients represented. Serving Las Vegas since 2008. Real results, real reviews.",
+      "Serving Las Vegas since 2008. Real results, real Google reviews.",
     keywords: [
       "Dr Jan Duffy reviews",
       "BHHS Nevada Properties reviews",
@@ -129,7 +129,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     pageType: "search",
     realscoutAgentId: REALSCOUT_AGENT_ID,
     ctaBadge: "Top-Rated Agent",
-    ctaHeadline: "Join 500+ reviewed clients",
+    ctaHeadline: "Call for a consult",
     ctaSubheadline:
       "Let's talk about your real estate goals — no pressure, just expertise.",
   },
@@ -141,7 +141,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "Dr. Jan Duffy, Las Vegas REALTOR® at Berkshire Hathaway HomeServices Nevada Properties.",
     heroHeadline: "Dr. Jan Duffy | Las Vegas Real Estate",
     heroSubheadline:
-      "Serving Las Vegas since 2008, 500+ clients, $127M+ in career sales. Your trusted Las Vegas REALTOR®.",
+      "Serving Las Vegas since 2008. Your trusted Las Vegas REALTOR®.",
     keywords: [
       "Dr Jan Duffy",
       "Dr. Jan Duffy Las Vegas realtor",
@@ -244,7 +244,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
       "Ready to buy or sell in Las Vegas? Just call Dr. Jan Duffy at 702-222-1964.",
     heroHeadline: "Just Call Dr. Jan",
     heroSubheadline:
-      "Serving Las Vegas since 2008. 500+ clients. No runaround — just local MLS work.",
+      "Serving Las Vegas since 2008. No runaround — just local MLS work.",
     keywords: ["call Dr Jan Duffy", "Las Vegas realtor phone", "BHHS Nevada"],
     pageType: "search",
     realscoutAgentId: REALSCOUT_AGENT_ID,
@@ -681,7 +681,7 @@ export const DEFAULT_CONFIG: DomainConfig = {
     "Search Las Vegas homes for sale. Expert real estate guidance from Dr. Jan Duffy, BHHS Nevada Properties.",
   heroHeadline: "Las Vegas Homes for Sale",
   heroSubheadline:
-    "Expert real estate guidance from Dr. Jan Duffy — serving Las Vegas since 2008, 500+ clients represented.",
+    "Expert real estate guidance from Dr. Jan Duffy — serving Las Vegas since 2008.",
   keywords: [
     "Las Vegas homes for sale",
     "Las Vegas real estate",

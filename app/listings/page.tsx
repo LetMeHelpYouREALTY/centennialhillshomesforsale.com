@@ -12,6 +12,7 @@ import { withShareImage } from "@/lib/page-seo";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
+import { FAQSchema } from "@/components/SchemaScript";
 import {
   formatUsd,
   LISTING_MEDIANS_USD,
@@ -54,6 +55,29 @@ const listingsSchema = {
     { "@type": "City", name: "Summerlin, NV" },
   ],
 };
+
+const listingFaqs = [
+  {
+    question: "How competitive is the Las Vegas housing market in 2026?",
+    answer:
+      "The Las Vegas market moves by village and by week. I will not invent a months-of-inventory figure. Well-priced houses in Summerlin and Henderson can still draw multiple offers. Get a pre-approval and a live MLS pull before you tour.",
+  },
+  {
+    question: "What's the best time of year to buy a home in Las Vegas?",
+    answer:
+      "Las Vegas has a year-round real estate market, but inventory typically peaks in spring (March-May) while competition is lowest in winter (November-January). The best time depends on your priorities: more selection in spring, potentially better deals in winter.",
+  },
+  {
+    question: "How much do I need for a down payment in Las Vegas?",
+    answer:
+      "Down payment requirements vary by loan type: FHA loans require 3.5%, conventional loans typically 3-20%, VA loans 0% for eligible veterans. Nevada also offers down payment assistance programs for first-time buyers. Dr. Jan can connect you with lenders who specialize in various loan programs.",
+  },
+  {
+    question: "Are Las Vegas HOA fees expensive?",
+    answer:
+      "HOA dues are on the resale packet, not a sitewide band. I will not publish a valley-wide monthly range as if it were your community. Ask for the current budget, reserves, and any special assessment before you write the offer.",
+  },
+];
 
 const popularSearches = [
   {
@@ -160,6 +184,7 @@ const neighborhoods = [
 export default function ListingsPage() {
   return (
     <>
+      <FAQSchema faqs={listingFaqs} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(listingsSchema) }}
@@ -190,8 +215,8 @@ export default function ListingsPage() {
                 Data
               </span>
               <span className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> Updated
-                Every 15 Min
+                <CheckCircle className="h-4 w-4 text-green-500 mr-1" /> MLS via
+                RealScout
               </span>
               <span className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-green-500 mr-1" />{" "}
@@ -359,8 +384,8 @@ export default function ListingsPage() {
                 </div>
                 <h3 className="font-bold mb-2">Off-Market Access</h3>
                 <p className="text-slate-400 text-sm">
-                  See listings before they hit the MLS through our network of
-                  50,000+ agents
+                  See listings through RealScout MLS search and the BHHS
+                  referral network — not a 50,000-agent slogan
                 </p>
               </div>
               <div className="text-center">
@@ -369,8 +394,8 @@ export default function ListingsPage() {
                 </div>
                 <h3 className="font-bold mb-2">Expert Negotiation</h3>
                 <p className="text-slate-400 text-sm">
-                  $127M+ in closed transactions means proven negotiation skills
-                  on your behalf
+                  Street-level CMA math and written offer strategy — not a
+                  career-volume slogan
                 </p>
               </div>
               <div className="text-center">
@@ -539,55 +564,14 @@ export default function ListingsPage() {
               Frequently Asked Questions About Las Vegas Real Estate
             </h2>
             <div className="space-y-4">
-              <div className="bg-slate-50 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  How competitive is the Las Vegas housing market in 2026?
-                </h3>
-                <p className="text-slate-600">
-                  The Las Vegas market is moderately competitive with 2.1 months
-                  of inventory—a slight seller's market. Well-priced homes in
-                  desirable areas like Summerlin and Henderson often receive
-                  multiple offers within the first week. Having a pre-approval
-                  and experienced agent gives you a significant advantage.
-                </p>
-              </div>
-              <div className="bg-slate-50 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  What's the best time of year to buy a home in Las Vegas?
-                </h3>
-                <p className="text-slate-600">
-                  Las Vegas has a year-round real estate market, but inventory
-                  typically peaks in spring (March-May) while competition is
-                  lowest in winter (November-January). The best time depends on
-                  your priorities: more selection in spring, potentially better
-                  deals in winter.
-                </p>
-              </div>
-              <div className="bg-slate-50 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  How much do I need for a down payment in Las Vegas?
-                </h3>
-                <p className="text-slate-600">
-                  Down payment requirements vary by loan type: FHA loans require
-                  3.5%, conventional loans typically 3-20%, VA loans 0% for
-                  eligible veterans. Nevada also offers down payment assistance
-                  programs for first-time buyers. Dr. Jan can connect you with
-                  lenders who specialize in various loan programs.
-                </p>
-              </div>
-              <div className="bg-slate-50 rounded-lg p-6">
-                <h3 className="font-bold text-slate-900 mb-2">
-                  Are Las Vegas HOA fees expensive?
-                </h3>
-                <p className="text-slate-600">
-                  HOA fees in Las Vegas range from $25/month for basic community
-                  maintenance to $400+/month for guard-gated luxury communities
-                  with extensive amenities. Most standard neighborhoods fall
-                  between $50-$150/month. Dr. Jan always reviews HOA documents
-                  to ensure you understand what's included and any special
-                  assessments.
-                </p>
-              </div>
+              {listingFaqs.map((faq) => (
+                <div key={faq.question} className="bg-slate-50 rounded-lg p-6">
+                  <h3 className="font-bold text-slate-900 mb-2">
+                    {faq.question}
+                  </h3>
+                  <p className="text-slate-600">{faq.answer}</p>
+                </div>
+              ))}
             </div>
           </section>
 

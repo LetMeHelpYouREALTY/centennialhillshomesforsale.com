@@ -794,11 +794,11 @@ export default function FiftyFiveCommunitiesPage() {
                   What do HOA fees cover in 55+ communities?
                 </h3>
                 <p className="text-slate-600">
-                  HOA fees typically cover access to clubhouses, pools, fitness
-                  centers, golf courses, organized activities, landscaping, and
-                  exterior maintenance. Fees range from $140-$350/month
-                  depending on amenities. Some communities have separate golf
-                  memberships.
+                  HOA fees typically cover clubhouse access, pools, fitness,
+                  landscaping, and exterior maintenance. Golf memberships are
+                  often separate. I will not publish a monthly dollar band as if
+                  it were your HOA — request the current budget, reserve study,
+                  and resale package.
                 </p>
               </div>
               <div className="bg-white border border-slate-200 rounded-lg p-6">

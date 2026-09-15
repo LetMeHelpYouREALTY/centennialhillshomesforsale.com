@@ -112,11 +112,6 @@ export default async function Home() {
       "Henderson",
       "Inspirada",
     ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "200",
-    },
   };
 
   return (
@@ -159,16 +154,16 @@ export default async function Home() {
 
             <div className="flex flex-wrap justify-center gap-6 text-sm text-white/80">
               <div className="flex items-center gap-2">
-                <span className="font-semibold text-white">500+</span>
-                <span>Clients represented</span>
-              </div>
-              <div className="flex items-center gap-2">
                 <span className="font-semibold text-white">Since 2008</span>
                 <span>Las Vegas closings</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-semibold text-white">4.9★</span>
-                <span>Client rating</span>
+                <span className="font-semibold text-white">BHHS</span>
+                <span>Nevada Properties</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="font-semibold text-white">Google</span>
+                <span>reviews on the profile</span>
               </div>
             </div>
           </div>

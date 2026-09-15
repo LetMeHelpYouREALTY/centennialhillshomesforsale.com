@@ -1,4 +1,3 @@
-import RealScoutListings from "@/components/realscout/RealScoutListings";
 import {
   Phone,
   Mail,
@@ -21,6 +20,7 @@ import { PageCTA } from "@/components/shared/PageCTA";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import { getPublicSiteUrl } from "@/lib/site-url";
+import { FAQSchema } from "@/components/SchemaScript";
 
 export const metadata: Metadata = withShareImage(
   {
@@ -61,9 +61,32 @@ const contactSchema = {
   },
 };
 
+const contactFaqs = [
+  {
+    question: "What should I expect during my first consultation?",
+    answer:
+      "Your consultation is a no-pressure conversation about your real estate goals. We'll discuss your timeline, budget, preferences, and answer any questions you have about the Las Vegas market. Whether you're buying, selling, or exploring options, I'll provide honest guidance tailored to your situation.",
+  },
+  {
+    question: "Do I need to be pre-approved before scheduling a showing?",
+    answer:
+      "For buyers, having a pre-approval letter strengthens your position, but it's not required for an initial consultation. I can connect you with trusted local lenders during our first meeting if you haven't started the financing process yet.",
+  },
+  {
+    question: "How quickly can you respond to inquiries?",
+    answer: `I reply during posted office hours. For urgent files, call or text ${CTA_PHONE}. I will not promise a two-hour SLA on this page.`,
+  },
+  {
+    question: "Do you charge for consultations?",
+    answer:
+      "No. Initial consultations are always free and without obligation. Whether you're ready to move forward or just exploring your options, there's never any pressure.",
+  },
+];
+
 export default function ContactPage() {
   return (
     <>
+      <FAQSchema faqs={contactFaqs} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
@@ -103,7 +126,7 @@ export default function ContactPage() {
                 property, or exploring investment opportunities, I'm here to
                 provide expert guidance backed by the trusted{" "}
                 <strong>Berkshire Hathaway HomeServices</strong> brand. Serving
-                Las Vegas since 2008 with $127M+ in closed transactions.
+                Las Vegas since 2008.
               </p>
 
               {/* NAP Information */}
@@ -116,7 +139,7 @@ export default function ContactPage() {
                     </h3>
                     <a
                       href={CTA_TEL}
-                      className="text-2xl font-bold text-blue-600 hover:text-blue-700"
+                      className="inline-flex min-h-11 items-center text-2xl font-bold text-blue-600 no-underline hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                     >
                       {CTA_PHONE}
                     </a>
@@ -132,12 +155,13 @@ export default function ContactPage() {
                     <h3 className="font-semibold text-slate-900 mb-1">Email</h3>
                     <a
                       href="mailto:homes@heyberkshire.com"
-                      className="text-blue-600 hover:text-blue-700 font-medium"
+                      className="inline-flex min-h-11 items-center font-medium text-blue-600 no-underline hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                     >
                       Homes@HeyBerkshire.com
                     </a>
                     <p className="text-sm text-slate-500 mt-1">
-                      Typically respond within 2 hours
+                      Replies during posted office hours — call or text for
+                      same-day files
                     </p>
                   </div>
                 </div>
@@ -227,17 +251,17 @@ export default function ContactPage() {
                   <div className="flex items-start">
                     <Star className="h-5 w-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
                     <p className="text-slate-300 text-sm">
-                      <strong className="text-white">Proven Results:</strong>{" "}
-                      $127M+ in closed transactions serving Las Vegas since
-                      2008.
+                      <strong className="text-white">Proven local work:</strong>{" "}
+                      Serving Las Vegas since 2008 with Berkshire Hathaway
+                      HomeServices Nevada Properties.
                     </p>
                   </div>
                   <div className="flex items-start">
                     <Users className="h-5 w-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
                     <p className="text-slate-300 text-sm">
                       <strong className="text-white">Global Network:</strong>{" "}
-                      50,000+ agents worldwide for seamless relocations and
-                      referrals.
+                      BHHS referral network for inbound and outbound
+                      relocations.
                     </p>
                   </div>
                 </div>
@@ -291,7 +315,7 @@ export default function ContactPage() {
             <div className="grid md:grid-cols-2 gap-6">
               <a
                 href={CTA_TEL}
-                className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white p-6 rounded-xl transition-colors"
+                className="flex min-h-11 items-center justify-center rounded-xl bg-blue-600 p-6 text-white no-underline transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
               >
                 <Phone className="h-8 w-8 mr-4" />
                 <div className="text-left">
@@ -301,7 +325,7 @@ export default function ContactPage() {
               </a>
               <a
                 href="mailto:homes@heyberkshire.com"
-                className="flex items-center justify-center bg-slate-700 hover:bg-slate-800 text-white p-6 rounded-xl transition-colors"
+                className="flex min-h-11 items-center justify-center rounded-xl bg-slate-700 p-6 text-white no-underline transition-colors hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
               >
                 <Mail className="h-8 w-8 mr-4" />
                 <div className="text-left">
@@ -318,27 +342,12 @@ export default function ContactPage() {
               Frequently Asked Questions
             </h2>
             <div className="space-y-4">
-              {[
-                {
-                  q: "What should I expect during my first consultation?",
-                  a: "Your consultation is a no-pressure conversation about your real estate goals. We'll discuss your timeline, budget, preferences, and answer any questions you have about the Las Vegas market. Whether you're buying, selling, or exploring options, I'll provide honest guidance tailored to your situation.",
-                },
-                {
-                  q: "Do I need to be pre-approved before scheduling a showing?",
-                  a: "For buyers, having a pre-approval letter strengthens your position, but it's not required for an initial consultation. I can connect you with trusted local lenders during our first meeting if you haven't started the financing process yet.",
-                },
-                {
-                  q: "How quickly can you respond to inquiries?",
-                  a: `I typically respond to calls, texts, and emails within 2 hours during business hours (9am-6pm daily). For urgent matters, calling or texting ${CTA_PHONE} is the fastest way to reach me.`,
-                },
-                {
-                  q: "Do you charge for consultations?",
-                  a: "No. Initial consultations are always free and without obligation. Whether you're ready to move forward or just exploring your options, there's never any pressure.",
-                },
-              ].map((faq, index) => (
-                <div key={index} className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
-                  <p className="text-slate-600">{faq.a}</p>
+              {contactFaqs.map((faq) => (
+                <div key={faq.question} className="bg-slate-50 rounded-lg p-6">
+                  <h3 className="font-bold text-slate-900 mb-2">
+                    {faq.question}
+                  </h3>
+                  <p className="text-slate-600">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -355,7 +364,6 @@ export default function ContactPage() {
         headline="Call before you tour"
         subheadline="Dr. Jan Duffy will pull the live MLS file and meet at 9406 W Lake Mead Blvd, Suite 100."
       />
-      <RealScoutListings />
     </>
   );
 }

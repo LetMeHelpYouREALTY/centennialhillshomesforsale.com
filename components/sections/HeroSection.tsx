@@ -86,16 +86,16 @@ export default function HeroSection() {
 
         <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/90">
           <div className="flex items-center gap-2">
-            <span className="font-semibold">500+</span>
-            <span>Clients represented</span>
-          </div>
-          <div className="flex items-center gap-2">
             <span className="font-semibold">Since 2008</span>
             <span>Las Vegas closings</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="font-semibold">4.9★</span>
-            <span>Client rating</span>
+            <span className="font-semibold">BHHS</span>
+            <span>Nevada Properties</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="font-semibold">Google</span>
+            <span>reviews on the profile</span>
           </div>
         </div>
       </div>

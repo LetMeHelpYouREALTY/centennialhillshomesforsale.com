@@ -19,8 +19,8 @@ export const metadata: Metadata = withShareImage(
     ],
   },
   {
-    src: "/images/hero/google-business.png",
-    alt: "Lake Mead Boulevard office for in-person Las Vegas real estate questions",
+    src: "/images/gbp/visit-office.png",
+    alt: "Interior consult desk at 9406 W Lake Mead Blvd for Las Vegas real estate questions",
   },
 );
 
@@ -31,8 +31,8 @@ export default function FaqPage() {
       slug="faq"
       badge="FAQ"
       h1="Las Vegas Real Estate FAQ"
-      imageSrc="/images/hero/google-business.png"
-      imageAlt="Lake Mead Boulevard office for in-person Las Vegas real estate questions"
+      imageSrc="/images/gbp/visit-office.png"
+      imageAlt="Interior consult desk at 9406 W Lake Mead Blvd for Las Vegas real estate questions"
       intro="Short answers. Live numbers live in a CMA, not in this list. Compensation is disclosed in writing. Fair Housing copy lives on /fair-housing."
       stats={[
         {
@@ -46,14 +46,23 @@ export default function FaqPage() {
       sections={[
         {
           heading: "Who I am",
+          imageSrc: "/images/hero/about.png",
+          imageAlt:
+            "Dr. Jan Duffy at the Las Vegas office answering buyer and seller questions",
           body: "Dr. Jan Duffy, REALTOR, license S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Client line (702) 222-1964. I cover Las Vegas, Henderson, North Las Vegas, Summerlin, and Centennial Hills.",
         },
         {
           heading: "Buying",
+          imageSrc: "/images/hero/buyers.png",
+          imageAlt:
+            "Las Vegas buyer touring a northwest desert-contemporary home",
           body: `Typical close is 30–45 days after acceptance. Get a lender pre-approval before touring. Down payment is UNKNOWN without a loan program. As of ${MARKET_SNAPSHOT_AS_OF}, Las Vegas city median listing is ${formatUsd(LISTING_MEDIANS_USD.lasVegas)} — not your bid. New construction: register me before the first builder visit. Compensation is in a written buyer agreement; the builder or seller may contribute, or you may pay.`,
         },
         {
           heading: "Selling",
+          imageSrc: "/images/hero/sellers.png",
+          imageAlt:
+            "Staged Las Vegas listing living room opening to a backyard pool",
           body: "List price comes from a CMA, not an AVM. I will not promise a number of days on market. Fees are negotiated before the listing agreement is signed.",
         },
       ]}

@@ -5,6 +5,10 @@ import { SOCIAL_PROFILES } from "./contact";
 describe("RealEstateAgent JSON-LD", () => {
   const schema = generateRealEstateAgentSchema();
 
+  it("does not invent an AggregateRating without a live GBP pull", () => {
+    expect(schema).not.toHaveProperty("aggregateRating");
+  });
+
   it("uses Google LocalBusiness $$ priceRange instead of an invented listing band", () => {
     expect(schema.priceRange).toBe("$$");
   });

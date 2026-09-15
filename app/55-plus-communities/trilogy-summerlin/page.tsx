@@ -55,11 +55,11 @@ export default function TrilogySummerlinPage() {
       sections={[
         {
           heading: "What the HOA is paying for",
-          body: "Trilogy’s dues are typically higher than Sun City Summerlin because the amenity set includes dining and spa operations, not only rec centers. Older $250–$350/month headlines must be confirmed on the current budget. I put HOA next to the PITI number before you bid.",
+          body: "Trilogy’s dues are typically higher than Sun City Summerlin because the amenity set includes dining and spa operations, not only rec centers. Confirm the current budget on the resale package. I put HOA next to the PITI number before you bid.",
         },
         {
           heading: `Pricing as of ${MARKET_SNAPSHOT_AS_OF}`,
-          body: "Marketing bands of $500K–$1.1M are not a CMA. Summerlin West listing medians sit well above Summerlin North; Trilogy is 89135 product and should be compared to 89135 comps, not to Sun City Summerlin 89134. I pull Trilogy-only sales.",
+          body: "Marketing price bands are not a CMA. Summerlin West listing medians sit well above Summerlin North; Trilogy is 89135 product and should be compared to 89135 comps, not to Sun City Summerlin 89134. I pull Trilogy-only sales.",
         },
         {
           heading: "Geography",
