@@ -27,6 +27,7 @@ import { SectionHeading } from "@/components/shared/SectionPhoto";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import SchemaScript from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
+import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import {
   businessInfo,
   gbpDescription,
@@ -193,6 +194,12 @@ export default function GoogleBusinessPage() {
                     Call {businessInfo.phone.display}
                   </a>
                   <a
+                    href={`mailto:${businessInfo.email}`}
+                    className="mt-3 inline-flex min-h-11 w-full items-center justify-center rounded-lg border border-white/40 px-6 py-4 text-lg font-bold text-white no-underline transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                  >
+                    {businessInfo.email}
+                  </a>
+                  <a
                     href={OFFICE_NAP.directionsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -207,6 +214,9 @@ export default function GoogleBusinessPage() {
                   </p>
                 </div>
               </div>
+            </div>
+            <div className="mt-8">
+              <MlsSearchForm inputId="mls-q-google-business" />
             </div>
           </section>
 

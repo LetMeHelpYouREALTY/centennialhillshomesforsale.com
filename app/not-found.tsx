@@ -9,6 +9,7 @@ import {
   TEXT_LINK_CLASS,
 } from "@/lib/contact";
 import { VisitOffice } from "@/components/shared/VisitOffice";
+import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 
 export default function NotFound() {
   return (
@@ -64,6 +65,9 @@ export default function NotFound() {
           >
             {AGENT_EMAIL}
           </a>
+        </div>
+        <div className="mb-10">
+          <MlsSearchForm inputId="mls-q-404" />
         </div>
         <ul className="space-y-2 text-left text-slate-700">
           <li>

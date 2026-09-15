@@ -42,8 +42,16 @@ export default function LoneMountainPage() {
           body: "People shopping Centennial Hills often cross into Lone Mountain for a bigger lot or a different view line. It is not a Howard Hughes village and it is not 89144 Summerlin. Streets climb toward the named peak; construction quality and HOA (or lack of HOA) vary block by block. I tour by elevation and flood/drainage notes, not by a lifestyle slogan.",
         },
         {
+          heading: "ZIPs on this map",
+          body: "Lone Mountain listings show up in 89129, 89130, and 89131. 89131 also overlaps Centennial Hills searchers. The MLS subdivision and ZIP on the record are the source of truth — not a marketing map. Skye Canyon is a separate northwest master plan with newer production product.",
+        },
+        {
           heading: "What to inspect before you offer",
           body: "View lots can mean wind, grading, and block-wall maintenance. Septic vs sewer still appears on some northwest parcels — confirm on the listing, do not assume. Commute uses US-95 and the 215; time it at your actual hour, not midday.",
+        },
+        {
+          heading: "Pricing is a CMA, not a peak slogan",
+          body: "I will not publish a Lone Mountain-only median I cannot source. Lot size, elevation, and whether the house is on septic change the number. Ask for a live CMA on the address. Centennial Hills listing medians on this site are a different corridor sample.",
         },
       ]}
       faqs={[
@@ -51,6 +59,11 @@ export default function LoneMountainPage() {
           question: "Is Lone Mountain part of Centennial Hills?",
           answer:
             "They are adjacent northwest markets. Some mailing addresses feel interchangeable; subdivision and ZIP on the MLS record are the source of truth.",
+        },
+        {
+          question: "Which ZIP is Lone Mountain?",
+          answer:
+            "Listings appear in 89129, 89130, and 89131. I filter by subdivision, not ZIP alone.",
         },
         {
           question: "Can I see Lone Mountain and Centennial Hills in one day?",

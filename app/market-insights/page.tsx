@@ -15,6 +15,7 @@ import {
 import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import {
+  AGENT_EMAIL,
   CTA_PHONE,
   CTA_PHONE_E164,
   CTA_TEL,
@@ -28,6 +29,7 @@ import {
   formatUsd,
   LISTING_MEDIANS_USD,
   MARKET_SNAPSHOT_AS_OF,
+  MARKET_SNAPSHOT_ISO,
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 import { PageHeroImage } from "@/components/shared/PageHeroImage";
@@ -35,6 +37,7 @@ import { SectionHeading, SectionPhoto } from "@/components/shared/SectionPhoto";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
+import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 
 export const revalidate = 3600;
 
@@ -67,10 +70,12 @@ const reportSchema = {
     "@type": "RealEstateAgent",
     name: "Dr. Jan Duffy",
     telephone: CTA_PHONE_E164,
+    email: AGENT_EMAIL,
     address: OFFICE_POSTAL_ADDRESS,
     worksFor: "Berkshire Hathaway HomeServices Nevada Properties",
   },
-  datePublished: "2026-09-07",
+  datePublished: MARKET_SNAPSHOT_ISO,
+  dateModified: MARKET_SNAPSHOT_ISO,
   about: {
     "@type": "Place",
     name: "Centennial Hills, Las Vegas, Nevada",
@@ -123,8 +128,11 @@ export default async function MarketInsightsPage() {
             <p className="text-xl text-slate-600">
               First-party notes for this website — 89149 vs 89144, Inspirada’s
               remaining new homes, and why a cloned valley-wide report will not
-              rank here. Updated September 2026.
+              rank here. Updated {MARKET_SNAPSHOT_AS_OF}.
             </p>
+            <div className="mt-8">
+              <MlsSearchForm inputId="mls-q-market-insights" />
+            </div>
           </div>
 
           <section className="mb-16 max-w-5xl mx-auto">
@@ -461,7 +469,7 @@ export default async function MarketInsightsPage() {
                 aria-hidden="true"
               />
               <h2 className="text-3xl font-bold text-slate-900">
-                2026 Neighborhood Outlook
+                How these villages actually differ
               </h2>
             </div>
             <PageHeroImage

@@ -6,8 +6,17 @@ import { PageHeroImage } from "@/components/shared/PageHeroImage";
 import { PageCTA } from "@/components/shared/PageCTA";
 import { VisitOffice } from "@/components/shared/VisitOffice";
 import { MlsDisclaimer } from "@/components/shared/MlsDisclaimer";
-import { CTA_PHONE, CTA_TEL, REALSCOUT_SEARCH_URL } from "@/lib/contact";
+import {
+  AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
+  CTA_PHONE,
+  CTA_TEL,
+  OFFICE_NAP,
+  REALSCOUT_SEARCH_URL,
+  TEXT_LINK_CLASS,
+} from "@/lib/contact";
 import { PAGE_HERO_IMAGES } from "@/lib/site-images";
+import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 
 export const metadata: Metadata = withShareImage(
   {
@@ -69,7 +78,28 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
             <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
             Call {CTA_PHONE}
           </a>
+          <a
+            href={AGENT_EMAIL_MAILTO}
+            className="inline-flex min-h-11 items-center justify-center rounded-md border border-slate-300 px-6 py-3 font-semibold text-slate-900 no-underline hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            {AGENT_EMAIL}
+          </a>
         </div>
+        <div className="mb-10">
+          <MlsSearchForm className="mx-0" inputId="mls-q-listing-placeholder" />
+        </div>
+        <p className="mb-8 text-sm text-slate-500">
+          Office:{" "}
+          <a
+            href={OFFICE_NAP.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={TEXT_LINK_CLASS}
+          >
+            {OFFICE_NAP.full}
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
+        </p>
         <MlsDisclaimer />
       </div>
       <VisitOffice compact />

@@ -35,6 +35,7 @@ import { GoogleReviewsCta } from "@/components/shared/GoogleReviewsCta";
 import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
 import { getPublicSiteUrl } from "@/lib/site-url";
+import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 
 export const metadata: Metadata = withShareImage(
   {
@@ -205,6 +206,9 @@ export default function AboutPage() {
               selling, investing, or relocating, you'll get a written plan and
               live comps — not a ranking slogan.
             </p>
+            <div className="mt-8">
+              <MlsSearchForm inputId="mls-q-about" />
+            </div>
           </div>
 
           {/* Agent Profile */}

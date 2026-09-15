@@ -1,7 +1,13 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, Home } from "lucide-react";
-import { CTA_PHONE, CTA_TEL, REALSCOUT_SEARCH_URL } from "@/lib/contact";
+import {
+  AGENT_EMAIL,
+  AGENT_EMAIL_MAILTO,
+  CTA_PHONE,
+  CTA_TEL,
+  REALSCOUT_SEARCH_URL,
+} from "@/lib/contact";
 
 export default function CTASection() {
   return (
@@ -46,6 +52,20 @@ export default function CTASection() {
                 <Mail className="h-5 w-5" aria-hidden="true" />
                 Send a Message
               </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white/10"
+            >
+              <a
+                href={AGENT_EMAIL_MAILTO}
+                className="flex items-center gap-2 no-underline"
+              >
+                <Mail className="h-5 w-5" aria-hidden="true" />
+                {AGENT_EMAIL}
+              </a>
             </Button>
             <Button
               asChild

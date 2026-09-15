@@ -35,6 +35,7 @@ import { getPublicSiteUrl } from "@/lib/site-url";
 import SchemaScript, { FAQSchema } from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
 import { LeadCaptureForm } from "@/components/forms/LeadCaptureForm";
+import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 
 export const metadata: Metadata = withShareImage(
   {
@@ -128,6 +129,9 @@ export default function ContactPage() {
               Questions about Las Vegas real estate? Call or send the address.
               Schedule an appointment or reach out directly.
             </p>
+            <div className="mt-8">
+              <MlsSearchForm inputId="mls-q-contact" />
+            </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
