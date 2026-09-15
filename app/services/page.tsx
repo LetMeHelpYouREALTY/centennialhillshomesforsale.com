@@ -2,22 +2,24 @@ import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import TopicGuide from "@/components/sections/TopicGuide";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "Real Estate Services Las Vegas | Dr. Jan Duffy",
-    description:
-      "Buying, selling, luxury, 55+, new construction, investment, and relocation with Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "Las Vegas real estate services",
-      "home buying Las Vegas",
-      "home selling Henderson",
-    ],
-  },
-  {
-    src: "/images/hero/office-lake-mead.png",
-    alt: "Las Vegas office where Dr. Jan Duffy handles buyer and seller files",
-  },
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "Real Estate Services Las Vegas | Dr. Jan Duffy",
+      description:
+        "Buying, selling, luxury, 55+, new construction, investment, and relocation with Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "Las Vegas real estate services",
+        "home buying Las Vegas",
+        "home selling Henderson",
+      ],
+    },
+    {
+      src: "/images/hero/office-lake-mead.png",
+      alt: "Las Vegas office where Dr. Jan Duffy handles buyer and seller files",
+    },
+  );
+}
 
 export default function ServicesPage() {
   return (

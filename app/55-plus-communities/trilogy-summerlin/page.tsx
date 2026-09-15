@@ -7,22 +7,24 @@ import {
   MARKET_SNAPSHOT_AS_OF,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "Trilogy at Summerlin Homes | Luxury 55+ Shea Community",
-    description:
-      "Trilogy at Summerlin 55+ homes in 89135. Shea Homes, spa, dining, current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "Trilogy at Summerlin homes for sale",
-      "Trilogy Summerlin Las Vegas",
-      "Shea Homes Trilogy",
-    ],
-  },
-  {
-    src: "/images/neighborhoods/trilogy-summerlin.png",
-    alt: "Trilogy at Summerlin 55-plus contemporary homes in ZIP 89135",
-  },
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "Trilogy at Summerlin Homes | Luxury 55+ Shea Community",
+      description:
+        "Trilogy at Summerlin 55+ homes in 89135. Shea Homes, spa, dining, current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "Trilogy at Summerlin homes for sale",
+        "Trilogy Summerlin Las Vegas",
+        "Shea Homes Trilogy",
+      ],
+    },
+    {
+      src: "/images/neighborhoods/trilogy-summerlin.png",
+      alt: "Trilogy at Summerlin 55-plus contemporary homes in ZIP 89135",
+    },
+  );
+}
 
 export default function TrilogySummerlinPage() {
   return (

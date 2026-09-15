@@ -7,23 +7,25 @@ import {
   MARKET_SNAPSHOT_AS_OF,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "Las Vegas Luxury Homes for Sale | Dr. Jan Duffy",
-    description:
-      "Las Vegas and Henderson luxury listings: The Ridges, Tournament Hills, MacDonald Highlands, Southern Highlands. Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "Las Vegas luxury homes",
-      "The Ridges Las Vegas",
-      "Summerlin luxury real estate",
-      "MacDonald Highlands Henderson",
-    ],
-  },
-  {
-    src: "/images/hero/luxury-ridges.png",
-    alt: "Gated custom estate architecture in The Ridges, Las Vegas",
-  },
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "Las Vegas Luxury Homes for Sale | Dr. Jan Duffy",
+      description:
+        "Las Vegas and Henderson luxury listings: The Ridges, Tournament Hills, MacDonald Highlands, Southern Highlands. Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "Las Vegas luxury homes",
+        "The Ridges Las Vegas",
+        "Summerlin luxury real estate",
+        "MacDonald Highlands Henderson",
+      ],
+    },
+    {
+      src: "/images/hero/luxury-ridges.png",
+      alt: "Gated custom estate architecture in The Ridges, Las Vegas",
+    },
+  );
+}
 
 export default function LuxuryHomesPage() {
   return (

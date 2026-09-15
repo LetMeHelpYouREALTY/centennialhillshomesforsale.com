@@ -22,18 +22,20 @@ import { SectionHeading } from "@/components/shared/SectionPhoto";
 import SchemaScript from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "Live MLS Listings | Dr. Jan Duffy",
-    description:
-      "This site does not host fake listing detail pages. Search live MLS with Dr. Jan Duffy or call (702) 222-1964 or email homes@heyberkshire.com.",
-    robots: {
-      index: false,
-      follow: true,
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "Live MLS Listings | Dr. Jan Duffy",
+      description:
+        "This site does not host fake listing detail pages. Search live MLS with Dr. Jan Duffy or call (702) 222-1964 or email homes@heyberkshire.com.",
+      robots: {
+        index: false,
+        follow: true,
+      },
     },
-  },
-  PAGE_HERO_IMAGES.listings,
-);
+    PAGE_HERO_IMAGES.listings,
+  );
+}
 
 type PropertyPageProps = {
   params: Promise<{ id: string }>;

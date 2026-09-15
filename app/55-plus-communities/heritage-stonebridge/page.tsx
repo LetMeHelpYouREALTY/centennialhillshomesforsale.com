@@ -3,22 +3,24 @@ import { withShareImage } from "@/lib/page-seo";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
 import { MARKET_SNAPSHOT_AS_OF } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "Heritage at Stonebridge Homes | Guard-Gated 55+ Summerlin",
-    description:
-      "Heritage at Stonebridge Summerlin 55+ homes. Guard-gated pocket near Downtown Summerlin. Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "Heritage at Stonebridge homes for sale",
-      "Heritage Stonebridge Summerlin",
-      "guard-gated 55+ community Las Vegas",
-    ],
-  },
-  {
-    src: "/images/neighborhoods/heritage-stonebridge.png",
-    alt: "Summerlin residential setting near Heritage at Stonebridge",
-  },
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "Heritage at Stonebridge Homes | Guard-Gated 55+ Summerlin",
+      description:
+        "Heritage at Stonebridge Summerlin 55+ homes. Guard-gated pocket near Downtown Summerlin. Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "Heritage at Stonebridge homes for sale",
+        "Heritage Stonebridge Summerlin",
+        "guard-gated 55+ community Las Vegas",
+      ],
+    },
+    {
+      src: "/images/neighborhoods/heritage-stonebridge.png",
+      alt: "Summerlin residential setting near Heritage at Stonebridge",
+    },
+  );
+}
 
 export default function HeritageStonebridgePage() {
   return (

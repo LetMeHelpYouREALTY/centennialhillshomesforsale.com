@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { AGENT_EMAIL, CTA_PHONE } from "./contact";
+import { siteConfig } from "./site-config";
 import type { SiteImage } from "./site-images";
+import { getCanonicalUrl } from "./site-url";
 
 /** Keep SERP snippets on the client line, not phone-only. */
 export function withClientEmail(description: string): string {
@@ -44,6 +46,11 @@ export function titleWithoutLayoutSuffix(
 /**
  * Attach a page-specific share image so Google, Maps, and social
  * previews do not fall back to the generic agent headshot.
+ *
+ * Child `openGraph` objects replace the layout object in Next.js 14, so this
+ * must set `url` and `siteName` or `og:url` / `og:site_name` never emit.
+ * Call from `generateMetadata` (not a static `metadata` export) so
+ * `getCanonicalUrl()` can read `x-pathname`.
  */
 export function withShareImage(metadata: Metadata, image: SiteImage): Metadata {
   const title = resolveTitle(metadata.title);
@@ -51,15 +58,22 @@ export function withShareImage(metadata: Metadata, image: SiteImage): Metadata {
     typeof metadata.description === "string"
       ? withClientEmail(metadata.description)
       : undefined;
+  const canonical = getCanonicalUrl();
 
   return {
     ...metadata,
     title: titleWithoutLayoutSuffix(metadata.title),
     description,
+    alternates: {
+      canonical,
+      ...metadata.alternates,
+    },
     openGraph: {
       type: "website",
       locale: "en_US",
+      siteName: siteConfig.fullName,
       ...metadata.openGraph,
+      url: metadata.openGraph?.url ?? canonical,
       title,
       description,
       images: [

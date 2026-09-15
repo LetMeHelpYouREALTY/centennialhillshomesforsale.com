@@ -34,23 +34,25 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "Home Buying Guide Las Vegas | Berkshire Hathaway HomeServices",
-    description:
-      "Buy a Las Vegas or Henderson home with Dr. Jan Duffy, BHHS Nevada Properties. Written buyer-broker agreement and live MLS. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "buy home Las Vegas",
-      "Las Vegas home buyer",
-      "Berkshire Hathaway buyer agent",
-      "Henderson homes for sale",
-      "first time home buyer Las Vegas",
-      "California relocation Las Vegas",
-      "55+ communities Las Vegas",
-    ],
-  },
-  PAGE_HERO_IMAGES.buyers,
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "Home Buying Guide Las Vegas | Berkshire Hathaway HomeServices",
+      description:
+        "Buy a Las Vegas or Henderson home with Dr. Jan Duffy, BHHS Nevada Properties. Written buyer-broker agreement and live MLS. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "buy home Las Vegas",
+        "Las Vegas home buyer",
+        "Berkshire Hathaway buyer agent",
+        "Henderson homes for sale",
+        "first time home buyer Las Vegas",
+        "California relocation Las Vegas",
+        "55+ communities Las Vegas",
+      ],
+    },
+    PAGE_HERO_IMAGES.buyers,
+  );
+}
 
 const buyerSchema = generateServiceSchema({
   name: "Home Buying Services Las Vegas",

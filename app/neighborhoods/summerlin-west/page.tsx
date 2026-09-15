@@ -3,23 +3,25 @@ import { withShareImage } from "@/lib/page-seo";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
 import { formatUsd, LISTING_MEDIANS_USD } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "Summerlin West Homes for Sale | 89138 Real Estate",
-    description:
-      "Summerlin West homes for sale in ZIP 89138 — Reverence and later Howard Hughes villages. Search listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "summerlin west homes for sale",
-      "summerlin west real estate",
-      "89138 homes for sale",
-      "west summerlin homes for sale",
-    ],
-  },
-  {
-    src: "/images/neighborhoods/summerlin-west.png",
-    alt: "Newer Summerlin West homes in ZIP 89138 with Red Rock Canyon backdrop",
-  },
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "Summerlin West Homes for Sale | 89138 Real Estate",
+      description:
+        "Summerlin West homes for sale in ZIP 89138 — Reverence and later Howard Hughes villages. Search listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "summerlin west homes for sale",
+        "summerlin west real estate",
+        "89138 homes for sale",
+        "west summerlin homes for sale",
+      ],
+    },
+    {
+      src: "/images/neighborhoods/summerlin-west.png",
+      alt: "Newer Summerlin West homes in ZIP 89138 with Red Rock Canyon backdrop",
+    },
+  );
+}
 
 export default function SummerlinWestPage() {
   return (

@@ -9,24 +9,26 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "Centennial Hills Homes for Sale | 89149 Las Vegas Real Estate",
-    description:
-      "Homes for sale in Centennial Hills, Las Vegas (89149, 89131, 89143). Town Center, park, and current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "centennial hills real estate",
-      "homes for sale in centennial hills nv",
-      "centennial hills las vegas real estate",
-      "centennial hills homes for sale",
-      "centennial hills town center nv real estate",
-    ],
-  },
-  {
-    src: "/images/neighborhoods/centennial-hills.png",
-    alt: "Centennial Hills Las Vegas homes and northwest desert mountain views",
-  },
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "Centennial Hills Homes for Sale | 89149 Las Vegas Real Estate",
+      description:
+        "Homes for sale in Centennial Hills, Las Vegas (89149, 89131, 89143). Town Center, park, and current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "centennial hills real estate",
+        "homes for sale in centennial hills nv",
+        "centennial hills las vegas real estate",
+        "centennial hills homes for sale",
+        "centennial hills town center nv real estate",
+      ],
+    },
+    {
+      src: "/images/neighborhoods/centennial-hills.png",
+      alt: "Centennial Hills Las Vegas homes and northwest desert mountain views",
+    },
+  );
+}
 
 const median = formatUsd(LISTING_MEDIANS_USD.centennialHills);
 

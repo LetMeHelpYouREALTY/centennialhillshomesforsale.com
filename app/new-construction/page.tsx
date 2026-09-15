@@ -7,23 +7,25 @@ import {
   MARKET_SNAPSHOT_AS_OF,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "New Construction Homes Las Vegas | Buyer Representation",
-    description:
-      "New construction in Las Vegas and Henderson: register your agent before the first visit. Dr. Jan Duffy reviews builder contracts. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "new construction Las Vegas",
-      "new homes Henderson",
-      "Lennar Las Vegas",
-      "KB Home Las Vegas",
-    ],
-  },
-  {
-    src: "/images/hero/new-construction.png",
-    alt: "New construction homes under desert sky in Las Vegas",
-  },
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "New Construction Homes Las Vegas | Buyer Representation",
+      description:
+        "New construction in Las Vegas and Henderson: register your agent before the first visit. Dr. Jan Duffy reviews builder contracts. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "new construction Las Vegas",
+        "new homes Henderson",
+        "Lennar Las Vegas",
+        "KB Home Las Vegas",
+      ],
+    },
+    {
+      src: "/images/hero/new-construction.png",
+      alt: "New construction homes under desert sky in Las Vegas",
+    },
+  );
+}
 
 export default function NewConstructionPage() {
   return (

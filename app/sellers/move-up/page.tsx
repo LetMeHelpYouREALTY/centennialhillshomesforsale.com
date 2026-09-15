@@ -2,22 +2,24 @@ import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import TopicGuide from "@/components/sections/TopicGuide";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "Move-Up Sellers Las Vegas | Sell and Buy with Dr. Jan Duffy",
-    description:
-      "Las Vegas move-up sellers: sequence the sale and the next purchase with Dr. Jan Duffy. Live CMA, not an equity slogan. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "move up buyer Las Vegas",
-      "sell and buy Las Vegas",
-      "home equity Las Vegas",
-    ],
-  },
-  {
-    src: "/images/hero/sellers.png",
-    alt: "Staged Las Vegas listing living room opening to a backyard pool",
-  },
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "Move-Up Sellers Las Vegas | Sell and Buy with Dr. Jan Duffy",
+      description:
+        "Las Vegas move-up sellers: sequence the sale and the next purchase with Dr. Jan Duffy. Live CMA, not an equity slogan. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "move up buyer Las Vegas",
+        "sell and buy Las Vegas",
+        "home equity Las Vegas",
+      ],
+    },
+    {
+      src: "/images/hero/sellers.png",
+      alt: "Staged Las Vegas listing living room opening to a backyard pool",
+    },
+  );
+}
 
 export default function MoveUpSellerPage() {
   return (

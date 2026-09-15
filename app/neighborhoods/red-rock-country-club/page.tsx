@@ -7,22 +7,24 @@ import {
   MARKET_SNAPSHOT_AS_OF,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "Red Rock Country Club Homes | Summerlin Golf Community",
-    description:
-      "Red Rock Country Club homes for sale in Summerlin — two-course golf community. Private tours with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "red rock country club homes",
-      "red rock country club summerlin",
-      "summerlin golf homes",
-    ],
-  },
-  {
-    src: "/images/neighborhoods/red-rock-country-club.png",
-    alt: "Red Rock Country Club golf community in Summerlin 89135",
-  },
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "Red Rock Country Club Homes | Summerlin Golf Community",
+      description:
+        "Red Rock Country Club homes for sale in Summerlin — two-course golf community. Private tours with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "red rock country club homes",
+        "red rock country club summerlin",
+        "summerlin golf homes",
+      ],
+    },
+    {
+      src: "/images/neighborhoods/red-rock-country-club.png",
+      alt: "Red Rock Country Club golf community in Summerlin 89135",
+    },
+  );
+}
 
 export default function RedRockCountryClubPage() {
   return (

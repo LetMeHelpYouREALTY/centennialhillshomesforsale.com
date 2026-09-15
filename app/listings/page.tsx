@@ -37,25 +37,27 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title:
-      "Las Vegas Homes for Sale | MLS Property Search | Berkshire Hathaway HomeServices",
-    description:
-      "Browse all Las Vegas and Henderson homes for sale with live MLS listings. Search by neighborhood, price, and features. Dr. Jan Duffy, Berkshire Hathaway HomeServices. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "Las Vegas homes for sale",
-      "Henderson real estate",
-      "MLS listings Las Vegas",
-      "Summerlin homes",
-      "89138 homes for sale",
-      "Siena Las Vegas",
-      "houses for sale Las Vegas",
-      "Berkshire Hathaway listings",
-    ],
-  },
-  PAGE_HERO_IMAGES.listings,
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title:
+        "Las Vegas Homes for Sale | MLS Property Search | Berkshire Hathaway HomeServices",
+      description:
+        "Browse all Las Vegas and Henderson homes for sale with live MLS listings. Search by neighborhood, price, and features. Dr. Jan Duffy, Berkshire Hathaway HomeServices. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "Las Vegas homes for sale",
+        "Henderson real estate",
+        "MLS listings Las Vegas",
+        "Summerlin homes",
+        "89138 homes for sale",
+        "Siena Las Vegas",
+        "houses for sale Las Vegas",
+        "Berkshire Hathaway listings",
+      ],
+    },
+    PAGE_HERO_IMAGES.listings,
+  );
+}
 
 const listingsPageSchema = generateWebPageSchema({
   name: "Las Vegas Homes for Sale",

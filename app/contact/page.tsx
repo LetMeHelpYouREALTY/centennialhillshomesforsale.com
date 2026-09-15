@@ -39,21 +39,24 @@ import { LeadCaptureForm } from "@/components/forms/LeadCaptureForm";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import { MARKET_SNAPSHOT_AS_OF } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "Contact Dr. Jan Duffy | Berkshire Hathaway HomeServices Las Vegas",
-    description:
-      "Contact Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Schedule an appointment, get directions, call (702) 222-1964, or email homes@heyberkshire.com. Las Vegas, Henderson, Summerlin.",
-    keywords: [
-      "contact real estate agent Las Vegas",
-      "Berkshire Hathaway contact",
-      "Dr. Jan Duffy phone",
-      "Las Vegas realtor contact",
-      "schedule real estate appointment",
-    ],
-  },
-  PAGE_HERO_IMAGES.contact,
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title:
+        "Contact Dr. Jan Duffy | Berkshire Hathaway HomeServices Las Vegas",
+      description:
+        "Contact Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Schedule an appointment, get directions, call (702) 222-1964, or email homes@heyberkshire.com. Las Vegas, Henderson, Summerlin.",
+      keywords: [
+        "contact real estate agent Las Vegas",
+        "Berkshire Hathaway contact",
+        "Dr. Jan Duffy phone",
+        "Las Vegas realtor contact",
+        "schedule real estate appointment",
+      ],
+    },
+    PAGE_HERO_IMAGES.contact,
+  );
+}
 
 const contactOrigin = getPublicSiteUrl();
 

@@ -8,22 +8,24 @@ import {
   MARKET_SNAPSHOT_AS_OF,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "Siena Homes for Sale | Guard-Gated 55+ Summerlin 89135",
-    description:
-      "Siena 55+ homes in Summerlin South ZIP 89135. Guard-gated campus, golf club vs HOA, current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "Siena Summerlin homes for sale",
-      "Siena 55 plus Las Vegas",
-      "Siena 89135",
-    ],
-  },
-  {
-    src: PAGE_HERO_IMAGES.fiftyFivePlus.src,
-    alt: PAGE_HERO_IMAGES.fiftyFivePlus.alt,
-  },
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "Siena Homes for Sale | Guard-Gated 55+ Summerlin 89135",
+      description:
+        "Siena 55+ homes in Summerlin South ZIP 89135. Guard-gated campus, golf club vs HOA, current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "Siena Summerlin homes for sale",
+        "Siena 55 plus Las Vegas",
+        "Siena 89135",
+      ],
+    },
+    {
+      src: PAGE_HERO_IMAGES.fiftyFivePlus.src,
+      alt: PAGE_HERO_IMAGES.fiftyFivePlus.alt,
+    },
+  );
+}
 
 const summerlinSouth = formatUsd(LISTING_MEDIANS_USD.summerlinSouth);
 

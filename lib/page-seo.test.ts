@@ -1,5 +1,17 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { titleWithoutLayoutSuffix, withShareImage } from "./page-seo";
+
+vi.mock("next/headers", () => ({
+  headers: () => ({
+    get: (key: string) => {
+      if (key === "x-pathname") return "/home-valuation";
+      if (key === "host" || key === "x-domain") {
+        return "www.heyberkshire.com";
+      }
+      return null;
+    },
+  }),
+}));
 
 const hero = {
   src: "/images/neighborhoods/centennial-hills.png",
@@ -30,6 +42,15 @@ describe("withShareImage", () => {
     expect(metadata.description).toContain("homes@heyberkshire.com");
     expect(metadata.description).toContain("(702) 222-1964");
     expect(metadata.title).toBe("Centennial Hills Homes for Sale");
+    expect(metadata.openGraph?.url).toBe(
+      "https://www.heyberkshire.com/home-valuation",
+    );
+    expect(metadata.openGraph?.siteName).toBe(
+      "Berkshire Hathaway HomeServices Nevada Properties",
+    );
+    expect(metadata.alternates?.canonical).toBe(
+      "https://www.heyberkshire.com/home-valuation",
+    );
   });
 
   it("uses an absolute title object for Open Graph", () => {

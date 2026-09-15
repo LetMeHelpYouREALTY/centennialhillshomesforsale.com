@@ -7,23 +7,25 @@ import {
   MARKET_SNAPSHOT_AS_OF,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "The Ridges Homes for Sale | Guard-Gated Summerlin Luxury",
-    description:
-      "The Ridges Summerlin luxury homes with Dr. Jan Duffy, BHHS Nevada Properties. Guard-gated villages, view lots, private tours. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "The Ridges homes for sale",
-      "The Ridges Summerlin",
-      "luxury homes Las Vegas",
-      "guard gated Summerlin",
-    ],
-  },
-  {
-    src: "/images/neighborhoods/the-ridges.png",
-    alt: "The Ridges Summerlin luxury homes against desert mountain views",
-  },
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "The Ridges Homes for Sale | Guard-Gated Summerlin Luxury",
+      description:
+        "The Ridges Summerlin luxury homes with Dr. Jan Duffy, BHHS Nevada Properties. Guard-gated villages, view lots, private tours. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "The Ridges homes for sale",
+        "The Ridges Summerlin",
+        "luxury homes Las Vegas",
+        "guard gated Summerlin",
+      ],
+    },
+    {
+      src: "/images/neighborhoods/the-ridges.png",
+      alt: "The Ridges Summerlin luxury homes against desert mountain views",
+    },
+  );
+}
 
 export default function TheRidgesPage() {
   return (

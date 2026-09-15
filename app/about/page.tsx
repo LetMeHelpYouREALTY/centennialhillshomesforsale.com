@@ -39,22 +39,24 @@ import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
 import { MARKET_SNAPSHOT_AS_OF } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "About Dr. Jan Duffy | Berkshire Hathaway HomeServices Las Vegas",
-    description:
-      "Meet Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Serving Las Vegas, Henderson, and Summerlin since 2008. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "Dr. Jan Duffy",
-      "Berkshire Hathaway HomeServices agent",
-      "Las Vegas realtor",
-      "BHHS Nevada Properties",
-      "Henderson real estate agent",
-      "Summerlin realtor",
-    ],
-  },
-  PAGE_HERO_IMAGES.about,
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "About Dr. Jan Duffy | Berkshire Hathaway HomeServices Las Vegas",
+      description:
+        "Meet Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Serving Las Vegas, Henderson, and Summerlin since 2008. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "Dr. Jan Duffy",
+        "Berkshire Hathaway HomeServices agent",
+        "Las Vegas realtor",
+        "BHHS Nevada Properties",
+        "Henderson real estate agent",
+        "Summerlin realtor",
+      ],
+    },
+    PAGE_HERO_IMAGES.about,
+  );
+}
 
 const aboutOrigin = getPublicSiteUrl();
 

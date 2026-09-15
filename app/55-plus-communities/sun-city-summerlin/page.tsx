@@ -8,22 +8,24 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "Sun City Summerlin Homes for Sale | 55+ Las Vegas",
-    description:
-      "Sun City Summerlin 55+ homes in ZIP 89134. Golf, rec centers, and current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "Sun City Summerlin homes for sale",
-      "Sun City Summerlin Las Vegas",
-      "55 plus communities Summerlin",
-    ],
-  },
-  {
-    src: "/images/neighborhoods/sun-city-summerlin.png",
-    alt: "Sun City Summerlin streets in west Las Vegas ZIP 89134",
-  },
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "Sun City Summerlin Homes for Sale | 55+ Las Vegas",
+      description:
+        "Sun City Summerlin 55+ homes in ZIP 89134. Golf, rec centers, and current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "Sun City Summerlin homes for sale",
+        "Sun City Summerlin Las Vegas",
+        "55 plus communities Summerlin",
+      ],
+    },
+    {
+      src: "/images/neighborhoods/sun-city-summerlin.png",
+      alt: "Sun City Summerlin streets in west Las Vegas ZIP 89134",
+    },
+  );
+}
 
 const median = formatUsd(LISTING_MEDIANS_USD.sunCitySummerlin);
 

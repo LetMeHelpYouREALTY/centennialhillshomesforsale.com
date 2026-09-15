@@ -15,18 +15,20 @@ import { VisitOffice } from "@/components/shared/VisitOffice";
 import SchemaScript from "@/components/SchemaScript";
 import { generateWebPageSchema } from "@/lib/schema";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "Security Policy | Dr. Jan Duffy, Las Vegas REALTOR®",
-    description:
-      "Security policy and responsible disclosure for heyberkshire.com — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com. Report vulnerabilities to security@heyberkshire.com.",
-    robots: {
-      index: true,
-      follow: true,
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "Security Policy | Dr. Jan Duffy, Las Vegas REALTOR®",
+      description:
+        "Security policy and responsible disclosure for heyberkshire.com — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com. Report vulnerabilities to security@heyberkshire.com.",
+      robots: {
+        index: true,
+        follow: true,
+      },
     },
-  },
-  { src: OFFICE_PHOTO_PATH, alt: OFFICE_PHOTO_ALT },
-);
+    { src: OFFICE_PHOTO_PATH, alt: OFFICE_PHOTO_ALT },
+  );
+}
 
 export default function SecurityPolicyPage() {
   return (

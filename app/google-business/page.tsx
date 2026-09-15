@@ -43,32 +43,34 @@ import {
 } from "@/lib/gbp-schema";
 import { MARKET_SNAPSHOT_AS_OF } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title:
-      "Dr. Jan Duffy, REALTOR® Las Vegas | Berkshire Hathaway HomeServices",
-    description:
-      "Dr. Jan Duffy is a Las Vegas REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. Summerlin, Henderson, 55+ communities, California relocation, and luxury listings. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "Dr. Jan Duffy realtor",
-      "Las Vegas real estate agent",
-      "Berkshire Hathaway HomeServices Las Vegas",
-      "Summerlin realtor",
-      "Henderson real estate agent",
-      "55+ communities Las Vegas",
-      "California relocation Las Vegas",
-    ],
-    openGraph: {
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
       title:
-        "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+        "Dr. Jan Duffy, REALTOR® Las Vegas | Berkshire Hathaway HomeServices",
       description:
-        "Las Vegas REALTOR® serving since 2008. Summerlin, Henderson, luxury listings, 55+ communities.",
-      url: "https://heyberkshire.com/google-business",
-      type: "profile",
+        "Dr. Jan Duffy is a Las Vegas REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. Summerlin, Henderson, 55+ communities, California relocation, and luxury listings. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "Dr. Jan Duffy realtor",
+        "Las Vegas real estate agent",
+        "Berkshire Hathaway HomeServices Las Vegas",
+        "Summerlin realtor",
+        "Henderson real estate agent",
+        "55+ communities Las Vegas",
+        "California relocation Las Vegas",
+      ],
+      openGraph: {
+        title:
+          "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+        description:
+          "Las Vegas REALTOR® serving since 2008. Summerlin, Henderson, luxury listings, 55+ communities.",
+        url: "https://heyberkshire.com/google-business",
+        type: "profile",
+      },
     },
-  },
-  PAGE_HERO_IMAGES.googleBusiness,
-);
+    PAGE_HERO_IMAGES.googleBusiness,
+  );
+}
 
 const latestGbpPosts = [...gbpPostTemplates]
   .sort((a, b) => b.publishDate.localeCompare(a.publishDate))

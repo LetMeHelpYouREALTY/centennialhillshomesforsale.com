@@ -8,23 +8,25 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "Luxury Homes Las Vegas | The Ridges, MacDonald Highlands",
-    description:
-      "Las Vegas luxury homes with Dr. Jan Duffy: The Ridges, Tournament Hills, MacDonald Highlands, Southern Highlands. Private tours. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "Las Vegas luxury homes",
-      "The Ridges Las Vegas",
-      "MacDonald Highlands Henderson",
-      "Tournament Hills",
-    ],
-  },
-  {
-    src: "/images/hero/luxury-homes.png",
-    alt: "Luxury custom home with mountain views in The Ridges, Summerlin",
-  },
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "Luxury Homes Las Vegas | The Ridges, MacDonald Highlands",
+      description:
+        "Las Vegas luxury homes with Dr. Jan Duffy: The Ridges, Tournament Hills, MacDonald Highlands, Southern Highlands. Private tours. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "Las Vegas luxury homes",
+        "The Ridges Las Vegas",
+        "MacDonald Highlands Henderson",
+        "Tournament Hills",
+      ],
+    },
+    {
+      src: "/images/hero/luxury-homes.png",
+      alt: "Luxury custom home with mountain views in The Ridges, Summerlin",
+    },
+  );
+}
 
 export default function LuxuryHomesLasVegasPage() {
   return (

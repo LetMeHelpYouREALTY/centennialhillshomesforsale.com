@@ -3,22 +3,24 @@ import { withShareImage } from "@/lib/page-seo";
 import TopicGuide from "@/components/sections/TopicGuide";
 import { CTA_PHONE } from "@/lib/contact";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "Why Berkshire Hathaway HomeServices | Dr. Jan Duffy",
-    description:
-      "Why work with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. One agent of record, BHHS brand, local CMA. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "Berkshire Hathaway HomeServices Las Vegas",
-      "Dr. Jan Duffy realtor",
-      "BHHS Nevada Properties",
-    ],
-  },
-  {
-    src: "/images/hero/office-lake-mead.png",
-    alt: "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard",
-  },
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "Why Berkshire Hathaway HomeServices | Dr. Jan Duffy",
+      description:
+        "Why work with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. One agent of record, BHHS brand, local CMA. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "Berkshire Hathaway HomeServices Las Vegas",
+        "Dr. Jan Duffy realtor",
+        "BHHS Nevada Properties",
+      ],
+    },
+    {
+      src: "/images/hero/office-lake-mead.png",
+      alt: "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard",
+    },
+  );
+}
 
 export default function WhyBerkshirePage() {
   return (

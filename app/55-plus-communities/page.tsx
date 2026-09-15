@@ -46,34 +46,36 @@ import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
 import Image from "next/image";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title:
-      "55+ Active Adult Communities Las Vegas | Sun City, Del Webb, Heritage | Dr. Jan Duffy",
-    description:
-      "Find 55+ homes in Las Vegas. Sun City Summerlin, Siena, Sun City Aliante, Del Webb Lake Las Vegas, Heritage at Stonebridge, Solera, Trilogy. Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "55+ communities Las Vegas",
-      "active adult communities Las Vegas",
-      "Sun City Summerlin",
-      "Siena Summerlin",
-      "Sun City Aliante",
-      "Del Webb Lake Las Vegas",
-      "Heritage at Stonebridge",
-      "Solera at Anthem",
-      "Trilogy Summerlin",
-      "retirement communities Nevada",
-      "55 plus homes Las Vegas",
-    ],
-    openGraph: {
-      title: "55+ Communities in Las Vegas | Dr. Jan Duffy",
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title:
+        "55+ Active Adult Communities Las Vegas | Sun City, Del Webb, Heritage | Dr. Jan Duffy",
       description:
-        "Sun City, Siena, Del Webb, Heritage at Stonebridge, and other 55+ HOPA campuses with Dr. Jan Duffy. Berkshire Hathaway HomeServices Nevada Properties.",
-      type: "website",
+        "Find 55+ homes in Las Vegas. Sun City Summerlin, Siena, Sun City Aliante, Del Webb Lake Las Vegas, Heritage at Stonebridge, Solera, Trilogy. Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "55+ communities Las Vegas",
+        "active adult communities Las Vegas",
+        "Sun City Summerlin",
+        "Siena Summerlin",
+        "Sun City Aliante",
+        "Del Webb Lake Las Vegas",
+        "Heritage at Stonebridge",
+        "Solera at Anthem",
+        "Trilogy Summerlin",
+        "retirement communities Nevada",
+        "55 plus homes Las Vegas",
+      ],
+      openGraph: {
+        title: "55+ Communities in Las Vegas | Dr. Jan Duffy",
+        description:
+          "Sun City, Siena, Del Webb, Heritage at Stonebridge, and other 55+ HOPA campuses with Dr. Jan Duffy. Berkshire Hathaway HomeServices Nevada Properties.",
+        type: "website",
+      },
     },
-  },
-  PAGE_HERO_IMAGES.fiftyFivePlus,
-);
+    PAGE_HERO_IMAGES.fiftyFivePlus,
+  );
+}
 
 const faqSchema = {
   "@context": "https://schema.org",

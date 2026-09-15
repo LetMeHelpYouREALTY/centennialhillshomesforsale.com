@@ -20,22 +20,24 @@ import { generateWebPageSchema } from "@/lib/schema";
 import { MlsSearchForm } from "@/components/search/MlsSearchForm";
 import { GuideLeadForm } from "@/components/forms/GuideLeadForm";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "Las Vegas Neighborhoods | Centennial Hills, Inspirada, Summerlin",
-    description:
-      "Centennial Hills, Inspirada, Tournament Hills, 89144, 89138, and Siena 55+ guides from Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "centennial hills real estate",
-      "inspirada henderson",
-      "tournament hills real estate",
-      "89144 homes for sale",
-      "89138 homes for sale",
-      "Siena Summerlin",
-    ],
-  },
-  PAGE_HERO_IMAGES.homepage,
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "Las Vegas Neighborhoods | Centennial Hills, Inspirada, Summerlin",
+      description:
+        "Centennial Hills, Inspirada, Tournament Hills, 89144, 89138, and Siena 55+ guides from Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "centennial hills real estate",
+        "inspirada henderson",
+        "tournament hills real estate",
+        "89144 homes for sale",
+        "89138 homes for sale",
+        "Siena Summerlin",
+      ],
+    },
+    PAGE_HERO_IMAGES.homepage,
+  );
+}
 
 const neighborhoods = [
   {

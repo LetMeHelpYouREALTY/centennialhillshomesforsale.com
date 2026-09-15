@@ -37,6 +37,7 @@ describe("page metadata source copy", () => {
       const src = readFileSync(file, "utf8");
       if (/title:\s*(?:\n\s*)?"[^"]*Dr\. Jan Duffy/.test(src)) {
         expect(src, file).toContain("withShareImage");
+        expect(src, file).toContain("generateMetadata");
       }
     }
   });

@@ -28,23 +28,25 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "Sell Your Las Vegas Home | Berkshire Hathaway HomeServices",
-    description:
-      "Sell your Las Vegas or Henderson home with comps-based pricing and Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Request a CMA. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "sell home Las Vegas",
-      "Las Vegas listing agent",
-      "Berkshire Hathaway sell house",
-      "Henderson home selling",
-      "what is my home worth Las Vegas",
-      "Las Vegas real estate agent",
-      "Summerlin home selling",
-    ],
-  },
-  PAGE_HERO_IMAGES.sellers,
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "Sell Your Las Vegas Home | Berkshire Hathaway HomeServices",
+      description:
+        "Sell your Las Vegas or Henderson home with comps-based pricing and Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Request a CMA. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "sell home Las Vegas",
+        "Las Vegas listing agent",
+        "Berkshire Hathaway sell house",
+        "Henderson home selling",
+        "what is my home worth Las Vegas",
+        "Las Vegas real estate agent",
+        "Summerlin home selling",
+      ],
+    },
+    PAGE_HERO_IMAGES.sellers,
+  );
+}
 
 const sellerSchema = generateServiceSchema({
   name: "Home Selling Services Las Vegas",

@@ -8,22 +8,24 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "Las Vegas Real Estate Market Report | September 2026",
-    description:
-      "Las Vegas and Henderson housing snapshot from realtor.com listing medians dated September 14, 2026. Analysis from Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "Las Vegas real estate market",
-      "Las Vegas home prices 2026",
-      "Henderson real estate market",
-    ],
-  },
-  {
-    src: "/images/hero/market-report.png",
-    alt: "Market packet on a desk overlooking the Las Vegas valley",
-  },
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "Las Vegas Real Estate Market Report | September 2026",
+      description:
+        "Las Vegas and Henderson housing snapshot from realtor.com listing medians dated September 14, 2026. Analysis from Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "Las Vegas real estate market",
+        "Las Vegas home prices 2026",
+        "Henderson real estate market",
+      ],
+    },
+    {
+      src: "/images/hero/market-report.png",
+      alt: "Market packet on a desk overlooking the Las Vegas valley",
+    },
+  );
+}
 
 const lv = formatUsd(LISTING_MEDIANS_USD.lasVegas);
 const henList = formatUsd(LISTING_MEDIANS_USD.hendersonListing);

@@ -8,23 +8,25 @@ import {
   MARKET_SNAPSHOT_SOURCE,
 } from "@/lib/market-snapshots";
 
-export const metadata: Metadata = withShareImage(
-  {
-    title: "Mountains Edge Homes for Sale | Southwest Las Vegas",
-    description:
-      "Mountains Edge Las Vegas homes for sale near Exploration Peak Park. Current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
-    keywords: [
-      "Mountains Edge homes for sale",
-      "Mountains Edge Las Vegas",
-      "southwest Las Vegas homes",
-      "Exploration Peak Park",
-    ],
-  },
-  {
-    src: "/images/neighborhoods/mountains-edge.png",
-    alt: "Southwest Las Vegas desert mountain setting near Mountains Edge",
-  },
-);
+export function generateMetadata(): Metadata {
+  return withShareImage(
+    {
+      title: "Mountains Edge Homes for Sale | Southwest Las Vegas",
+      description:
+        "Mountains Edge Las Vegas homes for sale near Exploration Peak Park. Current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      keywords: [
+        "Mountains Edge homes for sale",
+        "Mountains Edge Las Vegas",
+        "southwest Las Vegas homes",
+        "Exploration Peak Park",
+      ],
+    },
+    {
+      src: "/images/neighborhoods/mountains-edge.png",
+      alt: "Southwest Las Vegas desert mountain setting near Mountains Edge",
+    },
+  );
+}
 
 const median = formatUsd(LISTING_MEDIANS_USD.mountainsEdge);
 
