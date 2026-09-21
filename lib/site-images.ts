@@ -195,8 +195,8 @@ const NEIGHBORHOOD_IMAGE_MAP: Record<string, SiteImage> = {
     alt: "Solera at Anthem Henderson 55-plus single-story homes and rec courts",
   },
   siena: {
-    src: "/images/hero/55-plus-hub.png",
-    alt: "Summerlin 55-plus golf and rec setting used for the Siena guide until a first-party Siena street photo is on file",
+    src: "/images/neighborhoods/siena.png",
+    alt: "Siena guard-gated 55-plus community in Summerlin South 89135 with Tuscan-style homes and a golf course below Red Rock",
   },
 };
 
@@ -227,7 +227,7 @@ export const HEADING_IMAGE_RULES: ReadonlyArray<{
   },
   {
     test: /\bsiena\b/i,
-    src: PAGE_HERO_IMAGES.fiftyFivePlus.src,
+    src: "/images/neighborhoods/siena.png",
   },
   {
     test: /\b(55\+|sun city|del webb|hopa|active adult|age-restrict|occupancy)/i,
