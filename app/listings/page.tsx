@@ -265,12 +265,12 @@ const neighborhoods = [
   },
 ];
 
-export default function ListingsPage({
+export default async function ListingsPage({
   searchParams,
 }: {
-  searchParams: { q?: string | string[] };
+  searchParams: Promise<{ q?: string | string[] }>;
 }) {
-  const rawQuery = searchParams.q;
+  const rawQuery = (await searchParams).q;
   const query =
     (Array.isArray(rawQuery) ? rawQuery[0] : rawQuery)?.trim() ?? "";
 

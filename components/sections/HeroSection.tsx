@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import {
@@ -74,12 +75,12 @@ export default function HeroSection() {
           or email the client line for a live pull.
         </p>
         <div className="mb-4 flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row">
-          <a
+          <Link
             href="/listings"
             className="inline-flex min-h-11 items-center justify-center rounded-md bg-white px-8 py-4 text-lg font-bold text-blue-700 no-underline hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
           >
             Search live MLS
-          </a>
+          </Link>
           <a
             href={CTA_TEL}
             className="inline-flex min-h-11 items-center rounded-md bg-blue-600 px-6 py-3 font-semibold text-white no-underline hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"

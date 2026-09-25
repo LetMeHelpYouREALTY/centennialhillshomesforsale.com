@@ -31,9 +31,6 @@ const nextConfig = {
   // Compression
   compress: true,
 
-  // Performance optimizations
-  swcMinify: true,
-
   async redirects() {
     return [
       ...gscLegacyRedirects,

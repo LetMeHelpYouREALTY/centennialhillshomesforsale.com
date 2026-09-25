@@ -3,7 +3,7 @@
  * Always emit https + www for this property so Google sees one host.
  */
 
-import { headers } from "next/headers";
+import { headers, type UnsafeUnwrappedHeaders } from "next/headers";
 
 export const DEFAULT_SITE_HOST = "www.centennialhillshomesforsale.com";
 
@@ -30,9 +30,17 @@ export function canonicalHostFromHeader(
   return host.startsWith("www.") ? host : host;
 }
 
+// Next 15: sync access kept for sync generateMetadata callers (withShareImage).
+// Must become async before a Next 16 upgrade.
+function syncHeaders(): UnsafeUnwrappedHeaders {
+  return headers() as unknown as UnsafeUnwrappedHeaders;
+}
+
 export function getRequestHost(): string {
   const headerHost =
-    headers().get("x-domain") || headers().get("host") || DEFAULT_SITE_HOST;
+    syncHeaders().get("x-domain") ||
+    syncHeaders().get("host") ||
+    DEFAULT_SITE_HOST;
   return canonicalHostFromHeader(headerHost);
 }
 
@@ -49,7 +57,7 @@ export function normalizePathname(pathname: string | null | undefined): string {
 }
 
 export function getRequestPathname(): string {
-  return normalizePathname(headers().get("x-pathname"));
+  return normalizePathname(syncHeaders().get("x-pathname"));
 }
 
 export function getCanonicalUrl(pathname?: string): string {

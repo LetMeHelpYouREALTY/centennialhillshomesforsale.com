@@ -2,8 +2,8 @@ import { headers } from "next/headers";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { breadcrumbsForPath } from "@/lib/route-labels";
 
-export function SiteBreadcrumbs() {
-  const pathname = headers().get("x-pathname") || "/";
+export async function SiteBreadcrumbs() {
+  const pathname = (await headers()).get("x-pathname") || "/";
   const items = breadcrumbsForPath(pathname);
   if (items.length === 0) {
     return null;
