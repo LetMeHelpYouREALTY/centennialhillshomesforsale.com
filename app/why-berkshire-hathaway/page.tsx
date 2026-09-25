@@ -53,7 +53,7 @@ export default function WhyBerkshirePage() {
         },
         {
           heading: "How to reach this practice",
-          body: "Client line (702) 222-1964. Email homes@heyberkshire.com. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Hours Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday by appointment. (702) 500-1942 is the professional/FUB line, not a consumer CTA.",
+          body: "Client line (702) 222-1964. Email homes@heyberkshire.com. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Hours Daily 8am–8pm. (702) 500-1942 is the professional/FUB line, not a consumer CTA.",
         },
         {
           heading: "What a CMA from this office looks like",
@@ -74,7 +74,7 @@ export default function WhyBerkshirePage() {
         {
           question: "Where is the office?",
           answer:
-            "9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday by appointment.",
+            "9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Daily 8am–8pm.",
         },
         {
           question: "What email should clients use?",

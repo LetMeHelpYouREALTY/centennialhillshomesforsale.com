@@ -42,13 +42,13 @@ export const businessInfo = {
 
   // Hours - Match GBP exactly
   hours: {
-    monday: "09:00-18:00",
-    tuesday: "09:00-18:00",
-    wednesday: "09:00-18:00",
-    thursday: "09:00-18:00",
-    friday: "09:00-18:00",
-    saturday: "10:00-16:00",
-    sunday: "By Appointment",
+    monday: "08:00-20:00",
+    tuesday: "08:00-20:00",
+    wednesday: "08:00-20:00",
+    thursday: "08:00-20:00",
+    friday: "08:00-20:00",
+    saturday: "08:00-20:00",
+    sunday: "08:00-20:00",
   },
 
   // Geo coordinates — must match officeInfo / Google Maps pin
@@ -213,7 +213,7 @@ My approach is simple: put the client's written goals first, pull live comps, an
 
 55+ HOPA files cover Sun City Summerlin, Siena, Trilogy at Summerlin, Sun City Anthem in Henderson, Del Webb Lake Las Vegas, and Solera at Anthem. Investment files cover single-family rentals and multi-family purchases across the Las Vegas metro. I do not manage rentals.
 
-Office located at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Available Monday through Friday 9am-6pm, Saturday 10am-4pm, and Sunday by appointment. Call (702) 222-1964 or email homes@heyberkshire.com with the address you want on a CMA.`,
+Office located at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Available daily 8am-8pm. Call (702) 222-1964 or email homes@heyberkshire.com with the address you want on a CMA.`,
 };
 
 // FAQ Schema for GBP Q&A section
@@ -266,7 +266,7 @@ export const gbpFAQs = [
   {
     question: "How do I schedule a consultation with Dr. Jan Duffy?",
     answer:
-      "Call or text (702) 222-1964 for immediate assistance, or email homes@heyberkshire.com. Office visits available at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Monday-Friday 9am-6pm, Saturday 10am-4pm, Sunday by appointment.",
+      "Call or text (702) 222-1964 for immediate assistance, or email homes@heyberkshire.com. Office visits available at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Daily 8am-8pm.",
   },
   {
     question: "Does Dr. Jan help with investment properties in Las Vegas?",

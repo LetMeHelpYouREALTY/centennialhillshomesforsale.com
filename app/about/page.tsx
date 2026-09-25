@@ -113,7 +113,7 @@ const aboutFaqs = [
   {
     question: "Where is the office?",
     answer:
-      "9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Monday–Friday 9am–6pm, Saturday 10am–4pm, Sunday by appointment.",
+      "9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Daily 8am–8pm.",
   },
   {
     question: "Is Berkshire Hathaway HomeServices a franchise?",
@@ -332,7 +332,7 @@ export default function AboutPage() {
                         className="h-5 w-5 mr-3 text-blue-600"
                         aria-hidden="true"
                       />
-                      Mon-Fri 9am-6pm, Sat 10am-4pm, Sun by appointment
+                      Daily 8am-8pm
                     </div>
                   </div>
                 </div>

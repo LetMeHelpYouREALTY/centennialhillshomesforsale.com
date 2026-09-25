@@ -24,10 +24,10 @@ export const REALSCOUT_SEARCH_URL = "https://drjanduffy.realscout.com/";
 export const CALENDLY_SHOWING_URL = "https://calendly.com/drjanduffy/showing";
 
 export const OFFICE_HOURS = {
-  weekday: "Monday–Friday 9:00 AM – 6:00 PM",
-  saturday: "Saturday 10:00 AM – 4:00 PM",
-  sunday: "Sunday by appointment",
-  display: "Mon–Fri 9am–6pm · Sat 10am–4pm · Sun by appointment",
+  weekday: "Monday–Sunday 8:00 AM – 8:00 PM",
+  saturday: "Saturday 8:00 AM – 8:00 PM",
+  sunday: "Sunday 8:00 AM – 8:00 PM",
+  display: "Daily 8am–8pm",
 } as const;
 
 export const OPENING_HOURS_SPEC = [
@@ -38,14 +38,11 @@ export const OPENING_HOURS_SPEC = [
       "Wednesday",
       "Thursday",
       "Friday",
+      "Saturday",
+      "Sunday",
     ] as const,
-    opens: "09:00",
-    closes: "18:00",
-  },
-  {
-    dayOfWeek: ["Saturday"] as const,
-    opens: "10:00",
-    closes: "16:00",
+    opens: "08:00",
+    closes: "20:00",
   },
 ];
 

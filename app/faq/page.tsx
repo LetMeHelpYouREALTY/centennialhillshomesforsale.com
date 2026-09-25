@@ -73,7 +73,7 @@ export default function FaqPage() {
           imageSrc: "/images/hero/55-plus-hub.png",
           imageAlt:
             "55-plus active adult community in Summerlin with golf course and rec center",
-          body: "HOPA occupancy rules differ by campus — confirm CC&Rs. Register me before the first builder visit on new construction. Email homes@heyberkshire.com or call (702) 222-1964. Hours Mon–Fri 9am–6pm, Sat 10am–4pm, Sunday by appointment.",
+          body: "HOPA occupancy rules differ by campus — confirm CC&Rs. Register me before the first builder visit on new construction. Email homes@heyberkshire.com or call (702) 222-1964. Hours Daily 8am–8pm.",
         },
         {
           heading: "How I answer a live file",
