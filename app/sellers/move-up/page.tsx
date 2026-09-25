@@ -15,8 +15,8 @@ export function generateMetadata(): Metadata {
       ],
     },
     {
-      src: "/images/hero/sellers.png",
-      alt: "Staged Las Vegas listing living room opening to a backyard pool",
+      src: "/images/hero/move-up.png",
+      alt: "Larger two-story move-up home in Las Vegas with a three-car garage and Red Rock mountain backdrop",
     },
   );
 }
@@ -28,8 +28,8 @@ export default function MoveUpSellerPage() {
       slug="move-up"
       badge="Sellers"
       h1="Move-Up Sellers in Las Vegas"
-      imageSrc="/images/hero/sellers.png"
-      imageAlt="Staged Las Vegas listing living room opening to a backyard pool"
+      imageSrc="/images/hero/move-up.png"
+      imageAlt="Larger two-story move-up home in Las Vegas with a three-car garage and Red Rock mountain backdrop"
       intro="A move-up is two contracts, not a vibe. I price the home you have with a live CMA, then write the next offer — 89138 Summerlin West, Centennial Hills, or a 55+ campus such as Siena — with the contingency or cash-from-sale plan that actually closes."
       stats={[
         { value: "CMA", label: "Current house" },

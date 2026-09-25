@@ -15,8 +15,8 @@ export function generateMetadata(): Metadata {
       ],
     },
     {
-      src: "/images/hero/55-plus-hub.png",
-      alt: "One-story 55-plus community homes in Summerlin Las Vegas",
+      src: "/images/hero/downsizing.png",
+      alt: "Single-story right-sized Las Vegas home with low-maintenance desert landscaping and mountain views",
     },
   );
 }
@@ -28,8 +28,8 @@ export default function DownsizingPage() {
       slug="downsizing"
       badge="Sellers"
       h1="Downsizing in Las Vegas and Henderson"
-      imageSrc="/images/hero/55-plus-hub.png"
-      imageAlt="One-story 55-plus community homes in Summerlin Las Vegas"
+      imageSrc="/images/hero/downsizing.png"
+      imageAlt="Single-story right-sized Las Vegas home with low-maintenance desert landscaping and mountain views"
       intro="Downsizing is square footage, stairs, and HOA — then a sale that funds the next door in 89138 Summerlin West, a one-story resale, or a 55+ HOPA campus such as Siena. I list the house you have without a lifestyle slogan."
       stats={[
         { value: "One-story", label: "Common request" },
