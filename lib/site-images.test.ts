@@ -72,7 +72,7 @@ describe("site images catalog", () => {
       neighborhoodName: "Siena",
       neighborhoodSlug: "siena",
     });
-    expect(siena.src).toBe(PAGE_HERO_IMAGES.fiftyFivePlus.src);
+    expect(siena.src).toBe("/images/neighborhoods/siena.png");
     expect(siena.alt).toContain("Siena occupancy");
 
     const hoa = resolveSectionImage({
@@ -186,14 +186,14 @@ describe("site images catalog", () => {
     const mls = resolveSectionImage({
       heading: "Search live MLS",
       neighborhoodName: "Siena",
-      avoidSrc: PAGE_HERO_IMAGES.fiftyFivePlus.src,
+      avoidSrc: "/images/neighborhoods/siena.png",
     });
     expect(mls.src).toBe(PAGE_HERO_IMAGES.listings.src);
 
     const mlsSiena = resolveSectionImage({
       heading: "Search live MLS in Siena",
       neighborhoodName: "Siena",
-      avoidSrc: PAGE_HERO_IMAGES.fiftyFivePlus.src,
+      avoidSrc: "/images/neighborhoods/siena.png",
     });
     expect(mlsSiena.src).toBe(PAGE_HERO_IMAGES.listings.src);
 

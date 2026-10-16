@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { withShareImage } from "@/lib/page-seo";
 import NeighborhoodGuide from "@/components/sections/NeighborhoodGuide";
-import { PAGE_HERO_IMAGES } from "@/lib/site-images";
+import { getNeighborhoodImage } from "@/lib/site-images";
 import {
   formatUsd,
   LISTING_MEDIANS_USD,
   MARKET_SNAPSHOT_AS_OF,
 } from "@/lib/market-snapshots";
+
+const sienaImage = getNeighborhoodImage("siena");
 
 export function generateMetadata(): Metadata {
   return withShareImage(
@@ -21,8 +23,8 @@ export function generateMetadata(): Metadata {
       ],
     },
     {
-      src: PAGE_HERO_IMAGES.fiftyFivePlus.src,
-      alt: PAGE_HERO_IMAGES.fiftyFivePlus.alt,
+      src: sienaImage.src,
+      alt: sienaImage.alt,
     },
   );
 }
@@ -40,8 +42,8 @@ export default function SienaPage() {
       intro="Siena is a guard-gated 55+ campus in Summerlin South ZIP 89135. Sunrise Company developed it (construction began 1999; sales completed 2006). It is not Sun City Summerlin and it is not Trilogy. Confirm occupancy, golf-club dues, and HOA on the resale packet."
       zipCodes={["89135"]}
       city="Las Vegas"
-      imageSrc={PAGE_HERO_IMAGES.fiftyFivePlus.src}
-      imageAlt="Summerlin 55-plus golf and rec setting used for the Siena guide until a first-party Siena street photo is on file"
+      imageSrc={sienaImage.src}
+      imageAlt={sienaImage.alt}
       stats={[
         { value: "Confirm HOA", label: "Home count" },
         { value: "Gated", label: "Access" },
