@@ -48,7 +48,7 @@
     "copy-to-clipboard": "^3.3.3",
     "geist": "^1.7.2",
     "lucide-react": "^0.397.0",
-    "next": "^15.5.26",
+    "next": "15.5.28",
     "openai": "^4.28.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
