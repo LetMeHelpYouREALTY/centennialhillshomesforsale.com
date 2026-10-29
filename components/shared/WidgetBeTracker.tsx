@@ -2,6 +2,9 @@ import Script from "next/script";
 
 /** Homepage-only third-party tracker. Keep off inner pages for TBT. */
 export function WidgetBeTracker() {
+  // Production only: keeps Vercel preview URLs out of the FUB Pixel install list
+  if (process.env.VERCEL_ENV !== "production") return null;
+
   return (
     <Script id="widget-tracker" strategy="lazyOnload">{`
       (function(w,i,d,g,e,t){w["WidgetTrackerObject"]=g;(w[g]=w[g]||function()
