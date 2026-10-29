@@ -61,7 +61,7 @@ export default function LuxuryHomesLasVegasPage() {
         },
         {
           heading: "Discretion and representation",
-          body: "Berkshire Hathaway HomeServices Nevada Properties is the brokerage. Compensation is in a written buyer agreement. For listings, marketing is negotiated before the board goes up. Call (702) 222-1964 or email homes@heyberkshire.com.",
+          body: "Compensation is in a written buyer agreement. For listings, marketing is negotiated before the board goes up. Call (702) 222-1964 or email homes@heyberkshire.com.",
         },
         {
           heading: "Gate desks and architectural packets",

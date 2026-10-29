@@ -52,7 +52,7 @@ export function generateMetadata(): Metadata {
         "89138 homes for sale",
         "Siena Las Vegas",
         "houses for sale Las Vegas",
-        "Berkshire Hathaway listings",
+        
       ],
     },
     PAGE_HERO_IMAGES.listings,
@@ -62,7 +62,7 @@ export function generateMetadata(): Metadata {
 const listingsPageSchema = generateWebPageSchema({
   name: "Las Vegas Homes for Sale",
   description:
-    "Browse Las Vegas and Henderson homes for sale with live MLS listings. Dr. Jan Duffy, Berkshire Hathaway HomeServices. Call (702) 222-1964 or email homes@heyberkshire.com.",
+    "Browse Las Vegas and Henderson homes for sale with live MLS listings. Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
   url: "/listings",
 });
 
@@ -287,7 +287,7 @@ export default async function ListingsPage({
           {/* Hero Section */}
           <div className="max-w-4xl mx-auto text-center mb-12">
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Berkshire Hathaway HomeServices Nevada Properties
+                            Dr. Jan Duffy, REALTOR®
             </div>
             <h1 className="mb-6 text-balance text-4xl font-bold text-slate-900 md:text-5xl lg:text-6xl">
               Las Vegas Homes for Sale
@@ -299,8 +299,7 @@ export default async function ListingsPage({
             <p className="text-pretty text-xl text-slate-600 mb-8">
               Search live Las Vegas, Henderson, and Summerlin MLS inventory
               through RealScout. Counts change by the hour — I will not invent a
-              5,000-listing headline. Call or email Dr. Jan Duffy at{" "}
-              <strong>Berkshire Hathaway HomeServices</strong>.
+              5,000-listing headline. Call or email <strong>Dr. Jan Duffy</strong>.
             </p>
             {query ? (
               <p className="mx-auto mb-8 max-w-2xl rounded-lg border border-blue-200 bg-blue-50 p-4 text-left text-slate-800">
@@ -483,8 +482,7 @@ export default async function ListingsPage({
             <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Summerlin (including 89138), Henderson, Centennial Hills, Siena
               55+, and North Las Vegas differ by ZIP, commute, HOA, and square
-              footage. As a Berkshire Hathaway HomeServices agent serving Las
-              Vegas since 2008, I match those facts — not school slogans or a
+              footage. As a REALTOR® in real estate since 1983, I match those facts — not school slogans or a
               “family-friendly” pitch.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -531,9 +529,7 @@ export default async function ListingsPage({
               Why tour Las Vegas listings with Dr. Jan Duffy
             </h2>
             <p className="text-pretty text-slate-300 text-center max-w-3xl mx-auto mb-8">
-              Representation is a written buyer agreement and a live MLS pull. I
-              bring Berkshire Hathaway HomeServices marketing and referral tools
-              plus Clark County files since 2008.
+              Representation is a written buyer agreement and a live MLS pull. I bring listing marketing, agent referrals, and a career in real estate since 1983.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
@@ -542,8 +538,7 @@ export default async function ListingsPage({
                 </div>
                 <h3 className="font-bold mb-2">MLS + referral network</h3>
                 <p className="text-pretty text-slate-300 text-sm">
-                  See listings through RealScout MLS search and the BHHS
-                  referral network — not a 50,000-agent slogan
+                  See listings through RealScout MLS search and agent referrals
                 </p>
               </div>
               <div className="text-center">
@@ -636,8 +631,7 @@ export default async function ListingsPage({
             <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Pre-approval, live MLS, a written offer, inspection, then the
               close date on the purchase agreement. That is the sequence when
-              you buy in Las Vegas with Dr. Jan Duffy and Berkshire Hathaway
-              HomeServices.
+              you buy in Las Vegas with Dr. Jan Duffy.
             </p>
             <div className="space-y-6">
               <div className="flex items-start">

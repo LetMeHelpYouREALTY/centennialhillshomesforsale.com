@@ -65,8 +65,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
         </h1>
         <p className="mb-4 text-pretty text-lg text-slate-600">
           URL segment <span className="font-mono text-slate-900">{id}</span> is
-          not a published CMA or a current MLS photo set. Berkshire Hathaway
-          HomeServices Nevada Properties and Dr. Jan Duffy use RealScout for
+          not a published CMA or a current MLS photo set. Dr. Jan Duffy uses RealScout for
           live listings. I will not invent an $850,000 Summerlin house for
           Google.
         </p>

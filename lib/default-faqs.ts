@@ -22,7 +22,7 @@ export const defaultFaqs: SiteFaq[] = [
   {
     question: "Who is the agent of record?",
     answer:
-      "Serving Las Vegas since 2008, Dr. Jan Duffy is one agent of record at Berkshire Hathaway HomeServices Nevada Properties — not a kiosk script.",
+      "In real estate since 1983, Dr. Jan Duffy is your one agent of record — not a kiosk script.",
   },
   {
     question: "Can you help with investment properties?",

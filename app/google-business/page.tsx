@@ -48,13 +48,13 @@ export function generateMetadata(): Metadata {
   return withShareImage(
     {
       title:
-        "Dr. Jan Duffy, REALTOR® Las Vegas | Berkshire Hathaway HomeServices",
+        "Dr. Jan Duffy, REALTOR® Las Vegas",
       description:
-        "Dr. Jan Duffy is a Las Vegas REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. Summerlin, Henderson, 55+ communities, California relocation, and luxury listings. Call (702) 222-1964 or email homes@heyberkshire.com.",
+        "Dr. Jan Duffy is a Las Vegas REALTOR®, in real estate since 1983. Summerlin, Henderson, 55+ communities, California relocation, and luxury listings. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [
         "Dr. Jan Duffy realtor",
         "Las Vegas real estate agent",
-        "Berkshire Hathaway HomeServices Las Vegas",
+        
         "Summerlin realtor",
         "Henderson real estate agent",
         "55+ communities Las Vegas",
@@ -62,9 +62,9 @@ export function generateMetadata(): Metadata {
       ],
       openGraph: {
         title:
-          "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+          "Dr. Jan Duffy, REALTOR® Las Vegas",
         description:
-          "Las Vegas REALTOR® serving since 2008. Summerlin, Henderson, luxury listings, 55+ communities.",
+          "Las Vegas REALTOR® in real estate since 1983. Summerlin, Henderson, luxury listings, 55+ communities.",
         url: "https://heyberkshire.com/google-business",
         type: "profile",
       },
@@ -97,7 +97,7 @@ export default function GoogleBusinessPage() {
         schema={generateWebPageSchema({
           name: "Dr. Jan Duffy, REALTOR® Las Vegas",
           description:
-            "Dr. Jan Duffy is a Las Vegas REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
+            "Dr. Jan Duffy is a Las Vegas REALTOR®, in real estate since 1983. Call (702) 222-1964 or email homes@heyberkshire.com.",
           url: "/google-business",
         })}
       />
@@ -128,8 +128,8 @@ export default function GoogleBusinessPage() {
                       aria-hidden="true"
                     />
                     <span className="font-semibold text-blue-50">
-                      Berkshire Hathaway HomeServices
-                    </span>
+                Dr. Jan Duffy, REALTOR®
+              </span>
                   </div>
                   <h1 className="mb-4 text-balance text-4xl font-bold md:text-5xl">
                     Dr. Jan Duffy

@@ -7,7 +7,7 @@ export function generateMetadata(): Metadata {
     {
       title: "Real Estate Services Las Vegas | Dr. Jan Duffy",
       description:
-        "Buying, selling, luxury, 55+, new construction, investment, and relocation with Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
+        "Buying, selling, luxury, 55+, new construction, investment, and relocation with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [
         "Las Vegas real estate services",
         "home buying Las Vegas",
@@ -63,7 +63,7 @@ export default function ServicesPage() {
           heading: "How representation starts",
           imageSrc: "/images/hero/office-lake-mead.png",
           imageAlt:
-            "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard",
+            "Dr. Jan Duffy real estate office on West Lake Mead Boulevard",
           body: "Call (702) 222-1964 or email homes@heyberkshire.com. Buyer files need a written buyer agreement. Seller files start with a CMA. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134.",
         },
         {

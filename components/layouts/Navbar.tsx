@@ -240,13 +240,13 @@ export default function Navbar() {
           <Link
             href="/"
             className="flex min-h-11 min-w-0 items-center gap-3 no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
-            aria-label="Dr. Jan Duffy, Berkshire Hathaway HomeServices — home"
+            aria-label="Dr. Jan Duffy, REALTOR® — home"
           >
             <AgentPhoto variant="navbar" className="shrink-0" />
             <span className="flex min-w-0 flex-col">
               <span className="text-lg font-bold leading-tight text-slate-900 transition-colors hover:text-blue-600 md:text-xl lg:text-2xl">
-                Berkshire Hathaway
-                <span className="text-blue-600"> HomeServices</span>
+                                Dr. Jan Duffy
+                <span className="text-blue-600"> REALTOR®</span>
               </span>
               <span className="hidden text-xs text-slate-600 sm:block">
                 Dr. Jan Duffy · Nevada Properties

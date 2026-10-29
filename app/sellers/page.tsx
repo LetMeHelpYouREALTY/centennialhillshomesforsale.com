@@ -34,11 +34,11 @@ export function generateMetadata(): Metadata {
     {
       title: "Sell Your Las Vegas Home | Live CMA",
       description:
-        "Sell your Las Vegas or Henderson home with comps-based pricing and Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Request a CMA. Call (702) 222-1964 or email homes@heyberkshire.com.",
+        "Sell your Las Vegas or Henderson home with comps-based pricing and Dr. Jan Duffy. Request a CMA. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [
         "sell home Las Vegas",
         "Las Vegas listing agent",
-        "Berkshire Hathaway sell house",
+        
         "Henderson home selling",
         "what is my home worth Las Vegas",
         "Las Vegas real estate agent",
@@ -69,19 +69,19 @@ const sellingBenefits = [
     icon: Globe,
     title: "Listing marketing in writing",
     description:
-      "Professional photography, virtual tours, drone when the lot warrants it, MLS syndication, and BHHS network exposure. The marketing plan is on the listing consult — not a slogan.",
+      "Professional photography, virtual tours, drone when the lot warrants it, and MLS syndication. The marketing plan is on the listing consult — not a slogan.",
   },
   {
     icon: Users,
-    title: "BHHS referral network",
+    title: "Referral network",
     description:
-      "Berkshire Hathaway HomeServices referral network means your listing can reach qualified relocation buyers — especially important for Las Vegas inbound demand.",
+      "Agent referrals mean your listing can reach qualified relocation buyers — especially important for Las Vegas inbound demand.",
   },
   {
     icon: BarChart,
     title: "Comps-based pricing",
     description:
-      "I have served Las Vegas since 2008. List price comes from a CMA — sold comps and current actives — not an AVM or a sit-then-cut slogan.",
+      "In real estate since 1983. List price comes from a CMA — sold comps and current actives — not an AVM or a sit-then-cut slogan.",
   },
   {
     icon: DollarSign,
@@ -103,9 +103,9 @@ const sellerFaqs = [
       "I walk the house and write a preparation checklist. Decluttering, minor repairs, fresh paint, and professional staging are the usual first items — not a guaranteed return. I mark what actually shows in photos and on the first tour.",
   },
   {
-    question: "How does Berkshire Hathaway market my home?",
+    question: "How will you market my home?",
     answer:
-      "Your home gets professional photography, virtual tours, drone video when the lot warrants it, MLS syndication, BHHS network exposure, and paid digital we agree on in writing. Ask for that plan on the listing consult.",
+      "Your home gets professional photography, virtual tours, drone video when the lot warrants it, MLS syndication, and paid digital we agree on in writing. Ask for that plan on the listing consult.",
   },
   {
     question: "What are your commission rates?",
@@ -146,7 +146,7 @@ const sellingProcess = [
     step: 3,
     title: "Professional Marketing",
     description:
-      "Your home is photographed professionally, with virtual tours and drone video when the lot warrants it. It is listed on the MLS, shared through the BHHS network, and promoted with digital we agree on in writing.",
+      "Your home is photographed professionally, with virtual tours and drone video when the lot warrants it. It is listed on the MLS and promoted with digital we agree on in writing.",
   },
   {
     step: 4,
@@ -172,8 +172,8 @@ const includedServices = [
   "Professional photography & virtual tour",
   "Drone video for properties with views or large lots",
   "CMA from live comps and a list-price range",
-  "MLS listing plus BHHS network exposure",
-  "Berkshire Hathaway global network exposure",
+        "MLS listing and syndication",
+
   "Social media marketing campaign",
   "Targeted digital advertising",
   "Open house coordination",
@@ -193,7 +193,7 @@ export default function SellersPage() {
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Berkshire Hathaway HomeServices Nevada Properties
+                            Dr. Jan Duffy, REALTOR®
             </div>
             <h1 className="mb-6 text-balance text-4xl font-bold text-slate-900 md:text-5xl lg:text-6xl">
               Sell Your Las Vegas Home to the Comps
@@ -203,10 +203,9 @@ export default function SellersPage() {
               alt={PAGE_HERO_IMAGES.sellers.alt}
             />
             <p className="text-pretty text-xl text-slate-600 mb-8">
-              When you list with{" "}
-              <strong>Berkshire Hathaway HomeServices</strong>, you get
+              When you list with <strong>Dr. Jan Duffy</strong>, you get
               professional photography, comps-based pricing, and a listing plan
-              in writing. I have been serving Las Vegas since 2008—helping
+              in writing. I have been in real estate since 1983—helping
               sellers price to the comps and negotiate the net sheet.
             </p>
             <div className="mb-8">
@@ -296,12 +295,10 @@ export default function SellersPage() {
               fallbackSrc={PAGE_HERO_IMAGES.sellers.src}
               avoidSrc={PAGE_HERO_IMAGES.sellers.src}
             >
-              What a BHHS listing plan actually includes
+              What a listing plan with Dr. Jan actually includes
             </SectionHeading>
             <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Not all listing plans are the same. When you choose a Berkshire
-              Hathaway HomeServices agent, you get MLS marketing, a global
-              referral network, and a net-sheet conversation before you sign.
+              Not all listing plans are the same. When you choose Dr. Jan Duffy, you get MLS marketing, agent referrals, and a net-sheet conversation before you sign.
             </p>
             <div className="grid md:grid-cols-2 gap-8">
               {sellingBenefits.map((benefit) => {
@@ -432,8 +429,7 @@ export default function SellersPage() {
                   Relocation
                 </h3>
                 <p className="text-pretty text-slate-600 text-sm mb-3">
-                  Moving for work? BHHS referral network can coordinate both
-                  ends. I still list this house from a live CMA.
+                  Moving for work? Agent referrals can coordinate both ends. I still list this house from a live CMA.
                 </p>
                 <span className="text-blue-600 font-semibold text-sm">
                   Relocation seller guide →
@@ -473,12 +469,10 @@ export default function SellersPage() {
               <blockquote className="text-lg text-slate-700 italic mb-4">
                 "Pricing your home to the comps from day one is the listing
                 decision that matters. Overpriced homes sit, and every extra day
-                is carrying cost plus buyer leverage. I use a live CMA and files
-                since 2008. Confirm the live file, not a close-to-ask slogan."
+                is carrying cost plus buyer leverage. I use a live CMA and a career in real estate since 1983. Confirm the live file, not a close-to-ask slogan."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, BHHS Nevada Properties | Serving Las Vegas
-                Since 2008
+                — Dr. Jan Duffy, REALTOR® | In Real Estate Since 1983
               </cite>
             </div>
           </section>
@@ -493,8 +487,7 @@ export default function SellersPage() {
               What's on the listing agreement
             </SectionHeading>
             <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              When you list with Dr. Jan Duffy at Berkshire Hathaway
-              HomeServices, you receive MLS syndication, photos, and a written
+              When you list with Dr. Jan Duffy, you receive MLS syndication, photos, and a written
               listing plan. Sale price comes from comps, not a slogan.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -521,8 +514,7 @@ export default function SellersPage() {
                   Request a CMA for this house
                 </h2>
                 <p className="text-blue-50 mb-6">
-                  Request a CMA from current MLS comps. I have served Las Vegas
-                  since 2008. A city median is not your sold price — the
+                  Request a CMA from current MLS comps. I have been in real estate since 1983. A city median is not your sold price — the
                   worksheet uses sold comps, actives, and the condition of this
                   house.
                 </p>

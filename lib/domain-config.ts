@@ -97,7 +97,7 @@ export const DOMAIN_CONFIGS: Record<string, DomainConfig> = {
     neighborhood: "Centennial Hills",
     tagline: "Centennial Hills Homes for Sale",
     description:
-      "Centennial Hills homes for sale in northwest Las Vegas (89149, 89131, 89143). Current listings with Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      "Centennial Hills homes for sale in northwest Las Vegas (89149, 89131, 89143). Current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
     heroHeadline: "Centennial Hills Homes for Sale",
     heroSubheadline:
       "Northwest Las Vegas listings near Centennial Hills Park and Town Center — 89149, not 89144.",
@@ -681,10 +681,10 @@ export const DEFAULT_CONFIG: DomainConfig = {
   neighborhood: "Las Vegas",
   tagline: "Las Vegas Homes for Sale",
   description:
-    "Search Las Vegas homes for sale. Live MLS with Dr. Jan Duffy, BHHS Nevada Properties.",
+    "Search Las Vegas homes for sale. Live MLS with Dr. Jan Duffy.",
   heroHeadline: "Las Vegas Homes for Sale",
   heroSubheadline:
-    "Live MLS and a written plan from Dr. Jan Duffy — serving Las Vegas since 2008.",
+    "Live MLS and a written plan from Dr. Jan Duffy — in real estate since 1983.",
   keywords: [
     "Las Vegas homes for sale",
     "Las Vegas real estate",

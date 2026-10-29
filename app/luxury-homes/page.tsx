@@ -47,7 +47,7 @@ export default function LuxuryHomesPage() {
           label: "S. Highlands listing median",
         },
         { value: "HOA + arch", label: "Docs before live" },
-        { value: "MLS + BHHS", label: "Distribution" },
+        { value: "MLS", label: "Distribution" },
       ]}
       sections={[
         {
@@ -62,7 +62,7 @@ export default function LuxuryHomesPage() {
           imageSrc: "/images/hero/sellers-listing.png",
           imageAlt:
             "Las Vegas home prepared for listing with professional staging",
-          body: "Professional stills, a floor plan, and a showing window the gate can staff. Berkshire Hathaway HomeServices syndication is the distribution layer. I do not promise magazine covers or named buyers. Architectural review can add weeks before you go live — budget that.",
+          body: "Professional stills, a floor plan, and a showing window the gate can staff. MLS syndication is the distribution layer. I do not promise magazine covers or named buyers. Architectural review can add weeks before you go live — budget that.",
         },
         {
           heading: "Seller privacy",
@@ -74,7 +74,7 @@ export default function LuxuryHomesPage() {
           heading: "Architectural review before you go live",
           imageSrc: "/images/hero/office-lake-mead.png",
           imageAlt:
-            "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard",
+            "Dr. Jan Duffy real estate office on West Lake Mead Boulevard",
           body: "HOA architectural packets can add weeks. I calendar that before we pick a list date. Email homes@heyberkshire.com or call (702) 222-1964 with the address — I CMA the gate you actually live in, not a Southern Highlands median on a Ridges lot.",
         },
         {

@@ -45,12 +45,12 @@ export function generateMetadata(): Metadata {
   return withShareImage(
     {
       title:
-        "Contact Dr. Jan Duffy | Berkshire Hathaway HomeServices Las Vegas",
+        "Contact Dr. Jan Duffy | Las Vegas REALTOR®",
       description:
-        "Contact Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Schedule an appointment, get directions, call (702) 222-1964, or email homes@heyberkshire.com. Las Vegas, Henderson, Summerlin.",
+        "Contact Dr. Jan Duffy, Las Vegas REALTOR®. Schedule an appointment, get directions, call (702) 222-1964, or email homes@heyberkshire.com. Las Vegas, Henderson, Summerlin.",
       keywords: [
         "contact real estate agent Las Vegas",
-        "Berkshire Hathaway contact",
+        
         "Dr. Jan Duffy phone",
         "Las Vegas realtor contact",
         "schedule real estate appointment",
@@ -116,7 +116,7 @@ export default function ContactPage() {
         schema={generateWebPageSchema({
           name: "Contact Dr. Jan Duffy",
           description:
-            "Contact Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
+            "Contact Dr. Jan Duffy, Las Vegas REALTOR®. Call (702) 222-1964 or email homes@heyberkshire.com.",
           url: "/contact",
         })}
       />
@@ -130,7 +130,7 @@ export default function ContactPage() {
           {/* Hero */}
           <div className="text-center mb-12">
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Berkshire Hathaway HomeServices Nevada Properties
+                            Dr. Jan Duffy, REALTOR®
             </div>
             <h1 className="mb-6 text-balance text-4xl font-bold text-slate-900 md:text-5xl lg:text-6xl">
               Contact Dr. Jan Duffy
@@ -171,9 +171,7 @@ export default function ContactPage() {
               </SectionHeading>
               <p className="text-pretty text-slate-700 mb-8">
                 Name the file — first home, luxury listing, or rental. I will
-                pull live comps and put compensation in writing. Serving Las
-                Vegas since 2008 with{" "}
-                <strong>Berkshire Hathaway HomeServices</strong>.
+                pull live comps and put compensation in writing. In real estate since 1983.
               </p>
 
               {/* NAP Information */}
@@ -229,10 +227,9 @@ export default function ContactPage() {
                       Office Address
                     </h3>
                     <address className="not-italic text-slate-700">
-                      Berkshire Hathaway HomeServices
+                                            Dr. Jan Duffy, REALTOR®
                       <br />
-                      Nevada Properties
-                      <br />
+
                       <a
                         href={OFFICE_NAP.mapsUrl}
                         target="_blank"
@@ -287,9 +284,7 @@ export default function ContactPage() {
                 <p className="text-sm text-slate-700">
                   <strong>Dr. Jan Duffy, REALTOR®</strong>
                   <br />
-                  License S.0197614.LLC
-                  <br />
-                  Berkshire Hathaway HomeServices Nevada Properties
+                  Top 1% Las Vegas REALTOR® · In real estate since 1983
                 </p>
               </div>
             </div>
@@ -313,7 +308,7 @@ export default function ContactPage() {
                 <CalendlyWidget height="600px" />
               </div>
 
-              {/* Why Contact BHHS */}
+              {/* Why Contact Dr. Jan */}
               <div className="mt-6 bg-slate-900 text-white rounded-xl p-6">
                 <h3 className="font-bold text-lg mb-4">
                   What you get on the first call
@@ -326,10 +321,9 @@ export default function ContactPage() {
                     />
                     <p className="text-slate-300 text-sm">
                       <strong className="text-white">
-                        Franchise brokerage:
+                        Written plan:
                       </strong>{" "}
-                      Written compensation, a global referral network, and
-                      documented ethics standards — not a Buffett slogan.
+                      Written compensation and documented ethics standards.
                     </p>
                   </div>
                   <div className="flex items-start">
@@ -339,8 +333,7 @@ export default function ContactPage() {
                     />
                     <p className="text-slate-300 text-sm">
                       <strong className="text-white">Proven local work:</strong>{" "}
-                      Serving Las Vegas since 2008 with Berkshire Hathaway
-                      HomeServices Nevada Properties.
+                      In real estate since 1983.
                     </p>
                   </div>
                   <div className="flex items-start">
@@ -352,8 +345,7 @@ export default function ContactPage() {
                       <strong className="text-white">
                         Referral network for relocations:
                       </strong>{" "}
-                      BHHS referral network for inbound and outbound
-                      relocations.
+                      Agent referrals for inbound and outbound relocations.
                     </p>
                   </div>
                 </div>

@@ -89,7 +89,7 @@ export default function CTASection() {
               Listing is a separate agreement
             </span>
             <span className="font-semibold text-white">
-              License S.0197614.LLC
+              In real estate since 1983
             </span>
           </div>
         </div>

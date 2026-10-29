@@ -68,7 +68,7 @@ export default function InvestmentPropertiesPage() {
           heading: "1031 exchanges",
           imageSrc: "/images/hero/office-lake-mead.png",
           imageAlt:
-            "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard",
+            "Dr. Jan Duffy real estate office on West Lake Mead Boulevard",
           body: "A qualified intermediary and your CPA run the exchange. I identify replacement property inside the 45-day window and write the contract with the exchange language they provide. Deadlines are statutory. I do not extend them.",
         },
         {

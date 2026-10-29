@@ -13,10 +13,10 @@ export function generateMetadata(): Metadata {
     {
       title: "FAQ | Las Vegas Real Estate with Dr. Jan Duffy",
       description:
-        "Answers on buying, selling, 55+, new construction, and compensation with Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
+        "Answers on buying, selling, 55+, new construction, and compensation with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [
         "Las Vegas real estate FAQ",
-        "Berkshire Hathaway HomeServices FAQ",
+        
         "buying a home Las Vegas",
       ],
     },
@@ -52,7 +52,7 @@ export default function FaqPage() {
           imageSrc: "/images/hero/about.png",
           imageAlt:
             "Dr. Jan Duffy at the Las Vegas office answering buyer and seller questions",
-          body: "Dr. Jan Duffy, REALTOR, license S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Client line (702) 222-1964. Email homes@heyberkshire.com. I cover Las Vegas, Henderson, North Las Vegas, Summerlin (including 89138), Centennial Hills, and 55+ campuses such as Siena.",
+          body: "Dr. Jan Duffy, REALTOR®, in real estate since 1983. Office: 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Client line (702) 222-1964. Email homes@heyberkshire.com. I cover Las Vegas, Henderson, North Las Vegas, Summerlin (including 89138), Centennial Hills, and 55+ campuses such as Siena.",
         },
         {
           heading: "Buying",
@@ -79,7 +79,7 @@ export default function FaqPage() {
           heading: "How I answer a live file",
           imageSrc: "/images/gbp/office-lake-mead.png",
           imageAlt:
-            "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard",
+            "Dr. Jan Duffy real estate office on West Lake Mead Boulevard",
           body: "Send the address, ZIP, and whether you are buying, selling, or both. I pull live MLS and reply during posted hours — I will not invent a two-hour SLA. Email homes@heyberkshire.com or call (702) 222-1964. Fair Housing copy lives on /fair-housing.",
         },
       ]}
@@ -87,12 +87,12 @@ export default function FaqPage() {
         {
           question: "Who is the agent of record?",
           answer:
-            "Dr. Jan Duffy, license S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties. Serving Las Vegas since 2008.",
+            "Dr. Jan Duffy, REALTOR®, in real estate since 1983.",
         },
         {
-          question: "Does using a Berkshire Hathaway agent cost more?",
+          question: "Does using a full-service agent cost more?",
           answer:
-            "Fees are negotiated in writing and are not a hidden brand surcharge.",
+            "Fees are negotiated in writing and are not a hidden surcharge.",
         },
         {
           question: "Is now a good time to buy in Las Vegas?",

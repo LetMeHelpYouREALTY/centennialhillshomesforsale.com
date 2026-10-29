@@ -53,7 +53,7 @@ export const SOCIAL_PROFILES = {
 } as const;
 
 export const OFFICE_NAP = {
-  name: "Dr. Jan Duffy — Berkshire Hathaway HomeServices Nevada Properties",
+  name: "Dr. Jan Duffy, REALTOR®",
   street: "9406 W Lake Mead Blvd, Suite 100",
   city: "Las Vegas",
   state: "NV",

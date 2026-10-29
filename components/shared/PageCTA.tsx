@@ -113,8 +113,6 @@ export function PageCTA({
               <span className="sr-only"> (opens in a new tab)</span>
             </a>
             {" · "}
-            License S.0197614.LLC
-            {" · "}
             <a href={AGENT_EMAIL_MAILTO} className={TEXT_LINK_ON_DARK_CLASS}>
               {AGENT_EMAIL}
             </a>

@@ -45,7 +45,7 @@ export async function generateMetadata(): Promise<Metadata> {
           "Centennial Hills Homes for Sale | 89149 Las Vegas | Dr. Jan Duffy",
       },
       description:
-        "Centennial Hills homes for sale in northwest Las Vegas (89149, 89131, 89143). Search current listings with Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
+        "Centennial Hills homes for sale in northwest Las Vegas (89149, 89131, 89143). Search current listings with Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [
         "centennial hills real estate",
         "centennial hills las vegas real estate",
@@ -217,12 +217,12 @@ export default async function Home() {
 
             <div className="flex flex-wrap justify-center gap-6 text-sm text-white">
               <div className="flex items-center gap-2">
-                <span className="font-semibold text-white">Since 2008</span>
-                <span>Las Vegas closings</span>
+                <span className="font-semibold text-white">Since 1983</span>
+                <span>In real estate</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-semibold text-white">BHHS</span>
-                <span>Nevada Properties</span>
+                <span className="font-semibold text-white">Top 1%</span>
+                <span>Las Vegas REALTOR®</span>
               </div>
               <a
                 href={OFFICE_NAP.reviewsUrl}
@@ -250,8 +250,7 @@ export default async function Home() {
                   Dr. Jan Duffy
                 </h2>
                 <p className="mb-4 text-pretty text-lg text-slate-600">
-                  Berkshire Hathaway HomeServices Nevada Properties. License
-                  S.0197614.LLC.{" "}
+                  Dr. Jan Duffy, REALTOR®, in real estate since 1983.{" "}
                   <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
                     Call {CTA_PHONE}
                   </a>{" "}

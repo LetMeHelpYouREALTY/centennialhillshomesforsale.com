@@ -55,7 +55,7 @@ export default function RelocationPage() {
         },
         {
           heading: "Outbound: list here, buy there",
-          body: "I list the Clark County house and introduce a Berkshire Hathaway HomeServices agent in the destination city when you want a referral. Your Nevada listing agreement stays with me. Their buyer agreement is theirs.",
+          body: "I list the Clark County house and introduce a trusted agent in the destination city when you want a referral. Your Nevada listing agreement stays with me. Their buyer agreement is theirs.",
         },
         {
           heading: "California is a common pair, not the only pair",
