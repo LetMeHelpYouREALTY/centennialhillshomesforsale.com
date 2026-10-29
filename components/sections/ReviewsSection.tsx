@@ -5,7 +5,7 @@ type ReviewsSectionProps = {
 };
 
 /**
- * Do not render invented named testimonials or a 4.9 star count.
+ * Do not render invented named testimonials or a 4.9 stars count.
  * Point visitors at the live Google Business Profile instead.
  */
 export default function ReviewsSection({ className }: ReviewsSectionProps) {

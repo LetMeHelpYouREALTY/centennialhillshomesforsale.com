@@ -109,7 +109,6 @@ export function FAQSchema({
  */
 export function ReviewSchema({
   reviews,
-  aggregateRating,
 }: {
   reviews?: Array<{
     author: string;
@@ -128,16 +127,6 @@ export function ReviewSchema({
     "@id": `${getPublicSiteUrl()}#organization`,
     name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
   };
-
-  if (aggregateRating && aggregateRating.reviewCount > 0) {
-    schema.aggregateRating = {
-      "@type": "AggregateRating",
-      ratingValue: aggregateRating.ratingValue.toString(),
-      reviewCount: aggregateRating.reviewCount.toString(),
-      bestRating: "5",
-      worstRating: "1",
-    };
-  }
 
   if (reviews && reviews.length > 0) {
     schema.review = reviews.map((review) => ({
