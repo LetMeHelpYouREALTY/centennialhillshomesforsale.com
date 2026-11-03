@@ -56,7 +56,7 @@ export default function HomeValuationPage() {
           heading: "How to start",
           imageSrc: "/images/gbp/office-lake-mead.png",
           imageAlt:
-            "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard",
+            "Dr. Jan Duffy real estate office on West Lake Mead Boulevard",
           body: "Call or text (702) 222-1964 or email homes@heyberkshire.com with the address, or use the form on this page. Occupied vs vacant vs tenant matters. Photos help if you are out of state.",
         },
         {

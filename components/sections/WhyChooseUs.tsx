@@ -21,15 +21,15 @@ import { PAGE_HERO_IMAGES } from "@/lib/site-images";
 const features = [
   {
     icon: Shield,
-    title: "Franchise brokerage",
+    title: "Documented process",
     description:
-      "Berkshire Hathaway HomeServices Nevada Properties — a documented process, not a kiosk script.",
+      "In real estate since 1983 — a documented process, not a kiosk script.",
   },
   {
     icon: TrendingUp,
     title: "Local numbers",
     description:
-      "Las Vegas and Henderson inventory, ZIP-level pricing, and live CMA math since 2008.",
+      "Las Vegas and Henderson inventory, ZIP-level pricing, and live CMA math.",
   },
   {
     icon: Users,
@@ -70,8 +70,7 @@ export default function WhyChooseUs() {
             How I actually work a file
           </SectionHeading>
           <p className="mx-auto max-w-3xl text-pretty text-xl text-slate-600">
-            Berkshire Hathaway HomeServices Nevada Properties — Centennial
-            Hills, Summerlin (89138), Henderson, and 55+ campuses such as Siena.
+            Dr. Jan Duffy, REALTOR® — Centennial Hills, Summerlin (89138), Henderson, and 55+ campuses such as Siena.
             Call or email the client line.
           </p>
         </div>

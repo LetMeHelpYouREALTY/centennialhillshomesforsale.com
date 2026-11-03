@@ -67,7 +67,7 @@ export default function NewConstructionPage() {
           heading: "Compensation",
           imageSrc: "/images/hero/office-lake-mead.png",
           imageAlt:
-            "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard",
+            "Dr. Jan Duffy real estate office on West Lake Mead Boulevard",
           body: "Builders often budget a cooperating broker fee. After the 2024 NAR practice changes, that is not something I will call automatic or “100% free.” I write it down. If the builder will not pay, we decide whether you pay or we walk.",
         },
         {

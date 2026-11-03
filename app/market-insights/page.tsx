@@ -622,8 +622,7 @@ export default async function MarketInsightsPage() {
                       aria-hidden="true"
                     />
                     <span>
-                      <strong>Pair the California sale:</strong> MLS, BHHS
-                      syndication, and a CMA they can match against their sale.
+                      <strong>Pair the California sale:</strong> MLS syndication and a CMA they can match against their sale.
                       I will not invent an inbound-buyer share.
                     </span>
                   </li>
@@ -650,13 +649,11 @@ export default async function MarketInsightsPage() {
                 "Listing medians and commute maps beat a forecast. Tech
                 employers, California inbound buyers, and village-level
                 inventory show up on the CMA. I will not pick which
-                neighborhoods will outperform. As a{" "}
-                <strong>Berkshire Hathaway HomeServices</strong> agent, I pull
+                neighborhoods will outperform. As a REALTOR® in real estate since 1983, I pull
                 the live file for the ZIP you named — not a recycled headline."
               </blockquote>
               <cite className="text-slate-300 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada
-                Properties
+                — Dr. Jan Duffy, REALTOR®
               </cite>
             </div>
           </section>

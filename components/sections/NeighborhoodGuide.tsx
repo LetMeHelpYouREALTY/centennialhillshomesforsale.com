@@ -182,8 +182,7 @@ export default function NeighborhoodGuide({
             </h1>
             <p className="mb-6 text-pretty text-lg text-slate-600">{intro}</p>
             <p className="mb-10 text-sm text-slate-600">
-              ZIP {zipCodes.join(", ")} · {city}, NV · Dr. Jan Duffy, Berkshire
-              Hathaway HomeServices Nevada Properties · License S.0197614.LLC ·{" "}
+              ZIP {zipCodes.join(", ")} · {city}, NV · Dr. Jan Duffy, REALTOR® ·{" "}
               {OFFICE_HOURS.display} ·{" "}
               <a href={CTA_TEL} className={TEXT_LINK_CLASS}>
                 {CTA_PHONE}
@@ -401,8 +400,7 @@ export default function NeighborhoodGuide({
                 {OFFICE_HOURS.display}
               </p>
               <p className="mt-2 text-xs text-blue-50">
-                {origin.replace("https://", "")} · Berkshire Hathaway
-                HomeServices Nevada Properties
+                {origin.replace("https://", "")} · Dr. Jan Duffy, REALTOR®
               </p>
               <FairHousingNotice className="mt-6" variant="onBrand" />
             </section>

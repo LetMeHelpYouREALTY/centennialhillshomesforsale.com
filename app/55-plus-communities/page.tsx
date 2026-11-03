@@ -52,7 +52,7 @@ export function generateMetadata(): Metadata {
     {
       title: "55+ Communities Las Vegas | Sun City, Siena, Del Webb",
       description:
-        "Find 55+ homes in Las Vegas. Sun City Summerlin, Siena, Sun City Aliante, Del Webb Lake Las Vegas, Heritage at Stonebridge, Solera, Trilogy. Dr. Jan Duffy, BHHS Nevada Properties. Call (702) 222-1964 or email homes@heyberkshire.com.",
+        "Find 55+ homes in Las Vegas. Sun City Summerlin, Siena, Sun City Aliante, Del Webb Lake Las Vegas, Heritage at Stonebridge, Solera, Trilogy. Dr. Jan Duffy. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [
         "55+ communities Las Vegas",
         "active adult communities Las Vegas",
@@ -69,7 +69,7 @@ export function generateMetadata(): Metadata {
       openGraph: {
         title: "55+ Communities in Las Vegas | Dr. Jan Duffy",
         description:
-          "Sun City, Siena, Del Webb, Heritage at Stonebridge, and other 55+ HOPA campuses with Dr. Jan Duffy. Berkshire Hathaway HomeServices Nevada Properties.",
+          "Sun City, Siena, Del Webb, Heritage at Stonebridge, and other 55+ HOPA campuses with Dr. Jan Duffy, REALTOR®.",
         type: "website",
       },
     },
@@ -869,16 +869,14 @@ export default function FiftyFiveCommunitiesPage() {
             <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-8">
               <blockquote className="text-lg text-slate-700 italic mb-4">
                 "Buying in a 55+ community involves HOA rules, HOPA occupancy,
-                and rec-campus access — not a lifestyle slogan. As a{" "}
-                <strong>Berkshire Hathaway HomeServices</strong> agent I write
+                and rec-campus access — not a lifestyle slogan. As a REALTOR® in real estate since 1983, I write
                 those items into the showing plan, walk the rec campus, and
                 review the HOA packet before you bid. Many clients are
                 relocating from California. Call (702) 222-1964 or email
                 homes@heyberkshire.com with the community name."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada
-                Properties
+                — Dr. Jan Duffy, REALTOR®
               </cite>
             </div>
           </section>
@@ -986,7 +984,7 @@ export default function FiftyFiveCommunitiesPage() {
             </div>
           </section>
 
-          {/* Why BHHS */}
+          {/* How I work */}
           <section className="mb-16 max-w-4xl mx-auto">
             <SectionHeading
               className="text-3xl font-bold text-slate-900 mb-6 text-center"
@@ -1023,8 +1021,7 @@ export default function FiftyFiveCommunitiesPage() {
                     Relocation Support
                   </h3>
                   <p className="text-pretty text-slate-600 text-sm">
-                    Many 55+ buyers relocate from out of state. BHHS referrals,
-                    video tours, and the current CC&Rs go in the packet before
+                    Many 55+ buyers relocate from out of state. Agent referrals, video tours, and the current CC&Rs go in the packet before
                     you fly.
                   </p>
                 </div>
@@ -1041,8 +1038,7 @@ export default function FiftyFiveCommunitiesPage() {
                     Written plan
                   </h3>
                   <p className="text-pretty text-slate-600 text-sm">
-                    BHHS Nevada Properties is a franchise. Compensation, HOA
-                    occupancy, and the showing plan go in writing — not a brand
+                    Compensation, HOA occupancy, and the showing plan go in writing — not a brand
                     slogan.
                   </p>
                 </div>

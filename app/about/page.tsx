@@ -43,14 +43,14 @@ import { MARKET_SNAPSHOT_AS_OF } from "@/lib/market-snapshots";
 export function generateMetadata(): Metadata {
   return withShareImage(
     {
-      title: "About Dr. Jan Duffy | Berkshire Hathaway HomeServices Las Vegas",
+      title: "About Dr. Jan Duffy | Las Vegas REALTOR®",
       description:
-        "Meet Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Serving Las Vegas, Henderson, and Summerlin since 2008. Call (702) 222-1964 or email homes@heyberkshire.com.",
+        "Meet Dr. Jan Duffy, Las Vegas REALTOR® in real estate since 1983. Serving Las Vegas, Henderson, and Summerlin. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [
         "Dr. Jan Duffy",
-        "Berkshire Hathaway HomeServices agent",
+        
         "Las Vegas realtor",
-        "BHHS Nevada Properties",
+        
         "Henderson real estate agent",
         "Summerlin realtor",
       ],
@@ -108,18 +108,14 @@ const aboutFaqs = [
   {
     question: "Who is Dr. Jan Duffy?",
     answer:
-      "Dr. Jan Duffy is a REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, license S.0197614.LLC. I have served Las Vegas, Henderson, and Summerlin since 2008. Call (702) 222-1964 or email homes@heyberkshire.com.",
+      "Dr. Jan Duffy is a Las Vegas REALTOR®, in real estate since 1983, serving Las Vegas, Henderson, and Summerlin. Call (702) 222-1964 or email homes@heyberkshire.com.",
   },
   {
     question: "Where is the office?",
     answer:
       "9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134. Daily 8am–8pm.",
   },
-  {
-    question: "Is Berkshire Hathaway HomeServices a franchise?",
-    answer:
-      "Yes. BHHS Nevada Properties is a franchise brokerage. You get a written plan and a global referral network. Warren Buffett does not write your CMA.",
-  },
+  
   {
     question: "What email should clients use?",
     answer:
@@ -193,7 +189,7 @@ export default function AboutPage() {
         schema={generateWebPageSchema({
           name: "About Dr. Jan Duffy",
           description:
-            "Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties. Serving Las Vegas, Henderson, and Summerlin since 2008.",
+            "Dr. Jan Duffy, Las Vegas REALTOR® in real estate since 1983. Serving Las Vegas, Henderson, and Summerlin.",
           url: "/about",
         })}
       />
@@ -207,18 +203,17 @@ export default function AboutPage() {
           {/* Hero Section */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Berkshire Hathaway HomeServices Nevada Properties
+                            Top 1% Las Vegas REALTOR®
             </div>
             <h1 className="mb-6 text-balance text-4xl font-bold text-slate-900 md:text-5xl lg:text-6xl">
-              Dr. Jan Duffy, Las Vegas REALTOR® at BHHS Nevada Properties
+              Dr. Jan Duffy, Las Vegas REALTOR®
             </h1>
             <PageHeroImage
               src={PAGE_HERO_IMAGES.about.src}
               alt={PAGE_HERO_IMAGES.about.alt}
             />
             <p className="text-pretty text-xl text-slate-600">
-              I have been serving Las Vegas since 2008 with Berkshire Hathaway
-              HomeServices Nevada Properties. Buyers, sellers, investors, and
+              I have been in real estate since 1983. Buyers, sellers, investors, and
               relocators get a written plan and live comps — not a ranking
               slogan.
             </p>
@@ -243,19 +238,13 @@ export default function AboutPage() {
                   Dr. Jan Duffy
                 </h2>
                 <p className="text-lg text-blue-600 mb-6">
-                  REALTOR® | License S.0197614.LLC
+                  REALTOR® · In real estate since 1983
                 </p>
 
                 <div className="prose prose-lg text-pretty text-slate-700 mb-8 space-y-4">
+                  
                   <p>
-                    When you choose to work with{" "}
-                    <strong>Berkshire Hathaway HomeServices</strong>, you are
-                    choosing a franchise brokerage with written listing tools. I
-                    represent this brand in Las Vegas with MLS comps and gate
-                    access on every file I work.
-                  </p>
-                  <p>
-                    Since 2008, I've represented buyers and sellers in Las
+                    In real estate since 1983, I represent buyers and sellers in Las
                     Vegas, Henderson, Summerlin (including 89138), Centennial
                     Hills, and throughout Southern Nevada. My files include
                     luxury properties, new construction, investment real estate,
@@ -263,14 +252,8 @@ export default function AboutPage() {
                     relocations—particularly for California buyers comparing
                     Nevada's wage-tax statute against live Las Vegas comps.
                   </p>
-                  <p>
-                    What{" "}
-                    <strong>
-                      Berkshire Hathaway HomeServices Nevada Properties
-                    </strong>{" "}
-                    actually buys you is a franchise brokerage, a global
-                    referral network, and listing marketing in writing. Warren
-                    Buffett does not write your CMA. You still get one agent of
+                                    <p>
+                    You get listing marketing in writing and one agent of
                     record — me — putting your interests first and walking the
                     file until it closes.
                   </p>
@@ -345,7 +328,7 @@ export default function AboutPage() {
                   stay on the file until we close the house that matches the
                   written criteria."
                   <cite className="block mt-2 text-slate-900 font-semibold not-italic">
-                    — Dr. Jan Duffy, BHHS Nevada Properties
+                    — Dr. Jan Duffy, REALTOR®
                   </cite>
                 </blockquote>
               </div>
@@ -357,7 +340,7 @@ export default function AboutPage() {
                   <figcaption className="mt-3 text-center">
                     <p className="font-semibold text-white">Dr. Jan Duffy</p>
                     <p className="text-sm text-slate-300">
-                      BHHS Nevada Properties · License S.0197614.LLC
+                      REALTOR® · In real estate since 1983
                     </p>
                   </figcaption>
                 </figure>
@@ -365,26 +348,26 @@ export default function AboutPage() {
                 {/* Stats Grid */}
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-blue-50 rounded-lg p-6 text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-1">
-                      2008
+                                        <div className="text-3xl font-bold text-blue-600 mb-1">
+                      1983
                     </div>
                     <div className="text-sm text-slate-600">
-                      Serving Las Vegas
+                      In real estate since
+                    </div>
+                  </div>
+                                    <div className="bg-blue-50 rounded-lg p-6 text-center">
+                    <div className="text-3xl font-bold text-blue-600 mb-1">
+                      Top 1%
+                    </div>
+                    <div className="text-sm text-slate-600">
+                      Las Vegas REALTOR®
                     </div>
                   </div>
                   <div className="bg-blue-50 rounded-lg p-6 text-center">
                     <div className="text-3xl font-bold text-blue-600 mb-1">
-                      BHHS
+                      500+
                     </div>
-                    <div className="text-sm text-slate-600">
-                      Nevada Properties
-                    </div>
-                  </div>
-                  <div className="bg-blue-50 rounded-lg p-6 text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-1">
-                      S.0197614
-                    </div>
-                    <div className="text-sm text-slate-600">Nevada license</div>
+                    <div className="text-sm text-slate-600">Transactions</div>
                   </div>
                   <div className="bg-blue-50 rounded-lg p-6 text-center">
                     <div className="text-3xl font-bold text-blue-600 mb-1">
@@ -486,62 +469,6 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* Why BHHS Section */}
-          <section className="mb-16 bg-slate-900 text-white rounded-2xl p-8 md:p-12 max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-              Why Berkshire Hathaway HomeServices?
-            </h2>
-            <p className="text-slate-300 text-center max-w-3xl mx-auto mb-8">
-              Berkshire Hathaway HomeServices is backed by Berkshire Hathaway
-              Inc. You get written compensation, a global referral network, and
-              a listing plan — not a stability slogan.
-            </p>
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              <div className="text-center">
-                <div className="bg-blue-600 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Award className="h-8 w-8" aria-hidden="true" />
-                </div>
-                <h3 className="font-bold text-xl mb-2">Franchise brokerage</h3>
-                <p className="text-slate-300 text-sm">
-                  BHHS Nevada Properties is a franchise. You get written
-                  compensation, a referral network, and documented ethics
-                  standards — not a Buffett slogan.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="bg-blue-600 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Users className="h-8 w-8" aria-hidden="true" />
-                </div>
-                <h3 className="font-bold text-xl mb-2">
-                  Referral network for relocations
-                </h3>
-                <p className="text-slate-300 text-sm">
-                  Global referral network for inbound and outbound relocations.
-                  California-to-Nevada files are a regular part of this
-                  practice.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="bg-blue-600 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Shield className="h-8 w-8" aria-hidden="true" />
-                </div>
-                <h3 className="font-bold text-xl mb-2">Ethical Standards</h3>
-                <p className="text-slate-300 text-sm">
-                  Buyer or listing agreements in writing. Compensation is
-                  disclosed before we tour or list.
-                </p>
-              </div>
-            </div>
-            <div className="text-center">
-              <Link
-                href="/why-berkshire-hathaway"
-                className="inline-flex min-h-11 items-center justify-center bg-white text-slate-900 px-8 py-3 rounded-md font-semibold hover:bg-slate-100 transition-colors no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-              >
-                Why Berkshire Hathaway HomeServices
-              </Link>
-            </div>
-          </section>
-
           {/* Areas Served */}
           <section className="mb-16 max-w-6xl mx-auto">
             <SectionHeading
@@ -549,7 +476,7 @@ export default function AboutPage() {
               fallbackSrc={PAGE_HERO_IMAGES.listings.src}
               avoidSrc={PAGE_HERO_IMAGES.about.src}
             >
-              Areas Served by BHHS Nevada Properties
+              Areas Served by Dr. Jan Duffy
             </SectionHeading>
             <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               I serve the entire Las Vegas Valley with named ZIPs, commute

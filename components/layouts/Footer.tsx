@@ -33,13 +33,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
           <div>
             <AgentPhoto variant="footer" className="mb-4" />
-            <h2 className="mb-4 text-xl font-bold">
-              Berkshire Hathaway HomeServices
+                        <h2 className="mb-4 text-xl font-bold">
+              Dr. Jan Duffy, REALTOR®
             </h2>
             <p className="mb-4 text-pretty text-sm text-slate-300">
-              Nevada Properties — Las Vegas, Henderson, Summerlin (including
-              89138), and 55+ campuses such as Siena with Dr. Jan Duffy. License{" "}
-              {AGENT_LICENSE}.
+              Las Vegas, Henderson, Summerlin (including 89138), and 55+
+              campuses such as Siena. In real estate since 1983.
             </p>
             <div className="flex space-x-4">
               <a
@@ -94,7 +93,7 @@ export default function Footer() {
                 { href: "/market-report", label: "Market Report" },
                 { href: "/market-insights", label: "Market Insights" },
                 { href: "/market-update", label: "Market Update" },
-                { href: "/why-berkshire-hathaway", label: "Why BHHS" },
+                
                 { href: "/about", label: "About Dr. Jan" },
                 { href: "/contact", label: "Contact" },
               ].map((link) => (
@@ -208,8 +207,7 @@ export default function Footer() {
         <div className="mt-8 border-t border-slate-800 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <p className="text-center text-sm text-slate-300 md:text-left">
-              © {currentYear} Berkshire Hathaway HomeServices Nevada
-              Properties. All Rights Reserved.
+                            © {currentYear} Dr. Jan Duffy, REALTOR®. All Rights Reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <Link
@@ -245,8 +243,7 @@ export default function Footer() {
             </div>
           </div>
           <p className="mt-4 text-center text-xs text-slate-300">
-            Dr. Jan Duffy, REALTOR® | License {AGENT_LICENSE} | Berkshire
-            Hathaway HomeServices Nevada Properties
+                        Berkshire Hathaway HomeServices Nevada Properties since September 2008 · License {AGENT_LICENSE}
           </p>
           <FairHousingNotice className="mx-auto mt-3 max-w-3xl text-center text-slate-300" />
         </div>

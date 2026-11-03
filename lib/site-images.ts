@@ -12,7 +12,7 @@ export type SiteImage = {
 
 export const OFFICE_PHOTO_PATH = "/images/gbp/office-lake-mead.png";
 export const OFFICE_PHOTO_ALT =
-  "Berkshire Hathaway HomeServices Nevada Properties office on West Lake Mead Boulevard, Las Vegas";
+  "Dr. Jan Duffy real estate office on West Lake Mead Boulevard, Las Vegas";
 
 export const VISIT_OFFICE_PHOTO_PATH = "/images/gbp/visit-office.png";
 export const VISIT_OFFICE_PHOTO_ALT =

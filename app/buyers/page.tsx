@@ -40,11 +40,11 @@ export function generateMetadata(): Metadata {
     {
       title: "Las Vegas Home Buying Guide | Live MLS",
       description:
-        "Buy a Las Vegas or Henderson home with Dr. Jan Duffy, BHHS Nevada Properties. Written buyer-broker agreement and live MLS. Call (702) 222-1964 or email homes@heyberkshire.com.",
+        "Buy a Las Vegas or Henderson home with Dr. Jan Duffy. Written buyer-broker agreement and live MLS. Call (702) 222-1964 or email homes@heyberkshire.com.",
       keywords: [
         "buy home Las Vegas",
         "Las Vegas home buyer",
-        "Berkshire Hathaway buyer agent",
+        
         "Henderson homes for sale",
         "first time home buyer Las Vegas",
         "California relocation Las Vegas",
@@ -82,14 +82,14 @@ const buyerFaqs = [
       "Yes. Pre-approval shows sellers you can close and gives you a written budget. Timeline is UNKNOWN until the lender has your file — ask them for their current turnaround, not a 1–3 day slogan.",
   },
   {
-    question: "Does BHHS help with new construction purchases?",
+    question: "Do you help with new construction purchases?",
     answer:
       "Yes. Register Dr. Jan before the first model-home visit. Compensation is disclosed in a written buyer agreement and may be paid by the seller, the buyer, or both — including builder contributions when they exist on that file.",
   },
   {
     question: "What if I'm relocating from another state?",
     answer:
-      "Berkshire Hathaway HomeServices has a global referral network. I coordinate virtual tours and a drive-time matrix for inbound buyers — I will not invent a 50,000-agent headcount.",
+      "I coordinate agent referrals, virtual tours, and a drive-time matrix for inbound buyers — I will not invent a 50,000-agent headcount.",
   },
   {
     question: "How competitive is the Las Vegas housing market?",
@@ -224,7 +224,7 @@ export default function BuyersPage() {
           {/* Hero */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Berkshire Hathaway HomeServices Nevada Properties
+                            Dr. Jan Duffy, REALTOR®
             </div>
             <h1 className="mb-6 text-balance text-4xl font-bold text-slate-900 md:text-5xl lg:text-6xl">
               Buy a Las Vegas Home with Dr. Jan Duffy
@@ -234,9 +234,7 @@ export default function BuyersPage() {
               alt={PAGE_HERO_IMAGES.buyers.alt}
             />
             <p className="text-pretty text-xl text-slate-600 mb-8">
-              When you work with a{" "}
-              <strong>Berkshire Hathaway HomeServices</strong> buyer&apos;s
-              agent, you get written advocacy for your side of the deal.
+              When you work with Dr. Jan Duffy as your buyer&apos;s agent, you get written advocacy for your side of the deal.
               Compensation is negotiated in a buyer agreement — it may be paid
               by the seller, the buyer, or a combination. I put the number in
               writing before we tour.
@@ -290,8 +288,7 @@ export default function BuyersPage() {
                   is no longer an automatic MLS offer. I sign a written buyer
                   agreement that states how I am paid. The seller may still
                   contribute — that is negotiated, not assumed.{" "}
-                  <strong>Berkshire Hathaway HomeServices</strong> agents
-                  protect your side of the deal, not the seller's. In a
+                  Dr. Jan Duffy protects your side of the deal, not the seller's. In a
                   competitive Las Vegas file, a written buyer agreement and live
                   comps beat a ranking slogan.
                 </p>
@@ -302,7 +299,7 @@ export default function BuyersPage() {
                     "Contract and disclosure review",
                     "Inspection coordination and repair negotiation",
                     "Lender and service provider referrals",
-                    "Local market files since 2008",
+                    "In real estate since 1983",
                   ].map((item) => (
                     <li key={item} className="flex items-center">
                       <CheckCircle
@@ -325,7 +322,7 @@ export default function BuyersPage() {
                   the first showing to the closing table.
                 </p>
                 <div className="text-sm text-slate-600">
-                  Serving Las Vegas since 2008 | BHHS Nevada Properties
+                  In real estate since 1983
                 </div>
               </div>
             </div>
@@ -343,8 +340,7 @@ export default function BuyersPage() {
             <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
               Pre-approval, live MLS, a written offer, inspection, then the
               close date on the purchase agreement. That is the sequence when
-              you buy in Las Vegas with Dr. Jan Duffy and Berkshire Hathaway
-              HomeServices.
+              you buy in Las Vegas with Dr. Jan Duffy.
             </p>
             <div className="space-y-6">
               {buyingSteps.map((step, index) => {
@@ -527,19 +523,17 @@ export default function BuyersPage() {
             </div>
           </section>
 
-          {/* Why BHHS */}
+          {/* Buyer agreement */}
           <section className="mb-16 max-w-5xl mx-auto">
             <SectionHeading
               className="text-3xl font-bold text-slate-900 mb-4 text-center"
               fallbackSrc={PAGE_HERO_IMAGES.about.src}
               avoidSrc={PAGE_HERO_IMAGES.buyers.src}
             >
-              What a BHHS buyer agreement actually includes
+              What a buyer agreement with Dr. Jan actually includes
             </SectionHeading>
             <p className="text-pretty text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              Berkshire Hathaway HomeServices Nevada Properties is a franchise
-              brokerage. You get a written buyer agreement, a global referral
-              network, and one agent of record — not a Buffett slogan.
+              You get a written buyer agreement, agent referrals for relocations, and one agent of record.
             </p>
             <div className="grid md:grid-cols-4 gap-6">
               <div className="text-center">
@@ -560,7 +554,7 @@ export default function BuyersPage() {
                   Referral network for relocations
                 </h3>
                 <p className="text-pretty text-slate-600 text-sm">
-                  BHHS referral network for inbound and outbound moves
+                  Agent referrals for inbound and outbound moves
                 </p>
               </div>
               <div className="text-center">
@@ -574,7 +568,7 @@ export default function BuyersPage() {
                   Local practice
                 </h3>
                 <p className="text-pretty text-slate-600 text-sm">
-                  I have served Las Vegas since 2008 with BHHS Nevada Properties
+                  In real estate since 1983
                 </p>
               </div>
               <div className="text-center">
@@ -600,14 +594,12 @@ export default function BuyersPage() {
               <blockquote className="text-lg text-slate-700 italic mb-4">
                 "My job isn't just to show you houses—it's to make sure you
                 don't overpay, that you understand what you're buying, and that
-                you're protected through every step of the transaction. That's
-                what Berkshire Hathaway HomeServices representation means. I
+                you're protected through every step of the transaction. That's what representation means. I
                 stay on the file until we close the house that matches the
                 written criteria."
               </blockquote>
               <cite className="text-slate-900 font-semibold">
-                — Dr. Jan Duffy, BHHS Nevada Properties | Serving Las Vegas
-                Since 2008
+                — Dr. Jan Duffy, REALTOR® | In Real Estate Since 1983
               </cite>
             </div>
           </section>

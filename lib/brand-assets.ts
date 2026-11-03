@@ -3,7 +3,7 @@
 export const AGENT_PHOTO_PATH = "/images/agent/dr-jan-duffy.png";
 export const AGENT_PHOTO_JPG_PATH = "/images/dr-jan-duffy.jpg";
 export const AGENT_PHOTO_ALT =
-  "Dr. Jan Duffy, REALTOR at Berkshire Hathaway HomeServices Nevada Properties, taking a client call";
+  "Dr. Jan Duffy, REALTOR®, taking a client call";
 
 export const FAVICON_PATH = "/favicon.ico";
 export const FAVICON_32_PATH = "/favicon-32x32.png";

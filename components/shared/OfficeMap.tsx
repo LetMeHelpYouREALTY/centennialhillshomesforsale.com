@@ -18,7 +18,7 @@ export function OfficeMap({ className = "", height = 300 }: OfficeMapProps) {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Berkshire Hathaway HomeServices Nevada Properties office map"
+          title="Dr. Jan Duffy office map"
           className="w-full"
         />
       </div>
